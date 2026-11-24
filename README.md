@@ -24,7 +24,15 @@
 - [13 节风格说明](design-system/v2/styles/vaporwave/STYLE.md) · [20 维资源](design-system/v2/styles/vaporwave/resources.json) · [组合预设](design-system/v2/styles/vaporwave/preset.json)
 - [Design Tokens](design-system/v2/styles/vaporwave/tokens.json) · [CSS](design-system/v2/styles/vaporwave/theme.css) · [独立 HTML 预览](design-system/v2/styles/vaporwave/preview.html)
 - 已检查 20 项资源引用与现有目录、预设枚举一致，预览 JavaScript 语法通过。资源仍为候选，通用解析器、完整 Schema 验证、真实浏览器及无障碍验收尚未完成。
-- 下一阶段：A3.3 20 维 Design Composer V2.0。
+- A3.3 原型已提交，详见下方。
+
+### A3.3 Design Composer V2（原型已提交）
+
+- [新版工作台](prototype/v2/index.html) · [交互模块](prototype/v2/app.mjs) · [组合引擎](design-system/v2/composer-core.mjs) · [测试](design-system/v2/composer-core.test.mjs)
+- 在仓库根目录执行 `python -m http.server 8080`，访问 `http://localhost:8080/prototype/v2/`。不可直接以 file:// 启动模块版。
+- 动态加载 20 维目录与霓虹预设，提供 7 套组合、锁定、历史、A/B、迁移、主色和圆角覆盖、Tokens 与设计包导出。Style 作为预设标识，不强制覆盖各维度；渲染参数目前由核心模块定义，尚未全面读取独立资源参数文件。
+- 已执行 82 项候选的纯 JavaScript 解析及 HTML 生成冒烟检查；3 项图像资源明确禁用。尚未运行 Node 测试套件、Chromium 或完整 Schema/无障碍验收。
+- 下一阶段 A3.4：资源参数驱动的风格详情与统一生成引擎。
 
 ## 产品定位
 面向独立开发者、前端工程师及 AI 编程 Agent 的本地优先 WebUI 设计工作台。将风格发现、可运行预览、组件与页面模板、设计变量、提示词、项目绑定、视觉验收统一管理。不是单纯的截图收藏站，也不是替代 Figma 的完整绘图工具。
