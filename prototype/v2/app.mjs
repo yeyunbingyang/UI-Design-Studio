@@ -10,6 +10,7 @@ try{
  const library=await load('../../design-system/v2/style-library.json');if(library.schemaVersion!==2||!Array.isArray(library.styles))throw Error('Invalid style library');
  const dims=catalog.dimensions,base=defaults(catalog),presets=library.styles.map(s=>s.preset);
  let state=copy(vapor),active=0,hist=[],future=[],baseline=null,result=null;
+ try{const handoff=sessionStorage.getItem('uds-shell-handoff');if(handoff){const p=JSON.parse(handoff);if(validatePreset(p).length===0){resolve(p,{resourceIndex,systemDark:matchMedia('(prefers-color-scheme: dark)').matches});state=copy(p)}sessionStorage.removeItem('uds-shell-handoff')}}catch(e){sessionStorage.removeItem('uds-shell-handoff');console.warn('Invalid handoff',e)}
  const mq=matchMedia('(prefers-color-scheme: dark)'),key='ui-design-studio-composer-v2';
  const options=(el,list)=>{el.replaceChildren(...list.map(([v,n,disabled])=>{const o=document.createElement('option');o.value=v;o.textContent=n;o.disabled=!!disabled;return o}))};
  const saved=()=>{try{const x=JSON.parse(localStorage.getItem(key)||'[]');return Array.isArray(x)?x.filter(p=>validatePreset(p).length===0):[]}catch{return []}};
