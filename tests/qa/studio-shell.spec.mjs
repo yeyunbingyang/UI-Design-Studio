@@ -8,8 +8,8 @@ test('application shell routing and style handoff',async({page})=>{
  await expect(page.locator('#main h1')).toHaveText('CRT 终端');
  await expect(page.frameLocator('iframe.preview').locator('h1')).toHaveText('设计工作台');
  await page.getByRole('button',{name:'加入组合器'}).click();
- const f=page.frameLocator('iframe.composer');await expect(f.locator('#status')).toHaveText('20 维配置已解析');
- const p=JSON.parse(await f.locator('#output').inputValue()).preset;expect(p.selections.background.id).toBe('background.scanlines');
+ await expect(page.locator('#native-output')).toBeVisible();
+ const p=JSON.parse(await page.locator('#native-output').inputValue()).preset;expect(p.selections.background.id).toBe('background.scanlines');
 });
 test('resource routes and mobile navigation',async({page})=>{
  await page.setViewportSize({width:375,height:900});await page.goto('/app/#foundations');
@@ -18,4 +18,18 @@ test('resource routes and mobile navigation',async({page})=>{
  await page.locator('#menu').click();await page.locator('#nav').getByRole('link',{name:'视觉效果库'}).click();
  await expect(page.locator('#main h1')).toHaveText('视觉效果库');await expect(page.locator('#menu')).toHaveAttribute('aria-expanded','false');
  await page.goto('/app/#projects');await expect(page.locator('#main h1')).toHaveText('项目管理');
+});
+
+test('native composer preserves draft across routes and refresh',async({page})=>{
+ await page.goto('/app/#composer');await expect(page.locator('#native-output')).toBeVisible();
+ await page.getByLabel('资源选项',{exact:true}).selectOption('color.warm');
+ await page.getByLabel('锁定当前维度').check();
+ await page.locator('#nav').getByRole('link',{name:'完整风格库'}).click();
+ await page.locator('#nav').getByRole('link',{name:'设计组合器'}).click();
+ let p=JSON.parse(await page.locator('#native-output').inputValue()).preset;
+ expect(p.selections.color.id).toBe('color.warm');expect(p.lockedDimensions).toContain('color');
+ await page.reload();await expect(page.locator('#native-output')).toBeVisible();
+ p=JSON.parse(await page.locator('#native-output').inputValue()).preset;expect(p.selections.color.id).toBe('color.warm');
+ await expect(page.locator('iframe.composer')).toHaveCount(0);
+ await expect(page.locator('iframe[title="当前预览"]')).toHaveAttribute('sandbox','allow-scripts');
 });
