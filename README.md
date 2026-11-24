@@ -62,6 +62,14 @@
 - [最新复验](https://github.com/yeyunbingyang/UI-Design-Studio/actions/runs/45368032811)：查询时 in_progress，结论 待定。
 - 尚待完整复验、人工视觉基线审核与授权确认。
 
+### M4-B.1 正式应用壳层（Alpha）
+
+- A3.7 复验已通过：[真实 CI](https://github.com/yeyunbingyang/UI-Design-Studio/actions/runs/45368032811)。
+- [新版应用入口](app/index.html)：仓库根目录执行 `npm run dev`，浏览器访问 `http://localhost:8080/app/`。
+- 已提交独立路由、资源库、风格详情、全局主题、移动导航与 V2 组合器配置传入；项目管理及独立导出中心仍为规划入口。
+- 新增 2 项壳层浏览器测试，原有 93 项保留。[新 CI](https://github.com/yeyunbingyang/UI-Design-Studio/actions/runs/45371830260) 查询时 in_progress，结论 待定。
+- 后续 M4-B.2：拆分组合器原生模块、组件实验室与共享方案状态。人工视觉基线、授权及 Windows 本地验收仍待完成。
+
 ## 产品定位
 面向独立开发者、前端工程师及 AI 编程 Agent 的本地优先 WebUI 设计工作台。将风格发现、可运行预览、组件与页面模板、设计变量、提示词、项目绑定、视觉验收统一管理。不是单纯的截图收藏站，也不是替代 Figma 的完整绘图工具。
 
