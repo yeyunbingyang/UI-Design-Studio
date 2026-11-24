@@ -49,6 +49,12 @@
 - 30 套配置已通过纯 JavaScript 解析、HTML 与 13 节文档生成检查；真实浏览器功能、视觉质量及授权仍待验收。
 - 下一阶段 A3.6：真实 Playwright 视觉与交互验收、资源参数一致性检查。大规模新增独立资产和第三方接入尚未完成。
 
+### A3.6 自动化验收（已启动，尚未完成）
+
+- [验收记录](docs/design/a3-6-qa-report.md) · [Playwright 测试](tests/qa/composer.spec.mjs) · [首次 CI 运行](https://github.com/yeyunbingyang/UI-Design-Studio/actions/runs/45367498304)
+- 已实际执行 39 项 JavaScript 核心检查，全部通过。已提交 93 项浏览器测试及 CI 工作流；首次运行状态以 Actions 页面为准。
+- 候选截图不等于批准的视觉基线；完整浏览器验收、修复及授权审核仍待完成。
+
 ## 产品定位
 面向独立开发者、前端工程师及 AI 编程 Agent 的本地优先 WebUI 设计工作台。将风格发现、可运行预览、组件与页面模板、设计变量、提示词、项目绑定、视觉验收统一管理。不是单纯的截图收藏站，也不是替代 Figma 的完整绘图工具。
 
