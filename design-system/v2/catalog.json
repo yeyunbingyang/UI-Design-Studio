@@ -1,0 +1,1101 @@
+{
+  "schemaVersion": 2,
+  "status": "candidate-catalog-not-renderer",
+  "dimensions": [
+    {
+      "id": "style",
+      "nameZh": "风格",
+      "layer": "identity",
+      "defaultResource": "style.minimal",
+      "resources": [
+        {
+          "id": "style.minimal",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "style.glass",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "style.linear",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "style.soft",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "style.brutal",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "style.tech",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "style.vaporwave",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "style.bauhaus",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        }
+      ]
+    },
+    {
+      "id": "theme",
+      "nameZh": "主题",
+      "layer": "identity",
+      "defaultResource": "theme.light",
+      "resources": [
+        {
+          "id": "theme.light",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "theme.dark",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "theme.system",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        }
+      ]
+    },
+    {
+      "id": "color",
+      "nameZh": "色彩",
+      "layer": "foundations",
+      "defaultResource": "color.business-blue",
+      "resources": [
+        {
+          "id": "color.business-blue",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "color.morandi",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "color.gray",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "color.purple",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "color.warm",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "color.cyan",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "color.neon",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        }
+      ]
+    },
+    {
+      "id": "typography",
+      "nameZh": "字体",
+      "layer": "foundations",
+      "defaultResource": "typography.sans",
+      "resources": [
+        {
+          "id": "typography.sans",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "typography.serif",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "typography.mono",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        }
+      ]
+    },
+    {
+      "id": "spacing",
+      "nameZh": "间距",
+      "layer": "foundations",
+      "defaultResource": "spacing.base-8",
+      "resources": [
+        {
+          "id": "spacing.base-8",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "spacing.base-4",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "spacing.base-12",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        }
+      ]
+    },
+    {
+      "id": "radius",
+      "nameZh": "圆角",
+      "layer": "foundations",
+      "defaultResource": "radius.small",
+      "resources": [
+        {
+          "id": "radius.small",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "radius.large",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "radius.medium",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "radius.square",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        }
+      ]
+    },
+    {
+      "id": "border",
+      "nameZh": "描边",
+      "layer": "foundations",
+      "defaultResource": "border.subtle",
+      "resources": [
+        {
+          "id": "border.subtle",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "border.solid",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "border.none",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "border.dashed",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        }
+      ]
+    },
+    {
+      "id": "background",
+      "nameZh": "背景",
+      "layer": "visual",
+      "defaultResource": "background.solid",
+      "resources": [
+        {
+          "id": "background.solid",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "background.radial",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "background.grid",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "background.scanlines",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "background.noise",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        }
+      ]
+    },
+    {
+      "id": "surface",
+      "nameZh": "表面",
+      "layer": "visual",
+      "defaultResource": "surface.solid",
+      "resources": [
+        {
+          "id": "surface.solid",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "surface.glass",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "surface.paper",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "surface.metal",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shadow",
+      "nameZh": "阴影",
+      "layer": "visual",
+      "defaultResource": "shadow.none",
+      "resources": [
+        {
+          "id": "shadow.none",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "shadow.soft",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "shadow.hard",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "shadow.inset",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        }
+      ]
+    },
+    {
+      "id": "effects",
+      "nameZh": "特效",
+      "layer": "visual",
+      "defaultResource": "effects.none",
+      "resources": [
+        {
+          "id": "effects.none",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "effects.glow",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "effects.dual",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "effects.blur",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        }
+      ]
+    },
+    {
+      "id": "imagery",
+      "nameZh": "图像",
+      "layer": "visual",
+      "defaultResource": "imagery.none",
+      "resources": [
+        {
+          "id": "imagery.none",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "imagery.gradient",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "imagery.geometric",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "imagery.photo",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "imagery.illustration",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "imagery.3d",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        }
+      ]
+    },
+    {
+      "id": "icons",
+      "nameZh": "图标",
+      "layer": "visual",
+      "defaultResource": "icons.outline",
+      "resources": [
+        {
+          "id": "icons.outline",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "icons.filled",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "icons.none",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "icons.duotone",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        }
+      ]
+    },
+    {
+      "id": "layout",
+      "nameZh": "布局",
+      "layer": "composition",
+      "defaultResource": "layout.sidebar",
+      "resources": [
+        {
+          "id": "layout.sidebar",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "layout.top",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "layout.three-column",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "layout.bento",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "layout.split",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        }
+      ]
+    },
+    {
+      "id": "navigation",
+      "nameZh": "导航",
+      "layer": "composition",
+      "defaultResource": "navigation.text",
+      "resources": [
+        {
+          "id": "navigation.text",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "navigation.icon",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "navigation.top",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "navigation.dock",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        }
+      ]
+    },
+    {
+      "id": "density",
+      "nameZh": "密度",
+      "layer": "composition",
+      "defaultResource": "density.standard",
+      "resources": [
+        {
+          "id": "density.standard",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "density.compact",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "density.comfortable",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        }
+      ]
+    },
+    {
+      "id": "components",
+      "nameZh": "组件",
+      "layer": "components",
+      "defaultResource": "components.solid",
+      "resources": [
+        {
+          "id": "components.solid",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "components.outline",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "components.pill",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        }
+      ]
+    },
+    {
+      "id": "visualization",
+      "nameZh": "数据可视化",
+      "layer": "components",
+      "defaultResource": "visualization.bars",
+      "resources": [
+        {
+          "id": "visualization.bars",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "visualization.table",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "visualization.kanban",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "visualization.timeline",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        }
+      ]
+    },
+    {
+      "id": "interaction",
+      "nameZh": "交互",
+      "layer": "components",
+      "defaultResource": "interaction.standard",
+      "resources": [
+        {
+          "id": "interaction.standard",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "interaction.restrained",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "interaction.expressive",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        }
+      ]
+    },
+    {
+      "id": "motion",
+      "nameZh": "动效",
+      "layer": "components",
+      "defaultResource": "motion.none",
+      "resources": [
+        {
+          "id": "motion.none",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "motion.transition",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "motion.spring",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        },
+        {
+          "id": "motion.glitch",
+          "version": "1.0.0",
+          "status": "candidate",
+          "source": {
+            "kind": "internal-proposal"
+          },
+          "license": {
+            "status": "pending-review"
+          }
+        }
+      ]
+    }
+  ]
+}
