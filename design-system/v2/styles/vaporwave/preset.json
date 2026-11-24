@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 2,
+  "name": "Vaporwave / Synthwave",
+  "selections": {
+    "style": {
+      "id": "style.vaporwave",
+      "version": "1.0.0"
+    },
+    "theme": {
+      "id": "theme.dark",
+      "version": "1.0.0"
+    },
+    "color": {
+      "id": "color.neon",
+      "version": "1.0.0"
+    },
+    "typography": {
+      "id": "typography.mono",
+      "version": "1.0.0"
+    },
+    "spacing": {
+      "id": "spacing.base-8",
+      "version": "1.0.0"
+    },
+    "radius": {
+      "id": "radius.small",
+      "version": "1.0.0"
+    },
+    "border": {
+      "id": "border.solid",
+      "version": "1.0.0"
+    },
+    "background": {
+      "id": "background.grid",
+      "version": "1.0.0"
+    },
+    "surface": {
+      "id": "surface.glass",
+      "version": "1.0.0"
+    },
+    "shadow": {
+      "id": "shadow.soft",
+      "version": "1.0.0"
+    },
+    "effects": {
+      "id": "effects.dual",
+      "version": "1.0.0"
+    },
+    "imagery": {
+      "id": "imagery.geometric",
+      "version": "1.0.0"
+    },
+    "icons": {
+      "id": "icons.outline",
+      "version": "1.0.0"
+    },
+    "layout": {
+      "id": "layout.bento",
+      "version": "1.0.0"
+    },
+    "navigation": {
+      "id": "navigation.text",
+      "version": "1.0.0"
+    },
+    "density": {
+      "id": "density.standard",
+      "version": "1.0.0"
+    },
+    "components": {
+      "id": "components.outline",
+      "version": "1.0.0"
+    },
+    "visualization": {
+      "id": "visualization.bars",
+      "version": "1.0.0"
+    },
+    "interaction": {
+      "id": "interaction.expressive",
+      "version": "1.0.0"
+    },
+    "motion": {
+      "id": "motion.glitch",
+      "version": "1.0.0"
+    }
+  },
+  "lockedDimensions": [],
+  "overrides": {}
+}
