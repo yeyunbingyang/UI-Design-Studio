@@ -1,63 +1,83 @@
 # UI Design Studio — 产品需求文档（PRD）
 
-> 文档版本：V1.1 Draft | 日期：2026-11-24 | 状态：待评审
+> 文档版本：V1.2 Draft | 日期：2026-11-24 | 状态：待评审
 > 本文定义 UI 风格资源与设计系统工作台的新增需求，不代表已实现功能。历史项目说明描述 Frontend Design Studio V1.2.0 / M3；本文以兼容其 Codex Skills 和 Playwright Visual QA 为原则，不重置现有版本号。
 
-## M4-A 详细设计文档
+## 当前开发状态与设计文档
 
-当前已完成详细设计文档，并提交 A2 独立 HTML 原型。尚未完成真实浏览器验收及原 M3 工程集成。
-
-### A2 原型
-
-- [prototype/index.html](prototype/index.html)：下载原始 HTML 文件后直接用浏览器打开，无需安装依赖。
-- 12 维配置、6 套预设、iframe 预览、维度锁定、撤销重做、A/B 对比、本地保存、JSON 导入导出、HTML/CSS 导出和提示词。
-- 验证状态：GitHub 文件回读完成；真实 Chromium、响应式、导出往返和 M3 回归测试仍待执行。
-- 原型使用内置示例组件及数据，不代表已接入第三方组件库。
-
-| 文档 | 内容 |
-|---|---|
-| [设计资源分类体系](docs/design/resource-taxonomy.md) | 12 维分类、资源模型、生命周期 |
-| [设计组合器交互规范](docs/design/composer-spec.md) | 三栏线框、操作流程、解析规则、验收 |
-| [第三方资源整合方案](docs/design/resource-integration.md) | 适配器、授权、安全、Agent 接入 |
-| [M4-A 实施计划](docs/design/m4-a-plan.md) | 工作包、开发顺序、测试门槛 |
+- 当前产品需求为 **V1.2 / 20 维体系**；旧 M4-A 详细设计和 A2 代码为 V1.1 / 12 维历史基线，尚未升级，不代表新需求已实现。
+- [旧版 A2 独立 HTML 原型](prototype/index.html)：下载后用浏览器打开；已通过 JavaScript 语法检查，真实浏览器功能验收待完成。
+- [资源分类旧版](docs/design/resource-taxonomy.md) · [组合器旧版](docs/design/composer-spec.md) · [第三方整合旧版](docs/design/resource-integration.md) · [实施计划旧版](docs/design/m4-a-plan.md)
+- 下一阶段：A3 schema v2、迁移器、20 维资源模型及霓虹复古示范；再更新原型与测试。
 
 ## 产品定位
 面向独立开发者、前端工程师及 AI 编程 Agent 的本地优先 WebUI 设计工作台。将风格发现、可运行预览、组件与页面模板、设计变量、提示词、项目绑定、视觉验收统一管理。不是单纯的截图收藏站，也不是替代 Figma 的完整绘图工具。
 
 ## 核心目标
-- 将网页拆分为 12 个设计维度，以 Design Composer 为核心实现自由组合、可运行预览与可复用方案。
+- 将网页拆分为 20 个设计维度，以 Design Composer 为核心实现自由组合、可运行预览与可复用方案。
 - 同一个真实页面结构可一键切换不同视觉风格，方便横向比较。
 - 资源可搜索、收藏、分类、编辑、导入、导出，避免每个项目重复设计。
 - 将选定风格转换为机器可读设计规范，供 Codex 等 Agent 复用。
 - 保留已有设计简报、实现、Skills 管理和视觉 QA 工作流。
 - 优先支持本地运行、离线预览及数据自主控制。
 
-## 核心设计理念：模块化网页设计
+## 设计体系：6 层规范、20 维资产、13 节风格文档
 
-网页设计不等于固定主题。将页面拆解为 12 个可独立选择、调整、组合的维度，通过统一设计系统生成可复用方案。Design Composer（设计组合器）为产品核心，而非仅提供风格截图或固定模板。
+三个模型服务不同目的，不可混为一谈。6 层为知识与工程架构；20 维为可配置资产；13 节为风格文档的统一展示结构。页面区域（顶栏、侧栏、内容区）属于布局和导航的实例，不是顶层风格分类。
 
-| 维度 | 英文 | 初始选项与配置 |
+| 设计层级 | 对应可配置维度 |
+|---|---|
+| Style Identity 风格定位 | Style、Theme |
+| Design Foundations 基础设计 | Color、Typography、Spacing、Radius、Border |
+| Visual Language 视觉表现 | Background、Surface、Shadow、Effects、Imagery、Icons |
+| Components & Interaction 组件交互 | Components、Data Visualization、Interaction、Motion |
+| Layout & Composition 页面组织 | Layout、Navigation、Density |
+| Implementation 工程实施 | 非选择维度；贯穿全部 20 维的 Tokens、代码、规则、Agent 与 QA |
+
+### 20 维资源目录（稳定 ID）
+
+| ID | 设计维度 | 独立配置内容 |
 |---|---|---|
-| 页面布局 | Layout | 侧栏、顶部、三栏、Bento、分屏、沉浸式；网格、宽度、断点 |
-| 导航系统 | Navigation | 可折叠侧栏、顶部菜单、图标栏、Dock、巨型菜单、命令面板 |
-| 视觉风格 | Visual Style | 极简、玻璃拟态、Linear、新拟态、粗野主义、科技风等 |
-| 色彩系统 | Color System | 商务蓝、莫兰迪、高级灰、紫蓝渐变、暖色、赛博；语义色、亮暗主题 |
-| 字体系统 | Typography | 无衬线、衬线、等宽、中英文字体；字号、字重、行高、字距 |
-| 组件系统 | Components | 按钮、表单、卡片、表格、弹窗、抽屉、标签页等；组件变体与交互状态 |
-| 形状与材质 | Shape & Material | 圆角、边框、阴影、纯色、透明、玻璃模糊、渐变 |
-| 图标系统 | Iconography | Lucide、Phosphor、Material Symbols、Tabler、Iconify；尺寸、线宽、填充 |
-| 间距与密度 | Spacing & Density | 紧凑、标准、宽松；间距尺度、内外边距、行高 |
-| 数据可视化 | Data Visualization | 图表、表格、看板、甘特图、图库、时间线；空状态与交互 |
-| 动效与交互 | Motion & Interaction | 淡入、滑动、缩放、弹性、页面转场、拖拽反馈；时长、缓动、减弱动画 |
-| 内容与素材 | Content & Assets | 摄影、矢量、3D 插画、头像、封面、背景、Logo、内容排版与比例 |
+| style | 风格 Style | 极简、霓虹复古、玻璃拟态、包豪斯；以默认组合与规则包表示 |
+| theme | 主题 Theme | 浅色、深色、跟随系统；独立于风格 |
+| color | 色彩 Color | 色板、语义色、渐变色标、状态色、图表色 |
+| typography | 字体 Typography | 字族、字重、字号尺度、行高、字距、中英文回退 |
+| spacing | 间距 Spacing | 基础单位、间距尺度、内外边距 |
+| radius | 圆角 Radius | 直角、微圆角、大圆角、胶囊；按组件映射 |
+| border | 描边 Border | 宽度、线型、语义描边色 |
+| background | 背景 Background | 纯色、渐变、网格、扫描线、噪点；页面画布 |
+| surface | 表面 Surface | 玻璃、纸张、金属、实色；面板及浮层材质 |
+| shadow | 阴影 Shadow | 无、柔阴影、硬阴影；深度级别 |
+| effects | 特效 Effects | 发光、模糊、双色重影、故障视觉；静态效果与动效分离 |
+| imagery | 图像 Imagery | 写实、矢量、3D、抽象；比例、裁切及处理规范 |
+| icons | 图标 Icons | 线性、填充、双色、立体；图标集、线宽、大小 |
+| layout | 布局 Layout | Dashboard、Bento、三栏、分屏；骨架、网格、容器、断点 |
+| navigation | 导航 Navigation | 顶部、侧栏、Dock、命令面板；位置及响应式行为 |
+| density | 密度 Density | 数据密集、标准、宽松；控件高度、行高与信息容量 |
+| components | 组件 Components | 按钮、卡片、表格、表单等；结构、变体、局部样式 |
+| visualization | 数据可视化 Data Visualization | 图表、指标、进度、看板、甘特、时间线；数据适配 |
+| interaction | 交互 Interaction | hover、active、focus-visible、disabled、loading、error；状态与反馈规则 |
+| motion | 动效 Motion | 淡入、漂浮、弹性、故障位移；时长、曲线、触发器、减弱动画 |
 
-维度不是互斥分类：布局与导航存在结构依赖，风格与材质、颜色存在默认关联，但用户可覆盖。视觉风格是多维默认值的集合；Bento 属于布局范式，也可作为综合预设入口。组件框架是实现适配器，不等同于视觉风格。业务内容与功能应保持独立，不因换肤而丢失。
+### 维度边界与组合语义
 
-## 五大核心模块
+Style 是默认组合入口，不是强行覆盖其他维度的全局 CSS。Theme 定义语义色模式；Color 定义色板映射。Spacing 定义尺度，Density 选择尺度及控件尺寸映射，不重复存储间距值。Radius、Border、Shadow 各有独立 token 命名空间；Background 管画布，Surface 管容器层，Effects 管装饰效果，Motion 管时间变化。Interaction 描述状态语义与行为，Components 描述结构与变体。布局和导航可组合但受空间与结构约束。数据可视化必须适配数据语义；不允许换肤改变业务数据或功能。
+
+### 统一风格文档（13 节）
+
+所有完整风格都应具有 Style Overview、Colors、Typography、Spacing & Layout、Components、Do's and Don'ts、Surfaces、Elevation、Imagery、Layout、Agent Prompt Guide、Similar Brands、Quick Start。各节引用规范化资源与 token；原文未覆盖的主题、图标、交互状态、动效、响应式、无障碍与 QA 作为补充子节。Spacing & Layout 记录基础空间尺度，Layout 记录页面组织；Quick Start 由解析结果生成，不作为独立数据真源。相似品牌仅为参考，不复制专有标识。
+
+每个资源详情应包括定义、适用场景、可视示例、参数、真实交互预览（适用时）、兼容条件、使用与禁用规则、代码/Token、来源及许可证。每个完整风格额外提供多页面示范和可复制的 Agent 指南。未实现或仅参考的资源须明确标记。
+
+## 产品功能架构
+
+资源目录分为六个入口：完整风格库、基础设计库、视觉效果库、组件库（含数据可视化）、页面布局库、交互动效库；主题归风格库，密度归页面布局库。所有入口共享同一资源索引，避免重复存储。资源库支持单独浏览与预览，不要求先创建完整方案。
+
+### 五大系统能力
 
 | 模块 | 作用 |
 |---|---|
-| Design Library（设计资源库） | 按 12 维度管理资源、预览、搜索、标签、来源与授权 |
+| Design Library（设计资源库） | 按 20 维度管理资源、预览、搜索、标签、来源与授权 |
 | Design Composer（设计组合器） | 逐维选择、参数编辑、锁定维度、兼容检查、撤销重做、恢复默认 |
 | Design Playground（实时预览器） | 同一业务页面真实交互预览、设备切换、主题切换、并排比较 |
 | Design Presets（设计方案库） | 保存、命名、收藏、复制、版本化、导入导出完整组合方案 |
@@ -81,7 +101,15 @@
 
 ### 组合器界面
 
-左侧：12 维度资源树、搜索和预设入口；中央：真实 HTML/CSS 页面预览、设备尺寸及 A/B 对比；右侧：当前维度参数、锁定、兼容检查、Token 编辑；顶部：方案名称、撤销重做、保存、导出；底部可折叠：代码与 AI 提示词。小屏采用抽屉与分段面板。
+左侧：20 维度资源树、搜索和预设入口；中央：真实 HTML/CSS 页面预览、设备尺寸及 A/B 对比；右侧：当前维度参数、锁定、兼容检查、Token 编辑；顶部：方案名称、撤销重做、保存、导出；底部可折叠：代码与 AI 提示词。小屏采用抽屉与分段面板。
+
+## 关键页面与工作流
+
+- 风格库：以真实页面缩略图、名称、标签、适用场景筛选；详情展示 13 节规范、风格示范、相似风格、套用全套或仅提取一个维度。
+- 独立资源库：按类别浏览，每项可查看变体、参数、可运行组件示例、代码和来源；支持加入组合器，不自动改变其他维度。
+- Composer：左侧按层分组展示 20 维、当前值与锁定状态；中央可切换 Dashboard、表单、内容页与移动视口；右侧可编辑参数与显示冲突；支持预设差异确认、局部覆盖、A/B 对比及撤销重做。
+- 方案库：保存完整快照、版本、来源、锁定项、派生关系；可比较两个版本、复制并恢复。
+- 工程输出：同步生成 HTML/CSS/JS、语义 Design Tokens、JSON、Markdown 规范、Agent Prompt/SKILL.md、依赖清单与 QA 报告。
 
 ## 用户场景
 1. 开发新项目：选择产品类型 → 浏览推荐风格 → 对比同一页面 → 调整设计变量 → 导出项目设计包。
@@ -102,14 +130,18 @@
 | FR-09 | 资源管理 | 本地 JSON 导入导出、校验、重复检测、标签及来源维护；第三方适配器 | P1 |
 | FR-10 | Agent 集成 | 导出 SKILL.md、CSS、JSON、Markdown、HTML；复用已有 AGENTS.md 绑定和备份；CLI/MCP 检索接口后续实现 | P0/P2 |
 | FR-11 | Visual QA | 接入现有 Playwright 检查、截图基线、差异比较、响应式检查、问题报告与修复任务 | P1 |
-
-| FR-12 | 设计组合器 | 12 维度独立选择、锁定、覆盖、撤销重做、实时组合 | P0 |
+| FR-12 | 设计组合器 | 20 维度独立选择、锁定、覆盖、撤销重做、实时组合 | P0 |
 | FR-13 | 设计方案库 | 保存、复制、收藏、版本化、导入导出完整方案 | P0 |
 | FR-14 | 组合规则引擎 | 确定性合并、兼容性检查、冲突解释与修复建议 | P0 |
 | FR-15 | AI 设计引擎 | 按项目类型推荐维度组合、生成设计规范和 Agent 任务 | P1 |
 
+| FR-16 | 风格规范文档 | 13 节统一风格说明、关联资产、实时示例与 Quick Start | P0 |
+| FR-17 | 独立资源目录 | 六个资源入口、20 维检索、变体与代码、独立提取并组合 | P0 |
+| FR-18 | 主题及状态系统 | 浅/深/系统主题，完整组件状态、键盘和减弱动画 | P0 |
+| FR-19 | 资产溯源 | 资源版本、许可证、参数来源、解析结果追踪 | P0 |
+
 ## 初始风格目录
-首批 12 类：Minimalism（极简）、Glassmorphism（玻璃拟态）、Bento Grid（便当盒布局）、Linear-inspired（精致暗色）、Neumorphism（新拟态）、Neo-Brutalism（新粗野主义）、Apple-inspired（原生桌面感）、Material Design（材质设计）、Swiss Style（瑞士设计）、Cyberpunk/HUD（科技科幻）、Notion-inspired（知识工作台）、Enterprise（企业管理）。
+首批候选：Vaporwave / Synthwave（霓虹复古）、Bauhaus（包豪斯）、Minimalism（极简）、Glassmorphism（玻璃拟态）、Bento Grid（便当盒布局）、Linear-inspired（精致暗色）、Neumorphism（新拟态）、Neo-Brutalism（新粗野主义）、Apple-inspired（原生桌面感）、Material Design（材质设计）、Swiss Style（瑞士设计）、Cyberpunk/HUD（科技科幻）、Notion-inspired（知识工作台）、Enterprise（企业管理）。
 布局范式与视觉主题应分开建模，例如 Bento 可叠加玻璃主题，不强制互斥。品牌风格名称仅作参考，不复制商标或专有资产。
 
 ## 信息架构
@@ -117,9 +149,14 @@
 风格详情采用三栏：资源导航、中央实时预览、右侧属性与规范；顶部搜索、设备切换、亮暗切换、对比和导出。小屏改为抽屉及分段布局。主界面自身保持统一主题，预览主题在隔离容器内切换。
 
 ## 数据模型
+
+Schema v2 使用稳定维度 ID 与资源版本引用，而非数组索引。StyleDocument：id、version、sections（13 节）、resourceRefs、ruleRefs、previewRefs；StylePreset：默认维度引用与规则；TokenSet 分为 primitive、semantic、component 三层并按 theme 分模式；Token provenance 记录最终值来源。每个维度拥有明确 token 写入范围，跨维引用使用依赖关系，解析循环必须报错。
+
+迁移 v1：layout/navigation/style/color/typography/components/icons/visualization 原值保留并映射为稳定资源 ID；material 拆分 radius、border、surface、shadow、effects；density 拆分 spacing 与 density；motion 拆分 interaction 与 motion；assets 拆分 background 与 imagery；theme 从旧预设显式推导，无法确定则记录默认值及迁移警告。保留原快照，禁止静默丢弃自定义参数，未知扩展字段进入迁移报告。v1 原型仅有索引配置，须按其实际选项表映射，不能假定全部资源已实现。
+
 - DesignDimension：id、nameZh、nameEn、resourceType、optionSchema、dependencies、defaultValue。
 - DesignResource：id、dimensionId、name、parameters、preview、source、license、version、compatibility。
-- DesignPreset：id、name、pageType、dimensionSelections（12 维）、lockedDimensions、overrides、componentOverrides、resourceVersions、schemaVersion、revision。
+- DesignPreset：id、name、pageType、dimensionSelections（20 维）、lockedDimensions、overrides、componentOverrides、resourceVersions、schemaVersion、revision。
 - ResolvedDesign：presetId、resolvedTokens、layout、navigation、componentVariants、assets、motion、diagnostics、dependencyManifest。
 - CompatibilityRule：id、conditions、severity、message、suggestedFix；旧 Style 数据迁移为默认组合预设，原项目绑定保留。
 - Style：id、slug、nameZh、nameEn、description、tags、category、tokens、previewId、sourceUrl、license、version。
@@ -143,7 +180,7 @@
 以上均为候选参考，接入前核验项目可用性、许可证、API、依赖与商业限制。仅导入获授权的内容，保留归属；不批量复制付费图库。
 
 ## Agent 工作流
-需求分析 → 选择页面 → 12 维度组合 → 兼容检查 → 保存设计方案 → 生成设计简报 → 保存 Tokens 与组件规则 → 导出设计包 → Codex 实现 → Playwright 截图与 QA → 生成修复任务 → 再验收。
+需求分析 → 选择页面 → 20 维度组合 → 兼容检查 → 保存设计方案 → 生成设计简报 → 保存 Tokens 与组件规则 → 导出设计包 → Codex 实现 → Playwright 截图与 QA → 生成修复任务 → 再验收。
 导出包建议包含 design-preset.json、dependency-manifest.json、design-tokens.json、theme.css、design-spec.md、SKILL.md、preview.html。CLI/MCP 后续提供 list_styles、get_style、search_components、export_design 等接口；写入能力需单独授权。
 
 ## 非功能需求
@@ -153,17 +190,26 @@
 - 安全与隐私：本地优先、路径约束、输入校验、HTML 净化、禁止自动执行导入脚本；可离线使用内置资源。
 - 可维护：模块化、统一 schema、单元测试、视觉回归测试、错误及空状态、数据迁移与恢复。
 
+## 首个验证样例：霓虹复古风格
+
+以用户提供的 Vaporwave / Synthwave 说明为输入，建立首个 13 节风格文档示范；色板示例：Neon Pink #ff71ce、Seafoam Cyan #01cdfe、Midnight #0d0221、Mint #05ffa1、Violet #b967ff、Sunlight #fffb96。上述为基础色板，不直接等同可访问的语义文本/背景组合。扫描线、网格、发光、双色重影分别归属对应维度；字体、组件交互与动效规则需独立定义。验证组合：霓虹配色 + 玻璃表面 + Bento 布局 + 极简字体 + 故障动效；确保状态反馈、阅读对比度、减少动态效果及移动端布局正常。原始风格说明的授权与出处未核实，不复制完整外部文档或品牌资产。
+
 ## 分阶段实施
 | 阶段 | 交付 | 验收 |
 |---|---|---|
-| M4-A | 核对现有项目、定义 12 维度 schema、组合器、资源元数据、导航及预览原型 | 数据校验通过，同一 Dashboard 可切换至少 6 套预设并独立调整布局、色彩、材质 |
-| M4-B | 完成 12 维度可用选项、12 套预设、组合规则、Tokens 编辑、基础组件、方案保存及导出 | 12 维选择实时生效，锁定有效，重启保留，导出可独立预览 |
+| M4-A | 核对源码、保留 A2 历史原型、定义 schema v2、迁移器、20 维资源索引与霓虹复古示范 | v1→v2 迁移验证，至少 6 套预设可解析，重点独立调整主题、背景、表面、阴影、圆角和描边 |
+| M4-B | 完成 20 维度可用选项、至少 12 套完整预设、组合规则、Tokens 编辑、基础组件、方案保存及导出 | 20 维选择实时生效，锁定有效，重启保留，导出可独立预览 |
 | M5 | 扩展页面模板、动效、资源导入、项目绑定、AI 搭配建议 | 模板主题切换、导入导出往返不丢数据、项目文件备份 |
 | M6 | Agent 接口、外部适配器与 Visual QA 联动 | CLI/MCP 合约测试、三视口截图、差异报告与修复任务 |
 阶段名称是规划，不代表已有发布。
 
 ## 验收清单
-- [ ] 12 个维度均可独立选择并真实生效，至少提供两种有效选项；内置预设覆盖全部维度。
+- [ ] 6 层、20 维、13 节文档映射清晰；每个 token 具有唯一归属及来源追踪。
+- [ ] 旧版 12 维方案迁移有可回溯报告；迁移后可保存、加载、导出，不覆盖原文件。
+- [ ] 霓虹复古混合方案中可独立切换主题、圆角、描边、背景、表面、阴影、特效与动效；不互相误覆盖。
+- [ ] 组件交互覆盖 hover、active、focus-visible、disabled、loading、error；动效遵循 reduced-motion。
+- [ ] 每个风格详情 13 节完整，未实现选项明确标识，代码与预览一致。
+- [ ] 20 个维度均可独立选择并真实生效，至少提供两种有效选项；内置预设覆盖全部维度。
 - [ ] 支持 Bento + 玻璃材质 + 自定义配色等跨维组合，不改变业务数据；锁定、撤销、重做及单维重置可用。
 - [ ] 对冲突配置显示可理解的诊断，修复前可预览；相同版本及配置可重建相同方案。
 - [ ] 方案保存、复制、版本化、导入导出与预览一致；A/B 对比可验证独立维度的变化。
@@ -178,7 +224,7 @@
 - [ ] 在目标 Windows 环境完成真实安装、构建和 Chromium 验证。
 
 ## 范围边界与待确认
-首期首先完成本地设计资源库、12 维设计组合器、方案库与可运行预览，不承诺实时爬取全部网站、完整 Figma 编辑器、云端多人协作或自动生成全部业务代码。历史 README 提及压缩包，但当前仓库根目录未见 releases/，须在实现前核实源码位置。最终技术栈、发布版本及外部资源授权待评审。
+首期首先完成本地设计资源库、20 维设计组合器、方案库与可运行预览，不承诺实时爬取全部网站、完整 Figma 编辑器、云端多人协作或自动生成全部业务代码。历史 README 提及压缩包，但当前仓库根目录未见 releases/，须在实现前核实源码位置。最终技术栈、发布版本及外部资源授权待评审。
 
 
 ---
