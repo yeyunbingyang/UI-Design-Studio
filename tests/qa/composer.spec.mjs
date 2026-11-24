@@ -43,7 +43,9 @@ test('lock, undo, redo and JSON roundtrip',async({page})=>{
 test('component form validation, loading and reduced motion',async({page})=>{
  await page.emulateMedia({reducedMotion:'reduce'});await ready(page);
  const f=page.frameLocator('#preview');await f.locator('#form button').click();await expect(f.locator('#error')).toHaveText('请输入名称');
- await f.locator('#name').fill('示例');await f.locator('#form button').click();await expect(f.locator('#status')).toContainText('示例保存');
+ await expect(f.locator('#name')).toHaveAttribute('aria-invalid','true');
+ await f.locator('#name').fill('示例');await f.locator('#name').press('Enter');await expect(f.locator('#status')).toContainText('示例保存');await expect(f.locator('#error')).toHaveText('');await expect(f.locator('#name')).toHaveAttribute('aria-invalid','false');
  await f.locator('#load').click();await expect(f.locator('#load')).toBeDisabled();await expect(f.locator('#status')).toHaveText('完成');await expect(f.locator('#load')).toBeEnabled();
  const transition=await f.locator('#load').evaluate(el=>getComputedStyle(el).transitionDuration);expect(transition).toBe('0s');
+ await expect(page.locator('#preview')).toHaveAttribute('sandbox','allow-scripts');
 });
