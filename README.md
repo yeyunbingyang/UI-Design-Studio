@@ -10,6 +10,15 @@
 - [资源分类旧版](docs/design/resource-taxonomy.md) · [组合器旧版](docs/design/composer-spec.md) · [第三方整合旧版](docs/design/resource-integration.md) · [实施计划旧版](docs/design/m4-a-plan.md)
 - 下一阶段：A3 schema v2、迁移器、20 维资源模型及霓虹复古示范；再更新原型与测试。
 
+### A3.1 设计资产标准（已提交）
+
+- [资产标准与 Tokens 规则](docs/design/asset-standard-v2.md)
+- [20 维候选资源目录（85 项）](design-system/v2/catalog.json)
+- [方案 JSON Schema](design-system/v2/preset.schema.json) · [资源 JSON Schema](design-system/v2/resource.schema.json)
+- [旧版迁移器](design-system/v2/migrate-v1.mjs) · [迁移测试](design-system/v2/migrate-v1.test.mjs)
+- 已核对目录数量及 JSON 解析；Node.js 测试代码已提交但尚未运行，完整规则引擎和浏览器验证待完成。
+- 下一阶段 A3.2：霓虹复古 13 节标准风格示范。
+
 ## 产品定位
 面向独立开发者、前端工程师及 AI 编程 Agent 的本地优先 WebUI 设计工作台。将风格发现、可运行预览、组件与页面模板、设计变量、提示词、项目绑定、视觉验收统一管理。不是单纯的截图收藏站，也不是替代 Figma 的完整绘图工具。
 
