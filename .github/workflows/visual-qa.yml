@@ -5,6 +5,7 @@ on:
     paths:
       - 'design-system/**'
       - 'prototype/**'
+      - 'app/**'
       - 'tests/**'
       - 'package.json'
       - 'playwright.config.mjs'
