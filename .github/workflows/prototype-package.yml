@@ -1,0 +1,20 @@
+name: Prototype package
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/prototype-package.yml'
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: git archive --format=zip --prefix=UI-Design-Studio/ -o UI-Design-Studio-M4-B.3.zip c6418eec7c919ff1f0fda9c7c1e7cd0dec751154
+      - uses: actions/upload-artifact@v4
+        with:
+          name: UI-Design-Studio-M4-B.3
+          path: UI-Design-Studio-M4-B.3.zip
