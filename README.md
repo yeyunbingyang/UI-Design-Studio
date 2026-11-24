@@ -3,6 +3,17 @@
 > 文档版本：V1.1 Draft | 日期：2026-11-24 | 状态：待评审
 > 本文定义 UI 风格资源与设计系统工作台的新增需求，不代表已实现功能。历史项目说明描述 Frontend Design Studio V1.2.0 / M3；本文以兼容其 Codex Skills 和 Playwright Visual QA 为原则，不重置现有版本号。
 
+## M4-A 详细设计文档
+
+当前已完成详细设计文档，尚未完成可运行原型或功能实现。
+
+| 文档 | 内容 |
+|---|---|
+| [设计资源分类体系](docs/design/resource-taxonomy.md) | 12 维分类、资源模型、生命周期 |
+| [设计组合器交互规范](docs/design/composer-spec.md) | 三栏线框、操作流程、解析规则、验收 |
+| [第三方资源整合方案](docs/design/resource-integration.md) | 适配器、授权、安全、Agent 接入 |
+| [M4-A 实施计划](docs/design/m4-a-plan.md) | 工作包、开发顺序、测试门槛 |
+
 ## 产品定位
 面向独立开发者、前端工程师及 AI 编程 Agent 的本地优先 WebUI 设计工作台。将风格发现、可运行预览、组件与页面模板、设计变量、提示词、项目绑定、视觉验收统一管理。不是单纯的截图收藏站，也不是替代 Figma 的完整绘图工具。
 
