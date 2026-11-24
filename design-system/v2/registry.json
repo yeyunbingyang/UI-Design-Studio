@@ -1,0 +1,1811 @@
+{
+  "schemaVersion": 2,
+  "description": "Prototype parameter registry. Structural adapters remain in composer-core. Candidate licensing status retained.",
+  "resources": [
+    {
+      "schemaVersion": 2,
+      "id": "style.minimal",
+      "dimensionId": "style",
+      "version": "1.0.0",
+      "name": "style.minimal",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "minimal"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "style.glass",
+      "dimensionId": "style",
+      "version": "1.0.0",
+      "name": "style.glass",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "glass"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "style.linear",
+      "dimensionId": "style",
+      "version": "1.0.0",
+      "name": "style.linear",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "linear"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "style.soft",
+      "dimensionId": "style",
+      "version": "1.0.0",
+      "name": "style.soft",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "soft"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "style.brutal",
+      "dimensionId": "style",
+      "version": "1.0.0",
+      "name": "style.brutal",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "brutal"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "style.tech",
+      "dimensionId": "style",
+      "version": "1.0.0",
+      "name": "style.tech",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "tech"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "style.vaporwave",
+      "dimensionId": "style",
+      "version": "1.0.0",
+      "name": "style.vaporwave",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "vaporwave"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "style.bauhaus",
+      "dimensionId": "style",
+      "version": "1.0.0",
+      "name": "style.bauhaus",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "bauhaus"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "theme.light",
+      "dimensionId": "theme",
+      "version": "1.0.0",
+      "name": "theme.light",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "light"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "theme.dark",
+      "dimensionId": "theme",
+      "version": "1.0.0",
+      "name": "theme.dark",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "dark"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "theme.system",
+      "dimensionId": "theme",
+      "version": "1.0.0",
+      "name": "theme.system",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "system"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "color.business-blue",
+      "dimensionId": "color",
+      "version": "1.0.0",
+      "name": "color.business-blue",
+      "status": "candidate",
+      "parameters": {
+        "primary": "#2563eb",
+        "secondary": "#0891b2",
+        "darkCanvas": "#141720",
+        "lightCanvas": "#f6f7fb"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "color.morandi",
+      "dimensionId": "color",
+      "version": "1.0.0",
+      "name": "color.morandi",
+      "status": "candidate",
+      "parameters": {
+        "primary": "#637f70",
+        "secondary": "#a56e68",
+        "darkCanvas": "#141720",
+        "lightCanvas": "#f6f7fb"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "color.gray",
+      "dimensionId": "color",
+      "version": "1.0.0",
+      "name": "color.gray",
+      "status": "candidate",
+      "parameters": {
+        "primary": "#52525b",
+        "secondary": "#71717a",
+        "darkCanvas": "#141720",
+        "lightCanvas": "#f6f7fb"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "color.purple",
+      "dimensionId": "color",
+      "version": "1.0.0",
+      "name": "color.purple",
+      "status": "candidate",
+      "parameters": {
+        "primary": "#7360d2",
+        "secondary": "#a855f7",
+        "darkCanvas": "#141720",
+        "lightCanvas": "#f6f7fb"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "color.warm",
+      "dimensionId": "color",
+      "version": "1.0.0",
+      "name": "color.warm",
+      "status": "candidate",
+      "parameters": {
+        "primary": "#9c642e",
+        "secondary": "#c08457",
+        "darkCanvas": "#141720",
+        "lightCanvas": "#f6f7fb"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "color.cyan",
+      "dimensionId": "color",
+      "version": "1.0.0",
+      "name": "color.cyan",
+      "status": "candidate",
+      "parameters": {
+        "primary": "#008aab",
+        "secondary": "#0891b2",
+        "darkCanvas": "#141720",
+        "lightCanvas": "#f6f7fb"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "color.neon",
+      "dimensionId": "color",
+      "version": "1.0.0",
+      "name": "color.neon",
+      "status": "candidate",
+      "parameters": {
+        "primary": "#ff71ce",
+        "secondary": "#01cdfe",
+        "darkCanvas": "#0d0221",
+        "lightCanvas": "#f6f7fb"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "typography.sans",
+      "dimensionId": "typography",
+      "version": "1.0.0",
+      "name": "typography.sans",
+      "status": "candidate",
+      "parameters": {
+        "family": "system-ui",
+        "body": 14,
+        "lineHeight": 1.6
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "typography.serif",
+      "dimensionId": "typography",
+      "version": "1.0.0",
+      "name": "typography.serif",
+      "status": "candidate",
+      "parameters": {
+        "family": "Georgia",
+        "body": 14,
+        "lineHeight": 1.6
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "typography.mono",
+      "dimensionId": "typography",
+      "version": "1.0.0",
+      "name": "typography.mono",
+      "status": "candidate",
+      "parameters": {
+        "family": "Consolas",
+        "body": 13,
+        "lineHeight": 1.6
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "spacing.base-8",
+      "dimensionId": "spacing",
+      "version": "1.0.0",
+      "name": "spacing.base-8",
+      "status": "candidate",
+      "parameters": {
+        "base": 8
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "spacing.base-4",
+      "dimensionId": "spacing",
+      "version": "1.0.0",
+      "name": "spacing.base-4",
+      "status": "candidate",
+      "parameters": {
+        "base": 4
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "spacing.base-12",
+      "dimensionId": "spacing",
+      "version": "1.0.0",
+      "name": "spacing.base-12",
+      "status": "candidate",
+      "parameters": {
+        "base": 12
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "radius.small",
+      "dimensionId": "radius",
+      "version": "1.0.0",
+      "name": "radius.small",
+      "status": "candidate",
+      "parameters": {
+        "px": 4
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "radius.large",
+      "dimensionId": "radius",
+      "version": "1.0.0",
+      "name": "radius.large",
+      "status": "candidate",
+      "parameters": {
+        "px": 18
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "radius.medium",
+      "dimensionId": "radius",
+      "version": "1.0.0",
+      "name": "radius.medium",
+      "status": "candidate",
+      "parameters": {
+        "px": 10
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "radius.square",
+      "dimensionId": "radius",
+      "version": "1.0.0",
+      "name": "radius.square",
+      "status": "candidate",
+      "parameters": {
+        "px": 0
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "border.subtle",
+      "dimensionId": "border",
+      "version": "1.0.0",
+      "name": "border.subtle",
+      "status": "candidate",
+      "parameters": {
+        "width": 1
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "border.solid",
+      "dimensionId": "border",
+      "version": "1.0.0",
+      "name": "border.solid",
+      "status": "candidate",
+      "parameters": {
+        "width": 1
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "border.none",
+      "dimensionId": "border",
+      "version": "1.0.0",
+      "name": "border.none",
+      "status": "candidate",
+      "parameters": {
+        "width": 0
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "border.dashed",
+      "dimensionId": "border",
+      "version": "1.0.0",
+      "name": "border.dashed",
+      "status": "candidate",
+      "parameters": {
+        "width": 2
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "background.solid",
+      "dimensionId": "background",
+      "version": "1.0.0",
+      "name": "background.solid",
+      "status": "candidate",
+      "parameters": {},
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "background.radial",
+      "dimensionId": "background",
+      "version": "1.0.0",
+      "name": "background.radial",
+      "status": "candidate",
+      "parameters": {},
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "background.grid",
+      "dimensionId": "background",
+      "version": "1.0.0",
+      "name": "background.grid",
+      "status": "candidate",
+      "parameters": {
+        "size": 32
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "background.scanlines",
+      "dimensionId": "background",
+      "version": "1.0.0",
+      "name": "background.scanlines",
+      "status": "candidate",
+      "parameters": {
+        "size": 4
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "background.noise",
+      "dimensionId": "background",
+      "version": "1.0.0",
+      "name": "background.noise",
+      "status": "candidate",
+      "parameters": {
+        "size": 4
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "surface.solid",
+      "dimensionId": "surface",
+      "version": "1.0.0",
+      "name": "surface.solid",
+      "status": "candidate",
+      "parameters": {},
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "surface.glass",
+      "dimensionId": "surface",
+      "version": "1.0.0",
+      "name": "surface.glass",
+      "status": "candidate",
+      "parameters": {
+        "opacity": 0.79,
+        "blur": 12
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "surface.paper",
+      "dimensionId": "surface",
+      "version": "1.0.0",
+      "name": "surface.paper",
+      "status": "candidate",
+      "parameters": {},
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "surface.metal",
+      "dimensionId": "surface",
+      "version": "1.0.0",
+      "name": "surface.metal",
+      "status": "candidate",
+      "parameters": {},
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "shadow.none",
+      "dimensionId": "shadow",
+      "version": "1.0.0",
+      "name": "shadow.none",
+      "status": "candidate",
+      "parameters": {},
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "shadow.soft",
+      "dimensionId": "shadow",
+      "version": "1.0.0",
+      "name": "shadow.soft",
+      "status": "candidate",
+      "parameters": {
+        "offsetY": 8,
+        "blur": 25
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "shadow.hard",
+      "dimensionId": "shadow",
+      "version": "1.0.0",
+      "name": "shadow.hard",
+      "status": "candidate",
+      "parameters": {
+        "offset": 4
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "shadow.inset",
+      "dimensionId": "shadow",
+      "version": "1.0.0",
+      "name": "shadow.inset",
+      "status": "candidate",
+      "parameters": {
+        "offset": 4,
+        "blur": 8
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "effects.none",
+      "dimensionId": "effects",
+      "version": "1.0.0",
+      "name": "effects.none",
+      "status": "candidate",
+      "parameters": {},
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "effects.glow",
+      "dimensionId": "effects",
+      "version": "1.0.0",
+      "name": "effects.glow",
+      "status": "candidate",
+      "parameters": {
+        "blur": 14
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "effects.dual",
+      "dimensionId": "effects",
+      "version": "1.0.0",
+      "name": "effects.dual",
+      "status": "candidate",
+      "parameters": {
+        "offset": 2
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "effects.blur",
+      "dimensionId": "effects",
+      "version": "1.0.0",
+      "name": "effects.blur",
+      "status": "candidate",
+      "parameters": {
+        "blur": 6
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "imagery.none",
+      "dimensionId": "imagery",
+      "version": "1.0.0",
+      "name": "imagery.none",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "none"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "imagery.gradient",
+      "dimensionId": "imagery",
+      "version": "1.0.0",
+      "name": "imagery.gradient",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "gradient"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "imagery.geometric",
+      "dimensionId": "imagery",
+      "version": "1.0.0",
+      "name": "imagery.geometric",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "geometric"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "imagery.photo",
+      "dimensionId": "imagery",
+      "version": "1.0.0",
+      "name": "imagery.photo",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "photo"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "imagery.illustration",
+      "dimensionId": "imagery",
+      "version": "1.0.0",
+      "name": "imagery.illustration",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "illustration"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "imagery.3d",
+      "dimensionId": "imagery",
+      "version": "1.0.0",
+      "name": "imagery.3d",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "3d"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "icons.outline",
+      "dimensionId": "icons",
+      "version": "1.0.0",
+      "name": "icons.outline",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "outline"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "icons.filled",
+      "dimensionId": "icons",
+      "version": "1.0.0",
+      "name": "icons.filled",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "filled"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "icons.none",
+      "dimensionId": "icons",
+      "version": "1.0.0",
+      "name": "icons.none",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "none"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "icons.duotone",
+      "dimensionId": "icons",
+      "version": "1.0.0",
+      "name": "icons.duotone",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "duotone"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "layout.sidebar",
+      "dimensionId": "layout",
+      "version": "1.0.0",
+      "name": "layout.sidebar",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "sidebar"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "layout.top",
+      "dimensionId": "layout",
+      "version": "1.0.0",
+      "name": "layout.top",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "top"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "layout.three-column",
+      "dimensionId": "layout",
+      "version": "1.0.0",
+      "name": "layout.three-column",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "three-column"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "layout.bento",
+      "dimensionId": "layout",
+      "version": "1.0.0",
+      "name": "layout.bento",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "bento"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "layout.split",
+      "dimensionId": "layout",
+      "version": "1.0.0",
+      "name": "layout.split",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "split"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "navigation.text",
+      "dimensionId": "navigation",
+      "version": "1.0.0",
+      "name": "navigation.text",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "text"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "navigation.icon",
+      "dimensionId": "navigation",
+      "version": "1.0.0",
+      "name": "navigation.icon",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "icon"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "navigation.top",
+      "dimensionId": "navigation",
+      "version": "1.0.0",
+      "name": "navigation.top",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "top"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "navigation.dock",
+      "dimensionId": "navigation",
+      "version": "1.0.0",
+      "name": "navigation.dock",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "dock"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "density.standard",
+      "dimensionId": "density",
+      "version": "1.0.0",
+      "name": "density.standard",
+      "status": "candidate",
+      "parameters": {
+        "gapScale": 2,
+        "controlHeight": 40
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "density.compact",
+      "dimensionId": "density",
+      "version": "1.0.0",
+      "name": "density.compact",
+      "status": "candidate",
+      "parameters": {
+        "gapScale": 1,
+        "controlHeight": 32
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "density.comfortable",
+      "dimensionId": "density",
+      "version": "1.0.0",
+      "name": "density.comfortable",
+      "status": "candidate",
+      "parameters": {
+        "gapScale": 3,
+        "controlHeight": 48
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "components.solid",
+      "dimensionId": "components",
+      "version": "1.0.0",
+      "name": "components.solid",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "solid"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "components.outline",
+      "dimensionId": "components",
+      "version": "1.0.0",
+      "name": "components.outline",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "outline"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "components.pill",
+      "dimensionId": "components",
+      "version": "1.0.0",
+      "name": "components.pill",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "pill"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "visualization.bars",
+      "dimensionId": "visualization",
+      "version": "1.0.0",
+      "name": "visualization.bars",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "bars"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "visualization.table",
+      "dimensionId": "visualization",
+      "version": "1.0.0",
+      "name": "visualization.table",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "table"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "visualization.kanban",
+      "dimensionId": "visualization",
+      "version": "1.0.0",
+      "name": "visualization.kanban",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "kanban"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "visualization.timeline",
+      "dimensionId": "visualization",
+      "version": "1.0.0",
+      "name": "visualization.timeline",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "timeline"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "interaction.standard",
+      "dimensionId": "interaction",
+      "version": "1.0.0",
+      "name": "interaction.standard",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "standard"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "interaction.restrained",
+      "dimensionId": "interaction",
+      "version": "1.0.0",
+      "name": "interaction.restrained",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "restrained"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "interaction.expressive",
+      "dimensionId": "interaction",
+      "version": "1.0.0",
+      "name": "interaction.expressive",
+      "status": "candidate",
+      "parameters": {
+        "adapter": "expressive"
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "motion.none",
+      "dimensionId": "motion",
+      "version": "1.0.0",
+      "name": "motion.none",
+      "status": "candidate",
+      "parameters": {
+        "duration": 0
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "motion.transition",
+      "dimensionId": "motion",
+      "version": "1.0.0",
+      "name": "motion.transition",
+      "status": "candidate",
+      "parameters": {
+        "duration": 180
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "motion.spring",
+      "dimensionId": "motion",
+      "version": "1.0.0",
+      "name": "motion.spring",
+      "status": "candidate",
+      "parameters": {
+        "duration": 300
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "motion.glitch",
+      "dimensionId": "motion",
+      "version": "1.0.0",
+      "name": "motion.glitch",
+      "status": "candidate",
+      "parameters": {
+        "duration": 180,
+        "offset": 2
+      },
+      "source": {
+        "kind": "internal-proposal"
+      },
+      "license": {
+        "status": "pending-review"
+      },
+      "compatibility": {
+        "requires": [],
+        "conflicts": []
+      }
+    }
+  ]
+}
