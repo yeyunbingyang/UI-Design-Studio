@@ -17,7 +17,14 @@
 - [方案 JSON Schema](design-system/v2/preset.schema.json) · [资源 JSON Schema](design-system/v2/resource.schema.json)
 - [旧版迁移器](design-system/v2/migrate-v1.mjs) · [迁移测试](design-system/v2/migrate-v1.test.mjs)
 - 已核对目录数量及 JSON 解析；Node.js 测试代码已提交但尚未运行，完整规则引擎和浏览器验证待完成。
-- 下一阶段 A3.2：霓虹复古 13 节标准风格示范。
+- A3.2 首套风格资产包已提交，详见下方。
+
+### A3.2 首套标准风格：Vaporwave / Synthwave
+
+- [13 节风格说明](design-system/v2/styles/vaporwave/STYLE.md) · [20 维资源](design-system/v2/styles/vaporwave/resources.json) · [组合预设](design-system/v2/styles/vaporwave/preset.json)
+- [Design Tokens](design-system/v2/styles/vaporwave/tokens.json) · [CSS](design-system/v2/styles/vaporwave/theme.css) · [独立 HTML 预览](design-system/v2/styles/vaporwave/preview.html)
+- 已检查 20 项资源引用与现有目录、预设枚举一致，预览 JavaScript 语法通过。资源仍为候选，通用解析器、完整 Schema 验证、真实浏览器及无障碍验收尚未完成。
+- 下一阶段：A3.3 20 维 Design Composer V2.0。
 
 ## 产品定位
 面向独立开发者、前端工程师及 AI 编程 Agent 的本地优先 WebUI 设计工作台。将风格发现、可运行预览、组件与页面模板、设计变量、提示词、项目绑定、视觉验收统一管理。不是单纯的截图收藏站，也不是替代 Figma 的完整绘图工具。
