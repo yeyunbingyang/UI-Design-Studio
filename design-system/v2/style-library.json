@@ -1,0 +1,3036 @@
+{
+  "schemaVersion": 2,
+  "description": "30 curated combinations of eight existing style families; candidates pending visual QA and license review.",
+  "styles": [
+    {
+      "id": "minimal-office",
+      "name": "极简办公",
+      "nameEn": "Minimal Office",
+      "tags": [
+        "clean",
+        "light",
+        "sidebar",
+        "table"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "极简办公",
+        "selections": {
+          "style": {
+            "id": "style.minimal",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.light",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.gray",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.sans",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-8",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.small",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.subtle",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.solid",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.solid",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.none",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.none",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.none",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.none",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.sidebar",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.text",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.standard",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.outline",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.table",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.restrained",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.none",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "minimal-editorial",
+      "name": "极简编辑",
+      "nameEn": "Minimal Editorial",
+      "tags": [
+        "clean",
+        "light",
+        "top",
+        "timeline"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "极简编辑",
+        "selections": {
+          "style": {
+            "id": "style.minimal",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.light",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.warm",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.serif",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-8",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.small",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.subtle",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.solid",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.paper",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.none",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.none",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.none",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.none",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.top",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.top",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.comfortable",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.outline",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.timeline",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.standard",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.transition",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "minimal-knowledge",
+      "name": "极简知识库",
+      "nameEn": "Minimal Knowledge",
+      "tags": [
+        "clean",
+        "light",
+        "three-column",
+        "table"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "极简知识库",
+        "selections": {
+          "style": {
+            "id": "style.minimal",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.light",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.business-blue",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.sans",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-8",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.small",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.subtle",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.solid",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.solid",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.none",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.none",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.none",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.none",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.three-column",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.text",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.comfortable",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.outline",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.table",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.standard",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.transition",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "glass-purple",
+      "name": "紫色玻璃工作台",
+      "nameEn": "Purple Glass",
+      "tags": [
+        "translucent",
+        "light",
+        "bento",
+        "bars"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "紫色玻璃工作台",
+        "selections": {
+          "style": {
+            "id": "style.glass",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.light",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.purple",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.sans",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-8",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.large",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.subtle",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.radial",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.glass",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.soft",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.none",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.none",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.none",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.bento",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.text",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.standard",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.pill",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.bars",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.standard",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.transition",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "glass-night",
+      "name": "夜色玻璃",
+      "nameEn": "Night Glass",
+      "tags": [
+        "translucent",
+        "dark",
+        "sidebar",
+        "bars"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "夜色玻璃",
+        "selections": {
+          "style": {
+            "id": "style.glass",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.dark",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.purple",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.sans",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-8",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.large",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.subtle",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.radial",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.glass",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.soft",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.glow",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.none",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.outline",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.sidebar",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.icon",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.standard",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.pill",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.bars",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.standard",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.spring",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "glass-morandi",
+      "name": "莫兰迪玻璃",
+      "nameEn": "Morandi Glass",
+      "tags": [
+        "translucent",
+        "light",
+        "split",
+        "kanban"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "莫兰迪玻璃",
+        "selections": {
+          "style": {
+            "id": "style.glass",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.light",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.morandi",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.sans",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-8",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.large",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.subtle",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.radial",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.glass",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.soft",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.none",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.none",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.none",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.split",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.top",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.comfortable",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.pill",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.kanban",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.standard",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.transition",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "linear-dev",
+      "name": "暗色开发工具",
+      "nameEn": "Dark Developer",
+      "tags": [
+        "developer",
+        "dark",
+        "three-column",
+        "table"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "暗色开发工具",
+        "selections": {
+          "style": {
+            "id": "style.linear",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.dark",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.purple",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.mono",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-4",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.small",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.subtle",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.solid",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.solid",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.none",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.none",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.none",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.none",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.three-column",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.text",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.compact",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.outline",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.table",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.restrained",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.none",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "linear-ops",
+      "name": "暗色运维",
+      "nameEn": "Dark Operations",
+      "tags": [
+        "developer",
+        "dark",
+        "sidebar",
+        "timeline"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "暗色运维",
+        "selections": {
+          "style": {
+            "id": "style.linear",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.dark",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.cyan",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.mono",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-4",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.small",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.subtle",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.solid",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.solid",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.soft",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.none",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.none",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.outline",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.sidebar",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.icon",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.compact",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.solid",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.timeline",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.standard",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.transition",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "linear-light",
+      "name": "精致浅色工具",
+      "nameEn": "Light Tooling",
+      "tags": [
+        "developer",
+        "light",
+        "sidebar",
+        "table"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "精致浅色工具",
+        "selections": {
+          "style": {
+            "id": "style.linear",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.light",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.gray",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.sans",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-4",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.small",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.subtle",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.solid",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.solid",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.none",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.none",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.none",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.none",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.sidebar",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.text",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.compact",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.outline",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.table",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.standard",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.transition",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "soft-warm",
+      "name": "暖色柔拟态",
+      "nameEn": "Warm Soft UI",
+      "tags": [
+        "soft",
+        "light",
+        "bento",
+        "bars"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "暖色柔拟态",
+        "selections": {
+          "style": {
+            "id": "style.soft",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.light",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.warm",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.sans",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-8",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.large",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.subtle",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.radial",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.paper",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.inset",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.none",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.none",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.none",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.bento",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.text",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.comfortable",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.pill",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.bars",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.standard",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.spring",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "soft-morandi",
+      "name": "莫兰迪柔拟态",
+      "nameEn": "Morandi Soft UI",
+      "tags": [
+        "soft",
+        "light",
+        "sidebar",
+        "kanban"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "莫兰迪柔拟态",
+        "selections": {
+          "style": {
+            "id": "style.soft",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.light",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.morandi",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.sans",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-8",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.large",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.subtle",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.solid",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.solid",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.inset",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.none",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.none",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.none",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.sidebar",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.text",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.standard",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.pill",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.kanban",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.standard",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.spring",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "soft-night",
+      "name": "暗色柔拟态",
+      "nameEn": "Dark Soft UI",
+      "tags": [
+        "soft",
+        "dark",
+        "bento",
+        "bars"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "暗色柔拟态",
+        "selections": {
+          "style": {
+            "id": "style.soft",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.dark",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.gray",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.sans",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-8",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.large",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.subtle",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.solid",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.solid",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.inset",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.none",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.none",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.outline",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.bento",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.icon",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.standard",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.pill",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.bars",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.standard",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.transition",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "brutal-warm",
+      "name": "暖色粗野主义",
+      "nameEn": "Warm Brutalism",
+      "tags": [
+        "bold",
+        "light",
+        "split",
+        "kanban"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "暖色粗野主义",
+        "selections": {
+          "style": {
+            "id": "style.brutal",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.light",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.warm",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.serif",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-8",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.square",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.solid",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.solid",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.solid",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.hard",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.none",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.none",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.none",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.split",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.top",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.comfortable",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.outline",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.kanban",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.restrained",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.none",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "brutal-blue",
+      "name": "蓝色粗野主义",
+      "nameEn": "Blue Brutalism",
+      "tags": [
+        "bold",
+        "light",
+        "bento",
+        "bars"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "蓝色粗野主义",
+        "selections": {
+          "style": {
+            "id": "style.brutal",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.light",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.business-blue",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.sans",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-8",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.square",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.solid",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.grid",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.solid",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.hard",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.none",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.none",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.none",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.bento",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.text",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.standard",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.solid",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.bars",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.restrained",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.none",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "brutal-dark",
+      "name": "暗色粗野主义",
+      "nameEn": "Dark Brutalism",
+      "tags": [
+        "bold",
+        "dark",
+        "three-column",
+        "table"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "暗色粗野主义",
+        "selections": {
+          "style": {
+            "id": "style.brutal",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.dark",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.neon",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.mono",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-4",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.square",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.solid",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.solid",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.solid",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.hard",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.none",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.none",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.none",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.three-column",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.text",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.compact",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.outline",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.table",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.expressive",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.glitch",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "tech-cyan",
+      "name": "青色科技监控",
+      "nameEn": "Cyan Tech",
+      "tags": [
+        "monitoring",
+        "dark",
+        "sidebar",
+        "bars"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "青色科技监控",
+        "selections": {
+          "style": {
+            "id": "style.tech",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.dark",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.cyan",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.mono",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-4",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.small",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.solid",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.grid",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.solid",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.none",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.glow",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.none",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.outline",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.sidebar",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.icon",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.compact",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.outline",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.bars",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.standard",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.transition",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "tech-metal",
+      "name": "金属科技控制台",
+      "nameEn": "Metal Control",
+      "tags": [
+        "monitoring",
+        "dark",
+        "three-column",
+        "table"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "金属科技控制台",
+        "selections": {
+          "style": {
+            "id": "style.tech",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.dark",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.business-blue",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.mono",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-4",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.small",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.solid",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.scanlines",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.metal",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.soft",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.glow",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.none",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.none",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.three-column",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.text",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.compact",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.outline",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.table",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.standard",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.transition",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "tech-light",
+      "name": "浅色科技仪表盘",
+      "nameEn": "Light Tech",
+      "tags": [
+        "monitoring",
+        "light",
+        "bento",
+        "bars"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "浅色科技仪表盘",
+        "selections": {
+          "style": {
+            "id": "style.tech",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.light",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.cyan",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.sans",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-8",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.small",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.solid",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.grid",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.solid",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.soft",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.none",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.none",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.none",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.bento",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.top",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.standard",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.solid",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.bars",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.standard",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.transition",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "vapor-classic",
+      "name": "霓虹复古经典",
+      "nameEn": "Vaporwave Classic",
+      "tags": [
+        "retro",
+        "dark",
+        "bento",
+        "bars"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "霓虹复古经典",
+        "selections": {
+          "style": {
+            "id": "style.vaporwave",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.dark",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.neon",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.mono",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-8",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.small",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.solid",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.grid",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.glass",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.soft",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.dual",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.geometric",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.outline",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.bento",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.text",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.standard",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.outline",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.bars",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.expressive",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.glitch",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "vapor-crt",
+      "name": "CRT 终端",
+      "nameEn": "CRT Terminal",
+      "tags": [
+        "retro",
+        "dark",
+        "three-column",
+        "table"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "CRT 终端",
+        "selections": {
+          "style": {
+            "id": "style.vaporwave",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.dark",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.neon",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.mono",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-4",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.small",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.solid",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.scanlines",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.solid",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.none",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.dual",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.geometric",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.none",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.three-column",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.text",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.compact",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.outline",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.table",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.expressive",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.glitch",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "vapor-mix",
+      "name": "霓虹极简混搭",
+      "nameEn": "Neon Minimal Mix",
+      "tags": [
+        "retro",
+        "dark",
+        "bento",
+        "bars"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "霓虹极简混搭",
+        "selections": {
+          "style": {
+            "id": "style.vaporwave",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.dark",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.neon",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.sans",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-8",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.small",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.solid",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.grid",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.glass",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.soft",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.dual",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.geometric",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.none",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.bento",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.text",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.standard",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.outline",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.bars",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.expressive",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.glitch",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "vapor-purple",
+      "name": "紫色复古",
+      "nameEn": "Purple Retro",
+      "tags": [
+        "retro",
+        "dark",
+        "split",
+        "timeline"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "紫色复古",
+        "selections": {
+          "style": {
+            "id": "style.vaporwave",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.dark",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.purple",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.mono",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-8",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.small",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.solid",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.radial",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.glass",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.soft",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.glow",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.geometric",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.none",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.split",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.top",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.comfortable",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.pill",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.timeline",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.standard",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.spring",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "bauhaus-grid",
+      "name": "包豪斯网格",
+      "nameEn": "Bauhaus Grid",
+      "tags": [
+        "geometric",
+        "light",
+        "bento",
+        "bars"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "包豪斯网格",
+        "selections": {
+          "style": {
+            "id": "style.bauhaus",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.light",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.business-blue",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.sans",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-8",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.square",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.subtle",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.grid",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.solid",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.none",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.none",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.geometric",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.none",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.bento",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.top",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.standard",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.solid",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.bars",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.restrained",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.none",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "bauhaus-paper",
+      "name": "包豪斯纸面",
+      "nameEn": "Bauhaus Paper",
+      "tags": [
+        "geometric",
+        "light",
+        "split",
+        "kanban"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "包豪斯纸面",
+        "selections": {
+          "style": {
+            "id": "style.bauhaus",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.light",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.warm",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.serif",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-8",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.square",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.subtle",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.solid",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.paper",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.none",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.none",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.geometric",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.none",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.split",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.top",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.comfortable",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.outline",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.kanban",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.restrained",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.none",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "bauhaus-mono",
+      "name": "包豪斯单色",
+      "nameEn": "Bauhaus Monochrome",
+      "tags": [
+        "geometric",
+        "light",
+        "three-column",
+        "table"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "包豪斯单色",
+        "selections": {
+          "style": {
+            "id": "style.bauhaus",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.light",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.gray",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.sans",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-4",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.square",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.subtle",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.solid",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.solid",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.hard",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.none",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.geometric",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.none",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.three-column",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.text",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.compact",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.outline",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.table",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.restrained",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.none",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "enterprise-blue",
+      "name": "企业蓝管理台",
+      "nameEn": "Enterprise Blue",
+      "tags": [
+        "clean",
+        "light",
+        "sidebar",
+        "table"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "企业蓝管理台",
+        "selections": {
+          "style": {
+            "id": "style.minimal",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.light",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.business-blue",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.sans",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-4",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.small",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.subtle",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.solid",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.solid",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.soft",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.none",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.none",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.none",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.sidebar",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.text",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.compact",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.solid",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.table",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.standard",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.transition",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "enterprise-warm",
+      "name": "暖色业务台",
+      "nameEn": "Warm Business",
+      "tags": [
+        "clean",
+        "light",
+        "sidebar",
+        "timeline"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "暖色业务台",
+        "selections": {
+          "style": {
+            "id": "style.minimal",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.light",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.warm",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.sans",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-8",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.small",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.subtle",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.solid",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.paper",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.soft",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.none",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.none",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.none",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.sidebar",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.text",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.standard",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.outline",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.timeline",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.standard",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.transition",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "research-mono",
+      "name": "研究终端",
+      "nameEn": "Research Terminal",
+      "tags": [
+        "developer",
+        "dark",
+        "three-column",
+        "table"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "研究终端",
+        "selections": {
+          "style": {
+            "id": "style.linear",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.dark",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.gray",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.mono",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-4",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.small",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.subtle",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.solid",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.solid",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.none",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.none",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.none",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.none",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.three-column",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.text",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.compact",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.outline",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.table",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.restrained",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.none",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "creative-dock",
+      "name": "创意 Dock 工作台",
+      "nameEn": "Creative Dock",
+      "tags": [
+        "translucent",
+        "light",
+        "bento",
+        "kanban"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "创意 Dock 工作台",
+        "selections": {
+          "style": {
+            "id": "style.glass",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.light",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.purple",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.sans",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-8",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.large",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.subtle",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.radial",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.glass",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.soft",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.none",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.none",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.none",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.bento",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.dock",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.comfortable",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.pill",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.kanban",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.standard",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.spring",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    },
+    {
+      "id": "monitor-neon",
+      "name": "霓虹监控台",
+      "nameEn": "Neon Monitor",
+      "tags": [
+        "monitoring",
+        "dark",
+        "three-column",
+        "bars"
+      ],
+      "status": "candidate",
+      "description": "基于已有渲染适配器的原创组合示范；不是独立设计语言或第三方品牌规范。",
+      "preset": {
+        "schemaVersion": 2,
+        "name": "霓虹监控台",
+        "selections": {
+          "style": {
+            "id": "style.tech",
+            "version": "1.0.0"
+          },
+          "theme": {
+            "id": "theme.dark",
+            "version": "1.0.0"
+          },
+          "color": {
+            "id": "color.neon",
+            "version": "1.0.0"
+          },
+          "typography": {
+            "id": "typography.mono",
+            "version": "1.0.0"
+          },
+          "spacing": {
+            "id": "spacing.base-4",
+            "version": "1.0.0"
+          },
+          "radius": {
+            "id": "radius.small",
+            "version": "1.0.0"
+          },
+          "border": {
+            "id": "border.solid",
+            "version": "1.0.0"
+          },
+          "background": {
+            "id": "background.grid",
+            "version": "1.0.0"
+          },
+          "surface": {
+            "id": "surface.metal",
+            "version": "1.0.0"
+          },
+          "shadow": {
+            "id": "shadow.soft",
+            "version": "1.0.0"
+          },
+          "effects": {
+            "id": "effects.dual",
+            "version": "1.0.0"
+          },
+          "imagery": {
+            "id": "imagery.none",
+            "version": "1.0.0"
+          },
+          "icons": {
+            "id": "icons.outline",
+            "version": "1.0.0"
+          },
+          "layout": {
+            "id": "layout.three-column",
+            "version": "1.0.0"
+          },
+          "navigation": {
+            "id": "navigation.icon",
+            "version": "1.0.0"
+          },
+          "density": {
+            "id": "density.compact",
+            "version": "1.0.0"
+          },
+          "components": {
+            "id": "components.outline",
+            "version": "1.0.0"
+          },
+          "visualization": {
+            "id": "visualization.bars",
+            "version": "1.0.0"
+          },
+          "interaction": {
+            "id": "interaction.expressive",
+            "version": "1.0.0"
+          },
+          "motion": {
+            "id": "motion.glitch",
+            "version": "1.0.0"
+          }
+        },
+        "lockedDimensions": [],
+        "overrides": {}
+      }
+    }
+  ]
+}
