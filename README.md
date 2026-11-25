@@ -4,6 +4,9 @@ UI Design Studio 是面向 Windows 本地使用的设计素材工作台。当前
 
 - [现行产品需求](docs/PRD.md)
 - [需求与验收清单](docs/需求与验收清单.md)
+- [项目 Agent 指令](AGENTS.md)
+- [资源入库规范](docs/design/resource-admission.md)
+- [外部设计来源目录](docs/design/external-source-catalog.md)
 
 ## 在 Windows 上运行
 
@@ -39,21 +42,8 @@ npm run test:qa
 | `skills/` | Codex 工作规范、生成模板和示例 |
 | `tests/` | Playwright 浏览器验收 |
 | `prototype/` | 历史原型和阶段交付页 |
-| `docs/` | 现行需求、验收清单、设计记录与历史说明 |
+| `docs/` | 现行需求与验收清单，`design/` 存放设计规范，`archive/` 存放阶段性资料 |
 
 需求范围更新写入 PRD，实际实现和验证证据记入清单。启动方式或目录职责变化时，同步更新本页。依赖、缓存和测试报告按项目忽略规则保留在本机。
 
-## 原型与历史资料
-
-启动服务后，可以访问这些原型。
-
-| 入口 | 用途 |
-| --- | --- |
-| [A2 独立原型](prototype/index.html) | 早期独立 HTML 样例 |
-| [Design Composer V2](prototype/v2/index.html) | 20 维组合器原型 |
-| [阶段汇总原型](prototype/latest/index.html) | 当时的原型汇总入口 |
-| [Phase 0 提交入口](prototype/phase0-submission/index.html) | 独立评审入口，范围见 [Phase 0 提交记录](docs/phase0-prototype-submission.md) |
-
-保留 [V1.4 阶段记录](README.v1.4-draft.md)、[V1.4 需求草案](docs/PRD.v1.4-draft.md) 和 [早期项目说明](docs/legacy-readme.md)。
-
-历史记录中的两个 A4.2 分别指 [Markdown Importer MVP](docs/design/external-design-intelligence.md) 和 [DESIGN.md Generator Skill](skills/design-system-generator/SKILL.md)。前者属于外部规范导入，当前留在后续范围。后者已有生成规范、模板与示例。
+旧版原型入口、阶段记录和 V1.4 草案见 [历史资料目录](docs/archive/README.md)。

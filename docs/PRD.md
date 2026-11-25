@@ -11,7 +11,7 @@
 ## 首期使用流程
 
 1. 维护者将素材交给 Codex。首批使用项目内置素材作为来源，各新增一项有可见变化的配色、背景和组件变体。
-2. 独立的资源入库 Skill 按现有 20 维分类归类，并校验 [资源 Schema](../design-system/v2/resource.schema.json)、参数、ID 与版本。确认前展示名称、维度、来源、授权状态、预览方式，以及将写入的内容。
+2. `design-resource-intake`（设计素材入库）Skill 按现有 20 维分类归类，并校验 [资源 Schema](../design-system/v2/resource.schema.json)、参数、ID 与版本。确认前展示名称、维度、来源、授权状态、预览方式，以及将写入的内容。
 3. 维护者确认后，Codex 同步更新 [资源注册表](../design-system/v2/registry.json) 和 [目录索引](../design-system/v2/catalog.json)。重复提交同一条目保持原记录，同 ID 同版本的内容冲突或非法参数需给出原因。任何校验失败都要保留原有数据和有效索引。
 4. 刷新 WebUI，按类别浏览或按名称、ID 查找素材。详情展示来源和审核状态，并提供与入库参数一致的独立预览。三项新素材也可加入现有组合器。
 
@@ -27,4 +27,4 @@
 
 ## 后续范围
 
-多方案库、新导出包、外部素材导入、项目绑定、自动 Visual QA 和 ToolOrbit 启动接入分别评审。已有 Playwright 测试用于本地回归。上游的更广产品构想见 [V1.4 需求草案](PRD.v1.4-draft.md)。
+多方案库、新导出包、外部素材导入、项目绑定、自动 Visual QA 和 ToolOrbit 启动接入分别评审。已有 Playwright 测试用于本地回归。V1.4 需求草案可从 [历史资料目录](archive/README.md) 查看。

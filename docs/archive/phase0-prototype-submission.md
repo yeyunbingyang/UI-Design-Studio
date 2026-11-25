@@ -6,10 +6,10 @@
 
 ## Preview
 
-- [Phase 0 submission entry](../prototype/phase0-submission/index.html)
-- [Current latest prototype](../prototype/latest/index.html)
-- [Design Composer V2](../prototype/v2/index.html)
-- [Application Alpha](../app/index.html)
+- [Phase 0 submission entry](../../prototype/phase0-submission/index.html)
+- [Current latest prototype](../../prototype/latest/index.html)
+- [Design Composer V2](../../prototype/v2/index.html)
+- [Application Alpha](../../app/index.html)
 
 ## Run locally
 
