@@ -1,16 +1,16 @@
 # Preview templates / 预览模板
 
-These are standalone HTML starting points for the mandatory preview files in every generated design package.
+These are standalone HTML starting points for the mandatory preview files in every generated design package: the light token/component catalog, dark token/component catalog and product-specific application preview.
 
 - Copy `preview.html` to the output package root.
 - Copy `preview-dark.html` beside it.
 - Replace every `{{...}}` placeholder and the illustrative CSS variables with values from the generated DESIGN.md.
 - Add all product-specific component examples that materially represent the analyzed system.
 - Keep both files dependency-free and locally openable.
-- Verify tabs, buttons, inputs, responsive behavior and token parity.
+- Verify tabs, buttons, inputs, responsive behavior and token parity in both token previews.\n- Verify application-preview navigation, primary action, search/filter interactions, representative product workflows, responsive layout and token parity. Replace generic dashboard content when the target is not a dashboard.
 - Do not leave placeholder copy, sample values or generic chart content in the final package.
 
-这是每份设计分析交付包必须包含的独立 HTML 预览起始模板。复制后必须用 DESIGN.md 中的实际 Token 和产品组件替换占位符，不得将模板原样作为最终交付。
+这是每份设计分析交付包必须包含的独立 HTML 预览起始模板。除浅色和深色设计 Token/组件预览外，还必须生成与目标产品真实信息架构和核心任务相匹配的 application-preview.html。复制后必须用 DESIGN.md 中的实际 Token 和产品组件替换占位符，不得将模板原样作为最终交付。
 
 
 ## Bilingual preview contract / 双语预览契约
