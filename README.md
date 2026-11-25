@@ -1,7 +1,15 @@
 # UI Design Studio — 产品需求文档（PRD）
 
-> 文档版本：V1.2 Draft | 日期：2026-11-24 | 状态：待评审
+> 文档版本：V1.4 Draft | 日期：2026-11-25 | 状态：待评审
 > 本文定义 UI 风格资源与设计系统工作台的新增需求，不代表已实现功能。历史项目说明描述 Frontend Design Studio V1.2.0 / M3；本文以兼容其 Codex Skills 和 Playwright Visual QA 为原则，不重置现有版本号。
+
+## DESIGN.md 与标准设计维度统一映射（V1.4）
+
+- DESIGN.md 与现有 20 个标准设计维度是同一规范化设计模型的两种表达形式：前者供人和 AI Agent 阅读，后者用于 Composer、资源、预设和结构化配置。
+- 12 个导航领域、9 个 Core 语义域、16 个 Extended 章节是不同的分组层，不得新增或替代标准维度 ID。
+- 每个标准维度具有唯一主章节；其他章节只引用，不重复定义 Token。
+- [机器可读映射](design-system/v2/design-dimension-mapping.json) · [JSON Schema](design-system/v2/design-dimension-mapping.schema.json) · [映射测试](design-system/v2/design-dimension-mapping.test.mjs) · [架构与双向转换契约](docs/design/design-schema-mapping.md)
+- 当前已建立映射元数据与结构测试；完整 DESIGN.md ↔ 规范化模型转换器、差异审查 UI 和 Composer 双向同步仍属于后续实施，不代表已完成。
 
 ## 当前开发状态与设计文档
 

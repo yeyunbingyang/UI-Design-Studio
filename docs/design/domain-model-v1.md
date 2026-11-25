@@ -83,3 +83,14 @@ This is a **non-breaking additive taxonomy change**, not a schema-breaking dimen
 - Do not force a style preset to overwrite all child dimensions.
 - Do not imply that all resources are production-ready; retain each resource's status and license metadata.
 - Do not change the six architecture layers or thirteen-section style documentation format.
+
+
+## DESIGN.md mapping relationship / DESIGN.md 映射关系
+
+The 12 domains remain navigation-only groupings. Their relationship to DESIGN.md is maintained separately in `design-system/v2/design-dimension-mapping.json`, which maps each canonical dimension to its primary and secondary Extended chapters and to the 9 Core semantic domains.
+
+12 个领域仍然只是导航分组。它们与 DESIGN.md 的关系由独立文件 `design-system/v2/design-dimension-mapping.json` 维护，该文件将每个标准维度映射到其 Extended 主章节、次级章节和 9 个 Core 语义域。
+
+This does not change domain membership, canonical IDs, catalog entries, resource IDs, preset serialization or Composer state. A domain click remains navigation only; a dimension selection remains the only single-dimension configuration action.
+
+这不会改变领域成员、标准维度 ID、目录条目、资源 ID、预设序列化或 Composer 状态。点击领域仍然只执行导航；单个维度选择仍是唯一的单维配置操作。

@@ -17,11 +17,14 @@ Generate implementation-ready DESIGN.md files using the repository standard at `
 - **Bilingual:** Write English first and Simplified Chinese immediately after each meaningful rule group. Keep code, token IDs, CSS properties, ARIA attributes, library/API names unchanged.
 - **Hybrid interaction:** Separate Observed, Inferred and Proposed behavior. Do not present AI proposals as existing product behavior.
 - **Canonical data:** Map to the existing 20 stable dimensions. Do not add a 21st dimension, rename IDs, or break the existing 6-layer architecture / 13-section STYLE.md.
+- **Shared mapping contract:** Treat DESIGN.md and the 20 dimensions as two views of one design model. Read `design-system/v2/design-dimension-mapping.json` and `docs/design/design-schema-mapping.md`; each dimension has exactly one primary chapter and may have secondary chapter references. Secondary chapters reference canonical token definitions instead of duplicating them.
 
 ## Load the standard
 
 Always read:
 - `standards/design-md-spec-v1.md`
+- `design-system/v2/design-dimension-mapping.json`
+- `docs/design/design-schema-mapping.md`
 - `skills/design-system-generator/standards/core/core-standard.md`
 - `skills/design-system-generator/standards/mappings/awesome-design-md-mapping.md`
 - `skills/design-system-generator/references/quality-gate.md`
@@ -63,7 +66,7 @@ Document existing interaction only when supported by source or evidence. Then pr
 Enable modules explicitly requested or materially required by the product. Record enabled IDs in document frontmatter. The user may provide a selected module list; honor it. If no list is provided, choose a minimal set and explain why. Do not load or write irrelevant extension detail.
 
 ### 7. Map to the canonical 20 dimensions
-Use the exact IDs: style, theme, color, typography, spacing, radius, border, background, surface, shadow, effects, imagery, icons, layout, navigation, density, components, visualization, interaction, motion. Preserve unmapped content in a clearly labeled section. Respect dimension boundaries: Background ≠ Surface; Effects ≠ Motion; Components ≠ Interaction; Spacing ≠ Density; Style ≠ Theme.
+Read `design-system/v2/design-dimension-mapping.json` as the authoritative document-to-dimension mapping metadata and `docs/design/design-schema-mapping.md` for the transformation contract. Use the exact IDs: style, theme, color, typography, spacing, radius, border, background, surface, shadow, effects, imagery, icons, layout, navigation, density, components, visualization, interaction, motion. Use each dimension's `primaryChapter` as its single canonical definition owner; other chapters may reference it but must not redefine its tokens. Preserve unmapped content in a clearly labeled section and report ambiguous/conflicting mappings. The 12 navigation domains are taxonomy only; the 9 Core domains and 16 Extended chapters are documentation views, not configuration dimensions. Respect dimension boundaries: Background ≠ Surface; Effects ≠ Motion; Components ≠ Interaction; Spacing ≠ Density; Style ≠ Theme.
 
 ### 8. Generate output
 - Core Export: nine semantic Core domains, plain Markdown, source-friendly headings where appropriate.
@@ -72,6 +75,7 @@ Use the exact IDs: style, theme, color, typography, spacing, radius, border, bac
 - Derive both HTML previews from the same normalized token/component model as DESIGN.md; never hand-maintain conflicting values.
 - Include screenshot PNGs only if they were genuinely captured; do not fabricate screenshots.
 - Both modes: bilingual, semantic tokens, provenance, explicit unknowns and no invented measurements.
+- For Studio-integrated outputs, include a dimension mapping report that lists all 20 IDs, primary chapters, secondary references, evidence status and unmapped content. Do not imply that the mapping engine performs automatic round-trip writes until that capability is implemented and tested.
 - Generate analysis notes only when evidence or decisions are substantial.
 - Do not overwrite an existing file without explicit user authorization.
 

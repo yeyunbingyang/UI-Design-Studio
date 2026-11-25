@@ -18,6 +18,11 @@
 - [ ] Material claims are classified Observed / Inferred / Proposed where provenance matters.
 - [ ] Screenshot-only claims do not pretend to know DOM, CSS, exact breakpoints or unseen states.
 - [ ] Token names are semantic, stable and mapped to the existing 20 dimensions.
+- [ ] All 20 canonical dimension IDs are present in the mapping report; no new IDs are invented.
+- [ ] Every dimension has exactly one valid primary chapter; secondary chapters reference rather than redefine its canonical tokens.
+- [ ] 12 navigation domains, 9 Core semantic domains and 16 Extended chapters are treated as separate grouping layers, not merged into the 20 configuration dimensions.
+- [ ] Unknown source content is preserved and reported as unmapped; it is not silently discarded.
+- [ ] Studio-integrated output uses the versioned mapping metadata and records its mapping version.
 - [ ] Background ≠ Surface; Effects ≠ Motion; Components ≠ Interaction; Spacing ≠ Density; Style ≠ Theme.
 - [ ] Important components define anatomy, variants, sizing, tokens and relevant states.
 - [ ] Important Proposed interactions define trigger, preconditions, result, feedback, dismissal, recovery, keyboard, responsive behavior and edge cases.
