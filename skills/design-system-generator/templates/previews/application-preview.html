@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="{{PRODUCT_NAME}} application preview generated from DESIGN.md">
+<title>{{PRODUCT_NAME}} — Application Preview</title>
+<style>
+:root{
+  color-scheme:light;
+  --color-canvas:{{COLOR_CANVAS}};
+  --color-surface:{{COLOR_SURFACE}};
+  --color-surface-raised:{{COLOR_SURFACE_RAISED}};
+  --color-text:{{COLOR_TEXT}};
+  --color-text-muted:{{COLOR_TEXT_MUTED}};
+  --color-primary:{{COLOR_PRIMARY}};
+  --color-accent:{{COLOR_ACCENT}};
+  --color-border:{{COLOR_BORDER}};
+  --color-success:{{COLOR_SUCCESS}};
+  --color-warning:{{COLOR_WARNING}};
+  --radius-panel:{{RADIUS_PANEL}};
+  --radius-control:{{RADIUS_CONTROL}};
+  --space-unit:{{SPACE_UNIT}};
+  --font-family:{{FONT_FAMILY}};
+  --shadow-panel:{{SHADOW_PANEL}};
+  --motion-duration:{{MOTION_DURATION}};
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--color-canvas);color:var(--color-text);font:14px/1.55 var(--font-family,Inter,ui-sans-serif,system-ui,sans-serif)}
+button,input{font:inherit}
+button{cursor:pointer}
+.app{min-height:100vh;display:grid;grid-template-columns:248px minmax(0,1fr)}
+.sidebar{background:var(--color-surface);border-right:1px solid var(--color-border);padding:22px 16px;display:flex;flex-direction:column;gap:28px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:750;font-size:16px}
+.brand-mark{width:34px;height:34px;border-radius:11px;background:var(--color-primary);display:grid;place-items:center;color:white;font-weight:800}
+.nav-label,.eyebrow{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--color-text-muted);font-weight:750}
+.nav{display:grid;gap:5px}
+.nav button{border:0;background:transparent;color:var(--color-text-muted);padding:10px 12px;text-align:left;border-radius:var(--radius-control);display:flex;align-items:center;gap:11px}
+.nav button[aria-current=page],.nav button:hover{background:color-mix(in srgb,var(--color-primary) 11%,transparent);color:var(--color-primary)}
+.nav-icon{width:18px;text-align:center}
+.sidebar-bottom{margin-top:auto;border-top:1px solid var(--color-border);padding-top:16px;color:var(--color-text-muted);font-size:12px}
+.main{min-width:0}
+.topbar{height:72px;border-bottom:1px solid var(--color-border);display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:var(--color-surface)}
+.crumb{color:var(--color-text-muted);font-size:12px}
+.top-actions{display:flex;align-items:center;gap:10px}
+.search{width:min(260px,28vw);border:1px solid var(--color-border);border-radius:var(--radius-control);padding:9px 12px;background:var(--color-canvas);color:var(--color-text)}
+.avatar{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--color-surface-raised);font-weight:700}
+.content{max-width:1440px;margin:auto;padding:32px}
+.page-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:25px}
+h1{font-size:clamp(25px,3vw,34px);line-height:1.15;margin:4px 0 8px;letter-spacing:-.035em}
+.subtitle{margin:0;color:var(--color-text-muted)}
+.btn{border:1px solid var(--color-border);border-radius:var(--radius-control);padding:9px 14px;background:var(--color-surface);color:var(--color-text);font-weight:650}
+.btn.primary{background:var(--color-primary);border-color:var(--color-primary);color:white}
+.btn:focus-visible,.nav button:focus-visible,input:focus-visible{outline:3px solid color-mix(in srgb,var(--color-primary) 45%,transparent);outline-offset:2px}
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin-bottom:18px}
+.panel,.metric{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-panel);box-shadow:var(--shadow-panel)}
+.metric{padding:17px}
+.metric-label{font-size:12px;color:var(--color-text-muted)}
+.metric-value{font-size:27px;font-weight:760;letter-spacing:-.04em;margin:7px 0 3px}
+.metric-note{font-size:11px;color:var(--color-success)}
+.columns{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(260px,.85fr);gap:16px}
+.panel{padding:19px;min-width:0}
+.panel-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}
+h2{font-size:15px;margin:0}
+.muted{color:var(--color-text-muted)}
+.chart{height:190px;position:relative;border-bottom:1px solid var(--color-border);background:repeating-linear-gradient(to bottom,transparent 0,transparent 46px,var(--color-border) 47px,var(--color-border) 48px);border-radius:8px;overflow:hidden}
+.chart svg{width:100%;height:100%;overflow:visible}
+.chart-labels{display:flex;justify-content:space-between;color:var(--color-text-muted);font-size:10px;padding-top:8px}
+.activity{display:grid;gap:15px}
+.activity-item{display:flex;gap:11px;align-items:flex-start}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--color-primary);margin-top:6px;flex:none}
+.activity-item p{margin:0;font-size:12px}
+.activity-item small{color:var(--color-text-muted)}
+.table-panel{margin-top:16px}
+.table-wrap{overflow:auto}
+table{width:100%;border-collapse:collapse;white-space:nowrap;font-size:12px}
+th{text-align:left;color:var(--color-text-muted);font-weight:600;padding:10px;border-bottom:1px solid var(--color-border)}
+td{padding:13px 10px;border-bottom:1px solid var(--color-border)}
+.status{display:inline-flex;padding:4px 8px;border-radius:99px;background:color-mix(in srgb,var(--color-success) 12%,transparent);color:var(--color-success);font-size:10px;font-weight:700}
+.status.pending{background:color-mix(in srgb,var(--color-warning) 13%,transparent);color:var(--color-warning)}
+.empty{display:none;padding:24px;text-align:center;color:var(--color-text-muted)}
+.toast{position:fixed;bottom:22px;right:22px;background:var(--color-text);color:var(--color-surface);padding:11px 16px;border-radius:var(--radius-control);box-shadow:var(--shadow-panel);opacity:0;transform:translateY(8px);transition:opacity var(--motion-duration),transform var(--motion-duration);pointer-events:none}
+.toast.show{opacity:1;transform:translateY(0)}
+@media(max-width:1050px){.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.columns{grid-template-columns:1fr}}
+@media(max-width:720px){.app{grid-template-columns:1fr}.sidebar{padding:12px 14px;border-right:0;border-bottom:1px solid var(--color-border);gap:12px}.nav{display:flex;overflow:auto}.nav-label,.sidebar-bottom{display:none}.nav button{white-space:nowrap}.topbar{height:60px;padding:0 16px}.content{padding:22px 16px}.search{width:145px}.page-head{flex-direction:column}.page-head .btn{width:100%}}
+@media(max-width:420px){.metrics{grid-template-columns:1fr 1fr;gap:9px}.metric{padding:12px}.metric-value{font-size:22px}.topbar .crumb{display:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><span class="brand-mark">{{BRAND_MARK}}</span><span>{{PRODUCT_NAME}}<small class="muted" style="display:block;font-size:10px;font-weight:500">Application Preview / 应用预览</small></span></div>
+  <div><div class="nav-label">Workspace / 工作区</div><nav class="nav" aria-label="Primary navigation / 主导航">
+    {{NAVIGATION_ITEMS}}
+  </nav></div>
+  <div class="sidebar-bottom">Design system preview<br><span lang="zh-Hans">设计系统预览 · 示例数据</span></div>
+</aside>
+<main class="main">
+  <header class="topbar"><div class="crumb">{{BREADCRUMB_EN}} <span lang="zh-Hans">{{BREADCRUMB_ZH}}</span></div><div class="top-actions"><input class="search" id="search" type="search" placeholder="Search / 搜索" aria-label="Search / 搜索"><div class="avatar" aria-label="Preview user / 预览用户">U</div></div></header>
+  <div class="content">
+    <section class="page-head"><div><div class="eyebrow">{{PAGE_CONTEXT_EN}} / <span lang="zh-Hans">{{PAGE_CONTEXT_ZH}}</span></div><h1>{{PAGE_TITLE_EN}} <span lang="zh-Hans">{{PAGE_TITLE_ZH}}</span></h1><p class="subtitle">{{PAGE_DESCRIPTION_EN}} <span lang="zh-Hans">{{PAGE_DESCRIPTION_ZH}}</span></p></div><button class="btn primary" id="primary-action">{{PRIMARY_ACTION_EN}} / <span lang="zh-Hans">{{PRIMARY_ACTION_ZH}}</span></button></section>
+    <section class="metrics" aria-label="Key metrics / 核心指标">{{METRIC_CARDS}}</section>
+    <section class="columns">
+      <article class="panel"><div class="panel-head"><div><h2>{{MAIN_PANEL_TITLE_EN}} <span lang="zh-Hans">{{MAIN_PANEL_TITLE_ZH}}</span></h2><small class="muted">{{MAIN_PANEL_SUBTITLE_EN}} <span lang="zh-Hans">{{MAIN_PANEL_SUBTITLE_ZH}}</span></small></div><button class="btn" id="period-button">7 days / 7 天</button></div><div class="chart" role="img" aria-label="Illustrative product data visualization / 产品数据可视化示例"><svg viewBox="0 0 640 190" preserveAspectRatio="none"><defs><linearGradient id="area" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="var(--color-primary)" stop-opacity=".25"/><stop offset="1" stop-color="var(--color-primary)" stop-opacity="0"/></linearGradient></defs><path d="M0 150 C55 140 60 100 115 112 S190 145 235 92 S310 105 355 70 S420 95 465 54 S545 72 590 30 L640 38 L640 190 L0 190Z" fill="url(#area)"/><path d="M0 150 C55 140 60 100 115 112 S190 145 235 92 S310 105 355 70 S420 95 465 54 S545 72 590 30 L640 38" fill="none" stroke="var(--color-primary)" stroke-width="3" vector-effect="non-scaling-stroke"/></svg></div><div class="chart-labels"><span>Mon / 周一</span><span>Wed / 周三</span><span>Fri / 周五</span><span>Sun / 周日</span></div></article>
+      <article class="panel"><div class="panel-head"><h2>{{ACTIVITY_TITLE_EN}} <span lang="zh-Hans">{{ACTIVITY_TITLE_ZH}}</span></h2><span class="muted">•••</span></div><div class="activity">{{ACTIVITY_ITEMS}}</div></article>
+    </section>
+    <section class="panel table-panel"><div class="panel-head"><div><h2>{{TABLE_TITLE_EN}} <span lang="zh-Hans">{{TABLE_TITLE_ZH}}</span></h2><small class="muted">{{TABLE_SUBTITLE_EN}} <span lang="zh-Hans">{{TABLE_SUBTITLE_ZH}}</span></small></div><button class="btn" id="filter-button">Filter / 筛选</button></div><div class="table-wrap"><table><thead><tr>{{TABLE_HEADERS}}</tr></thead><tbody id="data-rows">{{TABLE_ROWS}}</tbody></table><div class="empty" id="empty-state">No matching records / 没有匹配的记录</div></div></section>
+    <footer class="muted" style="font-size:10px;padding:18px 2px">{{EVIDENCE_NOTE_EN}} <span lang="zh-Hans">{{EVIDENCE_NOTE_ZH}}</span></footer>
+  </div>
+</main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite">Preview interaction / 预览交互</div>
+<script>
+const toast=document.getElementById('toast');let toastTimer;
+function notify(message){toast.textContent=message;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2200)}
+document.getElementById('primary-action').addEventListener('click',()=>notify('Demo action / 示例操作：请替换为产品真实流程'));
+document.getElementById('period-button').addEventListener('click',e=>{e.currentTarget.textContent=e.currentTarget.textContent.startsWith('7')?'30 days / 30 天':'7 days / 7 天';notify('Period changed / 已切换周期')});
+document.getElementById('filter-button').addEventListener('click',()=>notify('Filter preview / 筛选交互示例'));
+document.getElementById('search').addEventListener('input',e=>{const q=e.target.value.toLowerCase();let visible=0;document.querySelectorAll('#data-rows tr').forEach(row=>{const match=row.textContent.toLowerCase().includes(q);row.hidden=!match;if(match)visible++});document.getElementById('empty-state').style.display=visible?'none':'block'});
+document.querySelectorAll('[data-nav]').forEach(link=>link.addEventListener('click',()=>{document.querySelectorAll('[data-nav]').forEach(item=>item.removeAttribute('aria-current'));link.setAttribute('aria-current','page');notify(link.dataset.nav+' / 导航示例')}));
+</script>
+</body>
+</html>
