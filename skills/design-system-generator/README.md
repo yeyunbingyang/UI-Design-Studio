@@ -38,7 +38,7 @@ Use $design-system-generator to analyze this upstream Awesome DESIGN.md. Preserv
 - `SKILL.md`: Skill entry and workflow.
 - `standards/`: formal specification, Core, Extensions, and canonical mappings.
 - `references/`: writing, visual analysis, interaction, reference library and quality gate.
-- `templates/`: Core Export, Extended Export and standalone light/dark HTML preview templates.
+- `templates/`: Core Export, Extended Export and standalone light/dark token previews and product application preview template.
 - `examples/`: dashboard, landing page and resource-management examples.
 
 ## Standard output package / 标准输出交付包
@@ -51,7 +51,7 @@ Every completed analysis produces:
 
 Optional captured screenshots and detailed analysis notes are included only when available or useful. The HTML files must open locally without build tools or network dependencies.
 
-每次完整分析都必须交付 DESIGN.md、浅色 preview.html、深色 preview-dark.html 和 README.md。截图与详细分析记录按实际情况选交。HTML 必须支持本地直接打开，不依赖构建工具或网络。
+每次完整分析都必须交付 DESIGN.md、浅色 preview.html、深色 preview-dark.html、产品级 application-preview.html 和 README.md。截图与详细分析记录按实际情况选交。HTML 必须支持本地直接打开，不依赖构建工具或网络。
 
 ## Limitations / 当前限制
 
