@@ -1,62 +1,59 @@
-# DESIGN Skill v1.0 — Build Record & Implementation Plan
+# DESIGN Skill v1.0 — Build Record & Delivery Plan
 
-> Status: Initial documentation and Skill package committed on feature branch.  
-> 本文记录 DESIGN Skill v1.0 的交付范围、兼容关系与后续验证计划。
+> Architecture: Core + Extensions / 架构：基础规范 + 扩展规范  
+> Status: Specification and Skill package prepared on feature branch / 状态：已在功能分支准备规范与 Skill 包
 
 ## Confirmed decisions / 已确认决策
 
 | Item | Decision |
 |---|---|
-| Structure | 16 mandatory sections |
+| Architecture | Core + Extensions |
+| Core | Nine semantic content domains; compatible with variable upstream Markdown |
+| Full document | Four Parts, 16 canonical chapters |
+| Extensions | Seven independently loadable modules |
+| Output modes | Core Export and Extended Export |
 | Language | English + Simplified Chinese |
-| Interaction | Hybrid: observed behavior + AI-proposed behavior |
-| Deliverables | Complete Skill + writing specification + template + examples |
-| Execution | Codex performs analysis; user may supply screenshots, URLs, source and existing docs |
-| Architecture | No mandatory crawler, database or external AI API |
+| Analysis | AI-first, user-supplied screenshots/source/URLs |
+| Interaction | Hybrid: Observed + Inferred + Proposed |
+| Canonical model | Existing 6 layers and 20 dimensions |
+| Legacy docs | Preserve existing 13-section STYLE.md |
 
-## Package contents / 交付内容
+## Delivered files / 已交付文件
 
-- `skills/design-system-generator/SKILL.md`: Skill entry point.
-- `skills/design-system-generator/references/`: writing, visual analysis, interaction, reference and quality guidance.
-- `skills/design-system-generator/templates/DESIGN.md`: canonical bilingual 16-section template.
+- `docs/design/design-md-spec-v1.md`: formal Core + Extensions specification.
+- `skills/design-system-generator/SKILL.md`: Codex Skill entry point.
+- `skills/design-system-generator/standards/core/core-standard.md`: nine semantic Core domains.
+- `skills/design-system-generator/standards/extensions/`: seven independent extension modules.
+- `skills/design-system-generator/standards/mappings/awesome-design-md-mapping.md`: upstream compatibility mapping.
+- `skills/design-system-generator/standards/extensions/extension-registry.md`: extension registry and activation rules.
+- `skills/design-system-generator/templates/core-9/DESIGN.md`: Core Export template.
+- `skills/design-system-generator/templates/extended-16/DESIGN.md`: Extended Export template.
 - `skills/design-system-generator/examples/`: dashboard, landing page and resource-management examples.
-- `docs/design/design-md-spec-v1.md`: formal specification.
-- This file: compatibility and build record.
+- `docs/PRD.md`: updated product requirements and acceptance criteria.
 
-## Compatibility with existing UI-Design-Studio / 与现有体系兼容
+## Compatibility decisions / 兼容决策
 
-- Retain 6 knowledge layers and 20 stable dimension IDs.
-- Retain the existing 13-section `STYLE.md` and `style-generator.mjs`.
-- DESIGN.md v1.0 is an additional project-level implementation spec; it does not replace STYLE.md.
-- Future dual export should use the same canonical design data. Avoid maintaining conflicting tokens in two independent documents.
-- Existing 20-dimension resource IDs and preset IDs must not be renamed by this Skill.
-
-## Skill invocation examples / Skill 调用示例
-
-```text
-Use $design-system-generator to analyze the supplied screenshots and source files, then create a bilingual DESIGN.md following the 16-section v1.0 specification.
-```
-
-```text
-Use $design-system-generator to review the current project. Separate observed visual facts from inferred design intent and proposed interaction behavior. Do not modify application code.
-```
-
-```text
-Use $design-system-generator to inspect the existing DESIGN.md and update only the interaction contracts and responsive rules. Preserve all existing token names and section order.
-```
+1. Awesome DESIGN.md is a curated Markdown collection, not a rigid fixed-heading schema.
+2. Core is nine semantic domains; source headings vary and must be parsed as authored.
+3. Extended is the canonical 16-chapter/four-Part view.
+4. Both exports render from one normalized model.
+5. Preserve current 6-layer architecture, 20 stable dimension IDs, and 13-section STYLE.md.
+6. Keep imported source, normalized findings and target-project proposals separate.
+7. Record upstream repository license separately from third-party asset rights.
 
 ## Acceptance / 验收
 
-- [ ] Skill frontmatter contains a clear name and trigger description.
-- [ ] Skill links to its supporting references using relative paths.
-- [ ] The 16-section template matches the formal specification.
-- [ ] Three examples cover dashboard, landing page and resource-management contexts.
-- [ ] Bilingual equivalence and provenance rules are explicit.
-- [ ] Hybrid interaction planning is explicit.
-- [ ] Existing STYLE.md and 20-dimension data are not overwritten.
-- [ ] A Codex invocation test is performed in the target local environment.
-- [ ] Generated output passes the quality gate.
+- [ ] Skill frontmatter and relative references are valid.
+- [ ] Core and Extension standards are bilingual and individually loadable.
+- [ ] Core template covers all nine domains.
+- [ ] Extended template contains the exact 16 chapters in four Parts.
+- [ ] Import mapping preserves arbitrary source headings and unknown content.
+- [ ] Provenance labels prevent Observed/Inferred/Proposed conflation.
+- [ ] Both export modes map to the same 20-dimension model.
+- [ ] Existing STYLE.md generator and presets are unchanged.
+- [ ] Examples identify recommendations as Proposed and avoid invented source claims.
+- [ ] Codex runtime invocation and generated-output evaluation are performed in the target environment.
 
 ## Not yet verified / 尚未验证
 
-This documentation package does not claim that Codex has executed the Skill, that a generated project DESIGN.md has passed evaluation, or that any application UI has been changed. Runtime invocation and evaluation should be performed in the user's Codex environment.
+The repository documentation and Skill package are authored, but Codex has not been executed against the user's local projects in this task. No automated parser, import UI, token renderer or browser visual QA engine is claimed as implemented. Tests requiring the local Windows/Codex environment remain pending.
