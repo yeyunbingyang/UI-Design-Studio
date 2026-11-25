@@ -16,6 +16,7 @@ Generate implementation-ready DESIGN.md files using the repository standard at `
 - **Compatibility:** Accept real-world Awesome DESIGN.md files as variable Markdown documents. Do not assume every source uses the same nine headings. Preserve original source and unknown sections.
 - **Bilingual:** Write English first and Simplified Chinese immediately after each meaningful rule group. Keep code, token IDs, CSS properties, ARIA attributes, library/API names unchanged.
 - **Hybrid interaction:** Separate Observed, Inferred and Proposed behavior. Do not present AI proposals as existing product behavior.
+- **Design gap review:** After collecting a target UI, independently audit all 20 dimensions, Core domains, Extended chapters, applicable Extensions, product pages/states and all three previews. Present a gap report and wait for explicit user review before applying changes. The user may approve, edit, request evidence, reject or supplement findings with their own research/screenshots.
 - **Canonical data:** Map to the existing 20 stable dimensions. Do not add a 21st dimension, rename IDs, or break the existing 6-layer architecture / 13-section STYLE.md.
 - **Shared mapping contract:** Treat DESIGN.md and the 20 dimensions as two views of one design model. Read `design-system/v2/design-dimension-mapping.json` and `docs/design/design-schema-mapping.md`; each dimension has exactly one primary chapter and may have secondary chapter references. Secondary chapters reference canonical token definitions instead of duplicating them.
 
@@ -28,6 +29,7 @@ Always read:
 - `skills/design-system-generator/standards/core/core-standard.md`
 - `skills/design-system-generator/standards/mappings/awesome-design-md-mapping.md`
 - `skills/design-system-generator/references/quality-gate.md`
+- `skills/design-system-generator/references/design-gap-analysis.md`
 
 Then read only relevant Extension files:
 - `visual-assets-effects`: `standards/extensions/visual-assets-effects.md`
@@ -62,16 +64,19 @@ Record source, file/URL, selector or location where available, confidence (High/
 ### 5. Plan interaction (hybrid)
 Document existing interaction only when supported by source or evidence. Then propose missing behavior based on user tasks and suitable design references. For each important proposed flow define trigger, preconditions, result, feedback, dismissal, recovery, keyboard, responsive behavior and edge cases. Do not mechanically assign every state to every component.
 
-### 6. Select Extensions
+### 6. Design gap analysis and human review
+Read `references/design-gap-analysis.md`. After source collection and initial reverse engineering, audit all 20 stable dimensions, 9 Core domains, 16 Extended chapters, relevant Extensions, product page/state coverage and all three preview deliverables. Do not omit dimensions with no evidence. Classify coverage as Covered / Partial / Missing / Unknown / Conflict and evidence as Observed / Inferred / Proposed / Unknown. Produce `design-gap-report.md` with a complete 20-dimension matrix and actionable findings. Identify exact evidence the user could provide. The user may approve/edit findings directly or conduct their own research and supplement screenshots, URLs, source files or requirements. Incorporate supplements and revise the report. Do not update approved DESIGN.md, tokens, registry, presets or final previews until the user explicitly approves relevant GAP IDs. Partial approval applies only to accepted IDs; all others remain pending. Never add a 21st canonical dimension.
+
+### 7. Select Extensions
 Enable modules explicitly requested or materially required by the product. Record enabled IDs in document frontmatter. The user may provide a selected module list; honor it. If no list is provided, choose a minimal set and explain why. Do not load or write irrelevant extension detail.
 
-### 7. Map to the canonical 20 dimensions
+### 8. Map to the canonical 20 dimensions
 Read `design-system/v2/design-dimension-mapping.json` as the authoritative document-to-dimension mapping metadata and `docs/design/design-schema-mapping.md` for the transformation contract. Use the exact IDs: style, theme, color, typography, spacing, radius, border, background, surface, shadow, effects, imagery, icons, layout, navigation, density, components, visualization, interaction, motion. Use each dimension's `primaryChapter` as its single canonical definition owner; other chapters may reference it but must not redefine its tokens. Preserve unmapped content in a clearly labeled section and report ambiguous/conflicting mappings. The 12 navigation domains are taxonomy only; the 9 Core domains and 16 Extended chapters are documentation views, not configuration dimensions. Respect dimension boundaries: Background ≠ Surface; Effects ≠ Motion; Components ≠ Interaction; Spacing ≠ Density; Style ≠ Theme.
 
-### 8. Generate output
+### 9. Generate output
 - Core Export: nine semantic Core domains, plain Markdown, source-friendly headings where appropriate.
 - Extended Export: 16 chapters in four Parts, all Core content plus enabled Extension detail.
-- Generate the mandatory package: `DESIGN.md`, `preview.html`, `preview-dark.html` and `README.md`.
+- Generate the mandatory package: `DESIGN.md`, `preview.html`, `preview-dark.html`, `application-preview.html` and `README.md`.
 - Derive both HTML previews from the same normalized token/component model as DESIGN.md; never hand-maintain conflicting values.
 - Include screenshot PNGs only if they were genuinely captured; do not fabricate screenshots.
 - Both modes: bilingual, semantic tokens, provenance, explicit unknowns and no invented measurements.
@@ -79,7 +84,7 @@ Read `design-system/v2/design-dimension-mapping.json` as the authoritative docum
 - Generate analysis notes only when evidence or decisions are substantial.
 - Do not overwrite an existing file without explicit user authorization.
 
-### 9. Validate
+### 10. Validate
 Run the quality gate. Check heading order for Extended; Core domain coverage for Core; bilingual equivalence; evidence labels; token consistency; source preservation; enabled Extension coverage; implementation clarity. State which tests were actually run and which remain unverified.
 
 ## Deliverables
@@ -94,6 +99,7 @@ A completed design analysis MUST produce a small, browsable package, not only a 
 | `preview.html` | MUST | Self-contained light-mode interactive design-token and component catalog. |
 | `preview-dark.html` | MUST | Self-contained dark-mode equivalent using the same semantic token model. |\n| `application-preview.html` | MUST | Standalone, responsive, product-specific application UI preview using the same design model. |
 | `README.md` | SHOULD | Package index: project/source, output mode, enabled Extensions, files, how to open previews, evidence caveats and attribution. |
+| `design-gap-report.md` | CONDITIONAL | Complete 20-dimension coverage and actionable review findings when gaps, unknowns, conflicts or pending user decisions exist. |
 | `preview-screenshot.png` | MAY | Screenshot of the light preview, only when a browser screenshot was actually captured. |
 | `preview-dark-screenshot.png` | MAY | Screenshot of the dark preview, only when a browser screenshot was actually captured. |
 | `design-analysis-notes.md` | CONDITIONAL | Detailed evidence inventory, mapping, uncertainty and unresolved decisions when multiple sources or material inference exist. |
