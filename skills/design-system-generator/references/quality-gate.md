@@ -34,6 +34,9 @@
 - [ ] `README.md` explains package contents, source, mode and how to open previews.
 - [ ] Both previews open directly as local files without build/install/network dependencies.
 - [ ] Both previews show the same project and semantic component/token model.
+- [ ] Every user-facing preview string is bilingual: English first, Simplified Chinese immediately below.
+- [ ] Chinese spans use `lang="zh-Hans"`; bilingual copy covers headings, tokens, components, controls, placeholders, tabs, dynamic JavaScript content, states, evidence and attribution.
+- [ ] No English-only UI labels or untranslated dynamic content remain; light/dark copies and ordering match.
 - [ ] Light/dark tokens match DESIGN.md; no unexplained token drift.
 - [ ] Color, typography, spacing, radius, surfaces, buttons, forms and relevant product components are visibly demonstrated.
 - [ ] Responsive behavior is implemented in the preview, not merely described.
