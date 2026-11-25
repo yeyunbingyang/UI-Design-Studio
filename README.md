@@ -303,3 +303,12 @@ Schema v2 使用稳定维度 ID 与资源版本引用，而非数组索引。Sty
 ---
 
 历史项目说明：[原 README](docs/legacy-readme.md) · [独立需求文档](docs/PRD.md)
+
+
+### A4.1 外部设计知识引擎（架构与需求已纳入）
+
+- [外部设计知识引擎规格](docs/design/external-design-intelligence.md)：将 DESIGN.md、Awesome 设计规范集合、官方设计系统和用户 Markdown 统一导入现有 20 维体系。
+- [外部来源清单](design-system/v2/external-sources.json) · [来源元数据 Schema](design-system/v2/external-source.schema.json)。
+- 设计原则：外部文档作为输入，内部规范化模型作为唯一运行时真源；不新增第 21 维，不覆盖现有预设；支持来源追溯、20 维映射、置信度、人工审核、A/B 预览与 Agent 导出。
+- 安全与授权：Awesome 仓库许可证不自动覆盖其收录的第三方品牌资产；未知许可禁止再分发；导入内容不执行脚本，预览需隔离。
+- 当前状态：架构、需求和来源登记已提交；Markdown Importer、映射引擎、来源管理 UI、自动视觉验收尚未实现。下一步为 A4.2 Importer MVP。
