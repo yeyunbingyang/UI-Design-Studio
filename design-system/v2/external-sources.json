@@ -43,6 +43,112 @@
       },
       "status": "reference",
       "notes": "Treat the document structure as an input convention, not as a guarantee of source asset licensing."
+    },
+    {
+      "sourceId": "aceternity-ui",
+      "name": "Aceternity UI",
+      "kind": "official-design-system",
+      "homepageUrl": "https://ui.aceternity.com/",
+      "importModes": [
+        "manual-markdown"
+      ],
+      "documentFormat": [
+        "React components",
+        "Tailwind CSS",
+        "Framer Motion examples"
+      ],
+      "license": {
+        "individualAssets": "verify-per-item",
+        "status": "review-required"
+      },
+      "status": "discovered",
+      "notes": "组件与动效参考来源。集成前逐项核对组件代码、依赖、适用框架及许可；不得将站点展示内容默认视为可再分发资产。"
+    },
+    {
+      "sourceId": "magicui",
+      "name": "Magic UI",
+      "kind": "official-design-system",
+      "repositoryUrl": "https://github.com/magicuidesign/magicui",
+      "homepageUrl": "https://magicui.design/",
+      "importModes": [
+        "github-repository",
+        "github-file",
+        "manual-markdown"
+      ],
+      "documentFormat": [
+        "React components",
+        "Tailwind CSS",
+        "Motion"
+      ],
+      "license": {
+        "repository": "verify-current-repository-license",
+        "individualAssets": "verify-per-item",
+        "status": "review-required"
+      },
+      "status": "discovered",
+      "notes": "开源动效组件库。导入前检查当前仓库许可证、具体文件头声明、依赖与版本；保留上游来源及版本信息。"
+    },
+    {
+      "sourceId": "magicui-pro",
+      "name": "Magic UI Pro",
+      "kind": "official-design-system",
+      "homepageUrl": "https://pro.magicui.design/",
+      "importModes": [
+        "manual-markdown"
+      ],
+      "documentFormat": [
+        "Premium UI components",
+        "Templates"
+      ],
+      "license": {
+        "individualAssets": "commercial terms; verify per item",
+        "status": "review-required"
+      },
+      "status": "discovered",
+      "notes": "商业/付费资源入口。仅记录来源与人工参考；不得抓取、镜像或分发付费内容，须遵循购买协议与授权范围。"
+    },
+    {
+      "sourceId": "getdesign-md",
+      "name": "GetDesign.md",
+      "kind": "awesome-index",
+      "homepageUrl": "https://getdesign.md/",
+      "importModes": [
+        "manual-markdown"
+      ],
+      "documentFormat": [
+        "DESIGN.md",
+        "Markdown",
+        "Design references"
+      ],
+      "license": {
+        "individualAssets": "verify-per-item",
+        "status": "review-required"
+      },
+      "status": "discovered",
+      "notes": "设计规范与案例发现入口。按具体条目追溯原始来源、作者、许可证和资源可用范围；索引站许可不代表条目资产许可。"
+    },
+    {
+      "sourceId": "ui-ux-pro-max-skill",
+      "name": "UI UX Pro Max Skill",
+      "kind": "design-document",
+      "repositoryUrl": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+      "importModes": [
+        "github-repository",
+        "github-file",
+        "manual-markdown"
+      ],
+      "documentFormat": [
+        "Agent Skill",
+        "Markdown",
+        "Design system guidance"
+      ],
+      "license": {
+        "repository": "verify-current-repository-license",
+        "individualAssets": "verify-per-item",
+        "status": "review-required"
+      },
+      "status": "discovered",
+      "notes": "面向 AI Agent 的 UI/UX 设计研究与生成 Skill。导入时检查 Skill 指令、依赖、许可证及其生成结果的资产来源。"
     }
   ],
   "policy": {
