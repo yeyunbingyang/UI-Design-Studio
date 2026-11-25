@@ -3,6 +3,8 @@ specVersion: "1.0.0"
 documentType: "example"
 project: "Product Landing Page"
 status: "illustrative-example"
+outputMode: "extended"
+enabledExtensions: ["visual-assets-effects", "navigation-ia", "interaction-states", "motion-feedback", "accessibility"]
 language: "en-zh"
 ---
 
