@@ -77,12 +77,61 @@ Run the quality gate. Check heading order for Extended; Core domain coverage for
 
 ## Deliverables
 
-Default:
-1. `DESIGN.md` in the requested mode.
-2. `design-analysis-notes.md` when there are multiple sources, inferred findings or unresolved decisions.
-3. Source/attribution notes when external reference material materially informs a recommendation.
+### Standard Design Package / 标准设计交付包
 
-Optional machine-readable tokens or component schemas are created only when requested or when the target repository already has a compatible format.
+A completed design analysis MUST produce a small, browsable package, not only a Markdown file. The default package is:
+
+| File | Requirement | Purpose |
+|---|---|---|
+| `DESIGN.md` | MUST | Canonical bilingual design specification (Core or Extended). |
+| `preview.html` | MUST | Self-contained light-mode interactive design-token and component catalog. |
+| `preview-dark.html` | MUST | Self-contained dark-mode equivalent using the same semantic token model. |
+| `README.md` | SHOULD | Package index: project/source, output mode, enabled Extensions, files, how to open previews, evidence caveats and attribution. |
+| `preview-screenshot.png` | MAY | Screenshot of the light preview, only when a browser screenshot was actually captured. |
+| `preview-dark-screenshot.png` | MAY | Screenshot of the dark preview, only when a browser screenshot was actually captured. |
+| `design-analysis-notes.md` | CONDITIONAL | Detailed evidence inventory, mapping, uncertainty and unresolved decisions when multiple sources or material inference exist. |
+
+### Preview requirements / 预览要求
+
+Both HTML previews MUST:
+- Open directly from the local filesystem (`file://`) without a build step, package installation, network access or external runtime dependency.
+- Render the actual design system described by `DESIGN.md`, not a generic dashboard or unrelated mockup.
+- Include a header with project name, preview mode and a link to the companion light/dark file.
+- Visually demonstrate color tokens (with names and values), typography hierarchy, spacing scale, radius, borders/surfaces/elevation, buttons, form controls and representative components relevant to the analyzed product.
+- Include responsive examples and adapt to narrow viewports.
+- Provide useful interactive examples where relevant (e.g. button states, tabs, theme-independent controls); interactions must work, not be decorative.
+- Use semantic CSS variables whose names map back to the 20 canonical dimensions. Keep token values consistent with `DESIGN.md`.
+- Clearly label estimated or proposed values; do not silently present estimates as source-extracted facts.
+- Include a visible evidence/limitations note and source attribution.
+- Avoid external images, fonts, scripts and CDN dependencies by default. If a remote asset is necessary and authorized, provide a local fallback and document it.
+- Use safe, static demo data; never include credentials, private data or executable code imported from the reference website.
+
+The light and dark previews MUST use the same semantic token names and component structure. Only theme mappings and contrast-specific treatments should differ. If the source genuinely has no dark theme, create a clearly labeled **Proposed dark adaptation** rather than implying it was observed.
+
+Both HTML files MUST be validated for local opening, console/runtime errors when browser tooling is available, responsive layout, and parity with the Markdown tokens. If browser testing is unavailable, say so and do not claim it passed.
+
+两个 HTML 预览必须能从本地直接打开，无需构建、安装依赖或联网；展示真实设计体系、Token、字体、组件、响应式和适用交互；浅色/深色保持相同语义 Token 与组件结构。来源没有深色主题时，必须标记为「建议的深色适配」，不能伪称为已观察事实。
+
+### Output organization / 输出目录
+
+Default output directory:
+
+```text
+design-output/
+├── DESIGN.md
+├── preview.html
+├── preview-dark.html
+├── README.md
+├── preview-screenshot.png       # optional, only if captured
+├── preview-dark-screenshot.png # optional, only if captured
+└── design-analysis-notes.md    # conditional
+```
+
+When working inside an existing project, use the user-requested destination and do not overwrite existing files without authorization. For a brand example in this Skill repository, use `examples/<slug>/` and keep all package files together.
+
+### Optional machine-readable outputs / 可选机器可读输出
+
+JSON tokens, component schemas, CSS token files and framework-specific implementations are optional unless requested or already required by the target repository. They MUST be derived from the same normalized design model as DESIGN.md and both HTML previews.
 
 ## Safety and licensing
 
