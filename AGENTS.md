@@ -8,7 +8,7 @@
 
 ## 技能与素材库
 
-- 生成或更新 `DESIGN.md` 时，读取 [design-system-generator](skills/design-system-generator/SKILL.md) 并按其流程执行。
+- 生成或更新 `DESIGN.md` 时，读取 [design-system-generator](skills/design-system-generator/SKILL.md) 并按其流程执行。采集目标产品 UI 后，必须先完成 20 个标准维度、Core/Extended/Extensions、产品页面/状态及三个预览的差距审查并展示报告；仅在用户明确确认后，才能将批准项写入正式 DESIGN.md、Token、预设及预览。用户也可以自行查阅并补充截图、URL、源码或要求。
 - `design-resource-intake`（设计素材入库）是已定名的首期入库 Skill，计划入口为 `skills/design-resource-intake/SKILL.md`。实施该 Skill 或处理入库需求时，先读 [资源入库规范](docs/design/resource-admission.md) 和 [资源 Schema](design-system/v2/resource.schema.json)。入库前向维护者展示来源、授权状态、预览方式和拟写入内容，确认后同步更新 `design-system/v2/registry.json` 与 `design-system/v2/catalog.json`。
 - 保持 20 个维度 ID 和已引用的资源版本稳定。同 ID 同版本的相同内容视为重复，存在差异时报告冲突。按 [现行产品需求](docs/PRD.md) 记录候选状态与审核证据。
 
