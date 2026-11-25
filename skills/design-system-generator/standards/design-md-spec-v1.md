@@ -94,6 +94,39 @@ The full Extended document uses the following canonical order. The headings are 
 15. Responsive & Accessibility — 响应式与无障碍 **[Core responsive + Extension accessibility]**
 16. Implementation Guidelines — 实施指南 **[Core agent guidance + Extension implementation-validation]**
 
+
+
+### 3.5 Standard deliverable package / 标准交付包
+
+A generated design analysis is delivered as a browsable package, not only a Markdown document:
+
+| File | Requirement | Description |
+|---|---|---|
+| `DESIGN.md` | Required | Canonical bilingual design specification. |
+| `preview.html` | Required | Self-contained light-mode interactive token/component catalog. |
+| `preview-dark.html` | Required | Matching dark-mode interactive catalog. If dark mode is not evidenced, label it as a proposed adaptation. |
+| `README.md` | Recommended | Package manifest, source, mode, Extensions, preview instructions, caveats and attribution. |
+| `preview-screenshot.png` | Optional | Captured light preview screenshot. |
+| `preview-dark-screenshot.png` | Optional | Captured dark preview screenshot. |
+| `design-analysis-notes.md` | Conditional | Detailed evidence and decision log. |
+
+Both previews MUST be standalone local HTML files, use the same normalized token/component model as DESIGN.md, show token values and representative components, support responsive viewing, and include working interactions where relevant. They MUST NOT require network access, package installation or a build step. Screenshots are optional and must only be included when genuinely captured.
+
+生成结果必须是可浏览的交付包，而不只是 Markdown：至少包含 DESIGN.md、浅色 preview.html 和深色 preview-dark.html。两个预览应为可独立打开的本地 HTML，使用与 DESIGN.md 相同的 Token/组件模型，展示真实 Token 和代表性组件，支持响应式及适用交互，不依赖联网、安装或构建。截图为可选项，只有实际捕获后才能交付。
+
+Recommended layout / 推荐目录：
+
+```text
+design-output/
+├── DESIGN.md
+├── preview.html
+├── preview-dark.html
+├── README.md
+├── preview-screenshot.png       # optional
+├── preview-dark-screenshot.png # optional
+└── design-analysis-notes.md    # conditional
+```
+
 ### 3.4 Output modes / 输出模式
 
 **Core Export (9 domains):** Produce a compact, upstream-friendly DESIGN.md using the nine semantic Core domains. Preserve recognizable upstream section names when importing/re-exporting a brand sample where possible. The exact headings may vary by target agent or source template; keep it plain Markdown and avoid requiring a proprietary parser.
