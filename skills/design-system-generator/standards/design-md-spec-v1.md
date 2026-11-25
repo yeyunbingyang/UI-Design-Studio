@@ -110,7 +110,9 @@ A generated design analysis is delivered as a browsable package, not only a Mark
 | `preview-dark-screenshot.png` | Optional | Captured dark preview screenshot. |
 | `design-analysis-notes.md` | Conditional | Detailed evidence and decision log. |
 
-Both previews MUST be standalone local HTML files, use the same normalized token/component model as DESIGN.md, show token values and representative components, support responsive viewing, and include working interactions where relevant. They MUST NOT require network access, package installation or a build step. Screenshots are optional and must only be included when genuinely captured.
+Both previews MUST be standalone local HTML files, use the same normalized token/component model as DESIGN.md, show token values and representative components, support responsive viewing, and include working interactions where relevant. They MUST NOT require network access, package installation or a build step. Every user-facing string MUST be bilingual: English first, with equivalent Simplified Chinese immediately below it. This includes headings, labels, token/component names, buttons, form labels/placeholders/options, tabs, dynamic JavaScript content, status messages, evidence notes and attribution. Chinese spans SHOULD use `lang="zh-Hans"`. Brand/product names, token IDs, code, CSS properties, ARIA attribute names and API identifiers remain unchanged. Light and dark previews MUST have matching bilingual content and ordering. Screenshots are optional and must only be included when genuinely captured.
+
+两个 HTML 预览中的所有面向用户的文字必须同时显示英文和简体中文：英文在前，中文紧随其后。范围包括标题、标签、Token/组件名称、按钮、表单、占位符、选项、标签页、JavaScript 动态内容、状态提示、证据说明和来源归属。中文文本建议使用 `lang="zh-Hans"`。品牌/产品名称、Token ID、代码、CSS 属性、ARIA 属性名和 API 标识保持不变。浅色与深色预览的双语内容及顺序必须一致。
 
 生成结果必须是可浏览的交付包，而不只是 Markdown：至少包含 DESIGN.md、浅色 preview.html 和深色 preview-dark.html。两个预览应为可独立打开的本地 HTML，使用与 DESIGN.md 相同的 Token/组件模型，展示真实 Token 和代表性组件，支持响应式及适用交互，不依赖联网、安装或构建。截图为可选项，只有实际捕获后才能交付。
 
