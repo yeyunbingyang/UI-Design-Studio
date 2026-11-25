@@ -312,3 +312,14 @@ Schema v2 使用稳定维度 ID 与资源版本引用，而非数组索引。Sty
 - 设计原则：外部文档作为输入，内部规范化模型作为唯一运行时真源；不新增第 21 维，不覆盖现有预设；支持来源追溯、20 维映射、置信度、人工审核、A/B 预览与 Agent 导出。
 - 安全与授权：Awesome 仓库许可证不自动覆盖其收录的第三方品牌资产；未知许可禁止再分发；导入内容不执行脚本，预览需隔离。
 - 当前状态：架构、需求和来源登记已提交；Markdown Importer、映射引擎、来源管理 UI、自动视觉验收尚未实现。下一步为 A4.2 Importer MVP。
+
+
+
+## A4.2 DESIGN.md Generator Skill — Core + Extensions
+
+- [DESIGN.md Specification v1.0](docs/design/design-md-spec-v1.md)：Core 九个语义域 + 七个按需 Extensions；完整规范按四个 PART、16 章节组织。
+- [DESIGN Skill build record](docs/design/design-skill-v1-plan.md)：架构、交付文件、兼容策略和验收状态。
+- [Codex Skill](skills/design-system-generator/SKILL.md)：AI-first 视觉分析、交互规划、双语 DESIGN.md 生成。
+- [Core standard](skills/design-system-generator/standards/core/core-standard.md) · [Extension registry](skills/design-system-generator/standards/extensions/extension-registry.md) · [Awesome mapping](skills/design-system-generator/standards/mappings/awesome-design-md-mapping.md)
+- 输出：Core Export（9 个语义域）与 Extended Export（16 章节）；均映射现有 20 维模型。
+- 本次状态：规范、Skill、模板和示例文档已提交到功能分支；自动导入器、Reference Library UI 和自动视觉 QA 尚未实现。

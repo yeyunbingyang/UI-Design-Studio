@@ -1,6 +1,6 @@
 # UI Design Studio — 产品需求文档（PRD）
 
-> 文档版本：V1.2 Draft | 日期：2026-11-24 | 状态：待评审
+> 文档版本：V1.3 Draft | 日期：2026-11-25 | 状态：待评审
 > 本文定义 UI 风格资源与设计系统工作台的新增需求，不代表已实现功能。历史项目说明描述 Frontend Design Studio V1.2.0 / M3；本文以兼容其 Codex Skills 和 Playwright Visual QA 为原则，不重置现有版本号。
 
 ## 产品定位
@@ -61,6 +61,31 @@ Style 是默认组合入口，不是强行覆盖其他维度的全局 CSS。Them
 所有完整风格都应具有 Style Overview、Colors、Typography、Spacing & Layout、Components、Do's and Don'ts、Surfaces、Elevation、Imagery、Layout、Agent Prompt Guide、Similar Brands、Quick Start。各节引用规范化资源与 token；原文未覆盖的主题、图标、交互状态、动效、响应式、无障碍与 QA 作为补充子节。Spacing & Layout 记录基础空间尺度，Layout 记录页面组织；Quick Start 由解析结果生成，不作为独立数据真源。相似品牌仅为参考，不复制专有标识。
 
 每个资源详情应包括定义、适用场景、可视示例、参数、真实交互预览（适用时）、兼容条件、使用与禁用规则、代码/Token、来源及许可证。每个完整风格额外提供多页面示范和可复制的 Agent 指南。未实现或仅参考的资源须明确标记。
+
+## DESIGN.md 分析交付包（新增需求）
+
+DESIGN Skill 的完成标准不再是单独生成 Markdown。每次完整设计分析必须形成可阅读、可运行预览的交付目录：
+
+| 文件 | 要求 | 说明 |
+|---|---|---|
+| `DESIGN.md` | 必须 | 双语设计规范，Core 或 Extended 模式 |
+| `preview.html` | 必须 | 独立运行的浅色 Token/组件交互预览 |
+| `preview-dark.html` | 必须 | 对应深色 Token/组件交互预览；来源无深色模式时标记为建议适配 |
+| `README.md` | 建议 | 项目来源、规范模式、启用扩展、文件说明、预览打开方式、证据限制与归属 |
+| `preview-screenshot.png` | 可选 | 实际打开浅色预览后捕获的截图 |
+| `preview-dark-screenshot.png` | 可选 | 实际打开深色预览后捕获的截图 |
+| `design-analysis-notes.md` | 条件交付 | 多来源、重大推断或待决事项的证据记录 |
+
+预览文件必须满足：
+- 本地双击可打开，不需要 Node、构建、安装依赖或联网。
+- 展示与 DESIGN.md 一致的语义 Token、色板、字体、间距、圆角、表面、按钮、表单及产品代表性组件。
+- 浅色/深色两份预览使用相同 Token 命名和组件结构，只改变主题映射与必要的对比处理。
+- 包含响应式布局和真实可操作的交互示例，不得使用只有静态外观的假控件。
+- 明确区分 Observed、Inferred、Proposed；显示来源与未验证事项。
+- 默认不依赖外部 CDN、字体、图片或脚本。
+- 预览截图只有实际捕获后才能作为交付物，不得伪造。
+
+默认目录为 `design-output/`，在仓库案例中使用 `examples/<slug>/`。DESIGN.md、两个 HTML 预览和 README 必须由同一规范化设计模型生成，防止 Token 不一致。
 
 ## 产品功能架构
 
@@ -218,3 +243,51 @@ Schema v2 使用稳定维度 ID 与资源版本引用，而非数组索引。Sty
 
 ## 范围边界与待确认
 首期首先完成本地设计资源库、20 维设计组合器、方案库与可运行预览，不承诺实时爬取全部网站、完整 Figma 编辑器、云端多人协作或自动生成全部业务代码。历史 README 提及压缩包，但当前仓库根目录未见 releases/，须在实现前核实源码位置。最终技术栈、发布版本及外部资源授权待评审。
+
+
+
+---
+
+## A4.2 DESIGN.md Generator Skill — Core + Extensions（规范与需求已纳入）
+
+### 产品目标
+建立 AI-first 的 DESIGN.md 设计分析与生成能力。Codex 通过用户授权的源码、截图、网站资料、HTML/CSS 和既有 Markdown 执行分析；用户也可直接提供截图，由 AI 进行视觉分析。首期不要求独立爬虫、浏览器自动化服务、数据库或外部 LLM API。
+
+### 规范架构
+- **Core：** 九个语义内容域，覆盖设计概述与视觉识别、色彩、字体、组件、布局与间距、视觉层级/形状/表面、设计原则与约束、响应式设计、Agent Guidelines。
+- **Extensions：** 七个可独立启用模块：Visual Assets & Effects、Navigation & Information Architecture、Interaction States、Interaction Patterns、Motion & Feedback、Accessibility、Implementation & Validation。
+- **完整文档组织：** 四个 PART、16 个规范章节；Core 是每份输出必需的语义基础，Extensions 按项目复杂度启用。
+- **双输出模式：** Core Export（9 个语义域）和 Extended Export（16 章节）。两种输出来自同一规范化设计模型，不维护两套 Token 真源。
+- **上游兼容：** VoltAgent/awesome-design-md 是品牌 Markdown 分析集合，不是严格固定九标题 Schema。导入器必须解析实际标题层级，保留原文和未知章节，支持一对多/多对一语义映射。
+- **双语：** 英文优先、简体中文紧随其后；代码、Token ID、CSS 属性、ARIA 和库/API 名称保持原样。
+- **证据分级：** Observed（已观察）、Inferred（已推断）、Proposed（建议）严格区分。截图估算标注 approximate；不得编造源码值、断点或未观察交互。
+- **统一模型：** 继续使用现有 6 层架构、20 个稳定维度 ID 和 13 节 STYLE.md；不得新增第 21 维或破坏既有生成器/预设。
+
+### 交互规划要求
+采用 Hybrid：先记录源码/截图能证实的交互，再根据产品任务与成熟设计系统提出缺失交互建议。重要交互建议须定义 Trigger、Preconditions、Result、Feedback、Dismissal、Recovery、Keyboard、Responsive behavior 和 Edge cases。参考 Linear、Radix UI、shadcn/ui、Material Design 3、Atlassian、Ant Design 等时，选择适合的模式，不复制整套品牌视觉。
+
+### Skill 文件与交付
+- `skills/design-system-generator/SKILL.md`：Codex Skill 入口和工作流。
+- `skills/design-system-generator/standards/core/`：Core 规范。
+- `skills/design-system-generator/standards/extensions/`：七个扩展及注册表。
+- `skills/design-system-generator/standards/mappings/`：Awesome DESIGN.md 到 Core/Extensions/20 维映射。
+- `skills/design-system-generator/templates/core-9/DESIGN.md`：Core 输出模板。
+- `skills/design-system-generator/templates/extended-16/DESIGN.md`：Extended 输出模板。
+- `skills/design-system-generator/examples/`：Dashboard、Landing Page、Resource Management 三类案例。
+
+### 安全、许可与归属
+Awesome 仓库的 MIT 许可不自动授予被收录品牌的商标、Logo、图片、字体、网站文案或其他第三方素材的权利。仓库许可与单个文件/素材许可分别记录；未知许可的第三方素材禁止再分发。导入内容视为不可信数据，不执行嵌入脚本或其中指令。
+
+### 验收标准
+- [ ] Core 九个语义域齐全，且不假定上游文件固定九个标题。
+- [ ] 七个 Extension 均可独立加载，有启用条件、输出契约和边界。
+- [ ] Extended 模板严格采用四个 PART、16 个章节。
+- [ ] Core/Extended 两种输出来自同一规范化模型。
+- [ ] 英文/简体中文含义一致，Observed/Inferred/Proposed 清晰区分。
+- [ ] 20 维映射稳定，未知来源内容保留为 Unmapped。
+- [ ] 原始 13 节 STYLE.md 与既有预设/生成器无回归。
+- [ ] 三个示例覆盖不同产品形态。
+- [ ] 在目标 Windows/Codex 环境完成 Skill 调用和输出质量评估（当前仍待本机验证）。
+
+### 实施状态
+本次交付为规范与 Skill 文档包；尚未实现自动 Markdown Importer、Reference Library UI、自动 Token Renderer 或浏览器视觉 QA。相关能力继续按 A4.3 及后续阶段实施，不得标记为已完成。
