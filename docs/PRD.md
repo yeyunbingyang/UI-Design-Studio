@@ -1,6 +1,6 @@
 # UI Design Studio — 产品需求文档（PRD）
 
-> 文档版本：V1.3 Draft | 日期：2026-11-25 | 状态：待评审
+> 文档版本：V1.4 Draft | 日期：2026-11-25 | 状态：待评审
 > 本文定义 UI 风格资源与设计系统工作台的新增需求，不代表已实现功能。历史项目说明描述 Frontend Design Studio V1.2.0 / M3；本文以兼容其 Codex Skills 和 Playwright Visual QA 为原则，不重置现有版本号。
 
 ## 产品定位
@@ -293,3 +293,41 @@ Awesome 仓库的 MIT 许可不自动授予被收录品牌的商标、Logo、图
 
 ### 实施状态
 本次交付为规范与 Skill 文档包；尚未实现自动 Markdown Importer、Reference Library UI、自动 Token Renderer 或浏览器视觉 QA。相关能力继续按 A4.3 及后续阶段实施，不得标记为已完成。
+
+
+## DESIGN.md ↔ Canonical 20 Dimensions Mapping（新增架构要求）
+
+**核心决定：DESIGN.md 与标准 20 个设计维度是同一规范化设计模型的两种表达形式。** DESIGN.md 是人类和 Agent 可读的文档视图；20 个维度是 Composer、资源库、预设和导出的结构化配置单位。
+
+### 分层关系
+
+| 模型 | 数量 | 职责 | 数据角色 |
+|---|---:|---|---|
+| Navigation Domains / 导航领域 | 12 | 资源库和 Composer 导航分组 | 仅分类元数据 |
+| Canonical Dimensions / 标准维度 | 20 | 独立配置、持久化、校验和组合 | 唯一配置单位 |
+| DESIGN Core Domains / Core 语义域 | 9 | Core 精简规范输出 | 文档分组 |
+| Extended Chapters / 扩展章节 | 16 | 完整 DESIGN.md 输出 | 文档分组 |
+| Extensions / 扩展模块 | 7 | 专项指导和横切质量约束 | 文档模块，不是维度 |
+
+### 映射文件
+
+- `design-system/v2/design-dimension-mapping.json`：20 维、16 章节、9 Core 语义域、12 导航领域及 Extensions 的机器可读映射。
+- `design-system/v2/design-dimension-mapping.schema.json`：映射结构 JSON Schema。
+- `design-system/v2/design-dimension-mapping.test.mjs`：映射完整性与不变量测试。
+- `docs/design/design-schema-mapping.md`：双向转换、Token 归属、冲突处理和验证契约。
+
+### 关键规则
+
+1. 保留现有 20 个稳定维度 ID；禁止新增第 21 个维度或用领域 ID 替代维度 ID。
+2. 每个维度必须且只能有一个主章节；其他章节可以引用，不得重复定义该维度的规范 Token。
+3. 一个章节可以引用多个维度，一个维度也可以出现在多个章节；采用多对多映射。
+4. 12 个导航领域、9 个 Core 语义域和 16 个 Extended 章节互相独立，不得混为一套分类。
+5. Accessibility 与 Implementation & Validation 是横切质量规则，不拥有新的 Token 维度。
+6. DESIGN.md 导入必须保留未知章节、来源与未映射内容；应用到现有预设或草稿前必须展示差异和冲突。
+7. DESIGN.md、浅色/深色 HTML、CSS、JSON 和 Composer 快照必须从同一个项目解析设计实例生成。
+8. 映射元数据不存储实际 Token 数值；Token 数值归属于资源模型和项目解析结果。
+
+### 实施边界
+
+本阶段先建立映射数据、JSON Schema、架构文档、Skill 规则和自动化不变量测试。完整 Markdown ↔ 规范化设计实例转换器、差异审查 UI 和 Composer 双向同步属于后续实现，不得在未完成前宣称已经支持自动双向写入。
+
