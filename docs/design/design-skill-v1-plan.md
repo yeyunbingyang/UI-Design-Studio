@@ -22,12 +22,15 @@
 
 - `docs/design/design-md-spec-v1.md`: formal Core + Extensions specification.
 - `skills/design-system-generator/SKILL.md`: Codex Skill entry point.
+- `skills/design-system-generator/standards/design-md-spec-v1.md`: self-contained Skill copy of the formal specification.
 - `skills/design-system-generator/standards/core/core-standard.md`: nine semantic Core domains.
+- `skills/design-system-generator/standards/mappings/canonical-20-dimensions.md`: stable 20-dimension mapping.
 - `skills/design-system-generator/standards/extensions/`: seven independent extension modules.
 - `skills/design-system-generator/standards/mappings/awesome-design-md-mapping.md`: upstream compatibility mapping.
 - `skills/design-system-generator/standards/extensions/extension-registry.md`: extension registry and activation rules.
 - `skills/design-system-generator/templates/core-9/DESIGN.md`: Core Export template.
 - `skills/design-system-generator/templates/extended-16/DESIGN.md`: Extended Export template.
+- `skills/design-system-generator/templates/DESIGN.md`: backward-compatible template pointer.
 - `skills/design-system-generator/examples/`: dashboard, landing page and resource-management examples.
 - `docs/PRD.md`: updated product requirements and acceptance criteria.
 
