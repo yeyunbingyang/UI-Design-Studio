@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "model": "design-domains",
+  "status": "proposed-ui-taxonomy",
+  "compatibility": {
+    "sourceCatalog": "design-system/v2/catalog.json",
+    "canonicalDimensionIds": "unchanged",
+    "presetsAndResources": "no-id-migration-required",
+    "rule": "Domains are navigation and grouping metadata only. Existing dimension IDs remain the configuration and persistence units."
+  },
+  "domains": [
+    {
+      "id": "style-identity",
+      "nameEn": "Style Identity",
+      "nameZh": "风格定位",
+      "layer": "identity",
+      "description": "Defines the overall visual direction and its identity.",
+      "dimensions": [
+        "style"
+      ]
+    },
+    {
+      "id": "color-system",
+      "nameEn": "Color System",
+      "nameZh": "色彩系统",
+      "layer": "identity+foundations",
+      "description": "Groups appearance mode with palettes and semantic color mapping; theme and color remain independently configurable.",
+      "dimensions": [
+        "theme",
+        "color"
+      ]
+    },
+    {
+      "id": "typography",
+      "nameEn": "Typography",
+      "nameZh": "字体排版",
+      "layer": "foundations",
+      "description": "Font families, scale, weights, line heights, tracking and language fallbacks.",
+      "dimensions": [
+        "typography"
+      ]
+    },
+    {
+      "id": "spacing-density",
+      "nameEn": "Spacing & Density",
+      "nameZh": "间距与密度",
+      "layer": "foundations+composition",
+      "description": "Groups spatial scale and information density without merging their token responsibilities.",
+      "dimensions": [
+        "spacing",
+        "density"
+      ]
+    },
+    {
+      "id": "shape-border",
+      "nameEn": "Shape & Border",
+      "nameZh": "形状与描边",
+      "layer": "foundations",
+      "description": "Geometry, corner radii, border widths, styles and semantic border colors.",
+      "dimensions": [
+        "radius",
+        "border"
+      ]
+    },
+    {
+      "id": "surface-effects",
+      "nameEn": "Surface & Effects",
+      "nameZh": "表面与视觉效果",
+      "layer": "visual",
+      "description": "The page canvas, material surfaces, elevation and decorative visual effects.",
+      "dimensions": [
+        "background",
+        "surface",
+        "shadow",
+        "effects"
+      ]
+    },
+    {
+      "id": "visual-assets",
+      "nameEn": "Visual Assets",
+      "nameZh": "视觉资产",
+      "layer": "visual",
+      "description": "Image direction, image treatment, icon family and icon geometry.",
+      "dimensions": [
+        "imagery",
+        "icons"
+      ]
+    },
+    {
+      "id": "layout-navigation",
+      "nameEn": "Layout & Navigation",
+      "nameZh": "布局与导航",
+      "layer": "composition",
+      "description": "Page composition, grid structure, containers, navigation patterns and responsive behavior.",
+      "dimensions": [
+        "layout",
+        "navigation"
+      ]
+    },
+    {
+      "id": "components",
+      "nameEn": "Components",
+      "nameZh": "组件系统",
+      "layer": "components",
+      "description": "Reusable interface component structures, variants and component-level styling.",
+      "dimensions": [
+        "components"
+      ]
+    },
+    {
+      "id": "data-visualization",
+      "nameEn": "Data Visualization",
+      "nameZh": "数据可视化",
+      "layer": "components",
+      "description": "Charts and structured data presentation patterns; must preserve business data semantics.",
+      "dimensions": [
+        "visualization"
+      ]
+    },
+    {
+      "id": "interaction",
+      "nameEn": "Interaction",
+      "nameZh": "交互状态",
+      "layer": "components",
+      "description": "Behavior and feedback states such as hover, active, focus, disabled, loading and error.",
+      "dimensions": [
+        "interaction"
+      ]
+    },
+    {
+      "id": "motion",
+      "nameEn": "Motion",
+      "nameZh": "动效系统",
+      "layer": "components",
+      "description": "Transitions, timing, easing, animation triggers and reduced-motion behavior.",
+      "dimensions": [
+        "motion"
+      ]
+    }
+  ],
+  "invariants": [
+    "Every canonical dimension appears in exactly one domain.",
+    "Domain IDs are presentation taxonomy IDs and must not replace canonical dimension IDs.",
+    "Resources remain attached to their existing canonical dimension IDs.",
+    "A domain selection is a navigation/grouping operation, not an implicit bulk-apply operation.",
+    "A style preset may provide defaults across dimensions, but locked dimensions and explicit overrides retain existing composer semantics."
+  ]
+}
