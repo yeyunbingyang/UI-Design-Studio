@@ -30,6 +30,8 @@
 - `skills/design-system-generator/standards/extensions/extension-registry.md`: extension registry and activation rules.
 - `skills/design-system-generator/templates/core-9/DESIGN.md`: Core Export template.
 - `skills/design-system-generator/templates/extended-16/DESIGN.md`: Extended Export template.
+- `skills/design-system-generator/templates/previews/preview.html` and `preview-dark.html`: standalone light/dark preview templates.
+- Standard generated package includes `DESIGN.md`, both preview HTML files and `README.md`; screenshots are optional and only included when captured.
 - `skills/design-system-generator/templates/DESIGN.md`: backward-compatible template pointer.
 - `skills/design-system-generator/examples/`: dashboard, landing page and resource-management examples.
 - `docs/PRD.md`: updated product requirements and acceptance criteria.
