@@ -35,7 +35,7 @@ Then read only relevant Extension files:
 - `accessibility`: `standards/extensions/accessibility.md`
 - `implementation-validation`: `standards/extensions/implementation-validation.md`
 
-Use `templates/core-9/DESIGN.md` for Core Export and `templates/extended-16/DESIGN.md` for Extended Export.
+Use `templates/core-9/DESIGN.md` for Core Export and `templates/extended-16/DESIGN.md` for Extended Export. For every completed package, also read and instantiate both `templates/previews/preview.html` and `templates/previews/preview-dark.html`; follow `templates/previews/README.md`.
 
 ## Workflow
 
@@ -68,7 +68,10 @@ Use the exact IDs: style, theme, color, typography, spacing, radius, border, bac
 ### 8. Generate output
 - Core Export: nine semantic Core domains, plain Markdown, source-friendly headings where appropriate.
 - Extended Export: 16 chapters in four Parts, all Core content plus enabled Extension detail.
-- Both: bilingual, semantic tokens, provenance, explicit unknowns and no invented measurements.
+- Generate the mandatory package: `DESIGN.md`, `preview.html`, `preview-dark.html` and `README.md`.
+- Derive both HTML previews from the same normalized token/component model as DESIGN.md; never hand-maintain conflicting values.
+- Include screenshot PNGs only if they were genuinely captured; do not fabricate screenshots.
+- Both modes: bilingual, semantic tokens, provenance, explicit unknowns and no invented measurements.
 - Generate analysis notes only when evidence or decisions are substantial.
 - Do not overwrite an existing file without explicit user authorization.
 
