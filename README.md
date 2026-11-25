@@ -83,6 +83,12 @@
 - 已执行 1230 项组件/状态/方案代码生成检查及脚本语法检查；新增 2 项浏览器回归测试，CI 结果待确认。未实现的状态禁用；组件视觉参数覆盖尚未达到全部 20 维，完整无障碍与人工视觉验收待进行。
 - M4-B.2 最终 CI 已通过。下一阶段 M4-B.4 项目及设计方案管理。
 
+### A3.8 外部 UI / UX 设计来源登记
+
+- [外部来源目录](docs/design/external-source-catalog.md) · [机器可读来源注册表](design-system/v2/external-sources.json) · [来源 Schema](design-system/v2/external-source.schema.json)
+- 新增 Aceternity UI、Magic UI、Magic UI Pro、GetDesign.md、UI UX Pro Max Skill；保留既有 VoltAgent Awesome DESIGN.md 与 Google Stitch 格式参考。
+- 本次仅登记来源与接入约束，不代表已抓取/导入其资源或完成许可证核验。商业资源须遵循购买协议；所有具体组件与资产逐项核验许可、依赖及归属。
+
 ## 产品定位
 面向独立开发者、前端工程师及 AI 编程 Agent 的本地优先 WebUI 设计工作台。将风格发现、可运行预览、组件与页面模板、设计变量、提示词、项目绑定、视觉验收统一管理。不是单纯的截图收藏站，也不是替代 Figma 的完整绘图工具。
 
