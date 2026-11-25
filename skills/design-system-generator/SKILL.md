@@ -97,6 +97,12 @@ A completed design analysis MUST produce a small, browsable package, not only a 
 ### Preview requirements / 预览要求
 
 Both HTML previews MUST:
+- Display English and Simplified Chinese simultaneously, English first and the equivalent Chinese directly below; this is not a language toggle or separate language versions.
+- Make every human-readable preview string bilingual: title, section labels, explanatory copy, token labels, component names, buttons, form labels/placeholders/options, tabs, tooltips, empty/error/success/loading states, evidence notes, attribution and JavaScript-generated text.
+- Mark Chinese text spans with `lang="zh-Hans"`; keep the document default language English.
+- Keep the same bilingual content and ordering in light and dark previews.
+- Preserve product/brand names, token IDs, CSS properties, code, ARIA attribute names and API identifiers; translate only human-readable descriptions.
+- When the source product copy is intentionally retained in its original language, add a concise Chinese explanation for the preview reader where appropriate.
 - Open directly from the local filesystem (`file://`) without a build step, package installation, network access or external runtime dependency.
 - Render the actual design system described by `DESIGN.md`, not a generic dashboard or unrelated mockup.
 - Include a header with project name, preview mode and a link to the companion light/dark file.
