@@ -151,6 +151,26 @@ Both modes are rendered from the same normalized design model. They are views/ex
 
 两种模式必须从同一份规范化设计模型生成。它们是不同输出视图，不是两套独立数据真源。
 
+## 3.4 Canonical dimension mapping / 标准维度映射
+
+DESIGN.md and the existing 20 canonical design dimensions MUST be treated as two representations of the same normalized design model. The machine-readable mapping is maintained at `design-system/v2/design-dimension-mapping.json`; the transformation and ownership contract is documented in `docs/design/design-schema-mapping.md`.
+
+DESIGN.md 与现有 20 个标准设计维度必须被视为同一规范化设计模型的两种表达形式。机器可读映射维护在 `design-system/v2/design-dimension-mapping.json`；转换与归属契约见 `docs/design/design-schema-mapping.md`。
+
+- The 20 existing IDs remain the only canonical configuration dimensions.
+- Each dimension MUST have exactly one primary chapter; secondary chapters may reference it but MUST NOT redefine its canonical tokens.
+- The 9 Core semantic domains, 16 Extended chapters and 12 navigation domains are distinct grouping layers, not additional dimensions.
+- DESIGN.md import/export must preserve unknown source content and report ambiguous or unmapped material.
+- Token values are owned by the resolved design instance and resource model, not by the mapping metadata.
+- Preview HTML, CSS, JSON exports, DESIGN.md and Composer snapshots MUST derive from the same resolved design instance.
+
+- 现有 20 个 ID 是唯一标准配置维度。
+- 每个维度必须且只能有一个主章节；其他章节可以引用，但不得重新定义其规范 Token。
+- 9 个 Core 语义域、16 个 Extended 章节和 12 个导航领域是不同分组层，不是新增维度。
+- DESIGN.md 导入/导出必须保留未知来源内容，并报告歧义或未映射内容。
+- Token 数值归属于项目解析后的设计实例及资源模型，不归属于映射元数据。
+- HTML 预览、CSS、JSON 导出、DESIGN.md 和 Composer 快照必须由同一解析后的设计实例生成。
+
 ## 4. Source analysis and provenance / 来源分析与证据
 
 Every material claim MUST be classified when provenance matters:
