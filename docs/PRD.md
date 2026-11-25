@@ -1,6 +1,6 @@
 # UI Design Studio — 产品需求文档（PRD）
 
-> 文档版本：V1.2 Draft | 日期：2026-11-24 | 状态：待评审
+> 文档版本：V1.3 Draft | 日期：2026-11-25 | 状态：待评审
 > 本文定义 UI 风格资源与设计系统工作台的新增需求，不代表已实现功能。历史项目说明描述 Frontend Design Studio V1.2.0 / M3；本文以兼容其 Codex Skills 和 Playwright Visual QA 为原则，不重置现有版本号。
 
 ## 产品定位
