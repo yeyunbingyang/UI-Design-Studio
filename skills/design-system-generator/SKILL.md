@@ -97,7 +97,8 @@ A completed design analysis MUST produce a small, browsable package, not only a 
 |---|---|---|
 | `DESIGN.md` | MUST | Canonical bilingual design specification (Core or Extended). |
 | `preview.html` | MUST | Self-contained light-mode interactive design-token and component catalog. |
-| `preview-dark.html` | MUST | Self-contained dark-mode equivalent using the same semantic token model. |\n| `application-preview.html` | MUST | Standalone, responsive, product-specific application UI preview using the same design model. |
+| `preview-dark.html` | MUST | Self-contained dark-mode equivalent using the same semantic token model. | 
+| `application-preview.html` | MUST | Standalone, responsive, product-specific application UI preview using the same design model. |
 | `README.md` | SHOULD | Package index: project/source, output mode, enabled Extensions, files, how to open previews, evidence caveats and attribution. |
 | `design-gap-report.md` | CONDITIONAL | Complete 20-dimension coverage and actionable review findings when gaps, unknowns, conflicts or pending user decisions exist. |
 | `preview-screenshot.png` | MAY | Screenshot of the light preview, only when a browser screenshot was actually captured. |
