@@ -1,49 +1,48 @@
-# UI Design Studio
+# 来源网站
 
-UI Design Studio 是面向 Windows 本地使用的设计素材工作台。当前 Alpha 应用提供风格库、设计资源浏览、设计组合器和组件实验室。首期需求聚焦 Codex Skill 确认入库，以及在 WebUI 中浏览和预览素材。
+## 外部设计来源
 
-- [现行产品需求](docs/PRD.md)
-- [需求与验收清单](docs/需求与验收清单.md)
-- [项目 Agent 指令](AGENTS.md)
-- [资源入库规范](docs/design/resource-admission.md)
-- [外部设计来源目录](docs/design/external-source-catalog.md)
+- [VoltAgent Awesome DESIGN.md](https://github.com/VoltAgent/awesome-design-md)
+- [Google Stitch DESIGN.md format](https://stitch.google.com/)
+- [Aceternity UI](https://ui.aceternity.com/)
+- [Magic UI](https://github.com/magicuidesign/magicui)
+- [Magic UI Pro](https://pro.magicui.design/)
+- [GetDesign.md](https://getdesign.md/)
+- [UI UX Pro Max Skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)
+- [StyleKit](https://github.com/AnxForever/stylekit)
+- [Material Design 3](https://m3.material.io/)
+- [IBM Carbon Design System](https://www.carbondesignsystem.com/)
+- [U.S. Web Design System](https://designsystem.digital.gov/)
+- [Ant Design](https://ant.design/)
+- [Radix Colors](https://www.radix-ui.com/colors)
+- [Material Color Utilities](https://github.com/material-foundation/material-color-utilities)
+- [Google Fonts](https://github.com/google/fonts)
+- [MDN CSS 渐变](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/gradient)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Radix Primitives](https://www.radix-ui.com/primitives)
+- [Uiverse](https://uiverse.io/)
+- [Motion](https://motion.dev/docs)
+- [Apache ECharts](https://echarts.apache.org/en/index.html)
+- [Lucide](https://lucide.dev/)
+- [Iconify Icon Sets](https://github.com/iconify/icon-sets)
+- [Unsplash](https://unsplash.com/license)
+- [Pexels](https://www.pexels.com/license/)
+- [Mobbin](https://mobbin.com/)
+- [Refero](https://refero.design/)
+- [W3C ARIA APG](https://www.w3.org/WAI/ARIA/apg/)
+- [WCAG 2.2](https://www.w3.org/TR/WCAG22/)
+- [Design Tokens Community Group](https://www.designtokens.org/)
 
-## 在 Windows 上运行
+## GetDesign 走查网址
 
-在本项目根目录打开 PowerShell。启动应用需要 Python，运行测试还需要 Node.js 和 npm。上游 CI 使用 Node.js 22 和 Python 3.12，可作为环境参考。
-
-```powershell
-npm run dev -- --bind 127.0.0.1
-```
-
-访问 [当前应用 /app/](http://127.0.0.1:8080/app/)。应用通过 HTTP 加载模块和资源。使用 `Ctrl+C` 停止服务。
-
-如果 Windows 保留了 8080 端口，可以改用 `python -m http.server 18080 --bind 127.0.0.1`，再访问 [备用端口的应用入口](http://127.0.0.1:18080/app/)。
-
-## 开发与验收
-
-```powershell
-npm test
-npm install
-npx playwright install chromium
-npm run test:qa
-```
-
-`npm test` 运行设计系统的 Node.js 测试。浏览器验收需要先安装项目依赖和 Playwright Chromium。`npm run test:all` 按顺序运行两套测试。Playwright 配置固定使用 8080 端口，必要时自行启动 Python 服务。运行前请确认该端口空闲，或正在由本项目使用。若系统保留了该端口，可在临时项目副本中将 Playwright 配置里的 8080 统一改为可用端口后运行。
-
-上游 CI 定义在本插件的 `.github/workflows/` 下。ToolOrbit 主仓库的 GitHub Actions 从自己的仓库根目录读取工作流，因此本插件的工作流需要在上游仓库运行。本地验收使用上面的命令。
-
-## 目录约定
-
-| 目录 | 职责 |
-| --- | --- |
-| `app/` | 当前应用入口、交互和模块 |
-| `design-system/` | 资源目录、注册表、设计方案、解析器和 Node.js 测试 |
-| `skills/` | Codex 工作规范、生成模板和示例 |
-| `tests/` | Playwright 浏览器验收 |
-| `prototype/` | 历史原型和阶段交付页 |
-| `docs/` | 现行需求与验收清单，`design/` 存放设计规范，`archive/` 存放阶段性资料 |
-
-需求范围更新写入 PRD，实际实现和验证证据记入清单。启动方式或目录职责变化时，同步更新本页。依赖、缓存和测试报告按项目忽略规则保留在本机。
-
-旧版原型入口、阶段记录和 V1.4 草案见 [历史资料目录](docs/archive/README.md)。
+- [网站目录](https://getdesign.md/design-md)
+- [定制请求](https://getdesign.md/request)
+- [目录通行证](https://getdesign.md/design-md-pass)
+- [Eraser 目录详情](https://getdesign.md/design-md/eraser)
+- [Lottiefiles 目录详情](https://getdesign.md/design-md/lottiefiles)
+- [Linear 公开规范](https://getdesign.md/linear.app/design-md)
+- [Linear 浅色预览](https://getdesign.md/design-md/linear.app/preview)
+- [Linear 深色预览](https://getdesign.md/design-md/linear.app/preview-dark)
+- [Zapier 公开规范](https://getdesign.md/zapier/design-md)
+- [Zapier 浅色预览](https://getdesign.md/design-md/zapier/preview)
+- [Zapier 深色预览](https://getdesign.md/design-md/zapier/preview-dark)
