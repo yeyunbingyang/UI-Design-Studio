@@ -38,7 +38,7 @@ Then read only relevant Extension files:
 - `accessibility`: `standards/extensions/accessibility.md`
 - `implementation-validation`: `standards/extensions/implementation-validation.md`
 
-Use `templates/core-9/DESIGN.md` for Core Export and `templates/extended-16/DESIGN.md` for Extended Export. For every completed package, also read and instantiate both `templates/previews/preview.html` and `templates/previews/preview-dark.html`; follow `templates/previews/README.md`.
+Use `templates/core-9/DESIGN.md` for Core Export and `templates/extended-16/DESIGN.md` for Extended Export. For every completed package, also read and instantiate `templates/previews/preview.html`, `templates/previews/preview-dark.html` and `templates/previews/application-preview.html`; follow `templates/previews/README.md`.
 
 ## Workflow
 
@@ -92,7 +92,7 @@ A completed design analysis MUST produce a small, browsable package, not only a 
 |---|---|---|
 | `DESIGN.md` | MUST | Canonical bilingual design specification (Core or Extended). |
 | `preview.html` | MUST | Self-contained light-mode interactive design-token and component catalog. |
-| `preview-dark.html` | MUST | Self-contained dark-mode equivalent using the same semantic token model. |
+| `preview-dark.html` | MUST | Self-contained dark-mode equivalent using the same semantic token model. |\n| `application-preview.html` | MUST | Standalone, responsive, product-specific application UI preview using the same design model. |
 | `README.md` | SHOULD | Package index: project/source, output mode, enabled Extensions, files, how to open previews, evidence caveats and attribution. |
 | `preview-screenshot.png` | MAY | Screenshot of the light preview, only when a browser screenshot was actually captured. |
 | `preview-dark-screenshot.png` | MAY | Screenshot of the dark preview, only when a browser screenshot was actually captured. |
@@ -100,7 +100,7 @@ A completed design analysis MUST produce a small, browsable package, not only a 
 
 ### Preview requirements / 预览要求
 
-Both HTML previews MUST:
+The two token/component previews MUST:
 - Display English and Simplified Chinese simultaneously, English first and the equivalent Chinese directly below; this is not a language toggle or separate language versions.
 - Make every human-readable preview string bilingual: title, section labels, explanatory copy, token labels, component names, buttons, form labels/placeholders/options, tabs, tooltips, empty/error/success/loading states, evidence notes, attribution and JavaScript-generated text.
 - Mark Chinese text spans with `lang="zh-Hans"`; keep the document default language English.
@@ -121,7 +121,7 @@ Both HTML previews MUST:
 
 The light and dark previews MUST use the same semantic token names and component structure. Only theme mappings and contrast-specific treatments should differ. If the source genuinely has no dark theme, create a clearly labeled **Proposed dark adaptation** rather than implying it was observed.
 
-Both HTML files MUST be validated for local opening, console/runtime errors when browser tooling is available, responsive layout, and parity with the Markdown tokens. If browser testing is unavailable, say so and do not claim it passed.
+The light and dark token/component previews MUST be validated for local opening, console/runtime errors when browser tooling is available, responsive layout, and parity with the Markdown tokens. The application preview MUST also be validated for local opening, responsive behavior, representative interactions, product-specific information architecture and consistency with the same design tokens. If browser testing is unavailable, say so and do not claim it passed.
 
 两个 HTML 预览必须能从本地直接打开，无需构建、安装依赖或联网；展示真实设计体系、Token、字体、组件、响应式和适用交互；浅色/深色保持相同语义 Token 与组件结构。来源没有深色主题时，必须标记为「建议的深色适配」，不能伪称为已观察事实。
 
