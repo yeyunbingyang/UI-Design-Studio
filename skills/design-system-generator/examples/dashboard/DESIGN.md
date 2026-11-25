@@ -3,6 +3,8 @@ specVersion: "1.0.0"
 documentType: "example"
 project: "Operations Dashboard"
 status: "illustrative-example"
+outputMode: "extended"
+enabledExtensions: ["interaction-states", "interaction-patterns", "navigation-ia", "accessibility", "implementation-validation"]
 language: "en-zh"
 ---
 
