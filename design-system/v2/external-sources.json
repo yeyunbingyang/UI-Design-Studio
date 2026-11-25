@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "External Design Sources",
+  "description": "Curated external sources for DESIGN.md discovery and import. Listing a source does not imply that every referenced asset is licensed for redistribution.",
+  "sources": [
+    {
+      "sourceId": "awesome-design-md",
+      "name": "VoltAgent Awesome DESIGN.md",
+      "kind": "awesome-index",
+      "repositoryUrl": "https://github.com/VoltAgent/awesome-design-md",
+      "homepageUrl": "https://getdesign.md/",
+      "importModes": [
+        "github-repository",
+        "github-file",
+        "manual-markdown"
+      ],
+      "documentFormat": [
+        "DESIGN.md",
+        "Markdown"
+      ],
+      "license": {
+        "repository": "MIT",
+        "individualAssets": "verify-per-item",
+        "status": "review-required"
+      },
+      "status": "discovered",
+      "notes": "Use as a discovery index. Verify each individual design document and referenced brand assets independently."
+    },
+    {
+      "sourceId": "google-stitch-design-md-format",
+      "name": "Google Stitch DESIGN.md format",
+      "kind": "format-reference",
+      "homepageUrl": "https://stitch.withgoogle.com/",
+      "importModes": [
+        "manual-markdown"
+      ],
+      "documentFormat": [
+        "DESIGN.md",
+        "Markdown"
+      ],
+      "license": {
+        "status": "review-required"
+      },
+      "status": "reference",
+      "notes": "Treat the document structure as an input convention, not as a guarantee of source asset licensing."
+    }
+  ],
+  "policy": {
+    "unknownLicense": "Do not mark as redistributable.",
+    "preserveOriginal": "Keep source URL, raw content hash, retrieval revision and attribution.",
+    "executeImportedCode": false
+  }
+}
