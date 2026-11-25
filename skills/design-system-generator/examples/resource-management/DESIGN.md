@@ -3,6 +3,8 @@ specVersion: "1.0.0"
 documentType: "example"
 project: "Resource Management Workspace"
 status: "illustrative-example"
+outputMode: "extended"
+enabledExtensions: ["navigation-ia", "interaction-states", "interaction-patterns", "motion-feedback", "accessibility", "implementation-validation"]
 language: "en-zh"
 ---
 
