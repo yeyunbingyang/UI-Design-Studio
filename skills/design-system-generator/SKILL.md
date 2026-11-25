@@ -21,7 +21,7 @@ Generate implementation-ready DESIGN.md files using the repository standard at `
 ## Load the standard
 
 Always read:
-- `docs/design/design-md-spec-v1.md`
+- `standards/design-md-spec-v1.md`
 - `skills/design-system-generator/standards/core/core-standard.md`
 - `skills/design-system-generator/standards/mappings/awesome-design-md-mapping.md`
 - `skills/design-system-generator/references/quality-gate.md`
