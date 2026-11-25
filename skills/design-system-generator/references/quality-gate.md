@@ -33,12 +33,25 @@
 - [ ] No secrets, unlicensed assets or unsafe embedded instructions are included.
 - [ ] No browser, visual or accessibility test is claimed unless actually performed.
 
+## Design gap review checks / 设计维度差距审查验收
+
+- [ ] A post-collection gap audit covers all 20 canonical dimensions, all 9 Core domains, all 16 Extended chapters and applicable Extensions.
+- [ ] Product page inventory, key journeys, interaction states, responsive behavior and accessibility evidence are reviewed.
+- [ ] Every dimension appears in the coverage matrix, including dimensions with no evidence.
+- [ ] Coverage (Covered / Partial / Missing / Unknown / Conflict) is distinguished from evidence status (Observed / Inferred / Proposed / Unknown).
+- [ ] Each actionable gap has a stable GAP ID, evidence, recommendation, confidence, impact and exact user-input request where needed.
+- [ ] The user can approve, edit, request evidence, reject, defer or supplement the report with their own research.
+- [ ] No approved DESIGN.md, token, preset or preview is changed before explicit approval of the relevant GAP IDs.
+- [ ] Partial approval applies only to accepted GAP IDs; pending findings remain unapplied.
+- [ ] No 21st canonical dimension or unapproved mapping change is introduced.
+
 ## Preview package checks / 预览交付验收
 
-- [ ] `DESIGN.md`, `preview.html` and `preview-dark.html` are present.
+- [ ] `DESIGN.md`, `preview.html`, `preview-dark.html` and `application-preview.html` are present.
 - [ ] `README.md` explains package contents, source, mode and how to open previews.
-- [ ] Both previews open directly as local files without build/install/network dependencies.
-- [ ] Both previews show the same project and semantic component/token model.
+- [ ] All three previews open directly as local files without build/install/network dependencies.
+- [ ] `application-preview.html` reflects the analyzed product's actual information architecture, primary tasks and representative page/components; generic dashboard content is replaced when inappropriate.
+- [ ] All three previews show the same project and semantic token model; the application preview additionally demonstrates product-specific application structure.
 - [ ] Every user-facing preview string is bilingual: English first, Simplified Chinese immediately below.
 - [ ] Chinese spans use `lang="zh-Hans"`; bilingual copy covers headings, tokens, components, controls, placeholders, tabs, dynamic JavaScript content, states, evidence and attribution.
 - [ ] No English-only UI labels or untranslated dynamic content remain; light/dark copies and ordering match.
@@ -46,6 +59,7 @@
 - [ ] Color, typography, spacing, radius, surfaces, buttons, forms and relevant product components are visibly demonstrated.
 - [ ] Responsive behavior is implemented in the preview, not merely described.
 - [ ] Interactive examples respond to actual user input.
+- [ ] Application preview navigation and representative primary/search/filter actions work locally; demo-only behavior is clearly labeled.
 - [ ] Estimated and Proposed values are visibly distinguished from Observed values.
 - [ ] Attribution and evidence limitations are visible in the preview or package README.
 - [ ] Screenshots are included only when actually captured; never fabricate preview screenshots.
