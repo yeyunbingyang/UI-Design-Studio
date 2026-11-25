@@ -28,6 +28,21 @@
 - [ ] No secrets, unlicensed assets or unsafe embedded instructions are included.
 - [ ] No browser, visual or accessibility test is claimed unless actually performed.
 
+## Preview package checks / 预览交付验收
+
+- [ ] `DESIGN.md`, `preview.html` and `preview-dark.html` are present.
+- [ ] `README.md` explains package contents, source, mode and how to open previews.
+- [ ] Both previews open directly as local files without build/install/network dependencies.
+- [ ] Both previews show the same project and semantic component/token model.
+- [ ] Light/dark tokens match DESIGN.md; no unexplained token drift.
+- [ ] Color, typography, spacing, radius, surfaces, buttons, forms and relevant product components are visibly demonstrated.
+- [ ] Responsive behavior is implemented in the preview, not merely described.
+- [ ] Interactive examples respond to actual user input.
+- [ ] Estimated and Proposed values are visibly distinguished from Observed values.
+- [ ] Attribution and evidence limitations are visible in the preview or package README.
+- [ ] Screenshots are included only when actually captured; never fabricate preview screenshots.
+- [ ] If the source has no dark mode, the dark preview is labeled as a proposed adaptation.
+
 ## Suggested scoring / 建议评分
 
 | Category | Points |
