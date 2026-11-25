@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ui-design-studio.local/schemas/external-design-source.schema.json",
+  "title": "External Design Source",
+  "type": "object",
+  "required": [
+    "sourceId",
+    "name",
+    "kind",
+    "status"
+  ],
+  "properties": {
+    "sourceId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "enum": [
+        "awesome-index",
+        "design-document",
+        "official-design-system",
+        "format-reference",
+        "user-upload"
+      ]
+    },
+    "repositoryUrl": {
+      "type": "string",
+      "format": "uri"
+    },
+    "documentUrl": {
+      "type": "string",
+      "format": "uri"
+    },
+    "rawUrl": {
+      "type": "string",
+      "format": "uri"
+    },
+    "homepageUrl": {
+      "type": "string",
+      "format": "uri"
+    },
+    "importModes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "github-repository",
+          "github-file",
+          "raw-url",
+          "manual-markdown",
+          "local-file"
+        ]
+      }
+    },
+    "documentFormat": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "license": {
+      "type": "object",
+      "properties": {
+        "repository": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "individualAssets": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "verified",
+            "review-required",
+            "unknown",
+            "restricted"
+          ]
+        }
+      },
+      "required": [
+        "status"
+      ],
+      "additionalProperties": true
+    },
+    "status": {
+      "enum": [
+        "discovered",
+        "fetched",
+        "parsed",
+        "mapped",
+        "review",
+        "approved",
+        "rejected",
+        "stale",
+        "reference"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}
