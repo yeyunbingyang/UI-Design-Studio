@@ -12,16 +12,17 @@ test('application shell routing and style handoff',async({page})=>{
  const p=JSON.parse(await page.locator('#native-output').inputValue()).preset;expect(p.selections.background.id).toBe('background.scanlines');
 });
 test('resource routes and mobile navigation',async({page})=>{
- await page.setViewportSize({width:375,height:900});await page.goto('/app/#foundations');
- await expect(page.locator('#main h1')).toHaveText('基础设计库');
+ await page.setViewportSize({width:375,height:900});await page.goto('/app/#color-system');
+ await expect(page.locator('#main h1')).toHaveText('色彩系统');
  await expect(page.locator('#main article').first()).toBeVisible();
- await page.locator('#menu').click();await page.locator('#nav').getByRole('link',{name:'视觉效果库'}).click();
- await expect(page.locator('#main h1')).toHaveText('视觉效果库');await expect(page.locator('#menu')).toHaveAttribute('aria-expanded','false');
+ await page.locator('#menu').click();await page.locator('#nav').getByRole('link',{name:'表面与视觉效果'}).click();
+ await expect(page.locator('#main h1')).toHaveText('表面与视觉效果');await expect(page.locator('#menu')).toHaveAttribute('aria-expanded','false');
  await page.goto('/app/#projects');await expect(page.locator('#main h1')).toHaveText('项目管理');
 });
 
 test('native composer preserves draft across routes and refresh',async({page})=>{
  await page.goto('/app/#composer');await expect(page.locator('#native-output')).toBeVisible();
+ await expect(page.locator('.native-dim-group')).toHaveCount(12);
  await page.getByLabel('资源选项',{exact:true}).selectOption('color.warm');
  await page.getByLabel('锁定当前维度').check();
  await page.locator('#nav').getByRole('link',{name:'完整风格库'}).click();
