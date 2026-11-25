@@ -47,7 +47,8 @@ Every completed analysis produces:
 - `DESIGN.md` — bilingual design specification.
 - `preview.html` — standalone light-mode interactive design-token/component preview.
 - `preview-dark.html` — standalone dark-mode preview (or clearly labeled proposed dark adaptation).
-- `README.md` — package index and usage notes.\n- `design-gap-report.md` — conditional report of missing/partial/unknown/conflicting dimensions, evidence and user decisions.
+- `README.md` — package index and usage notes.
+- `design-gap-report.md` — conditional report of missing/partial/unknown/conflicting dimensions, evidence and user decisions.
 
 Optional captured screenshots and detailed analysis notes are included only when available or useful. The HTML files must open locally without build tools or network dependencies.
 
