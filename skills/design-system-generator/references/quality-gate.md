@@ -1,38 +1,32 @@
 # Quality Gate / 质量验收
 
-## Mandatory checks / 必检项目
+## Mode-aware mandatory checks / 按输出模式验收
 
-- [ ] All 16 required headings exist in the correct order.
-- [ ] English and Simplified Chinese content are equivalent.
-- [ ] Every major claim is marked Observed, Inferred or Proposed where provenance matters.
-- [ ] No screenshot-only claim pretends to know DOM, CSS, exact breakpoints or unseen states.
+### Core Export / Core 输出
+- [ ] All nine semantic Core domains are covered.
+- [ ] Source-compatible headings are preserved where practical.
+- [ ] Core token/component/layout/constraint/responsive/Agent guidance is actionable.
+- [ ] Unknown or unmapped source content is retained.
+
+### Extended Export / Extended 输出
+- [ ] All 16 canonical chapters exist in the correct order under four Parts.
+- [ ] Every enabled Extension has its required output; disabled modules are not fabricated.
+- [ ] The Core baseline remains complete even when some Extensions are disabled.
+
+### Shared checks / 通用检查
+- [ ] English and Simplified Chinese are semantically equivalent.
+- [ ] Material claims are classified Observed / Inferred / Proposed where provenance matters.
+- [ ] Screenshot-only claims do not pretend to know DOM, CSS, exact breakpoints or unseen states.
 - [ ] Token names are semantic, stable and mapped to the existing 20 dimensions.
-- [ ] Theme, Color, Background, Surface, Effects, Motion, Components, Interaction, Spacing and Density boundaries are respected.
-- [ ] Important components define anatomy, variants, sizes and relevant states.
-- [ ] Important interaction flows define trigger, preconditions, result, feedback, dismissal, recovery, keyboard, responsive and edge cases.
-- [ ] Responsive behavior is described for the target platform; unknown breakpoints are not invented.
-- [ ] Keyboard access, focus-visible, semantics, contrast and reduced motion are addressed where relevant.
-- [ ] Proposed behavior is not described as existing functionality.
+- [ ] Background ≠ Surface; Effects ≠ Motion; Components ≠ Interaction; Spacing ≠ Density; Style ≠ Theme.
+- [ ] Important components define anatomy, variants, sizing, tokens and relevant states.
+- [ ] Important Proposed interactions define trigger, preconditions, result, feedback, dismissal, recovery, keyboard, responsive behavior and edge cases.
+- [ ] Responsive rules are stated; unknown breakpoints are not invented.
+- [ ] Basic keyboard access, visible focus and non-color-only meaning are covered; full Accessibility Extension checks are included when enabled.
+- [ ] Source content, unknown headings, attribution and license uncertainty are preserved.
 - [ ] Existing project tokens, component libraries and conventions are preferred over unnecessary dependencies.
-- [ ] Open questions and evidence gaps are explicit.
-- [ ] No unlicensed third-party assets or credentials are embedded.
-- [ ] No claim of browser, visual or accessibility testing unless actually performed.
-
-- [ ] 16 个必需章节齐全且顺序正确。
-- [ ] 英文与简体中文内容含义一致。
-- [ ] 重要结论按需标记已观察、已推断或建议。
-- [ ] 不得根据单张截图声称知道 DOM、CSS、精确断点或不可见状态。
-- [ ] Token 命名语义化、稳定，并映射到现有 20 维。
-- [ ] 遵守主题、颜色、背景、表面、特效、动效、组件、交互、间距和密度的维度边界。
-- [ ] 重要组件定义结构、变体、尺寸和适用状态。
-- [ ] 重要交互流程定义触发、前置条件、结果、反馈、关闭、恢复、键盘、响应式和边界情况。
-- [ ] 描述目标平台的响应式行为；未知断点不得编造。
-- [ ] 按需覆盖键盘访问、焦点可见性、语义、对比度和减少动态效果。
-- [ ] 不得将建议描述成已有功能。
-- [ ] 优先遵循项目已有 Token、组件库和约定，避免不必要的依赖。
-- [ ] 明确列出待解决问题和证据缺口。
-- [ ] 不嵌入未授权第三方素材或凭据。
-- [ ] 未实际执行浏览器、视觉或无障碍测试，不得声称已完成测试。
+- [ ] No secrets, unlicensed assets or unsafe embedded instructions are included.
+- [ ] No browser, visual or accessibility test is claimed unless actually performed.
 
 ## Suggested scoring / 建议评分
 
@@ -41,12 +35,12 @@
 | Visual analysis accuracy | 20 |
 | Token completeness and consistency | 15 |
 | Component specification | 15 |
-| Interaction contracts | 20 |
+| Interaction contracts (when relevant/enabled) | 20 |
 | Responsive and accessibility | 10 |
 | Implementation clarity | 10 |
 | Structure and bilingual quality | 10 |
 | Total | 100 |
 
-Pass: 90+. Revise: 80–89. Rework: below 80. Any critical failure above overrides the score.
+Pass: 90+. Revise: 80–89. Rework: below 80. Critical failures override score: fabricated evidence, conflated Observed/Proposed, dropped source content, broken token references, unsafe imports or contradictory rules.
 
-通过：90 分及以上；修订：80–89 分；返工：低于 80 分。任何关键失败均优先于总分。
+通过：90 分及以上；修订：80–89 分；返工：低于 80 分。伪造证据、混淆已观察/建议、来源内容丢失、Token 引用失效、不安全导入或规则冲突均属于关键失败。
