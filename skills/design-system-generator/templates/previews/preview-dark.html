@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Standalone light-mode design token and component preview / 独立浅色设计 Token 与组件预览。">
+<meta name="description" content="Standalone dark-mode design token and component preview / 独立深色设计 Token 与组件预览。">
 <title>{{PROJECT_NAME}} — Design Preview / 设计预览 (Dark / 深色)</title>
 <style>
 /* Replace these illustrative defaults with tokens from DESIGN.md. */
@@ -29,7 +29,7 @@ a{color:inherit}.wrap{max-width:1120px;margin:auto;padding:28px 24px 80px}.top{d
 <section class="section"><div class="eyebrow">05 · Product pattern / 产品模式 / 产品模式</div><h2>Representative product composition <span class="zh">产品界面示例</span></h2><div class="columns"><article class="card"><span class="pill">Sample metric / 示例指标 / 示例指标</span><p class="muted" style="margin:16px 0 4px">Active users / 活跃用户 / 活跃用户</p><div style="font-size:38px;font-weight:650">24,892</div><p class="muted">+12.8% vs previous period / 较上一周期增长 12.8% / 较上一周期增长 12.8%</p></article><article class="card"><span class="pill">Sample report / 示例报告 / 示例报告</span><h3 style="margin-top:16px">Weekly performance / 每周表现 / 每周表现</h3><p class="muted">A representative data visualization placeholder. Replace with the product's actual chart pattern.<span class="zh" lang="zh-Hans">此处为数据可视化占位示例，请替换为目标产品的实际图表模式。</span><span class="zh">此处为数据可视化占位示例，请替换为目标产品的实际图表模式。</span></p><div style="height:64px;display:flex;align-items:end;gap:7px"><i style="height:35%;background:var(--color-accent);flex:1;border-radius:5px"></i><i style="height:62%;background:var(--color-accent);flex:1;border-radius:5px"></i><i style="height:50%;background:var(--color-accent);flex:1;border-radius:5px"></i><i style="height:85%;background:var(--color-primary);flex:1;border-radius:5px"></i><i style="height:70%;background:var(--color-accent);flex:1;border-radius:5px"></i><i style="height:100%;background:var(--color-primary);flex:1;border-radius:5px"></i></div></article></div></section>
 <footer class="foot">{{EVIDENCE_NOTE_EN}}<span class="zh">{{EVIDENCE_NOTE_ZH}}</span><br>{{SOURCE_ATTRIBUTION_EN}}<span class="zh">{{SOURCE_ATTRIBUTION_ZH}}</span></footer></main>
 <script>
-const tokens=[["Canvas","--color-canvas"],["Text","--color-text-primary"],["Secondary<span class="zh" lang="zh-Hans">次要操作</span> / 次要操作 text","--color-text-secondary"],["Surface","--color-surface"],["Raised surface","--color-surface-raised"],["Border","--color-border"],["Primary action<span class="zh" lang="zh-Hans">主要操作</span> / 主要操作","--color-primary"],["Accent","--color-accent"]];
+const tokens=[["Canvas / 画布","--color-canvas"],["Text / 文字","--color-text-primary"],["Secondary text / 次级文字","--color-text-secondary"],["Surface / 表面","--color-surface"],["Raised surface / 抬升表面","--color-surface-raised"],["Border / 边框","--color-border"],["Primary action / 主要操作","--color-primary"],["Accent / 强调色","--color-accent"]];
 const css=getComputedStyle(document.documentElement);document.getElementById("palette").innerHTML=tokens.map(([name,key])=>{const value=css.getPropertyValue(key).trim();return '<div class="swatch"><div class="swatch-color" style="--swatch:'+value+'"></div><div class="meta"><strong>'+name+'</strong><br><span class="muted">'+value+'</span></div></div>'}).join("");
 document.querySelectorAll("[data-tab]").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll("[data-tab]").forEach(b=>b.setAttribute("aria-selected",String(b===btn)));document.getElementById("tab-panel").textContent=({overview:"Overview / 概览内容 — replace with a representative product component. / 请替换为目标产品的代表性组件。",activity:"Activity / 活动内容 — replace with the product's activity component. / 请替换为产品的活动组件。",settings:"Settings / 设置内容 — replace with the product's settings component. / 请替换为产品的设置组件。"})[btn.dataset.tab]}));
 </script></body></html>
