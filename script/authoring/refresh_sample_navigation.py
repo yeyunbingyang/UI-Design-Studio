@@ -8,7 +8,7 @@ import re
 from bs4 import BeautifulSoup
 
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]
 ARCHIVE = ROOT / "research" / "getdesign-home"
 LOCALIZED = ROOT / "localized"
 CHROME = Path(r"C:\Program Files\Google\Chrome\Application\chrome.exe")

@@ -17,7 +17,7 @@ from preview_copy import PreviewEditor, remove_team_credit
 from sample_editorial import DARK_LEADS, DEMO_SPECS, LEADS, SAMPLE_FIT_CSS
 
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]
 ARCHIVE = ROOT / "research" / "getdesign-home"
 LOCALIZED = ROOT / "localized"
 INDEX = ARCHIVE / "index.json"
