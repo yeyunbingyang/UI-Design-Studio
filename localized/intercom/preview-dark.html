@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>暖白底与 Fin 橙</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --primary: #111111;
+    --on-primary: #ffffff;
+    --ink: #ffffff;
+    --ink-muted: #c6c6c6;
+    --ink-subtle: #9c9fa5;
+    --canvas: #1a1816;
+    --surface-1: #2a2724;
+    --surface-2: #25221f;
+    --inverse-canvas: #f5f1ec;
+    --inverse-ink: #111111;
+    --hairline: #3a3733;
+    --hairline-soft: #2a2724;
+    --fin-orange: #ff5600;
+    --report-blue: #65b5ff;
+    --report-green: #0bdf50;
+    --report-pink: #ff2067;
+    --report-lime: #b3e01c;
+    --report-cyan: #03b2cb;
+    --semantic-error: #c41c1c;
+    --sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: var(--sans); font-weight: 400; font-size: 16px; line-height: 1.50; color: var(--ink); background: var(--canvas); -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+
+  .nav { position: sticky; top: 0; z-index: 50; background: var(--canvas); border-bottom: 1px solid var(--hairline-soft); height: 56px; padding: 0 32px; }
+  .nav-links { list-style: none; margin: 0; padding: 0; display: flex; gap: 24px; font-size: 14px; font-weight: 500; }
+  .nav-links a { text-decoration: none; }
+  .nav-cta { background: var(--ink); color: var(--on-primary); border: none; border-radius: 8px; padding: 10px 18px; font-family: var(--sans); font-size: 15px; font-weight: 500; cursor: pointer; height: 40px; }
+
+  .hero { padding: 96px 32px; background: var(--canvas); display: block; max-width: 1280px; margin: 0 auto; }
+  .hero-content { max-width: 1100px; }
+  .hero h1 { font-family: var(--sans); font-size: 72px; font-weight: 500; line-height: 1.05; color: var(--ink); margin: 0 0 32px; letter-spacing: -2.0px; text-align: left; }
+  .hero p { font-size: 18px; font-weight: 400; color: var(--ink-muted); max-width: 720px; margin: 0 0 40px; line-height: 1.50; letter-spacing: -0.1px; text-align: left; }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-start; }
+  .btn { border-radius: 8px; padding: 10px 18px; font-family: var(--sans); font-size: 15px; font-weight: 500; line-height: 1.20; border: none; cursor: pointer; height: 44px; display: inline-flex; align-items: center; }
+  .btn-primary { background: var(--ink); color: var(--on-primary); }
+  .btn-secondary { background: var(--surface-1); color: var(--ink); border: 1px solid var(--hairline); }
+  .btn-fin { background: var(--fin-orange); color: var(--on-primary); }
+
+  section { padding: 96px 32px; max-width: 1280px; margin: 0 auto; }
+  .section-eyebrow { font-family: var(--sans); font-size: 14px; color: var(--ink-muted); margin-bottom: 16px; font-weight: 500; }
+  .section-heading { font-family: var(--sans); font-size: 56px; font-weight: 500; letter-spacing: -1.4px; line-height: 1.10; color: var(--ink); margin: 0 0 32px; }
+
+  .palette-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px; }
+  .swatch { border: 1px solid var(--hairline); border-radius: 12px; overflow: hidden; background: var(--surface-1); }
+  .swatch-color { height: 120px; }
+  .swatch-info { padding: 16px; }
+  .swatch-name { font-size: 16px; font-weight: 500; margin-bottom: 4px; color: var(--ink); }
+  .swatch-hex { font-family: var(--mono); font-size: 12px; color: var(--ink-muted); margin-bottom: 8px; }
+  .swatch-role { font-size: 13px; line-height: 1.5; color: var(--ink-muted); }
+  .palette-group-heading { font-family: var(--sans); font-size: 14px; margin: 32px 0 16px; color: var(--ink-muted); font-weight: 500; }
+  .palette-group-heading:first-of-type { margin-top: 0; }
+
+  .type-row { display: grid; grid-template-columns: 280px 1fr; gap: 32px; padding: 28px 0; border-bottom: 1px solid var(--hairline-soft); align-items: baseline; }
+  .type-meta { font-family: var(--mono); font-size: 12px; color: var(--ink-muted); line-height: 1.6; }
+  .type-meta strong { font-family: var(--sans); font-weight: 500; color: var(--ink); display: block; margin-bottom: 4px; }
+  .type-sample { color: var(--ink); }
+
+  .button-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+  .button-cell { border: 1px solid var(--hairline); border-radius: 12px; padding: 24px; background: var(--surface-1); display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
+  .button-label { font-family: var(--mono); font-size: 11px; color: var(--ink-muted); }
+  .b-btn { border-radius: 8px; padding: 10px 18px; font-family: var(--sans); font-size: 15px; font-weight: 500; line-height: 1.20; border: none; cursor: pointer; height: 44px; display: inline-flex; align-items: center; }
+  .b-primary { background: var(--ink); color: var(--on-primary); }
+  .b-secondary { background: var(--surface-1); color: var(--ink); border: 1px solid var(--hairline); }
+  .b-tertiary { background: transparent; color: var(--ink); }
+  .b-fin { background: var(--fin-orange); color: var(--on-primary); }
+  .b-tab-default { background: transparent; color: var(--ink-muted); padding: 8px 16px; border-radius: 9999px; }
+  .b-tab-selected { background: var(--surface-1); color: var(--ink); padding: 8px 16px; border-radius: 9999px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+  .pricing-card { background: var(--surface-1); border: 1px solid var(--hairline); border-radius: 12px; padding: 24px; }
+  .pricing-card-featured { background: #ffffff; color: #111111; border-radius: 12px; padding: 24px; }
+  .pricing-card-tier { font-size: 28px; font-weight: 500; margin: 0 0 8px; letter-spacing: -0.5px; }
+  .pricing-card-price { font-size: 40px; font-weight: 500; letter-spacing: -1.0px; margin: 0 0 16px; }
+  .pricing-card-list { list-style: none; padding: 0; margin: 0 0 24px; font-size: 14px; line-height: 1.5; }
+  .pricing-card-list li::before { content: "✓"; margin-right: 8px; font-weight: 700; }
+  .pricing-card .pricing-card-list li::before { color: var(--ink); }
+  .pricing-card-featured .pricing-card-list li::before { color: var(--fin-orange); }
+  .feature-card { background: var(--surface-1); border: 1px solid var(--hairline); border-radius: 12px; padding: 24px; }
+  .product-mockup-card { background: var(--surface-1); border: 1px solid var(--hairline); border-radius: 16px; padding: 24px; }
+  .product-mockup-frame { background: var(--canvas); border-radius: 8px; height: 200px; display: flex; align-items: center; justify-content: center; color: var(--ink-subtle); font-family: var(--mono); font-size: 12px; margin-bottom: 16px; }
+  .testimonial-card { background: var(--surface-1); border: 1px solid var(--hairline); border-radius: 12px; padding: 32px; font-size: 18px; line-height: 1.5; }
+  .startup-card { background: var(--surface-2); border-radius: 12px; padding: 32px; }
+  .customer-tile { background: var(--canvas); border: 1px solid var(--hairline-soft); border-radius: 4px; padding: 24px; height: 80px; display: flex; align-items: center; justify-content: center; color: var(--ink-muted); font-weight: 500; font-size: 14px; }
+  .cta-banner { background: var(--surface-1); border: 1px solid var(--hairline); border-radius: 12px; padding: 48px; }
+  .cta-banner h3 { font-size: 28px; font-weight: 500; margin: 0 0 16px; letter-spacing: -0.5px; }
+
+  .form-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+  .form-field { display: flex; flex-direction: column; gap: 6px; }
+  .form-label { font-family: var(--mono); font-size: 11px; color: var(--ink-muted); }
+  .form-input { background: var(--surface-1); color: var(--ink); border: 1px solid var(--hairline); border-radius: 8px; padding: 10px 14px; font-family: var(--sans); font-size: 16px; }
+  .form-input::placeholder { color: var(--ink-subtle); }
+  .form-input.focused { border-color: var(--ink); outline: none; }
+  textarea.form-input { resize: vertical; min-height: 96px; }
+
+  .faq-row { background: var(--canvas); border-bottom: 1px solid var(--hairline-soft); border-radius: 0; padding: 24px 0; font-size: 16px; }
+  .faq-row strong { font-weight: 500; }
+
+  .quote-strip { background: var(--inverse-canvas); color: var(--inverse-ink); border-radius: 12px; padding: 48px; font-size: 22px; font-weight: 500; line-height: 1.30; letter-spacing: -0.3px; max-width: 720px; margin: 0 auto; }
+  .quote-meta { font-size: 14px; opacity: 0.6; margin-top: 16px; font-weight: 400; }
+
+  .spacing-row { display: flex; gap: 24px; align-items: flex-end; flex-wrap: wrap; }
+  .spacing-cell { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+  .spacing-bar { background: var(--ink); height: 24px; border-radius: 2px; }
+  .spacing-meta { font-family: var(--mono); font-size: 11px; color: var(--ink-muted); }
+
+  .radius-row { display: flex; gap: 24px; flex-wrap: wrap; }
+  .radius-cell { display: flex; flex-direction: column; gap: 12px; align-items: center; }
+  .radius-box { width: 96px; height: 96px; background: var(--surface-1); border: 1px solid var(--hairline); }
+  .radius-meta { font-family: var(--mono); font-size: 11px; color: var(--ink-muted); text-align: center; }
+
+  .elevation-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px; background: var(--canvas); border-radius: 12px; padding: 48px; }
+  .elev-card { border-radius: 12px; padding: 32px; height: 140px; display: flex; align-items: flex-end; font-family: var(--mono); font-size: 11px; }
+  .elev-0 { background: var(--canvas); color: var(--ink-muted); }
+  .elev-1 { background: var(--surface-1); border: 1px solid var(--hairline); color: var(--ink-muted); }
+  .elev-2 { background: var(--surface-1); border: 1px solid var(--hairline); box-shadow: 0 2px 8px rgba(0,0,0,0.04); color: var(--ink-muted); }
+  .elev-3 { background: var(--inverse-canvas); color: var(--inverse-ink); }
+
+  .responsive-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 32px; color: var(--ink-muted); }
+  .responsive-table th, .responsive-table td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--hairline-soft); }
+  .responsive-table th { font-family: var(--mono); font-size: 11px; color: var(--ink-muted); font-weight: 400; }
+  .device-ladder { display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap; margin-bottom: 32px; }
+  .device-cell { border: 1px solid var(--hairline); border-radius: 4px; background: var(--surface-1); display: flex; align-items: flex-end; padding: 12px; font-family: var(--mono); font-size: 10px; color: var(--ink-muted); }
+
+  .footer { padding: 64px 32px; text-align: center; font-family: var(--sans); font-size: 12px; color: var(--ink-muted); border-top: 1px solid var(--hairline-soft); }
+
+  .cell, .cell > *, .button-cell { min-width: 0; }
+  .button-cell.wide { grid-column: span 2; }
+
+  @media (max-width: 1024px) {
+    .nav { padding: 0 24px; }
+    section { padding: 64px 24px; }
+    .hero { padding: 64px 24px; }
+    .hero h1 { font-size: 52px; letter-spacing: -1.4px; }
+    .section-heading { font-size: 40px; letter-spacing: -1.0px; }
+    .nav > :last-child { display: none; }
+    .type-row { grid-template-columns: 1fr; gap: 8px; }
+  }
+  @media (max-width: 720px) {
+    .button-cell.wide { grid-column: span 1; }
+    .nav { padding: 12px 20px; height: auto; min-height: 56px; }
+    .nav-links { display: none; }
+    .hero { padding: 48px 20px; }
+    .hero h1 { font-size: 36px; letter-spacing: -0.8px; }
+    .hero p { font-size: 16px; }
+    section { padding: 48px 20px; }
+    .section-heading { font-size: 28px; letter-spacing: -0.6px; }
+    .palette-grid, .button-grid, .card-grid, .form-grid, .elevation-grid { grid-template-columns: 1fr !important; gap: 16px; }
+    .footer { padding: 24px 16px; font-size: 11px; }
+  }
+
+  /* getdesign.md nav additions */
+  .nav-left { display: flex; align-items: center; gap: 20px; }
+  .nav-brand-link, .nav-brand-link:link, .nav-brand-link:visited, .nav-brand-link:hover, .nav-brand-link:active { text-decoration: none; color: inherit; }
+  .nav-github, .nav-github:link, .nav-github:visited, .nav-github:hover, .nav-github:active { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: inherit; text-decoration: none; padding: 5px 10px; border: 1px solid rgba(128, 128, 128, 0.3); border-radius: 6px; opacity: 0.75; transition: opacity 200ms ease, border-color 200ms ease; font-family: inherit; line-height: 1; white-space: nowrap; }
+  .nav-github:hover { opacity: 1; border-color: rgba(128, 128, 128, 0.55); }
+  .nav-github svg { display: block; flex-shrink: 0; }
+  /* getdesign.md nav centering */
+  .nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+  .nav > .nav-left { justify-self: start; }
+  .nav > .nav-links { justify-self: center; }
+  .nav > :last-child { justify-self: end; }
+
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+<div class="hero-content">
+<h1>暖白底与 Fin 橙</h1>
+<p>暖白色页面以 Fin 橙作重点，突出客户支持与客服助手。</p>
+<div class="hero-actions">
+<button class="btn btn-primary">注册</button>
+<button class="btn btn-secondary">查看定价</button>
+<button class="btn btn-fin">和芬仔谈谈</button>
+</div>
+</div>
+</header>
+<section id="palette">
+<div class="section-eyebrow">01 — 彩色调色板</div>
+<h2 class="section-heading">调色板</h2>
+<div class="palette-group-heading">品牌色与强调色</div>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#111111"></div><div class="swatch-info"><div class="swatch-name">炭灰色(初级)</div><div class="swatch-hex">#111111</div><div class="swatch-role">系统主页——头条,车体类型,行动按钮 胶囊形背景.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#ff5600"></div><div class="swatch-info"><div class="swatch-name">芬奥兰治</div><div class="swatch-hex">#ff5600</div><div class="swatch-role">AI产品强调色. 芬行动按钮,仅限芬徽.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#0007cb"></div><div class="swatch-info"><div class="swatch-name">蓝蓝</div><div class="swatch-hex">#0007cb</div><div class="swatch-role">饱和品牌蓝——小套营销插图.</div></div></div>
+</div>
+<div class="palette-group-heading">界面表面</div>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#f5f1ec"></div><div class="swatch-info"><div class="swatch-name">风帆(尖叫)</div><div class="swatch-hex">#f5f1ec</div><div class="swatch-role">默认的页面背景——软奶油-白色,刻意温暖.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#ffffff;border:1px solid var(--hairline)"></div><div class="swatch-info"><div class="swatch-name">Surface 1</div><div class="swatch-hex">#ffffff</div><div class="swatch-role">纯白色——浮式卡片(定价,特征,模拟).</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#ebe7e1"></div><div class="swatch-info"><div class="swatch-name">Surface 2</div><div class="swatch-hex">#ebe7e1</div><div class="swatch-role">稍暗的米白色——启动折扣旗,alt排.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#d3cec6"></div><div class="swatch-info"><div class="swatch-name">细边框</div><div class="swatch-hex">#d3cec6</div><div class="swatch-role">1px与卡片接壤——软暖灰色.（原文参数：1px）</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#000000"></div><div class="swatch-info"><div class="swatch-name">反向画廊</div><div class="swatch-hex">#000000</div><div class="swatch-role">纯黑色——只出现在证监/引文征集.</div></div></div>
+</div>
+<div class="palette-group-heading">文字色</div>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#111111"></div><div class="swatch-info"><div class="swatch-name">文字色</div><div class="swatch-hex">#111111</div><div class="swatch-role">头条,车体类型,按钮标签.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#626260"></div><div class="swatch-info"><div class="swatch-name">弱化文字色</div><div class="swatch-hex">#626260</div><div class="swatch-role">次要类型——meta信息,取消选价标签.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#7b7b78"></div><div class="swatch-info"><div class="swatch-name">弱化文字色</div><div class="swatch-hex">#7b7b78</div><div class="swatch-role">第三级类型——页脚列,辅助说明.</div></div></div>
+</div>
+<div class="palette-group-heading">报告调色板(产品模型)</div>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#65b5ff"></div><div class="swatch-info"><div class="swatch-name">蓝色报告</div><div class="swatch-hex">#65b5ff</div><div class="swatch-role">分析图蓝.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#0bdf50"></div><div class="swatch-info"><div class="swatch-name">绿色报告</div><div class="swatch-hex">#0bdf50</div><div class="swatch-role">分析图绿色/成功.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#ff2067"></div><div class="swatch-info"><div class="swatch-name">报告粉红色</div><div class="swatch-hex">#ff2067</div><div class="swatch-role">分析图粉红色。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#b3e01c"></div><div class="swatch-info"><div class="swatch-name">报告林姆</div><div class="swatch-hex">#b3e01c</div><div class="swatch-role">分析图石灰.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#03b2cb"></div><div class="swatch-info"><div class="swatch-name">报告青色</div><div class="swatch-hex">#03b2cb</div><div class="swatch-role">分析图青色.</div></div></div>
+</div>
+</section>
+<section id="typography" style="background: var(--surface-2);">
+<div class="section-eyebrow">02 ——字型缩放</div>
+<h2 class="section-heading">字体排版</h2>
+<div class="type-row"><div class="type-meta"><strong>display-xl</strong>72px · 500 · 1.05 · -2.0px · Saans</div><div class="type-sample" style="font-size:64px;font-weight:500;line-height:1.05;letter-spacing:-2.0px">唯一为AI设计的服务台</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-lg</strong>56px · 500 · 1.10 · -1.4px</div><div class="type-sample" style="font-size:52px;font-weight:500;line-height:1.10;letter-spacing:-1.4px">获取 Fin 和 Intercom 的平台</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-md</strong>40px · 500 · 1.15 · -0.8px</div><div class="type-sample" style="font-size:40px;font-weight:500;line-height:1.15;letter-spacing:-0.8px">加号</div></div>
+<div class="type-row"><div class="type-meta"><strong>标题</strong>28px · 500 · 1.20 · -0.5px</div><div class="type-sample" style="font-size:28px;font-weight:500;line-height:1.20;letter-spacing:-0.5px">套餐层级标题</div></div>
+<div class="type-row"><div class="type-meta"><strong>card-title</strong>22px · 500 · 1.25 · -0.3px</div><div class="type-sample" style="font-size:22px;font-weight:500;line-height:1.25;letter-spacing:-0.3px">功能卡片 标题</div></div>
+<div class="type-row"><div class="type-meta"><strong>子标题</strong>20px · 400 · 1.40 · -0.2px</div><div class="type-sample" style="font-size:20px;font-weight:400;line-height:1.40;letter-spacing:-0.2px">牵头机构,介绍段落</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-lg</strong>18px · 400 · 1.50 · -0.1px</div><div class="type-sample" style="font-size:18px;font-weight:400;line-height:1.50;letter-spacing:-0.1px">首屏小标题和领头段落。</div></div>
+<div class="type-row"><div class="type-meta"><strong>正文</strong>16px · 400 · 1.50</div><div class="type-sample" style="font-size:16px;font-weight:400;line-height:1.50">Default body — Saans at weight 400 reads as quietly editorial.</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-sm</strong>14px · 400 · 1.50</div><div class="type-sample" style="font-size:14px;font-weight:400;line-height:1.50">卡片体,脚列.</div></div>
+<div class="type-row"><div class="type-meta"><strong>标题</strong>12px · 400 · 1.40</div><div class="type-sample" style="font-size:12px;font-weight:400;line-height:1.40">说明和meta</div></div>
+<div class="type-row"><div class="type-meta"><strong>按钮</strong>15px · 500 · 1.20</div><div class="type-sample" style="font-size:15px;font-weight:500;line-height:1.20">注册</div></div>
+<div class="type-row"><div class="type-meta"><strong>单</strong>13px · 400 · 1.50 · SaansMono</div><div class="type-sample" style="font-family:var(--mono);font-size:13px;font-weight:400;line-height:1.50">const fin = 新Intercom.Fin();</div></div>
+</section>
+<section id="components">
+<div class="section-eyebrow">03  —按钮变体</div>
+<h2 class="section-heading">按钮</h2>
+<div class="button-grid">
+<div class="button-cell"><span class="button-label">button-primary</span><button class="b-btn b-primary">注册</button></div>
+<div class="button-cell"><span class="button-label">button-primary-pressed</span><button class="b-btn b-primary" style="background:var(--inverse-canvas)">注册</button></div>
+<div class="button-cell"><span class="button-label">button-secondary</span><button class="b-btn b-secondary">查看定价</button></div>
+<div class="button-cell"><span class="button-label">button-tertiary</span><button class="b-btn b-tertiary">读取文件→</button></div>
+<div class="button-cell"><span class="button-label">button-fin</span><button class="b-btn b-fin">和芬仔谈谈</button></div>
+<div class="button-cell wide"><span class="button-label">pricing-tab-default + pricing-tab-selected</span>
+<div style="display:flex;gap:4px;background:var(--canvas);border-radius:9999px;padding:4px;border:1px solid var(--hairline)">
+<button class="b-btn b-tab-default">基本内容</button>
+<button class="b-btn b-tab-selected">高级</button>
+<button class="b-btn b-tab-default">专家</button>
+</div>
+</div>
+</div>
+</section>
+<section id="cards" style="background: var(--surface-2);">
+<div class="section-eyebrow">04 — Cards &amp; Containers</div>
+<h2 class="section-heading">卡片</h2>
+<div class="card-grid">
+<div class="pricing-card"><div class="button-label" style="margin-bottom:12px">pricing-card 基本情况</div><div class="pricing-card-tier">基本内容</div><div class="pricing-card-price">二十美元</div><ul class="pricing-card-list"><li>收件箱</li><li>帮助中心</li><li>报告</li></ul><button class="b-btn b-primary">买吧</button></div>
+<div class="pricing-card-featured"><div class="button-label" style="margin-bottom:12px;color:rgba(255,255,255,0.7)">pricing-card-featured 高级</div><div class="pricing-card-tier">高级</div><div class="pricing-card-price">二十美元</div><ul class="pricing-card-list"><li>多品牌支持</li><li>工作流量</li><li>自定义角色</li></ul><button class="b-btn b-fin">买吧</button></div>
+<div class="pricing-card"><div class="button-label" style="margin-bottom:12px">pricing-card 专家</div><div class="pricing-card-tier">专家</div><div class="pricing-card-price">二十美元</div><ul class="pricing-card-list"><li>SSO 和 SAML 软件</li><li>审计记录</li><li>苏丹解放军管理</li></ul><button class="b-btn b-primary">买吧</button></div>
+<div class="feature-card"><div class="button-label" style="margin-bottom:12px">feature-card</div><div style="font-size:22px;font-weight:500;letter-spacing:-0.3px;margin-bottom:8px">一般功能卡片 数据</div><p style="font-size:14px;color:var(--ink-muted);margin:0">当该节是特征而不是定价层次时使用.</p></div>
+<div class="product-mockup-card"><div class="button-label" style="margin-bottom:12px">product-mockup-card</div><div class="product-mockup-frame">// 产品 UI 模拟框架</div></div>
+</div>
+<div style="margin-top:48px;display:grid;grid-template-columns:2fr 1fr;gap:24px">
+<div class="testimonial-card"><div class="button-label" style="margin-bottom:12px">testimonial-card</div><blockquote style="margin:0;font-style:normal">"Within six days, Fin is successfully resolving 42% of conversations. It's truly surpassed my expectations."</blockquote><div style="margin-top:16px;font-size:13px;color:var(--ink-muted)">——客户,少指</div></div>
+<div class="startup-card"><div class="button-label" style="margin-bottom:12px">startup-discount-card</div><div style="font-size:22px;font-weight:500;letter-spacing:-0.3px;margin-bottom:8px">Startups get 90% off</div><p style="font-size:14px;color:var(--ink-muted);margin:0 0 16px">获得与你业务一起成长的AI-第一客户服务平台.</p><button class="b-btn b-primary">了解更多</button></div>
+</div>
+<div style="margin-top:48px;display:grid;grid-template-columns:repeat(auto-fill, minmax(180px, 1fr));gap:1px;background:var(--hairline-soft)">
+<div class="customer-tile">经验教训</div>
+<div class="customer-tile">船队</div>
+<div class="customer-tile">空间</div>
+<div class="customer-tile">连环杀手</div>
+<div class="customer-tile">乌 迪 尔</div>
+<div class="customer-tile">阿曼</div>
+</div>
+<div style="margin-top:48px">
+<div class="cta-banner">
+<div class="button-label" style="margin-bottom:12px">cta-banner</div>
+<h3>由Intercom提供动力的完美客户体验</h3>
+<p style="color:var(--ink-muted);margin:0 0 24px">开始AI-First客户服务平台.</p>
+<button class="b-btn b-primary">开始免费审判</button>
+</div>
+</div>
+</section>
+<section>
+<div class="section-eyebrow">05 ——引文/反面条形</div>
+<h2 class="section-heading">引文转写</h2>
+<div class="quote-strip">
+    "Within six days, Fin is successfully resolving 42% of conversations. It's truly surpassed my expectations."
+    <div class="quote-meta">——页面最深的暗面;仅用于证照点播.</div>
+</div>
+</section>
+<section style="background: var(--surface-2);">
+<div class="section-eyebrow">06 - 形式要素</div>
+<h2 class="section-heading">表单</h2>
+<div class="form-grid">
+<div class="form-field"><label class="form-label">text-input − 默认</label><input class="form-input" placeholder="工作邮箱" type="email"/></div>
+<div class="form-field"><label class="form-label">text-input 重点</label><input class="form-input focused" type="text" value="Jane Doe"/></div>
+<div class="form-field"><label class="form-label">text-input 已停用</label><input class="form-input" disabled="" style="opacity:0.5" type="text" value="—"/></div>
+<div class="form-field" style="grid-column:span 2;min-width:0"><label class="form-label">文本区域</label><textarea class="form-input" placeholder="我们能怎样帮助?"></textarea></div>
+<div class="form-field"><button class="b-btn b-primary">提交</button></div>
+</div>
+</section>
+<section>
+<div class="section-eyebrow">07 - 财务问题</div>
+<h2 class="section-heading">财务问题</h2>
+<div class="faq-row"><strong>Intercom定价如何运作?.</strong></div>
+<div class="faq-row"><strong>买下Intercom就可以买到芬?</strong></div>
+<div class="faq-row"><strong>我的数据安全吗?</strong></div>
+<div class="faq-row"><strong>我可以定制Fin吗?</strong></div>
+</section>
+<section style="background: var(--surface-2);">
+<div class="section-eyebrow">08 —— 间距和半径</div>
+<h2 class="section-heading">间距</h2>
+<div class="spacing-row">
+<div class="spacing-cell"><div class="spacing-bar" style="width:4px"></div><div class="spacing-meta">xxx 4px 数据</div></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:8px"></div><div class="spacing-meta">xs 8px 数据</div></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:12px"></div><div class="spacing-meta">sm 12px 数据</div></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:16px"></div><div class="spacing-meta">md 16px 数据</div></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:24px"></div><div class="spacing-meta">24px 高压压压轴</div></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:32px"></div><div class="spacing-meta">□ 32px</div></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:48px"></div><div class="spacing-meta">xxl 48px 数据</div></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:96px"></div><div class="spacing-meta">· 96px</div></div>
+</div>
+<h3 style="font-size:28px;font-weight:500;letter-spacing:-0.5px;margin:48px 0 24px">半径</h3>
+<div class="radius-row">
+<div class="radius-cell"><div class="radius-box" style="border-radius:4px"></div><div class="radius-meta">xs 4px 数据</div></div>
+<div class="radius-cell"><div class="radius-box" style="border-radius:6px"></div><div class="radius-meta">sm 6px 数据</div></div>
+<div class="radius-cell"><div class="radius-box" style="border-radius:8px"></div><div class="radius-meta">md 8px 数据</div></div>
+<div class="radius-cell"><div class="radius-box" style="border-radius:12px"></div><div class="radius-meta">12px 高压压压轴</div></div>
+<div class="radius-cell"><div class="radius-box" style="border-radius:16px"></div><div class="radius-meta">□ 16px</div></div>
+<div class="radius-cell"><div class="radius-box" style="border-radius:24px"></div><div class="radius-meta">xxl 24px 数据</div></div>
+<div class="radius-cell"><div class="radius-box" style="border-radius:9999px;width:96px"></div><div class="radius-meta">胶囊形 9999</div></div>
+</div>
+</section>
+<section>
+<div class="section-eyebrow">09 高度和深度</div>
+<h2 class="section-heading">升迁</h2>
+<div class="elevation-grid">
+<div class="elev-card elev-0">Level 0 — flat</div>
+<div class="elev-card elev-1">Level 1 — lift on cream</div>
+<div class="elev-card elev-2">Level 2 — hairline + soft shadow</div>
+<div class="elev-card elev-3">职等 3 - 深重音( 深重音)</div>
+</div>
+</section>
+<section style="background: var(--surface-2);">
+<div class="section-eyebrow">10 反应行为</div>
+<h2 class="section-heading">反应</h2>
+<table class="responsive-table">
+<thead><tr><th>名称</th><th>宽度</th><th>密钥更改</th></tr></thead>
+<tbody>
+<tr><td>桌面 XL 软件</td><td>1440px</td><td>默认桌面布局</td></tr>
+<tr><td>桌面端</td><td>1280px</td><td>卡片保持三列</td></tr>
+<tr><td>平板</td><td>1024px</td><td>卡片从三列改为两列</td></tr>
+<tr><td>移动升</td><td>768px</td><td>定价比较变成手风琴;导航汉堡</td></tr>
+<tr><td>手机端</td><td>480px</td><td>单栏; display-xl 比额表 72px → ~32px</td></tr>
+</tbody>
+</table>
+<div class="device-ladder">
+<div class="device-cell" style="width:60px;height:120px">375</div>
+<div class="device-cell" style="width:130px;height:170px">768</div>
+<div class="device-cell" style="width:170px;height:200px">1024</div>
+<div class="device-cell" style="width:220px;height:230px">1280</div>
+<div class="device-cell" style="width:280px;height:260px">1440</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:32px">
+<div>
+<div class="button-label" style="margin-bottom:12px">触控区域</div>
+<ul style="font-size:15px;line-height:1.6;padding-left:20px;margin:0;color:var(--ink-muted)">
+<li>CTAs hold ≥40px tap height across viewports.</li>
+<li>Pricing tab pills hold ≥40px tap height.</li>
+<li>Form inputs hold ≥44px tap target on touch.</li>
+</ul>
+</div>
+<div>
+<div class="button-label" style="margin-bottom:12px">窄屏布局调整</div>
+<ul style="font-size:15px;line-height:1.6;padding-left:20px;margin:0;color:var(--ink-muted)">
+<li>顶级导航:连接到768px以下的汉堡.（原文参数：768px）</li>
+<li>Card grids: 3-up → 2-up at 1024px → 1-up below 768px.</li>
+<li>定价比较:768px以下的每级手风琴.（原文参数：768px）</li>
+<li>显示类型比例尺 72px → 40px,同时保留负跟踪.</li>
+</ul>
+</div>
+</div>
+</section>
+<footer class="footer">
+<div class="footer-shell">
+<div class="footer-grid">
+<div class="footer-col">
+<h6>VoltAgent 框架</h6>
+<span>类型脚本代理</span>
+<span>工具编程</span>
+<span>多种代理工作流程</span>
+</div>
+<div class="footer-col">
+<h6>伏特Ops LLM 可观测性</h6>
+<span>LLM 跟踪</span>
+<span>实时调试</span>
+<span>视觉时间</span>
+</div>
+<div class="footer-col">
+<h6>生产</h6>
+<span>评价</span>
+<span>即时管理</span>
+<span>护卫</span>
+</div>
+<div class="footer-col">
+<h6>平台</h6>
+<span>伏特Ops 控制台</span>
+<span>开源核心</span>
+<span>代理工程</span>
+</div>
+</div>
+
+</div>
+</footer>
+</body>
+</html>

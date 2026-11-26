@@ -1,0 +1,1102 @@
+# Revolut · 中英文对照
+
+**说明**　中文为本地批量译稿。英文与设计词元沿用官网归档。
+
+
+
+<details>
+<summary>英文原文</summary>
+
+<!-- source:body -->
+
+
+<!-- source:end -->
+
+</details>
+
+## 概览
+
+Revolut营销布在高调双模系统运作:a
+**近黑故事布** (`{colors.canvas-dark}` — `#000000`)
+并轮流进行计划 并进行计划
+与 **白色目录带** (`{colors.canvas-light}` — `#ffffff`),该
+host comparison tables, FAQ rows, and download tiles. The two modes switch
+以全血带而不是柔软的过渡;各节按住每个节
+其它的创造杂志的散文节奏 品牌以知名。
+
+显示的打字法是 **Aeonik Pro 字重 500**,在大小上从
+20px to 136px. The flagship hero ("Banking & Beyond", "Join the 70+ million
+使用 Revolut")坐着 80–136px 与 `lineHeight: 1.0` 和紧负数
+letter-spacing。身体类型是 **Inter** 字重 400 开放源代码,
+no-nonsense, paired with positive tracking (`0.24px`) on UI labels for
+机械精度略高一点
+
+品牌强调色是: 说到点子上,我 `{colors.primary}` (`#494fdf`) 饱和钴
+紫罗兰——但很少出现在营销表面。
+首屏的CTA就是那个 **黑药白丸** ("选择你的订阅"),
+并且钴紫罗兰被保留给特别的图纸卡, 二级CTAs in
+白色的,还有品牌的甘油本身, 宽广的副色板深层
+淡蓝色、深粉红色、淡绿色、橙色警告和黄色
+产品模型和特征插图内部——从不作为按钮表面.
+
+**关键特征 :**
+- 双模页面底色系统—— `{colors.canvas-dark}` 以叙述故事为乐器, `{colors.canvas-light}` (白)用于浏览——切换成全血波段.
+- 显示打字法 **Aeonik Pro 500** 大小为 20–136px 紧紧的 `lineHeight: 1.0` 和大负数 letter-spacing 显示大小。
+- 实际的初级CTA是: `{component.button-primary}` — a **白胶囊形,黑文本**坐在暗色页面底色上,像素最亮 紫色钴 `{colors.primary}` 预留用于特别计划卡和二级CTA。
+- Eight saturated accent colours live inside product mockups and illustrations only, never as button surfaces — teal, light-blue, deep-pink, light-green, warning orange, yellow, brown, danger red.
+- All buttons are pill-shaped (`{rounded.full}`); content cards use `{rounded.lg}` (20px); inputs and small chips use `{rounded.md}` (12px).
+- 摄影是产品引导的——手机模型,卡片模型,终端模型——显示在暗片区内部的全血,没有字幕覆盖.
+
+
+<details>
+<summary>英文原文</summary>
+
+<!-- source:body -->
+## Overview
+
+Revolut's marketing canvas operates in a high-contrast two-mode system: a
+**near-black storytelling canvas** (`{colors.canvas-dark}` — `#000000`)
+that hosts hero bands, product mockups, and the planning section, alternating
+with **white catalogue bands** (`{colors.canvas-light}` — `#ffffff`) that
+host comparison tables, FAQ rows, and download tiles. The two modes switch
+in full-bleed bands rather than soft transitions; sections slam against each
+other to create the magazine-spread rhythm the brand is known for.
+
+The display typography is **Aeonik Pro at weight 500**, used at sizes from
+20px to 136px. The flagship hero ("Banking & Beyond", "Join the 70+ million
+using Revolut") sits at 80–136px with `lineHeight: 1.0` and tight negative
+letter-spacing. Body type is **Inter** at weight 400 — open-source,
+no-nonsense, paired with positive tracking (`0.24px`) on UI labels for
+slightly more mechanical precision.
+
+The brand accent is `{colors.primary}` (`#494fdf`) — a saturated cobalt
+violet — but it appears scarcely on marketing surfaces. The actual primary
+CTA on the hero is the **white pill on black** ("Choose your subscription"),
+and the cobalt violet is reserved for featured plan cards, secondary CTAs in
+white sections, and the brand glyph itself. A wide secondary palette of deep
+teal, light-blue, deep-pink, light-green, warning orange, and yellow appears
+inside product mockups and feature illustrations — never as button surfaces.
+
+**Key Characteristics:**
+- Two-mode canvas system — `{colors.canvas-dark}` (true black) for storytelling, `{colors.canvas-light}` (white) for browsing — switched in full-bleed bands.
+- Display typography is **Aeonik Pro 500** at sizes 20–136px with tight `lineHeight: 1.0` and large negative letter-spacing on display sizes.
+- The actual primary CTA is `{component.button-primary}` — a **white pill with black text**, sitting on the dark canvas as the brightest pixel. Cobalt-violet `{colors.primary}` is reserved for featured plan cards and secondary CTAs.
+- Eight saturated accent colours live inside product mockups and illustrations only, never as button surfaces — teal, light-blue, deep-pink, light-green, warning orange, yellow, brown, danger red.
+- All buttons are pill-shaped (`{rounded.full}`); content cards use `{rounded.lg}` (20px); inputs and small chips use `{rounded.md}` (12px).
+- Photography is product-led — phone mockups, card mockups, terminal mockups — shown full-bleed inside dark sections with no caption overlay.
+
+
+<!-- source:end -->
+
+</details>
+
+## 配色
+
+### 品牌和 强调色
+- **钴紫色** (`{colors.primary}` — `#494fdf`:品牌强调色,预留特色计划卡(英语:`{component.plan-card-featured}`),品牌字标图标,以及白话区中的二级CTA.
+- **钴亮度** (`{colors.primary-bright}` — `#4f55f1`:一种单步亮变体,用于内联颜色和强调色-相片头.
+- **钴深层** (`{colors.primary-deep}` — `#3a40c4`:钴元素的活性/压态.
+- **On-Primary** (`{colors.on-primary}` — `#ffffff`: 标签颜色, 上方 `{colors.primary}` 表面, 显示
+
+### 表面
+- **光线** (`{colors.canvas-light}` — `#ffffff`: FAQ 的白色目录模式,下载瓦片,比较表.
+- **暗色画** (`{colors.canvas-dark}` — `#000000`:讲故事页面底色——真黑,从不近黑.
+- **表面软** (`{colors.surface-soft}` — `#f4f4f4`:一种在下载瓦片,软扣,以及白色带内嵌卡片组上使用的微妙的脱白.
+- **表面卡片** (`{colors.surface-card}` — `#ffffff`:纯白卡表面,用于白坎瓦斯地区的特征卡.
+- **地表深处** (`{colors.surface-deep}` — `#0a0a0a`:为黑坎瓦斯区域内的套卡,采用单步式暗面.
+- **地面升华** (`{colors.surface-elevated}` — `#16181a`:规划段卡片背景——略显光泽,将计划卡从黑页面底色上抬下.
+- **细边线光** (`{colors.hairline-light}` — `#e2e2e7`): 1px 白色带内的分化器。
+- **细边线暗** (`{colors.hairline-dark}` — `rgba(255,255,255,0.12)`: 暗区相应的低相位分解器.
+- **发条坚固** (`{colors.hairline-strong}` — `#191c1f`:结构全强分机和轻卡的提纲.
+
+### 文本
+- **墨水( 墨水 )** (`{colors.ink}` — `#191c1f`:主文字颜色,显著的比纯黑色更温暖,与白色页面底色对齐,以进行身体可辨识.
+- **体质** (`{colors.body}` — `#1f2226`:长形体,在哪里 `{colors.ink}` 感觉有点太尖锐了
+- **木炭矿** (`{colors.charcoal}` — `#3a3d40`: 标题,二级导航.
+- **静音** (`{colors.mute}` — `#505a63`: 支持文本.
+- **灰尘** (`{colors.ash}` — `#5c5e60`:第三版文本,页脚复制.
+- **石头** (`{colors.stone}` — `#8d969e`:元数据,细微的字幕.
+- **异样** (`{colors.faint}` — `#c9c9cd`: 已停用前台,细边线更换.
+- **On-Dark** (`{colors.on-dark}` — `#ffffff`): primary text on `{colors.canvas-dark}`.
+- **On-Dark 静音** (`{colors.on-dark-mute}` — `rgba(255,255,255,0.72)`: 暗区中第二文本.
+
+### 语义
+- **调和Teal** (`{colors.accent-teal}` — `#00a87e`: 用于产品模拟插图.
+- **青色浅蓝色** (`{colors.accent-light-blue}` — `#007bc2`: 暗相片头的内含链接颜色.
+- **亚冠蓝连线** (`{colors.accent-blue-link}` — `#376cd5`: 白色表面的默认内线链接颜色.
+- **赤色的绿** (`{colors.accent-light-green}` — `#428619`:成功/正产品点名.
+- **中央绿色文本** (`{colors.accent-green-text}` — `#006400`: 内置成功文本.
+- **黄褐色** (`{colors.accent-yellow}` — `#b09000`: 注意/产品模型中待处理状态.
+- **星座警告( C)** (`{colors.accent-warning}` — `#ec7e00`:警告插图中使用的全饱和橙色.
+- **粉红色** (`{colors.accent-pink}` — `#e61e49`:深粉色——产品摄影和类图示内用.
+- **危险** (`{colors.accent-danger}` — `#e23b4a`:破坏性/错误状态.
+- **深红** (`{colors.accent-deep-red}` — `#8b0000`: 内置错误文本.
+- **亚新布朗** (`{colors.accent-brown}` — `#936d62`:金属卡片铬中所使用的单温中性.
+- **链接** (`{colors.link}` — `#376cd5`: 默认内置链接颜色。 与 `{colors.accent-blue-link}`.
+
+
+<details>
+<summary>英文原文</summary>
+
+<!-- source:body -->
+## Colors
+
+### Brand & Accent
+- **Cobalt Violet** (`{colors.primary}` — `#494fdf`): the brand accent. Reserved for featured plan cards (`{component.plan-card-featured}`), the brand wordmark icon, and secondary CTAs in white-canvas regions.
+- **Cobalt Bright** (`{colors.primary-bright}` — `#4f55f1`): a one-step-up bright variant used in inline link colour and accent-photo headers.
+- **Cobalt Deep** (`{colors.primary-deep}` — `#3a40c4`): the active/pressed state of cobalt elements.
+- **On-Primary** (`{colors.on-primary}` — `#ffffff`): label colour on top of `{colors.primary}` surfaces.
+
+### Surface
+- **Canvas Light** (`{colors.canvas-light}` — `#ffffff`): the white catalogue mode for FAQ, download tiles, comparison tables.
+- **Canvas Dark** (`{colors.canvas-dark}` — `#000000`): the storytelling canvas — true black, never near-black.
+- **Surface Soft** (`{colors.surface-soft}` — `#f4f4f4`): a subtle off-white used on download tiles, soft buttons, and inset card groups inside white bands.
+- **Surface Card** (`{colors.surface-card}` — `#ffffff`): pure white card surface, used for feature cards in white-canvas regions.
+- **Surface Deep** (`{colors.surface-deep}` — `#0a0a0a`): a one-step-up dark surface for inset cards inside black-canvas regions.
+- **Surface Elevated** (`{colors.surface-elevated}` — `#16181a`): the planning-section card background — slightly luminous, lifts plan cards off the black canvas.
+- **Hairline Light** (`{colors.hairline-light}` — `#e2e2e7`): 1px dividers inside white bands.
+- **Hairline Dark** (`{colors.hairline-dark}` — `rgba(255,255,255,0.12)`): the corresponding low-contrast divider in dark regions.
+- **Hairline Strong** (`{colors.hairline-strong}` — `#191c1f`): structural full-strength dividers and the outline of light cards.
+
+### Text
+- **Ink** (`{colors.ink}` — `#191c1f`): primary text colour. Notably warmer than pure black, paired with the white canvas for body legibility.
+- **Body** (`{colors.body}` — `#1f2226`): long-form body where `{colors.ink}` would feel slightly too sharp.
+- **Charcoal** (`{colors.charcoal}` — `#3a3d40`): captions, secondary nav.
+- **Mute** (`{colors.mute}` — `#505a63`): supporting text.
+- **Ash** (`{colors.ash}` — `#5c5e60`): tertiary text, footer copy.
+- **Stone** (`{colors.stone}` — `#8d969e`): metadata, subtle captions.
+- **Faint** (`{colors.faint}` — `#c9c9cd`): disabled foreground, hairline replacements.
+- **On-Dark** (`{colors.on-dark}` — `#ffffff`): primary text on `{colors.canvas-dark}`.
+- **On-Dark Mute** (`{colors.on-dark-mute}` — `rgba(255,255,255,0.72)`): secondary text in dark regions.
+
+### Semantic
+- **Accent Teal** (`{colors.accent-teal}` — `#00a87e`): used in product mockup illustrations.
+- **Accent Light Blue** (`{colors.accent-light-blue}` — `#007bc2`): inline link colour in dark photo headers.
+- **Accent Blue Link** (`{colors.accent-blue-link}` — `#376cd5`): default inline link colour on white surfaces.
+- **Accent Light Green** (`{colors.accent-light-green}` — `#428619`): success / positive product callouts.
+- **Accent Green Text** (`{colors.accent-green-text}` — `#006400`): inline success text.
+- **Accent Yellow** (`{colors.accent-yellow}` — `#b09000`): caution / pending state in product mockups.
+- **Accent Warning** (`{colors.accent-warning}` — `#ec7e00`): full-saturation orange used in warning illustrations.
+- **Accent Pink** (`{colors.accent-pink}` — `#e61e49`): deep pink — used inside product photography and category iconography.
+- **Accent Danger** (`{colors.accent-danger}` — `#e23b4a`): destructive / error state.
+- **Accent Deep Red** (`{colors.accent-deep-red}` — `#8b0000`): inline error text.
+- **Accent Brown** (`{colors.accent-brown}` — `#936d62`): a single warm-neutral used in metals tier card chrome.
+- **Link** (`{colors.link}` — `#376cd5`): default inline link colour. Same as `{colors.accent-blue-link}`.
+
+
+<!-- source:end -->
+
+</details>
+
+## 字体排版
+
+### 字体家族
+
+Revolut 船是两家的堆栈:
+
+- **Aeonik Pro** — proprietary humanist sans-serif used for all display sizes (20px+) at weight 500. Carries the brand's editorial confidence; tightens dramatically with negative letter-spacing at large sizes.
+- **Inter** – 身体、按钮标签、标题和元数据开源工作马。总是在字重上 400 或 减 减 600,有正跟踪(`0.16–0.24px`)在UI标签上.
+
+何时 Aeonik Pro 无法获得许可, **Inter Display**, **桑斯将军**,或 **索恩语** 它们是可信的替代物,它们都具有温暖的几何字符。 -1% letter-spacing 显示大小,以匹配原有的紧度。
+
+### 等级
+
+| 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
+|---|---|---|---|---|---|
+| `{typography.display-xxl}` | 136px | 500 | 1.0 | -2.72px | The flagship hero ("Banking & Beyond"). One per page. |
+| `{typography.display-xl}` | 80px | 500 | 1.0 | -0.8px | 打开区域( “加入” 70+百万 使用 Revolut"). |
+| `{typography.display-lg}` | 48px | 500 | 1.21 | -0.48px | 分节标题. |
+| `{typography.display-md}` | 40px | 500 | 1.2 | -0.4px | 特色卡片标题. |
+| `{typography.heading-lg}` | 32px | 500 | 1.19 | -0.32px | 计划牌名. |
+| `{typography.heading-md}` | 24px | 500 | 1.33 | 0 | 节次标题. |
+| `{typography.heading-sm}` | 20px | 500 | 1.4 | 0 | 列表头,突出标签. |
+| `{typography.body-lg}` | 18px | 400 | 1.56 | -0.09px | 市场传言. |
+| `{typography.body-md}` | 16px | 400 | 1.5 | 0.24px | 默认身体. |
+| `{typography.body-md-bold}` | 16px | 600 | 1.5 | 0.16px | Emphatic body. |
+| `{typography.body-sm}` | 14px | 400 | 1.43 | 0 | 说明,元数据。 |
+| `{typography.button-lg}` | 20px | 500 | 1.4 | 0 | 首屏CTAs( 首屏CTAs) (英语:Aeonik Pro). |
+| `{typography.button-md}` | 16px | 600 | 1.5 | 0.24px | 默认按钮标签 。 |
+| `{typography.button-sm}` | 14px | 600 | 1.43 | 0 | 胶囊形, sub-nav. |
+| `{typography.caption}` | 13px | 400 | 1.4 | 0 | 页脚披露,规范文本. |
+| `{typography.link-emph}` | 16px | 700 | 1.5 | 0.24px | 暗模式下嵌入式内线链接. |
+
+### 原则
+- Display sizes always run at weight 500 with `lineHeight: 1.0` (or 1.19–1.21 below 48px). The negative letter-spacing scales with size — bigger types tighten more.
+- 体质 Inter 坐在重的旁边 400 带有正跟踪( )`0.24px`)——小间距的微软使UI标签感觉略微机械化,配位的鳍技术精度.
+- 首屏CTAs使用这个 Aeonik Pro `{typography.button-lg}` 变体;首屏下面的一切都使用 Inter `{typography.button-md}`.
+- Inline links inside dark photo regions step up to weight 700 (`{typography.link-emph}`) so they hold contrast against the canvas without using the cobalt accent.
+
+### Note on Font Substitutes
+
+When Aeonik Pro is unavailable, clamp display `lineHeight` to 1.0 explicitly and apply -1% letter-spacing on display sizes. Inter Display, General Sans, or Söhne will read closest to the original. Inter is open-source and should be used directly.
+
+
+<details>
+<summary>英文原文</summary>
+
+<!-- source:body -->
+## Typography
+
+### Font Family
+
+Revolut ships a two-family stack:
+
+- **Aeonik Pro** — proprietary humanist sans-serif used for all display sizes (20px+) at weight 500. Carries the brand's editorial confidence; tightens dramatically with negative letter-spacing at large sizes.
+- **Inter** — open-source workhorse for body, button labels, captions, and metadata. Always at weight 400 or 600, with positive tracking (`0.16–0.24px`) on UI labels.
+
+When Aeonik Pro cannot be licensed, **Inter Display**, **General Sans**, or **Söhne** are credible substitutes — all share the warm geometric character. Apply -1% letter-spacing on display sizes to match the original tightness.
+
+### Hierarchy
+
+| Token | Size | Weight | Line Height | Letter Spacing | Use |
+|---|---|---|---|---|---|
+| `{typography.display-xxl}` | 136px | 500 | 1.0 | -2.72px | The flagship hero ("Banking & Beyond"). One per page. |
+| `{typography.display-xl}` | 80px | 500 | 1.0 | -0.8px | Section openers ("Join the 70+ million using Revolut"). |
+| `{typography.display-lg}` | 48px | 500 | 1.21 | -0.48px | Sub-section titles. |
+| `{typography.display-md}` | 40px | 500 | 1.2 | -0.4px | Feature card titles. |
+| `{typography.heading-lg}` | 32px | 500 | 1.19 | -0.32px | Plan card titles. |
+| `{typography.heading-md}` | 24px | 500 | 1.33 | 0 | Section sub-titles. |
+| `{typography.heading-sm}` | 20px | 500 | 1.4 | 0 | List headers, prominent labels. |
+| `{typography.body-lg}` | 18px | 400 | 1.56 | -0.09px | Marketing prose. |
+| `{typography.body-md}` | 16px | 400 | 1.5 | 0.24px | Default body. |
+| `{typography.body-md-bold}` | 16px | 600 | 1.5 | 0.16px | Emphatic body. |
+| `{typography.body-sm}` | 14px | 400 | 1.43 | 0 | Captions, metadata. |
+| `{typography.button-lg}` | 20px | 500 | 1.4 | 0 | Hero CTAs (Aeonik Pro). |
+| `{typography.button-md}` | 16px | 600 | 1.5 | 0.24px | Default button label. |
+| `{typography.button-sm}` | 14px | 600 | 1.43 | 0 | Pill chips, sub-nav. |
+| `{typography.caption}` | 13px | 400 | 1.4 | 0 | Footer disclosure, regulatory text. |
+| `{typography.link-emph}` | 16px | 700 | 1.5 | 0.24px | Emphatic inline link in dark mode. |
+
+### Principles
+- Display sizes always run at weight 500 with `lineHeight: 1.0` (or 1.19–1.21 below 48px). The negative letter-spacing scales with size — bigger types tighten more.
+- Body Inter sits at weight 400 with positive tracking (`0.24px`) — the small spacing nudge makes UI labels feel slightly mechanical, fitting fintech precision.
+- Hero CTAs use the Aeonik Pro `{typography.button-lg}` variant; everything below the hero uses the Inter `{typography.button-md}`.
+- Inline links inside dark photo regions step up to weight 700 (`{typography.link-emph}`) so they hold contrast against the canvas without using the cobalt accent.
+
+### Note on Font Substitutes
+
+When Aeonik Pro is unavailable, clamp display `lineHeight` to 1.0 explicitly and apply -1% letter-spacing on display sizes. Inter Display, General Sans, or Söhne will read closest to the original. Inter is open-source and should be used directly.
+
+
+<!-- source:end -->
+
+</details>
+
+## 布局
+
+### 间距系统
+- **基地单位**: 4px,在工作规模上, 4 / 8 / 16.
+- **脚本**: `{spacing.xxs}` 4px · `{spacing.xs}` 6px · `{spacing.sm}` 8px · `{spacing.md}` 14px · `{spacing.lg}` 16px · `{spacing.xl}` 24px · `{spacing.xxl}` 32px · `{spacing.xxxl}` 48px · `{spacing.block}` 80px · `{spacing.section}` 88px · `{spacing.band}` 120px.
+- Section padding: `{spacing.section}` (88px) vertical between bands; `{spacing.band}` (120px) on the hero band and the closing planning section.
+- Card internal padding: `{spacing.xxl}` (32px) on `{component.feature-card-light}`, `{component.plan-card}`, `{component.feature-card-dark}`.
+
+### 网格容器( C)
+- **最大内容宽度** ≈ 1200px 身体部位;首屏乐队全速奔跑。
+- **Plan grid**: 4-up plan cards on the home page, stacking 2-up at tablet and 1-up at small mobile.
+- **Feature grid**: 3-up at desktop, 2-up at tablet, 1-up at mobile.
+- **产品模拟带**:单张全宽首屏照片的手机或卡片模具,没有周围的铬——资产本身就是部分.
+
+### 白空间哲学
+- Whitespace is generous and editorial — sections breathe at 88–120px so display headlines have room to register at 80–136px without feeling cramped.
+- Inside cards, padding stays at 32px so feature copy and plan tiers have a consistent rhythm.
+- 细边线 `{colors.hairline-light}` 分隔器取代白色表面的阴影; `{colors.hairline-dark}` 承担着在黑暗地区相应的角色.
+
+
+<details>
+<summary>英文原文</summary>
+
+<!-- source:body -->
+## Layout
+
+### Spacing System
+- **Base unit**: 4px, with the working scale on multiples of 4 / 8 / 16.
+- **Tokens**: `{spacing.xxs}` 4px · `{spacing.xs}` 6px · `{spacing.sm}` 8px · `{spacing.md}` 14px · `{spacing.lg}` 16px · `{spacing.xl}` 24px · `{spacing.xxl}` 32px · `{spacing.xxxl}` 48px · `{spacing.block}` 80px · `{spacing.section}` 88px · `{spacing.band}` 120px.
+- Section padding: `{spacing.section}` (88px) vertical between bands; `{spacing.band}` (120px) on the hero band and the closing planning section.
+- Card internal padding: `{spacing.xxl}` (32px) on `{component.feature-card-light}`, `{component.plan-card}`, `{component.feature-card-dark}`.
+
+### Grid & Container
+- **Max content width** ≈ 1200px on body sections; hero bands run full-bleed.
+- **Plan grid**: 4-up plan cards on the home page, stacking 2-up at tablet and 1-up at small mobile.
+- **Feature grid**: 3-up at desktop, 2-up at tablet, 1-up at mobile.
+- **Product mockup bands**: a single full-width hero photo of a phone or card mockup, no surrounding chrome — the asset itself is the section.
+
+### Whitespace Philosophy
+- Whitespace is generous and editorial — sections breathe at 88–120px so display headlines have room to register at 80–136px without feeling cramped.
+- Inside cards, padding stays at 32px so feature copy and plan tiers have a consistent rhythm.
+- Hairline `{colors.hairline-light}` dividers replace shadow on white surfaces; `{colors.hairline-dark}` carries the corresponding role in dark regions.
+
+
+<!-- source:end -->
+
+</details>
+
+## 层次与阴影
+
+| 职等 | 治疗 | 使用 |
+|---|---|---|
+| 0 — flat | No shadow, no border | Default canvas bands (light or dark), full-bleed hero. |
+| 1 ——水面卡 | `{colors.surface-card}` (白)开 `{colors.surface-soft}` 带 | 光带内的特色卡片. |
+| 2 ——表面升高的暗色. | `{colors.surface-elevated}` (`#16181a`继续 `{colors.canvas-dark}` | 规划科内部的计票卡. |
+| 3 - 地面特色 | `{colors.primary}` 打开 `{colors.canvas-dark}` | 特色图案卡(钴紫色反转). |
+| 4 产品模型 | 完全充裕的图片资产 | 首屏手机/卡/终端模拟乐队. |
+
+The system has **no traditional drop-shadow language**. Surfaces register depth via colour-blocking (light → dark band switches) and surface-luminance shifts (`{colors.canvas-dark}` → `{colors.surface-elevated}`). Photography mockups carry their own depth from the asset itself.
+
+### 装饰性深度
+- **Product mockup hero bands** — the home page features a phone mockup full-bleed against `{colors.canvas-dark}`, with the device's own glow providing the only atmospheric depth. No additional gradients, no shadows.
+- **Featured plan card** — the cobalt-violet `{component.plan-card-featured}` sits inside the otherwise dark planning grid as a single saturated colour block, marking the recommended tier visually.
+- **纸质金属** ——品牌用途. `{colors.accent-brown}` 金属卡片模型上有一个深层梯度 以示溢价,而不会受到金色的金属效应的影响。
+
+
+<details>
+<summary>英文原文</summary>
+
+<!-- source:body -->
+## Elevation & Depth
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 — flat | No shadow, no border | Default canvas bands (light or dark), full-bleed hero. |
+| 1 — surface card | `{colors.surface-card}` (white) on `{colors.surface-soft}` band | Feature cards inside light bands. |
+| 2 — surface elevated dark | `{colors.surface-elevated}` (`#16181a`) on `{colors.canvas-dark}` | Plan cards inside the planning section. |
+| 3 — featured surface | `{colors.primary}` on `{colors.canvas-dark}` | Featured plan card (cobalt violet inversion). |
+| 4 — product mockup | Full-bleed photo asset | Hero phone / card / terminal mockup bands. |
+
+The system has **no traditional drop-shadow language**. Surfaces register depth via colour-blocking (light → dark band switches) and surface-luminance shifts (`{colors.canvas-dark}` → `{colors.surface-elevated}`). Photography mockups carry their own depth from the asset itself.
+
+### Decorative Depth
+- **Product mockup hero bands** — the home page features a phone mockup full-bleed against `{colors.canvas-dark}`, with the device's own glow providing the only atmospheric depth. No additional gradients, no shadows.
+- **Featured plan card** — the cobalt-violet `{component.plan-card-featured}` sits inside the otherwise dark planning grid as a single saturated colour block, marking the recommended tier visually.
+- **Card metals tier** — the brand uses `{colors.accent-brown}` and a deep gradient on metals card mockups to signal premium without resorting to gold-on-black metallic effects.
+
+
+<!-- source:end -->
+
+</details>
+
+## 形状
+
+### 圆角刻度
+
+| 调试 | 数值 | 使用 |
+|---|---|---|
+| `{rounded.none}` | 0px | 首屏乐队,全血科,脚步. |
+| `{rounded.sm}` | 8px | 内置标签,小芯片. |
+| `{rounded.md}` | 12px | 窗体输入,下载瓦片. |
+| `{rounded.lg}` | 20px | 特色卡,计划卡. |
+| `{rounded.xl}` | 28px | 产品模拟容器。 |
+| `{rounded.full}` | 9999px | Buttons, pills, badges, tabs. |
+
+### 摄影几何
+- 电话模型 : 9:19.5 (垂直)与 `{rounded.xl}` 装置上的角落 铬。
+- Card mockups: 1.586:1 (credit-card aspect) with `{rounded.lg}` corners.
+- 终端/POS模型: 4:3 与 `{rounded.xl}` 角落和大量贴在装置周围。
+- 生活方式摄影( 稀有): 16:9 与 `{rounded.lg}` 转角
+
+
+<details>
+<summary>英文原文</summary>
+
+<!-- source:body -->
+## Shapes
+
+### Border Radius Scale
+
+| Token | Value | Use |
+|---|---|---|
+| `{rounded.none}` | 0px | Hero bands, full-bleed sections, footer. |
+| `{rounded.sm}` | 8px | Inline tags, small chips. |
+| `{rounded.md}` | 12px | Form inputs, download tiles. |
+| `{rounded.lg}` | 20px | Feature cards, plan cards. |
+| `{rounded.xl}` | 28px | Product mockup containers. |
+| `{rounded.full}` | 9999px | Buttons, pills, badges, tabs. |
+
+### Photography Geometry
+- Phone mockups: 9:19.5 (vertical) with `{rounded.xl}` corners on the device chrome.
+- Card mockups: 1.586:1 (credit-card aspect) with `{rounded.lg}` corners.
+- Terminal/POS mockups: 4:3 with `{rounded.xl}` corners and substantial padding around the device.
+- Lifestyle photography (rare): 16:9 with `{rounded.lg}` corners.
+
+
+<!-- source:end -->
+
+</details>
+
+## 组件
+
+### 按钮
+
+**`button-primary`** - 白色的CTA在黑暗中
+- Background `{colors.canvas-light}`, label `{colors.canvas-dark}`, type `{typography.button-md}`, padding `14px 28px`, `rounded: {rounded.full}`, height 48px.
+- The brand's primary CTA, used on every dark hero band ("Choose your subscription", "Get started").
+- 国家住在这里 `button-primary-pressed` (背景情况) `{colors.faint}`).
+
+**`button-dark`** ——光线上暗的CTA
+- Background `{colors.canvas-dark}`, label `{colors.on-dark}`, type `{typography.button-md}`, `rounded: {rounded.full}`.
+- 反面扫描相当于 `{component.button-primary}` ——白目录带内使用.
+
+**`button-soft`** 软表面CTA
+- Background `{colors.surface-soft}`, label `{colors.ink}`, type `{typography.button-md}`, `rounded: {rounded.full}`.
+- 白坎瓦斯地区的三级行动("更多学习","View FAQs").
+
+**`button-outline-light`** ——概述光线CTA.
+- Background `{colors.canvas-light}`, label `{colors.ink}`, 1px solid `{colors.hairline-strong}`, type `{typography.button-md}`, `rounded: {rounded.full}`.
+- 配对时的次要动作 `{component.button-dark}`.
+
+**`button-outline-dark`** —— 概述暗色的CTA.
+- Background `{colors.canvas-dark}`, label `{colors.on-dark}`, 1px solid `{colors.on-dark}`, type `{typography.button-md}`, `rounded: {rounded.full}`, padding `13px 27px`, height 48px.
+- 暗黑的canvas 对应的 `{component.button-outline-light}`; 与 暗 首屏 乐队组合时, 将其中的 暗 首屏乐队用作第三步动作 `{component.button-primary}`.
+
+**`button-pill-sm`** ——小胶囊形
+- Background `{colors.surface-soft}`, label `{colors.ink}`, type `{typography.button-sm}`, `rounded: {rounded.full}`, padding `8px 16px`, height 36px.
+- Sub-nav 芯片,滤波药
+
+### 纸牌和集装箱
+
+**`hero-band-dark`** ——满血的黑暗首屏.
+- Background `{colors.canvas-dark}`, text `{colors.on-dark}`, type `{typography.display-xxl}` for the title, padding `{spacing.section}` (88px) vertical, `rounded: {rounded.none}`.
+- Used only on the home page hero band.
+
+**`hero-band-photo`** - 摄影领头的首屏
+- Background `{colors.canvas-dark}` with full-bleed product photography, text `{colors.on-dark}`, type `{typography.display-xl}`, `rounded: {rounded.none}`.
+- 产品页上使用——电话或卡片模拟作为全频布.
+
+**`feature-card-light`** 白色的特征卡
+- Background `{colors.surface-card}`, text `{colors.ink}`, 1px solid `{colors.hairline-light}`, type `{typography.body-md}`, `rounded: {rounded.lg}`, padding `{spacing.xxl}` (32px).
+- 用于白色目录带用于特征比较.
+
+**`feature-card-dark`** ——黑天特写卡
+- Background `{colors.surface-elevated}`, text `{colors.on-dark}`, type `{typography.body-md}`, `rounded: {rounded.lg}`, padding `{spacing.xxl}`.
+- 暗暗的故事叙述部分
+
+**`plan-card`** ——订阅计划卡
+- Background `{colors.surface-elevated}`, text `{colors.on-dark}`, type `{typography.body-md}`, `rounded: {rounded.lg}`, padding `{spacing.xxl}` (32px).
+- 计划名称在 `{typography.heading-lg}` ("标准","普卢斯","椒","金属","乌尔特拉").
+
+**`plan-card-featured`** - 特色计划卡
+- Background `{colors.primary}`, text `{colors.on-primary}`, type `{typography.body-md}`, `rounded: {rounded.lg}`, padding `{spacing.xxl}`.
+- 钴紫色反射法 `{component.plan-card}` ——在建议分级使用.
+
+**`product-mockup`** ——全资产品资产.
+- Background `{colors.canvas-dark}`, the asset itself fills the band, `rounded: {rounded.xl}` on the device chrome.
+- 电话、卡片和终端模型——没有标题上线,也没有周围的铬。
+
+**`download-tile`** ——应用商店下载瓦片
+- Background `{colors.surface-soft}`, text `{colors.ink}`, type `{typography.body-sm}`, `rounded: {rounded.md}`, padding `12px 20px`, height 56px.
+- App Store + Google Play 下载按钮,并列.
+
+### 输入表单( F)
+
+**`text-input`** ——默认输入
+- Background `{colors.canvas-light}`, text `{colors.ink}`, type `{typography.body-md}`, 1px solid `{colors.hairline-light}`, `rounded: {rounded.md}`, padding `14px 16px`, height 56px.
+- 费斯科技的可访问性具有优异的高度——舒适地超过了WCAG AAA触控目标.
+
+### 导航
+
+**`nav-bar`** ——顶端导航(桌面).
+- Background `{colors.canvas-dark}`, text `{colors.on-dark}`, type `{typography.button-md}`, height 64px.
+- 左: 字标记标志. 中: 顶级导航("Personal","Company","Company"). 右: 语言切换器+"Log in" + `{component.button-primary}`.
+
+**`nav-bar`** (移动)
+- 同样的高度 64px,将中心导航崩溃成汉堡图标。Logo 留在左侧,登录的 CTA 留在右侧。
+
+**`sub-nav-pill`** — sub-nav 芯片
+- 胶囊形在暗片段(如"个人","商业","Premium")内横向排位设置, `{component.sub-nav-pill}` 造型风格.
+
+### 签名组件
+
+**`badge-tag`** 中性标记
+- Background `{colors.surface-soft}`, text `{colors.ink}`, type `{typography.caption}`, `rounded: {rounded.full}`, padding `4px 12px`.
+- 特性卡内置标签.
+
+**`badge-feature`** ——特色突出徽章
+- Background `{colors.primary}`, text `{colors.on-primary}`, type `{typography.caption}`, `rounded: {rounded.full}`, padding `4px 12px`.
+- "新","最受欢迎"的徽章,以计划牌为主.
+
+**`footer`** ——全球页脚
+- Background `{colors.canvas-dark}`, text `{colors.on-dark-mute}`, type `{typography.body-sm}`, `rounded: {rounded.none}`, padding `80px 24px`.
+- Multi-column quick-links grid above a copyright + regulatory disclosure block separated by `{colors.divider-soft}`.
+
+
+<details>
+<summary>英文原文</summary>
+
+<!-- source:body -->
+## Components
+
+### Buttons
+
+**`button-primary`** — white CTA on dark
+- Background `{colors.canvas-light}`, label `{colors.canvas-dark}`, type `{typography.button-md}`, padding `14px 28px`, `rounded: {rounded.full}`, height 48px.
+- The brand's primary CTA, used on every dark hero band ("Choose your subscription", "Get started").
+- Pressed state lives in `button-primary-pressed` (background `{colors.faint}`).
+
+**`button-dark`** — dark CTA on light
+- Background `{colors.canvas-dark}`, label `{colors.on-dark}`, type `{typography.button-md}`, `rounded: {rounded.full}`.
+- The reverse-canvas equivalent of `{component.button-primary}` — used inside white catalogue bands.
+
+**`button-soft`** — soft surface CTA
+- Background `{colors.surface-soft}`, label `{colors.ink}`, type `{typography.button-md}`, `rounded: {rounded.full}`.
+- Tertiary action in white-canvas regions ("Learn more", "View FAQs").
+
+**`button-outline-light`** — outlined CTA on light
+- Background `{colors.canvas-light}`, label `{colors.ink}`, 1px solid `{colors.hairline-strong}`, type `{typography.button-md}`, `rounded: {rounded.full}`.
+- Secondary action when paired with `{component.button-dark}`.
+
+**`button-outline-dark`** — outlined CTA on dark
+- Background `{colors.canvas-dark}`, label `{colors.on-dark}`, 1px solid `{colors.on-dark}`, type `{typography.button-md}`, `rounded: {rounded.full}`, padding `13px 27px`, height 48px.
+- Dark-canvas counterpart of `{component.button-outline-light}`; used inside dark hero bands as a tertiary action when paired with `{component.button-primary}`.
+
+**`button-pill-sm`** — small pill chip
+- Background `{colors.surface-soft}`, label `{colors.ink}`, type `{typography.button-sm}`, `rounded: {rounded.full}`, padding `8px 16px`, height 36px.
+- Sub-nav chips, filter pills.
+
+### Cards & Containers
+
+**`hero-band-dark`** — full-bleed dark hero
+- Background `{colors.canvas-dark}`, text `{colors.on-dark}`, type `{typography.display-xxl}` for the title, padding `{spacing.section}` (88px) vertical, `rounded: {rounded.none}`.
+- Used only on the home page hero band.
+
+**`hero-band-photo`** — photo-led hero
+- Background `{colors.canvas-dark}` with full-bleed product photography, text `{colors.on-dark}`, type `{typography.display-xl}`, `rounded: {rounded.none}`.
+- Used on product pages — phone or card mockup as the full-band canvas.
+
+**`feature-card-light`** — feature card on white
+- Background `{colors.surface-card}`, text `{colors.ink}`, 1px solid `{colors.hairline-light}`, type `{typography.body-md}`, `rounded: {rounded.lg}`, padding `{spacing.xxl}` (32px).
+- Used in white catalogue bands for feature comparisons.
+
+**`feature-card-dark`** — feature card on dark
+- Background `{colors.surface-elevated}`, text `{colors.on-dark}`, type `{typography.body-md}`, `rounded: {rounded.lg}`, padding `{spacing.xxl}`.
+- Used inside dark storytelling sections.
+
+**`plan-card`** — subscription plan card
+- Background `{colors.surface-elevated}`, text `{colors.on-dark}`, type `{typography.body-md}`, `rounded: {rounded.lg}`, padding `{spacing.xxl}` (32px).
+- Plan name in `{typography.heading-lg}` ("Standard", "Plus", "Premium", "Metal", "Ultra").
+
+**`plan-card-featured`** — featured plan card
+- Background `{colors.primary}`, text `{colors.on-primary}`, type `{typography.body-md}`, `rounded: {rounded.lg}`, padding `{spacing.xxl}`.
+- Cobalt-violet inversion of `{component.plan-card}` — used on the recommended tier.
+
+**`product-mockup`** — full-bleed product asset
+- Background `{colors.canvas-dark}`, the asset itself fills the band, `rounded: {rounded.xl}` on the device chrome.
+- Phone, card, and terminal mockups — no caption overlay, no surrounding chrome.
+
+**`download-tile`** — app store download tile
+- Background `{colors.surface-soft}`, text `{colors.ink}`, type `{typography.body-sm}`, `rounded: {rounded.md}`, padding `12px 20px`, height 56px.
+- App Store + Google Play download buttons, side-by-side.
+
+### Inputs & Forms
+
+**`text-input`** — default input
+- Background `{colors.canvas-light}`, text `{colors.ink}`, type `{typography.body-md}`, 1px solid `{colors.hairline-light}`, `rounded: {rounded.md}`, padding `14px 16px`, height 56px.
+- Generous height for fintech accessibility — comfortably exceeds WCAG AAA touch target.
+
+### Navigation
+
+**`nav-bar`** — top nav (desktop)
+- Background `{colors.canvas-dark}`, text `{colors.on-dark}`, type `{typography.button-md}`, height 64px.
+- Left: wordmark logo. Centre: top-level nav ("Personal", "Business", "Company"). Right: language switcher + "Log in" + `{component.button-primary}`.
+
+**`nav-bar`** (mobile)
+- Same height 64px, collapses centre nav into a hamburger icon. Logo stays left, sign-in CTA stays right.
+
+**`sub-nav-pill`** — sub-nav chip
+- Pill chips set in a horizontal row inside dark sections (e.g. "Personal", "Business", "Premium"), `{component.sub-nav-pill}` styling.
+
+### Signature Components
+
+**`badge-tag`** — neutral tag
+- Background `{colors.surface-soft}`, text `{colors.ink}`, type `{typography.caption}`, `rounded: {rounded.full}`, padding `4px 12px`.
+- Inline tags inside feature cards.
+
+**`badge-feature`** — feature highlight badge
+- Background `{colors.primary}`, text `{colors.on-primary}`, type `{typography.caption}`, `rounded: {rounded.full}`, padding `4px 12px`.
+- "New", "Most popular" badges anchored on plan cards.
+
+**`footer`** — global footer
+- Background `{colors.canvas-dark}`, text `{colors.on-dark-mute}`, type `{typography.body-sm}`, `rounded: {rounded.none}`, padding `80px 24px`.
+- Multi-column quick-links grid above a copyright + regulatory disclosure block separated by `{colors.divider-soft}`.
+
+
+<!-- source:end -->
+
+</details>
+
+## 设计建议与禁忌
+
+### 执行
+- 切换到间距的完整带 `{colors.canvas-dark}` (故事)和(故事) `{colors.canvas-light}` (目录),双模节奏是核心.
+- 使用 `{component.button-primary}` (白丸在暗处)作为每个暗首屏乐队的主要CTA,这是品牌最响亮的动作.
+- 准备金 `{colors.primary}` 表示有特色的计划卡和品牌字号——钴应该感觉像刻意的邮票,而不是彩色主题.
+- 设置首屏头条 **Aeonik Pro 500** 时 间 80–136px 与 `lineHeight: 1.0` 和大负数 letter-spacing.
+- 使用 **Inter** 用于身体、按钮标签、标题—— 永远不要替换 Aeonik Pro 身体类型。
+- Apply `{rounded.full}` to every button and pill; `{rounded.lg}` (20px) to feature and plan cards; `{rounded.md}` (12px) to inputs.
+- 显示产品模型在暗片段内全血化——资产IS该段.
+- 使用宽强调色调色板( Name`{colors.accent-teal}`, `{colors.accent-pink}`, `{colors.accent-light-green}`) 产品插图和图标图中仅包含产品插图和图示.
+
+### Don't
+- Don't use accent colours (`{colors.accent-teal}`, `{colors.accent-pink}`, etc.) as button surfaces. They live inside illustrations only.
+- Don't use a near-black canvas. The brand is `#000000`, not `#0a0a0a`.
+- Don't pair white text with cobalt violet inside body content — `{colors.primary}` is for the featured plan card surface, not large prose.
+- Don't add drop shadows on cards. Elevation is canvas + surface-luminance shifts.
+- Don't introduce a secondary brand colour. Cobalt violet is the only brand stamp.
+- Don't loosen Aeonik Pro `lineHeight` past 1.0 on display sizes. Tight stacking is structural.
+- Don't bump body Inter to weight 500. Use 400 (default) or 600 (emphatic) — never the in-between.
+- Don't pair `{colors.canvas-dark}` with another dark surface beyond `{colors.surface-elevated}`. The surface ladder has only two dark steps.
+
+
+<details>
+<summary>英文原文</summary>
+
+<!-- source:body -->
+## Do's and Don'ts
+
+### Do
+- Switch full bands between `{colors.canvas-dark}` (storytelling) and `{colors.canvas-light}` (catalogue). The two-mode rhythm is core.
+- Use `{component.button-primary}` (white pill on dark) as the primary CTA on every dark hero band. It's the brand's loudest action.
+- Reserve `{colors.primary}` for the featured plan card and the brand wordmark — the cobalt should feel like a deliberate stamp, not a colour theme.
+- Set hero headlines in **Aeonik Pro 500** at 80–136px with `lineHeight: 1.0` and large negative letter-spacing.
+- Use **Inter** for body, button labels, captions — never substitute Aeonik Pro for body type.
+- Apply `{rounded.full}` to every button and pill; `{rounded.lg}` (20px) to feature and plan cards; `{rounded.md}` (12px) to inputs.
+- Show product mockups full-bleed inside dark sections — the asset IS the section.
+- Use the wide accent palette (`{colors.accent-teal}`, `{colors.accent-pink}`, `{colors.accent-light-green}`, etc.) inside product illustrations and iconography only.
+
+### Don't
+- Don't use accent colours (`{colors.accent-teal}`, `{colors.accent-pink}`, etc.) as button surfaces. They live inside illustrations only.
+- Don't use a near-black canvas. The brand is `#000000`, not `#0a0a0a`.
+- Don't pair white text with cobalt violet inside body content — `{colors.primary}` is for the featured plan card surface, not large prose.
+- Don't add drop shadows on cards. Elevation is canvas + surface-luminance shifts.
+- Don't introduce a secondary brand colour. Cobalt violet is the only brand stamp.
+- Don't loosen Aeonik Pro `lineHeight` past 1.0 on display sizes. Tight stacking is structural.
+- Don't bump body Inter to weight 500. Use 400 (default) or 600 (emphatic) — never the in-between.
+- Don't pair `{colors.canvas-dark}` with another dark surface beyond `{colors.surface-elevated}`. The surface ladder has only two dark steps.
+
+
+<!-- source:end -->
+
+</details>
+
+## 响应式规则
+
+### 断点
+
+| 名称 | 宽度 | 密钥更改 |
+|---|---|---|
+| Desktop XL | ≥ 1440px | 4-up plan grid, full-bleed product mockup bands, max content 1200. |
+| 桌面 | 1280–1439px | 集装箱缩水; xl 侧垫。 |
+| 块状大 | 1024–1279px | 计划网格 4- 上; 特性网格 3- 起来 |
+| 平板 | 768–1023px | 计划网格 2- 上; 特性网格 2- 起来 |
+| 大型移动 | 426–767px | 计划网格 1- 上; 特性网格 1-上; 导航崩溃到汉堡; 首屏 `display-xxl` 夹子到 64px. |
+| Mobile | ≤ 425px | All grids 1-up; hero clamps to 48px; section padding `{spacing.section}` collapses to 64px. |
+
+### 触控区域
+- All buttons ship at minimum 48px tall — comfortably exceeds WCAG AAA (44px). Default `{component.button-primary}` is 48px.
+- `{component.text-input}` 谓 56px 高 —— 风琴技术级无障碍。
+- `{component.button-pill-sm}` (36px) 被撞到(或) 44px 移动中通过垫装调整。
+
+### 折叠战略
+- 顶级导航崩溃到汉堡 < 1024px; 字号和 `{component.button-primary}` 保持锚定。
+- 首屏们 `{typography.display-xxl}` 夹子 : 136px → 80px → 64px → 48px 穿过断点梯子
+- 计划网格步骤从 4- 最多为 2- 上边 < 1024px 改为: 1- 上边 < 768px.
+- 产品模拟波段在每个断点保持全血;资产作物是内在的,而不是信箱。
+- Sub-nav 胶囊形从包装行转换为水平滚动扶轮, 位置为 < 768px.
+
+### 图像行为
+- Phone and card mockups are served at 1.5× and 2× DPR; below 768px the system swaps to a smaller hero crop.
+- 产品摄影在每个断点保留自己的大气照明——没有反应性变种资产.
+
+
+<details>
+<summary>英文原文</summary>
+
+<!-- source:body -->
+## Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|---|---|---|
+| Desktop XL | ≥ 1440px | 4-up plan grid, full-bleed product mockup bands, max content 1200. |
+| Desktop | 1280–1439px | Container shrinks; xl side padding. |
+| Tablet Large | 1024–1279px | Plan grid 4-up; feature grid 3-up. |
+| Tablet | 768–1023px | Plan grid 2-up; feature grid 2-up. |
+| Mobile Large | 426–767px | Plan grid 1-up; feature grid 1-up; nav collapses to hamburger; hero `display-xxl` clamps to 64px. |
+| Mobile | ≤ 425px | All grids 1-up; hero clamps to 48px; section padding `{spacing.section}` collapses to 64px. |
+
+### Touch Targets
+- All buttons ship at minimum 48px tall — comfortably exceeds WCAG AAA (44px). Default `{component.button-primary}` is 48px.
+- `{component.text-input}` is 56px tall — fintech-grade accessibility.
+- `{component.button-pill-sm}` (36px) is bumped to 44px on mobile via padding adjustment.
+
+### Collapsing Strategy
+- Top-level nav collapses to hamburger at < 1024px; the wordmark and `{component.button-primary}` stay anchored.
+- Hero `{typography.display-xxl}` clamps: 136px → 80px → 64px → 48px across the breakpoint ladder.
+- Plan grid steps from 4-up to 2-up at < 1024px to 1-up at < 768px.
+- Product mockup bands maintain full-bleed at every breakpoint; the asset crops inward rather than letterboxing.
+- Sub-nav pills convert from a wrap row to a horizontal scroll-rail at < 768px.
+
+### Image Behavior
+- Phone and card mockups are served at 1.5× and 2× DPR; below 768px the system swaps to a smaller hero crop.
+- Product photography retains its own atmospheric lighting at every breakpoint — no responsive variant assets.
+
+
+<!-- source:end -->
+
+</details>
+
+## 迭代指南
+
+1. 一次聚焦于一个组件。大多数表面共享 `{colors.canvas-dark}` / `{colors.canvas-light}` 组合 `{rounded.full}` 按钮和 `{rounded.lg}` 用来打牌的
+2. 直接引用组件名称和符号( Q)`{colors.primary}`, `{component.plan-card-featured}`, `{rounded.lg}`)——不要用句子解释.
+3. 运行 `npx @google/design.md lint DESIGN.md` 编辑后; 孤箱警告会抓住未使用的条目。
+4. 添加新的变体作为单独的条目( Q) :`-pressed`, `-featured`, `-disabled`)——不要用散文埋没.
+5. 默认体型为 `{typography.body-md}` (Inter 400 ; 达到 `{typography.body-md-bold}` 仅强调强调。
+6. 保留 `{colors.primary}` 稀有——如果每个视图中出现一个以上的钴紫素元素,则询问是否应该降到 `{component.plan-card}` (`{colors.surface-elevated}`而不是这样。
+
+
+<details>
+<summary>英文原文</summary>
+
+<!-- source:body -->
+## Iteration Guide
+
+1. Focus on ONE component at a time. Most surfaces share the `{colors.canvas-dark}` / `{colors.canvas-light}` pair with `{rounded.full}` for buttons and `{rounded.lg}` for cards.
+2. Reference component names and tokens directly (`{colors.primary}`, `{component.plan-card-featured}`, `{rounded.lg}`) — do not paraphrase.
+3. Run `npx @google/design.md lint DESIGN.md` after edits; orphaned-tokens warnings will catch unused entries.
+4. Add new variants as separate entries (`-pressed`, `-featured`, `-disabled`) — do not bury them in prose.
+5. Default body type to `{typography.body-md}` (Inter 400 with positive tracking); reach for `{typography.body-md-bold}` only on emphasis.
+6. Keep `{colors.primary}` scarce — if more than one cobalt-violet element appears per viewport, ask whether one should drop to `{component.plan-card}` (`{colors.surface-elevated}`) instead.
+
+
+<!-- source:end -->
+
+</details>
+
+## 已知缺口
+
+- Pressed/active visual states are documented for `button-primary-pressed` only; other components rely on focus-ring (browser default) for interactive feedback.
+- 登录的应用表面(交易,转账,账户设置)超出了范围——只有公共营销布条有文献记载.
+- 宽强调色调色板( Name`{colors.accent-teal}` 结束 `{colors.accent-brown}`)从提取的代号集中捕捉,但产品插图内部的确切使用量因市场和产品线而异;文件按每个喷雾而不是作为系统按钮.
+- 移动应用截图艺术方向(手机贝子,状态栏)是产品-摄影领域,没有标准化地作为设计标志.
+
+<details>
+<summary>英文原文</summary>
+
+<!-- source:body -->
+## Known Gaps
+
+- Pressed/active visual states are documented for `button-primary-pressed` only; other components rely on focus-ring (browser default) for interactive feedback.
+- Logged-in app surfaces (transactions, transfers, account settings) are out of scope — only the public marketing canvas is documented.
+- The wide accent palette (`{colors.accent-teal}` through `{colors.accent-brown}`) is captured from the extracted token set, but exact usage inside product illustrations varies per market and product line; document per-illustration rather than as system buttons.
+- Mobile-app screenshot art direction (phone bezels, status bars) is product-photography territory and not standardised as design tokens.
+
+<!-- source:end -->
+
+</details>
+
+## 设计词元原值
+
+Revolut's marketing surfaces pair a stark black canvas with the brand's cobalt-violet (`#494fdf`) and a wide accent palette of deep, fully-saturated product colours — teal, light-blue, deep pink, light-green, warning orange. The system reads as fintech-meets-product-brochure: oversized 80px–136px Aeonik Pro display headlines, generous whitespace, photography-led hero bands, and full-width product mockups (cards, phones, terminals) shown as hero objects inside near-black sections. Most surfaces are either black or off-white; pill-shaped buttons and rounded-12/20px content cards carry the consumer-financial-app feel without crossing into playful territory.
+
+```yaml
+---
+version: alpha
+name: Revolut-design-analysis
+description: |
+  Revolut's marketing surfaces pair a stark black canvas with the brand's
+  cobalt-violet (`#494fdf`) and a wide accent palette of deep, fully-saturated
+  product colours — teal, light-blue, deep pink, light-green, warning orange.
+  The system reads as fintech-meets-product-brochure: oversized 80px–136px
+  Aeonik Pro display headlines, generous whitespace, photography-led hero
+  bands, and full-width product mockups (cards, phones, terminals) shown as
+  hero objects inside near-black sections. Most surfaces are either black or
+  off-white; pill-shaped buttons and rounded-12/20px content cards carry the
+  consumer-financial-app feel without crossing into playful territory.
+
+colors:
+  primary: "#494fdf"
+  primary-bright: "#4f55f1"
+  primary-deep: "#3a40c4"
+  on-primary: "#ffffff"
+  ink: "#191c1f"
+  body: "#1f2226"
+  charcoal: "#3a3d40"
+  mute: "#505a63"
+  ash: "#5c5e60"
+  stone: "#8d969e"
+  faint: "#c9c9cd"
+  on-dark: "#ffffff"
+  on-dark-mute: "rgba(255,255,255,0.72)"
+  canvas-light: "#ffffff"
+  canvas-dark: "#000000"
+  surface-soft: "#f4f4f4"
+  surface-card: "#ffffff"
+  surface-deep: "#0a0a0a"
+  surface-elevated: "#16181a"
+  hairline-light: "#e2e2e7"
+  hairline-dark: "rgba(255,255,255,0.12)"
+  hairline-strong: "#191c1f"
+  divider-soft: "rgba(255,255,255,0.06)"
+  accent-teal: "#00a87e"
+  accent-blue-link: "#376cd5"
+  accent-light-blue: "#007bc2"
+  accent-light-green: "#428619"
+  accent-green-text: "#006400"
+  accent-yellow: "#b09000"
+  accent-warning: "#ec7e00"
+  accent-pink: "#e61e49"
+  accent-danger: "#e23b4a"
+  accent-deep-red: "#8b0000"
+  accent-brown: "#936d62"
+  link: "#376cd5"
+
+typography:
+  display-xxl:
+    fontFamily: Aeonik Pro
+    fontSize: 136px
+    fontWeight: 500
+    lineHeight: 1.0
+    letterSpacing: -2.72px
+  display-xl:
+    fontFamily: Aeonik Pro
+    fontSize: 80px
+    fontWeight: 500
+    lineHeight: 1.0
+    letterSpacing: -0.8px
+  display-lg:
+    fontFamily: Aeonik Pro
+    fontSize: 48px
+    fontWeight: 500
+    lineHeight: 1.21
+    letterSpacing: -0.48px
+  display-md:
+    fontFamily: Aeonik Pro
+    fontSize: 40px
+    fontWeight: 500
+    lineHeight: 1.2
+    letterSpacing: -0.4px
+  heading-lg:
+    fontFamily: Aeonik Pro
+    fontSize: 32px
+    fontWeight: 500
+    lineHeight: 1.19
+    letterSpacing: -0.32px
+  heading-md:
+    fontFamily: Aeonik Pro
+    fontSize: 24px
+    fontWeight: 500
+    lineHeight: 1.33
+    letterSpacing: 0
+  heading-sm:
+    fontFamily: Aeonik Pro
+    fontSize: 20px
+    fontWeight: 500
+    lineHeight: 1.4
+    letterSpacing: 0
+  body-lg:
+    fontFamily: Inter
+    fontSize: 18px
+    fontWeight: 400
+    lineHeight: 1.56
+    letterSpacing: -0.09px
+  body-md:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: 400
+    lineHeight: 1.5
+    letterSpacing: 0.24px
+  body-md-bold:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: 600
+    lineHeight: 1.5
+    letterSpacing: 0.16px
+  body-sm:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: 400
+    lineHeight: 1.43
+  button-lg:
+    fontFamily: Aeonik Pro
+    fontSize: 20px
+    fontWeight: 500
+    lineHeight: 1.4
+  button-md:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: 600
+    lineHeight: 1.5
+    letterSpacing: 0.24px
+  button-sm:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: 600
+    lineHeight: 1.43
+  caption:
+    fontFamily: Inter
+    fontSize: 13px
+    fontWeight: 400
+    lineHeight: 1.4
+  link-emph:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: 700
+    lineHeight: 1.5
+    letterSpacing: 0.24px
+
+rounded:
+  none: 0px
+  sm: 8px
+  md: 12px
+  lg: 20px
+  xl: 28px
+  full: 9999px
+
+spacing:
+  xxs: 4px
+  xs: 6px
+  sm: 8px
+  md: 14px
+  lg: 16px
+  xl: 24px
+  xxl: 32px
+  xxxl: 48px
+  block: 80px
+  section: 88px
+  band: 120px
+
+components:
+  button-primary:
+    backgroundColor: "{colors.canvas-light}"
+    textColor: "{colors.canvas-dark}"
+    typography: "{typography.button-md}"
+    rounded: "{rounded.full}"
+    padding: 14px 28px
+    height: 48px
+  button-primary-pressed:
+    backgroundColor: "{colors.faint}"
+    textColor: "{colors.canvas-dark}"
+    typography: "{typography.button-md}"
+    rounded: "{rounded.full}"
+  button-dark:
+    backgroundColor: "{colors.canvas-dark}"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.button-md}"
+    rounded: "{rounded.full}"
+    padding: 14px 28px
+    height: 48px
+  button-soft:
+    backgroundColor: "{colors.surface-soft}"
+    textColor: "{colors.ink}"
+    typography: "{typography.button-md}"
+    rounded: "{rounded.full}"
+    padding: 14px 28px
+    height: 48px
+  button-outline-light:
+    backgroundColor: "{colors.canvas-light}"
+    textColor: "{colors.ink}"
+    typography: "{typography.button-md}"
+    rounded: "{rounded.full}"
+    padding: 13px 27px
+    height: 48px
+  button-outline-dark:
+    backgroundColor: "{colors.canvas-dark}"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.button-md}"
+    rounded: "{rounded.full}"
+    padding: 13px 27px
+    height: 48px
+  button-pill-sm:
+    backgroundColor: "{colors.surface-soft}"
+    textColor: "{colors.ink}"
+    typography: "{typography.button-sm}"
+    rounded: "{rounded.full}"
+    padding: 8px 16px
+    height: 36px
+  text-input:
+    backgroundColor: "{colors.canvas-light}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.md}"
+    padding: 14px 16px
+    height: 56px
+  hero-band-dark:
+    backgroundColor: "{colors.canvas-dark}"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.display-xxl}"
+    rounded: "{rounded.none}"
+    padding: 88px 24px
+  hero-band-photo:
+    backgroundColor: "{colors.canvas-dark}"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.display-xl}"
+    rounded: "{rounded.none}"
+    padding: 0
+  feature-card-light:
+    backgroundColor: "{colors.canvas-light}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.lg}"
+    padding: 32px
+  feature-card-dark:
+    backgroundColor: "{colors.surface-elevated}"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.lg}"
+    padding: 32px
+  plan-card:
+    backgroundColor: "{colors.surface-elevated}"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.lg}"
+    padding: 32px
+  plan-card-featured:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.on-primary}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.lg}"
+    padding: 32px
+  product-mockup:
+    backgroundColor: "{colors.canvas-dark}"
+    textColor: "{colors.on-dark}"
+    rounded: "{rounded.xl}"
+    padding: 48px
+  download-tile:
+    backgroundColor: "{colors.surface-soft}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body-sm}"
+    rounded: "{rounded.md}"
+    padding: 12px 20px
+    height: 56px
+  badge-tag:
+    backgroundColor: "{colors.surface-soft}"
+    textColor: "{colors.ink}"
+    typography: "{typography.caption}"
+    rounded: "{rounded.full}"
+    padding: 4px 12px
+  badge-feature:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.on-primary}"
+    typography: "{typography.caption}"
+    rounded: "{rounded.full}"
+    padding: 4px 12px
+  nav-bar:
+    backgroundColor: "{colors.canvas-dark}"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.button-md}"
+    rounded: "{rounded.none}"
+    height: 64px
+  sub-nav-pill:
+    backgroundColor: "{colors.surface-elevated}"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.button-sm}"
+    rounded: "{rounded.full}"
+    padding: 8px 16px
+  footer:
+    backgroundColor: "{colors.canvas-dark}"
+    textColor: "{colors.on-dark-mute}"
+    typography: "{typography.body-sm}"
+    rounded: "{rounded.none}"
+    padding: 80px 24px
+---
+```

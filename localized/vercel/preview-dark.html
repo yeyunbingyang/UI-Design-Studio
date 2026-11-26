@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/><title>黑白细线技术网格</title><meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><style>
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Geist','Inter','Helvetica Neue',Arial,sans-serif;background:#0a0a0a;color:#ffffff;-webkit-font-smoothing:antialiased;}
+  .nav{padding:0 48px;height:64px;background:#0a0a0a;border-bottom:1px solid #2e2e2e;position:sticky;top:0;z-index:50;}
+  .nav-brand{font-weight:700;font-size:16px;}
+  .nav-links{list-style:none;display:flex;gap:28px;margin:0;padding:0;font-size:15px;font-weight:500;}
+  .nav-cta{background:#ffffff;color:#171717;border:2px solid #ffffff;border-radius:100px;padding:8px 22px;font-weight:600;font-size:15px;cursor:pointer;font-family:inherit;}
+  .hero{padding:96px 48px;background:#0a0a0a;max-width:1440px;margin:0 auto;display:block;}
+  .hero-content{max-width:1200px;}
+  .hero h1{font-family:'Geist','Inter','Helvetica Neue',Arial,sans-serif;font-size:72px;font-weight:600;line-height:1.05;color:#ffffff;margin:0 0 32px;letter-spacing:-1.3px;}
+  .hero p{font-size:19px;color:#a1a1a1;max-width:840px;margin:0 0 36px;line-height:1.5;}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+  .btn-primary{background:#ffffff;color:#171717;border:2px solid #ffffff;border-radius:100px;height:48px;padding:0 27px;font-size:16px;font-weight:600;cursor:pointer;font-family:inherit;display:inline-flex;align-items:center;}
+  .btn-secondary{background:transparent;color:#ffffff;border:2px solid #ffffff;border-radius:100px;height:48px;padding:0 27px;font-size:16px;font-weight:600;cursor:pointer;font-family:inherit;display:inline-flex;align-items:center;}
+  section{padding:80px 48px;max-width:1440px;margin:0 auto;}
+  .section-eyebrow{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#a1a1a1;margin-bottom:8px;}
+  .section-heading{font-family:'Geist','Inter','Helvetica Neue',Arial,sans-serif;font-size:36px;font-weight:600;letter-spacing:-1px;margin:0 0 32px;}
+  .palette-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;}
+  .swatch{border:1px solid #2e2e2e;border-radius:8px;overflow:hidden;}
+  .swatch-fill{height:90px;}
+  .swatch-meta{padding:12px;}
+  .swatch-name{font-weight:600;font-size:14px;margin:0 0 2px;}
+  .swatch-hex{font-family:var(--font-mono,monospace);font-size:12px;color:#a1a1a1;margin:0 0 6px;}
+  .swatch-role{font-size:12px;color:#a1a1a1;margin:0;line-height:1.4;}
+  .type-row{display:grid;grid-template-columns:240px 1fr;gap:24px;padding:18px 0;border-top:1px solid #2e2e2e;align-items:baseline;}
+  .type-meta{font-family:var(--font-mono,monospace);font-size:11px;color:#a1a1a1;line-height:1.5;}
+  .button-grid,.card-grid,.form-grid,.elevation-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;}
+  .demo-card{border:1px solid #2e2e2e;border-radius:12px;padding:24px;background:#171717;}
+  .label{font-size:12px;color:#a1a1a1;display:block;margin-bottom:12px;font-weight:600;}
+  .feature-card{background:#171717;border:1px solid #2e2e2e;border-radius:12px;padding:24px;}
+  .feature-card h4{margin:0 0 8px;font-size:19px;font-weight:600;}
+  .feature-card p{margin:0;color:#a1a1a1;font-size:14px;line-height:1.5;}
+  .ex-input-demo{width:100%;background:#171717;border:1px solid #171717;color:#ffffff;padding:12px 14px;font-family:inherit;font-size:15px;border-radius:0;}
+  .spacing-row,.radius-row{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end;}
+  .spacing-box{background:#ffffff;height:40px;border-radius:6px;}
+  .spacing-label,.radius-label{font-family:var(--font-mono,monospace);font-size:11px;color:#a1a1a1;margin-top:6px;text-align:center;}
+  .radius-box{width:90px;height:90px;background:#171717;border:2px solid #ffffff;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono,monospace);font-size:11px;}
+  .elev-card{background:#171717;border:1px solid #2e2e2e;border-radius:12px;padding:24px;font-size:13px;color:#a1a1a1;}
+  .elev-1{border:1px solid #2e2e2e;}
+  .elev-2{box-shadow:var(--shadow-md);border:none;}
+  .responsive-table{width:100%;border-collapse:collapse;font-size:14px;}
+  .responsive-table th,.responsive-table td{text-align:left;padding:12px 14px;border-bottom:1px solid #2e2e2e;}
+  .responsive-table th{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#a1a1a1;}
+  .device-ladder{display:flex;gap:12px;align-items:flex-end;margin-top:24px;flex-wrap:wrap;}
+  .device-box{background:#171717;border:1px solid #171717;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;color:#a1a1a1;}
+  .footer{padding:32px 48px;border-top:1px solid #2e2e2e;font-size:13px;color:#a1a1a1;text-align:center;}
+  .footer a{color:inherit;}
+  @media (max-width:1024px){section{padding:64px 32px;}.section-heading{font-size:28px;}.nav>:last-child{display:none;}.type-row{grid-template-columns:1fr;gap:8px;}}
+  @media (max-width:720px){.nav{padding:12px 20px;height:auto;min-height:56px;}.nav-links{display:none;}.hero{padding:48px 20px;}.hero h1{font-size:38px;letter-spacing:-1px;}.hero p{font-size:16px;}section{padding:48px 20px;}.section-heading{font-size:24px;}.palette-grid,.button-grid,.card-grid,.form-grid,.elevation-grid{grid-template-columns:1fr !important;gap:16px;}.footer{padding:24px 16px;}}
+  /* getdesign.md nav additions */
+  .nav-left { display: flex; align-items: center; gap: 20px; }
+  .nav-brand-link,.nav-brand-link:link,.nav-brand-link:visited,.nav-brand-link:hover,.nav-brand-link:active { text-decoration: none; color: inherit; }
+  .nav-github,.nav-github:link,.nav-github:visited,.nav-github:hover,.nav-github:active { display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:600; color:inherit; text-decoration:none; padding:5px 10px; border:1px solid rgba(128,128,128,0.3); border-radius:6px; opacity:0.75; transition:opacity 200ms ease,border-color 200ms ease; font-family:inherit; line-height:1; white-space:nowrap; }
+  .nav-github:hover { opacity:1; border-color:rgba(128,128,128,0.55); }
+  .nav-github svg { display:block; flex-shrink:0; }
+  /* getdesign.md nav centering */
+  .nav { display:grid; grid-template-columns:1fr auto 1fr; align-items:center; }
+  .nav > .nav-left { justify-self:start; }
+  .nav > .nav-links { justify-self:center; }
+  .nav > :last-child { justify-self:end; }
+  :root{
+    --color-primary:#ffffff; --color-primary-foreground:#171717;
+    --color-foreground:#ffffff; --color-foreground-muted:#a1a1a1; --color-foreground-tertiary:#a1a1a1;
+    --color-foreground-disabled:#2e2e2e; --color-foreground-on-primary:#0a0a0a;
+    --color-canvas:#0a0a0a; --color-canvas-soft:#171717; --color-surface-elevated:#171717;
+    --color-border:#2e2e2e; --color-border-soft:#2e2e2e;
+    --color-accent:#0070f3; --color-accent-soft:rgba(0,112,243,0.22);
+    --color-success:#a1a1a1; --color-warning:#a1a1a1; --color-danger:#ff6166;
+    --color-silver:#a1a1a1; --color-avatar-fill:rgba(128,128,128,0.16); --color-chip-bg:rgba(128,128,128,0.12);
+    --font-display:'Geist','Inter','Helvetica Neue',Arial,sans-serif; --font-sans:'Geist','Inter',sans-serif; --font-mono:'Geist','Inter',sans-serif;
+    --shadow-md:0 8px 24px rgba(0,0,0,0.10); --shadow-lg:0 16px 40px rgba(0,0,0,0.16);
+  }
+</style></head><body>
+
+<div class="hero"><div class="hero-content">
+<h1>黑白细线技术网格</h1>
+<p>黑白对比、Geist 字体和精确的线条构成面向开发者的界面。</p>
+<div class="hero-actions"><button class="btn-primary">开始部署</button><button class="btn-secondary">找个Demo来</button></div>
+</div></div>
+<section><span class="section-eyebrow">01——基金会</span><h2 class="section-heading">配色</h2><div class="palette-grid"><div class="swatch"><div class="swatch-fill" style="background:#ffffff;"></div><div class="swatch-meta"><p class="swatch-name">文字色 填充</p><p class="swatch-hex">#ffffff</p><p class="swatch-role">在深色模式中,初级行动按钮反转一个白色的胶囊形.</p></div></div><div class="swatch"><div class="swatch-fill" style="background:#ededed;"></div><div class="swatch-meta"><p class="swatch-name">前景</p><p class="swatch-hex">#ededed</p><p class="swatch-role">近黑色上的标题和高强调文本.</p></div></div><div class="swatch"><div class="swatch-fill" style="background:#a1a1a1;"></div><div class="swatch-meta"><p class="swatch-name">静音</p><p class="swatch-hex">#a1a1a1</p><p class="swatch-role">下划线支持文本。</p></div></div><div class="swatch"><div class="swatch-fill" style="background:#2e2e2e;"></div><div class="swatch-meta"><p class="swatch-name">细边框</p><p class="swatch-hex">#2e2e2e</p><p class="swatch-role">1px 边界和暗色上的分割符。</p></div></div><div class="swatch"><div class="swatch-fill" style="background:#0a0a0a;"></div><div class="swatch-meta"><p class="swatch-name">页面底色</p><p class="swatch-hex">#0a0a0a</p><p class="swatch-role">近黑色页面背景.</p></div></div><div class="swatch"><div class="swatch-fill" style="background:#171717;"></div><div class="swatch-meta"><p class="swatch-name">界面表面</p><p class="swatch-hex">#171717</p><p class="swatch-role">提高卡片/提升表面.</p></div></div><div class="swatch"><div class="swatch-fill" style="background:#0070f3;"></div><div class="swatch-meta"><p class="swatch-name">Vercel 蓝色</p><p class="swatch-hex">#0070f3</p><p class="swatch-role">链接,焦点,亮点.</p></div></div><div class="swatch"><div class="swatch-fill" style="background:#7928ca;"></div><div class="swatch-meta"><p class="swatch-name">紫罗兰</p><p class="swatch-hex">#7928ca</p><p class="swatch-role">渐渐停止 / 重音.</p></div></div><div class="swatch"><div class="swatch-fill" style="background:#50e3c2;"></div><div class="swatch-meta"><p class="swatch-name">青色</p><p class="swatch-hex">#50e3c2</p><p class="swatch-role">渐渐停止 / 重音.</p></div></div><div class="swatch"><div class="swatch-fill" style="background:#ff0080;"></div><div class="swatch-meta"><p class="swatch-name">粉红色</p><p class="swatch-hex">#ff0080</p><p class="swatch-role">渐渐停止 / 重音.</p></div></div></div></section>
+<section><span class="section-eyebrow">02——基金会</span><h2 class="section-heading">字体排版</h2><p style="color:#a1a1a1;margin:-16px 0 28px;max-width:720px;">Geist Sans for UI and tightly-tracked display type, Geist Mono for code and uppercase section eyebrows (Inter shown as substitute). Hierarchy is built from size + negative tracking; weight is binary — 600 headings, 500 buttons, 400 body.</p><div class="type-row"><div class="type-meta">display-xl<br/>48px · 600 · 小时 48px · 已经 -2.4px</div><div style="font-family:'Geist','Inter','Helvetica Neue',Arial,sans-serif;font-size:64px;font-weight:600;line-height:48px;letter-spacing:-2.4px;color:#ededed;">建和部署在AI云上.</div></div><div class="type-row"><div class="type-meta">heading-lg<br/>32px · 600 · 小时 40px · 已经 -1.28px</div><div style="font-family:'Geist','Inter','Helvetica Neue',Arial,sans-serif;font-size:32px;font-weight:600;line-height:40px;letter-spacing:-1.28px;color:#ededed;">你的应用软件,交付。</div></div><div class="type-row"><div class="type-meta">heading-md<br/>20px · 600 · 小时 28px · 已经 -0.4px</div><div style="font-family:'Geist','Inter','Helvetica Neue',Arial,sans-serif;font-size:20px;font-weight:600;line-height:28px;letter-spacing:-0.4px;color:#ededed;">可制式商业</div></div><div class="type-row"><div class="type-meta">label-sm<br/>14px · 500 · 小时 20px · 已经 -0.28px</div><div style="font-family:'Geist','Inter',sans-serif;font-size:14px;font-weight:500;line-height:20px;letter-spacing:-0.28px;color:#ededed;">框架</div></div><div class="type-row"><div class="type-meta">mono-eyebrow<br/>12px · 500 · 小时 16px · 已经 0</div><div style="font-family:'Geist Mono',ui-monospace,Menlo,monospace;font-size:12px;font-weight:500;line-height:16px;letter-spacing:0;color:#ededed;text-transform:uppercase;">· 预 裁 船</div></div><div class="type-row"><div class="type-meta">body-lg<br/>16px · 400 · 小时 24px · 已经 0</div><div style="font-family:'Geist','Inter',sans-serif;font-size:16px;font-weight:400;line-height:24px;letter-spacing:0;color:#ededed;">立即部署第一个配置零的应用程序。</div></div><div class="type-row"><div class="type-meta">body-md<br/>14px · 400 · 小时 20px · 已经 0</div><div style="font-family:'Geist','Inter',sans-serif;font-size:14px;font-weight:400;line-height:20px;letter-spacing:0;color:#ededed;">Vercel提供开发者工具和云基础设施,以建设,规模化,并保障一个更快,更个性化的网络.</div></div><div class="type-row"><div class="type-meta">body-sm<br/>12px · 400 · 小时 16px · 已经 0</div><div style="font-family:'Geist','Inter',sans-serif;font-size:12px;font-weight:400;line-height:16px;letter-spacing:0;color:#ededed;">由最佳前锋团队信任.</div></div><div class="type-row"><div class="type-meta">代码<br/>14px · 400 · 小时 20px · 已经 0</div><div style="font-family:'Geist Mono',ui-monospace,Menlo,monospace;font-size:14px;font-weight:400;line-height:20px;letter-spacing:0;color:#ededed;">vercel deploy --prod</div></div></section>
+<section><span class="section-eyebrow">03 - 组件</span><h2 class="section-heading">按钮样式</h2><div class="button-grid"><div class="demo-card"><span class="label">button-primary 黑胶囊形; 100px</span><button class="btn-primary" style="height:40px;border-radius:100px;padding:0 18px;">开始部署</button><p style="font-size:12px;color:#a1a1a1;margin:12px 0 0;">签名营销CTA——全圆墨片,白牌.</p></div><div class="demo-card"><span class="label">button-secondary · 白色 胶囊形</span><button class="btn-secondary" style="height:40px;border-radius:100px;padding:0 18px;">找个Demo来</button><p style="font-size:12px;color:#a1a1a1;margin:12px 0 0;">反转胶囊形——白色填充,文字色标签,细边框边缘.</p></div><div class="demo-card"><span class="label">button-primary-sm 6px 平方</span><button class="btn-primary" style="height:32px;border-radius:6px;padding:0 12px;font-size:14px;">注册</button><p style="font-size:12px;color:#a1a1a1;margin:12px 0 0;">导航/app 行动按钮——紧凑的6px方块,而非胶囊形.（原文参数：6px）</p></div><div class="demo-card"><span class="label">button-category-pill · 64px</span><button class="btn-secondary" style="height:32px;border-radius:64px;padding:0 16px;font-size:14px;border-color:#2e2e2e;">AI Apps 应用程序</button><p style="font-size:12px;color:#a1a1a1;margin:12px 0 0;">Category-tab 胶囊形 中超联赛冠军.</p></div><div class="demo-card"><span class="label">链接- 默认</span><div style="display:flex;gap:16px;font-size:15px;font-weight:500;"><a href="#" style="color:#0070f3;">文档</a><a href="#" style="color:#0070f3;text-decoration:underline;">定价</a></div></div></div></section>
+<section><span class="section-eyebrow">04 - 组件</span><h2 class="section-heading">卡片与表面</h2><div class="card-grid"><div class="feature-card"><h4>feature-card</h4><p>白色表面 1px 细边框 12px角. 工作马格瓦——经常持有节点图或代码插图.（原文参数：12px）</p></div><div class="feature-card" style="box-shadow:var(--shadow-md);"><h4>feature-card-elevated</h4><p>同样的铬在细层,非常低的阿尔法阴影上被抬起——菜单和特色瓷砖.</p></div><div class="feature-card" style="background:#ffffff;color:#171717;border:none;"><h4 style="color:#171717;">文字色 表面</h4><p style="color:#171717;opacity:0.7;">近黑色 文字色用于行动按钮波段和倒置的特色级.</p></div></div></section>
+<section><span class="section-eyebrow">05 - 组件</span><h2 class="section-heading">表单控件</h2><div class="form-grid">
+<div class="demo-card"><span class="label">text-input · 6px</span><input class="ex-input-demo" placeholder="you@example.com" style="border-radius:6px;"/><p style="font-size:12px;color:#a1a1a1;margin:12px 0 0;">白田,1px 细边框,紧凑的6px角.（原文参数：6px）</p></div>
+<div class="demo-card"><span class="label">code-block · Geist Mono</span><textarea class="ex-input-demo" placeholder="vercel deploy --prod" rows="3" style="border-radius:12px;font-family:'Geist Mono',ui-monospace,Menlo,monospace;"></textarea></div>
+</div></section>
+<section><span class="section-eyebrow">06——基金会</span><h2 class="section-heading">间距层级</h2><p style="color:#a1a1a1;margin:-16px 0 28px;">4px 基础单位 中超联赛冠军. 卡片内饰坐落在lg-xl(24–32px); 节段运行 4单位:百分百96px至科( )128px).（原文参数：96px）</p><div class="spacing-row"><div><div class="spacing-box" style="width:4px;"></div><div class="spacing-label">xxx 4px 数据</div></div><div><div class="spacing-box" style="width:8px;"></div><div class="spacing-label">xs 8px 数据</div></div><div><div class="spacing-box" style="width:12px;"></div><div class="spacing-label">sm 12px 数据</div></div><div><div class="spacing-box" style="width:16px;"></div><div class="spacing-label">md 16px 数据</div></div><div><div class="spacing-box" style="width:24px;"></div><div class="spacing-label">24px 高压压压轴</div></div><div><div class="spacing-box" style="width:32px;"></div><div class="spacing-label">□ 32px</div></div><div><div class="spacing-box" style="width:40px;"></div><div class="spacing-label">2· 妇女 40px</div></div><div><div class="spacing-box" style="width:64px;"></div><div class="spacing-label">3· 妇女 64px</div></div><div><div class="spacing-box" style="width:96px;"></div><div class="spacing-label">4· 妇女 96px</div></div><div><div class="spacing-box" style="width:128px;"></div><div class="spacing-label">· 128px</div></div></div></section>
+<section><span class="section-eyebrow">07——基金会</span><h2 class="section-heading">圆角</h2><p style="color:#a1a1a1;margin:-16px 0 28px;">双模式: 紧 6px 功能性铬的方形(导航按钮、输入),全药(100px用于销售CTA和 64px 分类标签,使用 12–16px 内容卡在中间。（原文参数：100px）</p><div class="radius-row"><div><div class="radius-box" style="border-radius:0px;">0px</div><div class="radius-label">无 0px</div></div><div><div class="radius-box" style="border-radius:6px;">6px</div><div class="radius-label">sm 6px 数据</div></div><div><div class="radius-box" style="border-radius:12px;">12px</div><div class="radius-label">md 12px 数据</div></div><div><div class="radius-box" style="border-radius:16px;">16px</div><div class="radius-label">16px 高压压压轴</div></div><div><div class="radius-box" style="border-radius:32px;">64</div><div class="radius-label">pill-category · 64px</div></div><div><div class="radius-box" style="border-radius:45px;">100</div><div class="radius-label">胶囊形 100px</div></div><div><div class="radius-box" style="border-radius:45px;">∞</div><div class="radius-label">9999px 数据</div></div></div></section>
+<section><span class="section-eyebrow">08——基金会</span><h2 class="section-heading">层次与阴影</h2><div class="elevation-grid"><div class="elev-card elev-1">职等 0 - 平稳, 1px 唯细边线. 默认功能卡片,输入,分隔符.</div><div class="elev-card elev-2">Level 2 — finely-layered, very-low-alpha shadow stack (never one heavy drop). Menus, modals, tooltips.</div></div></section>
+<section><span class="section-eyebrow">09 反应性</span><h2 class="section-heading">响应式布局</h2>
+<table class="responsive-table"><thead><tr><th>名称</th><th>宽度</th><th>主要变化</th></tr></thead><tbody>
+<tr><td>手机端</td><td>&lt; 768px Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q</td><td>单列; 导航 → 汉堡; CTAs + 定价级 堆叠全宽</td></tr>
+<tr><td>平板</td><td>768–1023px</td><td>网格向2-up / 1-up 倾斜; 导航凝固</td></tr>
+<tr><td>笔记本</td><td>1024–1279px</td><td>紧固沟渠;3-col网格保留</td></tr>
+<tr><td>桌面端</td><td>≥ 1280px</td><td>Full multi-column grids; centred ~1200px column</td></tr></tbody></table>
+<div class="device-ladder">
+<div class="device-box" style="width:60px;height:110px;">375</div>
+<div class="device-box" style="width:120px;height:110px;">768</div>
+<div class="device-box" style="width:170px;height:110px;">1024</div>
+<div class="device-box" style="width:220px;height:110px;">1280</div>
+<div class="device-box" style="width:280px;height:110px;">1440</div>
+</div>
+<p style="color:#a1a1a1;margin-top:24px;font-size:14px;"><strong style="color:#ffffff;">触控区域: 高尔夫球队:</strong> 胶囊形 CTA 和导航按钮清除 44×44 WCAG-AAA通过线高直线驱动高度. <strong style="color:#ededed;">折叠 :</strong> 导航崩溃到菜单;发卡网格重流到一个列;代码编辑器和节点图示缩放或滚动;定价级堆栈.</p>
+</section>
+</body></html>

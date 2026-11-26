@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>全屏摄影与精简控件</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --electric-blue: #3E6AE1;
+    --pure-white: #FFFFFF;
+    --carbon-dark: #171A20;
+    --graphite: #393C41;
+    --pewter: #5C5E62;
+    --silver-fog: #8E8E8E;
+    --cloud-gray: #2A2D33;
+    --pale-silver: #3A3D43;
+    --light-ash: #1E2127;
+    --surface-dark: #0D0F13;
+    --text-primary: #E8E8E8;
+    --text-secondary: #B0B2B5;
+    --text-muted: #8E8E8E;
+    --border-dark: #2A2D33;
+    --font-display: 'Inter', -apple-system, Arial, sans-serif;
+    --font-text: 'Inter', -apple-system, Arial, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font-text);
+    background: var(--carbon-dark);
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.43;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* DARK MODE BADGE */
+  .dark-badge {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 200;
+    background: var(--electric-blue);
+    color: var(--pure-white);
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 40px;
+    background: var(--carbon-dark);
+    min-height: 56px;
+    border-bottom: 1px solid var(--border-dark);
+  }
+  .nav-brand {
+    font-family: var(--font-text);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    text-decoration: none;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-family: var(--font-text);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 4px 16px;
+    border-radius: 4px;
+    min-height: 32px;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.33s, background-color 0.33s;
+  }
+  .nav-links a:hover { background: var(--light-ash); }
+  .nav-cta {
+    background: var(--electric-blue);
+    color: var(--pure-white) !important;
+    padding: 8px 24px;
+    border-radius: 4px;
+    font-family: var(--font-text);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.33s;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .nav-cta:hover { background: #4A78F0; }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 96px 40px 120px;
+    background: linear-gradient(180deg, #0a0c10 0%, #12151c 30%, #1a1d25 70%, #171A20 100%);
+    text-align: center;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.2));
+    pointer-events: none;
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: normal;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+  .hero .subtitle {
+    font-family: var(--font-text);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    line-height: 20px;
+  }
+  .hero .promo {
+    font-family: var(--font-text);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--electric-blue);
+    margin-bottom: 24px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .hero-buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .btn-primary {
+    background: var(--electric-blue);
+    color: var(--pure-white);
+    border: 3px solid transparent;
+    border-radius: 4px;
+    padding: 4px 24px;
+    font-family: var(--font-text);
+    font-size: 14px;
+    font-weight: 500;
+    min-height: 40px;
+    min-width: 200px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color 0.33s, background-color 0.33s, color 0.33s, box-shadow 0.25s;
+    text-decoration: none;
+  }
+  .btn-primary:hover { background: #4A78F0; }
+  .btn-secondary {
+    background: var(--light-ash);
+    color: var(--text-primary);
+    border: 3px solid transparent;
+    border-radius: 4px;
+    padding: 4px 24px;
+    font-family: var(--font-text);
+    font-size: 14px;
+    font-weight: 500;
+    min-height: 40px;
+    min-width: 160px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color 0.33s, background-color 0.33s, color 0.33s, box-shadow 0.25s;
+    text-decoration: none;
+  }
+  .btn-secondary:hover { background: var(--pale-silver); }
+
+  /* SECTIONS */
+  .section {
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .section-desc {
+    font-family: var(--font-text);
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    line-height: 20px;
+  }
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--border-dark);
+    margin: 0 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 1. COLOR PALETTE */
+  .color-group-label {
+    font-family: var(--font-text);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    margin-top: 24px;
+  }
+  .color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .color-swatch {
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .color-swatch .swatch-block {
+    height: 80px;
+    border-radius: 4px 4px 0 0;
+  }
+  .color-swatch .swatch-info {
+    padding: 12px;
+    background: var(--light-ash);
+    border: 1px solid var(--border-dark);
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+  }
+  .color-swatch .swatch-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+  }
+  .color-swatch .swatch-hex {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+    font-family: monospace;
+  }
+  .color-swatch .swatch-role {
+    font-size: 11px;
+    color: var(--pewter);
+    line-height: 1.3;
+  }
+
+  /* 2. TYPOGRAPHY */
+  .type-sample {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-dark);
+  }
+  .type-sample:last-child { border-bottom: none; }
+  .type-label {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-muted);
+    margin-top: 8px;
+    font-family: monospace;
+  }
+
+  /* 3. BUTTONS */
+  .button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .btn-nav {
+    background: transparent;
+    color: var(--text-primary);
+    border: none;
+    border-radius: 4px;
+    padding: 4px 16px;
+    font-family: var(--font-text);
+    font-size: 14px;
+    font-weight: 500;
+    min-height: 32px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.33s, background-color 0.33s;
+  }
+  .btn-nav:hover { background: var(--light-ash); }
+  .btn-text-link {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-family: var(--font-text);
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 4px 0;
+    transition: box-shadow 0.33s, color 0.33s;
+    text-decoration: none;
+  }
+  .btn-text-link:hover {
+    box-shadow: 0 1px 0 var(--text-muted);
+  }
+
+  /* 4. CARDS */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .card {
+    background: var(--light-ash);
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--border-dark);
+  }
+  .card-image {
+    height: 200px;
+    background: var(--surface-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card-image-placeholder {
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--pale-silver);
+    font-family: var(--font-display);
+  }
+  .card-body {
+    padding: 20px;
+    text-align: center;
+  }
+  .card-title {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    font-family: var(--font-text);
+  }
+  .card-links {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+  }
+  .card-links a {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: box-shadow 0.33s, color 0.33s;
+  }
+  .card-links a:hover { box-shadow: 0 1px 0 var(--text-muted); }
+
+  .card-category {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    height: 180px;
+    display: flex;
+    align-items: flex-start;
+    padding: 24px;
+  }
+  .card-category .cat-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--pure-white);
+    position: relative;
+    z-index: 1;
+  }
+
+  /* 5. FORMS */
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+  .form-input {
+    font-family: var(--font-text);
+    font-size: 14px;
+    color: var(--text-primary);
+    background: var(--surface-dark);
+    border: 1px solid var(--pale-silver);
+    border-radius: 4px;
+    padding: 10px 12px;
+    min-height: 40px;
+    outline: none;
+    transition: border-color 0.33s;
+  }
+  .form-input::placeholder { color: var(--pewter); }
+  .form-input:focus { border-color: var(--electric-blue); }
+  .form-input.error { border-color: #E74C3C; }
+  .form-textarea {
+    font-family: var(--font-text);
+    font-size: 14px;
+    color: var(--text-primary);
+    background: var(--surface-dark);
+    border: 1px solid var(--pale-silver);
+    border-radius: 4px;
+    padding: 10px 12px;
+    min-height: 100px;
+    outline: none;
+    resize: vertical;
+    transition: border-color 0.33s;
+  }
+  .form-textarea::placeholder { color: var(--pewter); }
+  .form-textarea:focus { border-color: var(--electric-blue); }
+
+  /* 6. SPACING */
+  .spacing-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+  .spacing-box {
+    height: 32px;
+    background: var(--electric-blue);
+    border-radius: 4px;
+    opacity: 0.6;
+  }
+  .spacing-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: monospace;
+    min-width: 80px;
+  }
+
+  /* 7. RADIUS */
+  .radius-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+  .radius-item {
+    text-align: center;
+  }
+  .radius-box {
+    width: 80px;
+    height: 80px;
+    background: var(--light-ash);
+    border: 2px solid var(--pale-silver);
+    margin-bottom: 8px;
+  }
+  .radius-value {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-primary);
+    font-family: monospace;
+  }
+  .radius-context {
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  /* 8. ELEVATION */
+  .elevation-row {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+  .elevation-card {
+    width: 200px;
+    padding: 24px;
+    border-radius: 4px;
+    text-align: center;
+    background: var(--light-ash);
+  }
+  .elevation-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+  .elevation-desc {
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 40px;
+    text-align: center;
+    border-top: 1px solid var(--border-dark);
+  }
+  footer p {
+    font-size: 12px;
+    color: var(--pewter);
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 28px; line-height: 36px; }
+    .hero-buttons { flex-direction: column; align-items: center; }
+    .btn-primary, .btn-secondary { min-width: 240px; }
+    .color-grid { grid-template-columns: repeat(2, 1fr); }
+    .form-grid { grid-template-columns: 1fr; }
+    .card-grid { grid-template-columns: 1fr; }
+    nav { padding: 12px 20px; }
+    .section { padding: 60px 20px; }
+    .nav-links { display: none; }
+  }
+
+
+  /* Shared VoltAgent footer content */
+  .footer { padding: 64px 48px 40px; text-align: left; color: inherit; background: inherit; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer { padding: 48px 20px 32px; }
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+</head>
+<body>
+<!-- DARK MODE BADGE -->
+<div class="dark-badge">暗色模式</div>
+<!-- NAV -->
+
+<!-- HERO -->
+<section class="hero">
+<h1>全屏摄影与精简控件</h1>
+<p class="promo">大幅汽车摄影占据首屏，导航和按钮保持简洁。画面保留足够空间，让车型与主要操作同时可见。</p>
+<p class="subtitle">一个由DESIGN.md生成的视觉目录——每个符号,每个值,每个设计决定.</p>
+<div class="hero-buttons">
+<a class="btn-primary" href="#">现在排好</a>
+<a class="btn-secondary" href="#">查看目录</a>
+</div>
+</section>
+<hr class="section-divider"/>
+<!-- 1. COLOR PALETTE -->
+<section class="section">
+<h2 class="section-title">配色</h2>
+<p class="section-desc">Tesla的调色板几乎是乙酸盐——一个蓝色,三个灰色,还有白色. 每个表面都是单色的,让摄影占优势.</p>
+<div class="color-group-label">主要</div>
+<div class="color-grid">
+<div class="color-swatch">
+<div class="swatch-block" style="background: #3E6AE1;"></div>
+<div class="swatch-info">
+<div class="swatch-name">电光蓝</div>
+<div class="swatch-hex">#3E6AE1</div>
+<div class="swatch-role">初选 行动按钮 按钮—— 唯一的色调颜色</div>
+</div>
+</div>
+<div class="color-swatch">
+<div class="swatch-block" style="background: #FFFFFF;"></div>
+<div class="swatch-info">
+<div class="swatch-name">纯白色</div>
+<div class="swatch-hex">#FFFFFF</div>
+<div class="swatch-role">背景、表面、次要按钮</div>
+</div>
+</div>
+</div>
+<div class="color-group-label">表面与背景</div>
+<div class="color-grid">
+<div class="color-swatch">
+<div class="swatch-block" style="background: #F4F4F4;"></div>
+<div class="swatch-info">
+<div class="swatch-name">浅灰</div>
+<div class="swatch-hex">#F4F4F4</div>
+<div class="swatch-role">备用表面, 悬浮状态</div>
+</div>
+</div>
+<div class="color-swatch">
+<div class="swatch-block" style="background: #171A20;"></div>
+<div class="swatch-info">
+<div class="swatch-name">碳暗线</div>
+<div class="swatch-hex">#171A20</div>
+<div class="swatch-role">黑暗的表面,首屏的覆盖</div>
+</div>
+</div>
+<div class="color-swatch">
+<div class="swatch-block" style="background: rgba(255,255,255,0.75); border: 1px solid #3A3D43;"></div>
+<div class="swatch-info">
+<div class="swatch-name">冰冻玻璃</div>
+<div class="swatch-hex">rgba(255,255,255,0.75)</div>
+<div class="swatch-role">Nav backdrop-filter on scroll</div>
+</div>
+</div>
+</div>
+<div class="color-group-label">中立文本( T)</div>
+<div class="color-grid">
+<div class="color-swatch">
+<div class="swatch-block" style="background: #171A20;"></div>
+<div class="swatch-info">
+<div class="swatch-name">碳暗线</div>
+<div class="swatch-hex">#171A20</div>
+<div class="swatch-role">标题、导航文本</div>
+</div>
+</div>
+<div class="color-swatch">
+<div class="swatch-block" style="background: #393C41;"></div>
+<div class="swatch-info">
+<div class="swatch-name">石墨灰</div>
+<div class="swatch-hex">#393C41</div>
+<div class="swatch-role">文字,次要内容</div>
+</div>
+</div>
+<div class="color-swatch">
+<div class="swatch-block" style="background: #5C5E62;"></div>
+<div class="swatch-info">
+<div class="swatch-name">锡灰色</div>
+<div class="swatch-hex">#5C5E62</div>
+<div class="swatch-role">三级文本, 子链接</div>
+</div>
+</div>
+<div class="color-swatch">
+<div class="swatch-block" style="background: #8E8E8E;"></div>
+<div class="swatch-info">
+<div class="swatch-name">银雾</div>
+<div class="swatch-hex">#8E8E8E</div>
+<div class="swatch-role">占位符,残疾状态</div>
+</div>
+</div>
+<div class="color-swatch">
+<div class="swatch-block" style="background: #EEEEEE;"></div>
+<div class="swatch-info">
+<div class="swatch-name">云灰色</div>
+<div class="swatch-hex">#EEEEEE</div>
+<div class="swatch-role">边框、 分隔线</div>
+</div>
+</div>
+<div class="color-swatch">
+<div class="swatch-block" style="background: #D0D1D2;"></div>
+<div class="swatch-info">
+<div class="swatch-name">淡银</div>
+<div class="swatch-hex">#D0D1D2</div>
+<div class="swatch-role">乌伊边界、划界</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="section-divider"/>
+<!-- 2. TYPOGRAPHY -->
+<section class="section">
+<h2 class="section-title">字号层级</h2>
+<p class="section-desc">Universal Sans Display for heroes, Universal Sans Text for everything else. Only weights 400 and 500. Shown with Inter as the closest available Google Font substitute.</p>
+<div class="type-sample">
+<div style="font-family: var(--font-display); font-size: 40px; font-weight: 500; line-height: 48px; color: var(--text-primary);">型号 Y</div>
+<div class="type-label">Hero Title — 40px / 500 / 48px line-height / Universal Sans Display</div>
+</div>
+<div class="type-sample">
+<div style="font-family: var(--font-text); font-size: 22px; font-weight: 400; line-height: 20px; color: var(--pure-white); background: var(--surface-dark); padding: 12px 16px; border-radius: 4px; display: inline-block;">0% APR 可用</div>
+<div class="type-label">宣传文本 — 22px / 400 / 通用圣人文本 / 白色在黑暗中</div>
+</div>
+<div class="type-sample">
+<div style="font-family: var(--font-text); font-size: 17px; font-weight: 500; line-height: 20px; color: var(--text-primary);">Model 3</div>
+<div class="type-label">Product Name — 17px / 500 / 20px line-height / Universal Sans Text</div>
+</div>
+<div class="type-sample">
+<div style="font-family: var(--font-text); font-size: 14px; font-weight: 500; line-height: 16.8px; color: var(--text-primary);">车辆充电发现店</div>
+<div class="type-label">Nav Item — 14px / 500 / 16.8px line-height / Universal Sans Text</div>
+</div>
+<div class="type-sample">
+<div style="font-family: var(--font-text); font-size: 14px; font-weight: 400; line-height: 20px; color: var(--text-secondary);">Tesla网站是激进减法的练习——一个数字展示室,其中产品是一切,界面几乎是一无所有.</div>
+<div class="type-label">Body Text — 14px / 400 / 20px line-height / Universal Sans Text</div>
+</div>
+<div class="type-sample">
+<div style="font-family: var(--font-text); font-size: 14px; font-weight: 400; line-height: 20px; color: var(--text-muted);">学习秩序经验</div>
+<div class="type-label">Sub-link — 14px / 400 / 20px line-height / Pewter (#5C5E62)</div>
+</div>
+</section>
+<hr class="section-divider"/>
+<!-- 3. BUTTONS -->
+<section class="section">
+<h2 class="section-title">按钮样式</h2>
+<p class="section-desc">Barely-rounded rectangles (4px radius). One blue for primary, dark surface for secondary, transparent for nav.</p>
+<div class="button-row">
+<a class="btn-primary" href="#">现在排好</a>
+<span style="font-size:12px; color:var(--text-muted); font-family:monospace;">初级——bg #3E6AE1,4px半径,40px高度,200px宽度（原文参数：4px、40px、200px）</span>
+</div>
+<div class="button-row">
+<a class="btn-secondary" href="#">查看目录</a>
+<span style="font-size:12px; color:var(--text-muted); font-family:monospace;">二级——bg暗面,4px半径,40px高度,160px宽度.（原文参数：4px、40px、160px）</span>
+</div>
+<div class="button-row">
+<button class="btn-nav">车辆</button>
+<button class="btn-nav">能源</button>
+<button class="btn-nav">充电</button>
+<span style="font-size:12px; color:var(--text-muted); font-family:monospace;">Nav — transparent bg, 4px radius, 32px height</span>
+</div>
+<div class="button-row">
+<a class="btn-text-link" href="#">学习</a>
+<a class="btn-text-link" href="#">顺序</a>
+<a class="btn-text-link" href="#">经历</a>
+<span style="font-size:12px; color:var(--text-muted); font-family:monospace;">文本链接 — 无 bg, 变色, 悬浮时下划线</span>
+</div>
+</section>
+<hr class="section-divider"/>
+<!-- 4. CARDS -->
+<section class="section">
+<h2 class="section-title">卡片示例</h2>
+<p class="section-desc">车卡片 带有微妙的黑暗边界. 类卡片带有通栏摄影和12px半径.（原文参数：12px）</p>
+<div class="color-group-label">卡片车辆(导航小组)</div>
+<div class="card-grid">
+<div class="card">
+<div class="card-image">
+<span class="card-image-placeholder">S</span>
+</div>
+<div class="card-body">
+<div class="card-title">型号 S</div>
+<div class="card-links">
+<a href="#">学习</a>
+<a href="#">顺序</a>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-image">
+<span class="card-image-placeholder">3</span>
+</div>
+<div class="card-body">
+<div class="card-title">Model 3</div>
+<div class="card-links">
+<a href="#">学习</a>
+<a href="#">顺序</a>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-image">
+<span class="card-image-placeholder">Y</span>
+</div>
+<div class="card-body">
+<div class="card-title">型号 Y</div>
+<div class="card-links">
+<a href="#">学习</a>
+<a href="#">顺序</a>
+</div>
+</div>
+</div>
+</div>
+<div class="color-group-label">类 卡片(主页)</div>
+<div style="display:grid; grid-template-columns: 2fr 1fr; gap: 16px; margin-bottom: 32px;">
+<div class="card-category" style="background: linear-gradient(135deg, #1a2a3a, #2a3a2a);">
+<span class="cat-label">运动轿车</span>
+</div>
+<div class="card-category" style="background: linear-gradient(135deg, #1e2e3e, #1a3a2a);">
+<span class="cat-label">中型SUV</span>
+</div>
+</div>
+</section>
+<hr class="section-divider"/>
+<!-- 5. FORMS -->
+<section class="section">
+<h2 class="section-title">表单控件</h2>
+<p class="section-desc">最小输入型,与4px半径和暗边框相配合. 焦点状态触发电光蓝边界.（原文参数：4px）</p>
+<div class="form-grid">
+<div class="form-group">
+<label class="form-label">默认输入</label>
+<input class="form-input" placeholder="输入您的电子邮件" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-label">焦点输入</label>
+<input class="form-input" placeholder="焦点状态" style="border-color: var(--electric-blue);" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-label">输入出错</label>
+<input class="form-input error" placeholder="错误状态" type="text" value="Invalid entry"/>
+</div>
+<div class="form-group">
+<label class="form-label">文本区</label>
+<textarea class="form-textarea" placeholder="问个问题..."></textarea>
+</div>
+</div>
+</section>
+<hr class="section-divider"/>
+<!-- 6. SPACING -->
+<section class="section">
+<h2 class="section-title">间距层级</h2>
+<p class="section-desc">8px 基础单位 中超联赛冠军. 极限间隔符——精准多变.</p>
+<div class="spacing-row">
+<div class="spacing-label">4px</div>
+<div class="spacing-box" style="width: 16px;"></div>
+<span style="font-size:11px; color:var(--text-muted);">按钮内嵌</span>
+</div>
+<div class="spacing-row">
+<div class="spacing-label">8px</div>
+<div class="spacing-box" style="width: 32px;"></div>
+<span style="font-size:11px; color:var(--text-muted);">基础单位, 导航项 空档期</span>
+</div>
+<div class="spacing-row">
+<div class="spacing-label">16px</div>
+<div class="spacing-box" style="width: 64px;"></div>
+<span style="font-size:11px; color:var(--text-muted);">导航项 水平垫装, 卡片 间隙</span>
+</div>
+<div class="spacing-row">
+<div class="spacing-label">24px</div>
+<div class="spacing-box" style="width: 96px;"></div>
+<span style="font-size:11px; color:var(--text-muted);">按钮水平绑定, 类 卡片 内垫</span>
+</div>
+<div class="spacing-row">
+<div class="spacing-label">40px</div>
+<div class="spacing-box" style="width: 160px;"></div>
+<span style="font-size:11px; color:var(--text-muted);">横向编程, 导航水平编程</span>
+</div>
+<div class="spacing-row">
+<div class="spacing-label">80px</div>
+<div class="spacing-box" style="width: 320px;"></div>
+<span style="font-size:11px; color:var(--text-muted);">区域垂直粘贴</span>
+</div>
+<div class="spacing-row">
+<div class="spacing-label">100vh</div>
+<div class="spacing-box" style="width: 480px;"></div>
+<span style="font-size:11px; color:var(--text-muted);">首屏区块 高度——每屏一个消息</span>
+</div>
+</section>
+<hr class="section-divider"/>
+<!-- 7. BORDER RADIUS -->
+<section class="section">
+<h2 class="section-title">圆角层级</h2>
+<p class="section-desc">锋利而精确. 仅限4px用于按钮,而卡片类别则需12px.（原文参数：4px、12px）</p>
+<div class="radius-row">
+<div class="radius-item">
+<div class="radius-box" style="border-radius: 0px;"></div>
+<div class="radius-value">0px</div>
+<div class="radius-context">默认( 多数元素)</div>
+</div>
+<div class="radius-item">
+<div class="radius-box" style="border-radius: 4px;"></div>
+<div class="radius-value">4px</div>
+<div class="radius-context">按钮、 输入</div>
+</div>
+<div class="radius-item">
+<div class="radius-box" style="border-radius: 12px;"></div>
+<div class="radius-value">12px</div>
+<div class="radius-context">类别 卡片</div>
+</div>
+<div class="radius-item">
+<div class="radius-box" style="border-radius: 50%;"></div>
+<div class="radius-value">50%</div>
+<div class="radius-context">木马点</div>
+</div>
+</div>
+</section>
+<hr class="section-divider"/>
+<!-- 8. ELEVATION -->
+<section class="section" style="background: var(--surface-dark); margin: 0 auto; max-width: 100%; padding: 80px 40px;">
+<div style="max-width: 1200px; margin: 0 auto;">
+<h2 class="section-title">层次与阴影</h2>
+<p class="section-desc">Tesla完全避免阴影. 深度来自不透明层和摄影深度.</p>
+<div class="elevation-row">
+<div class="elevation-card" style="border: 1px solid var(--border-dark);">
+<div class="elevation-name">Level 0 — Flat</div>
+<div class="elevation-desc">无影无边. 所有元素的默认值。</div>
+</div>
+<div class="elevation-card" style="background: rgba(255,255,255,0.08); border: 1px solid var(--border-dark); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
+<div class="elevation-name">Level 1 — Frost</div>
+<div class="elevation-desc">冰冻玻璃. 导航在卷轴上。</div>
+</div>
+<div class="elevation-card" style="background: rgba(128,128,128,0.45);">
+<div class="elevation-name">Level 2 — Overlay</div>
+<div class="elevation-desc">摩达叠加,弹出。</div>
+</div>
+<div class="elevation-card" style="box-shadow: 0 2px 8px rgba(0,0,0,0.3); border: 1px solid var(--border-dark);">
+<div class="elevation-name">Level 3 — Subtle</div>
+<div class="elevation-desc">微小的阴影暗示 稀有的悬浮状态。</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<footer>
+<p>由Tesla启发的设计系统——由 DESIGN.md 由 awesome-design-md 生成</p>
+</footer>
+<footer class="footer">
+<div class="footer-shell">
+<div class="footer-grid">
+<div class="footer-col">
+<h6>VoltAgent 框架</h6>
+<span>类型脚本代理</span>
+<span>工具编程</span>
+<span>多种代理工作流程</span>
+</div>
+<div class="footer-col">
+<h6>伏特Ops LLM 可观测性</h6>
+<span>LLM 跟踪</span>
+<span>实时调试</span>
+<span>视觉时间</span>
+</div>
+<div class="footer-col">
+<h6>生产</h6>
+<span>评价</span>
+<span>即时管理</span>
+<span>护卫</span>
+</div>
+<div class="footer-col">
+<h6>平台</h6>
+<span>伏特Ops 控制台</span>
+<span>开源核心</span>
+<span>代理工程</span>
+</div>
+</div>
+
+</div>
+</footer>
+</body>
+</html>

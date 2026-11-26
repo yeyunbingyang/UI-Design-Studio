@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>黑绿对比与专辑封面</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --bg: #121212; --surface: #181818; --mid: #1f1f1f; --card: #252525;
+    --green: #1ed760; --white: #ffffff; --silver: #b3b3b3; --muted: #7c7c7c;
+    --neg: #f3727f; --warn: #ffa42b; --info: #539df5;
+    --border: #4d4d4d; --light-border: #7c7c7c;
+    --shadow-heavy: rgba(0,0,0,0.5) 0px 8px 24px;
+    --shadow-med: rgba(0,0,0,0.3) 0px 8px 8px;
+    --font: 'Inter', Helvetica Neue, helvetica, arial, sans-serif;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--white); font-family:var(--font); font-size:14px; font-weight:400; line-height:1.40; -webkit-font-smoothing:antialiased; }
+
+  .nav { position:sticky; top:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:12px 24px; background:var(--surface); }
+  .nav-brand { font-size:14px; font-weight:700; color:var(--white); text-decoration:none; }
+  .nav-links { display:flex; gap:16px; list-style:none; }
+  .nav-links a { font-size:14px; font-weight:400; color:var(--silver); text-decoration:none; transition:color 0.15s; }
+  .nav-links a:hover { color:var(--white); }
+  .nav-cta { display:inline-block; background:var(--green); color:#000; padding:8px 20px; border-radius:500px; font-size:14px; font-weight:700; text-decoration:none; }
+
+  .hero { padding:64px 24px; text-align:center; background:var(--bg); }
+  .hero h1 { font-size:24px; font-weight:700; margin-bottom:12px; }
+  .hero h1 span { color:var(--green); }
+  .hero p { font-size:14px; color:var(--silver); max-width:500px; margin:0 auto 24px; }
+  .hero-buttons { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+  .btn-green { display:inline-block; background:var(--green); color:#000; padding:10px 24px; border-radius:500px; font-size:14px; font-weight:700; text-decoration:none; border:none; cursor:pointer; text-transform:uppercase; letter-spacing:1.4px; }
+  .btn-outline { display:inline-block; background:transparent; color:var(--white); padding:10px 24px; border-radius:9999px; border:1px solid var(--light-border); font-family:var(--font); font-size:14px; font-weight:700; text-decoration:none; cursor:pointer; text-transform:uppercase; letter-spacing:1.4px; }
+  .btn-dark { display:inline-block; background:var(--mid); color:var(--white); padding:8px 16px; border-radius:9999px; font-size:14px; font-weight:700; text-decoration:none; }
+  .btn-circle { display:inline-flex; align-items:center; justify-content:center; background:var(--green); color:#000; width:48px; height:48px; border-radius:50%; font-size:20px; font-weight:700; text-decoration:none; border:none; cursor:pointer; }
+
+  .section { padding:48px 24px; max-width:1000px; margin:0 auto; }
+  .section-label { font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:1.4px; color:var(--silver); margin-bottom:8px; }
+  .section-title { font-size:18px; font-weight:700; margin-bottom:24px; }
+  .section-divider { border:none; border-top:1px solid rgba(255,255,255,0.08); margin:0; }
+
+  .color-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(140px,1fr)); gap:10px; margin-bottom:20px; }
+  .color-swatch { border-radius:6px; overflow:hidden; border:1px solid rgba(255,255,255,0.08); }
+  .color-swatch-block { height:60px; width:100%; }
+  .color-swatch-info { padding:8px 10px; }
+  .color-swatch-name { font-size:12px; font-weight:700; margin-bottom:2px; }
+  .color-swatch-hex { font-size:10px; color:var(--silver); font-family:monospace; }
+  .color-swatch-role { font-size:9px; color:var(--muted); margin-top:2px; }
+  .color-group-label { font-size:12px; font-weight:700; color:var(--silver); margin:20px 0 8px; text-transform:uppercase; letter-spacing:1px; }
+
+  .type-sample { margin-bottom:20px; padding-bottom:16px; border-bottom:1px solid rgba(255,255,255,0.05); }
+  .type-sample:last-child { border-bottom:none; }
+  .type-meta { font-size:10px; color:var(--muted); margin-top:4px; font-family:monospace; }
+
+  .button-row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+  .button-item { text-align:center; }
+  .button-label { font-size:10px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.5px; }
+
+  .card-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:12px; }
+  .card { background:var(--surface); border-radius:8px; padding:16px; transition:background 0.2s; }
+  .card:hover { background:var(--card); }
+  .card h3 { font-size:16px; font-weight:700; margin-bottom:4px; }
+  .card p { font-size:12px; color:var(--silver); }
+
+  .form-group { margin-bottom:16px; max-width:400px; }
+  .form-label { display:block; font-size:12px; font-weight:700; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px; }
+  .form-input { width:100%; background:var(--mid); color:var(--white); border:none; padding:12px 16px; border-radius:500px; font-family:var(--font); font-size:14px; outline:none; box-shadow:rgb(18,18,18) 0px 1px 0px, rgb(124,124,124) 0px 0px 0px 1px inset; }
+  .form-input:focus { box-shadow:0 0 0 2px var(--green); }
+  .form-input--focus { box-shadow:0 0 0 2px var(--green); }
+  .form-input--error { box-shadow:0 0 0 2px var(--neg); }
+  .form-textarea { width:100%; min-height:80px; background:var(--mid); color:var(--white); border:none; padding:12px 16px; border-radius:8px; font-family:var(--font); font-size:14px; resize:vertical; outline:none; box-shadow:rgb(124,124,124) 0px 0px 0px 1px inset; }
+  .form-state-label { font-size:9px; color:var(--muted); margin-top:4px; }
+
+  .spacing-row { display:flex; align-items:flex-end; gap:8px; flex-wrap:wrap; margin-bottom:16px; }
+  .spacing-item { text-align:center; }
+  .spacing-block { background:var(--green); border-radius:4px; margin-bottom:4px; height:24px; }
+  .spacing-value { font-size:9px; color:var(--muted); font-family:monospace; }
+
+  .radius-row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+  .radius-item { text-align:center; }
+  .radius-box { width:52px; height:52px; background:var(--mid); border:1px solid rgba(255,255,255,0.1); margin-bottom:4px; }
+  .radius-label { font-size:9px; color:var(--muted); font-family:monospace; }
+
+  .elevation-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr)); gap:12px; }
+  .elevation-card { background:var(--surface); border-radius:8px; padding:16px; text-align:center; }
+  .elevation-label { font-size:13px; font-weight:700; margin-bottom:4px; }
+  .elevation-desc { font-size:9px; color:var(--muted); font-family:monospace; }
+
+  .footer { padding:24px; text-align:center; border-top:1px solid rgba(255,255,255,0.05); font-size:12px; color:var(--muted); }
+  .footer a { color:var(--green); text-decoration:underline; }
+
+  @media (max-width:768px) { .nav-links { display:none; } .section { padding:32px 16px; } .card-grid { grid-template-columns:1fr; } }
+
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+<style data-design-nav="true">
+.design-preview-nav { min-height:48px; }
+.design-preview-nav .nav-brand { white-space:normal; overflow-wrap:anywhere; }
+.design-preview-nav .nav-links { display:flex; flex-wrap:wrap; gap:8px clamp(10px,2vw,26px); padding-block:5px; }
+.design-preview-nav a { text-decoration:none; }
+.design-preview-nav .nav-links a { color:inherit; }
+.design-preview-nav .nav-links a:hover { text-decoration:underline; text-underline-offset:3px; }
+.design-preview-nav a:focus-visible { outline:2px solid currentColor; outline-offset:4px; }
+:is([id^=design-section-],[id=design-overview]) { scroll-margin-top:94px; }
+@media (max-width:760px) {
+  .design-preview-nav { position:static; display:flex; flex-wrap:wrap; gap:3px 12px; padding:8px 12px; height:auto; }
+  .design-preview-nav .nav-left { min-width:0; }
+  .design-preview-nav > .nav-links { flex:1 1 100%; display:flex; padding-inline:0; }
+  .design-preview-nav .nav-cta { display:none; }
+  :is([id^=design-section-],[id=design-overview]) { scroll-margin-top:14px; }
+}
+</style></head>
+<body><nav aria-label="样张章节" class="nav design-preview-nav" data-design-nav="true"><span class="nav-brand">Spotify</span><ul class="nav-links"><li><a href="#design-section-1">配色</a></li><li><a href="#design-section-2">字体</a></li><li><a href="#design-section-3">按钮</a></li><li><a href="#design-section-4">卡片</a></li><li><a href="#design-section-9">表单</a></li><li><a href="#design-section-10">布局</a></li></ul><a class="nav-cta" href="#design-overview">概览</a></nav>
+<section class="hero">
+<h1 id="design-overview">黑绿对比与专辑封面</h1>
+<p>深色表面、鲜绿色操作和大标题衬托专辑艺术与音乐列表。</p>
+<div class="hero-buttons">
+<a class="btn-green" href="#">免费获取Spotify</a>
+<a class="btn-outline" href="#">了解更多</a>
+</div>
+</section>
+<hr class="section-divider"/>
+<section class="section" id="colors">
+<div class="section-label">01 / 颜色</div><h2 class="section-title" id="design-section-1">配色</h2>
+<div class="color-group-label">品牌色</div>
+<div class="color-grid">
+<div class="color-swatch"><div class="color-swatch-block" style="background:#1ed760"></div><div class="color-swatch-info"><div class="color-swatch-name">Spotify 绿色</div><div class="color-swatch-hex">#1ed760</div><div class="color-swatch-role">强调色 发音</div></div></div>
+<div class="color-swatch"><div class="color-swatch-block" style="background:#121212"></div><div class="color-swatch-info"><div class="color-swatch-name">近黑色</div><div class="color-swatch-hex">#121212</div><div class="color-swatch-role">页背景</div></div></div>
+<div class="color-swatch"><div class="color-swatch-block" style="background:#181818"></div><div class="color-swatch-info"><div class="color-swatch-name">界面表面</div><div class="color-swatch-hex">#181818</div><div class="color-swatch-role">卡片,集装箱</div></div></div>
+<div class="color-swatch"><div class="color-swatch-block" style="background:#1f1f1f"></div><div class="color-swatch-info"><div class="color-swatch-name">中暗线</div><div class="color-swatch-hex">#1f1f1f</div><div class="color-swatch-role">按钮、 输入</div></div></div>
+</div>
+<div class="color-group-label">文字色与语义色</div>
+<div class="color-grid">
+<div class="color-swatch"><div class="color-swatch-block" style="background:#ffffff"></div><div class="color-swatch-info"><div class="color-swatch-name">白色</div><div class="color-swatch-hex">#ffffff</div><div class="color-swatch-role">初级文本</div></div></div>
+<div class="color-swatch"><div class="color-swatch-block" style="background:#b3b3b3"></div><div class="color-swatch-info"><div class="color-swatch-name">银灰色</div><div class="color-swatch-hex">#b3b3b3</div><div class="color-swatch-role">副文本</div></div></div>
+<div class="color-swatch"><div class="color-swatch-block" style="background:#f3727f"></div><div class="color-swatch-info"><div class="color-swatch-name">负数</div><div class="color-swatch-hex">#f3727f</div><div class="color-swatch-role">错误状态</div></div></div>
+<div class="color-swatch"><div class="color-swatch-block" style="background:#ffa42b"></div><div class="color-swatch-info"><div class="color-swatch-name">警告</div><div class="color-swatch-hex">#ffa42b</div><div class="color-swatch-role">警告状态</div></div></div>
+<div class="color-swatch"><div class="color-swatch-block" style="background:#539df5"></div><div class="color-swatch-info"><div class="color-swatch-name">通知</div><div class="color-swatch-hex">#539df5</div><div class="color-swatch-role">信息状态</div></div></div>
+</div>
+</section>
+<hr class="section-divider"/>
+<section class="section" id="typography">
+<div class="section-label">02 / 类型</div><h2 class="section-title" id="design-section-2">字号层级</h2>
+<div class="type-sample"><div style="font-size:24px; font-weight:700;">区域标题——您的播放列表</div><div class="type-meta">标题 - 24px / 700 / 点点密苏里州</div></div>
+<div class="type-sample"><div style="font-size:18px; font-weight:600; line-height:1.30;">特性标题</div><div class="type-meta">特性——18px/600/1.30</div></div>
+<div class="type-sample"><div style="font-size:16px; font-weight:700;">体粗——喜欢的歌曲(英语:Songs)</div><div class="type-meta">体粗体-16px/700</div></div>
+<div class="type-sample"><div style="font-size:14px; font-weight:400; color:var(--silver);">说明-3 分钟 42 秒</div><div class="type-meta">说明-14px/400</div></div>
+<div class="type-sample"><div style="font-size:14px; font-weight:700; text-transform:uppercase; letter-spacing:1.4px;">威胁性游戏</div><div class="type-meta">按键大写 — 14px / 700 / 大写 / +1.4px</div></div>
+<div class="type-sample"><div style="font-size:12px; font-weight:700; color:var(--silver);">Small Bold — 1,234 songs</div><div class="type-meta">小粗体-12px/700</div></div>
+<div class="type-sample"><div style="font-size:10.5px; font-weight:600; text-transform:capitalize; color:var(--silver);">徽章( T)</div><div class="type-meta">徽章——10.5px / 600 / 利用</div></div>
+</section>
+<hr class="section-divider"/>
+<section class="section" id="buttons">
+<div class="section-label">03 / 按钮</div><h2 class="section-title" id="design-section-3">按钮样式</h2>
+<div class="button-row">
+<div class="button-item"><a class="btn-green" href="#">散牌游戏</a><div class="button-label">绿色胶囊形</div></div>
+<div class="button-item"><a class="btn-dark" href="#">浏览</a><div class="button-label">暗胶囊形 颜色</div></div>
+<div class="button-item"><a class="btn-outline" href="#">跟着</a><div class="button-label">大纲</div></div>
+<div class="button-item"><a class="btn-circle" href="#">▶</a><div class="button-label">播放圆形</div></div>
+</div>
+</section>
+<hr class="section-divider"/>
+<section class="section" id="cards">
+<div class="section-label">04 / 卡片 Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q</div><h2 class="section-title" id="design-section-4">卡片示例</h2>
+<div class="card-grid">
+<div class="card"><h3>发现周刊</h3><p>你的私人游戏列表,每个星期一更新。</p></div>
+<div class="card" style="box-shadow:var(--shadow-med);"><h3>发射雷达</h3><p>艺术家们的新版本,你跟着。 高耸的影子。</p></div>
+<div class="card"><h3>Daily Mix 1</h3><p>凭你的听力为你做的</p></div>
+<div class="card"><h3>喜欢的歌</h3><p>你的歌曲收藏已经保存下来了。</p></div>
+</div>
+</section>
+<hr class="section-divider"/>
+<section class="section" id="forms">
+<div class="section-label">05 / 表格</div><h2 class="section-title" id="design-section-9">表单控件</h2>
+<div class="form-group"><label class="form-label">搜索</label><input class="form-input" placeholder="艺术家、歌曲或播客" type="search"/><div class="form-state-label">默认( 设置边框)</div></div>
+<div class="form-group"><label class="form-label">播放列表名称</label><input class="form-input form-input--focus" type="text" value="Chill Vibes"/><div class="form-state-label">焦点(绿环)</div></div>
+<div class="form-group"><label class="form-label">电子邮箱</label><input class="form-input form-input--error" type="email" value="invalid"/><div class="form-state-label">错误( 红色环)</div></div>
+<div class="form-group"><label class="form-label">说明</label><textarea class="form-textarea" placeholder="添加描述..."></textarea></div>
+</section>
+<hr class="section-divider"/>
+<section class="section">
+<div class="section-label">06 / 间距</div><h2 class="section-title" id="design-section-10">间距层级</h2>
+<div class="spacing-row">
+<div class="spacing-item"><div class="spacing-block" style="width:4px"></div><div class="spacing-value">4</div></div>
+<div class="spacing-item"><div class="spacing-block" style="width:8px"></div><div class="spacing-value">8</div></div>
+<div class="spacing-item"><div class="spacing-block" style="width:12px"></div><div class="spacing-value">12</div></div>
+<div class="spacing-item"><div class="spacing-block" style="width:16px"></div><div class="spacing-value">16</div></div>
+<div class="spacing-item"><div class="spacing-block" style="width:20px"></div><div class="spacing-value">20</div></div>
+</div>
+</section>
+<hr class="section-divider"/>
+<section class="section">
+<div class="section-label">07 / 半径</div><h2 class="section-title">圆角</h2>
+<div class="radius-row">
+<div class="radius-item"><div class="radius-box" style="border-radius:2px"></div><div class="radius-label">2px</div></div>
+<div class="radius-item"><div class="radius-box" style="border-radius:6px"></div><div class="radius-label">6px</div></div>
+<div class="radius-item"><div class="radius-box" style="border-radius:8px"></div><div class="radius-label">8px</div></div>
+<div class="radius-item"><div class="radius-box" style="border-radius:500px"></div><div class="radius-label">500px</div></div>
+<div class="radius-item"><div class="radius-box" style="border-radius:50%; width:52px; height:52px;"></div><div class="radius-label">50%</div></div>
+</div>
+</section>
+<hr class="section-divider"/>
+<section class="section">
+<div class="section-label">08 / 升空</div><h2 class="section-title">深度</h2>
+<div class="elevation-grid">
+<div class="elevation-card"><div class="elevation-label">基础</div><div class="elevation-desc">#121212 背景</div></div>
+<div class="elevation-card" style="background:var(--mid);"><div class="elevation-label">界面表面</div><div class="elevation-desc">#1f1f1f</div></div>
+<div class="elevation-card" style="box-shadow:var(--shadow-med);"><div class="elevation-label">升迁</div><div class="elevation-desc">0.3 透明度 8px</div></div>
+<div class="elevation-card" style="box-shadow:var(--shadow-heavy);"><div class="elevation-label">对话框</div><div class="elevation-desc">0.5 透明度 24px</div></div>
+</div>
+</section>
+<footer class="footer">
+<div class="footer-shell">
+<div class="footer-grid">
+<div class="footer-col">
+<h6>VoltAgent 框架</h6>
+<span>类型脚本代理</span>
+<span>工具编程</span>
+<span>多种代理工作流程</span>
+</div>
+<div class="footer-col">
+<h6>伏特Ops LLM 可观测性</h6>
+<span>LLM 跟踪</span>
+<span>实时调试</span>
+<span>视觉时间</span>
+</div>
+<div class="footer-col">
+<h6>生产</h6>
+<span>评价</span>
+<span>即时管理</span>
+<span>护卫</span>
+</div>
+<div class="footer-col">
+<h6>平台</h6>
+<span>伏特Ops 控制台</span>
+<span>开源核心</span>
+<span>代理工程</span>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,2163 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>深紫背景与电光绿插画</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --primary: #150f23;
+      --ink-deep: #ffffff;
+      --on-primary: #ffffff;
+      --accent-lime: #c2ef4e;
+      --accent-pink: #fa7faa;
+      --accent-violet: #6a5fc1;
+      --accent-violet-deep: #422082;
+      --accent-violet-mid: #79628c;
+      --canvas: #150f23;
+      --canvas-dark: #0d091a;
+      --night: #0d091a;
+      --press-light: #2a2240;
+      --press-stronger: #3a2f55;
+      --hairline-violet: #362d59;
+      --hairline-cool: #3f3849;
+      --hairline-cloud: #2a2138;
+      --ink: #ffffff;
+      --ink-press: #0d091a;
+      --on-dark-muted: #bdb8c0;
+      --on-dark-faint: #3f3849;
+      --font-display: 'Rubik', system-ui, -apple-system, sans-serif;
+      --font-body: 'Rubik', -apple-system, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif;
+      --font-mono: Monaco, Menlo, 'Ubuntu Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--ink);
+      background: var(--canvas);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent-violet);
+    }
+
+    /* nav */
+    .nav {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--canvas);
+      border-bottom: 1px solid var(--hairline-cloud);
+      padding: 0 48px;
+      height: 64px;
+      font-family: var(--font-body);
+    }
+
+    .nav>.nav-left {
+      justify-self: start;
+    }
+
+    .nav>.nav-links {
+      justify-self: center;
+    }
+
+    .nav> :last-child {
+      justify-self: end;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-cta {
+      background: var(--primary);
+      color: var(--on-primary);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+      border: 0;
+      border-radius: 8px;
+      padding: 0 16px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    /* hero */
+    .hero {
+      padding: 96px 48px;
+      background: var(--canvas);
+      display: block;
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: 72px;
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--ink-deep);
+      margin: 0 0 32px;
+      letter-spacing: -1.5px;
+    }
+
+    .hero h1 .lime {
+      background: var(--accent-lime);
+      color: var(--ink-deep);
+      padding: 0 12px;
+      border-radius: 4px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--ink);
+      max-width: 900px;
+      margin: 0 0 40px;
+      line-height: 1.6;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+      border-radius: 8px;
+      padding: 0 20px;
+      height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--on-primary);
+    }
+
+    .btn-secondary {
+      background: var(--canvas);
+      color: var(--ink-deep);
+      border: 1px solid var(--hairline-cool);
+    }
+
+    .btn-ghost-on-dark {
+      background: var(--on-dark-faint);
+      color: var(--on-primary);
+      border-radius: 12px;
+    }
+
+    .btn-violet {
+      background: var(--accent-violet-mid);
+      color: var(--on-primary);
+      border-radius: 12px;
+      padding: 0 16px;
+      height: 36px;
+      font-weight: 500;
+    }
+
+    .btn-disabled {
+      background: var(--hairline-cloud);
+      color: var(--on-dark-muted);
+    }
+
+    .btn-inverted {
+      background: var(--on-primary);
+      color: var(--ink-deep);
+    }
+
+    /* sections */
+    section {
+      padding: 96px 48px;
+      max-width: 1440px;
+      margin: 0 auto;
+      border-top: 1px solid #2a2138;
+    }
+
+    .section-eyebrow {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+      color: var(--accent-violet);
+      margin: 0 0 12px;
+    }
+
+    .section-heading {
+      font-family: var(--font-display);
+      font-size: 44px;
+      font-weight: 700;
+      letter-spacing: -0.8px;
+      line-height: 1.15;
+      color: var(--ink-deep);
+      margin: 0 0 16px;
+    }
+
+    .section-sub {
+      font-size: 16px;
+      color: var(--ink);
+      max-width: 720px;
+      margin: 0 0 48px;
+      line-height: 1.6;
+    }
+
+    .subhead {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 22px;
+      letter-spacing: -0.2px;
+      margin: 32px 0 16px;
+      color: var(--ink-deep);
+    }
+
+    /* palette */
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+    }
+
+    .swatch {
+      border: 1px solid var(--hairline-cloud);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--canvas);
+    }
+
+    .swatch .chip {
+      height: 96px;
+    }
+
+    .swatch .meta {
+      padding: 12px;
+    }
+
+    .swatch .name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink-deep);
+    }
+
+    .swatch .hex {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--ink);
+      margin-top: 2px;
+    }
+
+    .swatch .role {
+      font-size: 12px;
+      color: var(--ink);
+      opacity: 0.7;
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    /* typography */
+    .type-row {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 24px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--hairline-cloud);
+      align-items: baseline;
+      min-width: 0;
+    }
+
+    .type-row>* {
+      min-width: 0;
+    }
+
+    .type-meta {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--ink);
+      opacity: 0.7;
+      line-height: 1.5;
+    }
+
+    .type-meta strong {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink-deep);
+      margin-bottom: 4px;
+    }
+
+    .type-sample {
+      color: var(--ink-deep);
+    }
+
+    /* buttons */
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .button-cell {
+      padding: 24px;
+      border: 1px solid var(--hairline-cloud);
+      border-radius: 12px;
+      background: var(--canvas);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .button-cell.dark {
+      background: var(--canvas-dark);
+      border-color: var(--hairline-violet);
+      color: var(--on-primary);
+    }
+
+    .button-cell .label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink);
+      opacity: 0.7;
+    }
+
+    .button-cell.dark .label {
+      color: var(--on-dark-muted);
+    }
+
+    /* cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      padding: 32px;
+      border-radius: 12px;
+      min-width: 0;
+    }
+
+    .card.pricing-light {
+      background: var(--canvas);
+      border: 1px solid var(--hairline-cloud);
+      color: var(--ink-deep);
+    }
+
+    .card.pricing-featured {
+      background: var(--night);
+      color: var(--on-primary);
+    }
+
+    .card.feature-dark {
+      background: var(--ink-deep);
+      color: var(--on-primary);
+      border-radius: 18px;
+    }
+
+    .card.spotlight {
+      background: var(--accent-violet-deep);
+      color: var(--on-primary);
+      border-radius: 18px;
+    }
+
+    .card h3 {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 600;
+      margin: 0 0 8px;
+      letter-spacing: -0.3px;
+    }
+
+    .card .price {
+      font-family: var(--font-display);
+      font-size: 56px;
+      font-weight: 700;
+      line-height: 1.1;
+      margin: 8px 0 16px;
+      letter-spacing: -1px;
+    }
+
+    .card p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0 0 16px;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0;
+      font-size: 14px;
+      line-height: 2;
+    }
+
+    .card ul li::before {
+      content: "✓ ";
+      color: var(--accent-lime);
+      font-weight: 700;
+    }
+
+    .card.pricing-light ul li::before {
+      color: var(--accent-violet);
+    }
+
+    /* forms */
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .field {
+      display: block;
+    }
+
+    .field label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink-deep);
+      margin: 0 0 6px;
+    }
+
+    .input {
+      width: 100%;
+      box-sizing: border-box;
+      background: var(--canvas);
+      color: var(--ink-deep);
+      border: 1px solid var(--hairline-cool);
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .input:focus {
+      outline: 0;
+      box-shadow: rgba(0, 0, 0, 0.15) 0 2px 10px inset;
+    }
+
+    .input.violet {
+      background: var(--accent-violet-deep);
+      color: var(--on-primary);
+      border: 0;
+      border-radius: 8px;
+      padding: 8px 16px;
+    }
+
+    /* spacing */
+    .spacing-row {
+      display: flex;
+      align-items: flex-end;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .spacing-row .stack {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      align-items: flex-start;
+    }
+
+    .spacing-row .bar {
+      background: var(--accent-violet-mid);
+      height: 32px;
+      border-radius: 4px;
+    }
+
+    .spacing-row .lbl {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink);
+      opacity: 0.7;
+    }
+
+    /* radius */
+    .radius-row {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .radius-row .stack {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      align-items: flex-start;
+    }
+
+    .radius-row .box {
+      width: 88px;
+      height: 88px;
+      background: var(--accent-violet-deep);
+    }
+
+    .radius-row .lbl {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink);
+      opacity: 0.7;
+    }
+
+    /* elevation */
+    .elevation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 24px;
+      padding: 32px;
+      background: var(--canvas);
+      border-radius: 12px;
+      border: 1px solid var(--hairline-cloud);
+    }
+
+    .elev-cell {
+      padding: 24px;
+      background: var(--canvas);
+      border-radius: 12px;
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .elev-cell .lbl {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink);
+      opacity: 0.7;
+    }
+
+    .elev-0 {
+      border: 1px solid var(--hairline-cloud);
+    }
+
+    .elev-1 {
+      box-shadow: rgba(0, 0, 0, 0.08) 0 2px 8px 0;
+    }
+
+    .elev-2 {
+      box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.1) 0 4px 6px -4px;
+    }
+
+    .elev-3 {
+      background: var(--canvas-dark);
+      color: var(--on-primary);
+      box-shadow: var(--night) 0 0 8px 6px;
+    }
+
+    /* responsive */
+    .responsive-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .responsive-table th,
+    .responsive-table td {
+      text-align: left;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--hairline-cloud);
+    }
+
+    .responsive-table th {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+      color: var(--ink-deep);
+    }
+
+    .device-ladder {
+      display: flex;
+      gap: 16px;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    .device-ladder .device {
+      background: var(--ink-deep);
+      border-radius: 8px;
+      min-width: 60px;
+    }
+
+    .device-ladder .lbl {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink);
+      opacity: 0.7;
+      margin-top: 8px;
+    }
+
+    .device-ladder .stack {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* signature */
+    .signature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .sig-card {
+      padding: 24px;
+      border: 1px solid var(--hairline-cloud);
+      border-radius: 12px;
+      background: var(--canvas);
+    }
+
+    .sig-card h4 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      margin: 0 0 8px;
+      color: var(--ink-deep);
+    }
+
+    .sig-card p {
+      font-size: 14px;
+      color: var(--ink);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .lime-divider {
+      height: 12px;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 12' preserveAspectRatio='none'><path d='M0,6 Q10,0 20,6 T40,6 T60,6 T80,6 T100,6' stroke='%23c2ef4e' stroke-width='3' fill='none'/></svg>");
+      margin: 16px 0;
+    }
+
+    .dark-band {
+      background: var(--canvas-dark);
+      color: var(--on-primary);
+      padding: 64px 48px;
+      border-radius: 18px;
+      margin: 32px 0;
+    }
+
+    .dark-band .section-heading {
+      color: var(--on-primary);
+    }
+
+    .dark-band .section-sub {
+      color: var(--on-dark-muted);
+    }
+
+    /* footer */
+    .footer {
+      padding: 32px 48px;
+      border-top: 1px solid #2a2138;
+      text-align: center;
+      font-size: 14px;
+      color: var(--ink);
+      opacity: 0.8;
+    }
+
+    .footer a {
+      color: var(--ink-deep);
+    }
+
+    /* getdesign.md nav additions */
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-brand-link,
+    .nav-brand-link:link,
+    .nav-brand-link:visited,
+    .nav-brand-link:hover,
+    .nav-brand-link:active {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .nav-brand {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: -0.3px;
+      color: var(--ink-deep);
+    }
+
+    .nav-github,
+    .nav-github:link,
+    .nav-github:visited,
+    .nav-github:hover,
+    .nav-github:active {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: inherit;
+      text-decoration: none;
+      padding: 5px 10px;
+      border: 1px solid rgba(128, 128, 128, 0.3);
+      border-radius: 6px;
+      opacity: 0.75;
+      transition: opacity 200ms ease, border-color 200ms ease;
+      font-family: inherit;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .nav-github:hover {
+      opacity: 1;
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .nav .nav-github {
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .nav-github svg {
+      display: block;
+      flex-shrink: 0;
+    }
+
+    /* getdesign.md nav centering */
+    .nav {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+    }
+
+    .nav>.nav-left {
+      justify-self: start;
+    }
+
+    .nav>.nav-links {
+      justify-self: center;
+    }
+
+    .nav> :last-child {
+      justify-self: end;
+    }
+
+    .cell,
+    .cell>*,
+    .demo,
+    .button-cell,
+    .component-cell {
+      min-width: 0;
+    }
+
+    .cell.wide,
+    .button-cell.wide,
+    .component-cell.wide {
+      grid-column: span 2;
+    }
+
+    @media (max-width: 1024px) {
+      section {
+        padding: 64px 32px;
+      }
+
+      .section-heading {
+        font-size: 32px;
+      }
+
+      .nav> :last-child {
+        display: none;
+      }
+
+      .type-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .type-row .type-meta {
+        padding-bottom: 4px;
+      }
+
+      .form-grid,
+      .button-grid,
+      .card-grid,
+      .palette-grid,
+      .signature-grid,
+      .elevation-grid {
+        gap: 16px;
+      }
+
+      .nav {
+        padding: 0 32px;
+      }
+
+      .hero {
+        padding: 64px 32px;
+      }
+
+      .hero h1 {
+        font-size: 56px;
+      }
+    }
+
+    @media (max-width: 720px) {
+
+      .cell.wide,
+      .button-cell.wide,
+      .component-cell.wide {
+        grid-column: span 1;
+      }
+
+      .nav {
+        padding: 12px 20px;
+        height: auto;
+        min-height: 56px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 48px 20px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+        letter-spacing: -0.5px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 48px 20px;
+      }
+
+      .section-heading {
+        font-size: 26px;
+      }
+
+      .palette-grid,
+      .button-grid,
+      .card-grid,
+      .form-grid,
+      .signature-grid,
+      .elevation-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
+      }
+
+      .footer {
+        padding: 24px 16px;
+        font-size: 12px;
+      }
+    }
+
+
+    /* ============ KIT-MIRROR ALIAS BRIDGE (dark) — sentry ============ */
+    :root {
+      --color-primary: var(--primary);
+      --color-primary-foreground: var(--on-primary);
+      --color-foreground: var(--ink);
+      --color-foreground-muted: var(--on-dark-muted);
+      --color-foreground-tertiary: var(--on-dark-muted);
+      --color-foreground-disabled: var(--hairline-cool);
+      --color-foreground-on-primary: #0d091a;
+      --color-canvas: var(--canvas);
+      --color-canvas-soft: var(--press-light);
+      --color-surface-elevated: var(--canvas-dark);
+      --color-border: var(--hairline-cool);
+      --color-border-soft: var(--hairline-cool);
+      --color-accent: var(--accent-lime);
+      --color-accent-soft: rgba(194, 239, 78, 0.15);
+      --color-success: #34d399;
+      --color-warning: #f59e0b;
+      --color-danger: #f87171;
+      --color-silver: rgba(255, 255, 255, 0.45);
+      --color-avatar-fill: rgba(255, 255, 255, 0.08);
+      --color-chip-bg: rgba(255, 255, 255, 0.08);
+      --font-display: var(--font-display);
+      --font-sans: var(--font-body);
+      --font-mono: var(--font-mono);
+      --shadow-md: 0 1px 2px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    /* ============================== EXAMPLES (kit-mirror) ==============================
+ *
+ * Shared CSS for the 9 product-UI patterns (Pricing, Product Selector, Shopping Cart,
+ * App Shell, Data Table, Auth Forms, Modal, Empty State, Toast Stack) emitted at the
+ * end of every preview.html / preview-dark.html.
+ *
+ * This file is BRAND-AGNOSTIC. It uses only the kit's `--color-*` / `--font-*` /
+ * `--shadow-*` token names. Each brand's preview.html must include a `:root { ... }`
+ * alias block that maps these names to the brand's local tokens (see preview-design.md
+ * Step "Emit kit-mirror Examples block" for the alias spec).
+ *
+ * Hardcoded radii (4px / 6px / 9999px) intentionally inherited from the kit's
+ * /generate-kit base template defaults. Do not tokenize without a parallel update to
+ * the base template's `index.tsx`.
+ * ============================================================================ */
+
+    .ex-section {
+      padding: clamp(48px, 8vw, 96px) 0;
+      border-top: 1px solid var(--color-border);
+      background: var(--color-canvas);
+    }
+
+    .ex-section .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .ex-h2 {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5vw, 50px);
+      font-weight: 700;
+      line-height: 1.0;
+      letter-spacing: -0.5px;
+      color: var(--color-foreground);
+      margin: 0 0 12px;
+    }
+
+    .ex-intro {
+      font-size: 16px;
+      color: var(--color-foreground-muted);
+      max-width: 720px;
+      margin: 0 0 48px;
+      line-height: 1.43;
+    }
+
+    .ex-mono {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--color-foreground-muted);
+    }
+
+    /* Buttons use inline-flex centring + line-height:1 so brand-shape overrides that copy
+   `line-height: 1.75` (or any leading > 1) from `typography.button-md` cannot push
+   descenders past the fixed `height` boundary. height is the single source of truth
+   for vertical box; horizontal padding controls width-padding only. */
+    .ex-primary {
+      background: var(--color-primary);
+      color: var(--color-primary-foreground);
+      border: 1px solid var(--color-primary);
+      border-radius: 4px;
+      padding: 0 22px;
+      height: 48px;
+      font-family: var(--font-sans);
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.162px;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .ex-outlined {
+      background: var(--color-canvas);
+      color: var(--color-foreground);
+      border: 1px solid var(--color-border-soft);
+      border-radius: 4px;
+      padding: 0 20px;
+      height: 44px;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .ex-textlink {
+      background: transparent;
+      color: var(--color-foreground);
+      border: none;
+      padding: 6px;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .ex-input {
+      background: var(--color-canvas);
+      border: 1px solid var(--color-border-soft);
+      border-radius: 4px;
+      padding: 0 16px;
+      height: 48px;
+      font-family: var(--font-sans);
+      font-size: 16px;
+      color: var(--color-foreground);
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .ex-field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .ex-field-label {
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--color-foreground);
+      font-family: var(--font-mono);
+    }
+
+    .ex-td {
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 14px;
+      color: var(--color-foreground);
+      line-height: 1.5;
+      vertical-align: middle;
+    }
+
+    .ex-th {
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--color-foreground-muted);
+      background: var(--color-canvas-soft);
+      font-family: var(--font-mono);
+    }
+
+    .ex-pager {
+      height: 32px;
+      min-width: 32px;
+      padding: 0 10px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      background: var(--color-canvas);
+      border: 1px solid var(--color-border-soft);
+      color: var(--color-foreground);
+      border-radius: 4px;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .ex-pager.active {
+      background: var(--color-foreground);
+      color: var(--color-foreground-on-primary);
+      border-color: var(--color-foreground);
+    }
+
+    .ex-grid-pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .ex-grid-product {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    @media (min-width: 1024px) {
+      .ex-grid-product {
+        grid-template-columns: 1.1fr 1fr;
+      }
+    }
+
+    .ex-grid-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 8px;
+    }
+
+    .ex-tile {
+      background: var(--color-canvas-soft);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      aspect-ratio: 1;
+      padding: 12px;
+      display: flex;
+      align-items: flex-end;
+      background-image: linear-gradient(135deg, var(--color-canvas-soft) 0%, var(--color-canvas) 50%, var(--color-canvas-soft) 100%);
+    }
+
+    .ex-tile.tall {
+      grid-row: span 2;
+      aspect-ratio: 1 / 2;
+    }
+
+    .ex-grid-sizes {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .ex-size-btn {
+      height: 44px;
+      border-radius: 4px;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: 1px solid var(--color-border-soft);
+      background: var(--color-canvas);
+      color: var(--color-foreground);
+    }
+
+    .ex-size-btn.selected {
+      border-color: var(--color-foreground);
+      background: var(--color-foreground);
+      color: var(--color-foreground-on-primary);
+    }
+
+    .ex-size-btn:disabled {
+      color: var(--color-foreground-disabled);
+      text-decoration: line-through;
+      cursor: not-allowed;
+    }
+
+    .ex-grid-appshell {
+      display: grid;
+      grid-template-columns: 1fr;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--color-canvas);
+    }
+
+    @media (min-width: 768px) {
+      .ex-grid-appshell {
+        grid-template-columns: 200px 1fr;
+      }
+    }
+
+    .ex-grid-kpi {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .ex-grid-auth {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .ex-grid-toasts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .ex-table-wrap {
+      overflow-x: auto;
+    }
+
+    .ex-table-wrap table {
+      width: 100%;
+      min-width: 720px;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .ex-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .ex-features li {
+      padding: 12px 0;
+      font-size: 14px;
+      border-bottom: 1px solid var(--color-border);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .ex-features.dark {
+      border-top-color: rgba(255, 255, 255, 0.18);
+    }
+
+    .ex-features.dark li {
+      border-bottom-color: rgba(255, 255, 255, 0.10);
+    }
+
+    .ex-bullet {
+      margin-top: 7px;
+      width: 6px;
+      height: 6px;
+      background: var(--color-accent);
+      border-radius: 9999px;
+      flex-shrink: 0;
+    }
+
+    .ex-tier-card {
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 28px;
+      background: var(--color-canvas);
+      color: var(--color-foreground);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .ex-tier-card.dark {
+      background: var(--color-foreground);
+      color: var(--color-foreground-on-primary);
+      border-color: var(--color-foreground);
+    }
+
+    .ex-tier-price {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 5vw, 50px);
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -1.5px;
+    }
+
+    .ex-tier-cta {
+      margin-top: auto;
+      height: 44px;
+      border-radius: 4px;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.162px;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .ex-tier-cta.ink {
+      border: 1px solid var(--color-foreground);
+      background: var(--color-foreground);
+      color: var(--color-foreground-on-primary);
+    }
+
+    .ex-tier-cta.invert {
+      border: 1px solid var(--color-canvas);
+      background: var(--color-canvas);
+      color: var(--color-foreground);
+    }
+
+    .ex-status {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .ex-status.ok {
+      color: var(--color-success);
+      background: var(--color-accent-soft);
+    }
+
+    .ex-status.pending {
+      color: var(--color-foreground-muted);
+      background: var(--color-chip-bg);
+    }
+
+    .ex-status.fail {
+      color: var(--color-danger);
+      background: var(--color-accent-soft);
+    }
+
+    .ex-frame {
+      position: relative;
+      border-radius: 6px;
+      border: 1px solid var(--color-border);
+      overflow: hidden;
+      background: var(--color-canvas-soft);
+    }
+
+    .ex-frame.short {
+      height: 420px;
+    }
+
+    .ex-frame.tall {
+      height: clamp(480px, 70vh, 560px);
+    }
+
+    .ex-scrim {
+      position: absolute;
+      inset: 0;
+      background: rgba(26, 24, 22, 0.5);
+    }
+
+    .ex-cart-drawer {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: min(420px, 100%);
+      background: var(--color-surface-elevated);
+      border-left: 1px solid var(--color-border);
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ex-modal-card {
+      width: 100%;
+      max-width: 480px;
+      background: var(--color-surface-elevated);
+      border-radius: 6px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--color-border);
+    }
+
+    .ex-emptystate {
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 72px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: var(--color-canvas);
+    }
+
+    .ex-toast {
+      display: grid;
+      grid-template-columns: 3px 1fr auto;
+      background: var(--color-surface-elevated);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+
+
+    /* DESIGN.md SOURCE RECEIPTS — what I read to write this block:
+ *   components.button-primary    → rounded {rounded.md}=8px · padding 12px 16px · typography button-cap
+ *   components.text-input        → rounded {rounded.sm}=6px · padding 8px 12px · typography body-md
+ *   components.card-pricing      → rounded {rounded.xl}=12px · padding 32px
+ *   typography.button-cap        → Rubik · 14px · 700 · lh 1.14 · letter-spacing 0.2px (drives ex-primary/cta + mono labels)
+ *   typography.display-large     → Sentry Display · 60px · 500 · lh 1.1 · 0 (drives ex-tier-price)
+ *   typography.heading-xl        → Rubik · 30px · 500 · lh 1.2 · 0 (drives ex-h2)
+ *   typography.body-md           → Rubik · 16px · 500 (drives ex-input)
+ *   colors.success/warning/danger → NOT defined in DESIGN.md → fallback Tailwind hex via alias bridge
+ */
+    /* Brand-shape overrides — align kit-mirror block with sentry DESIGN.md spec */
+    .ex-primary {
+      border-radius: 8px;
+      height: 44px;
+      padding: 0 16px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .ex-outlined {
+      border-radius: 8px;
+      height: 44px;
+      padding: 0 16px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .ex-textlink {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .ex-input {
+      border-radius: 6px;
+      height: 44px;
+      padding: 0 12px;
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .ex-field-label {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+    }
+
+    .ex-tier-card {
+      border-radius: 12px;
+      padding: 32px;
+    }
+
+    .ex-tier-card.dark {
+      border-radius: 12px;
+      padding: 32px;
+    }
+
+    .ex-tier-price {
+      font-family: var(--font-display);
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    .ex-tier-cta {
+      border-radius: 8px;
+      height: 44px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .ex-h2 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    .ex-mono,
+    .ex-th {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+    }
+
+    .ex-pager {
+      border-radius: 8px;
+      font-family: var(--font-body);
+    }
+
+    .ex-pager.active {
+      border-radius: 8px;
+    }
+
+    .ex-status {
+      border-radius: 4px;
+      font-family: var(--font-body);
+      font-weight: 600;
+    }
+
+    .ex-frame,
+    .ex-emptystate,
+    .ex-toast,
+    .ex-tile {
+      border-radius: 12px;
+    }
+
+    .ex-modal-card {
+      border-radius: 12px;
+    }
+
+    .ex-size-btn,
+    .ex-size-btn.selected {
+      border-radius: 8px;
+      font-family: var(--font-body);
+    }
+
+    /* DARK polarity-flip overrides — Pro tier card flips to white background */
+    .ex-tier-card.dark,
+    .ex-tier-card.dark * {
+      color: #0d091a !important;
+    }
+
+    .ex-tier-card.dark .ex-mono {
+      color: #0d091aaa !important;
+    }
+
+    .ex-tier-card.dark .ex-features li {
+      border-bottom-color: #0d091a22 !important;
+    }
+
+    .ex-tier-card.dark .ex-tier-cta.invert {
+      background: #0d091a !important;
+      color: #ffffff !important;
+      border-color: #0d091a !important;
+    }
+  </style>
+</head>
+<body>
+
+<header class="hero">
+<div class="hero-content">
+<h1>深紫背景与电光绿插画</h1>
+<p>深紫色画布配电光绿和插画，突出问题监控及开发者操作。</p>
+<div class="hero-actions">
+<button class="btn btn-primary">开始使用</button>
+<button class="btn btn-secondary">获取演示</button>
+</div>
+</div>
+</header>
+<section id="palette">
+<p class="section-eyebrow">01 — 颜色</p>
+<h2 class="section-heading">配色</h2>
+<p class="section-sub">近摩尼宝紫罗网及灵岩系统. 布兰德初选是深夜;石灰是排版设备,而不是按钮颜色.</p>
+<h3 class="subhead">品牌色与强调色</h3>
+<div class="palette-grid">
+<div class="swatch">
+<div class="chip" style="background:#150f23"></div>
+<div class="meta">
+<div class="name">午夜紫罗兰</div>
+<div class="hex">#150f23</div>
+<div class="role">主要操作色调和最深的表面语气.</div>
+</div>
+</div>
+<div class="swatch">
+<div class="chip" style="background:#1f1633"></div>
+<div class="meta">
+<div class="name">文字色 紫罗兰</div>
+<div class="hex">#1f1633</div>
+<div class="role">光面上的首屏页面底色+体文字.</div>
+</div>
+</div>
+<div class="swatch">
+<div class="chip" style="background:#c2ef4e"></div>
+<div class="meta">
+<div class="name">电击灯</div>
+<div class="hex">#c2ef4e</div>
+<div class="role">头条关键词突出显示芯片和页脚分割符.</div>
+</div>
+</div>
+<div class="swatch">
+<div class="chip" style="background:#fa7faa"></div>
+<div class="meta">
+<div class="name">亮粉色</div>
+<div class="hex">#fa7faa</div>
+<div class="role">贴子轮廓,图点,辅音.</div>
+</div>
+</div>
+<div class="swatch">
+<div class="chip" style="background:#6a5fc1"></div>
+<div class="meta">
+<div class="name">紫罗兰链接</div>
+<div class="hex">#6a5fc1</div>
+<div class="role">内在联系强调超越下划线。</div>
+</div>
+</div>
+<div class="swatch">
+<div class="chip" style="background:#422082"></div>
+<div class="meta">
+<div class="name">深紫色( 深紫色 )</div>
+<div class="hex">#422082</div>
+<div class="role">选择下拉填充, 聚焦 卡片 在黑暗中。</div>
+</div>
+</div>
+<div class="swatch">
+<div class="chip" style="background:#79628c"></div>
+<div class="meta">
+<div class="name">中紫罗兰</div>
+<div class="hex">#79628c</div>
+<div class="role">塔格芯片填满,在黑暗中晕倒强调色.</div>
+</div>
+</div>
+</div>
+<h3 class="subhead">界面表面</h3>
+<div class="palette-grid">
+<div class="swatch">
+<div class="chip" style="background:#1f1633"></div>
+<div class="meta">
+<div class="name">暗页面底色 颜色</div>
+<div class="hex">#1f1633</div>
+<div class="role">首屏,产品,特征页背景.</div>
+</div>
+</div>
+<div class="swatch">
+<div class="chip" style="background:#150f23"></div>
+<div class="meta">
+<div class="name">夜 间</div>
+<div class="hex">#150f23</div>
+<div class="role">卡片在暗暗,代码块, 突出的层次。</div>
+</div>
+</div>
+<div class="swatch">
+<div class="chip" style="background:#ffffff;border:1px solid #2a2138"></div>
+<div class="meta">
+<div class="name">光质页面底色</div>
+<div class="hex">#ffffff</div>
+<div class="role">定价,联系,密集的参考页.</div>
+</div>
+</div>
+<div class="swatch">
+<div class="chip" style="background:#f0f0f0"></div>
+<div class="meta">
+<div class="name">按灯</div>
+<div class="hex">#f0f0f0</div>
+<div class="role">黑线上反向按钮的按下状态.</div>
+</div>
+</div>
+<div class="swatch">
+<div class="chip" style="background:#efefef"></div>
+<div class="meta">
+<div class="name">按下更强的</div>
+<div class="hex">#efefef</div>
+<div class="role">反向/灯光按钮的活跃状态.</div>
+</div>
+</div>
+<div class="swatch">
+<div class="chip" style="background:#362d59"></div>
+<div class="meta">
+<div class="name">细边框 紫罗兰</div>
+<div class="hex">#362d59</div>
+<div class="role">1px在暗的卡片上边界.（原文参数：1px）</div>
+</div>
+</div>
+<div class="swatch">
+<div class="chip" style="background:#cfcfdb"></div>
+<div class="meta">
+<div class="name">细边框 凉爽</div>
+<div class="hex">#cfcfdb</div>
+<div class="role">1px在文本输入和表单控件上相邻.（原文参数：1px）</div>
+</div>
+</div>
+<div class="swatch">
+<div class="chip" style="background:#e5e7eb"></div>
+<div class="meta">
+<div class="name">细边框 云号</div>
+<div class="hex">#e5e7eb</div>
+<div class="role">定价卡片边界,桌分牌.</div>
+</div>
+</div>
+</div>
+<h3 class="subhead">文字色</h3>
+<div class="palette-grid">
+<div class="swatch">
+<div class="chip" style="background:#ffffff;border:1px solid #2a2138"></div>
+<div class="meta">
+<div class="name">主要</div>
+<div class="hex">#ffffff</div>
+<div class="role">暗的页面底色+填充的行动按钮标签上的文字.</div>
+</div>
+</div>
+<div class="swatch">
+<div class="chip" style="background:#1f1633"></div>
+<div class="meta">
+<div class="name">文字色</div>
+<div class="hex">#1f1633</div>
+<div class="role">光线页面底色上的正文.</div>
+</div>
+</div>
+<div class="swatch">
+<div class="chip" style="background:#1a1a1a"></div>
+<div class="meta">
+<div class="name">文字色出版社</div>
+<div class="hex">#1a1a1a</div>
+<div class="role">按下状态 反转按钮.</div>
+</div>
+</div>
+<div class="swatch">
+<div class="chip" style="background:#bdb8c0"></div>
+<div class="meta">
+<div class="name">黑暗的静音</div>
+<div class="hex">#bdb8c0</div>
+<div class="role">暗页面底色上的副文本.</div>
+</div>
+</div>
+</div>
+</section>
+<section id="typography">
+<p class="section-eyebrow">02 - 类型</p>
+<h2 class="section-heading">字号层级</h2>
+<p class="section-sub">Display tier uses a chunky proprietary sans (with Rubik fallback at heavier weights). UI copy
+      is open-source Rubik. Monaco handles code.</p>
+<div>
+<div class="type-row">
+<div class="type-meta"><strong>display-hero</strong>88px / 700 / 1.2 / 0</div>
+<div class="type-sample" style="font-family:var(--font-display);font-size:88px;font-weight:700;line-height:1.2;letter-spacing:-1.5px">
+          代码中断。</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>display-large</strong>60px / 500 / 1.1 / 0</div>
+<div class="type-sample" style="font-family:var(--font-display);font-size:60px;font-weight:500;line-height:1.1;letter-spacing:-1px">修得快点</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>heading-xl</strong>30px / 500 / 1.2</div>
+<div class="type-sample" style="font-family:var(--font-body);font-size:30px;font-weight:500;line-height:1.2">
+          DR团队定价计划</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>heading-lg</strong>27px / 500 / 1.25</div>
+<div class="type-sample" style="font-family:var(--font-body);font-size:27px;font-weight:500;line-height:1.25">
+          分节标题</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>heading-md</strong>24px / 500 / 1.25</div>
+<div class="type-sample" style="font-family:var(--font-body);font-size:24px;font-weight:500;line-height:1.25">
+          卡片 标题</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>heading-sm</strong>20px / 600 / 1.25</div>
+<div class="type-sample" style="font-family:var(--font-body);font-size:20px;font-weight:600;line-height:1.25">
+          缩写卡片标题</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>body-lg</strong>16px / 400 / 2.0</div>
+<div class="type-sample" style="font-family:var(--font-body);font-size:16px;font-weight:400;line-height:2.0">
+          Marketing prose runs at 2.0 leading — extremely airy, generous breathing room. The brand reads like a blog
+          post when it wants to.</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>body-md</strong>16px / 500 / 1.5</div>
+<div class="type-sample" style="font-family:var(--font-body);font-size:16px;font-weight:500;line-height:1.5">
+          默认的UI体,表细胞,形成标签——功能表面的密度更高.</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>栏眉</strong>15px / 500 / 1.4</div>
+<div class="type-sample" style="font-family:var(--font-body);font-size:15px;font-weight:500;letter-spacing:0.2px;text-transform:uppercase">
+          章节栏眉</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>button-cap</strong>14px / 700 / 1.14 / 0.2px</div>
+<div class="type-sample" style="font-family:var(--font-body);font-size:14px;font-weight:700;letter-spacing:0.2px;text-transform:uppercase">
+          开始使用</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>标题</strong>14px / 400 / 1.43</div>
+<div class="type-sample" style="font-family:var(--font-body);font-size:14px;font-weight:400;line-height:1.43">
+          脚印文字,精细印刷,助印副本.</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>micro-cap</strong>10px / 600 / 1.8 / 0.25px</div>
+<div class="type-sample" style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.25px;text-transform:uppercase">
+          地位 拉尔贝</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>代码</strong>16px Monaco / 400 / 1.5</div>
+<div class="type-sample" style="font-family:var(--font-mono);font-size:16px;line-height:1.5">npm 安装 Qsentry/ 节点</div>
+</div>
+</div>
+</section>
+<section id="buttons">
+<p class="section-eyebrow">03 - 组件</p>
+<h2 class="section-heading">按钮样式</h2>
+<p class="section-sub">单倍性行动按钮极性每页面底色闪烁. 黑紫色的灯光 白色的灯光 大纲及鬼变子降级.</p>
+<div class="button-grid">
+<div class="button-cell"><span class="label">button-primary − 轻质页面底色</span><button class="btn btn-primary">开始使用</button></div>
+<div class="button-cell"><span class="label">button-secondary</span><button class="btn btn-secondary">找德莫来</button></div>
+<div class="button-cell dark"><span class="label">button-inverted 黑页面底色</span><button class="btn btn-inverted">注册</button></div>
+<div class="button-cell dark"><span class="label">button-ghost-on-dark</span><button class="btn btn-ghost-on-dark">与销售公司交谈</button></div>
+<div class="button-cell dark"><span class="label">button-violet-token</span><button class="btn btn-violet">前端 :</button></div>
+<div class="button-cell"><span class="label">button-disabled</span><button class="btn btn-disabled" disabled="">禁用</button></div>
+</div>
+</section>
+<section id="cards">
+<p class="section-eyebrow">04 - 组件</p>
+<h2 class="section-heading">卡片示例</h2>
+<p class="section-sub">定价级循环 白色 → 白色 → 白色 → 夜间倒置(特色级). 暗面上的功能卡片使用更深的文字色调来进行对比.</p>
+<div class="card-grid">
+<div class="card pricing-light">
+<h3>开发者</h3>
+<div class="price">免费版</div>
+<p>用于独家开发商航运侧式项目.</p>
+<ul>
+<li>错误监测</li>
+<li>5K活动/月</li>
+<li>社区支助</li>
+</ul>
+<button class="btn btn-primary">注册</button>
+</div>
+<div class="card pricing-light">
+<h3>团队版</h3>
+<div class="price">$29</div>
+<p>每月,为小产品组.</p>
+<ul>
+<li>开发者中的所有</li>
+<li>50K活动/月</li>
+<li>电子邮件 + Slack 提醒</li>
+</ul>
+<button class="btn btn-primary">注册</button>
+</div>
+<div class="card pricing-featured">
+<h3>商业版</h3>
+<div class="price">$80</div>
+<p>给成长的工程队</p>
+<ul>
+<li>业绩监测</li>
+<li>250K活动/月</li>
+<li>优先支助</li>
+</ul>
+<button class="btn btn-inverted">开始审判</button>
+</div>
+</div>
+<div class="card-grid" style="margin-top:32px">
+<div class="card feature-dark">
+<h3>调试需要的背景</h3>
+<p>参见代码线,承诺,部署,用户——都在一个时间段内.</p>
+</div>
+<div class="card spotlight">
+<h3>建造安全</h3>
+<p>设计上不是要挡你的路 SOC 2 II型, GDPR, HIPAA 准备.</p>
+</div>
+</div>
+</section>
+<section id="forms">
+<p class="section-eyebrow">05 - 组件</p>
+<h2 class="section-heading">表单控件</h2>
+<p class="section-sub">输入器以一个酷的细边框坐落在白色上. 焦点画的是内向的影子而不是彩色的戒指.</p>
+<div class="form-grid">
+<div class="field"><label>名称</label><input class="input" placeholder="简"/></div>
+<div class="field"><label>姓</label><input class="input" placeholder="点点"/></div>
+<div class="field"><label>电子邮箱</label><input class="input" placeholder="jane@team.com" type="email"/>
+</div>
+<div class="field"><label>职称</label><input class="input" placeholder="软件工程师"/></div>
+<div class="field"><label>我们怎么帮</label><select class="input violet">
+<option>选择...</option>
+<option>一般性调查</option>
+<option>定价</option>
+</select></div>
+<div class="field"><label>其他背景</label><textarea class="input" placeholder="告诉我们怎么帮我们" rows="3"></textarea></div>
+</div>
+</section>
+<section id="signature">
+<p class="section-eyebrow">06 - 签字部分</p>
+<h2 class="section-heading">标志性组件</h2>
+<p class="section-sub">品牌的区别成分:石灰关键词芯片,贴纸吉祥物系统,代码块,和 脚分块.</p>
+<div class="signature-grid">
+<div class="sig-card">
+<h4>chip-lime-keyword</h4>
+<p style="font-family:var(--font-display);font-size:36px;font-weight:700;line-height:1.15;color:var(--ink-deep)">
+          代码 <span style="background:var(--accent-lime);padding:0 12px;border-radius:4px">休息时间。</span> 修补之.</p>
+<p style="margin-top:12px">内置突出显示在显示头条内包装单个关键字。</p>
+</div>
+<div class="sig-card">
+<h4>code-block</h4>
+<pre style="background:var(--night);color:var(--on-primary);font-family:var(--font-mono);padding:16px;border-radius:8px;font-size:14px;line-height:1.5;overflow:auto;margin:0">$ npm install --save @sentry/node
+$ sentry-cli login
+$ sentry-cli releases new 1.0.0</pre>
+</div>
+<div class="sig-card">
+<h4>pill-neutral-dark</h4>
+<span style="display:inline-block;background:var(--night);color:var(--on-primary);font-size:12px;font-weight:500;padding:4px 8px;border-radius:4px">爪哇脚本</span>
+<span style="display:inline-block;background:var(--night);color:var(--on-primary);font-size:12px;font-weight:500;padding:4px 8px;border-radius:4px;margin-left:6px">蟒蛇</span>
+<p style="margin-top:12px">技术库指标的压缩类胶囊形。</p>
+</div>
+<div class="sig-card">
+<h4>石灰 脚分机</h4>
+<div class="lime-divider"></div>
+<p>手拉石灰 取代了脚上方的细边线分线.</p>
+</div>
+</div>
+</section>
+<section id="spacing">
+<p class="section-eyebrow">07——基金会</p>
+<h2 class="section-heading">间距层级</h2>
+<p class="section-sub">8px 基础单位,缩放为桌面上的96px区间.（原文参数：96px）</p>
+<div class="spacing-row">
+<div class="stack">
+<div class="bar" style="width:2px"></div>
+<div class="lbl">xxx 2px 数据</div>
+</div>
+<div class="stack">
+<div class="bar" style="width:4px"></div>
+<div class="lbl">xs 4px 数据</div>
+</div>
+<div class="stack">
+<div class="bar" style="width:8px"></div>
+<div class="lbl">sm 8px 数据</div>
+</div>
+<div class="stack">
+<div class="bar" style="width:12px"></div>
+<div class="lbl">md 12px 数据</div>
+</div>
+<div class="stack">
+<div class="bar" style="width:16px"></div>
+<div class="lbl">16px 高压压压轴</div>
+</div>
+<div class="stack">
+<div class="bar" style="width:24px"></div>
+<div class="lbl">□ 24px</div>
+</div>
+<div class="stack">
+<div class="bar" style="width:32px"></div>
+<div class="lbl">xxl 32px 数据</div>
+</div>
+<div class="stack">
+<div class="bar" style="width:96px"></div>
+<div class="lbl">· 96px</div>
+</div>
+</div>
+</section>
+<section id="radius">
+<p class="section-eyebrow">08——基金会</p>
+<h2 class="section-heading">圆角层级</h2>
+<p class="section-sub">按钮降落在8px,定价卡片在12px,图像容器和大型功能卡片在18px.（原文参数：8px、12px、18px）
+    </p>
+<div class="radius-row">
+<div class="stack">
+<div class="box" style="border-radius:4px"></div>
+<div class="lbl">xs 4px 数据</div>
+</div>
+<div class="stack">
+<div class="box" style="border-radius:6px"></div>
+<div class="lbl">sm 6px 数据</div>
+</div>
+<div class="stack">
+<div class="box" style="border-radius:8px"></div>
+<div class="lbl">md 8px 数据</div>
+</div>
+<div class="stack">
+<div class="box" style="border-radius:10px"></div>
+<div class="lbl">10px 高压压压轴</div>
+</div>
+<div class="stack">
+<div class="box" style="border-radius:12px"></div>
+<div class="lbl">□ 12px</div>
+</div>
+<div class="stack">
+<div class="box" style="border-radius:18px"></div>
+<div class="lbl">xxl 18px 数据</div>
+</div>
+<div class="stack">
+<div class="box" style="border-radius:9999px"></div>
+<div class="lbl">9999px 数据</div>
+</div>
+</div>
+</section>
+<section id="elevation">
+<p class="section-eyebrow">09——基金会</p>
+<h2 class="section-heading">层次与阴影</h2>
+<p class="section-sub">深浅的页面底色来自纹理和插图,而不是从投影. 光线表面使用温柔 1–10% 黑影 .</p>
+<div class="elevation-grid" style="background:#0d091a">
+<div class="elev-cell elev-0"><span class="lbl">0 级 − 平面</span></div>
+<div class="elev-cell elev-1"><span class="lbl">1 级 − 反向按钮升起</span></div>
+<div class="elev-cell elev-2"><span class="lbl">2 − 浮动卡片</span></div>
+<div class="elev-cell elev-3"><span class="lbl">3 − 光环</span></div>
+</div>
+</section>
+<section id="responsive">
+<p class="section-eyebrow">10 反应性</p>
+<h2 class="section-heading">响应式布局</h2>
+<p class="section-sub">六步响应式断点楼梯从4K下至小移动,贴子吉祥物逐渐隐藏,以保持内容扫描可操作性.</p>
+<table class="responsive-table">
+<thead>
+<tr>
+<th>名称</th>
+<th>宽度</th>
+<th>密钥更改</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4K / 宽</td>
+<td>≥ 1440px</td>
+<td>完整的 4 级定价行; 全比例的首屏插图</td>
+</tr>
+<tr>
+<td>桌面端</td>
+<td>1152–1440px</td>
+<td>1152px content max-width; all 4-tier patterns hold</td>
+</tr>
+<tr>
+<td>笔记本</td>
+<td>992–1151px</td>
+<td>定价卡片重排到2-up;导航仍然水平</td>
+</tr>
+<tr>
+<td>平板</td>
+<td>768–991px</td>
+<td>2-col 特征网格 → 1-up; 导航压缩</td>
+</tr>
+<tr>
+<td>移动 L</td>
+<td>640–767px</td>
+<td>折叠菜单出现; 首屏跳伞 88 → 56px</td>
+</tr>
+<tr>
+<td>手机端</td>
+<td>576–639px</td>
+<td>单列; 分区编栏 96 → 32–48px</td>
+</tr>
+<tr>
+<td>小型移动</td>
+<td>≤ 575px</td>
+<td>压缩模式;贴子吉祥物缩水或隐藏</td>
+</tr>
+</tbody>
+</table>
+<div class="device-ladder">
+<div class="stack">
+<div class="device" style="width:60px;height:96px"></div>
+<div class="lbl">375</div>
+</div>
+<div class="stack">
+<div class="device" style="width:80px;height:120px"></div>
+<div class="lbl">576</div>
+</div>
+<div class="stack">
+<div class="device" style="width:120px;height:144px"></div>
+<div class="lbl">768</div>
+</div>
+<div class="stack">
+<div class="device" style="width:160px;height:160px"></div>
+<div class="lbl">992</div>
+</div>
+<div class="stack">
+<div class="device" style="width:200px;height:160px"></div>
+<div class="lbl">1152</div>
+</div>
+<div class="stack">
+<div class="device" style="width:240px;height:160px"></div>
+<div class="lbl">1440</div>
+</div>
+</div>
+<h3 class="subhead">触控区域</h3>
+<p>Primary buttons hit 44×44px minimum at mobile (12px vertical padding × 16px line-height). Pill tags stay above
+      32×32px. Form fields stay at 44px minimum height. WCAG AAA compliant across the system.</p>
+<h3 class="subhead">窄屏布局调整</h3>
+<ul style="line-height:1.8">
+<li>首屏显示滴滴 88 → 60 → 48px  通过断点楼梯; 石灰关键词芯片保留其 4px 半径和
+        12px 不停地踩着</li>
+<li>套餐层级 4 列 → 2 列 → 1 列; 突出的黑暗层 总是保持视觉上的区别。</li>
+<li>粘贴吉祥物从边界重叠转向在平板板板上内嵌,然后完全隐藏在小移动上.</li>
+<li>顶端导航崩溃到768px以下的汉堡;菜单从主机页面继承页面底色极性.（原文参数：768px）</li>
+<li>Code blocks preserve 16px Monaco at every breakpoint — they horizontal-scroll on overflow rather than wrap.
+      </li>
+</ul>
+</section>
+<!-- ============================== EXAMPLES (kit-mirror) ==============================
+ *
+ * 9 product-UI patterns themed with the brand's tokens via the alias bridge in
+ * preview-examples-block.css.
+ *
+ * Paste this verbatim into preview.html and preview-dark.html, immediately before
+ * the closing <footer>. Both light and dark variants use IDENTICAL HTML — only the
+ * `:root { ... }` alias map differs (see preview-design.md).
+ *
+ * Hardcoded radii (4px / 6px / 9999px) intentionally inherited from the
+ * /generate-kit base template. Hardcoded scrim opacity (rgba 26,24,22,0.5) is the
+ * kit default; do not tokenize without parallel update.
+ * ============================================================================ -->
+<section class="ex-section">
+<div class="container">
+<h2 class="ex-h2">套餐定价</h2><p class="design-demo-note">组件演示。套餐层级、价格字重和操作按钮。数据仅用于样式展示。</p>
+<p class="ex-intro">三个套餐并列，中间套餐反转明暗以突出推荐项。套餐名使用大写等宽字，价格放大显示，功能列表以细线分隔。</p>
+<div class="ex-grid-pricing">
+<div class="ex-tier-card">
+<div style="display:flex; justify-content:space-between;"><span class="ex-mono">0.1 启动器</span></div>
+<div style="display:flex; align-items:baseline; gap:6px;"><span class="ex-tier-price">$9</span><span class="ex-mono" style="font-size:12px;">月数</span></div>
+<p style="font-size:14px; line-height:1.5; color:var(--color-foreground-muted); margin:0;">个人开始。</p>
+<ul class="ex-features">
+<li><span class="ex-bullet"></span>核心特征</li>
+<li><span class="ex-bullet"></span>Up to 3 projects</li>
+<li><span class="ex-bullet"></span>社区支助</li>
+</ul>
+<button class="ex-tier-cta ink">开始使用</button>
+</div>
+<div class="ex-tier-card dark">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<span class="ex-mono" style="color:rgba(255,255,255,0.55);">/0.2 − 赞成</span>
+<span style="font-family:var(--font-mono); font-size:10px; letter-spacing:0.5px; text-transform:uppercase; color:var(--color-accent); display:inline-flex; align-items:center; gap:6px;"><span style="width:6px; height:6px; background:var(--color-accent); border-radius:9999px;"></span>最受欢迎的</span>
+</div>
+<div style="display:flex; align-items:baseline; gap:6px;"><span class="ex-tier-price">$29</span><span style="font-family:var(--font-mono); font-size:12px; color:rgba(255,255,255,0.55);">月数</span></div>
+<p style="font-size:14px; line-height:1.5; color:rgba(255,255,255,0.72); margin:0;">准备出发的队伍
+          </p>
+<ul class="ex-features dark">
+<li><span class="ex-bullet"></span>启动器中的所有</li>
+<li><span class="ex-bullet"></span>无限制项目</li>
+<li><span class="ex-bullet"></span>电子邮件支持</li>
+<li><span class="ex-bullet"></span>高级分析</li>
+</ul>
+<button class="ex-tier-cta invert">开始免费审判</button>
+</div>
+<div class="ex-tier-card">
+<div style="display:flex; justify-content:space-between;"><span class="ex-mono">0.3 团队</span></div>
+<div style="display:flex; align-items:baseline; gap:6px;"><span class="ex-tier-price">$99</span><span class="ex-mono" style="font-size:12px;">月数</span></div>
+<p style="font-size:14px; line-height:1.5; color:var(--color-foreground-muted); margin:0;">适用于规模运作的组织。</p>
+<ul class="ex-features">
+<li><span class="ex-bullet"></span>普罗的每件事物</li>
+<li><span class="ex-bullet"></span>特别业务组+审计日志</li>
+<li><span class="ex-bullet"></span>优先支助</li>
+<li><span class="ex-bullet"></span>上载 SLA( O)</li>
+</ul>
+<button class="ex-tier-cta ink">和销售商交谈</button>
+</div>
+</div>
+</div>
+</section>
+
+</body>
+</html>

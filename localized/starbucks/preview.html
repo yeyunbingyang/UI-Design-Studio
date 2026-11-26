@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>暖米白与四阶品牌绿</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Lora:wght@500;600&amp;family=Kalam:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --green-starbucks: #006241;
+  --green-accent: #00754A;
+  --green-house: #1E3932;
+  --green-uplift: #2b5148;
+  --green-light: #d4e9e2;
+  --rewards-green: #33433d;
+  --gold: #cba258;
+  --gold-light: #dfc49d;
+  --gold-lightest: #faf6ee;
+  --white: #ffffff;
+  --neutral-cool: #f9f9f9;
+  --neutral-warm: #f2f0eb;
+  --ceramic: #edebe9;
+  --black: #000000;
+  --text-black: rgba(0, 0, 0, 0.87);
+  --text-black-soft: rgba(0, 0, 0, 0.58);
+  --red: #c82014;
+  --yellow: #fbbc05;
+  --card-shadow: 0 0 0.5px rgba(0,0,0,0.14), 0 1px 1px rgba(0,0,0,0.24);
+  --nav-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 2px 2px rgba(0,0,0,0.06), 0 0 2px rgba(0,0,0,0.07);
+  --frap-shadow: 0 0 6px rgba(0,0,0,0.24), 0 8px 12px rgba(0,0,0,0.14);
+  --font-primary: "Inter", "SoDoSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-serif: "Lora", "Iowan Old Style", Georgia, serif;
+  --font-script: "Kalam", cursive;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-primary);
+  background: var(--neutral-warm);
+  color: var(--text-black);
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+.nav {
+  background: var(--white);
+  box-shadow: var(--nav-shadow);
+  padding: 16px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-brand { font-weight: 700; font-size: 18px; color: var(--green-starbucks); }
+.nav-links { list-style: none; display: flex; gap: 32px; }
+.nav-links a { color: var(--text-black); text-decoration: none; font-size: 14px; font-weight: 600; }
+.nav-cta {
+  background: var(--black); color: var(--white); border: 1px solid var(--black);
+  border-radius: 50px; padding: 7px 16px; font-weight: 600;
+  font-family: inherit; font-size: 14px; cursor: pointer;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+
+.hero { padding: 96px 40px 72px; background: var(--neutral-warm); }
+.hero h1 {
+  font-size: 50px; font-weight: 600; line-height: 1.2; letter-spacing: -0.016em;
+  max-width: 900px; margin: 0 auto 16px; text-align: center; color: var(--green-starbucks);
+}
+.hero .sub { font-size: 19px; color: var(--text-black); max-width: 640px; margin: 0 auto 32px; text-align: center; }
+.hero .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+.btn {
+  font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer;
+  border-radius: 50px; padding: 7px 16px; letter-spacing: -0.01em;
+  transition: transform 0.2s ease; border: 1px solid transparent;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.btn:active { transform: scale(0.95); }
+.btn-primary { background: var(--green-accent); color: var(--white); border-color: var(--green-accent); padding: 10px 20px; font-size: 16px; }
+.btn-outlined-green { background: transparent; color: var(--green-accent); border-color: var(--green-accent); padding: 10px 20px; font-size: 16px; }
+.btn-black { background: var(--black); color: var(--white); border-color: var(--black); }
+.btn-outlined-dark { background: transparent; color: var(--text-black); border-color: var(--text-black); }
+.btn-white-on-green { background: var(--white); color: var(--green-accent); border-color: var(--white); padding: 10px 20px; font-size: 16px; }
+.btn-outlined-white { background: transparent; color: var(--white); border-color: var(--white); padding: 10px 20px; font-size: 16px; }
+.btn-agree { background: rgb(0, 130, 72); color: var(--white); border: none; font-weight: 400; }
+
+section { padding: 72px 0; border-top: 1px solid var(--ceramic); background: var(--neutral-warm); }
+section.alt { background: var(--white); }
+section.house { background: var(--green-house); color: var(--white); }
+section.house h2.section-title { color: var(--white); }
+section.house .section-desc { color: rgba(255,255,255,0.70); }
+
+h2.section-title { font-size: 32px; font-weight: 600; margin-bottom: 8px; color: var(--green-starbucks); letter-spacing: -0.016em; }
+.section-desc { font-size: 16px; color: var(--text-black-soft); margin-bottom: 32px; max-width: 720px; }
+
+.palette-group { margin-bottom: 40px; }
+.palette-group h3 { font-size: 14px; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-black-soft); }
+.swatch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+.swatch { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: var(--card-shadow); }
+.swatch .fill { height: 80px; }
+.swatch .info { padding: 12px 16px; }
+.swatch .name { font-size: 14px; font-weight: 600; color: var(--text-black); }
+.swatch .hex { font-size: 12px; color: var(--text-black-soft); font-family: ui-monospace, monospace; margin-top: 2px; }
+.swatch .role { font-size: 12px; color: var(--text-black-soft); margin-top: 6px; line-height: 16px; }
+
+.type-row { display: grid; grid-template-columns: 260px 1fr; gap: 24px; padding: 16px 0; border-bottom: 1px solid var(--ceramic); align-items: baseline; }
+.type-label { font-size: 12px; color: var(--text-black-soft); font-family: ui-monospace, monospace; line-height: 16px; }
+
+.btn-showcase { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.btn-item { display: flex; flex-direction: column; gap: 8px; }
+.btn-item .caption { font-size: 12px; color: var(--text-black-soft); }
+
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+.card {
+  background: var(--white); border-radius: 12px; padding: 24px; box-shadow: var(--card-shadow);
+}
+.card h4 { font-size: 20px; font-weight: 600; margin-bottom: 8px; color: var(--text-black); }
+.card p { font-size: 14px; color: var(--text-black-soft); }
+
+.status-card {
+  background: var(--green-house); color: var(--white); border-radius: 12px;
+  padding: 24px; box-shadow: var(--card-shadow); position: relative;
+}
+.status-card::before {
+  content: ""; display: block; height: 6px; border-radius: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  margin-bottom: 20px;
+}
+.status-card h4 { font-size: 24px; font-weight: 600; margin-bottom: 12px; }
+.status-card ul { list-style: none; padding: 0; font-size: 14px; color: rgba(255,255,255,0.85); }
+.status-card li { padding: 4px 0; }
+.status-card .caption { font-size: 12px; color: rgba(255,255,255,0.70); margin-top: 12px; font-style: italic; }
+
+.frap-demo {
+  position: relative; background: var(--neutral-warm); border-radius: 12px;
+  padding: 60px 40px; min-height: 200px; display: flex; align-items: center; justify-content: center;
+  font-size: 14px; color: var(--text-black-soft);
+}
+.frap-button {
+  position: absolute; bottom: 24px; right: 24px; width: 56px; height: 56px;
+  border-radius: 50%; background: var(--green-accent); border: none; cursor: pointer;
+  box-shadow: var(--frap-shadow); display: inline-flex; align-items: center; justify-content: center;
+  color: var(--white); font-size: 22px; transition: transform 0.2s ease;
+}
+.frap-button:active { transform: scale(0.95); }
+
+.form-field { margin-bottom: 16px; max-width: 480px; }
+.form-field label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; color: var(--text-black); letter-spacing: -0.01em; }
+.form-field input, .form-field textarea {
+  width: 100%; background: var(--white); border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 12px; padding: 12px; font-size: 16px; font-family: inherit; color: var(--text-black);
+}
+.form-field input:focus, .form-field textarea:focus { outline: none; border-color: var(--green-accent); }
+.form-field input.valid { background: hsl(160 32% 87% / 33%); border-color: var(--green-accent); }
+.form-field input.invalid { background: hsl(4 82% 43% / 5%); border-color: var(--red); }
+.form-field textarea { min-height: 96px; resize: vertical; }
+
+.spacing-row { display: flex; flex-direction: column; gap: 8px; }
+.spacing-item { display: flex; align-items: center; gap: 16px; }
+.spacing-bar { background: var(--green-accent); height: 24px; border-radius: 4px; }
+.spacing-label { font-size: 12px; font-family: ui-monospace, monospace; color: var(--text-black-soft); min-width: 160px; }
+
+.radius-row { display: flex; gap: 24px; flex-wrap: wrap; }
+.radius-item { width: 120px; }
+.radius-box { width: 120px; height: 80px; background: var(--white); box-shadow: var(--card-shadow); margin-bottom: 8px; }
+.radius-label { font-size: 12px; color: var(--text-black-soft); font-family: ui-monospace, monospace; }
+
+.elevation-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; background: var(--neutral-warm); padding: 32px; border-radius: 12px; }
+.elevation-card { background: var(--white); padding: 24px; border-radius: 12px; text-align: center; }
+
+.gift-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }
+.gift-tile { aspect-ratio: 1.586 / 1; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 14px; font-weight: 600; text-align: center; padding: 16px; }
+
+.breakpoint-table { width: 100%; border-collapse: collapse; }
+.breakpoint-table th, .breakpoint-table td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--ceramic); font-size: 14px; }
+.breakpoint-table th { font-weight: 700; color: var(--text-black-soft); font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; }
+
+.viewport-ladder { display: flex; gap: 12px; align-items: flex-end; margin-top: 24px; flex-wrap: wrap; }
+.viewport-box { background: var(--white); box-shadow: var(--card-shadow); border-radius: 8px; padding: 12px; display: flex; flex-direction: column; justify-content: flex-end; }
+.viewport-box .w { font-weight: 700; font-size: 14px; color: var(--text-black); }
+.viewport-box .label { font-size: 11px; color: var(--text-black-soft); }
+
+.chip-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+.chip-row-item { display: flex; align-items: center; gap: 12px; padding: 12px; background: var(--white); border-radius: 12px; box-shadow: var(--card-shadow); }
+.chip-swatch { width: 28px; height: 28px; border-radius: 6px; flex-shrink: 0; }
+.chip-meta { flex: 1; }
+.chip-role { font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-black-soft); font-weight: 700; }
+.chip-name { font-size: 14px; font-weight: 600; color: var(--text-black); }
+.chip-hex { font-size: 12px; color: var(--text-black-soft); font-family: ui-monospace, monospace; }
+
+.footer {
+  background: var(--green-house); color: rgba(255,255,255,0.85);
+  text-align: center; padding: 24px; font-size: 14px;
+}
+
+/* getdesign.md nav additions */
+.nav-left { display: flex; align-items: center; gap: 20px; }
+.nav-brand-link,
+.nav-brand-link:link,
+.nav-brand-link:visited,
+.nav-brand-link:hover,
+.nav-brand-link:active { text-decoration: none; color: inherit; }
+.nav-github,
+.nav-github:link,
+.nav-github:visited,
+.nav-github:hover,
+.nav-github:active {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 600; color: inherit; text-decoration: none;
+  padding: 5px 10px; border: 1px solid rgba(128, 128, 128, 0.3); border-radius: 6px;
+  opacity: 0.75; transition: opacity 200ms ease, border-color 200ms ease;
+  font-family: inherit; line-height: 1; white-space: nowrap;
+}
+.nav-github:hover { opacity: 1; border-color: rgba(128, 128, 128, 0.55); }
+.nav-github svg { display: block; flex-shrink: 0; }
+
+/* getdesign.md nav centering */
+.nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+.nav > .nav-left { justify-self: start; }
+.nav > .nav-links { justify-self: center; }
+.nav > :last-child { justify-self: end; }
+
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+<style data-design-fit="true">@media (max-width: 640px) { .type-row { grid-template-columns:minmax(0,1fr); gap:8px; } }</style><style data-design-nav="true">
+.design-preview-nav { min-height:48px; }
+.design-preview-nav .nav-brand { white-space:normal; overflow-wrap:anywhere; }
+.design-preview-nav .nav-links { display:flex; flex-wrap:wrap; gap:8px clamp(10px,2vw,26px); padding-block:5px; }
+.design-preview-nav a { text-decoration:none; }
+.design-preview-nav .nav-links a { color:inherit; }
+.design-preview-nav .nav-links a:hover { text-decoration:underline; text-underline-offset:3px; }
+.design-preview-nav a:focus-visible { outline:2px solid currentColor; outline-offset:4px; }
+:is([id^=design-section-],[id=design-overview]) { scroll-margin-top:94px; }
+@media (max-width:760px) {
+  .design-preview-nav { position:static; display:flex; flex-wrap:wrap; gap:3px 12px; padding:8px 12px; height:auto; }
+  .design-preview-nav .nav-left { min-width:0; }
+  .design-preview-nav > .nav-links { flex:1 1 100%; display:flex; padding-inline:0; }
+  .design-preview-nav .nav-cta { display:none; }
+  :is([id^=design-section-],[id=design-overview]) { scroll-margin-top:14px; }
+}
+</style></head>
+<body><nav aria-label="样张章节" class="nav design-preview-nav" data-design-nav="true"><div class="nav-left"><span class="nav-brand">Starbucks</span></div><ul class="nav-links"><li><a href="#design-section-1">配色</a></li><li><a href="#design-section-6">字体</a></li><li><a href="#design-section-7">按钮</a></li><li><a href="#design-section-23">表单</a></li><li><a href="#design-section-24">布局</a></li></ul><a class="nav-cta" href="#design-overview">概览</a></nav>
+<section class="hero">
+<div class="container">
+<h1 id="design-overview">暖米白与四阶品牌绿</h1>
+<p class="sub">暖米白页面配多阶品牌绿，用深绿承载重点区块。胶囊按钮和圆角内容卡统一零售界面，金色用于奖励场景。</p>
+<div class="cta-row">
+<button class="btn btn-primary">加入Starbucks 奖励</button>
+<button class="btn btn-outlined-green">参见春季菜单</button>
+</div>
+</div>
+</section>
+<section class="alt" id="palette">
+<div class="container">
+<h2 class="section-title" id="design-section-1">1. 配色</h2>
+<p class="section-desc">品牌绿色分为四档，页面以暖米白为底，金色仅用于会员奖励场景。</p>
+<div class="palette-group"><h3>主色：四种绿色</h3>
+<div class="swatch-grid">
+<div class="swatch"><div class="fill" style="background:#006241"></div><div class="info"><div class="name">Starbucks 绿色</div><div class="hex">#006241</div><div class="role">主要标题、品牌信号</div></div></div>
+<div class="swatch"><div class="fill" style="background:#00754A"></div><div class="info"><div class="name">绿色强调色</div><div class="hex">#00754A</div><div class="role">填充 CTA、 浮式按钮</div></div></div>
+<div class="swatch"><div class="fill" style="background:#1E3932"></div><div class="info"><div class="name">绿屋</div><div class="hex">#1E3932</div><div class="role">地貌带、页脚、深层表面</div></div></div>
+<div class="swatch"><div class="fill" style="background:#2b5148"></div><div class="info"><div class="name">绿色提升</div><div class="hex">#2b5148</div><div class="role">装饰性强调色, 中暗</div></div></div>
+<div class="swatch"><div class="fill" style="background:#d4e9e2"></div><div class="info"><div class="name">绿光</div><div class="hex">#d4e9e2</div><div class="role">有效场浅色调, 轻型工具</div></div></div>
+</div>
+</div>
+<div class="palette-group"><h3>金色，仅用于奖励场景</h3>
+<div class="swatch-grid">
+<div class="swatch"><div class="fill" style="background:#cba258"></div><div class="info"><div class="name">黄金</div><div class="hex">#cba258</div><div class="role">黄金等级地位,溢价强调色</div></div></div>
+<div class="swatch"><div class="fill" style="background:#dfc49d"></div><div class="info"><div class="name">金光灯</div><div class="hex">#dfc49d</div><div class="role">更柔软的金色洗涤</div></div></div>
+<div class="swatch"><div class="fill" style="background:#faf6ee"></div><div class="info"><div class="name">最亮的金色灯</div><div class="hex">#faf6ee</div><div class="role">伙伴关系乐队奶油金牌</div></div></div>
+</div>
+</div>
+<div class="palette-group"><h3>表面与背景</h3>
+<div class="swatch-grid">
+<div class="swatch"><div class="fill" style="background:#ffffff;border:1px solid #edebe9"></div><div class="info"><div class="name">白色</div><div class="hex">#ffffff</div><div class="role">卡片 和 车型表面</div></div></div>
+<div class="swatch"><div class="fill" style="background:#f9f9f9"></div><div class="info"><div class="name">中性凉爽</div><div class="hex">#f9f9f9</div><div class="role">下拉菜单, 细微的灰色</div></div></div>
+<div class="swatch"><div class="fill" style="background:#f2f0eb"></div><div class="info"><div class="name">中性温暖</div><div class="hex">#f2f0eb</div><div class="role">首页页面底色</div></div></div>
+<div class="swatch"><div class="fill" style="background:#edebe9"></div><div class="info"><div class="name">陶瓷</div><div class="hex">#edebe9</div><div class="role">区分隔器,暖洗</div></div></div>
+<div class="swatch"><div class="fill" style="background:#000000"></div><div class="info"><div class="name">黑色</div><div class="hex">#000000</div><div class="role">"现在的加入"行动按钮,高调的</div></div></div>
+</div>
+</div>
+<div class="palette-group"><h3>文字色与语义色</h3>
+<div class="swatch-grid">
+<div class="swatch"><div class="fill" style="background:rgba(0,0,0,0.87)"></div><div class="info"><div class="name">文字黑</div><div class="hex">rgba(0,0,0,0.87)</div><div class="role">车体+在灯光下行驶</div></div></div>
+<div class="swatch"><div class="fill" style="background:rgba(0,0,0,0.58)"></div><div class="info"><div class="name">文字 黑色软</div><div class="hex">rgba(0,0,0,0.58)</div><div class="role">元数据, 次级文本</div></div></div>
+<div class="swatch"><div class="fill" style="background:#33433d"></div><div class="info"><div class="name">奖励绿色</div><div class="hex">#33433d</div><div class="role">奖励页面正文</div></div></div>
+<div class="swatch"><div class="fill" style="background:#c82014"></div><div class="info"><div class="name">红色</div><div class="hex">#c82014</div><div class="role">错误, 破坏性</div></div></div>
+<div class="swatch"><div class="fill" style="background:#fbbc05"></div><div class="info"><div class="name">黄色</div><div class="hex">#fbbc05</div><div class="role">警告状态</div></div></div>
+</div>
+</div>
+</div>
+</section>
+<section id="type">
+<div class="container">
+<h2 class="section-title" id="design-section-6">2. 字号层级</h2>
+<p class="section-desc">紧紧的,你做三郎 <code>-0.01em</code> tracking. Serif and script reserved for Rewards and Careers contexts.</p>
+<div class="type-row"><div class="type-label">显示 ^ 文本 10<br/>50px / 600 / 1.2 / -0.16px</div><div style="font-size:50px;font-weight:600;line-height:1.2;letter-spacing:-0.016em;color:var(--green-starbucks)">免费咖啡只是开始</div></div>
+<div class="type-row"><div class="type-label">Jumbo 文本-9 文本<br/>36px / 600 / 1.2</div><div style="font-size:36px;font-weight:600;line-height:1.2;letter-spacing:-0.016em;color:var(--green-starbucks)">下午好</div></div>
+<div class="type-row"><div class="type-label">大型首屏 \ 文本 8<br/>28px / 600 / 1.2</div><div style="font-size:28px;font-weight:600;line-height:1.2;letter-spacing:-0.016em">午后重订</div></div>
+<div class="type-row"><div class="type-label">H1<br/>24px / 600 / 36 绿色 Starbucks 绿色</div><div style="font-size:24px;font-weight:600;line-height:36px;color:var(--green-starbucks)">如何运作</div></div>
+<div class="type-row"><div class="type-label">H2<br/>24px / 400 / 36 / 文本为黑色</div><div style="font-size:24px;font-weight:400;line-height:36px">做你的日常工作,要得到奖励</div></div>
+<div class="type-row"><div class="type-label">大块体<br/>19px / 400 / 1.75</div><div style="font-size:19px;font-weight:400;line-height:33.25px">加入Starbucks奖项 随时免费获得食物和饮料</div></div>
+<div class="type-row"><div class="type-label">案文 3<br/>16px / 400 / 24</div><div style="font-size:16px;font-weight:400;line-height:24px">Default body copy. Comfortable reading rhythm at 16/24 with warm near-black text.</div></div>
+<div class="type-row"><div class="type-label">小型 ^ 文本 2<br/>14px / 600 / 21</div><div style="font-size:14px;font-weight:600;line-height:21px">按键标签重量</div></div>
+<div class="type-row"><div class="type-label">微 文本 1<br/>13px / 400 Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q</div><div style="font-size:13px;font-weight:400;color:var(--text-black-soft)">活动浮标/ 标题</div></div>
+<div class="type-row"><div class="type-label">Rewards Serif<br/>洛拉/ 伊欧万旧样式</div><div style="font-family:var(--font-serif);font-size:28px;font-weight:500;line-height:1.25;color:var(--rewards-green)">荣星. 享受优待吧,谢谢</div></div>
+<div class="type-row"><div class="type-label">职业文稿<br/>Kalam (cup- names) (中文(简体) ).</div><div style="font-family:var(--font-script);font-size:28px;font-weight:700">萨拉</div></div>
+</div>
+</section>
+<section class="alt" id="buttons">
+<div class="container">
+<h2 class="section-title" id="design-section-7">3. 按钮样式</h2>
+<p class="section-desc">每个按钮都是50px满分胶囊形,带有（原文参数：50px） <code>scale(0.95)</code> 正在运行的媒体。 重量对比主(绿色填充)对s signin(外线暗)对s 转换(黑色填充).</p>
+<div class="btn-showcase">
+<div class="btn-item"><button class="btn btn-primary">探索我们下午的菜单</button><span class="caption">主要 · 绿色强调色</span></div>
+<div class="btn-item"><button class="btn btn-outlined-green">试试看</button><span class="caption">绿色强调色边界</span></div>
+<div class="btn-item"><button class="btn btn-black">加入这个游戏</button><span class="caption">黑色填充 ^ 转换</span></div>
+<div class="btn-item"><button class="btn btn-outlined-dark">登录</button><span class="caption">暗线 ^ 登录</span></div>
+<div class="btn-item" style="background:var(--green-house);padding:16px;border-radius:12px;display:flex;gap:12px"><button class="btn btn-white-on-green">参见春季菜单</button><button class="btn btn-outlined-white">了解更多</button></div>
+<div class="btn-item"><button class="btn btn-agree">同意</button><span class="caption">商定备选案文</span></div>
+</div>
+<h3 style="margin-top:48px;margin-bottom:16px;font-size:20px;font-weight:600">Frap — Floating Circular Order Button</h3>
+<div class="frap-demo">
+      盖过卡片的车,
+      <button aria-label="启动命令" class="frap-button">🛒</button>
+</div>
+</div>
+</section>
+<section id="components">
+<div class="container">
+<h2 class="section-title">4. 标志性组件</h2>
+<p class="section-desc">内容卡片、会员奖励状态面板、礼品卡和通栏功能区分别承载不同内容。</p>
+<h3 style="margin:24px 0 12px;font-size:20px;font-weight:600">内容 卡片</h3>
+<div class="card-grid">
+<div class="card"><h4>如何运作</h4><p>12px半径带有低声软双影堆. 默认内容表面。（原文参数：12px）</p></div>
+<div class="card"><h4>午后重订</h4><p>相同的基线卡片,用于米白色 页面底色上的特性模块.</p></div>
+<div class="card"><h4>伙伴关系</h4><p>Gold-tint 变体继承了相同的12px半径,但运行在（原文参数：12px） <code>#faf6ee</code> 奖励伙伴关系乐队的背景。</p></div>
+</div>
+<h3 style="margin:40px 0 12px;font-size:20px;font-weight:600">奖励状态卡片，三列排列</h3>
+<div class="card-grid">
+<div class="status-card"><h4>绿色等级</h4><ul><li>★ 每笔订单累积星星</li><li>★ 专属优惠</li><li>★ 生日奖励</li></ul><p class="caption">赚更多的星,你打开新的好处。</p></div>
+<div class="status-card"><h4>金色等级</h4><ul><li>★ 冷热咖啡免费续杯</li><li>★ 每月双倍星星日</li><li>★ 专属奖励</li></ul><p class="caption">Reach Gold status by earning 450 Stars in 12 months.</p></div>
+<div class="status-card"><h4>任务</h4><ul><li>★ 会员专享礼物</li><li>★ 双倍星星日</li><li>★ 生日当天获赠饮品</li></ul><p class="caption">任务状态一旦达到,额外补偿。</p></div>
+</div>
+<h3 style="margin:40px 0 12px;font-size:20px;font-weight:600">以实物摄影呈现的礼品卡</h3>
+<div class="gift-grid">
+<div class="gift-tile" style="background:linear-gradient(135deg,#f4c590,#e89a5e)">生日快乐</div>
+<div class="gift-tile" style="background:linear-gradient(135deg,#cba258,#a87b3e)">谢谢</div>
+<div class="gift-tile" style="background:linear-gradient(135deg,#006241,#00754A)">庆祝</div>
+<div class="gift-tile" style="background:linear-gradient(135deg,#c4a679,#8b6e4a)">母亲节</div>
+<div class="gift-tile" style="background:linear-gradient(135deg,#d4e9e2,#80b5a2);color:var(--green-house)">春天( 春天 )</div>
+<div class="gift-tile" style="background:linear-gradient(135deg,#edebe9,#c2bfb9);color:var(--green-house)">随时</div>
+</div>
+</div>
+</section>
+<section class="house">
+<div class="container">
+<h2 class="section-title">5. 深绿底功能区块</h2>
+<p class="section-desc">重点内容使用深绿色通栏。标题为白色，次要文字使用半透明白色，操作区并列放置两个按钮。</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:32px">
+<div>
+<h3 style="font-size:36px;font-weight:600;line-height:1.2;letter-spacing:-0.016em;margin-bottom:16px;color:var(--white)">春天开始了</h3>
+<p style="font-size:19px;color:rgba(255,255,255,0.85);margin-bottom:24px;line-height:1.6">冰拉凡德·克瑞姆·马恰(Iced Lavender Cream Matcha)和冰拉凡德·克瑞姆·奥特米尔克·马恰(Iced Lavender Cream Oatmilk Matcha),现可使用.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<button class="btn btn-white-on-green">参见春季菜单</button>
+<button class="btn btn-outlined-white">瞷碞翴</button>
+</div>
+</div>
+<div style="background:rgba(255,255,255,0.08);border-radius:12px;padding:60px;text-align:center;color:rgba(255,255,255,0.6)">产品摄影</div>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<h2 class="section-title">6. 商品详情页组件（PDP）</h2>
+<p class="section-desc">大小选择器 添加行 定制流 奖励成本胶囊形 描述带 营养表 –菜单-产品-页面组件集群.</p>
+<h3 style="margin:24px 0 12px;font-size:20px;font-weight:600;color:var(--ink)">商品详情页的面包屑导航</h3>
+<div style="font-size:14px;color:var(--text-black-soft);margin-bottom:24px">
+<a href="#" style="color:var(--green-accent);text-decoration:underline">菜单</a>  /  <a href="#" style="color:var(--green-accent);text-decoration:underline">刷新器</a>  /  <span style="color:var(--text-black)">粉红色能量饮料</span>
+</div>
+<h3 style="margin:24px 0 12px;font-size:20px;font-weight:600;color:var(--ink)">容量选项</h3>
+<div style="display:flex;gap:16px;max-width:600px;margin-bottom:32px">
+<div style="flex:1;text-align:center;padding:16px 8px">
+<div style="width:48px;height:56px;margin:0 auto 8px;background:transparent;border:2px solid transparent;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:var(--ink)">☕</div>
+<div style="font-size:16px;font-weight:700;color:var(--green-starbucks)">高点</div>
+<div style="font-size:13px;color:var(--text-black-soft);margin-top:2px">12 闪光波</div>
+</div>
+<div style="flex:1;text-align:center;padding:16px 8px">
+<div style="width:48px;height:56px;margin:0 auto 8px;border:2px solid var(--green-accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:var(--green-accent)">☕</div>
+<div style="font-size:16px;font-weight:700;color:var(--green-starbucks)">格兰德</div>
+<div style="font-size:13px;color:var(--text-black-soft);margin-top:2px">16 闪光波</div>
+</div>
+<div style="flex:1;text-align:center;padding:16px 8px">
+<div style="width:48px;height:56px;margin:0 auto 8px;background:transparent;border:2px solid transparent;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;color:var(--ink)">☕</div>
+<div style="font-size:16px;font-weight:700;color:var(--green-starbucks)">文蒂语</div>
+<div style="font-size:13px;color:var(--text-black-soft);margin-top:2px">24 闪光波</div>
+</div>
+<div style="flex:1;text-align:center;padding:16px 8px">
+<div style="width:48px;height:56px;margin:0 auto 8px;background:transparent;border:2px solid transparent;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:36px;color:var(--ink)">☕</div>
+<div style="font-size:16px;font-weight:700;color:var(--green-starbucks)">特伦塔</div>
+<div style="font-size:13px;color:var(--text-black-soft);margin-top:2px">30 闪光波</div>
+</div>
+</div>
+<h3 style="margin:24px 0 12px;font-size:20px;font-weight:600;color:var(--ink)">配料和奶类选择控件</h3>
+<div style="max-width:520px;display:flex;flex-direction:column;gap:16px;margin-bottom:32px">
+<div style="position:relative;border:1px solid var(--border);border-radius:4px;padding:20px 16px 12px;background:var(--white)">
+<span style="position:absolute;top:4px;left:16px;font-size:11px;font-weight:700;color:var(--text-black);letter-spacing:0.325px;text-transform:uppercase">添加内容</span>
+<div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:16px">冰块</span><span style="color:var(--text-black-soft)">▾</span></div>
+</div>
+<div style="position:relative;border:1px solid var(--border);border-radius:4px;padding:20px 16px 12px;background:var(--white)">
+<span style="position:absolute;top:4px;left:16px;font-size:11px;font-weight:700;color:var(--text-black);letter-spacing:0.325px;text-transform:uppercase">添加内容</span>
+<div style="display:flex;justify-content:space-between;align-items:center">
+<span style="font-size:16px">草莓水果包含</span>
+<div style="display:flex;align-items:center;gap:8px">
+<button style="width:32px;height:32px;border-radius:50%;border:1px solid var(--border);background:var(--white);cursor:pointer">−</button>
+<span style="font-size:16px;font-weight:700;min-width:20px;text-align:center">1</span>
+<button style="width:32px;height:32px;border-radius:50%;border:1px solid var(--border);background:var(--white);cursor:pointer">+</button>
+</div>
+</div>
+</div>
+<div style="position:relative;border:1px solid var(--border);border-radius:4px;padding:20px 16px 12px;background:var(--white)">
+<span style="position:absolute;top:4px;left:16px;font-size:11px;font-weight:700;color:var(--text-black);letter-spacing:0.325px;text-transform:uppercase">牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶 牛奶</span>
+<div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:16px">椰子</span><span style="color:var(--text-black-soft)">▾</span></div>
+</div>
+</div>
+<h3 style="margin:24px 0 12px;font-size:20px;font-weight:600;color:var(--ink)">自定义 + 添加到顺序( 已授奖动作)</h3>
+<div style="display:flex;gap:12px;align-items:center;margin-bottom:32px;flex-wrap:wrap">
+<button style="background:var(--white);color:var(--green-accent);border:1.5px solid var(--green-accent);border-radius:50px;padding:14px 40px;font-size:16px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:8px;font-family:inherit"><span style="color:var(--gold)">✨</span> 自定义</button>
+<button class="btn btn-primary">添加到顺序</button>
+</div>
+<h3 style="margin:24px 0 12px;font-size:20px;font-weight:600;color:var(--ink)">Rewards Cost Pill ("200★ item")</h3>
+<div style="display:flex;gap:12px;margin-bottom:32px;flex-wrap:wrap">
+<span style="display:inline-block;border:1px solid var(--gold);color:var(--gold);border-radius:50px;padding:4px 12px;font-size:13px;font-weight:700;letter-spacing:0.5px">200★ item</span>
+<span style="display:inline-block;border:1px solid var(--gold);color:var(--gold);border-radius:50px;padding:4px 12px;font-size:13px;font-weight:700;letter-spacing:0.5px">150★ item</span>
+<span style="display:inline-block;border:1px solid var(--gold);color:var(--gold);border-radius:50px;padding:4px 12px;font-size:13px;font-weight:700;letter-spacing:0.5px">75★ item</span>
+</div>
+<h3 style="margin:24px 0 12px;font-size:20px;font-weight:600;color:var(--ink)">产品说明带(绿色住宅)</h3>
+<div style="background:var(--green-house);color:var(--white);padding:32px;border-radius:4px;margin-bottom:32px">
+<span style="display:inline-block;border:1px solid var(--gold);color:var(--gold);border-radius:50px;padding:4px 12px;font-size:13px;font-weight:700;letter-spacing:0.5px;margin-bottom:16px">200★ item</span>
+<p style="font-size:16px;line-height:1.5;margin-bottom:16px;color:rgba(255,255,255,0.85)">以脆草莓和光滑的椰汁牛奶做成,然后用冰和真正的冻干草莓手握. 你最终激起我... ...用咖啡因的125mg 来提振, 并提供了很好的B维生素来源。</p>
+<p style="font-size:14px;font-weight:700;margin-bottom:20px">140 热量, 25糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖,糖 2.5克脂肪( 脂肪) <span style="opacity:0.7;font-weight:400">ⓘ</span></p>
+<button class="btn btn-outlined-white">营养全全全和成分清单</button>
+</div>
+<h3 style="margin:24px 0 12px;font-size:20px;font-weight:600;color:var(--ink)">成份/营养表</h3><p class="design-demo-note">组件演示。表头、行距、分隔线和状态标签。数据仅用于样式展示。</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;background:var(--white);border:1px solid var(--hairline);border-radius:4px;padding:32px">
+<div>
+<h4 style="font-size:24px;font-weight:400;margin-bottom:16px;color:var(--ink)">成份</h4>
+<p style="font-size:14px;color:var(--text-black-soft);margin-bottom:8px;font-weight:700">本项目不详</p>
+<p style="font-size:14px;color:var(--text-black-soft);line-height:1.5">我们不能保证我们商店中任何预包装的产品都是无过敏的,因为我们使用共用设备来储存、准备和服务它们。 过敏症的客户可以在我们包装的产品标签上找到产品成分信息,也可以在Starbucks.com/menu网上找到。</p>
+</div>
+<div>
+<h4 style="font-size:24px;font-weight:400;margin-bottom:16px;color:var(--ink)">营养</h4>
+<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--hairline);font-size:14px"><span>卡路里语Name</span><span style="font-weight:700">5</span></div>
+<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--hairline);font-size:14px"><span>总计</span><span style="font-weight:700">0 g</span></div>
+<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--hairline);font-size:14px"><span>饱和脂肪</span><span style="font-weight:700">0 g</span></div>
+<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--hairline);font-size:14px"><span>转胖</span><span style="font-weight:700">0 g</span></div>
+<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--hairline);font-size:14px"><span>胆固醇</span><span style="font-weight:700">0 毫克</span></div>
+<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--hairline);font-size:14px"><span>钠</span><span style="font-weight:700">15 毫克</span></div>
+<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--hairline);font-size:14px"><span>碳水化合物共计</span><span style="font-weight:700">0 g</span></div>
+<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--hairline);font-size:14px"><span>蛋白质</span><span style="font-weight:700">0 g</span></div>
+<div style="display:flex;justify-content:space-between;padding:8px 0;font-size:14px"><span>咖啡因</span><span style="font-weight:700">205 毫克**</span></div>
+<p style="font-size:12px;color:var(--text-black-soft);margin-top:12px;line-height:1.5">** Caffeine is an approximate value. 2,000 calories a day is used for general nutrition advice, but calorie needs vary.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="alt">
+<div class="container">
+<h2 class="section-title" id="design-section-23">7. 表单控件</h2>
+<p class="section-desc">聚焦时，浮动标签缩小并上移。通过校验的字段用浅薄荷绿色提示，无效字段用浅红色提示。</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:800px">
+<div>
+<div class="form-field"><label>电子邮箱</label><input class="valid" type="email" value="sarah@example.com"/></div>
+<div class="form-field"><label>密码</label><input type="password" value="••••••••"/></div>
+<div class="form-field"><label>确认密码</label><input class="invalid" type="password" value="mismatch"/></div>
+</div>
+<div>
+<div class="form-field"><label>消息</label><textarea placeholder="你的反馈..."></textarea></div>
+<button class="btn btn-primary" style="width:100%">提交</button>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<h2 class="section-title" id="design-section-24">8. 间距层级</h2>
+<p class="section-desc">以雷姆为主( 4)<code>1rem = 10px</code>). <code>--space-3</code> (16px)是通用的节奏常数.</p>
+<div class="spacing-row">
+<div class="spacing-item"><span class="spacing-label">空间 - 1 - 空间 - 0.4rem · 4px</span><div class="spacing-bar" style="width:4px"></div></div>
+<div class="spacing-item"><span class="spacing-label">空间-2 − 0.8rem · 8px</span><div class="spacing-bar" style="width:8px"></div></div>
+<div class="spacing-item"><span class="spacing-label">空间 - 3 个 1.6rem · 16px ★</span><div class="spacing-bar" style="width:16px"></div></div>
+<div class="spacing-item"><span class="spacing-label">空间 4 + 2.4rem · 24px</span><div class="spacing-bar" style="width:24px"></div></div>
+<div class="spacing-item"><span class="spacing-label">空间 - 5 + 3.2rem · 32px</span><div class="spacing-bar" style="width:32px"></div></div>
+<div class="spacing-item"><span class="spacing-label">空间 - 6 + 4rem · 40px</span><div class="spacing-bar" style="width:40px"></div></div>
+<div class="spacing-item"><span class="spacing-label">空间 7 − 4.8rem · 48px</span><div class="spacing-bar" style="width:48px"></div></div>
+<div class="spacing-item"><span class="spacing-label">空间 8 + 5.6rem · 56px</span><div class="spacing-bar" style="width:56px"></div></div>
+<div class="spacing-item"><span class="spacing-label">空间- 9 个 6.4rem · 64px</span><div class="spacing-bar" style="width:64px"></div></div>
+</div>
+</div>
+</section>
+<section class="alt">
+<div class="container">
+<h2 class="section-title">9. 圆角与层次</h2>
+<p class="section-desc">12px 卡片+50px 胶囊控件 占优势. 阴影是层层低的阿尔法堆栈,从不重落阴影.</p>
+<div class="radius-row">
+<div class="radius-item"><div class="radius-box" style="border-radius:12px"></div><div class="radius-label">12px · 贺卡</div></div>
+<div class="radius-item"><div class="radius-box" style="border-radius:12px 12px 0 0"></div><div class="radius-label">12px 顶端 ^ 反馈标签</div></div>
+<div class="radius-item"><div class="radius-box" style="border-radius:50px;height:48px"></div><div class="radius-label">50px 胶囊形</div></div>
+<div class="radius-item"><div class="radius-box" style="border-radius:50%;width:80px;height:80px"></div><div class="radius-label">50% —— 垃圾,图标</div></div>
+</div>
+<h3 style="margin-top:32px;margin-bottom:16px;font-size:20px;font-weight:600">升降级</h3>
+<div class="elevation-row">
+<div class="elevation-card" style="box-shadow:0 0 0.5px rgba(0,0,0,0.14), 0 1px 1px rgba(0,0,0,0.24)"><strong>卡片</strong><div style="font-size:12px;color:var(--text-black-soft);margin-top:8px">2 层低声阴影</div></div>
+<div class="elevation-card" style="box-shadow:0 1px 3px rgba(0,0,0,0.1), 0 2px 2px rgba(0,0,0,0.06), 0 0 2px rgba(0,0,0,0.07)"><strong>全球导航</strong><div style="font-size:12px;color:var(--text-black-soft);margin-top:8px">3 层软升降机</div></div>
+<div class="elevation-card" style="box-shadow:0 0 6px rgba(0,0,0,0.24), 0 8px 12px rgba(0,0,0,0.14)"><strong>垃圾</strong><div style="font-size:12px;color:var(--text-black-soft);margin-top:8px">基数+环境堆栈</div></div>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<h2 class="section-title">10. 响应式布局</h2>
+<p class="section-desc">Progressive nav heights (64 → 72 → 83 → 99px). Gift grid scales 2-up → 5-up.</p>
+<table class="breakpoint-table">
+<thead><tr><th>名称</th><th>宽度</th><th>密钥更改</th></tr></thead>
+<tbody>
+<tr><td>xs</td><td>&lt; 480px Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q</td><td>Nave 64px 汉堡 单柱 礼品网格 2-up</td></tr>
+<tr><td>手机端</td><td>480–767px</td><td>导航 72px · 2- 上层礼物 收紧垫子</td></tr>
+<tr><td>平板</td><td>768–1023px</td><td>Nave 83px 3-up 礼物 · 首屏分裂出现</td></tr>
+<tr><td>桌面端</td><td>1024–1439px</td><td>Nave 99px 4-up 礼物 40/60 完整首屏</td></tr>
+<tr><td>最大值</td><td>1440px+</td><td>1440px 5-up 礼物 宽 米白色 边际</td></tr>
+</tbody>
+</table>
+<div class="viewport-ladder">
+<div class="viewport-box" style="width:60px;height:80px"><div class="w">480</div><div class="label">xs</div></div>
+<div class="viewport-box" style="width:96px;height:110px"><div class="w">768</div><div class="label">移动/平板电脑</div></div>
+<div class="viewport-box" style="width:140px;height:140px"><div class="w">1024</div><div class="label">桌面端</div></div>
+<div class="viewport-box" style="width:220px;height:175px"><div class="w">1440</div><div class="label">x 大顶</div></div>
+</div>
+<h3 style="margin:32px 0 12px;font-size:20px;font-weight:600">触控区域</h3>
+<p style="font-size:14px;color:var(--text-black-soft);margin-bottom:24px">Pill buttons at `7px 16px` padding are ~32px tall — typically expanded visually on mobile to meet 44px WCAG AAA. Frap at 56px clears the minimum with an extra <code>-0.8rem</code> 电话:963-10048。</p>
+<h3 style="margin-bottom:12px;font-size:20px;font-weight:600">窄屏布局调整</h3>
+<ul style="padding-left:20px;font-size:14px;color:var(--text-black-soft);line-height:24px">
+<li><strong style="color:var(--text-black)">全球导航 :</strong> 64 → 72 → 83 → 99px 横跨断点; 平板板块下方的汉堡菜单</li>
+<li><strong style="color:var(--text-black)">首屏分开 :</strong> 40/60 移动式叠加的不对称 →</li>
+<li><strong style="color:var(--text-black)">礼品卡网格 :</strong> 5 → 4 → 3 → 2 → 1 栏</li>
+<li><strong style="color:var(--text-black)">外沟:</strong> 16 → 24 → 40px</li>
+<li><strong style="color:var(--text-black)">奖励状态小组:</strong> 3-up 移动式→单列</li>
+</ul>
+</div>
+</section>
+<section class="alt">
+<div class="container">
+<h2 class="section-title">11. 代理快速指南 — 快速颜色引用</h2>
+<p class="section-desc">复制- 复制名称用于生成Starbucks 风格的 AI 代理。</p>
+<div class="chip-grid">
+<div class="chip-row-item"><div class="chip-swatch" style="background:#00754A"></div><div class="chip-meta"><div class="chip-role">主要行动按钮</div><div class="chip-name">绿色强调色</div><div class="chip-hex">#00754A</div></div></div>
+<div class="chip-row-item"><div class="chip-swatch" style="background:#006241"></div><div class="chip-meta"><div class="chip-role">品牌标题</div><div class="chip-name">Starbucks 绿色</div><div class="chip-hex">#006241</div></div></div>
+<div class="chip-row-item"><div class="chip-swatch" style="background:#1E3932"></div><div class="chip-meta"><div class="chip-role">特性带/ 页脚</div><div class="chip-name">绿屋</div><div class="chip-hex">#1E3932</div></div></div>
+<div class="chip-row-item"><div class="chip-swatch" style="background:#f2f0eb;border:1px solid #edebe9"></div><div class="chip-meta"><div class="chip-role">页面画布</div><div class="chip-name">中性温暖</div><div class="chip-hex">#f2f0eb</div></div></div>
+<div class="chip-row-item"><div class="chip-swatch" style="background:#edebe9"></div><div class="chip-meta"><div class="chip-role">区洗</div><div class="chip-name">陶瓷</div><div class="chip-hex">#edebe9</div></div></div>
+<div class="chip-row-item"><div class="chip-swatch" style="background:#ffffff;border:1px solid #edebe9"></div><div class="chip-meta"><div class="chip-role">卡片</div><div class="chip-name">白色</div><div class="chip-hex">#ffffff</div></div></div>
+<div class="chip-row-item"><div class="chip-swatch" style="background:rgba(0,0,0,0.87)"></div><div class="chip-meta"><div class="chip-role">体 + 标题</div><div class="chip-name">文字黑</div><div class="chip-hex">rgba(0,0,0,0.87)</div></div></div>
+<div class="chip-row-item"><div class="chip-swatch" style="background:rgba(0,0,0,0.58)"></div><div class="chip-meta"><div class="chip-role">次要文本</div><div class="chip-name">文字 黑色软</div><div class="chip-hex">rgba(0,0,0,0.58)</div></div></div>
+<div class="chip-row-item"><div class="chip-swatch" style="background:#cba258"></div><div class="chip-meta"><div class="chip-role">奖励状况</div><div class="chip-name">黄金</div><div class="chip-hex">#cba258</div></div></div>
+<div class="chip-row-item"><div class="chip-swatch" style="background:#33433d"></div><div class="chip-meta"><div class="chip-role">奖励正文文本</div><div class="chip-name">奖励绿色</div><div class="chip-hex">#33433d</div></div></div>
+<div class="chip-row-item"><div class="chip-swatch" style="background:#c82014"></div><div class="chip-meta"><div class="chip-role">破坏性</div><div class="chip-name">红色</div><div class="chip-hex">#c82014</div></div></div>
+<div class="chip-row-item"><div class="chip-swatch" style="background:#000000"></div><div class="chip-meta"><div class="chip-role">转换 行动按钮</div><div class="chip-name">黑色</div><div class="chip-hex">#000000</div></div></div>
+</div>
+<div style="margin-top:24px;padding:16px;background:var(--white);box-shadow:var(--card-shadow);border-radius:12px;font-size:14px;color:var(--text-black-soft);line-height:22px">
+<strong style="color:var(--text-black)">注释.</strong> Use Green Accent for most filled CTAs. Reserve Black for strong conversion moments only ("Join now"). Gold is Rewards-only — don't spend it elsewhere. Keep SoDoSans (or substitute Inter) at <code>-0.01em</code> 追踪整个过程
+    </div>
+</div>
+</section>
+<footer class="footer">
+<div class="footer-shell">
+<div class="footer-grid">
+<div class="footer-col">
+<h6>VoltAgent 框架</h6>
+<span>类型脚本代理</span>
+<span>工具编程</span>
+<span>多种代理工作流程</span>
+</div>
+<div class="footer-col">
+<h6>伏特Ops LLM 可观测性</h6>
+<span>LLM 跟踪</span>
+<span>实时调试</span>
+<span>视觉时间</span>
+</div>
+<div class="footer-col">
+<h6>生产</h6>
+<span>评价</span>
+<span>即时管理</span>
+<span>护卫</span>
+</div>
+<div class="footer-col">
+<h6>平台</h6>
+<span>伏特Ops 控制台</span>
+<span>开源核心</span>
+<span>代理工程</span>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

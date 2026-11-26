@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>奶油色纸感</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;480;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --cream: #1a1916;
+    --charcoal: #e8e5de;
+    --off-white: #1a1916;
+    --border-light: #2e2c28;
+    --muted: #9a9a98;
+    --charcoal-40: rgba(232,229,222,0.35);
+    --charcoal-83: rgba(232,229,222,0.83);
+    --charcoal-04: rgba(232,229,222,0.06);
+    --charcoal-03: rgba(232,229,222,0.04);
+    --ring-blue: rgba(59,130,246,0.5);
+    --focus-shadow: rgba(0,0,0,0.3) 0px 4px 12px;
+    --shadow-inset: rgba(255,255,255,0.1) 0px 0.5px 0px 0px inset, rgba(0,0,0,0.4) 0px 0px 0px 0.5px inset, rgba(0,0,0,0.2) 0px 1px 2px 0px;
+    --font-primary: 'DM Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--cream);
+    color: var(--charcoal);
+    font-family: var(--font-primary);
+    font-size: 16px; font-weight: 400; line-height: 1.50;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  .nav {
+    position: sticky; top: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 32px;
+    background: rgba(26,25,22,0.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-light);
+  }
+  .nav-brand { font-size: 14px; font-weight: 600; color: var(--charcoal); text-decoration: none; letter-spacing: -0.28px; }
+  .nav-links { display: flex; gap: 24px; list-style: none; }
+  .nav-links a { font-size: 14px; font-weight: 400; color: var(--muted); text-decoration: none; transition: color 0.15s; }
+  .nav-links a:hover { color: var(--charcoal); }
+  .nav-cta {
+    display: inline-block; background: var(--charcoal); color: var(--off-white);
+    padding: 8px 16px; border-radius: 6px; font-size: 14px; font-weight: 500;
+    text-decoration: none; transition: opacity 0.15s;
+    box-shadow: var(--shadow-inset);
+  }
+  .nav-cta:hover { opacity: 0.85; }
+
+  /* HERO */
+  .hero { padding: 96px 32px 80px; text-align: center; }
+  .hero h1 {
+    font-size: 60px; font-weight: 600; line-height: 1.10;
+    letter-spacing: -1.5px; color: var(--charcoal); margin-bottom: 16px;
+  }
+  .hero p { font-size: 18px; font-weight: 400; line-height: 1.38; color: var(--muted); max-width: 560px; margin: 0 auto 32px; }
+  .hero-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn-dark {
+    display: inline-block; background: var(--charcoal); color: var(--off-white);
+    padding: 10px 20px; border-radius: 6px; border: none;
+    font-family: var(--font-primary); font-size: 14px; font-weight: 500;
+    text-decoration: none; cursor: pointer; transition: opacity 0.15s;
+    box-shadow: var(--shadow-inset);
+  }
+  .btn-dark:hover { opacity: 0.85; }
+  .btn-ghost {
+    display: inline-block; background: transparent; color: var(--charcoal);
+    padding: 10px 20px; border-radius: 6px;
+    border: 1px solid var(--charcoal-40);
+    font-family: var(--font-primary); font-size: 14px; font-weight: 500;
+    text-decoration: none; cursor: pointer; transition: opacity 0.15s;
+  }
+  .btn-ghost:hover { opacity: 0.8; }
+
+  /* SECTIONS */
+  .section { padding: 64px 32px; max-width: 1200px; margin: 0 auto; }
+  .section-label { font-size: 12px; font-weight: 500; color: var(--muted); text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.5px; }
+  .section-title { font-size: 36px; font-weight: 600; line-height: 1.10; letter-spacing: -0.9px; margin-bottom: 32px; }
+  .section-divider { border: none; border-top: 1px solid var(--border-light); margin: 0; }
+
+  /* COLORS */
+  .color-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 12px; margin-bottom: 24px; }
+  .color-swatch { border-radius: 12px; overflow: hidden; border: 1px solid var(--border-light); }
+  .color-swatch-block { height: 72px; width: 100%; }
+  .color-swatch-info { padding: 10px 12px; }
+  .color-swatch-name { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+  .color-swatch-hex { font-size: 12px; color: var(--muted); font-family: ui-monospace, SFMono-Regular, monospace; }
+  .color-swatch-role { font-size: 11px; color: var(--muted); margin-top: 3px; }
+  .color-group-label { font-size: 14px; font-weight: 600; color: var(--muted); margin: 24px 0 10px; }
+
+  /* TYPOGRAPHY */
+  .type-sample { margin-bottom: 28px; padding-bottom: 24px; border-bottom: 1px solid var(--border-light); }
+  .type-sample:last-child { border-bottom: none; }
+  .type-meta { font-size: 12px; font-weight: 500; color: var(--muted); margin-top: 8px; font-family: ui-monospace, SFMono-Regular, monospace; }
+
+  /* BUTTONS */
+  .button-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .button-item { text-align: center; }
+  .button-label { font-size: 12px; font-weight: 500; color: var(--muted); margin-top: 8px; }
+  .btn-cream {
+    display: inline-block; background: var(--cream); color: var(--charcoal);
+    padding: 8px 16px; border-radius: 6px; font-size: 14px; font-weight: 400;
+    text-decoration: none; border: 1px solid var(--border-light); cursor: pointer;
+  }
+  .btn-pill {
+    display: inline-flex; align-items: center; justify-content: center;
+    background: var(--cream); color: var(--charcoal);
+    width: 36px; height: 36px; border-radius: 9999px;
+    font-size: 14px; font-weight: 400; text-decoration: none;
+    box-shadow: var(--shadow-inset); opacity: 0.5; cursor: pointer; border: 1px solid var(--border-light);
+  }
+
+  /* CARDS */
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+  .card { background: var(--cream); border-radius: 12px; padding: 24px; border: 1px solid var(--border-light); transition: border-color 0.2s; }
+  .card:hover { border-color: var(--charcoal-40); }
+  .card h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 8px; }
+  .card p { font-size: 14px; color: var(--muted); line-height: 1.50; }
+  .card-badge { display: inline-block; font-size: 12px; font-weight: 500; padding: 2px 8px; border-radius: 9999px; margin-bottom: 12px; }
+
+  /* FORMS */
+  .form-group { margin-bottom: 20px; max-width: 400px; }
+  .form-label { display: block; font-size: 14px; font-weight: 500; color: var(--charcoal); margin-bottom: 6px; }
+  .form-input {
+    width: 100%; background: var(--cream); color: var(--charcoal);
+    border: 1px solid var(--border-light); padding: 10px 12px; border-radius: 6px;
+    font-family: var(--font-primary); font-size: 14px; outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .form-input:focus { border-color: transparent; box-shadow: 0 0 0 2px var(--ring-blue); }
+  .form-input--focus { border-color: transparent; box-shadow: 0 0 0 2px var(--ring-blue); }
+  .form-input--error { border-color: transparent; box-shadow: 0 0 0 2px #ef4444; }
+  .form-textarea {
+    width: 100%; min-height: 80px; background: var(--cream); color: var(--charcoal);
+    border: 1px solid var(--border-light); padding: 10px 12px; border-radius: 6px;
+    font-family: var(--font-primary); font-size: 14px; resize: vertical; outline: none;
+  }
+  .form-state-label { font-size: 11px; color: var(--muted); margin-top: 4px; }
+
+  /* SPACING */
+  .spacing-row { display: flex; align-items: flex-end; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; }
+  .spacing-item { text-align: center; }
+  .spacing-block { background: var(--charcoal); border-radius: 3px; margin-bottom: 6px; height: 28px; }
+  .spacing-value { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 11px; font-weight: 500; color: var(--muted); }
+
+  /* RADIUS */
+  .radius-row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+  .radius-item { text-align: center; }
+  .radius-box { width: 64px; height: 64px; background: var(--charcoal); margin-bottom: 6px; }
+  .radius-label { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 11px; font-weight: 500; color: var(--muted); }
+  .radius-context { font-size: 10px; color: var(--muted); }
+
+  /* ELEVATION */
+  .elevation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+  .elevation-card { background: var(--cream); border-radius: 12px; padding: 20px; text-align: center; }
+  .elevation-label { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+  .elevation-desc { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 11px; color: var(--muted); }
+
+  /* FOOTER */
+  .footer { padding: 32px; text-align: center; border-top: 1px solid var(--border-light); font-size: 13px; color: var(--muted); }
+  .footer a { color: var(--charcoal); text-decoration: underline; }
+
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 36px; letter-spacing: -0.9px; }
+    .nav-links { display: none; }
+    .section { padding: 48px 20px; }
+    .card-grid { grid-template-columns: 1fr; }
+  }
+
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div style="position:fixed;top:16px;right:16px;z-index:200;background:#e8e5de;color:#1a1916;font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;">暗色模式</div>
+<section class="hero">
+<h1>奶油色纸感</h1>
+<p>纸张般的奶油色底与温和的强调色，形成低噪的界面。</p>
+<div class="hero-buttons">
+<a class="btn-dark" href="#">开始建楼</a>
+<a class="btn-ghost" href="#">查看文档</a>
+</div>
+</section>
+<hr class="section-divider"/>
+<section class="section" id="colors">
+<div class="section-label">01 / 颜色</div>
+<h2 class="section-title">配色</h2>
+<div class="color-group-label">主要</div>
+<div class="color-grid">
+<div class="color-swatch"><div class="color-swatch-block" style="background:#f7f4ed"></div><div class="color-swatch-info"><div class="color-swatch-name">米白色</div><div class="color-swatch-hex">#f7f4ed</div><div class="color-swatch-role">页背景</div></div></div>
+<div class="color-swatch"><div class="color-swatch-block" style="background:#1c1c1c"></div><div class="color-swatch-info"><div class="color-swatch-name">炭灰色</div><div class="color-swatch-hex">#1c1c1c</div><div class="color-swatch-role">主要案文,标题</div></div></div>
+<div class="color-swatch"><div class="color-swatch-block" style="background:#fcfbf8"></div><div class="color-swatch-info"><div class="color-swatch-name">脱白</div><div class="color-swatch-hex">#fcfbf8</div><div class="color-swatch-role">暗色按钮文本</div></div></div>
+</div>
+<div class="color-group-label">中性比例( 基于和平)</div>
+<div class="color-grid">
+<div class="color-swatch"><div class="color-swatch-block" style="background:rgba(28,28,28,0.83)"></div><div class="color-swatch-info"><div class="color-swatch-name">木炭矿 83%</div><div class="color-swatch-hex">rgba(28,28,28,0.83)</div><div class="color-swatch-role">强次要</div></div></div>
+<div class="color-swatch"><div class="color-swatch-block" style="background:#5f5f5d"></div><div class="color-swatch-info"><div class="color-swatch-name">静音灰</div><div class="color-swatch-hex">#5f5f5d</div><div class="color-swatch-role">文字、 标题</div></div></div>
+<div class="color-swatch"><div class="color-swatch-block" style="background:rgba(28,28,28,0.4)"></div><div class="color-swatch-info"><div class="color-swatch-name">木炭矿 40%</div><div class="color-swatch-hex">rgba(28,28,28,0.4)</div><div class="color-swatch-role">交互式边框</div></div></div>
+<div class="color-swatch"><div class="color-swatch-block" style="background:rgba(28,28,28,0.04); border-bottom:1px solid var(--border-light)"></div><div class="color-swatch-info"><div class="color-swatch-name">木炭矿 4%</div><div class="color-swatch-hex">rgba(28,28,28,0.04)</div><div class="color-swatch-role">弯曲</div></div></div>
+<div class="color-swatch"><div class="color-swatch-block" style="background:rgba(28,28,28,0.03); border-bottom:1px solid var(--border-light)"></div><div class="color-swatch-info"><div class="color-swatch-name">木炭矿 3%</div><div class="color-swatch-hex">rgba(28,28,28,0.03)</div><div class="color-swatch-role">下层覆盖</div></div></div>
+</div>
+<div class="color-group-label">表面边框( B)</div>
+<div class="color-grid">
+<div class="color-swatch"><div class="color-swatch-block" style="background:#eceae4"></div><div class="color-swatch-info"><div class="color-swatch-name">光质米白色</div><div class="color-swatch-hex">#eceae4</div><div class="color-swatch-role">边界、分隔器</div></div></div>
+</div>
+<div class="color-group-label">交互式</div>
+<div class="color-grid">
+<div class="color-swatch"><div class="color-swatch-block" style="background:rgba(59,130,246,0.5)"></div><div class="color-swatch-info"><div class="color-swatch-name">环蓝</div><div class="color-swatch-hex">rgba(59,130,246,0.5)</div><div class="color-swatch-role">焦点环</div></div></div>
+</div>
+</section>
+<hr class="section-divider"/>
+<section class="section" id="typography">
+<div class="section-label">02 / 类型</div>
+<h2 class="section-title">字号层级</h2>
+<div class="type-sample"><div style="font-size:60px; font-weight:600; line-height:1.10; letter-spacing:-1.5px;">显示首屏</div><div class="type-meta">显示首屏... 60px / 600 / 1.10 / -1.5px / 相机平面变量</div></div>
+<div class="type-sample"><div style="font-size:48px; font-weight:600; line-height:1.00; letter-spacing:-1.2px;">科 长</div><div class="type-meta">科长- 48px / 600 / 1.00 / -1.2px / 相机平面变量</div></div>
+<div class="type-sample"><div style="font-size:36px; font-weight:600; line-height:1.10; letter-spacing:-0.9px;">副标题</div><div class="type-meta">副标题 - 36px / 600 / 1.10 / -0.9px / 相机平面变量</div></div>
+<div class="type-sample"><div style="font-size:20px; font-weight:400; line-height:1.25;">卡片 标题</div><div class="type-meta">牌号标题 - 20px / 400 / 1.25 / 相机平面变量</div></div>
+<div class="type-sample"><div style="font-size:18px; font-weight:400; line-height:1.38;">体型大——构建某种lovable. 使用AI驱动开发工具创建网络应用程序.</div><div class="type-meta">体型大——18px / 400 / 1.38 / 相机平原变量</div></div>
+<div class="type-sample"><div style="font-size:16px; font-weight:400; line-height:1.50;">body——描述,段落,和UI内容的标准读取文本.</div><div class="type-meta">体 积 16px / 400 / 1.50 / 相机平面变量</div></div>
+<div class="type-sample"><div style="font-size:14px; font-weight:400; line-height:1.50;">按钮 / 链接 – 交互式文本</div><div class="type-meta">按钮 / 链接 —— 14px / 400 / 1.50 / 相机平面变量</div></div>
+<div class="type-sample"><div style="font-size:14px; font-weight:400; line-height:1.50; color:var(--muted);">说明——元数据和小标签</div><div class="type-meta">说明 - 14px / 400 / 1.50 / 相机平面变量</div></div>
+</section>
+<hr class="section-divider"/>
+<section class="section" id="buttons">
+<div class="section-label">03 / 按钮</div>
+<h2 class="section-title">按钮样式</h2>
+<div class="button-row">
+<div class="button-item"><a class="btn-dark" href="#">开始建楼</a><div class="button-label">初黑线</div></div>
+<div class="button-item"><a class="btn-ghost" href="#">文档</a><div class="button-label">鬼/ 大纲</div></div>
+<div class="button-item"><a class="btn-cream" href="#">设置</a><div class="button-label">米白色 表面</div></div>
+<div class="button-item"><button class="btn-pill">+</button><div class="button-label">胶囊形 图标</div></div>
+</div>
+</section>
+<hr class="section-divider"/>
+<section class="section" id="cards">
+<div class="section-label">04 / 卡片 Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q</div>
+<h2 class="section-title">卡片示例</h2>
+<div class="card-grid">
+<div class="card">
+<div class="card-badge" style="background:var(--charcoal-04); color:var(--charcoal);">模板</div>
+<h3>组合网站</h3>
+<p>包含项目展示、关于章节和联系表的最小组合模板。 以现代设计原理建成.</p>
+</div>
+<div class="card" style="border-color: var(--charcoal-40);">
+<div class="card-badge" style="background:var(--charcoal-04); color:var(--charcoal);">特性</div>
+<h3>AI 聊天应用程序</h3>
+<p>完整存储 AI 聊天界面,包含流回音,对话历史,以及可定制的提示. 显示 Hover - state 边界。</p>
+</div>
+<div class="card">
+<div class="card-badge" style="background:var(--charcoal-04); color:var(--charcoal);">入门版</div>
+<h3>SaaS 盘式</h3>
+<p>分析仪表板,包括图表、数据表和用户管理。 与共同的API和数据库融合.</p>
+</div>
+</div>
+</section>
+<hr class="section-divider"/>
+<section class="section" id="forms">
+<div class="section-label">05 / 表格</div>
+<h2 class="section-title">表单控件</h2>
+<div class="form-group"><label class="form-label">项目名称</label><input class="form-input" placeholder="我可爱的应用" type="text"/><div class="form-state-label">默认( 边境)</div></div>
+<div class="form-group"><label class="form-label">仓库</label><input class="form-input form-input--focus" type="text" value="lovable/my-project"/><div class="form-state-label">焦点(蓝环)</div></div>
+<div class="form-group"><label class="form-label">域名</label><input class="form-input form-input--error" type="text" value="invalid domain"/><div class="form-state-label">错误( 红色环)</div></div>
+<div class="form-group"><label class="form-label">说明</label><textarea class="form-textarea" placeholder="描述一下你的计划..."></textarea></div>
+</section>
+<hr class="section-divider"/>
+<section class="section" id="spacing">
+<div class="section-label">06 / 间距</div>
+<h2 class="section-title">间距层级</h2>
+<div class="spacing-row">
+<div class="spacing-item"><div class="spacing-block" style="width:8px"></div><div class="spacing-value">8</div></div>
+<div class="spacing-item"><div class="spacing-block" style="width:10px"></div><div class="spacing-value">10</div></div>
+<div class="spacing-item"><div class="spacing-block" style="width:12px"></div><div class="spacing-value">12</div></div>
+<div class="spacing-item"><div class="spacing-block" style="width:16px"></div><div class="spacing-value">16</div></div>
+<div class="spacing-item"><div class="spacing-block" style="width:24px"></div><div class="spacing-value">24</div></div>
+<div class="spacing-item"><div class="spacing-block" style="width:32px"></div><div class="spacing-value">32</div></div>
+<div class="spacing-item"><div class="spacing-block" style="width:40px"></div><div class="spacing-value">40</div></div>
+<div class="spacing-item"><div class="spacing-block" style="width:56px"></div><div class="spacing-value">56</div></div>
+<div class="spacing-item"><div class="spacing-block" style="width:80px"></div><div class="spacing-value">80</div></div>
+</div>
+</section>
+<hr class="section-divider"/>
+<section class="section" id="radius">
+<div class="section-label">07 / 半径</div>
+<h2 class="section-title">圆角层级</h2>
+<div class="radius-row">
+<div class="radius-item"><div class="radius-box" style="border-radius:4px"></div><div class="radius-label">4px</div><div class="radius-context">小点</div></div>
+<div class="radius-item"><div class="radius-box" style="border-radius:6px"></div><div class="radius-label">6px</div><div class="radius-context">按钮</div></div>
+<div class="radius-item"><div class="radius-box" style="border-radius:8px"></div><div class="radius-label">8px</div><div class="radius-context">压缩</div></div>
+<div class="radius-item"><div class="radius-box" style="border-radius:12px"></div><div class="radius-label">12px</div><div class="radius-context">卡片</div></div>
+<div class="radius-item"><div class="radius-box" style="border-radius:16px"></div><div class="radius-label">16px</div><div class="radius-context">集装箱</div></div>
+<div class="radius-item"><div class="radius-box" style="border-radius:9999px"></div><div class="radius-label">9999px</div><div class="radius-context">胶囊形</div></div>
+</div>
+</section>
+<hr class="section-divider"/>
+<section class="section" id="elevation">
+<div class="section-label">08 / 升空</div>
+<h2 class="section-title">层次与阴影</h2>
+<div class="elevation-grid">
+<div class="elevation-card" style="border: 1px solid var(--border-light);"><div class="elevation-label">0:平面</div><div class="elevation-desc">无阴影, 米白色 bg</div></div>
+<div class="elevation-card" style="border: 1px solid var(--border-light);"><div class="elevation-label">1: 边框</div><div class="elevation-desc">1px 固体 #eceae4</div></div>
+<div class="elevation-card" style="background:var(--charcoal); color:var(--off-white); box-shadow: var(--shadow-inset);"><div class="elevation-label" style="color:var(--off-white);">2: 设置</div><div class="elevation-desc" style="color:rgba(26,25,22,0.6);">按键内置阴影</div></div>
+<div class="elevation-card" style="border: 1px solid var(--border-light); box-shadow: var(--focus-shadow);"><div class="elevation-label">3: 焦点</div><div class="elevation-desc">聚焦阴影光芒</div></div>
+<div class="elevation-card" style="box-shadow: 0 0 0 2px rgba(59,130,246,0.5);"><div class="elevation-label">环</div><div class="elevation-desc">无障碍环</div></div>
+</div>
+</section>
+<footer class="footer">
+<div class="footer-shell">
+<div class="footer-grid">
+<div class="footer-col">
+<h6>VoltAgent 框架</h6>
+<span>类型脚本代理</span>
+<span>工具编程</span>
+<span>多种代理工作流程</span>
+</div>
+<div class="footer-col">
+<h6>伏特Ops LLM 可观测性</h6>
+<span>LLM 跟踪</span>
+<span>实时调试</span>
+<span>视觉时间</span>
+</div>
+<div class="footer-col">
+<h6>生产</h6>
+<span>评价</span>
+<span>即时管理</span>
+<span>护卫</span>
+</div>
+<div class="footer-col">
+<h6>平台</h6>
+<span>伏特Ops 控制台</span>
+<span>开源核心</span>
+<span>代理工程</span>
+</div>
+</div>
+
+</div>
+</footer>
+</body>
+</html>

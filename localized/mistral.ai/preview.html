@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>落日渐变与暖米白</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=DM+Serif+Display&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #fa520f;
+      --primary-deep: #cc3a05;
+      --on-primary: #ffffff;
+      --sunshine-300: #ffd06a;
+      --sunshine-500: #ffb83e;
+      --sunshine-700: #ffa110;
+      --sunshine-800: #ff8105;
+      --sunshine-900: #ff8a00;
+      --yellow-saturated: #ffd900;
+      --cream: #fff8e0;
+      --cream-light: #fffaeb;
+      --cream-deeper: #fff0c2;
+      --beige-deep: #e6d5a8;
+      --ink: #1f1f1f;
+      --ink-tint: #3d3d3d;
+      --charcoal: #2c2c2c;
+      --slate: #4a4a4a;
+      --steel: #6a6a6a;
+      --stone: #8a8a8a;
+      --muted: #a8a8a8;
+      --hairline: #e5e5e5;
+      --hairline-soft: #ededed;
+      --hairline-strong: #c7c7c7;
+      --canvas: #ffffff;
+      --surface: #fafafa;
+      --surface-cream: #fff8e0;
+      --surface-cream-soft: #fffaeb;
+      --surface-code: #1c1c1e;
+      --on-dark: #ffffff;
+      --on-dark-muted: #a8a8a8;
+      --footer-cream: #fff8e0;
+      --link: #fa520f;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--ink);
+      background: var(--canvas);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    .display-font, h1, h2.editorial { font-family: 'DM Serif Display', 'Times New Roman', Georgia, serif; }
+    .min-width-0, .min-width-0 * { min-width: 0; }
+    .promo-banner {
+      background: var(--ink); color: var(--on-dark);
+      text-align: center; padding: 12px 16px;
+      font-size: 14px; font-weight: 500;
+    }
+    .promo-banner a { color: var(--on-dark); text-decoration: underline; margin-left: 8px; }
+    .nav {
+      display: grid; grid-template-columns: 1fr auto 1fr;
+      align-items: center; padding: 0 32px; height: 64px;
+      background: var(--canvas); border-bottom: 1px solid var(--hairline-soft);
+      position: sticky; top: 0; z-index: 100;
+    }
+    .nav-left { display: flex; align-items: center; gap: 20px; justify-self: start; }
+    .nav-brand-link, .nav-brand-link:link, .nav-brand-link:visited, .nav-brand-link:hover, .nav-brand-link:active {
+      text-decoration: none; color: inherit; font-weight: 600; font-size: 15px;
+    }
+    .nav-github, .nav-github:link, .nav-github:visited, .nav-github:hover, .nav-github:active {
+      display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600;
+      color: inherit; text-decoration: none; padding: 5px 10px;
+      border: 1px solid rgba(128,128,128,0.3); border-radius: 6px; opacity: 0.75;
+      transition: opacity 200ms ease, border-color 200ms ease;
+      font-family: inherit; line-height: 1; white-space: nowrap; background: transparent;
+    }
+    .nav-github:hover { opacity: 1; border-color: rgba(128,128,128,0.55); }
+    .nav-github svg { display: block; flex-shrink: 0; }
+    .nav-links { justify-self: center; list-style: none; display: flex; gap: 24px; align-items: center; }
+    .nav-links a { color: var(--charcoal); text-decoration: none; font-size: 14px; font-weight: 500; }
+    .nav-cta {
+      justify-self: end; padding: 10px 20px;
+      background: var(--ink); color: var(--on-dark);
+      border: none; border-radius: 8px; font-weight: 500;
+      font-size: 14px; cursor: pointer; font-family: inherit;
+    }
+    .hero {
+      padding: 80px 32px 0; max-width: 1280px; margin: 0 auto;
+      position: relative; overflow: hidden;
+    }
+    .hero-gradient-bg {
+      position: relative;
+      background: linear-gradient(135deg, var(--cream) 0%, var(--sunshine-500) 50%, var(--primary) 100%);
+      border-radius: 16px; padding: 64px 48px;
+      min-height: 480px; display: flex; flex-direction: column; gap: 24px;
+      justify-content: center;
+    }
+    .hero h1 {
+      font-size: 64px; font-weight: 400; line-height: 1.05;
+      color: var(--ink); margin-bottom: 16px;
+      letter-spacing: -1px; max-width: 800px;
+    }
+    .hero p {
+      font-size: 18px; color: var(--ink-tint); max-width: 540px;
+      line-height: 1.55; margin-bottom: 16px;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    button { font-family: inherit; cursor: pointer; }
+    .btn-primary {
+      padding: 10px 20px; background: var(--primary); color: var(--on-primary);
+      border: none; border-radius: 8px; font-weight: 500; font-size: 14px;
+    }
+    .btn-cream {
+      padding: 10px 20px; background: var(--cream); color: var(--ink);
+      border: 1px solid var(--beige-deep); border-radius: 8px;
+      font-weight: 500; font-size: 14px;
+    }
+    .btn-dark {
+      padding: 10px 20px; background: var(--ink); color: var(--on-dark);
+      border: none; border-radius: 8px; font-weight: 500; font-size: 14px;
+    }
+    .btn-secondary {
+      padding: 10px 20px; background: transparent; color: var(--ink);
+      border: 1px solid var(--hairline-strong); border-radius: 8px;
+      font-weight: 500; font-size: 14px;
+    }
+    .btn-on-cream {
+      padding: 10px 20px; background: var(--canvas); color: var(--ink);
+      border: 1px solid var(--beige-deep); border-radius: 8px;
+      font-weight: 500; font-size: 14px;
+    }
+    .btn-link {
+      padding: 0; background: transparent; color: var(--primary);
+      border: none; font-weight: 500; font-size: 14px; text-decoration: none;
+    }
+    .btn-disabled {
+      padding: 10px 20px; background: var(--hairline); color: var(--muted);
+      border: none; border-radius: 8px; font-weight: 500; font-size: 14px;
+      cursor: not-allowed;
+    }
+    section {
+      padding: 96px 32px; max-width: 1280px; margin: 0 auto;
+    }
+    .section-heading {
+      font-family: 'DM Serif Display', serif;
+      font-size: 52px; font-weight: 400; margin-bottom: 12px; color: var(--ink);
+      line-height: 1.15; letter-spacing: -0.5px;
+    }
+    .section-sub { font-size: 16px; color: var(--steel); margin-bottom: 40px; max-width: 720px; line-height: 1.55; }
+    .palette-group { margin-bottom: 48px; }
+    .palette-group h3 { font-size: 18px; font-weight: 500; margin-bottom: 20px; color: var(--ink); }
+    .palette-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+    .swatch { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+    .swatch-color { width: 100%; height: 96px; border-radius: 12px; border: 1px solid var(--hairline-soft); }
+    .swatch-name { font-weight: 500; font-size: 14px; color: var(--ink); }
+    .swatch-hex { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--steel); }
+    .swatch-role { font-size: 12px; color: var(--steel); line-height: 1.4; }
+    .type-row {
+      display: grid; grid-template-columns: 280px 1fr;
+      gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--hairline-soft);
+      align-items: baseline;
+    }
+    .type-meta { display: flex; flex-direction: column; gap: 4px; }
+    .type-meta .role { font-size: 14px; font-weight: 500; color: var(--ink); }
+    .type-meta .specs { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--steel); }
+    .type-sample { color: var(--ink); }
+    .button-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .button-cell {
+      display: flex; flex-direction: column; gap: 12px;
+      padding: 24px; background: var(--canvas);
+      border: 1px solid var(--hairline-soft); border-radius: 12px;
+      align-items: flex-start; min-width: 0;
+    }
+    .button-cell-spec { font-size: 12px; color: var(--steel); font-family: 'JetBrains Mono', monospace; }
+    .button-cell-name { font-size: 14px; font-weight: 500; color: var(--ink); }
+    .badge-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .badge {
+      display: inline-block; padding: 4px 10px;
+      border-radius: 9999px; font-size: 13px; font-weight: 600; line-height: 1.4;
+    }
+    .badge-orange { background: var(--primary); color: var(--on-primary); }
+    .badge-cream { background: var(--cream-deeper); color: var(--ink); }
+    .badge-dark { background: var(--ink); color: var(--on-dark); }
+    /* Cards */
+    .card-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .card-base {
+      background: var(--canvas); border-radius: 12px; padding: 24px;
+      border: 1px solid var(--hairline-soft);
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .card-feature {
+      background: var(--canvas); border-radius: 12px; padding: 32px;
+      border: 1px solid var(--hairline-soft);
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .card-cream {
+      background: var(--cream); border: 1px solid var(--beige-deep);
+      border-radius: 12px; padding: 32px;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .card-cream-soft {
+      background: var(--surface-cream-soft); border-radius: 12px; padding: 32px;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .card-feature-product {
+      background: var(--canvas); border: 1px solid var(--hairline-soft);
+      border-radius: 12px; padding: 32px;
+      box-shadow: rgba(0,0,0,0.04) 0px 4px 12px;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .card-photographic {
+      background: var(--surface-code); color: var(--on-dark);
+      border-radius: 12px; min-height: 240px; padding: 32px;
+      display: flex; flex-direction: column; justify-content: flex-end; gap: 8px;
+    }
+    .card-photographic h4 { font-size: 24px; font-weight: 500; line-height: 1.25; }
+    .card-photographic p { font-size: 13px; opacity: 0.8; }
+    .card-feature h4, .card-cream h4, .card-feature-product h4 { font-size: 22px; font-weight: 500; line-height: 1.3; }
+    .card-feature p, .card-cream p, .card-feature-product p, .card-cream-soft p { font-size: 14px; color: var(--steel); line-height: 1.5; }
+    /* Pricing */
+    .pricing-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .pricing-card {
+      background: var(--canvas); border-radius: 12px; padding: 32px;
+      border: 1px solid var(--hairline-soft);
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .pricing-card.featured {
+      background: var(--cream); border: 2px solid var(--primary);
+      padding: 31px;
+    }
+    .pricing-card .tier-name { font-size: 18px; font-weight: 500; color: var(--ink); }
+    .pricing-card .tier-price { font-family: 'DM Serif Display', serif; font-size: 56px; font-weight: 400; color: var(--ink); letter-spacing: -1px; line-height: 1.1; }
+    .pricing-card .tier-price small { font-size: 14px; font-weight: 400; color: var(--steel); margin-left: 4px; font-family: 'Inter', sans-serif; }
+    .pricing-card .tier-feature-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .pricing-card .tier-feature-list li { font-size: 14px; color: var(--charcoal); display: flex; gap: 8px; align-items: flex-start; }
+    .pricing-card .tier-feature-list li::before { content: '✓'; color: var(--primary); font-weight: 700; flex-shrink: 0; }
+    /* Forms */
+    .contact-form-panel {
+      background: var(--cream); border: 1px solid var(--beige-deep);
+      border-radius: 12px; padding: 32px;
+      max-width: 520px; display: flex; flex-direction: column; gap: 16px;
+    }
+    .contact-form-panel h3 { font-family: 'DM Serif Display', serif; font-size: 32px; font-weight: 400; color: var(--ink); letter-spacing: -0.5px; }
+    .form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .form-field { display: flex; flex-direction: column; gap: 6px; }
+    .form-label { font-size: 14px; font-weight: 500; color: var(--ink); }
+    .text-input {
+      padding: 12px 16px; background: var(--canvas); color: var(--ink);
+      border: 1px solid var(--hairline-strong); border-radius: 8px;
+      font-size: 16px; height: 44px; font-family: inherit;
+    }
+    .text-input:focus { outline: none; border: 2px solid var(--primary); padding: 11px 15px; }
+    .text-area {
+      padding: 16px; background: var(--canvas); color: var(--ink);
+      border: 1px solid var(--hairline-strong); border-radius: 8px;
+      font-size: 16px; font-family: inherit; min-height: 100px; resize: vertical;
+    }
+    /* Tabs */
+    .seg-tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--hairline); margin-bottom: 24px; }
+    .seg-tab {
+      padding: 12px 16px; background: transparent; color: var(--steel);
+      border: none; border-bottom: 2px solid transparent;
+      font-size: 14px; font-weight: 500; cursor: pointer; font-family: inherit;
+    }
+    .seg-tab.active { color: var(--primary); border-bottom: 2px solid var(--primary); }
+    .pill-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+    .pill-tab {
+      padding: 8px 16px; background: var(--canvas); color: var(--steel);
+      border: 1px solid var(--hairline); border-radius: 9999px;
+      font-size: 14px; font-weight: 500; cursor: pointer; font-family: inherit;
+    }
+    .pill-tab.active { background: var(--ink); color: var(--on-dark); border-color: var(--ink); }
+    /* Code */
+    .code-block {
+      background: var(--surface-code); color: var(--on-dark);
+      border-radius: 8px; overflow: hidden;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .code-block-header {
+      background: var(--surface-code); color: var(--on-dark-muted);
+      padding: 8px 16px; font-size: 13px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .code-block-body {
+      padding: 16px; font-size: 14px; line-height: 1.5;
+    }
+    /* Industry tile */
+    .industry-tile {
+      background: var(--canvas); border-radius: 12px; padding: 24px;
+      border: 1px solid var(--hairline-soft);
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .industry-tile .icon-zone {
+      width: 40px; height: 40px;
+      background: var(--cream); border: 1px solid var(--beige-deep); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+    }
+    .industry-tile h5 { font-size: 18px; font-weight: 500; color: var(--ink); }
+    .industry-tile p { font-size: 14px; color: var(--steel); line-height: 1.5; }
+    /* Stat */
+    .stat-row {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 32px; padding: 48px 32px; background: var(--cream); border-radius: 12px;
+      border: 1px solid var(--beige-deep);
+    }
+    .stat-cell { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+    .stat-num { font-family: 'DM Serif Display', serif; font-size: 56px; font-weight: 400; color: var(--ink); letter-spacing: -1px; line-height: 1.1; }
+    .stat-label { font-size: 14px; color: var(--steel); }
+    /* Customer testimonial */
+    .testimonial-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .customer-testimonial-card {
+      background: var(--canvas); border-radius: 12px; padding: 32px;
+      border: 1px solid var(--hairline-soft);
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .customer-testimonial-card .quote { font-size: 16px; color: var(--charcoal); line-height: 1.55; }
+    .customer-testimonial-card .author { display: flex; align-items: center; gap: 12px; }
+    .avatar { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, #ffa110, #fa520f); flex-shrink: 0; }
+    .author-name { font-size: 13px; font-weight: 500; color: var(--ink); }
+    .author-title { font-size: 12px; color: var(--steel); }
+    /* Logo wall */
+    .logo-wall {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 16px; padding: 32px; background: var(--canvas); border-radius: 12px;
+      border: 1px solid var(--hairline-soft);
+    }
+    .logo-item {
+      padding: 20px; text-align: center; color: var(--steel);
+      font-size: 16px; font-weight: 500;
+    }
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--hairline); border-radius: 12px; overflow: hidden; }
+    .faq-item {
+      background: var(--canvas); padding: 24px;
+      border-bottom: 1px solid var(--hairline);
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .faq-q-text { font-size: 18px; font-weight: 500; color: var(--ink); line-height: 1.4; }
+    .chev { width: 16px; height: 16px; color: var(--steel); flex-shrink: 0; }
+    .faq-a { font-size: 16px; color: var(--steel); margin-top: 12px; line-height: 1.55; }
+    .faq-item.collapsed .faq-a { display: none; }
+    /* Sunset stripe */
+    .sunset-stripe {
+      width: 100%; height: 80px;
+      background: linear-gradient(90deg,
+        var(--primary) 0%,
+        var(--sunshine-700) 25%,
+        var(--sunshine-500) 50%,
+        var(--yellow-saturated) 75%,
+        var(--cream) 100%);
+      margin-top: 0;
+    }
+    .sunset-stripe-band-demo {
+      width: 100%; height: 60px; border-radius: 8px;
+      background: linear-gradient(90deg,
+        var(--primary) 0%,
+        var(--sunshine-700) 25%,
+        var(--sunshine-500) 50%,
+        var(--yellow-saturated) 75%,
+        var(--cream) 100%);
+      margin-top: 16px;
+    }
+    /* CTA banner */
+    .cta-banner-cream {
+      background: var(--cream); color: var(--ink); border: 1px solid var(--beige-deep);
+      border-radius: 12px; padding: 64px 48px;
+      display: flex; flex-direction: column; gap: 24px;
+      align-items: center; text-align: center;
+    }
+    .cta-banner-cream h4 { font-family: 'DM Serif Display', serif; font-size: 48px; font-weight: 400; line-height: 1.15; letter-spacing: -0.5px; max-width: 720px; }
+    .cta-banner-cream p { font-size: 16px; color: var(--steel); max-width: 540px; }
+    .cta-banner-cream .actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    /* Spacing & radius */
+    .spacing-grid { display: flex; gap: 24px; align-items: flex-end; flex-wrap: wrap; }
+    .spacing-box { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .spacing-visual { background: var(--ink); border-radius: 4px; }
+    .spacing-label { font-size: 12px; font-weight: 500; color: var(--ink); text-align: center; }
+    .spacing-label small { display: block; font-weight: 400; color: var(--steel); font-size: 10px; margin-top: 2px; }
+    .radius-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 24px; }
+    .radius-demo {
+      aspect-ratio: 1; background: var(--cream);
+      border: 2px solid var(--ink);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
+      padding: 12px; font-size: 12px; font-weight: 500; color: var(--ink);
+    }
+    .radius-demo small { font-size: 10px; font-weight: 400; color: var(--steel); margin-top: 2px; }
+    .elevation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+    .elev-cell {
+      background: var(--canvas); border-radius: 12px; padding: 32px;
+      display: flex; flex-direction: column; gap: 8px; min-height: 140px;
+    }
+    .elev-0 { border: 1px solid var(--hairline-soft); }
+    .elev-1 { box-shadow: rgba(0,0,0,0.04) 0px 1px 2px 0px; border: 1px solid var(--hairline-soft); }
+    .elev-2 { box-shadow: rgba(0,0,0,0.04) 0px 4px 12px 0px; }
+    .elev-3 { box-shadow: rgba(0,0,0,0.08) 0px 12px 24px -4px; }
+    .elev-4 { box-shadow: rgba(0,0,0,0.12) 0px 16px 48px -8px; }
+    .elev-name { font-size: 14px; font-weight: 500; color: var(--ink); }
+    .elev-meta { font-size: 12px; color: var(--steel); font-family: 'JetBrains Mono', monospace; }
+    .breakpoint-table { width: 100%; border-collapse: collapse; }
+    .breakpoint-table th, .breakpoint-table td {
+      text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--hairline-soft);
+      font-size: 14px;
+    }
+    .breakpoint-table th { font-size: 12px; font-weight: 500; color: var(--steel); background: var(--surface-cream); }
+    .device-ladder {
+      display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap;
+      margin-top: 32px; padding: 32px; background: var(--cream); border-radius: 12px;
+    }
+    .device {
+      background: var(--canvas); border: 1px solid var(--hairline);
+      display: flex; align-items: flex-end; justify-content: center; padding: 8px;
+      font-size: 11px; color: var(--steel); font-weight: 500;
+    }
+    .footer {
+      padding: 64px 32px 32px; background: var(--footer-cream);
+      color: var(--ink); font-size: 14px;
+    }
+    .footer-grid {
+      max-width: 1280px; margin: 0 auto;
+      display: grid; grid-template-columns: 240px repeat(auto-fit, minmax(140px, 1fr));
+      gap: 48px; margin-bottom: 48px;
+    }
+    .footer-brand { display: flex; flex-direction: column; gap: 16px; }
+    .footer-brand .wordmark {
+      font-family: 'DM Serif Display', serif;
+      font-size: 24px; font-weight: 400; color: var(--ink);
+    }
+    .footer-brand .app-store-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+    .app-badge {
+      background: var(--ink); color: var(--on-dark);
+      padding: 8px 12px; border-radius: 8px;
+      font-size: 11px; font-weight: 600; display: flex; align-items: center; gap: 6px;
+    }
+    .footer-col h6 { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 16px; }
+    .footer-col a { display: block; padding: 4px 0; color: var(--primary); text-decoration: none; font-size: 14px; }
+    .footer-credit {
+      max-width: 1280px; margin: 0 auto;
+      padding-top: 32px; border-top: 1px solid var(--beige-deep);
+      text-align: center;
+    }
+    .footer-credit a { color: var(--primary); text-decoration: none; }
+    .footer-credit a:hover { text-decoration: underline; }
+    .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+
+    /* getdesign.md nav additions */
+    .nav-left { display: flex; align-items: center; gap: 20px; }
+    .nav-brand-link, .nav-brand-link:link, .nav-brand-link:visited, .nav-brand-link:hover, .nav-brand-link:active { text-decoration: none; color: inherit; }
+    .nav-github, .nav-github:link, .nav-github:visited, .nav-github:hover, .nav-github:active {
+      display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600;
+      color: inherit; text-decoration: none; padding: 5px 10px;
+      border: 1px solid rgba(128, 128, 128, 0.3); border-radius: 6px; opacity: 0.75;
+      transition: opacity 200ms ease, border-color 200ms ease;
+      font-family: inherit; line-height: 1; white-space: nowrap;
+    }
+    .nav-github:hover { opacity: 1; border-color: rgba(128, 128, 128, 0.55); }
+    .nav-github svg { display: block; flex-shrink: 0; }
+
+    /* getdesign.md nav centering */
+    .nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+    .nav > .nav-left { justify-self: start; }
+    .nav > .nav-links { justify-self: center; }
+    .nav > :last-child { justify-self: end; }
+
+    @media (max-width: 1024px) {
+      section { padding: 64px 32px; }
+      .section-heading { font-size: 36px; }
+      .nav { padding: 0 32px; }
+      .nav > :last-child { display: none; }
+      .type-row { grid-template-columns: 1fr; gap: 8px; }
+      .hero h1 { font-size: 60px; }
+      .hero-gradient-bg { padding: 48px 32px; min-height: 380px; }
+    }
+    @media (max-width: 720px) {
+      .nav { padding: 12px 20px; height: auto; min-height: 56px; }
+      .nav-links { display: none; }
+      .hero { padding: 48px 20px 0; }
+      .hero h1 { font-size: 40px; letter-spacing: -1px; }
+      .hero p { font-size: 16px; }
+      .hero-gradient-bg { padding: 40px 24px; min-height: 320px; }
+      section { padding: 48px 20px; }
+      .section-heading { font-size: 32px; }
+      .palette-grid, .button-grid, .card-grid, .pricing-grid, .form-row, .testimonial-grid, .elevation-grid, .radius-grid, .stat-row, .footer-grid {
+        grid-template-columns: 1fr !important; gap: 16px;
+      }
+      .footer { padding: 48px 20px 24px; }
+    }
+  
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+<style data-design-nav="true">
+.design-preview-nav { min-height:48px; }
+.design-preview-nav .nav-brand { white-space:normal; overflow-wrap:anywhere; }
+.design-preview-nav .nav-links { display:flex; flex-wrap:wrap; gap:8px clamp(10px,2vw,26px); padding-block:5px; }
+.design-preview-nav a { text-decoration:none; }
+.design-preview-nav .nav-links a { color:inherit; }
+.design-preview-nav .nav-links a:hover { text-decoration:underline; text-underline-offset:3px; }
+.design-preview-nav a:focus-visible { outline:2px solid currentColor; outline-offset:4px; }
+:is([id^=design-section-],[id=design-overview]) { scroll-margin-top:94px; }
+@media (max-width:760px) {
+  .design-preview-nav { position:static; display:flex; flex-wrap:wrap; gap:3px 12px; padding:8px 12px; height:auto; }
+  .design-preview-nav .nav-left { min-width:0; }
+  .design-preview-nav > .nav-links { flex:1 1 100%; display:flex; padding-inline:0; }
+  .design-preview-nav .nav-cta { display:none; }
+  :is([id^=design-section-],[id=design-overview]) { scroll-margin-top:14px; }
+}
+</style></head>
+<body><nav aria-label="样张章节" class="nav design-preview-nav" data-design-nav="true"><div class="nav-left"><span class="nav-brand">Mistral AI</span></div><ul class="nav-links"><li><a href="#design-section-1">配色</a></li><li><a href="#design-section-7">字体</a></li><li><a href="#design-section-8">按钮</a></li><li><a href="#design-section-24">布局</a></li></ul><a class="nav-cta" href="#design-overview">概览</a></nav>
+<div class="promo-banner">JOIN MISTRAL AI MAKERS — Build the future of AI <a href="#">应用→</a></div>
+<div class="hero">
+<div class="hero-gradient-bg">
+<h1 id="design-overview">落日渐变与暖米白</h1>
+<p>落日渐变、暖奶油色画布和橙色按钮形成鲜明的模型平台风格。</p>
+<div class="hero-actions">
+<button class="btn-dark">试试 Le Studio</button>
+<button class="btn-on-cream">阅读报告</button>
+</div>
+</div>
+</div>
+<section id="colors">
+<h2 class="section-heading" id="design-section-1">配色</h2>
+<p class="section-sub">饱和橙主锚由暖奶油黄黄表面和多站式"日落"渐变,关闭每页底.</p>
+<div class="palette-group">
+<h3>品牌和日落光谱</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background: #fa520f;"></div><div class="swatch-name">雾橙</div><div class="swatch-hex">#fa520f</div><div class="swatch-role">主要行动按钮</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #cc3a05;"></div><div class="swatch-name">橙深</div><div class="swatch-hex">#cc3a05</div><div class="swatch-role">硬态橙色</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #ff8a00;"></div><div class="swatch-name">Sunshine 900</div><div class="swatch-hex">#ff8a00</div><div class="swatch-role">深日落时</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #ff8105;"></div><div class="swatch-name">Sunshine 800</div><div class="swatch-hex">#ff8105</div><div class="swatch-role">Block 7</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #ffa110;"></div><div class="swatch-name">Sunshine 700</div><div class="swatch-hex">#ffa110</div><div class="swatch-role">中日落时</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #ffb83e;"></div><div class="swatch-name">Sunshine 500</div><div class="swatch-hex">#ffb83e</div><div class="swatch-role">中频谱</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #ffd06a;"></div><div class="swatch-name">Sunshine 300</div><div class="swatch-hex">#ffd06a</div><div class="swatch-role">浅大气</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #ffd900;"></div><div class="swatch-name">黄饱和</div><div class="swatch-hex">#ffd900</div><div class="swatch-role">纯黄牌</div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>米白色 / 温暖中性</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background: #fff8e0;"></div><div class="swatch-name">米白色</div><div class="swatch-hex">#fff8e0</div><div class="swatch-role">窗体面板、页脚</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #fffaeb;"></div><div class="swatch-name">米白色 软</div><div class="swatch-hex">#fffaeb</div><div class="swatch-role">安静 米白色</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #fff0c2;"></div><div class="swatch-name">米白色 深进</div><div class="swatch-hex">#fff0c2</div><div class="swatch-role">标签芯片背景</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #e6d5a8;"></div><div class="swatch-name">碧海深处</div><div class="swatch-hex">#e6d5a8</div><div class="swatch-role">米白色 表面边界</div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>界面表面</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background: #ffffff;"></div><div class="swatch-name">白色页面底色</div><div class="swatch-hex">#ffffff</div><div class="swatch-role">页+卡片 背景</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #fafafa;"></div><div class="swatch-name">界面表面</div><div class="swatch-hex">#fafafa</div><div class="swatch-role">浅色背景</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #1c1c1e;"></div><div class="swatch-name">表面代码</div><div class="swatch-hex">#1c1c1e</div><div class="swatch-role">IDE 模拟, 代码</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #e5e5e5;"></div><div class="swatch-name">细边框</div><div class="swatch-hex">#e5e5e5</div><div class="swatch-role">边框</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #c7c7c7;"></div><div class="swatch-name">发条坚固</div><div class="swatch-hex">#c7c7c7</div><div class="swatch-role">输入边框</div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>文字色</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background: #1f1f1f;"></div><div class="swatch-name">文字色</div><div class="swatch-hex">#1f1f1f</div><div class="swatch-role">标题,正文</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #2c2c2c;"></div><div class="swatch-name">炭灰色</div><div class="swatch-hex">#2c2c2c</div><div class="swatch-role">机构重点</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #4a4a4a;"></div><div class="swatch-name">石板灰</div><div class="swatch-hex">#4a4a4a</div><div class="swatch-role">副文本</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #6a6a6a;"></div><div class="swatch-name">钢</div><div class="swatch-hex">#6a6a6a</div><div class="swatch-role">三级, 标题</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #8a8a8a;"></div><div class="swatch-name">石头</div><div class="swatch-hex">#8a8a8a</div><div class="swatch-role">已静音标签</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #a8a8a8;"></div><div class="swatch-name">静音</div><div class="swatch-hex">#a8a8a8</div><div class="swatch-role">禁用</div></div>
+</div>
+</div>
+</section>
+<section id="sunset-stripe">
+<h2 class="section-heading">日落Stripe 带</h2>
+<p class="section-sub">该品牌最可识别的标志元素——横向多站梯度,关闭每页底部(红色~橙色~黄色~奶油).</p>
+<div class="sunset-stripe-band-demo"></div>
+<p style="font-size: 12px; color: var(--steel); margin-top: 12px; font-family: 'JetBrains Mono', monospace;">linear-gradient(90deg, #fa520f 0%, #ffa110 25%, #ffb83e 50%, #ffd900 75%, #fff8e0 100%)</p>
+</section>
+<section id="typography">
+<h2 class="section-heading" id="design-section-7">字号层级</h2>
+<p class="section-sub">Editorial / sans pairing — DM Serif Display (near-serif elegant) for hero displays, Inter (geometric sans) for everything else, JetBrains Mono for code.</p>
+<div class="type-row"><div class="type-meta"><span class="role">hero-display</span><span class="specs">DM Serif / 84px / 1.05 / -1.5px</span></div><div class="type-sample display-font" style="font-size: 84px; font-weight: 400; line-height: 1.05; letter-spacing: -1.5px;">边境AI</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">display-lg</span><span class="specs">DM Serif / 64px / 1.10 / -1px</span></div><div class="type-sample display-font" style="font-size: 64px; font-weight: 400; line-height: 1.10; letter-spacing: -1px;">手执中.</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">heading-1</span><span class="specs">DM Serif / 52px / 1.15 / -0.5px</span></div><div class="type-sample display-font" style="font-size: 52px; font-weight: 400; line-height: 1.15; letter-spacing: -0.5px;">与队伍联系.</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">stat-display</span><span class="specs">DM Serif / 56px / 1.10 / -1px</span></div><div class="type-sample display-font" style="font-size: 56px; font-weight: 400; line-height: 1.10; letter-spacing: -1px;">75%</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">heading-2</span><span class="specs">Inter / 36px / 500 / 1.20</span></div><div class="type-sample" style="font-size: 36px; font-weight: 500; line-height: 1.20; letter-spacing: -0.5px;">自由建设</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">heading-3</span><span class="specs">Inter / 28px / 500 / 1.25</span></div><div class="type-sample" style="font-size: 28px; font-weight: 500; line-height: 1.25;">卡片 标题</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">字幕</span><span class="specs">Inter / 18px / 400 / 1.50</span></div><div class="type-sample" style="font-size: 18px; font-weight: 400; line-height: 1.50;">首屏字幕和主机类型</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">body-md</span><span class="specs">Inter / 16px / 400 / 1.55</span></div><div class="type-sample" style="font-size: 16px; font-weight: 400; line-height: 1.55;">主体文本在文件的传言、营销副本和特征描述中都使用。 优雅的体型 创造了编辑的可读性。</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">body-sm</span><span class="specs">Inter / 14px / 400 / 1.50</span></div><div class="type-sample" style="font-size: 14px; font-weight: 400; line-height: 1.50;">二级体、表细胞、导航</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">caption-bold</span><span class="specs">Inter / 13px / 600 / 1.40</span></div><div class="type-sample" style="font-size: 13px; font-weight: 600; line-height: 1.40;">坏人拉尔伯/塔格切普</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">code-md</span><span class="specs">JetBrains Mono / 14px / 400 / 1.50</span></div><div class="type-sample" style="font-family: 'JetBrains Mono', monospace; font-size: 14px;">孔斯特雾(Cont misttral) = 新的雾态( api_ key) ;</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">button-md</span><span class="specs">Inter / 14px / 500 / 1.30</span></div><div class="type-sample" style="font-size: 14px; font-weight: 500; line-height: 1.30;">贝尔顿</div></div>
+</section>
+<section id="buttons">
+<h2 class="section-heading" id="design-section-8">按钮样式</h2>
+<p class="section-sub">编辑-索伯几何——`rounded-md`(8px)按钮,NOT 胶囊控件. 暗橙色占了主导地位,作为主要的CTA.</p>
+<div class="button-grid">
+<div class="button-cell"><button class="btn-primary">试试 Le Studio</button><span class="button-cell-name">button-primary</span><span class="button-cell-spec">饱和橙色行动按钮</span></div>
+<div class="button-cell"><button class="btn-dark">开始使用</button><span class="button-cell-name">button-dark</span><span class="button-cell-spec">奶油上的暗CTA(暗CTA)</span></div>
+<div class="button-cell"><button class="btn-cream">了解更多</button><span class="button-cell-name">button-cream</span><span class="button-cell-spec">暖米白 次要</span></div>
+<div class="button-cell"><button class="btn-secondary">读取文件</button><span class="button-cell-name">button-secondary</span><span class="button-cell-spec">次要大纲</span></div>
+<div class="button-cell" style="background: var(--cream);"><button class="btn-on-cream">现在就应用</button><span class="button-cell-name">button-on-cream</span><span class="button-cell-spec">米白色 表面为白色</span></div>
+<div class="button-cell"><button class="btn-link">学习更多→</button><span class="button-cell-name">button-link</span><span class="button-cell-spec">内置橙色链接</span></div>
+<div class="button-cell"><button class="btn-disabled">无法获取</button><span class="button-cell-name">button-primary-disabled</span><span class="button-cell-spec">已禁用状态</span></div>
+</div>
+</section>
+<section id="badges">
+<h2 class="section-heading">徽章状态( S)</h2>
+<p class="section-sub">胶囊形状态指标以橙色,米白色,和暗色表示. 仅保留徽章——扣子不使用胶囊形形状.</p>
+<div class="badge-row">
+<span class="badge badge-orange">新设</span>
+<span class="badge badge-cream">贝塔</span>
+<span class="badge badge-dark">可用</span>
+</div>
+<div class="promo-banner" style="border-radius: 8px; margin-top: 24px;">JOIN MISTRAL AI MAKERS — Build the future of AI <a href="#">应用→</a></div>
+<p style="font-size: 12px; color: var(--steel); margin-top: 8px; font-family: 'JetBrains Mono', monospace;">promo-banner — sticky black strip above the top nav</p>
+</section>
+<section id="cards">
+<h2 class="section-heading">卡片与容器</h2>
+<p class="section-sub">白色功能卡片,暖奶油丁型面板,暗影卡片. 12px角横跨全家.（原文参数：12px）</p>
+<div class="card-grid">
+<div class="card-base">
+<h4>标准卡片</h4>
+<p>白色页面底色配有细边框和12px角. 用于文件卡片.（原文参数：12px）</p>
+</div>
+<div class="card-feature">
+<h4>特性面板</h4>
+<p>更大的功能卡片,为分组内容的32px编目.（原文参数：32px）</p>
+</div>
+<div class="card-cream">
+<h4>奶油特质卡</h4>
+<p>暖奶油黄色的带碧色边框的色卡. 用于服务级和暖呼呼呼.</p>
+</div>
+<div class="card-cream-soft">
+<h4>米白色 软质卡片</h4>
+<p>较轻的米白色变体,用于较安静的特征区域.</p>
+</div>
+<div class="card-feature-product">
+<h4>产品功能卡片</h4>
+<p>白色卡片与轻微阴影高架. 用于产品展示时刻。</p>
+</div>
+<div class="card-photographic">
+<h4>部署在生产中</h4>
+<p>暗的页面底色 卡片用于代码模型和IDE图像.</p>
+</div>
+</div>
+</section>
+<section id="pricing">
+<h2 class="section-heading">套餐定价</h2><p class="design-demo-note">组件演示。套餐层级、价格字重和操作按钮。数据仅用于样式展示。</p>
+<p class="section-sub">3级标价,在米白色背景上突出显示带有橙色边框的突出等级(Lift Off).</p>
+<div class="pricing-grid">
+<div class="pricing-card">
+<span class="tier-name">免费版</span>
+<div class="tier-price">$0<small>/模数</small></div>
+<p style="font-size: 14px; color: var(--steel);">开始"聊天"探索</p>
+<ul class="tier-feature-list">
+<li>基本聊天访问</li>
+<li>社区支助</li>
+<li>API 有限通话</li>
+</ul>
+<button class="btn-secondary" style="margin-top: 8px;">开始使用</button>
+</div>
+<div class="pricing-card featured">
+<span class="tier-name">专业版</span>
+<div class="tier-price">$24<small>/模数</small></div>
+<p style="font-size: 14px; color: var(--steel);">为开发者构建生产应用.</p>
+<ul class="tier-feature-list">
+<li>无限 API 调用</li>
+<li>所有雾态模型</li>
+<li>优先支助</li>
+<li>高级特性</li>
+</ul>
+<button class="btn-primary" style="margin-top: 8px;">开始审判</button>
+</div>
+<div class="pricing-card">
+<span class="tier-name">企业版</span>
+<div class="tier-price" style="font-size: 28px; font-family: 'Inter', sans-serif;">联系我们</div>
+<p style="font-size: 14px; color: var(--steel);">定制适合你团队的企业计划.</p>
+<ul class="tier-feature-list">
+<li>专门支助</li>
+<li>定制合同</li>
+<li>国有公司2 遵守情况</li>
+<li>特别事务办公室+行政主管</li>
+</ul>
+<button class="btn-dark" style="margin-top: 8px;">和销售商交谈</button>
+</div>
+</div>
+</section>
+<section id="forms">
+<h2 class="section-heading">联系人表</h2>
+<p class="section-sub">凝胶-丁丁形面板——米斯特拉尔的签名联系UI,并带有编辑标题和暗的行动按钮提交按钮.</p>
+<div class="contact-form-panel">
+<h3>联系销售。</h3>
+<p style="font-size: 14px; color: var(--steel);">开赴边疆.</p>
+<div class="form-row">
+<div class="form-field">
+<label class="form-label">名字 * 单词</label>
+<input class="text-input" type="text"/>
+</div>
+<div class="form-field">
+<label class="form-label">姓 * , 缩写为:</label>
+<input class="text-input" type="text"/>
+</div>
+</div>
+<div class="form-field">
+<label class="form-label">电子邮件*</label>
+<input class="text-input" type="email"/>
+</div>
+<div class="form-field">
+<label class="form-label">作用 *</label>
+<input class="text-input" type="text"/>
+</div>
+<div class="form-field">
+<label class="form-label">告诉我们你的计划</label>
+<textarea class="text-area"></textarea>
+</div>
+<button class="btn-dark" style="align-self: flex-start;">提交</button>
+</div>
+</section>
+<section id="tabs">
+<h2 class="section-heading">标签导航( N)</h2>
+<p class="section-sub">底线式的带橙色活性指示器的分页标签. 胶囊形 标签为顶级切换预留.</p>
+<h3 style="font-size: 18px; font-weight: 500; margin-bottom: 16px;">分页标签</h3>
+<div class="seg-tabs">
+<button class="seg-tab active">工业</button>
+<button class="seg-tab">域名</button>
+<button class="seg-tab">使用大小写</button>
+</div>
+<h3 style="font-size: 18px; font-weight: 500; margin: 32px 0 16px;">胶囊形 标签</h3>
+<div class="pill-tabs">
+<button class="pill-tab active">特性</button>
+<button class="pill-tab">最新数据</button>
+<button class="pill-tab">研究</button>
+</div>
+</section>
+<section id="code">
+<h2 class="section-heading">代码组件</h2>
+<p class="section-sub">Dark code blocks with JetBrains Mono. Used in Le Studio product page mockups and agent demos.</p>
+<div class="code-block">
+<div class="code-block-header">
+<span>实例.py</span>
+<span style="font-size: 11px;">复制代码</span>
+</div>
+<div class="code-block-body">
+从错误的特拉来导入 Mistral<br/>
+<br/>
+客户端 = Mistral( api_ key=“ your_ api_ key” )<br/>
+响应=客户端.chat.complete ()<br/>
+  模型="中度-中度-3.5","中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度-中度<br/>
+  消息= [{'作用':"用户","内容":"你好!"]<br/>
+)
+      </div>
+</div>
+</section>
+<section id="industry">
+<h2 class="section-heading">工业图纸</h2>
+<p class="section-sub">3-up 工业-垂直网格——小图标区+标题+描述.</p>
+<div class="card-grid">
+<div class="industry-tile"><div class="icon-zone">⚡</div><h5>知识、模式和基础设施</h5><p>可在任何环境部署,并完全控制。</p></div>
+<div class="industry-tile"><div class="icon-zone">🔒</div><h5>自足的私人部署</h5><p>运行米斯特拉尔 在你的私人基础设施。</p></div>
+<div class="industry-tile"><div class="icon-zone">🎯</div><h5>深入参与辅导和深度速度</h5><p>和我们队合作,更快的运送</p></div>
+</div>
+</section>
+<section id="stats">
+<h2 class="section-heading">静态行</h2>
+<p class="section-sub">Stat-row callouts with PP Editorial Old display type at 56px. Cream surface anchors the row.</p>
+<div class="stat-row">
+<div class="stat-cell"><span class="stat-num">75%</span><span class="stat-label">提高生产率</span></div>
+<div class="stat-cell"><span class="stat-num">80%</span><span class="stat-label">更快的代码完成</span></div>
+<div class="stat-cell"><span class="stat-num">100%</span><span class="stat-label">可在前提下部署</span></div>
+</div>
+</section>
+<section id="testimonials">
+<h2 class="section-heading">客户证词</h2>
+<p class="section-sub">白色的检验用卡片,带有引文+照片+归属. 使用在Le Studio和Solutions页面中.</p>
+<div class="testimonial-grid">
+<div class="customer-testimonial-card">
+<p class="quote">"Mistal模型给了我们在私人基础设施中部署AI的自由,对数据居住权有完全的控制".</p>
+<div class="author"><div class="avatar"></div><div><div class="author-name">已核实的买方</div><div class="author-title">工程铅</div></div></div>
+</div>
+<div class="customer-testimonial-card">
+<p class="quote">"模型质量与现场部署相结合,立即解决了我们遵守规定的顾虑".</p>
+<div class="author"><div class="avatar" style="background: linear-gradient(135deg, #ffb83e, #ff8a00);"></div><div><div class="author-name">客户成功</div><div class="author-title">技术建筑师</div></div></div>
+</div>
+</div>
+</section>
+<section id="logo-wall">
+<h2 class="section-heading">logo 墙</h2>
+<p class="section-sub">客户标识网格——信托-row部分的文字标记演示.</p>
+<div class="logo-wall">
+<div class="logo-item">维奥利亚</div>
+<div class="logo-item">巴黎巴黎银行</div>
+<div class="logo-item">综合筹资方案</div>
+<div class="logo-item">克莱迪</div>
+<div class="logo-item">奥塔夫</div>
+<div class="logo-item">奥罗拉</div>
+</div>
+</section>
+<section id="faq">
+<h2 class="section-heading">风琴</h2>
+<p class="section-sub">经常问问题 默认折叠; chevron toggle.</p>
+<div class="faq-list">
+<div class="faq-item">
+<div class="faq-q">
+<span class="faq-q-text">雾集定价计划如何运作?</span>
+<span class="chev">⌃</span>
+</div>
+<div class="faq-a">Mistral提供自由级,Pro在$24/月,以及定制企业计划,符合SOC2要求并有专用支持.</div>
+</div>
+<div class="faq-item collapsed">
+<div class="faq-q">
+<span class="faq-q-text">我能在前提下部署米斯特拉尔吗?</span>
+<span class="chev">⌄</span>
+</div>
+<div class="faq-a">是的,米斯特拉尔支持在现场部署,并配备适合你需要的定制基础设施。</div>
+</div>
+<div class="faq-item collapsed">
+<div class="faq-q">
+<span class="faq-q-text">Is Mistral SOC 2 compliant?</span>
+<span class="chev">⌄</span>
+</div>
+<div class="faq-a">是——Mistral是SOC 2 II型企业计划认证.</div>
+</div>
+</div>
+</section>
+<section id="cta-banner">
+<h2 class="section-heading">行动按钮 班纳 米白色</h2>
+<p class="section-sub">米白色表面的Page-bottom 行动按钮旗,并附有编辑显示头条.</p>
+<div class="cta-banner-cream">
+<h4>接下来的AI章是你的。</h4>
+<p>今天开始和Le Chat一起建房 或者和我们的销售团队谈谈</p>
+<div class="actions">
+<button class="btn-dark">试试聊天</button>
+<button class="btn-on-cream">联系销售</button>
+</div>
+</div>
+</section>
+<section id="spacing">
+<h2 class="section-heading" id="design-section-24">间距层级</h2>
+<p class="section-sub">4px 基础单位,8px初等增量. 节奏从48px到120px.（原文参数：8px、48px、120px）</p>
+<div class="spacing-grid">
+<div class="spacing-box"><div class="spacing-visual" style="width: 4px; height: 16px;"></div><div class="spacing-label">4<small>xxs</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 8px; height: 16px;"></div><div class="spacing-label">8<small>xs</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 12px; height: 16px;"></div><div class="spacing-label">12<small>静态</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 16px; height: 16px;"></div><div class="spacing-label">16<small>微额</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 20px; height: 16px;"></div><div class="spacing-label">20<small>升( 升)</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 24px; height: 16px;"></div><div class="spacing-label">24<small>xl</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 32px; height: 16px;"></div><div class="spacing-label">32<small>xxl</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 40px; height: 16px;"></div><div class="spacing-label">40<small>xxxl</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 48px; height: 16px;"></div><div class="spacing-label">48<small>section-sm</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 64px; height: 16px;"></div><div class="spacing-label">64<small>章节</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 96px; height: 16px;"></div><div class="spacing-label">96<small>section-lg</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 120px; height: 16px;"></div><div class="spacing-label">120<small>首屏</small></div></div>
+</div>
+</section>
+<section id="radius">
+<h2 class="section-heading">圆角层级</h2>
+<p class="section-sub">8px 按钮, 12px 牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌,牌 胶囊控件只保留徽章——米斯特拉尔几何是编辑-sober.</p>
+<div class="radius-grid">
+<div class="radius-demo" style="border-radius: 4px;">4px<small>xs</small></div>
+<div class="radius-demo" style="border-radius: 6px;">6px<small>静态</small></div>
+<div class="radius-demo" style="border-radius: 8px;">8px<small>微额</small></div>
+<div class="radius-demo" style="border-radius: 12px;">12px<small>升( 升)</small></div>
+<div class="radius-demo" style="border-radius: 16px;">16px<small>xl</small></div>
+<div class="radius-demo" style="border-radius: 20px;">20px<small>xxl</small></div>
+<div class="radius-demo" style="border-radius: 9999px;">胶囊形<small>满</small></div>
+</div>
+</section>
+<section id="elevation">
+<h2 class="section-heading">层次与阴影</h2>
+<p class="section-sub">以主平为主. 摄影和IDE模型的战略大气深度。</p>
+<div class="elevation-grid">
+<div class="elev-cell elev-0"><span class="elev-name">Level 0 — Flat</span><span class="elev-meta">边框+细边框</span></div>
+<div class="elev-cell elev-1"><span class="elev-name">Level 1 — Subtle</span><span class="elev-meta">rgba(0,0,0,0.04) 0 1px 2px</span></div>
+<div class="elev-cell elev-2"><span class="elev-name">Level 2 — Card</span><span class="elev-meta">rgba(0,0,0,0.04) 0 4px 12px</span></div>
+<div class="elev-cell elev-3"><span class="elev-name">Level 3 — Mockup</span><span class="elev-meta">rgba(0,0,0,0.08) 0 12px 24px -4px</span></div>
+<div class="elev-cell elev-4"><span class="elev-name">Level 4 — Modal</span><span class="elev-meta">rgba(0,0,0,0.12) 0 16px 48px -8px</span></div>
+</div>
+</section>
+<section id="responsive">
+<h2 class="section-heading">响应式布局</h2>
+<p class="section-sub">首屏的天平从 84px → 40px 手机上,我刚从电话里找到的 定价层堆叠从3柱到1-up. 文档网格崩溃到抽屉。</p>
+<table class="breakpoint-table">
+<thead><tr><th>断点</th><th>宽度</th><th>密钥更改</th></tr></thead>
+<tbody>
+<tr><td><strong>移动( 小)</strong></td><td>&lt; 480px Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q</td><td>单列. 首屏们 40px. 胶囊形导航崩溃成汉堡. 套餐层级堆积1-up.</td></tr>
+<tr><td><strong>移动( 大)</strong></td><td>480 – 767px</td><td>特色瓷砖2-up. 首屏们 52px.</td></tr>
+<tr><td><strong>平板</strong></td><td>768 – 1023px</td><td>2列的特征网格. Pill-tab导航返回. 首屏们 64px.</td></tr>
+<tr><td><strong>桌面端</strong></td><td>1024 – 1279px</td><td>多列经. 首屏们 76px.</td></tr>
+<tr><td><strong>宽桌面</strong></td><td>≥ 1280px</td><td>全面84px首屏介绍.（原文参数：84px）</td></tr>
+</tbody>
+</table>
+<h3 style="font-size: 18px; font-weight: 500; margin-top: 32px;">设备梯</h3>
+<div class="device-ladder">
+<div class="device" style="width: 60px; height: 110px;">375px</div>
+<div class="device" style="width: 90px; height: 130px;">480px</div>
+<div class="device" style="width: 130px; height: 150px;">768px</div>
+<div class="device" style="width: 200px; height: 170px;">1024px</div>
+<div class="device" style="width: 280px; height: 200px;">1280+</div>
+</div>
+<h3 style="font-size: 18px; font-weight: 500; margin-top: 32px;">触控区域</h3>
+<ul style="font-size: 14px; color: var(--charcoal); line-height: 1.7; padding-left: 20px;">
+<li>按钮渲染到 40–44px 高度——位于WCAG AAA层.</li>
+<li>表格输入在44px高度。（原文参数：44px）</li>
+<li>药片标签:~32px → 44px 手机上,我刚从电话里找到的</li>
+</ul>
+<h3 style="font-size: 18px; font-weight: 500; margin-top: 32px;">窄屏布局调整</h3>
+<ul style="font-size: 14px; color: var(--charcoal); line-height: 1.7; padding-left: 20px;">
+<li><strong>宣传旗</strong> 保持全宽; 短线位于 &lt; 480px。</li>
+<li><strong>顶端导航</strong> 1024px下方的崩塌为汉堡.（原文参数：1024px）</li>
+<li><strong>首屏区块</strong>: 2-column hero stacks at &lt; 1024px.</li>
+<li><strong>套餐定价</strong>: 3-栏目 – 2-柱状石板 - 柱状石板 - 柱状石板 1- 列车移动。</li>
+<li><strong>首屏打字技术</strong>: 84px → 64px → 52px → 40px.</li>
+<li><strong>日落stripe 带</strong> 保持全速移动到所有响应式断点上。</li>
+</ul>
+</section>
+<div class="sunset-stripe"></div>
+<footer class="footer">
+<div class="footer-shell">
+<div class="footer-grid">
+<div class="footer-col">
+<h6>VoltAgent 框架</h6>
+<span>类型脚本代理</span>
+<span>工具编程</span>
+<span>多种代理工作流程</span>
+</div>
+<div class="footer-col">
+<h6>伏特Ops LLM 可观测性</h6>
+<span>LLM 跟踪</span>
+<span>实时调试</span>
+<span>视觉时间</span>
+</div>
+<div class="footer-col">
+<h6>生产</h6>
+<span>评价</span>
+<span>即时管理</span>
+<span>护卫</span>
+</div>
+<div class="footer-col">
+<h6>平台</h6>
+<span>伏特Ops 控制台</span>
+<span>开源核心</span>
+<span>代理工程</span>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

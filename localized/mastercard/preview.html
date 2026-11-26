@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>暖底与圆环形构图</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;450;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --canvas: #F3F0EE;
+    --lifted: #FCFBFA;
+    --white: #FFFFFF;
+    --ink: #141413;
+    --charcoal: #262627;
+    --slate: #696969;
+    --granite: #555555;
+    --taupe: #D1CDC7;
+    --bone: #F4F4F4;
+    --signal: #CF4500;
+    --signal-light: #F37338;
+    --clay: #9A3A0A;
+    --link-blue: #3860BE;
+    --mc-red: #EB001B;
+    --mc-yellow: #F79E1B;
+    --shadow-1: 0 4px 24px rgba(0, 0, 0, 0.04);
+    --shadow-2: 0 24px 48px rgba(0, 0, 0, 0.08);
+    --shadow-3: 0 70px 110px rgba(0, 0, 0, 0.25);
+    --font: "Sofia Sans", MarkForMC, Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--font);
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--ink);
+    background: var(--canvas);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container { max-width: 1280px; margin: 0 auto; padding: 0 48px; }
+
+  /* --- NAV (floating pill) --- */
+  .nav {
+    position: sticky;
+    top: 24px;
+    z-index: 50;
+    margin: 24px auto 0;
+    max-width: 1180px;
+    background: var(--white);
+    border-radius: 999px;
+    box-shadow: var(--shadow-1);
+    padding: 16px 40px;
+    width: calc(100% - 48px);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.48px;
+  }
+
+  .nav-brand { font-weight: 500; font-size: 16px; letter-spacing: -0.48px; color: var(--ink); }
+  .nav-links { list-style: none; display: flex; gap: 48px; align-items: center; }
+  .nav-links a { color: var(--ink); text-decoration: none; font-weight: 500; font-size: 16px; letter-spacing: -0.48px; }
+  .nav-cta {
+    background: var(--ink);
+    color: var(--canvas);
+    border: 1.5px solid var(--ink);
+    border-radius: 20px;
+    padding: 6px 24px;
+    font-family: var(--font);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.32px;
+    cursor: pointer;
+  }
+
+  /* --- HERO --- */
+  .hero {
+    padding: 80px 0 120px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 48px; position: relative; }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 24px;
+  }
+  .hero-eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--signal-light);
+  }
+  .hero-title {
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 64px;
+    letter-spacing: -1.28px;
+    color: var(--ink);
+    max-width: 920px;
+    margin-bottom: 28px;
+  }
+  .hero-sub {
+    font-size: 18px;
+    font-weight: 450;
+    line-height: 1.5;
+    color: var(--granite);
+    max-width: 560px;
+    margin-bottom: 40px;
+  }
+  .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    font-family: var(--font);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.32px;
+    padding: 10px 28px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1.5px solid var(--ink);
+    display: inline-block;
+    text-decoration: none;
+  }
+  .btn-primary { background: var(--ink); color: var(--canvas); }
+  .btn-secondary { background: var(--white); color: var(--ink); }
+
+  /* Decorative orbital arc behind hero */
+  .hero-orbit {
+    position: absolute;
+    right: -120px;
+    top: -40px;
+    width: 700px;
+    height: 700px;
+    border: 1px solid var(--signal-light);
+    border-radius: 50%;
+    opacity: 0.45;
+    pointer-events: none;
+  }
+  .hero-orbit-2 {
+    position: absolute;
+    right: 80px;
+    bottom: -180px;
+    width: 460px;
+    height: 460px;
+    border: 1px solid var(--signal-light);
+    border-radius: 50%;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  /* --- SECTIONS --- */
+  section.block { padding: 96px 0; }
+  section.block + section.block { padding-top: 0; }
+  .block-title {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: -0.72px;
+    margin-bottom: 12px;
+  }
+  .block-sub {
+    font-size: 16px;
+    font-weight: 450;
+    line-height: 22.4px;
+    color: var(--slate);
+    margin-bottom: 40px;
+    max-width: 620px;
+  }
+  .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+  .section-eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--signal-light);
+  }
+
+  /* --- COLOR PALETTE --- */
+  .color-group { margin-bottom: 56px; }
+  .color-group h3 {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin-bottom: 20px;
+  }
+  .color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  .swatch {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: var(--shadow-1);
+  }
+  .swatch-chip {
+    height: 120px;
+    border-radius: 16px;
+    margin-bottom: 14px;
+    border: 1px solid rgba(20, 20, 19, 0.06);
+  }
+  .swatch-name { font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 4px; }
+  .swatch-hex { font-size: 12px; font-weight: 450; color: var(--slate); font-feature-settings: "tnum"; margin-bottom: 8px; }
+  .swatch-role { font-size: 13px; font-weight: 450; color: var(--granite); line-height: 1.45; }
+
+  /* --- TYPOGRAPHY --- */
+  .type-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+    gap: 40px;
+    padding: 32px 0;
+    border-bottom: 1px solid rgba(20, 20, 19, 0.08);
+  }
+  .type-row:last-child { border-bottom: none; }
+  .type-meta {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    color: var(--slate);
+    line-height: 1.6;
+  }
+  .type-meta strong { display: block; color: var(--ink); font-size: 13px; margin-bottom: 6px; letter-spacing: 0.56px; }
+  .t-h1 { font-size: 64px; font-weight: 500; line-height: 64px; letter-spacing: -1.28px; }
+  .t-h2 { font-size: 36px; font-weight: 500; line-height: 44px; letter-spacing: -0.72px; }
+  .t-h3 { font-size: 24px; font-weight: 500; line-height: 28.8px; letter-spacing: -0.48px; }
+  .t-eyebrow { font-size: 14px; font-weight: 700; line-height: 14px; letter-spacing: 0.56px; text-transform: uppercase; }
+  .t-body { font-size: 16px; font-weight: 450; line-height: 22.4px; }
+  .t-nav { font-size: 16px; font-weight: 500; line-height: 16px; letter-spacing: -0.48px; }
+  .t-foot { font-size: 14px; font-weight: 450; line-height: 20px; }
+
+  /* --- BUTTONS --- */
+  .btn-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  .btn-cell {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: var(--shadow-1);
+  }
+  .btn-cell > *:first-child { margin-bottom: 20px; }
+  .btn-label { font-size: 12px; font-weight: 500; color: var(--slate); letter-spacing: 0.3px; text-transform: uppercase; margin-bottom: 8px; }
+  .btn-spec { font-size: 12px; color: var(--granite); line-height: 1.5; font-feature-settings: "tnum"; }
+
+  .btn-signal {
+    background: var(--signal);
+    color: var(--white);
+    border: 0;
+    border-radius: 24px;
+    padding: 1px 30px;
+    min-height: 36px;
+    font-family: var(--font);
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.13px;
+    cursor: pointer;
+  }
+  .btn-satellite {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 1px solid rgba(20, 20, 19, 0.08);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--ink);
+  }
+  .btn-icon-round {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 1px solid var(--ink);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--ink);
+  }
+
+  /* --- CARDS --- */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+  }
+  .card-stadium {
+    background: var(--ink);
+    color: var(--canvas);
+    border-radius: 40px;
+    padding: 40px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+  }
+  .card-stadium .spec { font-size: 12px; opacity: 0.6; margin-top: 12px; }
+  .card-stadium h4 { font-size: 24px; font-weight: 500; letter-spacing: -0.48px; line-height: 1.2; }
+
+  .card-portrait {
+    background: var(--canvas);
+    border-radius: 20px;
+    padding: 24px;
+    text-align: center;
+  }
+  .card-portrait-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--signal-light), var(--clay));
+    margin: 0 auto 20px;
+    position: relative;
+  }
+  .card-portrait-img::after {
+    content: "→";
+    position: absolute;
+    right: -10px;
+    bottom: 20px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: var(--white);
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    box-shadow: var(--shadow-1);
+  }
+  .card-portrait-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .card-portrait-eyebrow::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--signal-light);
+  }
+  .card-portrait h4 { font-size: 24px; font-weight: 500; line-height: 28.8px; letter-spacing: -0.48px; color: var(--ink); }
+
+  .card-pill {
+    background: var(--lifted);
+    border-radius: 999px;
+    padding: 40px 60px;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-2);
+    text-align: center;
+  }
+  .card-pill h4 { font-size: 20px; font-weight: 500; letter-spacing: -0.4px; color: var(--ink); }
+  .card-pill .spec { display: block; font-size: 11px; color: var(--slate); margin-top: 8px; text-transform: uppercase; letter-spacing: 0.3px; font-weight: 500; }
+
+  /* --- FORMS --- */
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: var(--shadow-1);
+  }
+  .form-field label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin-bottom: 8px;
+  }
+  .form-field input,
+  .form-field textarea,
+  .form-field select {
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 999px;
+    border: 1px solid rgba(20, 20, 19, 0.3);
+    background: var(--white);
+    font-family: var(--font);
+    font-size: 16px;
+    font-weight: 450;
+    color: var(--ink);
+    outline: none;
+  }
+  .form-field textarea { border-radius: 20px; resize: vertical; min-height: 100px; }
+  .form-field input.focused { border: 1.5px solid var(--ink); }
+  .form-field input.error { border: 1.5px solid var(--signal); }
+  .form-field .error-msg { font-size: 13px; color: var(--signal); margin-top: 6px; font-weight: 450; }
+  .form-field .caption { font-size: 12px; color: var(--slate); margin-top: 6px; }
+
+  /* --- SPACING --- */
+  .spacing-row { display: flex; flex-direction: column; gap: 12px; }
+  .spacing-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .spacing-label { font-size: 12px; color: var(--slate); width: 80px; font-feature-settings: "tnum"; }
+  .spacing-box {
+    height: 32px;
+    background: var(--ink);
+    border-radius: 4px;
+  }
+
+  /* --- RADIUS --- */
+  .radius-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 20px;
+  }
+  .radius-cell {
+    background: var(--white);
+    padding: 20px;
+    text-align: center;
+    box-shadow: var(--shadow-1);
+    border-radius: 20px;
+  }
+  .radius-swatch {
+    height: 120px;
+    background: var(--ink);
+    margin-bottom: 14px;
+  }
+  .radius-label { font-size: 13px; font-weight: 500; color: var(--ink); }
+  .radius-context { font-size: 11px; color: var(--slate); margin-top: 4px; line-height: 1.4; }
+
+  /* --- ELEVATION --- */
+  .elev-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 32px;
+    padding: 48px;
+    background: var(--bone);
+    border-radius: 40px;
+  }
+  .elev-cell {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 32px;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .elev-cell.e0 { box-shadow: none; border: 1px solid rgba(20, 20, 19, 0.08); }
+  .elev-cell.e1 { box-shadow: var(--shadow-1); }
+  .elev-cell.e2 { box-shadow: var(--shadow-2); }
+  .elev-cell.e3 { box-shadow: var(--shadow-3); }
+  .elev-cell h5 { font-size: 16px; font-weight: 500; letter-spacing: -0.32px; margin-bottom: 4px; color: var(--ink); }
+  .elev-cell .shadow-spec { font-size: 11px; color: var(--slate); font-feature-settings: "tnum"; line-height: 1.5; }
+
+  /* --- FOOTER --- */
+  .footer {
+    margin-top: 120px;
+    padding: 32px 48px;
+    background: var(--ink);
+    color: var(--taupe);
+    text-align: center;
+    font-size: 13px;
+    font-weight: 450;
+  }
+  .footer a { color: var(--canvas); }
+
+  @media (max-width: 860px) {
+    .container { padding: 0 20px; }
+    .nav { padding: 10px 20px; }
+    .nav-links { display: none; }
+    .hero { padding: 48px 0 64px; }
+    .hero-title { font-size: 40px; line-height: 40px; letter-spacing: -0.8px; }
+    section.block { padding: 48px 0; }
+    .block-title { font-size: 28px; line-height: 32px; }
+    .t-h1 { font-size: 40px; line-height: 40px; letter-spacing: -0.8px; }
+    .t-h2 { font-size: 28px; line-height: 32px; }
+    .type-row { grid-template-columns: 1fr; gap: 12px; }
+  }
+
+  /* getdesign.md nav additions */
+  .nav-left { display: flex; align-items: center; gap: 20px; }
+  .nav-brand-link,
+  .nav-brand-link:link,
+  .nav-brand-link:visited,
+  .nav-brand-link:hover,
+  .nav-brand-link:active { text-decoration: none; color: inherit; }
+  .nav-github,
+  .nav-github:link,
+  .nav-github:visited,
+  .nav-github:hover,
+  .nav-github:active {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: inherit;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 6px;
+    opacity: 0.75;
+    transition: opacity 200ms ease, border-color 200ms ease;
+    font-family: inherit;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .nav-github:hover { opacity: 1; border-color: rgba(128, 128, 128, 0.55); }
+  .nav-github svg { display: block; flex-shrink: 0; }
+
+  /* getdesign.md nav centering */
+  .nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+  .nav > .nav-left { justify-self: start; }
+  .nav > .nav-links { justify-self: center; }
+  .nav > :last-child { justify-self: end; }
+
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+<style data-design-nav="true">
+.design-preview-nav { min-height:48px; }
+.design-preview-nav .nav-brand { white-space:normal; overflow-wrap:anywhere; }
+.design-preview-nav .nav-links { display:flex; flex-wrap:wrap; gap:8px clamp(10px,2vw,26px); padding-block:5px; }
+.design-preview-nav a { text-decoration:none; }
+.design-preview-nav .nav-links a { color:inherit; }
+.design-preview-nav .nav-links a:hover { text-decoration:underline; text-underline-offset:3px; }
+.design-preview-nav a:focus-visible { outline:2px solid currentColor; outline-offset:4px; }
+:is([id^=design-section-],[id=design-overview]) { scroll-margin-top:94px; }
+@media (max-width:760px) {
+  .design-preview-nav { position:static; display:flex; flex-wrap:wrap; gap:3px 12px; padding:8px 12px; height:auto; }
+  .design-preview-nav .nav-left { min-width:0; }
+  .design-preview-nav > .nav-links { flex:1 1 100%; display:flex; padding-inline:0; }
+  .design-preview-nav .nav-cta { display:none; }
+  :is([id^=design-section-],[id=design-overview]) { scroll-margin-top:14px; }
+}
+</style></head>
+<body><nav aria-label="样张章节" class="nav design-preview-nav" data-design-nav="true"><div class="nav-left"><span class="nav-brand">Mastercard</span></div><ul class="nav-links"><li><a href="#design-section-1">配色</a></li><li><a href="#design-section-7">字体</a></li><li><a href="#design-section-8">按钮</a></li><li><a href="#design-section-9">卡片</a></li><li><a href="#design-section-10">表单</a></li><li><a href="#design-section-11">布局</a></li></ul><a class="nav-cta" href="#design-overview">概览</a></nav>
+<section class="hero">
+<div class="hero-orbit"></div>
+<div class="hero-orbit-2"></div>
+<div class="hero-inner">
+<div class="hero-eyebrow">设计系统目录</div>
+<h1 class="hero-title" id="design-overview">暖底与圆环形构图</h1>
+<p class="hero-sub">奶油色底、环形图案和圆润操作按钮构建亲切的金融视觉语言。 词元来源见 <code>DESIGN.md</code>。</p>
+<div class="hero-ctas">
+<a class="btn btn-primary" href="#palette">探索调色板</a>
+<a class="btn btn-secondary" href="#typography">查看打字法</a>
+</div>
+</div>
+</section>
+<section class="block container" id="palette">
+<div class="section-eyebrow">Section 01</div>
+<h2 class="block-title" id="design-section-1">配色</h2>
+<p class="block-sub">六个角色小组以温暖的乳油页面底色为基础。 文字色是温暖的近黑色. 信号橙专供同意/合法; 轻信号橙痕装饰轨道. Mastercard标志红黄只有brand-mark颜色.</p>
+<div class="color-group">
+<h3>主要</h3>
+<div class="color-grid">
+<div class="swatch"><div class="swatch-chip" style="background:#EB001B"></div><div class="swatch-name">Mastercard 红色</div><div class="swatch-hex">#EB001B</div><div class="swatch-role">品牌标志的左圆——只标,从来不是UI颜色.</div></div>
+<div class="swatch"><div class="swatch-chip" style="background:#F79E1B"></div><div class="swatch-name">Mastercard 黄色</div><div class="swatch-hex">#F79E1B</div><div class="swatch-role">品牌标志的右圆——只标,从来不是UI颜色.</div></div>
+<div class="swatch"><div class="swatch-chip" style="background:#141413"></div><div class="swatch-name">文字色 黑色调用</div><div class="swatch-hex">#141413</div><div class="swatch-role">主CTAs,头条文字,脚脚表面. 略暖近黑 .</div></div>
+</div>
+</div>
+<div class="color-group">
+<h3>次要和强调色</h3>
+<div class="color-grid">
+<div class="swatch"><div class="swatch-chip" style="background:#CF4500"></div><div class="swatch-name">信号橙</div><div class="swatch-hex">#CF4500</div><div class="swatch-role">同意/法律行动和栏眉 强调色点。 预置色相.</div></div>
+<div class="swatch"><div class="swatch-chip" style="background:#F37338"></div><div class="swatch-name">光信号橙</div><div class="swatch-hex">#F37338</div><div class="swatch-role">木卫一活性指标和装饰性轨道弧.</div></div>
+<div class="swatch"><div class="swatch-chip" style="background:#9A3A0A"></div><div class="swatch-name">Clay 布朗语</div><div class="swatch-hex">#9A3A0A</div><div class="swatch-role">深锈用于二级链接式按钮(如细节).</div></div>
+</div>
+</div>
+<div class="color-group">
+<h3>表面与背景</h3>
+<div class="color-grid">
+<div class="swatch"><div class="swatch-chip" style="background:#F3F0EE"></div><div class="swatch-name">油菜酱</div><div class="swatch-hex">#F3F0EE</div><div class="swatch-role">默认身体背景。 温暖的调子——永远不要纯白色.</div></div>
+<div class="swatch"><div class="swatch-chip" style="background:#FCFBFA"></div><div class="swatch-name">已升空米白色</div><div class="swatch-hex">#FCFBFA</div><div class="swatch-role">一步轻一点——筑巢区段铺设在页面底色上.</div></div>
+<div class="swatch"><div class="swatch-chip" style="background:#FFFFFF"></div><div class="swatch-name">白色</div><div class="swatch-hex">#FFFFFF</div><div class="swatch-role">浮航胶囊形,模式卡片,卫星-CTA圈.</div></div>
+<div class="swatch"><div class="swatch-chip" style="background:#F4F4F4"></div><div class="swatch-name">软骨</div><div class="swatch-hex">#F4F4F4</div><div class="swatch-role">在一些次区域内使用的冷冻替代表面。</div></div>
+</div>
+</div>
+<div class="color-group">
+<h3>中立文本( T)</h3>
+<div class="color-grid">
+<div class="swatch"><div class="swatch-chip" style="background:#141413"></div><div class="swatch-name">文字色 黑色调用</div><div class="swatch-hex">#141413</div><div class="swatch-role">头条和身体文字色.</div></div>
+<div class="swatch"><div class="swatch-chip" style="background:#262627"></div><div class="swatch-name">炭灰色</div><div class="swatch-hex">#262627</div><div class="swatch-role">更柔软的黑色替代一些文本.</div></div>
+<div class="swatch"><div class="swatch-chip" style="background:#696969"></div><div class="swatch-name">板块灰</div><div class="swatch-hex">#696969</div><div class="swatch-role">哑次文字及小印行.</div></div>
+<div class="swatch"><div class="swatch-chip" style="background:#555555"></div><div class="swatch-name">花岗岩</div><div class="swatch-hex">#555555</div><div class="swatch-role">深灰色的内含体腔。</div></div>
+<div class="swatch"><div class="swatch-chip" style="background:#D1CDC7"></div><div class="swatch-name">尘陶普</div><div class="swatch-hex">#D1CDC7</div><div class="swatch-role">米白色 上禁用/ 低声文本。 低对比度,使用量很少.</div></div>
+</div>
+</div>
+<div class="color-group">
+<h3>语义学 &amp; 强调色</h3>
+<div class="color-grid">
+<div class="swatch"><div class="swatch-chip" style="background:#3860BE"></div><div class="swatch-name">链接蓝色</div><div class="swatch-hex">#3860BE</div><div class="swatch-role">内置链接和信息征集. 达斯帝,饱和。</div></div>
+</div>
+</div>
+</section>
+<section class="block container" id="typography">
+<div class="section-eyebrow">Section 02</div>
+<h2 class="block-title" id="design-section-7">字号层级</h2>
+<p class="block-sub">都准备好了 <em>马克福尔MC</em> (Sofia Sans as open-source substitute). Display weight 500 with −2% tracking, body weight 450 for the signature airy tone, and a single uppercase eyebrow at +4% tracking.</p>
+<div class="type-row">
+<div class="type-meta"><strong>H1 / 首屏( 首屏 )</strong>64px · 500 · 64 · 妇女 −1.28 双</div>
+<div class="t-h1">增强经济能力和增强人民权能</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>H2 / 科室</strong>36px · 500 · 44 · 妇女 −0.72 双</div>
+<div class="t-h2">激发你热情的惠益和服务</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>3/卡片 总部</strong>24px · 500 · 28.8 · 妇女 −0.48 双</div>
+<div class="t-h3">洞察和情报</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>栏眉</strong>14px · 700 · 14 · 妇女 +0.56  t / 大写</div>
+<div class="t-eyebrow">• 服务</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>正文</strong>16px 450 22.4 时速</div>
+<div class="t-body">Unlocking potential for people, businesses and governments, all around the world. The half-step 450 weight reads softer than regular 400 without feeling thin.</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>导航/ 按钮</strong>16px · 500 · 16 · 妇女 −0.48 双</div>
+<div class="t-nav">· 创新者</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>页脚链接</strong>14px 450 20 时速</div>
+<div class="t-foot">隐私 术语 管理 cookie – 您的隐私选择</div>
+</div>
+</section>
+<section class="block container" id="buttons">
+<div class="section-eyebrow">Section 03</div>
+<h2 class="block-title" id="design-section-8">按钮样式</h2>
+<p class="block-sub">五个不同的按钮。 文字色 胶囊形是工作马的营销行动按钮. 橙色信号是保留下来的——它读作同意,而不是约定.</p>
+<div class="btn-grid">
+<div class="btn-cell">
+<button class="btn btn-primary">了解更多</button>
+<div class="btn-label">主要-文字色 胶囊形</div>
+<div class="btn-spec">数据 #141413 · 文本 #F3F0EE · 边界 1.5px 半径 20px · 贴纸 6px 24px · 16/500 · −0.32 双</div>
+</div>
+<div class="btn-cell">
+<button class="btn btn-secondary">配置我的饼干</button>
+<div class="btn-label">次要- 概要胶囊形</div>
+<div class="btn-spec">数据 #FFFFFF · 文本 #141413 · 边界 1.5px 文字色 半径 20px · 贴纸 6px 24px · 16/450</div>
+</div>
+<div class="btn-cell">
+<button class="btn-signal">拒绝全部</button>
+<div class="btn-label">同意-信号胶囊形</div>
+<div class="btn-spec">数据 #CF4500 · 文本 #FFFFFF 半径 24px · 贴纸 1px 30px · 13/400 · +0.13 双</div>
+</div>
+<div class="btn-cell">
+<button aria-label="行动按钮卫星" class="btn-satellite">→</button>
+<div class="btn-label">Satellite — Circular Micro-CTA</div>
+<div class="btn-spec">bg #FFFFFF · icon ink · radius 50% · size 56px · attaches to circular portrait</div>
+</div>
+<div class="btn-cell">
+<button aria-label="搜索" class="btn-icon-round">◯</button>
+<div class="btn-label">图标-圆形大纲</div>
+<div class="btn-spec">bg #FFFFFF 与 1px 相接的边界 文字色 半径 50% 大小 48px 旋转木马/ 搜索切换</div>
+</div>
+</div>
+</section>
+<section class="block container" id="cards">
+<div class="section-eyebrow">Section 04</div>
+<h2 class="block-title" id="design-section-9">卡片示例</h2>
+<p class="block-sub">Three signature card shapes: a 40px-radius stadium, a circular portrait with satellite CTA, and a full-pill editorial row. Shadows are soft with wide spread.</p>
+<div class="card-grid">
+<div class="card-stadium">
+<h4>体育场首屏框架</h4>
+<div class="spec">半径 40px 男/女 男 男 #141413 · 阴影 0 24 48 / 0.08 · 媒体的全能持有者</div>
+</div>
+<div class="card-portrait">
+<div class="card-portrait-img"></div>
+<div class="card-portrait-eyebrow">服务</div>
+<h4>Circular Portrait Card</h4>
+</div>
+<div class="card-pill">
+<div>
+<h4>全页编辑行</h4>
+<span class="spec">半径 999px 男/女 男 男 #FCFBFA · 阴影 0 24 48 / 0.08</span>
+</div>
+</div>
+</div>
+</section>
+<section class="block container" id="forms">
+<div class="section-eyebrow">Section 05</div>
+<h2 class="block-title" id="design-section-10">表单控件</h2>
+<p class="block-sub">输入默认为胶囊形半径(999px),带有墨墨线的半透明边框. 重点国有企业边界为固态文字色;错误转移到信号橙.</p>
+<div class="form-grid">
+<div class="form-field">
+<label>全名——默认</label>
+<input placeholder="简·卡多" type="text"/>
+<div class="caption">999px半径 ^ 1px rgba(ink, 0.3) → 16/450（原文参数：999px）</div>
+</div>
+<div class="form-field">
+<label>电子邮件——重点</label>
+<input class="focused" type="email" value="jane@example.com"/>
+<div class="caption">1.5px 固态 #141413 − 提纲已删除</div>
+</div>
+<div class="form-field">
+<label>ZIP - 错误</label>
+<input class="error" type="text" value="12"/>
+<div class="error-msg">请输入有效的 5 数字 ZIP 代码。</div>
+</div>
+<div class="form-field">
+<label>消息 - 文本区</label>
+<textarea placeholder="我们能怎样帮助?"></textarea>
+<div class="caption">20px 半径 ^ 垂直调整大小</div>
+</div>
+</div>
+</section>
+<section class="block container" id="spacing">
+<div class="section-eyebrow">Section 06</div>
+<h2 class="block-title" id="design-section-11">间距层级</h2>
+<p class="block-sub">基地8px单位. 销售部门呼吸 96px 财务报告和已审计财务报表 128px 桌面上; 压缩到 48–64px 手机上,我刚从电话里找到的（原文参数：8px）</p>
+<div class="spacing-row">
+<div class="spacing-item"><div class="spacing-label">8px</div><div class="spacing-box" style="width:8px"></div></div>
+<div class="spacing-item"><div class="spacing-label">16px</div><div class="spacing-box" style="width:16px"></div></div>
+<div class="spacing-item"><div class="spacing-label">24px</div><div class="spacing-box" style="width:24px"></div></div>
+<div class="spacing-item"><div class="spacing-label">32px</div><div class="spacing-box" style="width:32px"></div></div>
+<div class="spacing-item"><div class="spacing-label">48px</div><div class="spacing-box" style="width:48px"></div></div>
+<div class="spacing-item"><div class="spacing-label">64px</div><div class="spacing-box" style="width:64px"></div></div>
+<div class="spacing-item"><div class="spacing-label">96px</div><div class="spacing-box" style="width:96px"></div></div>
+<div class="spacing-item"><div class="spacing-label">128px</div><div class="spacing-box" style="width:128px"></div></div>
+</div>
+</section>
+<section class="block container" id="radius">
+<div class="section-eyebrow">Section 07</div>
+<h2 class="block-title">圆角层级</h2>
+<p class="block-sub">圆角分小圆角（≤6）、中大圆角（20–40）与全圆角（99+），跳过 8–12px 这一档。</p>
+<div class="radius-grid">
+<div class="radius-cell"><div class="radius-swatch" style="border-radius:4px"></div><div class="radius-label">4px</div><div class="radius-context">微芯片</div></div>
+<div class="radius-cell"><div class="radius-swatch" style="border-radius:20px"></div><div class="radius-label">20px</div><div class="radius-context">初等按钮( S)</div></div>
+<div class="radius-cell"><div class="radius-swatch" style="border-radius:24px"></div><div class="radius-label">24px</div><div class="radius-context">信号按钮,模式芯片</div></div>
+<div class="radius-cell"><div class="radius-swatch" style="border-radius:40px"></div><div class="radius-label">40px</div><div class="radius-context">体育场首屏阵容</div></div>
+<div class="radius-cell"><div class="radius-swatch" style="border-radius:50%;height:120px;width:120px;margin:0 auto 14px"></div><div class="radius-label">50%</div><div class="radius-context">肖像画 \ 图标按钮</div></div>
+<div class="radius-cell"><div class="radius-swatch" style="border-radius:999px;height:48px"></div><div class="radius-label">999px</div><div class="radius-context">胶囊形 导航 · 选择器 · 芯片</div></div>
+</div>
+</section>
+<section class="block container" id="elevation">
+<div class="section-eyebrow">Section 08</div>
+<h2 class="block-title">层次与阴影</h2>
+<p class="block-sub">四个高度,全部在大气中。 阴影有广度,低透明度——卡片是 <em>呼吸时</em> 上面的页面底色,没有夹住它。</p>
+<div class="elev-grid">
+<div class="elev-cell e0">
+<div>
+<h5>Level 0 — Flat</h5>
+<div class="shadow-spec">无阴影 ^ 直接坐落在页面底色上</div>
+</div>
+</div>
+<div class="elev-cell e1">
+<div>
+<h5>Level 1 — Float</h5>
+<div class="shadow-spec">0 4 24 / 0.04 · 浮航丸</div>
+</div>
+</div>
+<div class="elev-cell e2">
+<div>
+<h5>Level 2 — Lift</h5>
+<div class="shadow-spec">0 24 48 / 0.08 首屏画框</div>
+</div>
+</div>
+<div class="elev-cell e3">
+<div>
+<h5>Level 3 — Halo</h5>
+<div class="shadow-spec">0 70 110 / 0.25 罕见特征</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer">
+<div class="footer-shell">
+<div class="footer-grid">
+<div class="footer-col">
+<h6>VoltAgent 框架</h6>
+<span>类型脚本代理</span>
+<span>工具编程</span>
+<span>多种代理工作流程</span>
+</div>
+<div class="footer-col">
+<h6>伏特Ops LLM 可观测性</h6>
+<span>LLM 跟踪</span>
+<span>实时调试</span>
+<span>视觉时间</span>
+</div>
+<div class="footer-col">
+<h6>生产</h6>
+<span>评价</span>
+<span>即时管理</span>
+<span>护卫</span>
+</div>
+<div class="footer-col">
+<h6>平台</h6>
+<span>伏特Ops 控制台</span>
+<span>开源核心</span>
+<span>代理工程</span>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

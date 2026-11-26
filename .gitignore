@@ -1,0 +1,19 @@
+# 本机运行文件和环境配置
+.runtime/
+.dev/
+data/
+venv*/
+.venv/
+__pycache__/
+.cache/
+.pytest_cache/
+node_modules/
+dist/
+*.py[cod]
+*.log
+*.local
+.env
+.env.*
+!.env.example
+config.ini
+manifest.json.bak

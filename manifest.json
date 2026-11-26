@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 2,
+  "id": "yeyunby-designforge",
+  "name": "design-yeyunby-designforge",
+  "version": "1.0.0",
+  "icon": "app",
+  "actions": {
+    "check": { "kind": "batch", "path": "script/check-env.bat", "execution": "managed" },
+    "prepare": { "kind": "batch", "path": "script/install-env.bat", "execution": "managed" },
+    "menu": { "kind": "batch", "path": "design-yeyunby-designforge.bat", "execution": "terminal" },
+    "start": {
+      "kind": "batch",
+      "path": "script/start-webui.bat",
+      "execution": "managed",
+      "args": ["-HostAddress", "{host}", "-Port", "{port}"]
+    }
+  },
+  "web": { "port": 28716, "openPath": "/", "healthPath": "/health" }
+}

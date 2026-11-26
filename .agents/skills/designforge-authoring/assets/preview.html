@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>纸页 · 设计规范样张</title>
+  <style>
+    :root {
+      --canvas: #f6f3eb;
+      --surface: #fffcf6;
+      --ink: #222720;
+      --muted: #4e5b50;
+      --primary: #244c3c;
+      --pressed: #17352a;
+      --border: #cbc8ba;
+      --on-primary: #ffffff;
+      --section-gap: 48px;
+      --card-radius: 12px;
+      --serif: Georgia, "Songti SC", SimSun, serif;
+      --sans: system-ui, "Microsoft YaHei", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--canvas); color: var(--ink); font: 400 16px/1.65 var(--sans); }
+    a { color: var(--primary); text-underline-offset: 0.2em; }
+    :focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+    .wrap { width: min(100% - 40px, 960px); margin-inline: auto; }
+    header { border-bottom: 1px solid var(--border); }
+    nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; padding-block: 14px; }
+    nav a { min-height: 44px; display: flex; align-items: center; }
+    nav .wordmark { font-family: var(--serif); font-size: 22px; font-weight: 700; margin-inline-end: auto; text-decoration: none; }
+    main { padding: var(--section-gap) 0; }
+    section + section { margin-top: var(--section-gap); }
+    section[id] { scroll-margin-top: 20px; }
+    .hero { padding-block: 12px 24px; border-bottom: 1px solid var(--border); }
+    h1, h2, h3, p { margin: 0; }
+    h1 { font: 700 56px/1.15 var(--serif); letter-spacing: 0; }
+    h2 { font: 700 30px/1.3 var(--serif); margin-bottom: 14px; }
+    h3 { font-size: 17px; }
+    .lead { max-width: 38em; margin-block: 16px; color: var(--muted); }
+    .palette { list-style: none; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 12px; padding: 0; margin: 0 0 16px; }
+    .palette li, .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--card-radius); }
+    .palette li { overflow: hidden; }
+    .swatch { background: var(--swatch); display: block; height: 44px; border-bottom: 1px solid var(--border); }
+    .swatch-copy { display: grid; gap: 2px; padding: 9px 12px; }
+    .swatch-copy code { color: var(--muted); }
+    .card { padding: 20px; min-width: 0; }
+    .card p { color: var(--muted); }
+    .type { display: grid; gap: 8px; }
+    .type-title { font-family: var(--serif); font-size: 56px; font-weight: 700; line-height: 1.15; }
+    .type-demo { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; }
+    .state-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .states { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 10px; }
+    button { min-height: 44px; padding: 6px 14px; font: 600 16px/1.65 var(--sans); border: 1px solid var(--border); border-radius: 8px; cursor: pointer; }
+    .primary { background: var(--primary); color: var(--on-primary); border-color: var(--primary); }
+    .primary:is(:hover, :active):enabled { background: var(--pressed); border-color: var(--pressed); }
+    .secondary { background: var(--surface); color: var(--ink); }
+    button:disabled { opacity: 0.5; cursor: default; }
+    .list { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; }
+    caption { text-align: left; color: var(--muted); margin-bottom: 8px; }
+    th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--border); }
+    th:first-child, td:first-child { padding-inline-start: 0; }
+    [role="status"] { margin-top: 10px; min-height: 1.65em; }
+    @media (max-width: 767px) {
+      :root { --section-gap: 32px; }
+      h1, .type-title { font-size: 36px; }
+      .state-grid { grid-template-columns: 1fr; }
+      .palette { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap" aria-label="样张章节">
+      <a class="wordmark" href="#overview">纸页</a>
+      <a href="#tokens">基础词元</a>
+      <a href="#components">组件状态</a>
+      <a href="#scene">文档列表</a>
+      <a href="DESIGN.md">规范原文</a>
+    </nav>
+  </header>
+  <main class="wrap">
+    <section class="hero" id="overview">
+      <h1>暖纸底与深绿操作</h1>
+      <p class="lead">暖白用于大面积阅读，深绿标记主要操作。衬线标题和浅底卡片划分文档层级。</p>
+      <a href="#scene">查看文档列表演示</a>
+    </section>
+
+    <section id="tokens" aria-labelledby="tokens-title">
+      <h2 id="tokens-title">基础词元</h2>
+      <ul class="palette" aria-label="配色色板">
+        <li><span class="swatch" style="--swatch:var(--canvas)"></span><span class="swatch-copy">页面背景<code>#f6f3eb</code></span></li>
+        <li><span class="swatch" style="--swatch:var(--surface)"></span><span class="swatch-copy">卡片表面<code>#fffcf6</code></span></li>
+        <li><span class="swatch" style="--swatch:var(--ink)"></span><span class="swatch-copy">标题及正文<code>#222720</code></span></li>
+        <li><span class="swatch" style="--swatch:var(--muted)"></span><span class="swatch-copy">辅助说明<code>#4e5b50</code></span></li>
+        <li><span class="swatch" style="--swatch:var(--primary)"></span><span class="swatch-copy">主要操作<code>#244c3c</code></span></li>
+        <li><span class="swatch" style="--swatch:var(--pressed)"></span><span class="swatch-copy">悬停及按下<code>#17352a</code></span></li>
+        <li><span class="swatch" style="--swatch:var(--border)"></span><span class="swatch-copy">边框和分隔线<code>#cbc8ba</code></span></li>
+        <li><span class="swatch" style="--swatch:var(--on-primary)"></span><span class="swatch-copy">主按钮文字<code>#ffffff</code></span></li>
+      </ul>
+      <div class="card type">
+        <p class="type-title">设计记录</p>
+        <p class="type-demo">标题字重 <code>700</code>，行高 <code>1.15</code>。正文 <code>16px</code>，行高 <code>1.65</code>。</p>
+      </div>
+    </section>
+
+    <section id="components" aria-labelledby="components-title">
+      <h2 id="components-title">组件状态</h2>
+      <div class="state-grid">
+        <div class="card">
+          <h3>主按钮</h3>
+          <p>悬停或按下时底色加深。用 Tab 可查看焦点轮廓。</p>
+          <div class="states">
+            <button class="primary" id="sample-button" type="button">试用主按钮</button>
+            <button class="primary" type="button" disabled>禁用</button>
+          </div>
+          <p id="sample-feedback" role="status"></p>
+        </div>
+        <div class="card">
+          <h3>响应式卡片</h3>
+          <p>卡片圆角为 <code>12px</code>。视口宽度不超过 <code>767px</code> 时，试样从双列改为单列。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="scene" aria-labelledby="scene-title">
+      <h2 id="scene-title">文档列表</h2>
+      <div class="card list">
+        <table>
+          <caption>组件演示。操作仅更新当前样张。</caption>
+          <thead><tr><th scope="col">文档</th><th scope="col">状态</th><th scope="col">操作</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">排版走查</th><td id="document-state">未读</td><td><button class="secondary" id="mark-read" type="button">标记为已读</button></td></tr>
+          </tbody>
+        </table>
+        <p id="scene-feedback" role="status"></p>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.querySelector('#sample-button').addEventListener('click', () => {
+      document.querySelector('#sample-feedback').textContent = '主按钮已触发。';
+    });
+
+    const markRead = document.querySelector('#mark-read');
+    const documentState = document.querySelector('#document-state');
+    const sceneFeedback = document.querySelector('#scene-feedback');
+    let isRead = false;
+
+    markRead.addEventListener('click', () => {
+      isRead = !isRead;
+      documentState.textContent = isRead ? '已读' : '未读';
+      markRead.textContent = isRead ? '标记为未读' : '标记为已读';
+      sceneFeedback.textContent = isRead ? '排版走查已标记为已读。' : '排版走查已标记为未读。';
+    });
+  </script>
+</body>
+</html>

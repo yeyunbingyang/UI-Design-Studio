@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/><title>薄荷色底与黑色胶囊</title><meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><style>
+  
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Inter','Inter','Helvetica Neue',Arial,sans-serif;background:#0a0d0b;color:#ffffff;-webkit-font-smoothing:antialiased;}
+  .nav{padding:0 48px;height:64px;background:#0a0d0b;border-bottom:1px solid #2a2f2c;position:sticky;top:0;z-index:50;}
+  .nav-brand{font-weight:700;font-size:16px;}
+  .nav-links{list-style:none;display:flex;gap:28px;margin:0;padding:0;font-size:15px;font-weight:500;}
+  .nav-cta{background:#00f0a0;color:#000000;border:2px solid #00f0a0;border-radius:28px;padding:8px 22px;font-weight:600;font-size:15px;cursor:pointer;font-family:inherit;}
+  .hero{padding:96px 48px;background:#0a0d0b;max-width:1440px;margin:0 auto;display:block;}
+  .hero-content{max-width:1200px;}
+  .hero h1{font-family:'Titillium Web', sans-serif;font-size:72px;font-weight:700;line-height:1.05;color:#ffffff;margin:0 0 32px;letter-spacing:-1.3px;}
+  .hero p{font-size:19px;color:#8a938f;max-width:840px;margin:0 0 36px;line-height:1.5;}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+  .btn-primary{background:#00f0a0;color:#000000;border:2px solid #00f0a0;border-radius:28px;height:48px;padding:0 27px;font-size:16px;font-weight:600;cursor:pointer;font-family:inherit;display:inline-flex;align-items:center;}
+  .btn-secondary{background:transparent;color:#ffffff;border:2px solid #ffffff;border-radius:28px;height:48px;padding:0 27px;font-size:16px;font-weight:600;cursor:pointer;font-family:inherit;display:inline-flex;align-items:center;}
+  section{padding:80px 48px;max-width:1440px;margin:0 auto;}
+  .section-eyebrow{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#8a938f;margin-bottom:8px;}
+  .section-heading{font-family:'Titillium Web', sans-serif;font-size:36px;font-weight:700;letter-spacing:-1px;margin:0 0 32px;}
+  .palette-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;}
+  .swatch{border:1px solid #2a2f2c;border-radius:8px;overflow:hidden;}
+  .swatch-fill{height:90px;}
+  .swatch-meta{padding:12px;}
+  .swatch-name{font-weight:600;font-size:14px;margin:0 0 2px;}
+  .swatch-hex{font-family:var(--font-mono,monospace);font-size:12px;color:#8a938f;margin:0 0 6px;}
+  .swatch-role{font-size:12px;color:#8a938f;margin:0;line-height:1.4;}
+  .type-row{display:grid;grid-template-columns:240px 1fr;gap:24px;padding:18px 0;border-top:1px solid #2a2f2c;align-items:baseline;}
+  .type-meta{font-family:var(--font-mono,monospace);font-size:11px;color:#8a938f;line-height:1.5;}
+  .button-grid,.card-grid,.form-grid,.elevation-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;}
+  .demo-card{border:1px solid #2a2f2c;border-radius:12px;padding:24px;background:#122019;}
+  .label{font-size:12px;color:#8a938f;display:block;margin-bottom:12px;font-weight:600;}
+  .feature-card{background:#122019;border:1px solid #2a2f2c;border-radius:12px;padding:24px;}
+  .feature-card h4{margin:0 0 8px;font-size:19px;font-weight:600;}
+  .feature-card p{margin:0;color:#8a938f;font-size:14px;line-height:1.5;}
+  .ex-input-demo{width:100%;background:#122019;border:1px solid #16191a;color:#ffffff;padding:12px 14px;font-family:inherit;font-size:15px;border-radius:0;}
+  .spacing-row,.radius-row{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end;}
+  .spacing-box{background:#00f0a0;height:40px;border-radius:6px;}
+  .spacing-label,.radius-label{font-family:var(--font-mono,monospace);font-size:11px;color:#8a938f;margin-top:6px;text-align:center;}
+  .radius-box{width:90px;height:90px;background:#122019;border:2px solid #ffffff;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono,monospace);font-size:11px;}
+  .elev-card{background:#122019;border:1px solid #2a2f2c;border-radius:12px;padding:24px;font-size:13px;color:#8a938f;}
+  .elev-1{border:1px solid #2a2f2c;}
+  .elev-2{box-shadow:var(--shadow-md);border:none;}
+  .responsive-table{width:100%;border-collapse:collapse;font-size:14px;}
+  .responsive-table th,.responsive-table td{text-align:left;padding:12px 14px;border-bottom:1px solid #2a2f2c;}
+  .responsive-table th{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#8a938f;}
+  .device-ladder{display:flex;gap:12px;align-items:flex-end;margin-top:24px;flex-wrap:wrap;}
+  .device-box{background:#122019;border:1px solid #16191a;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;color:#8a938f;}
+  .footer{padding:32px 48px;border-top:1px solid #2a2f2c;font-size:13px;color:#8a938f;text-align:center;}
+  .footer a{color:inherit;}
+  @media (max-width:1024px){section{padding:64px 32px;}.section-heading{font-size:28px;}.nav>:last-child{display:none;}.type-row{grid-template-columns:1fr;gap:8px;}}
+  @media (max-width:720px){.nav{padding:12px 20px;height:auto;min-height:56px;}.nav-links{display:none;}.hero{padding:48px 20px;}.hero h1{font-size:38px;letter-spacing:-1px;}.hero p{font-size:16px;}section{padding:48px 20px;}.section-heading{font-size:24px;}.palette-grid,.button-grid,.card-grid,.form-grid,.elevation-grid{grid-template-columns:1fr !important;gap:16px;}.footer{padding:24px 16px;}}
+  /* getdesign.md nav additions */
+  .nav-left { display: flex; align-items: center; gap: 20px; }
+  .nav-brand-link,.nav-brand-link:link,.nav-brand-link:visited,.nav-brand-link:hover,.nav-brand-link:active { text-decoration: none; color: inherit; }
+  .nav-github,.nav-github:link,.nav-github:visited,.nav-github:hover,.nav-github:active { display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:600; color:inherit; text-decoration:none; padding:5px 10px; border:1px solid rgba(128,128,128,0.3); border-radius:6px; opacity:0.75; transition:opacity 200ms ease,border-color 200ms ease; font-family:inherit; line-height:1; white-space:nowrap; }
+  .nav-github:hover { opacity:1; border-color:rgba(128,128,128,0.55); }
+  .nav-github svg { display:block; flex-shrink:0; }
+  /* getdesign.md nav centering */
+  .nav { display:grid; grid-template-columns:1fr auto 1fr; align-items:center; }
+  .nav > .nav-left { justify-self:start; }
+  .nav > .nav-links { justify-self:center; }
+  .nav > :last-child { justify-self:end; }
+/* ============================== EXAMPLES (kit-mirror) ==============================
+ *
+ * Shared CSS for the 9 product-UI patterns (Pricing, Product Selector, Shopping Cart,
+ * App Shell, Data Table, Auth Forms, Modal, Empty State, Toast Stack) emitted at the
+ * end of every preview.html / preview-dark.html.
+ *
+ * This file is BRAND-AGNOSTIC. Every concrete value (color, radius, padding, font
+ * size/weight/spacing) flows through CSS variables. Each brand's preview.html must
+ * include a `:root { ... }` alias block that sets these variables from the brand's
+ * DESIGN.md ex-* entries (see preview-design.md "Emit kit-mirror Examples block").
+ *
+ * ROLE-VARIABLES (set in per-brand alias bridge — these are the points of customization):
+ *   --ex-radius-card    — outer surface of pricing tier / modal / empty / toast / table
+ *                          (resolves from ex-pricing-tier.rounded / ex-modal-card.rounded)
+ *   --ex-radius-frame   — outer wrapper for cart-drawer frame (ex-cart-drawer.rounded)
+ *   --ex-radius-tile    — image gallery tile / app-shell tile
+ *                          (resolves from max(ex-product-selector.rounded, ex-app-shell-row.rounded))
+ *   --ex-radius-input   — text input shape (resolves from components.text-input.rounded)
+ *   --ex-radius-button  — primary / outlined / tier-cta / size-btn / pager
+ *                          (resolves from components.button-primary.rounded)
+ *   --ex-radius-cell    — data-table th + td (resolves from ex-data-table-cell.rounded, often 0)
+ *   --ex-radius-status  — status pill / chip (resolves from components.status-pill.rounded
+ *                          or ex-pricing-tier-status, often = --ex-radius-button)
+ *   --ex-letter-display — display headlines (ex-h2, ex-tier-price)
+ *                          (resolves from typography.display-*.letterSpacing or 0)
+ *   --ex-letter-button  — button labels (ex-primary, ex-tier-cta, ex-outlined)
+ *                          (resolves from typography.button-*.letterSpacing or 0)
+ *   --ex-letter-eyebrow — mono eyebrows / field labels / status pills
+ *                          (resolves from typography.caption-eyebrow.letterSpacing or 0)
+ *
+ * If a brand's alias bridge doesn't set a particular --ex-* variable, the fallback
+ * value (after the comma in var(--ex-*, FALLBACK)) is used. Fallbacks chosen to be
+ * neutral / cohesive (20px outer, 6px input/button) so even brands that skip the
+ * alias bridge get a readable Examples block.
+ * ============================================================================ */
+
+.ex-section { padding: clamp(48px, 8vw, 96px) 0; border-top: 1px solid var(--color-border); background: var(--color-canvas); }
+.ex-section .container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+.ex-h2 { font-family: var(--font-display); font-size: clamp(32px, 5vw, 50px); font-weight: 700; line-height: 1.0; letter-spacing: var(--ex-letter-display, 0); color: var(--color-foreground); margin: 0 0 12px; }
+.ex-intro { font-size: 16px; color: var(--color-foreground-muted); max-width: 720px; margin: 0 0 48px; line-height: 1.43; }
+.ex-mono { font-family: var(--font-mono); font-size: 11px; letter-spacing: var(--ex-letter-eyebrow, 0); text-transform: uppercase; color: var(--color-foreground-muted); }
+/* Buttons use inline-flex centring + line-height:1 so brand-shape overrides that copy
+   `line-height: 1.75` (or any leading > 1) from `typography.button-md` cannot push
+   descenders past the fixed `height` boundary. height is the single source of truth
+   for vertical box; horizontal padding controls width-padding only. */
+.ex-primary { background: var(--color-primary); color: var(--color-primary-foreground); border: 1px solid var(--color-primary); border-radius: var(--ex-radius-button, 6px); padding: 0 22px; height: 48px; font-family: var(--font-sans); font-size: 16px; font-weight: 600; letter-spacing: var(--ex-letter-button, 0); line-height: 1; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
+.ex-outlined { background: var(--color-canvas); color: var(--color-foreground); border: 1px solid var(--color-border-soft); border-radius: var(--ex-radius-button, 6px); padding: 0 20px; height: 44px; font-family: var(--font-sans); font-size: 14px; font-weight: 500; line-height: 1; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
+.ex-textlink { background: transparent; color: var(--color-foreground); border: none; padding: 6px; font-family: var(--font-sans); font-size: 14px; font-weight: 500; cursor: pointer; text-decoration: underline; }
+.ex-input { background: var(--color-canvas); border: 1px solid var(--color-border-soft); border-radius: var(--ex-radius-input, 6px); padding: 0 16px; height: 48px; font-family: var(--font-sans); font-size: 16px; color: var(--color-foreground); width: 100%; box-sizing: border-box; }
+.ex-field { display: flex; flex-direction: column; gap: 8px; }
+.ex-field-label { font-size: 12px; font-weight: 400; letter-spacing: var(--ex-letter-eyebrow, 0); text-transform: uppercase; color: var(--color-foreground); font-family: var(--font-mono); }
+.ex-td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--color-border); font-size: 14px; color: var(--color-foreground); line-height: 1.5; vertical-align: middle; }
+.ex-th { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--color-border); font-size: 11px; font-weight: 500; letter-spacing: var(--ex-letter-eyebrow, 0); text-transform: uppercase; color: var(--color-foreground-muted); background: var(--color-canvas-soft); font-family: var(--font-mono); }
+.ex-pager { height: 32px; min-width: 32px; padding: 0 10px; font-family: var(--font-mono); font-size: 12px; background: var(--color-canvas); border: 1px solid var(--color-border-soft); color: var(--color-foreground); border-radius: var(--ex-radius-button, 6px); line-height: 1; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
+.ex-pager.active { background: var(--color-foreground); color: var(--color-foreground-on-primary); border-color: var(--color-foreground); }
+.ex-grid-pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.ex-grid-product { display: grid; grid-template-columns: 1fr; gap: 32px; }
+@media (min-width: 1024px) { .ex-grid-product { grid-template-columns: 1.1fr 1fr; } }
+.ex-grid-gallery { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 8px; }
+.ex-tile { background: var(--color-canvas-soft); border: 1px solid var(--color-border); border-radius: var(--ex-radius-tile, 12px); aspect-ratio: 1; padding: 12px; display: flex; align-items: flex-end; background-image: linear-gradient(135deg, var(--color-canvas-soft) 0%, var(--color-canvas) 50%, var(--color-canvas-soft) 100%); }
+.ex-tile.tall { grid-row: span 2; aspect-ratio: 1 / 2; }
+.ex-grid-sizes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.ex-size-btn { height: 44px; border-radius: var(--ex-radius-button, 6px); font-family: var(--font-sans); font-size: 13px; font-weight: 500; line-height: 1; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; border: 1px solid var(--color-border-soft); background: var(--color-canvas); color: var(--color-foreground); }
+.ex-size-btn.selected { border-color: var(--color-foreground); background: var(--color-foreground); color: var(--color-foreground-on-primary); }
+.ex-size-btn:disabled { color: var(--color-foreground-disabled); text-decoration: line-through; cursor: not-allowed; }
+.ex-grid-appshell { display: grid; grid-template-columns: 1fr; border: 1px solid var(--color-border); border-radius: var(--ex-radius-card, 20px); overflow: hidden; background: var(--color-canvas); }
+@media (min-width: 768px) { .ex-grid-appshell { grid-template-columns: 200px 1fr; } }
+.ex-grid-kpi { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+.ex-grid-auth { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+.ex-grid-toasts { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.ex-table-wrap { overflow-x: auto; border: 1px solid var(--color-border); border-radius: var(--ex-radius-card, 20px); }
+.ex-table-wrap table { width: 100%; min-width: 720px; border-collapse: collapse; font-size: 14px; }
+.ex-features { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--color-border); }
+.ex-features li { padding: 12px 0; font-size: 14px; border-bottom: 1px solid var(--color-border); display: flex; align-items: flex-start; gap: 10px; }
+.ex-features.dark { border-top-color: rgba(255,255,255,0.18); }
+.ex-features.dark li { border-bottom-color: rgba(255,255,255,0.10); }
+.ex-bullet { margin-top: 7px; width: 6px; height: 6px; background: var(--color-accent); border-radius: 9999px; flex-shrink: 0; }
+.ex-tier-card { border: 1px solid var(--color-border); border-radius: var(--ex-radius-card, 20px); padding: 28px; background: var(--color-canvas); color: var(--color-foreground); display: flex; flex-direction: column; gap: 20px; }
+.ex-tier-card.dark { background: var(--color-foreground); color: var(--color-foreground-on-primary); border-color: var(--color-foreground); }
+.ex-tier-price { font-family: var(--font-display); font-size: clamp(40px, 5vw, 50px); font-weight: 700; line-height: 1; letter-spacing: var(--ex-letter-display, 0); }
+.ex-tier-cta { margin-top: auto; height: 44px; border-radius: var(--ex-radius-button, 6px); font-family: var(--font-sans); font-size: 14px; font-weight: 600; letter-spacing: var(--ex-letter-button, 0); line-height: 1; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
+.ex-tier-cta.ink { border: 1px solid var(--color-foreground); background: var(--color-foreground); color: var(--color-foreground-on-primary); }
+.ex-tier-cta.invert { border: 1px solid var(--color-canvas); background: var(--color-canvas); color: var(--color-foreground); }
+.ex-status { display: inline-block; padding: 4px 10px; border-radius: var(--ex-radius-status, 6px); font-family: var(--font-mono); font-size: 11px; letter-spacing: var(--ex-letter-eyebrow, 0); text-transform: uppercase; }
+.ex-status.ok { color: var(--color-success); background: var(--color-accent-soft); }
+.ex-status.pending { color: var(--color-foreground-muted); background: var(--color-chip-bg); }
+.ex-status.fail { color: var(--color-danger); background: var(--color-accent-soft); }
+.ex-frame { position: relative; border-radius: var(--ex-radius-frame, 20px); border: 1px solid var(--color-border); overflow: hidden; background: var(--color-canvas-soft); }
+.ex-frame.short { height: 420px; }
+.ex-frame.tall { height: clamp(480px, 70vh, 560px); }
+.ex-scrim { position: absolute; inset: 0; background: rgba(26, 24, 22, 0.5); }
+.ex-cart-drawer { position: absolute; top: 0; right: 0; bottom: 0; width: min(420px, 100%); background: var(--color-surface-elevated); border-left: 1px solid var(--color-border); box-shadow: var(--shadow-lg); display: flex; flex-direction: column; }
+.ex-modal-card { width: 100%; max-width: 480px; background: var(--color-surface-elevated); border-radius: var(--ex-radius-card, 20px); box-shadow: var(--shadow-lg); border: 1px solid var(--color-border); }
+.ex-emptystate { border: 1px solid var(--color-border); border-radius: var(--ex-radius-card, 20px); padding: 72px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; background: var(--color-canvas); }
+.ex-toast { display: grid; grid-template-columns: 3px 1fr auto; background: var(--color-surface-elevated); border: 1px solid var(--color-border); border-radius: var(--ex-radius-card, 20px); box-shadow: var(--shadow-md); overflow: hidden; }
+  
+
+  :root{
+    --color-primary:#00f0a0; --color-primary-foreground:#000000;
+    --color-foreground:#ffffff; --color-foreground-muted:#8a938f; --color-foreground-tertiary:#8a938f;
+    --color-foreground-disabled:#2a2f2c; --color-foreground-on-primary:#0a0d0b;
+    --color-canvas:#0a0d0b; --color-canvas-soft:#122019; --color-surface-elevated:#122019;
+    --color-border:#2a2f2c; --color-border-soft:#2a2f2c;
+    --color-accent:#00f0a0; --color-accent-soft:rgba(0,240,160,0.18);
+    --color-success:#8a938f; --color-warning:#8a938f; --color-danger:#ff6b7d;
+    --color-silver:#8a938f; --color-avatar-fill:rgba(128,128,128,0.16); --color-chip-bg:rgba(128,128,128,0.12);
+    --font-display:'Titillium Web', sans-serif; --font-sans:'Inter','Inter',sans-serif; --font-mono:'Inter','Inter',sans-serif;
+    --shadow-md:0 8px 24px rgba(0,0,0,0.10); --shadow-lg:0 16px 40px rgba(0,0,0,0.16);
+    --ex-radius-card:24px; --ex-radius-frame:24px; --ex-radius-tile:24px; --ex-radius-input:0px;
+    --ex-radius-button:28px; --ex-radius-status:12px;
+    --ex-letter-display:-1px; --ex-letter-button:0; --ex-letter-eyebrow:0;
+  }
+  
+  /* Brand-shape overrides — align kit-mirror block with the brand DESIGN.md spec */
+  .ex-primary,.ex-outlined,.ex-tier-cta,.ex-pager,.ex-pager.active,.ex-size-btn,.ex-size-btn.selected{
+    border-radius:28px; font-family:'Inter','Inter','Helvetica Neue',Arial,sans-serif; font-weight:600; letter-spacing:0; line-height:1;
+    display:inline-flex; align-items:center; justify-content:center; }
+  .ex-primary,.ex-outlined,.ex-tier-cta{ height:44px; padding:0 27px; font-size:16px; }
+  .ex-input{ border-radius:0px; font-family:'Inter','Inter','Helvetica Neue',Arial,sans-serif; }
+  .ex-tier-card,.ex-tier-card.dark,.ex-modal-card,.ex-emptystate,.ex-toast,.ex-frame{ border-radius:24px; } .ex-tile{ border-radius:24px; }
+  .ex-tier-price,.ex-h2,.ex-h3{ font-family:'Titillium Web', sans-serif; font-weight:700; letter-spacing:-1px; }
+  .ex-mono,.ex-field-label,.ex-th{ font-family:'Inter','Inter','Helvetica Neue',Arial,sans-serif; font-weight:600; letter-spacing:0; text-transform:uppercase; }
+  
+  /* DARK polarity-flip — featured tier flips to white fill + dark ink */
+  /* DARK polarity-flip - Pro tier card flips to white; force inline white text back to brand-ink */
+  .ex-tier-card.dark, .ex-tier-card.dark * { color:#0a0d0b !important; }
+  .ex-tier-card.dark .ex-mono { color:rgba(0,0,0,0.55) !important; }
+  .ex-tier-card.dark .ex-features li { border-bottom-color:rgba(0,0,0,0.12) !important; }
+  .ex-tier-card.dark .ex-tier-cta.invert { background:#0a0d0b !important; color:#ffffff !important; border-color:#0a0d0b !important; }
+
+/* Brand-shape overrides — align kit-mirror block with Jobright DESIGN.md spec */
+/* Jobright's PRIMARY CTA is a black pill (ink), NOT the brand 'primary' mint — the scaffold's
+   .btn-primary defaults to the accent colour, so re-point the hero primary to ink + contrasting label.
+   (green accent pill = button-green, handled inline in the Button Variants demos.) */
+.btn-primary { background:#ffffff; border-color:#ffffff; color:#0a0d0b; }
+.ex-primary, .ex-tier-cta { border-radius:28px; line-height:1; }
+.ex-outlined, .ex-pager, .ex-size-btn, .ex-status { border-radius:12px; }
+.ex-input { border-radius:0px; }
+.ex-tier-card, .ex-modal-card, .ex-frame, .ex-emptystate, .ex-toast, .ex-tile, .ex-grid-appshell, .ex-table-wrap { border-radius:24px; }
+
+/* DARK polarity-flip overrides — Pro tier flips to light fill; force inline white text to brand-dark */
+.ex-tier-card.dark, .ex-tier-card.dark * { color:#0a0d0b !important; }
+.ex-tier-card.dark .ex-mono { color:rgba(10,13,11,0.55) !important; }
+.ex-tier-card.dark .ex-features li { border-bottom-color:rgba(10,13,11,0.12) !important; }
+.ex-tier-card.dark .ex-tier-cta.invert { background:#0a0d0b !important; color:#ffffff !important; border-color:#0a0d0b !important; }
+</style></head><body>
+
+<div class="hero"><div class="hero-content">
+<h1>薄荷色底与黑色胶囊</h1>
+<p>春日薄荷色背景配黑色胶囊按钮，界面轻快而直接。</p>
+<div class="hero-actions"><button class="btn-primary">尝试免费</button><button class="btn-secondary">登录</button></div>
+</div></div>
+<section><span class="section-eyebrow">01——基金会</span><h2 class="section-heading">配色</h2><div class="palette-grid"><div class="swatch"><div class="swatch-fill" style="background:#00f0a0;"></div><div class="swatch-meta"><p class="swatch-name">主要</p><p class="swatch-hex">#00f0a0</p><p class="swatch-role">春明强调色——在黑暗中保存</p></div></div><div class="swatch"><div class="swatch-fill" style="background:#000000;"></div><div class="swatch-meta"><p class="swatch-name">on-primary</p><p class="swatch-hex">#000000</p><p class="swatch-role">薄荷绿色按钮上的黑色标签</p></div></div><div class="swatch"><div class="swatch-fill" style="background:#ffffff;"></div><div class="swatch-meta"><p class="swatch-name">文字色</p><p class="swatch-hex">#ffffff</p><p class="swatch-role">黑暗时的标题和身体( B)</p></div></div><div class="swatch"><div class="swatch-fill" style="background:#0a0d0b;"></div><div class="swatch-meta"><p class="swatch-name">页面底色</p><p class="swatch-hex">#0a0d0b</p><p class="swatch-role">中立的近黑色 页面背景</p></div></div><div class="swatch"><div class="swatch-fill" style="background:#122019;"></div><div class="swatch-meta"><p class="swatch-name">canvas-mint</p><p class="swatch-hex">#122019</p><p class="swatch-role">深薄薄荷丁酸加高的带</p></div></div><div class="swatch"><div class="swatch-fill" style="background:#8a938f;"></div><div class="swatch-meta"><p class="swatch-name">哑巴</p><p class="swatch-hex">#8a938f</p><p class="swatch-role">副文本</p></div></div><div class="swatch"><div class="swatch-fill" style="background:#2a2f2c;"></div><div class="swatch-meta"><p class="swatch-name">细边框</p><p class="swatch-hex">#2a2f2c</p><p class="swatch-role">暗色的1px 边框（原文参数：1px）</p></div></div><div class="swatch"><div class="swatch-fill" style="background:#16191a;"></div><div class="swatch-meta"><p class="swatch-name">surface-soft</p><p class="swatch-hex">#16191a</p><p class="swatch-role">暗的公用设备表面</p></div></div><div class="swatch"><div class="swatch-fill" style="background:#ffffff;"></div><div class="swatch-meta"><p class="swatch-name">on-dark</p><p class="swatch-hex">#ffffff</p><p class="swatch-role">带宽文字</p></div></div></div></section>
+<section><span class="section-eyebrow">02——基金会</span><h2 class="section-heading">字体排版</h2><p style="color:#8a938f;margin:-16px 0 28px;max-width:720px;">Titillium Web carries the bold, slightly condensed display headings; Inter handles all body, UI, and button text. Heavy condensed headlines over light, airy Inter body is the core typographic tension.</p><div class="type-row"><div class="type-meta">显示<br/>80px / 700 / 1.05 / -1px<br/>Titillium Web</div><div style="font-family:'Titillium Web',sans-serif;font-size:80px;font-weight:700;line-height:1.05;letter-spacing:-1px;">和AI一起做吧,我帮你</div></div><div class="type-row"><div class="type-meta">heading-1<br/>60px / 700 / 1.1 / -0.5px<br/>Titillium Web</div><div style="font-family:'Titillium Web',sans-serif;font-size:60px;font-weight:700;line-height:1.1;letter-spacing:-0.5px;">1 AI 求职平台</div></div><div class="type-row"><div class="type-meta">heading-2<br/>48px / 700 / 1.15 / 0<br/>Titillium Web</div><div style="font-family:'Titillium Web',sans-serif;font-size:48px;font-weight:700;line-height:1.15;letter-spacing:0;">个人化 AI 任务匹配</div></div><div class="type-row"><div class="type-meta">heading-3<br/>38px / 700 / 1.2 / 0<br/>Titillium Web</div><div style="font-family:'Titillium Web',sans-serif;font-size:38px;font-weight:700;line-height:1.2;letter-spacing:0;">2,000,000+</div></div><div class="type-row"><div class="type-meta">heading-4<br/>32px / 600 / 1.25 / 0<br/>Titillium Web</div><div style="font-family:'Titillium Web',sans-serif;font-size:32px;font-weight:600;line-height:1.25;letter-spacing:0;">获取您的内线</div></div><div class="type-row"><div class="type-meta">body-lg<br/>18px / 300 / 1.6 / 0<br/>Inter</div><div style="font-family:'Inter',sans-serif;font-size:18px;font-weight:300;line-height:1.6;letter-spacing:0;">参见你真正有资格胜任的工作,与你真正的技能相匹配,并有快速的上市和提前的警示.</div></div><div class="type-row"><div class="type-meta">body-md<br/>16px / 500 / 1.6 / 0<br/>Inter</div><div style="font-family:'Inter',sans-serif;font-size:16px;font-weight:500;line-height:1.6;letter-spacing:0;">每天在苯丙胺类兴奋剂主要平台上应用数百个工作,并使用一击自动填充。</div></div><div class="type-row"><div class="type-meta">body-sm<br/>14px / 500 / 1.5 / 0<br/>Inter</div><div style="font-family:'Inter',sans-serif;font-size:14px;font-weight:500;line-height:1.5;letter-spacing:0;">机器学习工程师 · Azure Databricks工程师 · 产品经理</div></div><div class="type-row"><div class="type-meta">按钮<br/>16px / 600 / 1 / 0<br/>Inter</div><div style="font-family:'Inter',sans-serif;font-size:16px;font-weight:600;line-height:1;letter-spacing:0;">尝试自由</div></div><div class="type-row"><div class="type-meta">nav-link<br/>14px / 600 / 1.4 / 0<br/>Inter</div><div style="font-family:'Inter',sans-serif;font-size:14px;font-weight:600;line-height:1.4;letter-spacing:0;">雇主</div></div><div class="type-row"><div class="type-meta">标题<br/>13px / 500 / 1.4 / 0<br/>Inter</div><div style="font-family:'Inter',sans-serif;font-size:13px;font-weight:500;line-height:1.4;letter-spacing:0;">Trusted by 2,000,000 users</div></div></section>
+<section><span class="section-eyebrow">03 - 组件</span><h2 class="section-heading">按钮样式</h2><div class="button-grid">
+<div class="demo-card"><span class="label">button-primary 黑色 胶囊形 黑 双倍</span><button class="btn-primary" style="height:44px;background:#ffffff;border-color:#ffffff;color:#0a0d0b;border-radius:28px;">尝试免费</button><p style="font-size:12px;color:#8a938f;margin:12px 0 0;">黑色胶囊形,白色标签,28px半径——日常主机行动按钮.（原文参数：28px）</p></div>
+<div class="demo-card"><span class="label">button-green 薄荷 胶囊形</span><button class="btn-primary" style="height:44px;background:#00f0a0;color:#000;border:1px solid #000;border-radius:36px;">获得匹配</button><p style="font-size:12px;color:#8a938f;margin:12px 0 0;">签名薄荷胶囊形,黑色标签+边界,36px半径.（原文参数：36px）</p></div>
+<div class="demo-card"><span class="label">button-dark-square</span><button class="btn-primary" style="height:44px;background:#ffffff;border-color:#ffffff;color:#0a0d0b;border-radius:12px;">现在就加入</button><p style="font-size:12px;color:#8a938f;margin:12px 0 0;">方块12px 黑色工具按钮.（原文参数：12px）</p></div>
+<div class="demo-card"><span class="label">stat-item</span><div style="font-family:'Titillium Web',sans-serif;font-weight:700;font-size:38px;color:#ffffff;line-height:1;">2,000,000+</div><p style="font-size:12px;color:#8a938f;margin:8px 0 0;">粗体的提提利姆统计号。</p></div>
+<div class="demo-card"><span class="label">链接 ・ 薄荷</span><div style="display:flex;gap:16px;font-size:15px;font-weight:600;"><a href="#" style="color:#00f0a0;">AI 代理</a><a href="#" style="color:#ffffff;">雇主</a></div></div>
+</div></section>
+<section><span class="section-eyebrow">04 - 组件</span><h2 class="section-heading">卡片与表面</h2><div class="card-grid">
+<div class="feature-card" style="border-radius:40px;"><h4>feature-card</h4><p>白色product-mockup 卡片带有40px不对称角,浮在薄荷带上软阴影上.（原文参数：40px）</p></div>
+<div class="feature-card" style="border-radius:24px;"><h4>testimonial-card</h4><p>白方引卡片,1px 细边框,24px角——avatar,名称和用户爱的引文.（原文参数：24px）</p></div>
+<div class="feature-card" style="background:#000000;color:#fff;border:none;"><h4 style="color:#fff;">job-ticker</h4><p style="color:rgba(255,255,255,0.72);">满身是黑色的乐队 上面有连续滚动的活职称</p></div>
+</div></section>
+<section><span class="section-eyebrow">05 - 组件</span><h2 class="section-heading">表单控件</h2><div class="form-grid">
+<div class="demo-card"><span class="label">text-input 平方</span><input class="ex-input-demo" placeholder="搜索工作、职称、公司"/><p style="font-size:12px;color:#8a938f;margin:12px 0 0;">白田,1px 细边框,方圆角.</p></div>
+<div class="demo-card"><span class="label">文本区域</span><textarea class="ex-input-demo" placeholder="告诉我们你的理想角色" rows="3"></textarea></div>
+</div></section>
+<section><span class="section-eyebrow">06——基金会</span><h2 class="section-heading">间距层级</h2><p style="color:#8a938f;margin:-16px 0 28px;">8px 基础单位 中超联赛冠军. 功能卡片坐lg(24px);全宽带在节(96px)呼吸;主胶囊形使用宽sm/节的垫.</p><div class="spacing-row"><div style="text-align:center;"><div class="spacing-box" style="width:4px;"></div><div class="spacing-label">双倍 4px</div></div><div style="text-align:center;"><div class="spacing-box" style="width:8px;"></div><div class="spacing-label">xs 8px 数据</div></div><div style="text-align:center;"><div class="spacing-box" style="width:12px;"></div><div class="spacing-label">12px 时间轴</div></div><div style="text-align:center;"><div class="spacing-box" style="width:16px;"></div><div class="spacing-label">微额 16px</div></div><div style="text-align:center;"><div class="spacing-box" style="width:24px;"></div><div class="spacing-label">lg 24px 数据</div></div><div style="text-align:center;"><div class="spacing-box" style="width:32px;"></div><div class="spacing-label">32px Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q</div></div><div style="text-align:center;"><div class="spacing-box" style="width:48px;"></div><div class="spacing-label">二十一年48px（原文参数：48px）</div></div><div style="text-align:center;"><div class="spacing-box" style="width:96px;"></div><div class="spacing-label">96px 节</div></div></div></section>
+<section><span class="section-eyebrow">07——基金会</span><h2 class="section-heading">圆角</h2><p style="color:#8a938f;margin:-16px 0 28px;">宽度:平方( 3)0px(d) 投入, 12–24px 牌,然后按胶囊形键 28px (黑色)和(黑色) 36px 薄荷,加一分特别的 40px product-card 圆形( 圆形)9999px) 计分环.</p><div class="radius-row"><div style="text-align:center;"><div class="radius-box" style="border-radius:0px;">0px</div><div class="radius-label">none</div></div><div style="text-align:center;"><div class="radius-box" style="border-radius:12px;">12px</div><div class="radius-label">静态</div></div><div style="text-align:center;"><div class="radius-box" style="border-radius:16px;">16px</div><div class="radius-label">微额</div></div><div style="text-align:center;"><div class="radius-box" style="border-radius:24px;">24px</div><div class="radius-label">升( 升)</div></div><div style="text-align:center;"><div class="radius-box" style="border-radius:28px;">28px</div><div class="radius-label">xl</div></div><div style="text-align:center;"><div class="radius-box" style="border-radius:18px;">18px</div><div class="radius-label">pill-nav</div></div><div style="text-align:center;"><div class="radius-box" style="border-radius:36px;">36px</div><div class="radius-label">胶囊形</div></div><div style="text-align:center;"><div class="radius-box" style="border-radius:40px;">40px</div><div class="radius-label">卡片</div></div><div style="text-align:center;"><div class="radius-box" style="border-radius:9999px;">9999px</div><div class="radius-label">满</div></div></div></section>
+<section><span class="section-eyebrow">08——基金会</span><h2 class="section-heading">层次与阴影</h2><div class="elevation-grid">
+<div class="elev-card elev-1">职等 0 — 1px 细边线或无. 乐队,列表行,输入.</div>
+<div class="elev-card elev-2">Level 2 — whisper-soft float. Product-mockup cards over the mint bands.</div>
+</div></section>
+<section><span class="section-eyebrow">09 反应性</span><h2 class="section-heading">响应式布局</h2>
+<table class="responsive-table"><thead><tr><th>名称</th><th>宽度</th><th>主要变化</th></tr></thead><tbody>
+<tr><td>手机端</td><td>&lt; 576px Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q</td><td>单列; 导航 → 汉堡; 特性行堆栈; 胶囊控件 全部宽度</td></tr>
+<tr><td>平板</td><td>576–991px</td><td>两栏特征行崩溃; 证书滴到 1–2 上边</td></tr>
+<tr><td>笔记本</td><td>992–1199px</td><td>多柱网格完整;沟槽收紧</td></tr>
+<tr><td>桌面端</td><td>≥ 1200px</td><td>Full layout; centered ~1200px column; full-bleed mint &amp; black bands</td></tr></tbody></table>
+<div class="device-ladder">
+<div class="device-box" style="width:60px;height:110px;">375</div>
+<div class="device-box" style="width:120px;height:110px;">768</div>
+<div class="device-box" style="width:170px;height:110px;">1024</div>
+<div class="device-box" style="width:220px;height:110px;">1280</div>
+<div class="device-box" style="width:280px;height:110px;">1440</div>
+</div>
+<p style="color:#8a938f;margin-top:24px;font-size:14px;"><strong style="color:#ffffff;">触控区域: 高尔夫球队:</strong> button-primary 清除 44×44 瓦格-阿阿阿(WCAG-AA) 0/20px 贴纸 <strong style="color:#ffffff;">折叠 :</strong> nav → hamburger below the tablet breakpoint (yellow CTA stays); multi-column pricing/feature grids reflow to a single stacked column; section padding compresses from section (128px) toward giant (64px); display type scales down while keeping weight 500.</p>
+</section>
+</body></html>

@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>亮黄协作画布</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #ffffff;
+      --on-primary: #1c1c1e;
+      --brand-yellow: #ffd02f;
+      --brand-yellow-deep: #fcb900;
+      --yellow-light: #2a2410;
+      --yellow-dark: #fdc870;
+      --brand-blue: #5b76fe;
+      --blue-pressed: #4262ff;
+      --brand-coral: #ff9999;
+      --coral-light: #ffc6c6;
+      --coral-dark: #ffaba5;
+      --brand-rose: #ffd8f4;
+      --rose-light: #fde0f0;
+      --brand-teal: #0fbcb0;
+      --teal-light: #c3faf5;
+      --moss-dark: #4dccc6;
+      --brand-orange-light: #ffe6cd;
+      --success-accent: #4dd699;
+      --canvas: #0a0a0a;
+      --surface: #161616;
+      --surface-soft: #1c1c1e;
+      --surface-yellow: #2a2410;
+      --surface-pricing-featured: #1a1a2e;
+      --hairline: rgba(255,255,255,0.16);
+      --hairline-soft: rgba(255,255,255,0.08);
+      --hairline-strong: rgba(255,255,255,0.24);
+      --ink-deep: #ffffff;
+      --ink: #ffffff;
+      --charcoal: #e6e6e8;
+      --slate: #b1b9c4;
+      --steel: #8e8e93;
+      --stone: #6e7681;
+      --muted: #555555;
+      --on-dark: #ffffff;
+      --on-dark-muted: #a5a8b5;
+      --footer-bg: #000000;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--ink);
+      background: var(--canvas);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    .min-width-0, .min-width-0 * { min-width: 0; }
+    .promo-banner {
+      background: var(--primary); color: var(--on-primary);
+      text-align: center; padding: 12px 16px;
+      font-size: 14px; font-weight: 500;
+      display: flex; justify-content: center; align-items: center; gap: 12px;
+    }
+    .promo-banner .promo-pill {
+      background: var(--brand-yellow); color: var(--primary);
+      padding: 4px 10px; border-radius: 9999px;
+      font-size: 12px; font-weight: 600;
+    }
+    .nav {
+      display: grid; grid-template-columns: 1fr auto 1fr;
+      align-items: center; padding: 0 32px; height: 64px;
+      background: var(--canvas); border-bottom: 1px solid var(--hairline-soft);
+      position: sticky; top: 0; z-index: 100;
+    }
+    .nav-left { display: flex; align-items: center; gap: 20px; justify-self: start; }
+    .nav-brand-link, .nav-brand-link:link, .nav-brand-link:visited, .nav-brand-link:hover, .nav-brand-link:active {
+      text-decoration: none; color: inherit; font-weight: 600; font-size: 15px;
+    }
+    .nav-github, .nav-github:link, .nav-github:visited, .nav-github:hover, .nav-github:active {
+      display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600;
+      color: inherit; text-decoration: none; padding: 5px 10px;
+      border: 1px solid rgba(128,128,128,0.3); border-radius: 6px; opacity: 0.75;
+      transition: opacity 200ms ease, border-color 200ms ease;
+      font-family: inherit; line-height: 1; white-space: nowrap; background: transparent;
+    }
+    .nav-github:hover { opacity: 1; border-color: rgba(128,128,128,0.55); }
+    .nav-github svg { display: block; flex-shrink: 0; }
+    .nav-links { justify-self: center; list-style: none; display: flex; gap: 24px; align-items: center; }
+    .nav-links a { color: var(--charcoal); text-decoration: none; font-size: 14px; font-weight: 500; }
+    .nav-cta {
+      justify-self: end; padding: 12px 24px;
+      background: var(--primary); color: var(--on-primary);
+      border: none; border-radius: 9999px; font-weight: 500;
+      font-size: 14px; cursor: pointer; font-family: inherit;
+    }
+    .hero {
+      padding: 120px 32px; background: var(--canvas);
+      max-width: 1280px; margin: 0 auto; text-align: left;
+    }
+    .hero h1 {
+      font-size: 80px; font-weight: 500; line-height: 1.05;
+      color: var(--ink); margin-bottom: 24px;
+      letter-spacing: -2px; max-width: 1100px;
+    }
+    .hero p {
+      font-size: 18px; color: var(--steel); max-width: 720px;
+      margin: 0 0 40px; line-height: 1.5;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-start; }
+    button { font-family: inherit; cursor: pointer; }
+    .btn-primary {
+      padding: 12px 24px; background: var(--primary); color: var(--on-primary);
+      border: none; border-radius: 9999px; font-weight: 500; font-size: 14px;
+    }
+    .btn-yellow {
+      padding: 12px 24px; background: var(--brand-yellow); color: var(--primary);
+      border: none; border-radius: 9999px; font-weight: 500; font-size: 14px;
+    }
+    .btn-blue {
+      padding: 12px 24px; background: var(--brand-blue); color: var(--on-primary);
+      border: none; border-radius: 9999px; font-weight: 500; font-size: 14px;
+    }
+    .btn-secondary {
+      padding: 12px 24px; background: transparent; color: var(--ink);
+      border: 1px solid var(--hairline-strong); border-radius: 9999px;
+      font-weight: 500; font-size: 14px;
+    }
+    .btn-on-dark {
+      padding: 12px 24px; background: var(--on-dark); color: var(--primary);
+      border: none; border-radius: 9999px; font-weight: 500; font-size: 14px;
+    }
+    .btn-ghost {
+      padding: 8px 12px; background: transparent; color: var(--ink);
+      border: none; border-radius: 8px;
+      font-weight: 500; font-size: 14px;
+    }
+    .btn-link {
+      padding: 0; background: transparent; color: var(--brand-blue);
+      border: none; font-weight: 500; font-size: 14px; text-decoration: none;
+    }
+    .btn-icon-circular {
+      width: 36px; height: 36px; background: var(--canvas); color: var(--ink);
+      border: 1px solid var(--hairline); border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+    .btn-disabled {
+      padding: 12px 24px; background: var(--hairline); color: var(--muted);
+      border: none; border-radius: 9999px; font-weight: 500; font-size: 14px;
+      cursor: not-allowed;
+    }
+    section {
+      padding: 96px 32px; max-width: 1280px; margin: 0 auto;
+    }
+    .section-heading {
+      font-size: 48px; font-weight: 500; margin-bottom: 12px; color: var(--ink);
+      line-height: 1.15; letter-spacing: -1px;
+    }
+    .section-sub { font-size: 16px; color: var(--steel); margin-bottom: 40px; max-width: 720px; line-height: 1.5; }
+    .palette-group { margin-bottom: 48px; }
+    .palette-group h3 { font-size: 18px; font-weight: 500; margin-bottom: 20px; color: var(--ink); }
+    .palette-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+    .swatch { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+    .swatch-color { width: 100%; height: 96px; border-radius: 12px; border: 1px solid var(--hairline-soft); }
+    .swatch-name { font-weight: 500; font-size: 14px; color: var(--ink); }
+    .swatch-hex { font-family: monospace; font-size: 12px; color: var(--steel); }
+    .swatch-role { font-size: 12px; color: var(--steel); line-height: 1.4; }
+    .type-row {
+      display: grid; grid-template-columns: 280px 1fr;
+      gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--hairline-soft);
+      align-items: baseline;
+    }
+    .type-meta { display: flex; flex-direction: column; gap: 4px; }
+    .type-meta .role { font-size: 14px; font-weight: 500; color: var(--ink); }
+    .type-meta .specs { font-family: monospace; font-size: 12px; color: var(--steel); }
+    .type-sample { color: var(--ink); }
+    .button-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .button-cell {
+      display: flex; flex-direction: column; gap: 12px;
+      padding: 24px; background: var(--canvas);
+      border: 1px solid var(--hairline-soft); border-radius: 16px;
+      align-items: flex-start; min-width: 0;
+    }
+    .button-cell-spec { font-size: 12px; color: var(--steel); font-family: monospace; }
+    .button-cell-name { font-size: 14px; font-weight: 500; color: var(--ink); }
+    .badge-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .badge {
+      display: inline-block; padding: 4px 10px;
+      border-radius: 9999px; font-size: 13px; font-weight: 600; line-height: 1.4;
+    }
+    .badge-promo { background: var(--brand-yellow); color: var(--primary); }
+    .badge-yellow { background: var(--surface-yellow); color: var(--yellow-dark); }
+    .badge-purple { background: var(--surface-pricing-featured); color: var(--brand-blue); }
+    .badge-coral { background: var(--coral-light); color: var(--coral-dark); }
+    .badge-success { background: var(--success-accent); color: var(--on-primary); }
+    .badge-discount { background: var(--brand-yellow); color: var(--primary); border-radius: 6px; padding: 2px 6px; }
+    /* Pastel feature cards */
+    .pastel-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .pastel-card {
+      border-radius: 28px; padding: 32px; min-height: 260px;
+      display: flex; flex-direction: column; justify-content: space-between;
+      color: var(--primary);
+    }
+    .pastel-card h4 { font-size: 24px; font-weight: 500; line-height: 1.25; letter-spacing: -0.3px; }
+    .pastel-card p { font-size: 14px; opacity: 0.8; margin-top: 8px; }
+    .pcc-yellow { background: var(--brand-yellow); }
+    .pcc-coral { background: var(--coral-light); }
+    .pcc-teal { background: var(--teal-light); }
+    .pcc-rose { background: var(--rose-light); }
+    .pcc-orange { background: var(--brand-orange-light); }
+    /* Customer story cards */
+    .story-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .card-customer-story {
+      background: var(--canvas); border-radius: 28px; overflow: hidden;
+      border: 1px solid var(--hairline-soft);
+      display: flex; flex-direction: column;
+    }
+    .card-customer-story .photo {
+      height: 160px; background: linear-gradient(135deg, #cc4422 0%, #ff8855 100%);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--on-dark); font-weight: 700; font-size: 32px; letter-spacing: 4px;
+    }
+    .card-customer-story .photo.red-hat { background: linear-gradient(135deg, #1c1c1e 0%, #3a3a3c 100%); }
+    .card-customer-story .photo.webmd { background: linear-gradient(135deg, #4262ff 0%, #5b76fe 100%); }
+    .card-customer-story .body { padding: 24px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+    .card-customer-story .quote { font-size: 14px; color: var(--charcoal); line-height: 1.5; flex: 1; }
+    .card-customer-story .author { display: flex; gap: 12px; align-items: center; }
+    .avatar { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, #6b7180, #4a5060); flex-shrink: 0; }
+    .author-name { font-size: 13px; font-weight: 500; color: var(--ink); }
+    .author-title { font-size: 12px; color: var(--steel); }
+    /* Stat row */
+    .stat-row {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 32px; padding: 48px 32px; background: var(--surface); border-radius: 16px;
+    }
+    .stat-cell { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+    .stat-num { font-size: 64px; font-weight: 500; color: var(--ink); letter-spacing: -1.5px; line-height: 1.1; }
+    .stat-label { font-size: 14px; color: var(--steel); }
+    /* Standard cards */
+    .card-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .card-base {
+      background: var(--canvas); border-radius: 16px; padding: 24px;
+      border: 1px solid var(--hairline-soft);
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .industry-tile {
+      background: var(--canvas); border-radius: 16px; padding: 24px;
+      border: 1px solid var(--hairline-soft);
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .industry-tile .icon-zone {
+      width: 40px; height: 40px;
+      background: var(--surface); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+    }
+    .industry-tile h5 { font-size: 18px; font-weight: 500; color: var(--ink); }
+    .industry-tile p { font-size: 14px; color: var(--steel); line-height: 1.5; }
+    /* Whiteboard mockup */
+    .whiteboard-mockup {
+      background: var(--canvas); border-radius: 16px; padding: 24px;
+      border: 1px solid var(--hairline-soft);
+      box-shadow: rgba(5, 0, 56, 0.08) 0px 12px 32px -4px;
+      min-height: 320px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+    }
+    .sticky-note {
+      padding: 16px; border-radius: 8px; font-size: 12px;
+      color: var(--primary); min-height: 80px;
+      box-shadow: rgba(0, 0, 0, 0.06) 1px 1px 4px;
+    }
+    .sn-yellow { background: var(--brand-yellow); }
+    .sn-coral { background: var(--coral-light); }
+    .sn-teal { background: var(--teal-light); }
+    .sn-rose { background: var(--rose-light); }
+    .sn-orange { background: var(--brand-orange-light); }
+    /* Pricing */
+    .pricing-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .pricing-card {
+      background: var(--canvas); border-radius: 16px; padding: 32px;
+      border: 1px solid var(--hairline);
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .pricing-card.featured {
+      background: var(--surface-pricing-featured);
+      border: 2px solid var(--brand-blue);
+      padding: 31px;
+    }
+    .pricing-card.enterprise {
+      background: var(--primary); color: var(--on-primary);
+    }
+    .pricing-card.enterprise .tier-name,
+    .pricing-card.enterprise .tier-price { color: var(--on-primary); }
+    .pricing-card.enterprise .tier-feature-list li { color: var(--on-dark); }
+    .pricing-card.enterprise .tier-feature-list li::before { color: var(--brand-yellow); }
+    .pricing-card .tier-name { font-size: 16px; font-weight: 500; color: var(--ink); }
+    .pricing-card .tier-price { font-size: 48px; font-weight: 500; color: var(--ink); letter-spacing: -1px; line-height: 1.1; }
+    .pricing-card .tier-price small { font-size: 14px; font-weight: 400; color: var(--steel); margin-left: 4px; }
+    .pricing-card .tier-feature-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .pricing-card .tier-feature-list li { font-size: 13px; color: var(--charcoal); display: flex; gap: 8px; align-items: flex-start; }
+    .pricing-card .tier-feature-list li::before { content: '✓'; color: var(--success-accent); font-weight: 700; flex-shrink: 0; }
+    /* CTA banner */
+    .cta-banner-dark {
+      background: var(--primary); color: var(--on-dark);
+      border-radius: 32px; padding: 64px 48px;
+      display: flex; flex-direction: column; gap: 24px;
+      align-items: center; text-align: center;
+    }
+    .cta-banner-dark h4 { font-size: 36px; font-weight: 500; line-height: 1.2; letter-spacing: -0.5px; max-width: 720px; }
+    .cta-banner-dark p { font-size: 16px; opacity: 0.85; max-width: 540px; }
+    .cta-banner-dark .actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    .cta-banner-dark .actions .btn-secondary { color: var(--on-dark); border-color: rgba(255,255,255,0.3); }
+    /* Forms */
+    .form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .form-field { display: flex; flex-direction: column; gap: 6px; }
+    .form-label { font-size: 14px; font-weight: 500; color: var(--ink); }
+    .text-input {
+      padding: 12px 16px; background: var(--canvas); color: var(--ink);
+      border: 1px solid var(--hairline-strong); border-radius: 8px;
+      font-size: 16px; height: 44px; font-family: inherit;
+    }
+    .text-input:focus { outline: none; border: 2px solid var(--brand-blue); padding: 11px 15px; }
+    .search-pill {
+      background: var(--surface); color: var(--steel);
+      padding: 8px 16px; border-radius: 8px; height: 40px;
+      border: 1px solid var(--hairline); font-size: 14px; font-family: inherit;
+      display: inline-flex; align-items: center; gap: 8px; min-width: 280px;
+    }
+    .filter-dropdown {
+      padding: 8px 16px; background: var(--canvas); color: var(--ink);
+      border: 1px solid var(--hairline-strong); border-radius: 9999px;
+      font-size: 14px; font-weight: 500; cursor: pointer; font-family: inherit;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    /* Tabs */
+    .pill-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+    .pill-tab {
+      padding: 8px 16px; background: var(--canvas); color: var(--steel);
+      border: 1px solid var(--hairline); border-radius: 9999px;
+      font-size: 14px; font-weight: 500; cursor: pointer; font-family: inherit;
+    }
+    .pill-tab.active { background: var(--primary); color: var(--on-primary); border-color: var(--primary); }
+    .toggle-pill {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 4px; background: var(--surface); border-radius: 9999px;
+    }
+    .toggle-pill button {
+      padding: 6px 16px; background: transparent; border: none;
+      border-radius: 9999px; font-size: 14px; font-weight: 500; cursor: pointer; font-family: inherit;
+      color: var(--steel);
+    }
+    .toggle-pill button.active { background: var(--canvas); color: var(--ink); box-shadow: rgba(0,0,0,0.04) 0 1px 2px; }
+    /* Comparison table */
+    .comparison-table {
+      width: 100%; border-collapse: collapse;
+      background: var(--canvas); border: 1px solid var(--hairline);
+      border-radius: 8px; overflow: hidden;
+    }
+    .comparison-table th {
+      background: var(--canvas); color: var(--ink);
+      padding: 16px 20px; text-align: left; font-size: 14px; font-weight: 500;
+      border-bottom: 1px solid var(--hairline);
+    }
+    .comparison-table td {
+      padding: 16px 20px; font-size: 14px; color: var(--ink);
+      border-bottom: 1px solid var(--hairline-soft);
+    }
+    .comparison-table tr:last-child td { border-bottom: none; }
+    .comparison-table .section-divider td {
+      font-size: 11px; font-weight: 600; color: var(--steel);
+      letter-spacing: 0.5px; text-transform: uppercase;
+      background: var(--surface); padding: 12px 20px;
+    }
+    .check-mark { color: var(--success-accent); font-weight: 700; }
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--hairline); border-radius: 16px; overflow: hidden; }
+    .faq-item {
+      background: var(--canvas); padding: 24px;
+      border-bottom: 1px solid var(--hairline);
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .faq-q-text { font-size: 18px; font-weight: 500; color: var(--ink); line-height: 1.4; }
+    .chev { width: 16px; height: 16px; color: var(--steel); flex-shrink: 0; }
+    .faq-a { font-size: 16px; color: var(--steel); margin-top: 12px; line-height: 1.5; }
+    .faq-item.collapsed .faq-a { display: none; }
+    /* Logo wall */
+    .logo-wall {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 16px; padding: 32px; background: var(--canvas); border-radius: 12px;
+      border: 1px solid var(--hairline-soft);
+    }
+    .logo-item {
+      padding: 20px; text-align: center; color: var(--steel);
+      font-size: 16px; font-weight: 500;
+    }
+    /* Spacing & radius */
+    .spacing-grid { display: flex; gap: 24px; align-items: flex-end; flex-wrap: wrap; }
+    .spacing-box { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .spacing-visual { background: var(--ink); border-radius: 4px; }
+    .spacing-label { font-size: 12px; font-weight: 500; color: var(--ink); text-align: center; }
+    .spacing-label small { display: block; font-weight: 400; color: var(--steel); font-size: 10px; margin-top: 2px; }
+    .radius-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 24px; }
+    .radius-demo {
+      aspect-ratio: 1; background: var(--surface);
+      border: 2px solid var(--ink);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
+      padding: 12px; font-size: 12px; font-weight: 500; color: var(--ink);
+    }
+    .radius-demo small { font-size: 10px; font-weight: 400; color: var(--steel); margin-top: 2px; }
+    .elevation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+    .elev-cell {
+      background: var(--canvas); border-radius: 16px; padding: 32px;
+      display: flex; flex-direction: column; gap: 8px; min-height: 140px;
+    }
+    .elev-0 { border: 1px solid var(--hairline-soft); }
+    .elev-1 { box-shadow: rgba(5,0,56,0.04) 0px 1px 2px 0px; border: 1px solid var(--hairline-soft); }
+    .elev-2 { box-shadow: rgba(5,0,56,0.06) 0px 4px 12px 0px; }
+    .elev-3 { box-shadow: rgba(5,0,56,0.08) 0px 12px 32px -4px; }
+    .elev-4 { box-shadow: rgba(5,0,56,0.12) 0px 16px 48px -8px; }
+    .elev-name { font-size: 14px; font-weight: 500; color: var(--ink); }
+    .elev-meta { font-size: 12px; color: var(--steel); font-family: monospace; }
+    .breakpoint-table { width: 100%; border-collapse: collapse; }
+    .breakpoint-table th, .breakpoint-table td {
+      text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--hairline-soft);
+      font-size: 14px;
+    }
+    .breakpoint-table th { font-size: 12px; font-weight: 500; color: var(--steel); background: var(--surface); }
+    .device-ladder {
+      display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap;
+      margin-top: 32px; padding: 32px; background: var(--surface); border-radius: 12px;
+    }
+    .device {
+      background: var(--canvas); border: 1px solid var(--hairline);
+      display: flex; align-items: flex-end; justify-content: center; padding: 8px;
+      font-size: 11px; color: var(--steel); font-weight: 500;
+    }
+    .footer {
+      padding: 64px 32px 32px; background: var(--footer-bg);
+      color: var(--on-dark); font-size: 14px;
+    }
+    .footer-grid {
+      max-width: 1280px; margin: 0 auto;
+      display: grid; grid-template-columns: 240px repeat(auto-fit, minmax(140px, 1fr));
+      gap: 48px; margin-bottom: 48px;
+    }
+    .footer-brand { display: flex; flex-direction: column; gap: 16px; }
+    .footer-brand .wordmark {
+      display: inline-block; padding: 4px 8px;
+      background: var(--brand-yellow); color: var(--primary);
+      font-size: 18px; font-weight: 700; border-radius: 4px;
+      width: fit-content;
+    }
+    .app-store-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+    .app-badge {
+      background: var(--canvas); color: var(--primary);
+      padding: 8px 12px; border-radius: 8px;
+      font-size: 11px; font-weight: 600; display: flex; align-items: center; gap: 6px;
+    }
+    .footer-col h6 { font-size: 14px; font-weight: 500; color: var(--on-dark); margin-bottom: 16px; }
+    .footer-col a { display: block; padding: 4px 0; color: var(--on-dark-muted); text-decoration: none; font-size: 14px; }
+    .footer-credit {
+      max-width: 1280px; margin: 0 auto;
+      padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center; color: var(--on-dark-muted);
+    }
+    .footer-credit a { color: var(--on-dark); text-decoration: none; }
+    .footer-credit a:hover { text-decoration: underline; }
+    .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+
+    /* getdesign.md nav additions */
+    .nav-left { display: flex; align-items: center; gap: 20px; }
+    .nav-brand-link, .nav-brand-link:link, .nav-brand-link:visited, .nav-brand-link:hover, .nav-brand-link:active { text-decoration: none; color: inherit; }
+    .nav-github, .nav-github:link, .nav-github:visited, .nav-github:hover, .nav-github:active {
+      display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600;
+      color: inherit; text-decoration: none; padding: 5px 10px;
+      border: 1px solid rgba(128, 128, 128, 0.3); border-radius: 6px; opacity: 0.75;
+      transition: opacity 200ms ease, border-color 200ms ease;
+      font-family: inherit; line-height: 1; white-space: nowrap;
+    }
+    .nav-github:hover { opacity: 1; border-color: rgba(128, 128, 128, 0.55); }
+    .nav-github svg { display: block; flex-shrink: 0; }
+
+    /* getdesign.md nav centering */
+    .nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+    .nav > .nav-left { justify-self: start; }
+    .nav > .nav-links { justify-self: center; }
+    .nav > :last-child { justify-self: end; }
+
+    /* dark-mode overrides */
+    .nav .nav-github { color: #ffffff; border-color: rgba(255, 255, 255, 0.25); }
+    .nav .nav-github:hover { border-color: rgba(255, 255, 255, 0.5); }
+    .swatch-color { border: 1px solid rgba(255,255,255,0.08); }
+    .nav { background: var(--canvas); border-bottom: 1px solid var(--hairline-soft); }
+    .nav-links a { color: var(--charcoal); }
+    .nav-cta { background: var(--primary); color: var(--on-primary); }
+    .btn-primary { background: var(--primary); color: var(--on-primary); }
+    .btn-secondary { color: var(--ink); border-color: var(--hairline); }
+    .btn-ghost { color: var(--ink); }
+    .btn-icon-circular { background: var(--surface); color: var(--ink); border-color: var(--hairline); }
+    .btn-disabled { background: var(--surface); color: var(--stone); }
+    .promo-banner { background: var(--surface); color: var(--ink); border-bottom: 1px solid var(--hairline-soft); }
+    .button-cell { background: var(--surface); border-color: var(--hairline-soft); }
+    .card-base { background: var(--surface); border-color: var(--hairline-soft); }
+    .industry-tile { background: var(--surface); border-color: var(--hairline-soft); }
+    .industry-tile .icon-zone { background: var(--surface-soft); }
+    .text-input { background: var(--surface-soft); color: var(--ink); border-color: var(--hairline); }
+    .search-pill { background: var(--surface-soft); color: var(--steel); border-color: var(--hairline); }
+    .filter-dropdown { background: var(--surface); color: var(--ink); border-color: var(--hairline); }
+    .pill-tab { background: var(--surface); color: var(--steel); border-color: var(--hairline); }
+    .pill-tab.active { background: var(--primary); color: var(--on-primary); border-color: var(--primary); }
+    .toggle-pill { background: var(--surface); }
+    .toggle-pill button { color: var(--steel); }
+    .toggle-pill button.active { background: var(--canvas); color: var(--ink); border: 1px solid var(--hairline-soft); }
+    .pricing-card { background: var(--surface); border-color: var(--hairline-soft); }
+    .pricing-card.featured { background: var(--surface-pricing-featured); border-color: var(--brand-blue); }
+    .pricing-card.enterprise { background: #1c1c1e; border: 1px solid var(--hairline-soft); }
+    .pricing-card .tier-name { color: var(--ink); }
+    .pricing-card .tier-price { color: var(--ink); }
+    .pricing-card .tier-feature-list li { color: var(--charcoal); }
+    .card-customer-story { background: var(--surface); border-color: var(--hairline-soft); }
+    .card-customer-story .quote { color: var(--charcoal); }
+    .author-name { color: var(--ink); }
+    .stat-row { background: var(--surface); }
+    .stat-num { color: var(--ink); }
+    .comparison-table { background: var(--surface); border-color: var(--hairline-soft); }
+    .comparison-table th { background: var(--surface); color: var(--ink); border-bottom-color: var(--hairline); }
+    .comparison-table td { color: var(--charcoal); border-bottom-color: var(--hairline-soft); }
+    .comparison-table .section-divider td { background: var(--surface-soft); color: var(--steel); }
+    .faq-list { border-color: var(--hairline-soft); }
+    .faq-item { background: var(--surface); border-bottom-color: var(--hairline-soft); }
+    .faq-q-text { color: var(--ink); }
+    .faq-a { color: var(--steel); }
+    .logo-wall { background: var(--surface); border-color: var(--hairline-soft); }
+    .logo-item { color: var(--steel); }
+    .whiteboard-mockup { background: var(--surface); border-color: var(--hairline-soft); }
+    .badge-yellow { background: #2a2410; color: #fdc870; }
+    .badge-purple { background: #1a1a2e; color: #99c0f5; }
+    .badge-coral { background: #2a1818; color: #ffaba5; }
+    .spacing-visual { background: var(--ink); }
+    .radius-demo { background: var(--surface); border-color: var(--ink); color: var(--ink); }
+    .elev-cell { background: var(--surface); }
+    .elev-0 { border-color: var(--hairline-soft); }
+    .elev-1 { box-shadow: rgba(0,0,0,0.4) 0px 1px 2px 0px; border-color: var(--hairline-soft); }
+    .elev-2 { box-shadow: rgba(0,0,0,0.4) 0px 4px 12px 0px; }
+    .elev-3 { box-shadow: rgba(0,0,0,0.4) 0px 12px 32px -4px; }
+    .elev-4 { box-shadow: rgba(0,0,0,0.4) 0px 16px 48px -8px; }
+    .breakpoint-table th { background: var(--surface); color: var(--steel); }
+    .breakpoint-table th, .breakpoint-table td { border-bottom-color: var(--hairline-soft); }
+    .device-ladder { background: var(--surface); }
+    .device { background: var(--canvas); border-color: var(--hairline); color: var(--steel); }
+    .footer { background: #000000; }
+    .app-badge { background: var(--surface); color: var(--ink); }
+    .footer-credit { border-top-color: rgba(255,255,255,0.1); }
+    .cta-banner-dark { background: var(--surface); border: 1px solid var(--hairline-soft); }
+    .cta-banner-dark .actions .btn-secondary { color: var(--on-dark); border-color: rgba(255,255,255,0.3); }
+    .pastel-card { color: #1c1c1e; }
+
+    @media (max-width: 1024px) {
+      section { padding: 64px 32px; }
+      .section-heading { font-size: 36px; }
+      .nav { padding: 0 32px; }
+      .nav > :last-child { display: none; }
+      .type-row { grid-template-columns: 1fr; gap: 8px; }
+    }
+    @media (max-width: 720px) {
+      .nav { padding: 12px 20px; height: auto; min-height: 56px; }
+      .nav-links { display: none; }
+      .hero { padding: 64px 20px; }
+      .hero h1 { font-size: 36px; letter-spacing: -1px; }
+      .hero p { font-size: 16px; }
+      section { padding: 48px 20px; }
+      .section-heading { font-size: 28px; }
+      .palette-grid, .button-grid, .pastel-grid, .story-grid, .card-grid, .pricing-grid, .form-row, .elevation-grid, .radius-grid, .stat-row, .footer-grid {
+        grid-template-columns: 1fr !important; gap: 16px;
+      }
+      .whiteboard-mockup { grid-template-columns: repeat(2, 1fr); }
+      .footer { padding: 48px 20px 24px; }
+    }
+  
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="promo-banner">Convo'25 registration is open. Get up to 70% off on Annual <span class="promo-pill">去拿你的舌头</span></div>
+
+<div class="hero">
+<h1>亮黄协作画布</h1>
+<p>明黄色点缀结合画布和卡片，强调可视化协作。</p>
+<div class="hero-actions">
+<button class="btn-primary">免费开始</button>
+<button class="btn-secondary">预约演示</button>
+</div>
+</div>
+<section id="colors">
+<h2 class="section-heading">配色</h2>
+<p class="section-sub">斯塔克白色页面底色以黑白的行动按钮系统为锚,被Miro可识别的金丝雀黄色单词标记和贴纸粘贴的调色板(黄,玫瑰,珊瑚色,蓝绿色,橙色)打开.</p>
+<div class="palette-group">
+<h3>品牌色与强调色</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background: #ffd02f;"></div><div class="swatch-name">Miro 黄色</div><div class="swatch-hex">#ffd02f</div><div class="swatch-role">文字标记, 宣传旗</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #fcb900;"></div><div class="swatch-name">黄深</div><div class="swatch-hex">#fcb900</div><div class="swatch-role">按黄州</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #fff4c4;"></div><div class="swatch-name">黄光</div><div class="swatch-hex">#fff4c4</div><div class="swatch-role">标签芯片背景</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #4262ff;"></div><div class="swatch-name">蓝蓝</div><div class="swatch-hex">#4262ff</div><div class="swatch-role">内含链接, 已显示的分级边框</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #2a41b6;"></div><div class="swatch-name">蓝色按下</div><div class="swatch-hex">#2a41b6</div><div class="swatch-role">按态蓝色</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #ff9999;"></div><div class="swatch-name">品牌珊瑚色</div><div class="swatch-hex">#ff9999</div><div class="swatch-role">珊瑚色强调色</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #ffc6c6;"></div><div class="swatch-name">珊瑚色 光线</div><div class="swatch-hex">#ffc6c6</div><div class="swatch-role">贴纸 功能卡片 bg</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #ffd8f4;"></div><div class="swatch-name">布兰德·罗斯</div><div class="swatch-hex">#ffd8f4</div><div class="swatch-role">罗丝强调色</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #fde0f0;"></div><div class="swatch-name">玫瑰光( 玫瑰光 )</div><div class="swatch-hex">#fde0f0</div><div class="swatch-role">贴纸 功能卡片 bg</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #0fbcb0;"></div><div class="swatch-name">品牌蓝绿色</div><div class="swatch-hex">#0fbcb0</div><div class="swatch-role">调音</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #c3faf5;"></div><div class="swatch-name">蓝绿色 光线</div><div class="swatch-hex">#c3faf5</div><div class="swatch-role">贴纸 功能卡片 bg</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #ffe6cd;"></div><div class="swatch-name">橙色光线</div><div class="swatch-hex">#ffe6cd</div><div class="swatch-role">贴纸 功能卡片 bg</div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>界面表面</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background: #ffffff;"></div><div class="swatch-name">白色页面底色</div><div class="swatch-hex">#ffffff</div><div class="swatch-role">页+卡片 背景</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #f7f8fa;"></div><div class="swatch-name">界面表面</div><div class="swatch-hex">#f7f8fa</div><div class="swatch-role">静静地行, 休息</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #fff8e0;"></div><div class="swatch-name">表面黄色</div><div class="swatch-hex">#fff8e0</div><div class="swatch-role">黄色标签芯片 bg</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #f5f3ff;"></div><div class="swatch-name">表面定价特征</div><div class="swatch-hex">#f5f3ff</div><div class="swatch-role">特征等级bg</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #e0e2e8;"></div><div class="swatch-name">细边框</div><div class="swatch-hex">#e0e2e8</div><div class="swatch-role">边框</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #c7cad5;"></div><div class="swatch-name">发条坚固</div><div class="swatch-hex">#c7cad5</div><div class="swatch-role">输入边框</div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>文字色</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background: #1c1c1e;"></div><div class="swatch-name">文字色</div><div class="swatch-hex">#1c1c1e</div><div class="swatch-role">标题、体、CTA</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #2c2c34;"></div><div class="swatch-name">炭灰色</div><div class="swatch-hex">#2c2c34</div><div class="swatch-role">机构重点</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #555a6a;"></div><div class="swatch-name">石板灰</div><div class="swatch-hex">#555a6a</div><div class="swatch-role">副文本</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #6b6f7e;"></div><div class="swatch-name">钢</div><div class="swatch-hex">#6b6f7e</div><div class="swatch-role">第三层、页脚链接</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #8e91a0;"></div><div class="swatch-name">石头</div><div class="swatch-hex">#8e91a0</div><div class="swatch-role">说明</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #a5a8b5;"></div><div class="swatch-name">静音</div><div class="swatch-hex">#a5a8b5</div><div class="swatch-role">残疾、占位符</div></div>
+</div>
+</div>
+</section>
+<section id="typography">
+<h2 class="section-heading">字号层级</h2>
+<p class="section-sub">Roobert PRO across every UI surface — from 80px hero displays to 11px micro labels. Geometric, slightly rounded character.</p>
+<div class="type-row"><div class="type-meta"><span class="role">hero-display</span><span class="specs">80px / 500 / 1.05 / -2px</span></div><div class="type-sample" style="font-size: 80px; font-weight: 500; line-height: 1.05; letter-spacing: -2px;">干得漂亮,快点</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">display-lg</span><span class="specs">60px / 500 / 1.10 / -1.5px</span></div><div class="type-sample" style="font-size: 60px; font-weight: 500; line-height: 1.10; letter-spacing: -1.5px;">视觉工作空间</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">heading-1</span><span class="specs">48px / 500 / 1.15 / -1px</span></div><div class="type-sample" style="font-size: 48px; font-weight: 500; line-height: 1.15; letter-spacing: -1px;">以你的条件定价</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">heading-2</span><span class="specs">36px / 500 / 1.20 / -0.5px</span></div><div class="type-sample" style="font-size: 36px; font-weight: 500; line-height: 1.20; letter-spacing: -0.5px;">为什么选Miro?</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">heading-3</span><span class="specs">28px / 500 / 1.25</span></div><div class="type-sample" style="font-size: 28px; font-weight: 500; line-height: 1.25;">卡片 标题</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">stat-display</span><span class="specs">64px / 500 / 1.10 / -1.5px</span></div><div class="type-sample" style="font-size: 64px; font-weight: 500; line-height: 1.10; letter-spacing: -1.5px;">100M+</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">字幕</span><span class="specs">18px / 400 / 1.50</span></div><div class="type-sample" style="font-size: 18px; font-weight: 400; line-height: 1.50;">首屏字幕和主机类型</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">body-md</span><span class="specs">16px / 400 / 1.50</span></div><div class="type-sample" style="font-size: 16px; font-weight: 400; line-height: 1.50;">主体文本在文件的传言、营销副本和特征描述中都使用。</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">body-sm</span><span class="specs">14px / 400 / 1.50</span></div><div class="type-sample" style="font-size: 14px; font-weight: 400; line-height: 1.50;">二级体、表细胞、导航</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">caption-bold</span><span class="specs">13px / 600 / 1.40</span></div><div class="type-sample" style="font-size: 13px; font-weight: 600; line-height: 1.40;">坏人拉尔伯/塔格切普</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">button-md</span><span class="specs">14px / 500 / 1.30</span></div><div class="type-sample" style="font-size: 14px; font-weight: 500; line-height: 1.30;">胶囊按钮 拉尔</div></div>
+</section>
+<section id="buttons">
+<h2 class="section-heading">按钮样式</h2>
+<p class="section-sub">到处都是胶囊形. 黑泄漏主机主导CTA的营销.</p>
+<div class="button-grid">
+<div class="button-cell"><button class="btn-primary">免费开始</button><span class="button-cell-name">button-primary</span><span class="button-cell-spec">黑色胶囊形 – 占优势的行动按钮 QQ</span></div>
+<div class="button-cell"><button class="btn-yellow">品牌强调</button><span class="button-cell-name">button-yellow</span><span class="button-cell-spec">Brand-yellow 胶囊形</span></div>
+<div class="button-cell"><button class="btn-blue">动作点名</button><span class="button-cell-name">button-blue</span><span class="button-cell-spec">Brand-blue 胶囊形</span></div>
+<div class="button-cell"><button class="btn-secondary">预约演示</button><span class="button-cell-name">button-secondary</span><span class="button-cell-spec">提纲胶囊形</span></div>
+<div class="button-cell" style="background: var(--primary);"><button class="btn-on-dark">免费开始</button><span class="button-cell-name" style="color: var(--on-dark);">button-on-dark</span><span class="button-cell-spec" style="color: var(--on-dark-muted);">白色胶囊形 位于暗处</span></div>
+<div class="button-cell"><button class="btn-ghost">视图</button><span class="button-cell-name">button-ghost</span><span class="button-cell-spec">安静的鬼魂</span></div>
+<div class="button-cell"><button class="btn-link">学习更多→</button><span class="button-cell-name">button-link</span><span class="button-cell-spec">内含蓝色文本链接</span></div>
+<div class="button-cell"><button aria-label="下一个" class="btn-icon-circular">›</button><span class="button-cell-name">button-icon-circular</span><span class="button-cell-spec">36×36 工具</span></div>
+<div class="button-cell"><button class="btn-disabled">无法获取</button><span class="button-cell-name">button-primary-disabled</span><span class="button-cell-spec">已禁用状态</span></div>
+</div>
+</section>
+<section id="badges">
+<h2 class="section-heading">徽章状态( S)</h2>
+<p class="section-sub">胶囊形状态指标与小直径标记并列. 黄促,贴子-tag芯片,用于产品特性.</p>
+<div class="badge-row" style="margin-bottom: 32px;">
+<span class="badge badge-promo">时间有限</span>
+<span class="badge badge-yellow">黄色</span>
+<span class="badge badge-purple">AI 代理</span>
+<span class="badge badge-coral">模板</span>
+<span class="badge badge-success">激活</span>
+<span class="badge badge-discount">保存 15% 数据</span>
+</div>
+<div class="promo-banner" style="border-radius: 8px;">Convo'25 registration is open. Get up to 70% off on Annual <span class="promo-pill">去拿你的舌头</span></div>
+<p style="font-size: 12px; color: var(--steel); margin-top: 8px; font-family: monospace;">promo-banner — sticky black strip with inline yellow pill above the top nav</p>
+</section>
+<section id="pastel-cards">
+<h2 class="section-heading">贴纸功能卡片</h2>
+<p class="section-sub">品牌粘贴音符调色板中的卡片——黄色,珊瑚色,蓝绿色,玫瑰,橙色. 28px角软化信号"这是一个特色时刻".（原文参数：28px）</p>
+<div class="pastel-grid">
+<div class="pastel-card pcc-yellow">
+<span class="badge" style="background: rgba(0,0,0,0.1); color: var(--primary);">黄色</span>
+<div><h4>AI 工作流程</h4><p>建立实际减少工作量的工作流程——而不是增加工作量。</p></div>
+</div>
+<div class="pastel-card pcc-coral">
+<span class="badge" style="background: rgba(0,0,0,0.1); color: var(--coral-dark);">模板</span>
+<div><h4>模板</h4><p>开始使用数千个模板。</p></div>
+</div>
+<div class="pastel-card pcc-teal">
+<span class="badge" style="background: rgba(0,0,0,0.1); color: var(--moss-dark);">董事会</span>
+<div><h4>边栏</h4><p>跟踪 AI 构建的任务, 并带有合并上下文的侧边栏。</p></div>
+</div>
+<div class="pastel-card pcc-rose">
+<span class="badge" style="background: rgba(0,0,0,0.1); color: var(--ink);">空格( S)</span>
+<div><h4>空格( S)</h4><p>连接你的公司知识 加快工作进度。</p></div>
+</div>
+<div class="pastel-card pcc-orange">
+<span class="badge" style="background: rgba(0,0,0,0.1); color: var(--ink);">讲习班</span>
+<div><h4>讲习班</h4><p>开展实时,包容性的回顾和团队研讨会.</p></div>
+</div>
+</div>
+</section>
+<section id="customer-stories">
+<h2 class="section-heading">客户故事 卡片</h2>
+<p class="section-sub">带有通栏影像和白引号的品牌直线照片卡片 覆盖. 百事可乐珊瑚色,红帽暗色,WebMD蓝色.</p>
+<div class="story-grid">
+<div class="card-customer-story">
+<div class="photo">百事可乐</div>
+<div class="body">
+<p class="quote">"With Miro, we went from project briefing to in-market launch in 10 months. That usually takes 3 years at PepsiCo."</p>
+<div class="author">
+<div class="avatar"></div>
+<div><div class="author-name">约旦 亨利 哈勃</div><div class="author-title">高等研究院产品主任</div></div>
+</div>
+</div>
+</div>
+<div class="card-customer-story">
+<div class="photo red-hat">红帽子</div>
+<div class="body">
+<p class="quote">"我认为Miro是一个超独特的机会,突然有了工程团队,营销,创意的人都在一个单一的比赛场地上".</p>
+<div class="author">
+<div class="avatar" style="background: linear-gradient(135deg, #d44b3a, #cc4422);"></div>
+<div><div class="author-name">珍·马克·赖利</div><div class="author-title">红帽杰出工程师</div></div>
+</div>
+</div>
+</div>
+<div class="card-customer-story">
+<div class="photo webmd">网络MD</div>
+<div class="body">
+<p class="quote">"Miro已经解锁了一套包括UltraMix代理,海路AI在内的全球AI本土产品".</p>
+<div class="author">
+<div class="avatar" style="background: linear-gradient(135deg, #5b76fe, #4262ff);"></div>
+<div><div class="author-name">WebMD团队</div><div class="author-title">卫生保健领导</div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="stats">
+<h2 class="section-heading">静态行</h2>
+<p class="section-sub">挂载点名符号 64px stat-display 符号: "100M+ 用户 / 250+ 公司/ 公司 6,200+".</p>
+<div class="stat-row">
+<div class="stat-cell"><span class="stat-num">100M+</span><span class="stat-label">全世界用户</span></div>
+<div class="stat-cell"><span class="stat-num">250+</span><span class="stat-label">可用模板</span></div>
+<div class="stat-cell"><span class="stat-num">6,200+</span><span class="stat-label">企业客户</span></div>
+</div>
+</section>
+<section id="cards">
+<h2 class="section-heading">卡片与容器</h2>
+<p class="section-sub">标准卡片,工业牌,以及暗的行动按钮旗号,每个功能页底部都主播.</p>
+<div class="card-grid">
+<div class="card-base">
+<h5 style="font-size: 18px; font-weight: 500;">标准卡片</h5>
+<p style="font-size: 14px; color: var(--steel); line-height: 1.5;">白色页面底色配有细边框和16px角. 用于文件卡片.（原文参数：16px）</p>
+<button class="btn-link" style="padding: 0; align-self: flex-start;">更多信息:→</button>
+</div>
+<div class="industry-tile">
+<div class="icon-zone">📊</div>
+<h5>项目管理</h5>
+<p>追踪进度,分享最新消息,推动团队问责.</p>
+</div>
+<div class="industry-tile">
+<div class="icon-zone">🗺</div>
+<h5>路线图</h5>
+<p>计划、沟通和统一一个真理的来源。</p>
+</div>
+<div class="industry-tile">
+<div class="icon-zone">🔄</div>
+<h5>进程映射</h5>
+<p>地图和文件复杂工作流程,具有共同的能见度。</p>
+</div>
+</div>
+</section>
+<section id="whiteboard">
+<h2 class="section-heading">白板杂耍</h2>
+<p class="section-sub">Real Miro-board UI rendered as feature illustration. Sticky notes in the brand pastel palette layered with subtle drop shadow.</p>
+<div class="whiteboard-mockup">
+<div class="sticky-note sn-yellow">Q 的脑暴想法4 发射</div>
+<div class="sticky-note sn-coral">访谈中的用户研究见解</div>
+<div class="sticky-note sn-teal">Sprint planning · 2 weeks</div>
+<div class="sticky-note sn-rose">设计审查 · 星期五3pm</div>
+<div class="sticky-note sn-orange">行动项目:优先次序</div>
+<div class="sticky-note sn-yellow">风险:时间重叠</div>
+<div class="sticky-note sn-teal">利益攸关方的协调一致</div>
+<div class="sticky-note sn-coral">客户反馈主题</div>
+</div>
+</section>
+<section id="pricing">
+<h2 class="section-heading">定价卡片</h2><p class="design-demo-note">组件演示。套餐层级、价格字重和操作按钮。数据仅用于样式展示。</p>
+<p class="section-sub">4级比较:自由/启动/商(featured)/企业. 具有薰衣草紫背景+蓝色边框的特征突出级. 企业卡片使用暗的页面底色.</p>
+<div style="display: flex; justify-content: center; margin-bottom: 32px;">
+<div class="toggle-pill">
+<button class="active">每月</button>
+<button>每年 <span class="badge badge-discount" style="margin-left: 4px;">保存 15% 数据</span></button>
+</div>
+</div>
+<div class="pricing-grid">
+<div class="pricing-card">
+<span class="tier-name">免费版</span>
+<div class="tier-price">$0<small>/模数</small></div>
+<ul class="tier-feature-list">
+<li>3 可编辑板</li>
+<li>基本模板</li>
+<li>社区支助</li>
+</ul>
+<button class="btn-secondary">免费报名</button>
+</div>
+<div class="pricing-card">
+<span class="tier-name">入门版</span>
+<div class="tier-price">$8<small>/模数</small></div>
+<ul class="tier-feature-list">
+<li>无限制的棋盘</li>
+<li>高分模样板</li>
+<li>电子邮件支持</li>
+<li>自定义品牌</li>
+</ul>
+<button class="btn-primary">开始审判</button>
+</div>
+<div class="pricing-card featured">
+<span class="tier-name">商业版</span>
+<div class="tier-price">$16<small>/模数</small></div>
+<ul class="tier-feature-list">
+<li>启动器中的所有</li>
+<li>单点登录（SSO）</li>
+<li>高级安保</li>
+<li>优先支助</li>
+<li>访客日通行证</li>
+</ul>
+<button class="btn-blue">开始审判</button>
+</div>
+<div class="pricing-card enterprise">
+<span class="tier-name">企业版</span>
+<div class="tier-price" style="font-size: 28px;">自定义</div>
+<ul class="tier-feature-list">
+<li>定制合同</li>
+<li>企业安全</li>
+<li>专职的首席安全官</li>
+<li>高级管理员</li>
+</ul>
+<button class="btn-yellow">联系销售</button>
+</div>
+</div>
+<h3 style="font-size: 18px; font-weight: 500; margin: 48px 0 20px;">特征比较表</h3><p class="design-demo-note">组件演示。表头、行距、分隔线和状态标签。数据仅用于样式展示。</p>
+<table class="comparison-table">
+<thead>
+<tr><th>特性</th><th style="text-align: center;">免费版</th><th style="text-align: center;">入门版</th><th style="text-align: center;">商业版</th><th style="text-align: center;">企业版</th></tr>
+</thead>
+<tbody>
+<tr class="section-divider"><td colspan="5">CORE 核心</td></tr>
+<tr><td>可编辑的纸板</td><td style="text-align: center;">3</td><td style="text-align: center;">∞</td><td style="text-align: center;">∞</td><td style="text-align: center;">∞</td></tr>
+<tr><td>模板</td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td></tr>
+<tr><td>自定义品牌</td><td style="text-align: center;">—</td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td></tr>
+<tr class="section-divider"><td colspan="5">文 件</td></tr>
+<tr><td>Slack 团队</td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td></tr>
+<tr><td>吉拉和阿萨纳</td><td style="text-align: center;">—</td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td></tr>
+<tr class="section-divider"><td colspan="5">安保和行政</td></tr>
+<tr><td>单点登录（SSO）</td><td style="text-align: center;">—</td><td style="text-align: center;">—</td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td></tr>
+<tr><td>SCIM 供给</td><td style="text-align: center;">—</td><td style="text-align: center;">—</td><td style="text-align: center;">—</td><td style="text-align: center;"><span class="check-mark">✓</span></td></tr>
+<tr><td>审计记录</td><td style="text-align: center;">—</td><td style="text-align: center;">—</td><td style="text-align: center;">—</td><td style="text-align: center;"><span class="check-mark">✓</span></td></tr>
+</tbody>
+</table>
+</section>
+<section id="forms">
+<h2 class="section-heading">窗体输入( I)</h2>
+<p class="section-sub">44px-Tall输入与8px圆角. 焦点转向2px品牌蓝边. 胶囊形滤波器下拉.（原文参数：8px、2px）</p>
+<div class="form-row">
+<div class="form-field">
+<label class="form-label">电子邮箱</label>
+<input class="text-input" placeholder="you@email.com" type="text" value="default state"/>
+</div>
+<div class="form-field">
+<label class="form-label">工作空间名称</label>
+<input autofocus="" class="text-input" style="border: 2px solid var(--brand-blue); padding: 11px 15px;" type="text" value="focused state"/>
+</div>
+<div class="form-field">
+<label class="form-label">团队规模</label>
+<input class="text-input" placeholder="1-10 人员" type="text"/>
+</div>
+</div>
+<div style="margin-top: 32px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+<input class="search-pill" placeholder="搜索模板"/>
+<span style="font-size: 12px; color: var(--steel); font-family: monospace;">search-pill——40px高度,表面bg（原文参数：40px）</span>
+</div>
+<div style="margin-top: 24px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+<button class="filter-dropdown">公司使用 QQ 数据</button>
+<button class="filter-dropdown">工业</button>
+<button class="filter-dropdown">使用大小写 QQ</button>
+<span style="font-size: 12px; color: var(--steel); font-family: monospace;">filter-dropdown — 胶囊形 过滤器</span>
+</div>
+</section>
+<section id="tabs">
+<h2 class="section-heading">标签导航( N)</h2>
+<p class="section-sub">用于顶级切换的胶囊形标签(定价页面上的定价/路线图).</p>
+<h3 style="font-size: 18px; font-weight: 500; margin-bottom: 16px;">胶囊形 标签</h3>
+<div class="pill-tabs">
+<button class="pill-tab active">定价</button>
+<button class="pill-tab">路线图</button>
+</div>
+</section>
+<section id="cta-banner">
+<h2 class="section-heading">暗的行动按钮 横幅</h2>
+<p class="section-sub">页面底部行动按钮旗下加32px角软化.（原文参数：32px）</p>
+<div class="cta-banner-dark">
+<h4>免费和你的团队一起尝试Miro</h4>
+<p>加入全球100M+用户已经使用Miro,让最佳作品复活.</p>
+<div class="actions">
+<button class="btn-on-dark">免费开始</button>
+<button class="btn-secondary">预约演示</button>
+</div>
+</div>
+</section>
+<section id="logo-wall">
+<h2 class="section-heading">logo 墙</h2>
+<p class="section-sub">客户标识网格——信托-row部分的文字标记演示.</p>
+<div class="logo-wall">
+<div class="logo-item">百事可乐</div>
+<div class="logo-item">沃尔玛</div>
+<div class="logo-item">阿特拉斯语</div>
+<div class="logo-item">斯莱隆</div>
+<div class="logo-item">软件</div>
+<div class="logo-item">山叶</div>
+</div>
+</section>
+<section id="faq">
+<h2 class="section-heading">风琴</h2>
+<p class="section-sub">经常问问题 默认折叠; chevron toggle.</p>
+<div class="faq-list">
+<div class="faq-item">
+<div class="faq-q">
+<span class="faq-q-text">Miro定价如何运作?.</span>
+<span class="chev">⌃</span>
+</div>
+<div class="faq-a">Miro offers a Free tier for individuals, Starter at $8/month, Business at $16/month, and Custom enterprise plans. Annual billing saves 15%.</div>
+</div>
+<div class="faq-item collapsed">
+<div class="faq-q">
+<span class="faq-q-text">我能邀请客人来我的Miro工作室吗?</span>
+<span class="chev">⌄</span>
+</div>
+<div class="faq-a">是——企业和企业计划包括游客和外部合作者的日间通行证。</div>
+</div>
+<div class="faq-item collapsed">
+<div class="faq-q">
+<span class="faq-q-text">Miro SOC 2 是否符合规定?</span>
+<span class="chev">⌄</span>
+</div>
+<div class="faq-a">是——Miro是SOC 2 II型认证. 企业计划包括额外的安全和合规功能。</div>
+</div>
+</div>
+</section>
+<section id="spacing">
+<h2 class="section-heading">间距层级</h2>
+<p class="section-sub">4px 基础单位,8px初等增量. 节奏从48px到120px.（原文参数：8px、48px、120px）</p>
+<div class="spacing-grid">
+<div class="spacing-box"><div class="spacing-visual" style="width: 4px; height: 16px;"></div><div class="spacing-label">4<small>xxs</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 8px; height: 16px;"></div><div class="spacing-label">8<small>xs</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 12px; height: 16px;"></div><div class="spacing-label">12<small>静态</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 16px; height: 16px;"></div><div class="spacing-label">16<small>微额</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 20px; height: 16px;"></div><div class="spacing-label">20<small>升( 升)</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 24px; height: 16px;"></div><div class="spacing-label">24<small>xl</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 32px; height: 16px;"></div><div class="spacing-label">32<small>xxl</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 40px; height: 16px;"></div><div class="spacing-label">40<small>xxxl</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 48px; height: 16px;"></div><div class="spacing-label">48<small>section-sm</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 64px; height: 16px;"></div><div class="spacing-label">64<small>章节</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 96px; height: 16px;"></div><div class="spacing-label">96<small>section-lg</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 120px; height: 16px;"></div><div class="spacing-label">120<small>首屏</small></div></div>
+</div>
+</section>
+<section id="radius">
+<h2 class="section-heading">圆角层级</h2>
+<p class="section-sub">胶囊按钮( Name9999px), 28px 贴面特征卡, 32px CTA旗下. 被严密控制着的角家庭。（原文参数：9999px）</p>
+<div class="radius-grid">
+<div class="radius-demo" style="border-radius: 4px;">4px<small>xs</small></div>
+<div class="radius-demo" style="border-radius: 6px;">6px<small>静态</small></div>
+<div class="radius-demo" style="border-radius: 8px;">8px<small>微额</small></div>
+<div class="radius-demo" style="border-radius: 12px;">12px<small>升( 升)</small></div>
+<div class="radius-demo" style="border-radius: 16px;">16px<small>xl</small></div>
+<div class="radius-demo" style="border-radius: 20px;">20px<small>xxl</small></div>
+<div class="radius-demo" style="border-radius: 28px;">28px<small>xxxl</small></div>
+<div class="radius-demo" style="border-radius: 32px;">32px<small>特性</small></div>
+<div class="radius-demo" style="border-radius: 9999px;">胶囊形<small>满</small></div>
+</div>
+</section>
+<section id="elevation">
+<h2 class="section-heading">层次与阴影</h2>
+<p class="section-sub">以主平为主. 白色板模型上的战略大气深度。</p>
+<div class="elevation-grid">
+<div class="elev-cell elev-0"><span class="elev-name">Level 0 — Flat</span><span class="elev-meta">边框+细边框</span></div>
+<div class="elev-cell elev-1"><span class="elev-name">Level 1 — Subtle</span><span class="elev-meta">rgba(5,0,56,0.04) 0 1px 2px</span></div>
+<div class="elev-cell elev-2"><span class="elev-name">Level 2 — Card</span><span class="elev-meta">rgba(5,0,56,0.06) 0 4px 12px</span></div>
+<div class="elev-cell elev-3"><span class="elev-name">Level 3 — Mockup</span><span class="elev-meta">rgba(5,0,56,0.08) 0 12px 32px -4px</span></div>
+<div class="elev-cell elev-4"><span class="elev-name">Level 4 — Modal</span><span class="elev-meta">rgba(5,0,56,0.12) 0 16px 48px -8px</span></div>
+</div>
+</section>
+<section id="responsive">
+<h2 class="section-heading">响应式布局</h2>
+<p class="section-sub">首屏的天平从 80px → 36px 手机上,我刚从电话里找到的 定价层堆叠从4柱到1-up. 客户故事网格崩溃到单列。</p>
+<table class="breakpoint-table">
+<thead><tr><th>断点</th><th>宽度</th><th>密钥更改</th></tr></thead>
+<tbody>
+<tr><td><strong>移动( 小)</strong></td><td>&lt; 480px Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q</td><td>单列. 首屏们 36px. 胶囊形导航崩溃成汉堡. 套餐层级堆积1-up.</td></tr>
+<tr><td><strong>移动( 大)</strong></td><td>480 – 767px</td><td>特色瓷砖2-up. 首屏们 48px.</td></tr>
+<tr><td><strong>平板</strong></td><td>768 – 1023px</td><td>2列的特征网格. Pill-tab导航返回. 首屏们 60px.</td></tr>
+<tr><td><strong>桌面端</strong></td><td>1024 – 1279px</td><td>4级定价卡片列. 客户故事网2 -up。 首屏们 64px.</td></tr>
+<tr><td><strong>宽桌面</strong></td><td>≥ 1280px</td><td>全面80px首屏介绍. 站立排位全宽.（原文参数：80px）</td></tr>
+</tbody>
+</table>
+<h3 style="font-size: 18px; font-weight: 500; margin-top: 32px;">设备梯</h3>
+<div class="device-ladder">
+<div class="device" style="width: 60px; height: 110px;">375px</div>
+<div class="device" style="width: 90px; height: 130px;">480px</div>
+<div class="device" style="width: 130px; height: 150px;">768px</div>
+<div class="device" style="width: 200px; height: 170px;">1024px</div>
+<div class="device" style="width: 280px; height: 200px;">1280+</div>
+</div>
+<h3 style="font-size: 18px; font-weight: 500; margin-top: 32px;">触控区域</h3>
+<ul style="font-size: 14px; color: var(--charcoal); line-height: 1.7; padding-left: 20px;">
+<li>胶囊按钮高度为 40–44px。英文原文将该尺寸与 WCAG AAA 触控要求对照。</li>
+<li>Circular icon buttons: 36×36px desktop → 44×44px mobile.</li>
+<li>表格输入在44px高度。（原文参数：44px）</li>
+<li>Filter dropdowns render at ~36px tall — bumps to 44px mobile.</li>
+</ul>
+<h3 style="font-size: 18px; font-weight: 500; margin-top: 32px;">窄屏布局调整</h3>
+<ul style="font-size: 14px; color: var(--charcoal); line-height: 1.7; padding-left: 20px;">
+<li><strong>宣传旗</strong> 保持全宽; 短线位于 &lt; 480px。</li>
+<li><strong>顶端导航</strong> 1024px下方的崩塌为汉堡.（原文参数：1024px）</li>
+<li><strong>定价比较</strong>: 4-柱状层次 – 2-柱状石板 - 柱状石板 - 柱状石板 1- 列车移动。</li>
+<li><strong>客户故事网格</strong>:2-up → 1-up at &lt; 768px.</li>
+<li><strong>首屏打字技术</strong>: 80px → 60px → 48px → 36px.</li>
+<li><strong>页脚</strong>:6-列台式计算机 →-列台式计算机 3-列台式计算机 →手风琴移动器.</li>
+</ul>
+</section>
+<footer class="footer">
+<div class="footer-shell">
+<div class="footer-grid">
+<div class="footer-col">
+<h6>VoltAgent 框架</h6>
+<span>类型脚本代理</span>
+<span>工具编程</span>
+<span>多种代理工作流程</span>
+</div>
+<div class="footer-col">
+<h6>伏特Ops LLM 可观测性</h6>
+<span>LLM 跟踪</span>
+<span>实时调试</span>
+<span>视觉时间</span>
+</div>
+<div class="footer-col">
+<h6>生产</h6>
+<span>评价</span>
+<span>即时管理</span>
+<span>护卫</span>
+</div>
+<div class="footer-col">
+<h6>平台</h6>
+<span>伏特Ops 控制台</span>
+<span>开源核心</span>
+<span>代理工程</span>
+</div>
+</div>
+
+</div>
+</footer>
+</body>
+</html>

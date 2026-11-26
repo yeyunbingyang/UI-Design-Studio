@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>黑白极简预约</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --primary: #111111;
+    --primary-active: #242424;
+    --primary-disabled: #e5e7eb;
+    --ink: #111111;
+    --body: #374151;
+    --muted: #6b7280;
+    --muted-soft: #898989;
+    --hairline: #e5e7eb;
+    --hairline-soft: #f3f4f6;
+    --canvas: #ffffff;
+    --surface-soft: #f8f9fa;
+    --surface-card: #f5f5f5;
+    --surface-strong: #e5e7eb;
+    --surface-dark: #101010;
+    --surface-dark-elevated: #1a1a1a;
+    --on-primary: #ffffff;
+    --on-dark: #ffffff;
+    --on-dark-soft: #a1a1aa;
+    --brand-accent: #3b82f6;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    --badge-orange: #fb923c;
+    --badge-pink: #ec4899;
+    --badge-violet: #8b5cf6;
+    --badge-emerald: #34d399;
+    --display: 'Inter', -apple-system, sans-serif;
+    --text: 'Inter', -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--canvas);
+    color: var(--body);
+    font-family: var(--text);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--canvas);
+    border-bottom: 1px solid var(--hairline);
+    padding: 0 48px;
+    height: 64px;
+  }
+  .nav-links { list-style: none; display: flex; gap: 28px; align-items: center; }
+  .nav-links a { color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 500; }
+  .nav-cta {
+    background: var(--primary); color: var(--on-primary); border: none;
+    padding: 10px 16px; border-radius: 8px;
+    font-weight: 600; font-size: 14px; cursor: pointer; font-family: inherit;
+  }
+
+  .hero {
+    padding: 96px 48px;
+    background: var(--canvas);
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 64px;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .hero-content { max-width: 720px; }
+  .hero h1 {
+    font-family: var(--display);
+    font-size: 64px; font-weight: 600; line-height: 1.05;
+    color: var(--ink); margin: 0 0 24px;
+    letter-spacing: -2px; text-align: left;
+  }
+  .hero p { font-size: 18px; color: var(--body); max-width: 540px; margin: 0 0 32px; line-height: 1.5; text-align: left; }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-start; }
+  .btn-hero-primary {
+    background: var(--primary); color: var(--on-primary); border: none;
+    padding: 12px 20px; height: 40px;
+    border-radius: 8px; font-weight: 600; font-size: 14px;
+    cursor: pointer; font-family: inherit;
+  }
+  .btn-hero-secondary {
+    background: var(--canvas); color: var(--ink); border: 1px solid var(--hairline);
+    padding: 12px 20px; height: 40px;
+    border-radius: 8px; font-weight: 600; font-size: 14px;
+    cursor: pointer; font-family: inherit;
+  }
+  .hero-art {
+    background: var(--canvas);
+    border: 1px solid var(--hairline);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  }
+  .hero-art .booking-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--hairline-soft); }
+  .hero-art .avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--badge-orange); display: flex; align-items: center; justify-content: center; color: var(--on-primary); font-weight: 600; font-size: 14px; }
+  .hero-art .booking-meta { font-size: 13px; }
+  .hero-art .booking-meta .name { font-weight: 600; color: var(--ink); }
+  .hero-art .booking-meta .duration { color: var(--muted); font-size: 12px; }
+  .hero-art .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; margin-bottom: 12px; }
+  .hero-art .day { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 11px; border-radius: 6px; color: var(--muted); }
+  .hero-art .day.head { font-weight: 600; color: var(--muted-soft); }
+  .hero-art .day.available { background: var(--surface-soft); color: var(--ink); }
+  .hero-art .day.selected { background: var(--primary); color: var(--on-primary); font-weight: 600; }
+  .hero-art .slots-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .hero-art .slot { padding: 8px; border: 1px solid var(--hairline); border-radius: 6px; text-align: center; font-size: 12px; color: var(--ink); }
+  .hero-art .slot.active { background: var(--primary); color: var(--on-primary); border-color: var(--primary); }
+
+  section { max-width: 1200px; margin: 0 auto; padding: 96px 32px; border-top: 1px solid var(--hairline); }
+  .section-label { font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); font-weight: 600; margin-bottom: 12px; }
+  .section-heading { font-family: var(--display); font-size: 48px; font-weight: 600; color: var(--ink); margin-bottom: 16px; letter-spacing: -1.5px; }
+  .section-intro { font-size: 16px; color: var(--body); max-width: 720px; margin-bottom: 48px; }
+
+  .palette-group { margin-bottom: 56px; }
+  .palette-group h3 { font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 20px; }
+  .palette-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+  .swatch { border: 1px solid var(--hairline); border-radius: 12px; overflow: hidden; background: var(--canvas); }
+  .swatch-color { height: 80px; }
+  .swatch-meta { padding: 12px 14px; }
+  .swatch-name { font-weight: 600; font-size: 13px; color: var(--ink); margin-bottom: 4px; }
+  .swatch-hex { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+  .swatch-role { font-size: 12px; color: var(--body); line-height: 1.4; }
+
+  .type-row { display: grid; grid-template-columns: 320px 1fr; gap: 32px; align-items: baseline; padding: 20px 0; border-bottom: 1px solid var(--hairline); }
+  .type-row:last-child { border-bottom: none; }
+  .type-meta { font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .type-meta strong { display: block; color: var(--ink); font-weight: 600; font-size: 13px; margin-bottom: 4px; }
+  .type-sample { color: var(--ink); }
+
+  .button-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+  .button-cell { border: 1px solid var(--hairline); border-radius: 12px; padding: 28px; background: var(--canvas); min-width: 0; }
+  .button-cell.on-dark { background: var(--surface-dark); border-color: rgba(255,255,255,0.1); }
+  .button-cell.on-dark .button-label { color: var(--on-dark); }
+  .button-cell.on-dark .button-meta { color: var(--on-dark-soft); }
+  .button-label { font-size: 13px; color: var(--ink); font-weight: 600; margin-bottom: 12px; }
+  .button-meta { font-size: 12px; color: var(--muted); margin-top: 14px; line-height: 1.5; }
+  .btn {
+    display: inline-block; padding: 12px 20px; height: 40px;
+    border-radius: 8px; font-size: 14px; font-weight: 600;
+    border: none; cursor: pointer; font-family: inherit; line-height: 1;
+  }
+  .btn-primary { background: var(--primary); color: var(--on-primary); }
+  .btn-primary-active { background: var(--primary-active); color: var(--on-primary); }
+  .btn-primary-disabled { background: var(--primary-disabled); color: var(--muted); cursor: not-allowed; }
+  .btn-secondary { background: var(--canvas); color: var(--ink); border: 1px solid var(--hairline); }
+  .btn-text-link { background: transparent; color: var(--ink); border: none; padding: 0; height: auto; text-decoration: underline; }
+  .btn-icon-circular { width: 36px; height: 36px; border-radius: 50%; background: var(--canvas); border: 1px solid var(--hairline); color: var(--ink); display: inline-flex; align-items: center; justify-content: center; padding: 0; }
+
+  .nav-pill-group {
+    display: inline-flex; gap: 4px;
+    background: var(--surface-soft); padding: 6px;
+    border-radius: 9999px; align-items: center;
+  }
+  .nav-pill-group .pill {
+    padding: 8px 14px; font-size: 14px; font-weight: 500;
+    color: var(--muted); border-radius: 9999px; cursor: pointer;
+  }
+  .nav-pill-group .pill.active { background: var(--canvas); color: var(--ink); box-shadow: 0 1px 2px rgba(0,0,0,0.08); }
+
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; min-width: 0; }
+  .card-grid > * { min-width: 0; }
+
+  .feature-card { background: var(--surface-card); border-radius: 12px; padding: 32px; }
+  .feature-card .icon { width: 40px; height: 40px; border-radius: 8px; background: var(--canvas); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 18px; }
+  .feature-card h4 { font-size: 18px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+  .feature-card p { font-size: 14px; color: var(--body); line-height: 1.5; }
+
+  .feature-icon-card { background: var(--canvas); border: 1px solid var(--hairline); border-radius: 12px; padding: 24px; }
+  .feature-icon-card h4 { font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+  .feature-icon-card p { font-size: 13px; color: var(--muted); }
+
+  .product-mockup-card { background: var(--canvas); border: 1px solid var(--hairline); border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .product-mockup-card .ui-header { font-size: 13px; font-weight: 600; color: var(--ink); padding-bottom: 12px; border-bottom: 1px solid var(--hairline-soft); margin-bottom: 12px; }
+  .product-mockup-card .ui-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--hairline-soft); font-size: 13px; }
+  .product-mockup-card .ui-row:last-child { border-bottom: none; }
+  .product-mockup-card .ui-row .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+  .testimonial-card { background: var(--surface-card); border-radius: 12px; padding: 24px; }
+  .testimonial-card .head { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .testimonial-card .avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--badge-violet); color: var(--on-dark); display: inline-flex; align-items: center; justify-content: center; font-weight: 600; font-size: 13px; }
+  .testimonial-card .who { font-size: 13px; }
+  .testimonial-card .name { font-weight: 600; color: var(--ink); }
+  .testimonial-card .role { color: var(--muted); }
+  .testimonial-card p { font-size: 14px; color: var(--body); line-height: 1.5; }
+
+  .pricing-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+  .pricing-tier { background: var(--canvas); border: 1px solid var(--hairline); border-radius: 12px; padding: 32px; }
+  .pricing-tier.featured { background: var(--surface-dark); color: var(--on-dark); border-color: rgba(255,255,255,0.1); }
+  .pricing-tier h4 { font-size: 22px; font-weight: 600; color: var(--ink); margin-bottom: 12px; letter-spacing: -0.3px; }
+  .pricing-tier.featured h4 { color: var(--on-dark); }
+  .pricing-tier .price { font-family: var(--display); font-size: 28px; font-weight: 600; color: var(--ink); margin-bottom: 16px; letter-spacing: -0.5px; }
+  .pricing-tier.featured .price { color: var(--on-dark); }
+  .pricing-tier ul { list-style: none; padding: 0; margin: 0 0 24px; font-size: 14px; }
+  .pricing-tier ul li { padding: 6px 0; color: var(--body); display: flex; align-items: center; gap: 8px; }
+  .pricing-tier.featured ul li { color: var(--on-dark-soft); }
+  .pricing-tier ul li::before { content: '✓'; color: var(--success); font-weight: 600; }
+
+  .form-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+  .form-cell { min-width: 0; }
+  .form-label { font-size: 13px; font-weight: 500; color: var(--ink); margin-bottom: 8px; display: block; }
+  .form-input {
+    width: 100%; background: var(--canvas); color: var(--ink);
+    border: 1px solid var(--hairline); padding: 10px 14px; height: 40px;
+    border-radius: 8px; font-size: 14px; font-family: inherit;
+  }
+  .form-input::placeholder { color: var(--muted-soft); }
+  .form-input.focused { border-color: var(--ink); box-shadow: 0 0 0 3px rgba(17,17,17,0.08); outline: none; }
+
+  .badge-pill { display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 9999px; background: var(--surface-card); color: var(--ink); font-size: 13px; font-weight: 500; }
+  .badge-pill.orange { background: rgba(251,146,60,0.16); color: #c2410c; }
+  .badge-pill.pink { background: rgba(236,72,153,0.16); color: #be185d; }
+  .badge-pill.violet { background: rgba(139,92,246,0.16); color: #6d28d9; }
+  .badge-pill.emerald { background: rgba(52,211,153,0.16); color: #047857; }
+
+  .avatar-row { display: flex; align-items: center; gap: 8px; }
+  .avatar-row .avatar { width: 36px; height: 36px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: var(--on-dark); font-weight: 600; font-size: 13px; }
+  .avatar-row .avatar.orange { background: var(--badge-orange); }
+  .avatar-row .avatar.pink { background: var(--badge-pink); }
+  .avatar-row .avatar.violet { background: var(--badge-violet); }
+  .avatar-row .avatar.emerald { background: var(--badge-emerald); }
+
+  .spacing-row { display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
+  .spacing-block { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .spacing-bar { background: var(--primary); height: 28px; border-radius: 4px; }
+  .spacing-label { font-size: 11px; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
+
+  .radius-row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .radius-block {
+    width: 96px; height: 96px;
+    background: var(--surface-card); border: 1px solid var(--hairline);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; color: var(--ink); font-weight: 600; font-family: 'JetBrains Mono', monospace;
+  }
+
+  .elevation-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; }
+  .elevation-card { background: var(--canvas); border-radius: 12px; padding: 24px; font-size: 13px; }
+  .elevation-card h5 { font-weight: 600; color: var(--ink); margin-bottom: 6px; font-size: 13px; }
+  .elevation-card p { color: var(--muted); font-size: 12px; }
+  .elevation-flat { border: 1px solid var(--hairline); }
+  .elevation-soft-card { background: var(--surface-card); }
+  .elevation-shadow { box-shadow: 0 1px 2px rgba(0,0,0,0.05), 0 4px 12px rgba(0,0,0,0.08); border: 1px solid var(--hairline); }
+  .elevation-dark { background: var(--surface-dark); color: var(--on-dark); border: 1px solid rgba(255,255,255,0.08); }
+  .elevation-dark h5 { color: var(--on-dark); }
+  .elevation-dark p { color: var(--on-dark-soft); }
+
+  .responsive-table { width: 100%; border-collapse: collapse; margin-bottom: 32px; font-size: 14px; }
+  .responsive-table th, .responsive-table td { text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--hairline); }
+  .responsive-table th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .responsive-table td { color: var(--body); }
+  .device-ladder { display: flex; align-items: flex-end; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+  .device-bar { background: var(--surface-card); border-radius: 6px; color: var(--muted); text-align: center; padding: 8px; font-size: 11px; font-family: 'JetBrains Mono', monospace; flex-shrink: 0; }
+
+  .responsive-sub { margin-top: 32px; }
+  .responsive-sub h4 { font-size: 18px; font-weight: 600; color: var(--ink); margin-bottom: 12px; }
+  .responsive-sub ul { padding-left: 20px; color: var(--body); font-size: 14px; }
+  .responsive-sub ul li { margin-bottom: 8px; }
+
+  .footer { background: var(--surface-dark); color: var(--on-dark-soft); padding: 64px 48px; font-size: 13px; }
+  .footer .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer .brand { color: var(--on-dark); font-size: 16px; font-weight: 600; margin-bottom: 24px; }
+  .footer a { color: var(--on-dark); font-weight: 500; }
+  .footer .legal { margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 12px; color: var(--on-dark-soft); text-align: center; }
+
+  .cell, .cell > *, .demo, .button-cell, .component-cell { min-width: 0; }
+  .cell.wide, .button-cell.wide, .component-cell.wide { grid-column: span 2; }
+  @media (max-width: 1024px) {
+    section { padding: 64px 32px; }
+    .section-heading { font-size: 36px; letter-spacing: -1px; }
+    .nav > :last-child { display: none; }
+    .hero { grid-template-columns: 1fr; gap: 32px; padding: 64px 32px; }
+    .hero h1 { font-size: 44px; letter-spacing: -1.5px; }
+    .hero-art, .hero-art-photo { display: none; }
+    .type-row { grid-template-columns: 1fr; gap: 8px; }
+    .type-row .type-meta { padding-bottom: 4px; }
+    .pricing-grid, .form-grid { gap: 16px; }
+  }
+  @media (max-width: 720px) {
+    .cell.wide, .button-cell.wide, .component-cell.wide { grid-column: span 1; }
+    .nav { padding: 0 48px; height: auto; min-height: 56px; }
+    .nav-links { display: none; }
+    .hero { padding: 48px 20px; }
+    .hero h1 { font-size: 32px; letter-spacing: -1px; }
+    .hero p { font-size: 16px; }
+    section { padding: 48px 20px; }
+    .section-heading { font-size: 28px; }
+    .palette-grid, .button-grid, .card-grid, .form-grid, .pricing-grid, .elevation-grid { grid-template-columns: 1fr !important; gap: 16px; }
+    .spacing-row, .radius-row { gap: 12px; }
+    .responsive-table { font-size: 12px; }
+    .responsive-table th, .responsive-table td { padding: 10px 8px; }
+    .device-ladder { gap: 8px; }
+    .footer { padding: 32px 16px; font-size: 12px; }
+  }
+
+  /* getdesign.md nav additions */
+  .nav-left { display: flex; align-items: center; gap: 20px; }
+  .nav-brand-link, .nav-brand-link:link, .nav-brand-link:visited, .nav-brand-link:hover, .nav-brand-link:active { text-decoration: none; color: inherit; }
+  .nav-brand { font-family: var(--display); font-weight: 600; font-size: 16px; color: var(--ink); letter-spacing: -0.3px; }
+  .nav-github, .nav-github:link, .nav-github:visited, .nav-github:hover, .nav-github:active {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600;
+    color: inherit; text-decoration: none; padding: 5px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.3); border-radius: 6px;
+    opacity: 0.75; transition: opacity 200ms ease, border-color 200ms ease;
+    font-family: inherit; line-height: 1; white-space: nowrap;
+  }
+  .nav-github:hover { opacity: 1; border-color: rgba(128, 128, 128, 0.55); }
+  .nav-github svg { display: block; flex-shrink: 0; }
+
+  /* getdesign.md nav centering */
+  .nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+  .nav > .nav-left { justify-self: start; }
+  .nav > .nav-links { justify-self: center; }
+  .nav > :last-child { justify-self: end; }
+
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+<style data-design-nav="true">
+.design-preview-nav { min-height:48px; }
+.design-preview-nav .nav-brand { white-space:normal; overflow-wrap:anywhere; }
+.design-preview-nav .nav-links { display:flex; flex-wrap:wrap; gap:8px clamp(10px,2vw,26px); padding-block:5px; }
+.design-preview-nav a { text-decoration:none; }
+.design-preview-nav .nav-links a { color:inherit; }
+.design-preview-nav .nav-links a:hover { text-decoration:underline; text-underline-offset:3px; }
+.design-preview-nav a:focus-visible { outline:2px solid currentColor; outline-offset:4px; }
+:is([id^=design-section-],[id=design-overview]) { scroll-margin-top:94px; }
+@media (max-width:760px) {
+  .design-preview-nav { position:static; display:flex; flex-wrap:wrap; gap:3px 12px; padding:8px 12px; height:auto; }
+  .design-preview-nav .nav-left { min-width:0; }
+  .design-preview-nav > .nav-links { flex:1 1 100%; display:flex; padding-inline:0; }
+  .design-preview-nav .nav-cta { display:none; }
+  :is([id^=design-section-],[id=design-overview]) { scroll-margin-top:14px; }
+}
+</style></head>
+<body><nav aria-label="样张章节" class="nav design-preview-nav" data-design-nav="true"><div class="nav-left"><span class="nav-brand">Cal.com</span></div><ul class="nav-links"><li><a href="#design-section-1">配色</a></li><li><a href="#design-section-6">字体</a></li><li><a href="#design-section-7">按钮</a></li><li><a href="#design-section-8">卡片</a></li></ul><a class="nav-cta" href="#design-overview">概览</a></nav>
+<div class="hero">
+<div class="hero-content">
+<h1 id="design-overview">黑白极简预约</h1>
+<p>白色底面、黑色主按钮和 Cal Sans 标题构成简洁的预约界面。留白区分段落，浅灰圆角卡片承载次要内容。</p>
+<div class="hero-actions">
+<button class="btn-hero-primary">免费报名</button>
+<button class="btn-hero-secondary">观看演示</button>
+</div>
+</div>
+<div class="hero-art">
+<div class="booking-header">
+<div class="avatar">A</div>
+<div class="booking-meta">
+<div class="name">Alex 产品代号</div>
+<div class="duration">30 分钟 \ 谷歌会合</div>
+</div>
+</div>
+<div class="calendar-grid">
+<div class="day head">M</div><div class="day head">T</div><div class="day head">W</div><div class="day head">T</div><div class="day head">F</div><div class="day head">S</div><div class="day head">S</div>
+<div class="day available">10</div><div class="day available">11</div><div class="day available">12</div><div class="day available">13</div><div class="day selected">14</div><div class="day">15</div><div class="day">16</div>
+<div class="day available">17</div><div class="day available">18</div><div class="day available">19</div><div class="day available">20</div><div class="day available">21</div><div class="day">22</div><div class="day">23</div>
+</div>
+<div class="slots-row">
+<div class="slot">09:00</div>
+<div class="slot active">10:30</div>
+<div class="slot">14:00</div>
+</div>
+</div>
+</div>
+<section id="colors">
+<div class="section-label">01 — 彩色调色板</div>
+<h2 class="section-heading" id="design-section-1">单色界面与浅彩徽标</h2>
+<p class="section-intro">黑色初级行动按钮+白色页面底色+浅灰色卡片. 帕斯特尔徽章在浮雕和标签上增加了色素的繁荣——从不出现在首屏CTA上.</p>
+<div class="palette-group">
+<h3>品牌色</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#111111;"></div><div class="swatch-meta"><div class="swatch-name">主要/文字色</div><div class="swatch-hex">#111111</div><div class="swatch-role">初级行动按钮,h1/h2类型. 同样的六分法为两个角色服务.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#242424;"></div><div class="swatch-meta"><div class="swatch-name">primary-active</div><div class="swatch-hex">#242424</div><div class="swatch-role">按主按钮上的状态。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#3b82f6;"></div><div class="swatch-meta"><div class="swatch-name">brand-accent</div><div class="swatch-hex">#3b82f6</div><div class="swatch-role">内在链接和罕见的亮点.</div></div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>界面表面</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#ffffff; border-bottom:1px solid var(--hairline);"></div><div class="swatch-meta"><div class="swatch-name">页面底色</div><div class="swatch-hex">#ffffff</div><div class="swatch-role">默认页面表面。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#f8f9fa;"></div><div class="swatch-meta"><div class="swatch-name">surface-soft</div><div class="swatch-hex">#f8f9fa</div><div class="swatch-role">Nav-pill-group背景.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#f5f5f5;"></div><div class="swatch-meta"><div class="swatch-name">surface-card</div><div class="swatch-hex">#f5f5f5</div><div class="swatch-role">功能卡片, 证物, 徽章 胶囊控件.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#101010;"></div><div class="swatch-meta"><div class="swatch-name">surface-dark</div><div class="swatch-hex">#101010</div><div class="swatch-role">页脚+特色套餐层级.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#e5e7eb;"></div><div class="swatch-meta"><div class="swatch-name">细边框</div><div class="swatch-hex">#e5e7eb</div><div class="swatch-role">1px在输入和内容上的边界卡片.（原文参数：1px）</div></div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>文字色</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#111111;"></div><div class="swatch-meta"><div class="swatch-name">文字色</div><div class="swatch-hex">#111111</div><div class="swatch-role">头条和主文.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#374151;"></div><div class="swatch-meta"><div class="swatch-name">正文</div><div class="swatch-hex">#374151</div><div class="swatch-role">默认的运行文本。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#6b7280;"></div><div class="swatch-meta"><div class="swatch-name">哑巴</div><div class="swatch-hex">#6b7280</div><div class="swatch-role">子头,面包屑,脚踏车.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#a1a1aa;"></div><div class="swatch-meta"><div class="swatch-name">on-dark-soft</div><div class="swatch-hex">#a1a1aa</div><div class="swatch-role">脚印体文字——略微哑白.</div></div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>浅彩徽标</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#fb923c;"></div><div class="swatch-meta"><div class="swatch-name">badge-orange</div><div class="swatch-hex">#fb923c</div><div class="swatch-role">幻象填充,评分星.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#ec4899;"></div><div class="swatch-meta"><div class="swatch-name">badge-pink</div><div class="swatch-hex">#ec4899</div><div class="swatch-role">幻者补之.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#8b5cf6;"></div><div class="swatch-meta"><div class="swatch-name">badge-violet</div><div class="swatch-hex">#8b5cf6</div><div class="swatch-role">幻象填充,分类标记.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#34d399;"></div><div class="swatch-meta"><div class="swatch-name">badge-emerald</div><div class="swatch-hex">#34d399</div><div class="swatch-role">神通填充,"可用"指标.</div></div></div>
+</div>
+</div>
+</section>
+<section id="typography">
+<div class="section-label">02 ——字型缩放</div>
+<h2 class="section-heading" id="design-section-6">Cal Sans + Inter</h2>
+<p class="section-intro">Cal Sans (display, weight 600, negative letter-spacing) handles every headline. Inter (regular + medium) handles body, buttons, nav. Cal Sans substituted with Inter weight 600 here.</p>
+<div class="type-row"><div class="type-meta"><strong>display-xl</strong>64px / 600 / 1.05 / -2px<br/>Cal Sans</div><div class="type-sample" style="font-size:64px; font-weight:600; line-height:1.05; letter-spacing:-2px;">更好的安排方式</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-lg</strong>48px / 600 / 1.1 / -1.5px</div><div class="type-sample" style="font-size:48px; font-weight:600; line-height:1.1; letter-spacing:-1.5px;">您的全功能排程应用程序</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-md</strong>36px / 600 / 1.15 / -1px</div><div class="type-sample" style="font-size:36px; font-weight:600; line-height:1.15; letter-spacing:-1px;">不要只听我们的话</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-sm</strong>28px / 600 / 1.2 / -0.5px</div><div class="type-sample" style="font-size:28px; font-weight:600; line-height:1.2; letter-spacing:-0.5px;">更聪明,更简单的排程</div></div>
+<div class="type-row"><div class="type-meta"><strong>title-lg</strong>22px / 600 / 1.3 / -0.3px</div><div class="type-sample" style="font-size:22px; font-weight:600;">$15/用户/月</div></div>
+<div class="type-row"><div class="type-meta"><strong>title-md</strong>18px / 600 / 1.4 / 0</div><div class="type-sample" style="font-size:18px; font-weight:600;">轮旋周期排程</div></div>
+<div class="type-row"><div class="type-meta"><strong>title-sm</strong>16px / 600 / 1.4 / 0</div><div class="type-sample" style="font-size:16px; font-weight:600;">工作流程自动化</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-md</strong>16px / 400 / 1.5 / 0</div><div class="type-sample" style="font-size:16px; line-height:1.5;">设置您在多个时区之间的可用性, 同步您的日历, 让参与者直接预订。</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-sm</strong>14px / 400 / 1.5 / 0</div><div class="type-sample" style="font-size:14px; color:var(--body);">Footer body, fine-print legal text — same Inter face at smaller size.</div></div>
+<div class="type-row"><div class="type-meta"><strong>标题</strong>13px / 500 / 1.4 / 0</div><div class="type-sample" style="font-size:13px; font-weight:500; color:var(--muted);">自由 14-DAY TRIAL 不需要任何信用 卡片</div></div>
+<div class="type-row"><div class="type-meta"><strong>代码</strong>14px / 400 / 1.5 / 0<br/>JetBrains Mono</div><div class="type-sample" style="font-family:'JetBrains Mono', monospace; font-size:14px;">cal.com/aex/( 备注)30分钟</div></div>
+<div class="type-row"><div class="type-meta"><strong>按钮</strong>14px / 600 / 1.0 / 0</div><div class="type-sample" style="font-size:14px; font-weight:600;">免费报名</div></div>
+<div class="type-row"><div class="type-meta"><strong>nav-link</strong>14px / 500 / 1.4 / 0</div><div class="type-sample" style="font-size:14px; font-weight:500;">产品 解决方案 资源 定价 企业</div></div>
+</section>
+<section id="components">
+<div class="section-label">03  —按钮变体</div>
+<h2 class="section-heading" id="design-section-7">白底黑字的单色操作层</h2>
+<p class="section-intro">Primary stays #111111 with rounded-md corners and weight-600 labels. Secondary is white with hairline outline. The system has no colored buttons.</p>
+<div class="button-grid">
+<div class="button-cell"><div class="button-label">button-primary</div><button class="btn btn-primary">免费报名</button><div class="button-meta">主 / on-primary / md 半径/ 标准</div></div>
+<div class="button-cell"><div class="button-label">button-primary-active</div><button class="btn btn-primary-active">按下</button><div class="button-meta">primary-active 背景</div></div>
+<div class="button-cell"><div class="button-label">button-primary-disabled</div><button class="btn btn-primary-disabled" disabled="">禁用</button><div class="button-meta">primary-disabled / 弱化文字 Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q</div></div>
+<div class="button-cell"><div class="button-label">button-secondary</div><button class="btn btn-secondary">观看演示</button><div class="button-meta">页面底色 / 文字色 / 细边框 大纲</div></div>
+<div class="button-cell"><div class="button-label">button-text-link</div><button class="btn-text-link">读文件</button><div class="button-meta">无背景; 内含链接样式</div></div>
+<div class="button-cell"><div class="button-label">button-icon-circular</div><div style="display:flex; gap:12px;"><button aria-label="预览" class="btn-icon-circular">‹</button><button aria-label="下一个" class="btn-icon-circular">›</button></div><div class="button-meta">36 × 36 /画布/细边线/全半径</div></div>
+<div class="button-cell wide"><div class="button-label">nav-pill-group</div>
+<div class="nav-pill-group"><div class="pill active">个人</div><div class="pill">团队版</div><div class="pill">企业版</div></div>
+<div class="button-meta">枕头sub-nav切换器. 活性段是surface-soft包装器内部的白色-canvas.</div>
+</div>
+</div>
+</section>
+<section>
+<div class="section-label">04 — Cards &amp; Containers</div>
+<h2 class="section-heading" id="design-section-8">浅灰色功能卡片 + 产品 UI 碎片</h2>
+<div class="card-grid">
+<div class="feature-card">
+<div class="icon">📅</div>
+<h4>日历同步、 统一</h4>
+<p>连接谷歌,Outlook,iCloud,以及交换. Cal.com将您的实时可用性保存在一个地方.</p>
+</div>
+<div class="feature-card">
+<div class="icon">⚡</div>
+<h4>工作流程自动化</h4>
+<p>预订确认时自动发送提醒,后续电子邮件和会后表格.</p>
+</div>
+<div class="feature-card">
+<div class="icon">🤝</div>
+<h4>团队圆形</h4>
+<p>共享一个链接。 Cal.com在队友之间 公平地进行预定</p>
+</div>
+<div class="product-mockup-card">
+<div class="ui-header">今天的订房</div>
+<div class="ui-row"><div class="dot" style="background:var(--badge-orange);"></div><div style="flex:1;"><div style="font-weight:600;">与 Alex 一起进行产品演示</div><div style="color:var(--muted); font-size:12px;">10:30 — 11:00 · 谷歌会议</div></div></div>
+<div class="ui-row"><div class="dot" style="background:var(--badge-violet);"></div><div style="flex:1;"><div style="font-weight:600;">设计审查</div><div style="color:var(--muted); font-size:12px;">14:00 — 15:00 缩放</div></div></div>
+<div class="ui-row"><div class="dot" style="background:var(--badge-emerald);"></div><div style="flex:1;"><div style="font-weight:600;">1:1 与优素福</div><div style="color:var(--muted); font-size:12px;">16:30-17:00 ——当面</div></div></div>
+</div>
+<div class="testimonial-card">
+<div class="head">
+<div class="avatar">联合</div>
+<div class="who"><div class="name">杰米·莫里森(英语:Jamie Morrison).</div><div class="role">销售主管 · Notion</div></div>
+</div>
+<p>"Cal.com replaced four scheduling tools overnight. The team round-robin alone saves us 12 hours / week of back-and-forth."</p>
+</div>
+<div class="testimonial-card">
+<div class="head">
+<div class="avatar" style="background:var(--badge-emerald);">常规方案</div>
+<div class="who"><div class="name">瑞秋·朴(英语:Rachel Park)</div><div class="role">创始人 Linear</div></div>
+</div>
+<p>"最清洁的上市排程产品. 开源,无限定制,而且只是工作".</p>
+</div>
+</div>
+</section>
+<section>
+<div class="section-label">05 套餐层级</div>
+<div class="pricing-grid">
+<div class="pricing-tier"><h4>免费版</h4><div class="price">$0</div><ul><li>个人日程安排链接</li><li>无限预订</li><li>Up to 1 calendar</li></ul><button class="btn btn-primary" style="width:100%;">开始使用</button></div>
+<div class="pricing-tier"><h4>专业版</h4><div class="price">$15</div><ul><li>3 日历+工作流程</li><li>自定义品牌</li><li>轮旋周期排程</li></ul><button class="btn btn-primary" style="width:100%;">尝试自由的 Pro</button></div>
+<div class="pricing-tier featured"><h4>团队版</h4><div class="price">$15 / 用户</div><ul><li>团队日程安排链接</li><li>轮旋和集体</li><li>萨马勒·索</li></ul><button class="btn btn-primary" style="width:100%;">尝试团队空闲</button></div>
+<div class="pricing-tier"><h4>企业版</h4><div class="price">自定义</div><ul><li>SOC 2 + HIPAA 导弹发射系统</li><li>苏丹解放军+全心全意地取得成功</li><li>自定义集成</li></ul><button class="btn btn-secondary" style="width:100%;">联系销售</button></div>
+</div>
+</section>
+<section>
+<div class="section-label">06 - 形式要素</div>
+<div class="form-grid">
+<div class="form-cell"><label class="form-label">电子邮箱</label><input class="form-input" placeholder="you@example.com" type="email"/></div>
+<div class="form-cell"><label class="form-label">电子邮件(重点)</label><input class="form-input focused" type="email" value="alex@studio.com"/></div>
+<div class="form-cell"><label class="form-label">订书标题</label><input class="form-input" placeholder="30 分钟会议" type="text"/></div>
+<div class="form-cell wide"><label class="form-label">自定义消息</label><input class="form-input" placeholder="任何你想要客人知道的..." type="text"/></div>
+</div>
+</section>
+<section>
+<div class="section-label">07 – 徽章和神通</div>
+<p class="section-intro">帕斯特尔徽章和阿凡达填充是系统唯一的色调繁荣. 它们出现在标记,"可用"指标,和异形代用品上.</p>
+<div style="display:flex; flex-wrap:wrap; gap:12px; margin-bottom:32px;">
+<span class="badge-pill orange">特性</span>
+<span class="badge-pill pink">新设</span>
+<span class="badge-pill violet">贝塔</span>
+<span class="badge-pill emerald">可用</span>
+<span class="badge-pill">默认</span>
+</div>
+<div class="avatar-row">
+<div class="avatar orange">A</div>
+<div class="avatar pink">B</div>
+<div class="avatar violet">C</div>
+<div class="avatar emerald">D</div>
+<div class="avatar" style="background:var(--surface-card); color:var(--ink);">E</div>
+</div>
+</section>
+<section>
+<div class="section-label">08 —— 间距</div>
+<p class="section-intro">节奏96px在主要乐队之间. 卡片内部垫装32px.（原文参数：96px、32px）</p>
+<div class="spacing-row">
+<div class="spacing-block"><div class="spacing-bar" style="width:4px;"></div><div class="spacing-label">xxx 4px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:8px;"></div><div class="spacing-label">xs 8px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:12px;"></div><div class="spacing-label">sm 12px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:16px;"></div><div class="spacing-label">md 16px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:24px;"></div><div class="spacing-label">24px 高压压压轴</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:32px;"></div><div class="spacing-label">□ 32px</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:48px;"></div><div class="spacing-label">xxl 48px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:96px;"></div><div class="spacing-label">· 96px</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">09 — 圆角半径 比例尺</div>
+<div class="radius-row">
+<div class="radius-block" style="border-radius:4px;">4 − xs 组合键</div>
+<div class="radius-block" style="border-radius:6px;">6 零点</div>
+<div class="radius-block" style="border-radius:8px;">8 数据</div>
+<div class="radius-block" style="border-radius:12px;">12 − lg</div>
+<div class="radius-block" style="border-radius:16px;">16 − xl 数据</div>
+<div class="radius-block" style="border-radius:9999px;">胶囊形</div>
+<div class="radius-block" style="border-radius:50%;">满</div>
+</div>
+</section>
+<section>
+<div class="section-label">10 高度和深度</div>
+<p class="section-intro">高架卡片上柔软的现代阴影. 与标价等级的色块对比. 没有玻璃形态 没有中微子形态</p>
+<div class="elevation-grid">
+<div class="elevation-card elevation-flat"><h5>平面</h5><p>身体部分 顶部导航 首屏区块</p></div>
+<div class="elevation-card elevation-soft-card"><h5>软卡片</h5><p>功能卡片, 检验型卡片 (surface-card).</p></div>
+<div class="elevation-card elevation-shadow"><h5>暗影( B)</h5><p>套餐层级卡. 0 1px 2px + 0 4px 12px  在低阿尔法。</p></div>
+<div class="elevation-card elevation-dark"><h5>特征等级</h5><p>暗色表面反演——色彩对比作用于高架.</p></div>
+<div class="elevation-card elevation-flat"><h5>卡片 与 细边框 组合</h5><p>白牌随笔 1px 细边线大纲. 用于产品模型。</p></div>
+<div class="elevation-card elevation-flat"><h5>焦点环</h5><p>3px ink-color at 8% alpha around focused inputs.</p></div>
+</div>
+</section>
+<section id="responsive">
+<div class="section-label">11 反应行为</div>
+<table class="responsive-table">
+<thead><tr><th>名称</th><th>宽度</th><th>密钥更改</th></tr></thead>
+<tbody>
+<tr><td>手机端</td><td>&lt; 768px Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q</td><td>折叠菜单;首屏h1 64→32px; 下面的首屏艺术堆栈; 特性网格 1 列;定价 1 列</td></tr>
+<tr><td>平板</td><td>768–1024px</td><td>顶部导航收紧; nav-pill-group 包装; 特性卡 2 列;定价 2 列</td></tr>
+<tr><td>桌面端</td><td>1024–1440px</td><td>全top-nav; 3-up 功能卡片; 4-up套餐层级.</td></tr>
+<tr><td>宽</td><td>&gt; 1440px 单倍径</td><td>与呼吸室较多的桌面相同;最大内容1200px.（原文参数：1200px）</td></tr>
+</tbody>
+</table>
+<div class="device-ladder">
+<div class="device-bar" style="width:60px; height:120px;">375<br/>手机端</div>
+<div class="device-bar" style="width:90px; height:140px;">600<br/>小型电话</div>
+<div class="device-bar" style="width:140px; height:160px;">768<br/>平板电脑</div>
+<div class="device-bar" style="width:200px; height:180px;">1024<br/>膝上型计算机</div>
+<div class="device-bar" style="width:260px; height:200px;">1280<br/>桌面端</div>
+<div class="device-bar" style="width:320px; height:220px;">1440<br/>宽</div>
+</div>
+<div class="responsive-sub"><h4>触控区域</h4><ul><li>初级行动按钮在min 40 × 40px.</li><li>Icon button at 36 × 36 — slightly under 44, visually centered.</li><li>文本输入高度 40px.</li></ul></div>
+<div class="responsive-sub"><h4>窄屏布局调整</h4><ul><li>顶端导航在 &lt; 768px 上坍塌为汉堡。</li><li>首屏们 7-5 网格 → 移动上的单列.</li><li>地物网格减少柱而非缩放.</li><li>套餐层级卡崩溃 4 → 2 → 1; 特色保持鲜明。</li><li>Nav-pill-group 将牌匾包装成多排.</li></ul></div>
+</section>
+<footer class="footer">
+<div class="footer-shell">
+<div class="footer-grid">
+<div class="footer-col">
+<h6>VoltAgent 框架</h6>
+<span>类型脚本代理</span>
+<span>工具编程</span>
+<span>多种代理工作流程</span>
+</div>
+<div class="footer-col">
+<h6>伏特Ops LLM 可观测性</h6>
+<span>LLM 跟踪</span>
+<span>实时调试</span>
+<span>视觉时间</span>
+</div>
+<div class="footer-col">
+<h6>生产</h6>
+<span>评价</span>
+<span>即时管理</span>
+<span>护卫</span>
+</div>
+<div class="footer-col">
+<h6>平台</h6>
+<span>伏特Ops 控制台</span>
+<span>开源核心</span>
+<span>代理工程</span>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

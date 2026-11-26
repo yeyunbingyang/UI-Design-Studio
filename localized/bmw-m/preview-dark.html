@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>黑底三色赛车风</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --primary: #ffffff;
+    --ink: #ffffff;
+    --body: rgba(255,255,255,0.85);
+    --body-strong: #ffffff;
+    --muted: rgba(255,255,255,0.6);
+    --hairline: rgba(255,255,255,0.12);
+    --hairline-strong: rgba(255,255,255,0.22);
+    --canvas: #0c0c0e;
+    --surface-card: #161618;
+    --surface-elevated: #262626;
+    --surface-soft: #161618;
+    --on-primary: #000000;
+    --on-dark: #ffffff;
+    --m-blue-light: #0066b1;
+    --m-blue-dark: #1c69d4;
+    --m-red: #e22718;
+    --bmw-blue: #1c69d4;
+    --electric-blue: #0653b6;
+    --carbon-gray: #2b2b2b;
+    --warning: #f4b400;
+    --success: #0fa336;
+    --m-stripe-gradient: linear-gradient(90deg, #0066b1 0%, #0066b1 33%, #1c69d4 33%, #1c69d4 66%, #e22718 66%, #e22718 100%);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--canvas);
+    color: var(--body);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 300;
+  }
+
+  .nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--canvas);
+    border-bottom: 1px solid var(--hairline);
+    padding: 0 48px;
+    height: 64px;
+  }
+  .nav-links { list-style: none; display: flex; gap: 28px; align-items: center; }
+  .nav-links a { color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 400; letter-spacing: 0.5px; }
+  .nav-cta {
+    background: transparent; color: var(--ink); border: 1px solid var(--ink);
+    padding: 10px 20px; font-weight: 700; font-size: 13px;
+    cursor: pointer; font-family: inherit;
+    text-transform: uppercase; letter-spacing: 1.5px;
+  }
+
+  .hero {
+    padding: 96px 48px;
+    background: var(--canvas);
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 64px;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .hero-content { max-width: 720px; }
+  .hero-art-photo {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-art-photo::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 30% 60%, rgba(28,105,212,0.25) 0%, transparent 55%);
+  }
+  .hero-art-photo .stripe { position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: var(--m-stripe-gradient); }
+  .m-stripe { height: 4px; background: var(--m-stripe-gradient); margin-bottom: 24px; }
+  .hero h1 {
+    font-size: 64px; font-weight: 700; line-height: 1; color: var(--ink);
+    text-transform: uppercase; margin: 0 0 16px; text-align: left;
+  }
+  .hero p { font-size: 18px; color: var(--body); max-width: 540px; margin: 0 0 40px; line-height: 1.4; text-align: left; }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-start; }
+  .btn-hero-primary, .btn-hero-secondary {
+    background: transparent; color: var(--ink); border: 1px solid var(--ink);
+    padding: 16px 32px; height: 48px;
+    font-weight: 700; font-size: 14px; cursor: pointer; font-family: inherit;
+    text-transform: uppercase; letter-spacing: 1.5px;
+  }
+  .btn-hero-primary { background: var(--ink); color: var(--canvas); }
+
+  section { max-width: 1440px; margin: 0 auto; padding: 96px 48px; border-top: 1px solid var(--hairline); }
+  .section-label { font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); font-weight: 700; margin-bottom: 12px; }
+  .section-heading { font-size: 40px; font-weight: 700; color: var(--ink); margin-bottom: 16px; text-transform: uppercase; }
+  .section-intro { font-size: 16px; color: var(--body); max-width: 720px; margin-bottom: 48px; font-weight: 300; }
+
+  .palette-group { margin-bottom: 56px; }
+  .palette-group h3 { font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1.5px; }
+  .palette-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+  .swatch { border: 1px solid var(--hairline); background: var(--surface-card); }
+  .swatch-color { height: 80px; }
+  .swatch-meta { padding: 12px 14px; }
+  .swatch-name { font-weight: 700; font-size: 12px; color: var(--ink); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .swatch-hex { font-family: ui-monospace, 'SF Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+  .swatch-role { font-size: 12px; color: var(--body); line-height: 1.5; font-weight: 300; }
+
+  .m-stripe-display { height: 16px; background: var(--m-stripe-gradient); margin-bottom: 16px; }
+
+  .type-row { display: grid; grid-template-columns: 320px 1fr; gap: 32px; align-items: baseline; padding: 20px 0; border-bottom: 1px solid var(--hairline); }
+  .type-row:last-child { border-bottom: none; }
+  .type-meta { font-size: 12px; color: var(--muted); line-height: 1.5; font-weight: 300; }
+  .type-meta strong { display: block; color: var(--ink); font-weight: 700; font-size: 12px; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .type-sample { color: var(--ink); }
+
+  .button-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+  .button-cell { border: 1px solid var(--hairline); padding: 28px; background: var(--surface-card); min-width: 0; }
+  .button-cell.on-photo { background: linear-gradient(135deg, #1a1a1a 0%, #000 100%); }
+  .button-label { font-size: 12px; color: var(--ink); font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .button-meta { font-size: 12px; color: var(--muted); margin-top: 14px; line-height: 1.5; font-weight: 300; }
+  .btn {
+    display: inline-block; padding: 16px 32px; height: 48px;
+    font-size: 14px; font-weight: 700; border: 1px solid var(--ink);
+    cursor: pointer; font-family: inherit; line-height: 1;
+    text-transform: uppercase; letter-spacing: 1.5px;
+  }
+  .btn-primary { background: var(--ink); color: var(--canvas); }
+  .btn-primary-outline { background: transparent; color: var(--ink); }
+  .btn-on-light { background: var(--canvas); color: var(--ink); }
+  .btn-icon {
+    width: 48px; height: 48px; border-radius: 50%;
+    background: var(--surface-card); border: 1px solid var(--hairline); color: var(--ink);
+    display: inline-flex; align-items: center; justify-content: center; font-size: 18px;
+  }
+  .btn-text-link {
+    background: transparent; color: var(--ink); border: none; padding: 0;
+    text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; font-size: 14px;
+  }
+  .btn-text-link::after { content: ' →'; }
+
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; min-width: 0; }
+  .card-grid > * { min-width: 0; }
+
+  .feature-photo-card { background: var(--surface-card); border: 1px solid var(--hairline); padding: 0; }
+  .feature-photo-card .photo {
+    aspect-ratio: 16/9; background: linear-gradient(135deg, #2b2b2b 0%, #0a0a0a 100%);
+    margin-bottom: 0;
+  }
+  .feature-photo-card .meta { padding: 24px; }
+  .feature-photo-card .tag { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); font-weight: 700; margin-bottom: 8px; }
+  .feature-photo-card h4 { font-size: 24px; font-weight: 700; color: var(--ink); margin-bottom: 12px; line-height: 1.2; text-transform: uppercase; }
+  .feature-photo-card p { font-size: 14px; color: var(--body); font-weight: 300; }
+
+  .model-card { background: var(--canvas); padding: 0; }
+  .model-card .photo {
+    aspect-ratio: 16/10; background: linear-gradient(180deg, #1c69d4 0%, #0a0a0a 100%);
+    margin-bottom: 16px;
+  }
+  .model-card h4 { font-size: 32px; font-weight: 700; color: var(--ink); margin-bottom: 8px; text-transform: uppercase; line-height: 1.1; }
+  .model-card .specs { font-size: 13px; color: var(--body); margin-bottom: 16px; font-weight: 300; }
+
+  .spec-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1px; background: var(--hairline); }
+  .spec-cell { background: var(--surface-soft); padding: 24px; }
+  .spec-cell .value { font-size: 32px; font-weight: 700; color: var(--ink); line-height: 1; margin-bottom: 8px; }
+  .spec-cell .label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; }
+
+  .magazine-article-card { background: var(--canvas); border: 1px solid var(--hairline); padding: 24px; }
+  .magazine-article-card .thumb {
+    width: 100%; aspect-ratio: 16/9;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2b2b2b 100%);
+    margin-bottom: 16px;
+  }
+  .magazine-article-card .tag { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); font-weight: 700; margin-bottom: 8px; }
+  .magazine-article-card h4 { font-size: 24px; font-weight: 700; color: var(--ink); margin-bottom: 12px; line-height: 1.2; text-transform: uppercase; }
+  .magazine-article-card p { font-size: 14px; color: var(--body); font-weight: 300; }
+
+  .motorsport-photo-card {
+    background: linear-gradient(180deg, #0a0a0a 0%, rgba(28,105,212,0.3) 100%);
+    aspect-ratio: 16/9;
+    position: relative; padding: 24px;
+    display: flex; flex-direction: column; justify-content: flex-end;
+  }
+  .motorsport-photo-card .label { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--ink); font-weight: 700; margin-bottom: 8px; }
+  .motorsport-photo-card h4 { font-size: 28px; font-weight: 700; color: var(--ink); text-transform: uppercase; line-height: 1.1; }
+
+  .chatbot-launcher { background: var(--surface-card); border: 1px solid var(--hairline); padding: 24px; }
+  .chatbot-launcher h3 { font-size: 24px; font-weight: 700; color: var(--ink); margin-bottom: 8px; text-transform: uppercase; }
+  .chatbot-launcher p { font-size: 14px; color: var(--body); margin-bottom: 24px; font-weight: 300; }
+
+  .category-tabs { display: flex; gap: 32px; border-bottom: 1px solid var(--hairline); margin-bottom: 32px; flex-wrap: wrap; }
+  .category-tab {
+    padding: 16px 0; color: var(--body); font-weight: 700; font-size: 14px;
+    text-transform: uppercase; letter-spacing: 1.5px; cursor: pointer;
+    border-bottom: 2px solid transparent;
+  }
+  .category-tab.active { color: var(--ink); border-bottom-color: var(--ink); }
+
+  .form-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+  .form-cell { min-width: 0; }
+  .form-label { font-size: 12px; font-weight: 700; color: var(--ink); margin-bottom: 8px; display: block; text-transform: uppercase; letter-spacing: 1.5px; }
+  .form-input {
+    width: 100%; background: var(--surface-card); color: var(--ink); border: 1px solid var(--hairline);
+    padding: 12px 16px; font-size: 14px; height: 48px; font-family: inherit; font-weight: 300;
+  }
+  .form-input::placeholder { color: var(--muted); }
+  .form-input.focused { border-color: var(--ink); }
+  .form-textarea {
+    width: 100%; background: var(--surface-card); color: var(--ink); border: 1px solid var(--hairline);
+    padding: 12px 16px; font-size: 14px; min-height: 120px; resize: vertical; font-family: inherit; font-weight: 300;
+  }
+
+  .cookie-consent-card { background: var(--canvas); border: 1px solid var(--hairline); padding: 24px; max-width: 480px; }
+  .cookie-consent-card p { font-size: 14px; color: var(--body); margin-bottom: 16px; font-weight: 300; }
+
+  .cta-band-photo {
+    background: linear-gradient(180deg, #0a0a0a 0%, #1c69d4 200%);
+    padding: 80px 48px; text-align: center; border: 1px solid var(--hairline);
+  }
+  .cta-band-photo h2 { font-size: 40px; font-weight: 700; color: var(--ink); margin-bottom: 32px; text-transform: uppercase; }
+
+  .spacing-row { display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
+  .spacing-block { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .spacing-bar { background: var(--ink); height: 28px; }
+  .spacing-label { font-size: 11px; color: var(--muted); font-family: ui-monospace, monospace; }
+
+  .radius-row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .radius-block {
+    width: 96px; height: 96px;
+    background: var(--surface-card); border: 1px solid var(--hairline);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; color: var(--ink); font-weight: 700; font-family: ui-monospace, monospace;
+  }
+
+  .elevation-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; }
+  .elevation-card { background: var(--surface-card); padding: 24px; font-size: 13px; color: var(--ink); }
+  .elevation-card h5 { font-weight: 700; color: var(--ink); margin-bottom: 6px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .elevation-card p { color: var(--muted); font-size: 12px; font-weight: 300; }
+  .elevation-flat { border: 1px solid var(--hairline); }
+  .elevation-elevated { background: var(--surface-elevated); border: 1px solid var(--hairline); }
+  .elevation-photo { background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%); border: 1px solid var(--hairline); }
+
+  .responsive-table { width: 100%; border-collapse: collapse; margin-bottom: 32px; font-size: 14px; }
+  .responsive-table th, .responsive-table td { text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--hairline); }
+  .responsive-table th { font-weight: 700; color: var(--ink); font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; }
+  .responsive-table td { color: var(--body); font-weight: 300; }
+
+  .device-ladder { display: flex; align-items: flex-end; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+  .device-bar { background: var(--surface-elevated); color: var(--muted); text-align: center; padding: 8px;
+    font-size: 11px; font-family: ui-monospace, monospace; flex-shrink: 0; }
+
+  .responsive-sub { margin-top: 32px; }
+  .responsive-sub h4 { font-size: 18px; font-weight: 700; color: var(--ink); margin-bottom: 12px; text-transform: uppercase; }
+  .responsive-sub ul { padding-left: 20px; color: var(--body); font-size: 14px; font-weight: 300; }
+  .responsive-sub ul li { margin-bottom: 8px; }
+
+  .footer { background: var(--canvas); color: var(--body); padding: 32px 48px; text-align: center; font-size: 13px; border-top: 1px solid var(--hairline); font-weight: 300; }
+  .footer a { color: var(--ink); font-weight: 700; }
+
+  .cell, .cell > *, .demo, .button-cell, .component-cell { min-width: 0; }
+  .cell.wide, .button-cell.wide, .component-cell.wide { grid-column: span 2; }
+  @media (max-width: 1024px) {
+    section { padding: 64px 32px; }
+    .section-heading { font-size: 28px; }
+    .nav > :last-child { display: none; }
+    .hero { grid-template-columns: 1fr; gap: 32px; padding: 64px 32px; }
+    .hero h1 { font-size: 44px; }
+    .hero-art, .hero-art-photo { display: none; }
+    .type-row { grid-template-columns: 1fr; gap: 8px; }
+    .type-row .type-meta { padding-bottom: 4px; }
+    .pricing-grid, .form-grid { gap: 16px; }
+  }
+  @media (max-width: 720px) {
+    .cell.wide, .button-cell.wide, .component-cell.wide { grid-column: span 1; }
+    .nav { padding: 0 48px; height: auto; min-height: 56px; }
+    .nav-links { display: none; }
+    .hero { padding: 48px 20px; }
+    .hero h1 { font-size: 36px; letter-spacing: -0.5px; }
+    .hero-photo { height: 240px; margin-bottom: 32px; }
+    .hero p { font-size: 16px; }
+    section { padding: 48px 20px; }
+    .section-heading { font-size: 24px; }
+    .palette-grid, .button-grid, .card-grid, .form-grid, .elevation-grid, .spec-grid { grid-template-columns: 1fr !important; gap: 16px; }
+    .spacing-row, .radius-row { gap: 12px; }
+    .responsive-table { font-size: 12px; }
+    .responsive-table th, .responsive-table td { padding: 10px 8px; }
+    .device-ladder { gap: 8px; }
+    .footer { padding: 24px 16px; font-size: 12px; }
+    .cta-band-photo { padding: 48px 20px; }
+    .cta-band-photo h2 { font-size: 28px; }
+  }
+
+  /* getdesign.md nav additions */
+  .nav-left { display: flex; align-items: center; gap: 20px; }
+  .nav-brand-link, .nav-brand-link:link, .nav-brand-link:visited, .nav-brand-link:hover, .nav-brand-link:active { text-decoration: none; color: inherit; }
+  .nav-brand { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 16px; color: var(--ink); letter-spacing: 0.5px; }
+  .nav-github, .nav-github:link, .nav-github:visited, .nav-github:hover, .nav-github:active {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600;
+    color: inherit; text-decoration: none; padding: 5px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.3); border-radius: 6px;
+    opacity: 0.75; transition: opacity 200ms ease, border-color 200ms ease;
+    font-family: inherit; line-height: 1; white-space: nowrap;
+  }
+  .nav-github:hover { opacity: 1; border-color: rgba(128, 128, 128, 0.55); }
+  .nav-github svg { display: block; flex-shrink: 0; }
+
+  /* getdesign.md nav centering */
+  .nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+  .nav > .nav-left { justify-self: start; }
+  .nav > .nav-links { justify-self: center; }
+  .nav > :last-child { justify-self: end; }
+  .nav .nav-github { color: #ffffff; border-color: rgba(255, 255, 255, 0.25); }
+  .nav .nav-github:hover { border-color: rgba(255, 255, 255, 0.5); }
+
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+<div class="hero-content">
+<div class="m-stripe"></div>
+<h1>黑底三色赛车风</h1>
+<p>纯黑画布、M 系列三色条纹和大幅赛车摄影营造运动感。</p>
+<div class="hero-actions">
+<button class="btn-hero-primary">发现 M</button>
+<button class="btn-hero-secondary">配置( O)</button>
+</div>
+</div>
+<div class="hero-art-photo">
+<div class="stripe"></div>
+</div>
+</div>
+<section id="colors">
+<div class="section-label">01 — 彩色调色板</div>
+<h2 class="section-heading">黑色页面底色,白色类型,M 三角色强调色</h2>
+<p class="section-intro">系统没有装饰性电压——能量来自通栏摄影. M三色stripe是唯一的品牌标识色信号;它从未作为按钮填充出现.</p>
+<div class="palette-group">
+<h3>M 三角彩色( 棕色签名)</h3>
+<div class="m-stripe-display"></div>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#0066b1;"></div><div class="swatch-meta"><div class="swatch-name">m-blue-light</div><div class="swatch-hex">#0066b1</div><div class="swatch-role">首站为M三色stripe.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#1c69d4;"></div><div class="swatch-meta"><div class="swatch-name">m-blue-dark / bmw 蓝色</div><div class="swatch-hex">#1c69d4</div><div class="swatch-role">中途站(英语:Middle stop). 和传统蓝一样</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#e22718;"></div><div class="swatch-meta"><div class="swatch-name">m-red</div><div class="swatch-hex">#e22718</div><div class="swatch-role">第三站 车站 M型动力红色。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#0653b6;"></div><div class="swatch-meta"><div class="swatch-name">electric-blue</div><div class="swatch-hex">#0653b6</div><div class="swatch-role">M xDrive 电动车型 强调色.</div></div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>界面表面</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#000000;"></div><div class="swatch-meta"><div class="swatch-name">页面底色</div><div class="swatch-hex">#000000</div><div class="swatch-role">默认页面层横跨每个表面。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#0d0d0d;"></div><div class="swatch-meta"><div class="swatch-name">surface-soft</div><div class="swatch-hex">#0d0d0d</div><div class="swatch-role">斑桌细胞,脚-相邻的条纹.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#1a1a1a;"></div><div class="swatch-meta"><div class="swatch-name">surface-card</div><div class="swatch-hex">#1a1a1a</div><div class="swatch-role">卡片,二级按钮,图标背景.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#262626;"></div><div class="swatch-meta"><div class="swatch-name">surface-elevated</div><div class="swatch-hex">#262626</div><div class="swatch-role">暗带内嵌卡片.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#2b2b2b;"></div><div class="swatch-meta"><div class="swatch-name">carbon-gray</div><div class="swatch-hex">#2b2b2b</div><div class="swatch-role">碳纤维技术规格表面.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#3c3c3c;"></div><div class="swatch-meta"><div class="swatch-name">细边框</div><div class="swatch-hex">#3c3c3c</div><div class="swatch-role">1px分机和大纲.（原文参数：1px）</div></div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>文字色</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#ffffff;"></div><div class="swatch-meta"><div class="swatch-name">文字色 / on-dark Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q</div><div class="swatch-hex">#ffffff</div><div class="swatch-role">所有头条和主文本。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#e6e6e6;"></div><div class="swatch-meta"><div class="swatch-name">body-strong</div><div class="swatch-hex">#e6e6e6</div><div class="swatch-role">强调正文/主要段落。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#bbbbbb;"></div><div class="swatch-meta"><div class="swatch-name">正文</div><div class="swatch-hex">#bbbbbb</div><div class="swatch-role">默认的运行文本。 比纯白色还酷</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#7e7e7e;"></div><div class="swatch-meta"><div class="swatch-name">哑巴</div><div class="swatch-hex">#7e7e7e</div><div class="swatch-role">脚印链接, 标题。</div></div></div>
+</div>
+</div>
+</section>
+<section id="typography">
+<div class="section-label">02 ——字型缩放</div>
+<h2 class="section-heading">BMW Type Next Latin · 700 / 300 contrast</h2>
+<p class="section-intro">Display at weight 700, body at weight 300 (Light). The contrast between heavy display and light body is the editorial signature. UPPERCASE for h1/h2 with 1.5px letter-spacing on labels.</p>
+<div class="type-row"><div class="type-meta"><strong>display-xl</strong>80px / 700 / 1.0 / 0</div><div class="type-sample" style="font-size:80px; font-weight:700; line-height:1; text-transform:uppercase;">上层建筑</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-lg</strong>56px / 700 / 1.05 / 0</div><div class="type-sample" style="font-size:56px; font-weight:700; line-height:1.05; text-transform:uppercase;">更多来自BMW M</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-md</strong>40px / 700 / 1.1 / 0</div><div class="type-sample" style="font-size:40px; font-weight:700; line-height:1.1; text-transform:uppercase;">BMW M3 轿车</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-sm</strong>32px / 700 / 1.15 / 0</div><div class="type-sample" style="font-size:32px; font-weight:700; line-height:1.15; text-transform:uppercase;">骑马去路边</div></div>
+<div class="type-row"><div class="type-meta"><strong>title-lg</strong>24px / 700 / 1.3 / 0</div><div class="type-sample" style="font-size:24px; font-weight:700; line-height:1.3; text-transform:uppercase;">XM 50E:插座混合式</div></div>
+<div class="type-row"><div class="type-meta"><strong>title-md</strong>20px / 400 / 1.4 / 0</div><div class="type-sample" style="font-size:20px; font-weight:400; line-height:1.4;">试一下自己比赛</div></div>
+<div class="type-row"><div class="type-meta"><strong>title-sm</strong>18px / 400 / 1.4 / 0</div><div class="type-sample" style="font-size:18px; font-weight:400; line-height:1.4;">从赛车到系列制作</div></div>
+<div class="type-row"><div class="type-meta"><strong>label-uppercase</strong>14px / 700 / 1.3 / 1.5px</div><div class="type-sample" style="font-size:14px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;">看见所有电影</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-md</strong>16px / 300(灯光) / 1.5</div><div class="type-sample" style="font-size:16px; font-weight:300; line-height:1.5;">设计了一种前所未有的驾驶体验,将纯运动DNA与日常可用性相结合.</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-sm</strong>14px / 300(灯光) / 1.5</div><div class="type-sample" style="font-size:14px; font-weight:300; line-height:1.5; color:var(--body);">脚本 饼干同意 fine-print 法律文本——甚至法律文本都保持轻量级.</div></div>
+<div class="type-row"><div class="type-meta"><strong>标题</strong>12px / 400 / 1.4 / 0.5px</div><div class="type-sample" style="font-size:12px; font-weight:400; letter-spacing:0.5px; color:var(--muted);">照片:BMW M出版社 ^ 2026</div></div>
+<div class="type-row"><div class="type-meta"><strong>按钮</strong>14px / 700 / 1.0 / 1.5px</div><div class="type-sample" style="font-size:14px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;">发现 M</div></div>
+<div class="type-row"><div class="type-meta"><strong>nav-link</strong>14px / 400 / 1.4 / 0.5px</div><div class="type-sample" style="font-size:14px; font-weight:400; letter-spacing:0.5px;">模型 主题 杂志 配置器 快速车</div></div>
+</section>
+<section id="components">
+<div class="section-label">03  —按钮变体</div>
+<h2 class="section-heading">矩形圆形, 大写跟踪</h2>
+<p class="section-intro">All buttons render at 0px radius with 1.5px letter-spacing on uppercase labels. The "machined precision" feel is non-negotiable — rounded corners read as consumer-tech, not motorsport.</p>
+<div class="button-grid">
+<div class="button-cell"><div class="button-label">button-primary</div><button class="btn btn-primary">发现 M</button><div class="button-meta">页面底色 / on-dark 反转/0px 半径</div></div>
+<div class="button-cell on-photo"><div class="button-label">button-primary-outline</div><button class="btn btn-primary-outline">配置( O)</button><div class="button-meta">Transparent over photography. White outline only.</div></div>
+<div class="button-cell"><div class="button-label">button-icon(木卫一)</div><div style="display:flex; gap:12px;"><button aria-label="预览" class="btn-icon">‹</button><button aria-label="下一个" class="btn-icon">›</button></div><div class="button-meta">48 × 48 / surface-card / 全半径</div></div>
+<div class="button-cell"><div class="button-label">text-link</div><button class="btn-text-link">查看所有模型</button><div class="button-meta">大写 1.5px 跟踪与切夫龙</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">04 — Cards &amp; Containers</div>
+<h2 class="section-heading">照片引导卡片网格</h2>
+<p class="section-intro">卡片领先 边对边摄影. 照片前后的颜色为Chrome rounds rounds off——小大写标记,重显示标题,轻量身子节选.</p>
+<div class="card-grid">
+<div class="feature-photo-card">
+<div class="photo"></div>
+<div class="meta">
+<div class="tag">杂志 生活方式</div>
+<h4>试一下自己比赛</h4>
+<p>M赛道的M型司机训练日. 开M型车在闭路限速下</p>
+</div>
+</div>
+<div class="feature-photo-card">
+<div class="photo" style="background:linear-gradient(135deg, #1c69d4 0%, #0a0a0a 100%);"></div>
+<div class="meta">
+<div class="tag">型号 2026</div>
+<h4>新书 BMW M 医务科 50e</h4>
+<p>插件内置混合M性能. 469 kW(637 hp) 集输出和电单范围.</p>
+</div>
+</div>
+<div class="feature-photo-card">
+<div class="photo" style="background:linear-gradient(135deg, #2b2b2b 0%, #e22718 200%);"></div>
+<div class="meta">
+<div class="tag">汽车体育 赛车</div>
+<h4>从赛车到系列制作</h4>
+<p>汽车运动创新是如何流入每辆M型汽车的,你可以在路上驾驶.</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="section-label">05 – 型号 卡片</div>
+<h2 class="section-heading">新的 M 型号</h2>
+<div class="card-grid">
+<div class="model-card">
+<div class="photo" style="background:linear-gradient(180deg, #1c69d4 0%, #0a0a0a 100%);"></div>
+<h4>BMW M3 化学反应</h4>
+<div class="specs">3.0L · 530 hp · 0–100 公里/小时,单位: 3.5s</div>
+<button class="btn-text-link">探索此模式</button>
+</div>
+<div class="model-card">
+<div class="photo" style="background:linear-gradient(180deg, #e22718 0%, #0a0a0a 100%);"></div>
+<h4>BMW M4 化学反应</h4>
+<div class="specs">3.0双图尔博 543 hp · 0–100 公里/小时,单位: 3.4s</div>
+<button class="btn-text-link">探索此模式</button>
+</div>
+<div class="model-card">
+<div class="photo" style="background:linear-gradient(180deg, #2b2b2b 0%, #0a0a0a 100%);"></div>
+<h4>BMW 自动调频 50e</h4>
+<div class="specs">单电范围 469 kW</div>
+<button class="btn-text-link">探索此模式</button>
+</div>
+</div>
+</section>
+<section>
+<div class="section-label">06 光谱单元格</div>
+<h2 class="section-heading">设计数字,无装饰</h2>
+<p class="section-intro">光谱表单元格显示车辆技术数据. 尖锐的角, 巨大的显示数字, 大写标签。 卡片 铬-值位于带有细分隔线的4上方格网中.</p>
+<div class="spec-grid">
+<div class="spec-cell"><div class="value">530</div><div class="label">马力</div></div>
+<div class="spec-cell"><div class="value">3.5s</div><div class="label">0 – 100 km/h</div></div>
+<div class="spec-cell"><div class="value">290</div><div class="label">最高速度( 公里/ 小时)</div></div>
+<div class="spec-cell"><div class="value">3.0L</div><div class="label">发动机转移</div></div>
+<div class="spec-cell"><div class="value">650</div><div class="label">旋转</div></div>
+<div class="spec-cell"><div class="value">8</div><div class="label">M 继位齿轮</div></div>
+<div class="spec-cell"><div class="value">M x驱动</div><div class="label">驱动系统</div></div>
+<div class="spec-cell"><div class="value">M 化合物</div><div class="label">刹车</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">07 — 杂志文章+汽车体育照片</div>
+<div class="card-grid">
+<div class="magazine-article-card">
+<div class="thumb"></div>
+<div class="tag">杂志</div>
+<h4>40 年数(百万)5 巡回旅游</h4>
+<p>From the original 1986 prototype to the V8 hybrid of 2025 — how the wagon became the canvas for M's wildest experiments.</p>
+</div>
+<div class="motorsport-photo-card">
+<div class="label">汽车体育 —— DTM</div>
+<h4>赛马场制造的</h4>
+</div>
+<div class="motorsport-photo-card" style="background:linear-gradient(180deg, #0a0a0a 0%, rgba(226,39,24,0.4) 100%);">
+<div class="label">汽车港 勒芒</div>
+<h4>BMW M 混合 V8 组合</h4>
+</div>
+</div>
+</section>
+<section>
+<div class="section-label">08 — 分类标签 + 聊天机器人发射器</div>
+<div class="category-tabs">
+<div class="category-tab active">全部</div>
+<div class="category-tab">杂志</div>
+<div class="category-tab">模型</div>
+<div class="category-tab">生活方式</div>
+<div class="category-tab">汽车体育</div>
+</div>
+<div class="card-grid" style="margin-top:32px;">
+<div class="chatbot-launcher">
+<h3>BMW M 聊天点</h3>
+<p>询问M车,型号,运动史,或技术等任何情况.</p>
+<button class="btn btn-primary">启动聊天机</button>
+</div>
+<div class="chatbot-launcher">
+<h3>M 轨迹预订</h3>
+<p>订下你在纽堡或M驾驶学院的M轨迹日经验</p>
+<button class="btn btn-primary">找到日期</button>
+</div>
+</div>
+</section>
+<section>
+<div class="section-label">09 — 表格元素和饼干同意</div>
+<p class="section-intro">输入为0px半径,surface-card背景,细边框. 焦点州将边界加厚为白色.（原文参数：0px）</p>
+<div class="form-grid">
+<div class="form-cell">
+<label class="form-label">电子邮箱</label>
+<input class="form-input" placeholder="you@example.com" type="email"/>
+</div>
+<div class="form-cell">
+<label class="form-label">电子邮件(重点)</label>
+<input class="form-input focused" type="email" value="alex@studio.com"/>
+</div>
+<div class="form-cell">
+<label class="form-label">邮政编码</label>
+<input class="form-input" placeholder="80788 - 德意志慕尼黑" type="text"/>
+</div>
+<div class="form-cell wide">
+<label class="form-label">调查</label>
+<textarea class="form-textarea" placeholder="告诉我们你的兴趣..."></textarea>
+</div>
+</div>
+<div style="margin-top:48px;">
+<div class="cookie-consent-card">
+<p><strong style="color:var(--ink);">BMW M上的饼干.</strong> 我们用饼干来传达内容 改善你的浏览经验 管理下面的首选项。</p>
+<button class="btn btn-primary-outline">接受所有内容</button>
+<button class="btn-text-link" style="margin-left:16px;">管理 cookie 软件</button>
+</div>
+</div>
+</section>
+<section>
+<div class="section-label">10 —— 间距</div>
+<p class="section-intro">节奏 96px 介于主要编辑乐队之间.</p>
+<div class="spacing-row">
+<div class="spacing-block"><div class="spacing-bar" style="width:4px;"></div><div class="spacing-label">xxx 4px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:8px;"></div><div class="spacing-label">xs 8px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:12px;"></div><div class="spacing-label">sm 12px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:16px;"></div><div class="spacing-label">md 16px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:24px;"></div><div class="spacing-label">24px 高压压压轴</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:40px;"></div><div class="spacing-label">□ 40px</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:64px;"></div><div class="spacing-label">xxl 64px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:96px;"></div><div class="spacing-label">· 96px</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">11 — 圆角半径 比例尺</div>
+<p class="section-intro">Almost always 0px. Reserve full radius for circular icon buttons only.</p>
+<div class="radius-row">
+<div class="radius-block" style="border-radius:0;">0 − 无</div>
+<div class="radius-block" style="border-radius:2px;">2 − xs 组合键</div>
+<div class="radius-block" style="border-radius:4px;">4 零点</div>
+<div class="radius-block" style="border-radius:6px;">6 数据</div>
+<div class="radius-block" style="border-radius:50%;">满</div>
+</div>
+</section>
+<section>
+<div class="section-label">12 高度和深度</div>
+<p class="section-intro">无落影. 深度来自摄影主题+照明,以及黑色页面底色和略微穿透的surface-card的对比.</p>
+<div class="elevation-grid">
+<div class="elevation-card elevation-flat"><h5>平面</h5><p>无影. 身体 顶部导航 脚步 图片带</p></div>
+<div class="elevation-card elevation-flat"><h5>软细边框</h5><p>1px 细边框 中超联赛冠军. 分节者,卡片大纲.</p></div>
+<div class="elevation-card elevation-elevated"><h5>卡片底色</h5><p>surface-card在页面底色上空——可见高地.</p></div>
+<div class="elevation-photo"><h5>摄影深度</h5><p>通栏照片. 腾讯网. 主题+镜头做影子的工作.</p></div>
+<div class="elevation-card elevation-flat"><h5>碳谱</h5><p>carbon-gray关于技术规格的卡片. 纹理覆盖可选.</p></div>
+<div class="elevation-card elevation-flat"><h5>M 系列条纹强调色</h5><p>4px三色stripe作为品牌标识划分器.（原文参数：4px）</p></div>
+</div>
+</section>
+<section>
+<div class="section-label">13 — CTA Band</div>
+<h2 class="section-heading">开个M型</h2>
+<div class="cta-band-photo">
+<h2>经验M你自己</h2>
+<button class="btn btn-primary-outline">订一个测试驱动器</button>
+</div>
+</section>
+<section id="responsive">
+<div class="section-label">14 反应行为</div>
+<table class="responsive-table">
+<thead><tr><th>名称</th><th>宽度</th><th>密钥更改</th></tr></thead>
+<tbody>
+<tr><td>手机端</td><td>&lt; 768px Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q</td><td>折叠菜单;首屏h1 80→48px; 照片卡堆叠全宽; spec grade 1 列</td></tr>
+<tr><td>平板</td><td>768–1024px</td><td>顶部导航收紧; 2-up 卡片网格; spec table 2-up.</td></tr>
+<tr><td>桌面端</td><td>1024–1440px</td><td>完整的top-nav; 3-up 卡片网格; 4-up 谱格.</td></tr>
+<tr><td>宽</td><td>&gt; 1440px 单倍径</td><td>与呼吸室较多的桌面相同;最大内容1440px.（原文参数：1440px）</td></tr>
+</tbody>
+</table>
+<div class="device-ladder">
+<div class="device-bar" style="width:60px; height:120px;">375<br/>手机端</div>
+<div class="device-bar" style="width:90px; height:140px;">600<br/>小型电话</div>
+<div class="device-bar" style="width:140px; height:160px;">768<br/>平板电脑</div>
+<div class="device-bar" style="width:200px; height:180px;">1024<br/>膝上型计算机</div>
+<div class="device-bar" style="width:260px; height:200px;">1280<br/>桌面端</div>
+<div class="device-bar" style="width:320px; height:220px;">1440<br/>宽</div>
+</div>
+<div class="responsive-sub"><h4>触控区域</h4><ul><li>mine 48 × 48px 的初级行动按钮 ——与 WCAG AA 相遇.</li><li>Icon button at exactly 48 × 48.</li><li>文本输入高度 48px.</li></ul></div>
+<div class="responsive-sub"><h4>窄屏布局调整</h4><ul><li>顶端导航崩溃到汉堡;菜单打开时为全屏黑色覆盖,顶端为M-stripe.</li><li>摄影在每张响应式断点上都保持通栏.</li><li>卡片网格减少柱而不是缩小卡片.</li><li>光谱表崩溃 4→2→1; 数值保持不变 display-sm.</li><li>M型机车在响应式断点上方保持4px高度.（原文参数：4px）</li></ul></div>
+</section>
+<footer class="footer">
+<div class="footer-shell">
+<div class="footer-grid">
+<div class="footer-col">
+<h6>VoltAgent 框架</h6>
+<span>类型脚本代理</span>
+<span>工具编程</span>
+<span>多种代理工作流程</span>
+</div>
+<div class="footer-col">
+<h6>伏特Ops LLM 可观测性</h6>
+<span>LLM 跟踪</span>
+<span>实时调试</span>
+<span>视觉时间</span>
+</div>
+<div class="footer-col">
+<h6>生产</h6>
+<span>评价</span>
+<span>即时管理</span>
+<span>护卫</span>
+</div>
+<div class="footer-col">
+<h6>平台</h6>
+<span>伏特Ops 控制台</span>
+<span>开源核心</span>
+<span>代理工程</span>
+</div>
+</div>
+
+</div>
+</footer>
+</body>
+</html>

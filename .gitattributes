@@ -1,0 +1,3 @@
+# 保留归档哈希以及网页内嵌下载的原始字节
+research/getdesign-home/** -text
+localized/**/DESIGN*.md -text

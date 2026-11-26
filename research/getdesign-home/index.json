@@ -1,0 +1,3664 @@
+{
+  "homepage": "https://getdesign.md/",
+  "startedAt": "2026-11-27T01:48:02+08:00",
+  "entries": [
+    {
+      "slug": "1win",
+      "detail": "https://getdesign.md/1win/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/1win/DESIGN.md",
+          "final": "https://getdesign.md/design-md/1win/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 23906,
+          "attempts": 1,
+          "file": "1win/DESIGN.md",
+          "state": "ok",
+          "sha256": "64d02d344cb16d68b6882054f35e3bfb7241ad60dc8b7f84f6636a7d1379496a"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/1win/preview.html",
+          "final": "https://getdesign.md/design-md/1win/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 37099,
+          "attempts": 1,
+          "file": "1win/preview.html",
+          "title": "Design System Analysis of 1win",
+          "state": "ok",
+          "sha256": "9218d5181b36ac54b7ff7dd7ef6d681ed32f8d14a17ed480616e5746412937fb"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/1win/preview-dark.html",
+          "final": "https://getdesign.md/design-md/1win/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 37099,
+          "attempts": 1,
+          "file": "1win/preview-dark.html",
+          "title": "Design System Analysis of 1win",
+          "state": "ok",
+          "sha256": "6a3b337aeb508e6051ea05aa134203efa5f510cf674f188036d23c7b26e09d88"
+        }
+      },
+      "title": "1win DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "airbnb",
+      "detail": "https://getdesign.md/airbnb/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/airbnb/DESIGN.md",
+          "final": "https://getdesign.md/design-md/airbnb/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 30517,
+          "attempts": 1,
+          "file": "airbnb/DESIGN.md",
+          "state": "ok",
+          "sha256": "add34130d67209ad105346d60fe2b290728b9711683969db4b7760e29477a5fe"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/airbnb/preview.html",
+          "final": "https://getdesign.md/design-md/airbnb/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 61075,
+          "attempts": 1,
+          "file": "airbnb/preview.html",
+          "title": "Design System Analysis of Airbnb",
+          "state": "ok",
+          "sha256": "92f19e93c6ba08d72e914524481050fd88735f89a2febde7240ac5ea3507b126"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/airbnb/preview-dark.html",
+          "final": "https://getdesign.md/design-md/airbnb/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 61163,
+          "attempts": 1,
+          "file": "airbnb/preview-dark.html",
+          "title": "Design System Analysis of Airbnb",
+          "state": "ok",
+          "sha256": "ac7d17f44f978eb989a10c14d0a922d0d81747cefc1a996ded613518f07dbda7"
+        }
+      },
+      "title": "Airbnb DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "airtable",
+      "detail": "https://getdesign.md/airtable/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/airtable/DESIGN.md",
+          "final": "https://getdesign.md/design-md/airtable/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 35266,
+          "attempts": 1,
+          "file": "airtable/DESIGN.md",
+          "state": "ok",
+          "sha256": "1d225e511213044d3c705bde50265ad010932bfd8a15740a144dd4f480128889"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/airtable/preview.html",
+          "final": "https://getdesign.md/design-md/airtable/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 52037,
+          "attempts": 1,
+          "file": "airtable/preview.html",
+          "title": "Design System Analysis of Airtable",
+          "state": "ok",
+          "sha256": "730e4c7f8b088d406b76961e0c47d006f5beeaa2206877ad85bac786c3364474"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/airtable/preview-dark.html",
+          "final": "https://getdesign.md/design-md/airtable/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 52096,
+          "attempts": 1,
+          "file": "airtable/preview-dark.html",
+          "title": "Design System Analysis of Airtable",
+          "state": "ok",
+          "sha256": "914fb07bf9415d6546f95868f1fa6d5e40a97c23ef38edd42813f4771c2387ca"
+        }
+      },
+      "title": "Airtable DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "aljazeera",
+      "detail": "https://getdesign.md/aljazeera/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/aljazeera/DESIGN.md",
+          "final": "https://getdesign.md/design-md/aljazeera/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 28031,
+          "attempts": 1,
+          "file": "aljazeera/DESIGN.md",
+          "state": "ok",
+          "sha256": "37614fc72658ffa30faca01049bd1efa8a9baafa4750501405eeea66f149466a"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/aljazeera/preview.html",
+          "final": "https://getdesign.md/design-md/aljazeera/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 45140,
+          "attempts": 1,
+          "file": "aljazeera/preview.html",
+          "title": "Design System Analysis of Al Jazeera",
+          "state": "ok",
+          "sha256": "4531fe5e340d17293156700053bcc29b5aa1aff85143c939f628a06bd94a5225"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/aljazeera/preview-dark.html",
+          "final": "https://getdesign.md/design-md/aljazeera/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 45680,
+          "attempts": 1,
+          "file": "aljazeera/preview-dark.html",
+          "title": "Design System Analysis of Al Jazeera",
+          "state": "ok",
+          "sha256": "294cd6f00f901df6d1a0ff44bc3f65ea2f084007e2b01e4bf4e4606c1c78cdd7"
+        }
+      },
+      "title": "Al Jazeera DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "apple",
+      "detail": "https://getdesign.md/apple/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/apple/DESIGN.md",
+          "final": "https://getdesign.md/design-md/apple/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 37096,
+          "attempts": 1,
+          "file": "apple/DESIGN.md",
+          "state": "ok",
+          "sha256": "83fbc614443a9b3d7569e9956a43e7b8740f9d0f939f58b8154f7a7cec3002b2"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/apple/preview.html",
+          "final": "https://getdesign.md/design-md/apple/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 43904,
+          "attempts": 1,
+          "file": "apple/preview.html",
+          "title": "Design System Analysis of Lumora",
+          "state": "ok",
+          "sha256": "3e7702c6646b9f6978b3871d3eb44e45127d8d20f2540b9c70fafa563a0d7706"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/apple/preview-dark.html",
+          "final": "https://getdesign.md/design-md/apple/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 43963,
+          "attempts": 1,
+          "file": "apple/preview-dark.html",
+          "title": "Design System Analysis of Lumora",
+          "state": "ok",
+          "sha256": "e91b76504dce2fda02495caa614c2c1fe443caf20e4951251f2efbb1c4bf72a4"
+        }
+      },
+      "title": "Apple DESIGN.md",
+      "detailStatus": 200,
+      "verificationNote": "官方 Apple 详情页所链接的两份原始 HTML 均将页面命名为 Lumora。Markdown 仍标为 Apple，浅色样张包含相同的 #0066cc 主操作色。保留原始标题和内容。"
+    },
+    {
+      "slug": "binance",
+      "detail": "https://getdesign.md/binance/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/binance/DESIGN.md",
+          "final": "https://getdesign.md/design-md/binance/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 39918,
+          "attempts": 1,
+          "file": "binance/DESIGN.md",
+          "state": "ok",
+          "sha256": "378ff97d568ccbc316519b9d45a29d6649ed8961c9c486c3ed4cea7501d72371"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/binance/preview.html",
+          "final": "https://getdesign.md/design-md/binance/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 53625,
+          "attempts": 1,
+          "file": "binance/preview.html",
+          "title": "Design System Analysis of Binance",
+          "state": "ok",
+          "sha256": "3cbe37bfa6ebc6c131ccd78dfa0e14b0ca4e47daf4c926c369344ee3085797b8"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/binance/preview-dark.html",
+          "final": "https://getdesign.md/design-md/binance/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 53699,
+          "attempts": 1,
+          "file": "binance/preview-dark.html",
+          "title": "Design System Analysis of Binance",
+          "state": "ok",
+          "sha256": "446f72c2e81ee19290a4ff8df7c24e6be5742ba20d70ffb95eaab15522a271c4"
+        }
+      },
+      "title": "Binance DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "bmw",
+      "detail": "https://getdesign.md/bmw/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/bmw/DESIGN.md",
+          "final": "https://getdesign.md/design-md/bmw/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 27907,
+          "attempts": 1,
+          "file": "bmw/DESIGN.md",
+          "state": "ok",
+          "sha256": "b7268279e7c98e85fb80890e06765f4ee8340ba1ea1ccb5a8a5b134de43dac3e"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/bmw/preview.html",
+          "final": "https://getdesign.md/design-md/bmw/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 46354,
+          "attempts": 1,
+          "file": "bmw/preview.html",
+          "title": "Design System Analysis of BMW",
+          "state": "ok",
+          "sha256": "27b1f8eeb05e2c95474a05c2caea657be72b8681b593d9f5c660e68989ce5166"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/bmw/preview-dark.html",
+          "final": "https://getdesign.md/design-md/bmw/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 46427,
+          "attempts": 1,
+          "file": "bmw/preview-dark.html",
+          "title": "Design System Analysis of BMW",
+          "state": "ok",
+          "sha256": "ebd989062a7e74bf17197baaebd7aaeab65474aa4d3f5bcd0fe81b2d87207f04"
+        }
+      },
+      "title": "BMW DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "bmw-m",
+      "detail": "https://getdesign.md/bmw-m/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/bmw-m/DESIGN.md",
+          "final": "https://getdesign.md/design-md/bmw-m/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 30697,
+          "attempts": 1,
+          "file": "bmw-m/DESIGN.md",
+          "state": "ok",
+          "sha256": "89e3ecd062018d1aa739678fb489792e5b0a8fd0e21279d5e3dc27ddb9f034be"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/bmw-m/preview.html",
+          "final": "https://getdesign.md/design-md/bmw-m/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 43550,
+          "attempts": 1,
+          "file": "bmw-m/preview.html",
+          "title": "Design System Analysis of BMW M",
+          "state": "ok",
+          "sha256": "2092df447af883e2a4a6b1dadcf9e847ed40bd7df13a9b932e7c2a10e424f523"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/bmw-m/preview-dark.html",
+          "final": "https://getdesign.md/design-md/bmw-m/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 43609,
+          "attempts": 1,
+          "file": "bmw-m/preview-dark.html",
+          "title": "Design System Analysis of BMW M",
+          "state": "ok",
+          "sha256": "0b50a58bd84c67760efd14859ab32b4388a3dfb40344d7f6b0772c36dfe4da16"
+        }
+      },
+      "title": "BMW M DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "bugatti",
+      "detail": "https://getdesign.md/bugatti/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/bugatti/DESIGN.md",
+          "final": "https://getdesign.md/design-md/bugatti/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 28535,
+          "attempts": 1,
+          "file": "bugatti/DESIGN.md",
+          "state": "ok",
+          "sha256": "375f0a20ada88cdee5e995ca7edcfbd584ddf5f887024deebd1bc75bfd55b1bc"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/bugatti/preview.html",
+          "final": "https://getdesign.md/design-md/bugatti/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 40698,
+          "attempts": 1,
+          "file": "bugatti/preview.html",
+          "title": "Design System Analysis of Bugatti",
+          "state": "ok",
+          "sha256": "dbbebd9c925072b0f4233fe00622429361d4dc07e3874cf417f083bedbf8dd7e"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/bugatti/preview-dark.html",
+          "final": "https://getdesign.md/design-md/bugatti/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 40771,
+          "attempts": 1,
+          "file": "bugatti/preview-dark.html",
+          "title": "Design System Analysis of Bugatti",
+          "state": "ok",
+          "sha256": "59f3c9da27d74ff187f873ef7b48d3332c698bc06fbba0bdbe50ad0f8841d8d0"
+        }
+      },
+      "title": "Bugatti DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "cal",
+      "detail": "https://getdesign.md/cal/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/cal/DESIGN.md",
+          "final": "https://getdesign.md/design-md/cal/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 31176,
+          "attempts": 1,
+          "file": "cal/DESIGN.md",
+          "state": "ok",
+          "sha256": "8cd21b7d67e94c899843d517f4b426e4fee33d47354a433d6a63ebcf79d5a654"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/cal/preview.html",
+          "final": "https://getdesign.md/design-md/cal/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 45446,
+          "attempts": 1,
+          "file": "cal/preview.html",
+          "title": "Design System Analysis of Cal.com",
+          "state": "ok",
+          "sha256": "d5e308362c26e848022eb25d8a99cef3fbb1338e71ee8bfcf74215e594389243"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/cal/preview-dark.html",
+          "final": "https://getdesign.md/design-md/cal/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 45519,
+          "attempts": 1,
+          "file": "cal/preview-dark.html",
+          "title": "Design System Analysis of Cal.com",
+          "state": "ok",
+          "sha256": "d0681c710c03dbe4e5e8567506f18238fac5f58afa7d02ad6d41b05bf0cb0fd7"
+        }
+      },
+      "title": "Cal.com DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "claude",
+      "detail": "https://getdesign.md/claude/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/claude/DESIGN.md",
+          "final": "https://getdesign.md/design-md/claude/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 33586,
+          "attempts": 1,
+          "file": "claude/DESIGN.md",
+          "state": "ok",
+          "sha256": "3d972f34f8d4f33b442fa28220cf3b7ca2f13c0a97c468e3988148f82521f9df"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/claude/preview.html",
+          "final": "https://getdesign.md/design-md/claude/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 45381,
+          "attempts": 1,
+          "file": "claude/preview.html",
+          "title": "Design System Analysis of Claude",
+          "state": "ok",
+          "sha256": "1d2904d0871b04747593356c1757a85f7cc98cc01e87fd36c029a837f803428a"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/claude/preview-dark.html",
+          "final": "https://getdesign.md/design-md/claude/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 45454,
+          "attempts": 1,
+          "file": "claude/preview-dark.html",
+          "title": "Design System Analysis of Claude",
+          "state": "ok",
+          "sha256": "d700d0e5f098d0150a2da09a5bf9940a1e030282ff3936ee321ba25c3d5131fb"
+        }
+      },
+      "title": "Claude DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "clay",
+      "detail": "https://getdesign.md/clay/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/clay/DESIGN.md",
+          "final": "https://getdesign.md/design-md/clay/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 25705,
+          "attempts": 1,
+          "file": "clay/DESIGN.md",
+          "state": "ok",
+          "sha256": "1abd803a207fbe950a06e155adcd6013c2e149b13e7b88844f5069f9d3d99eb3"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/clay/preview.html",
+          "final": "https://getdesign.md/design-md/clay/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 40665,
+          "attempts": 1,
+          "file": "clay/preview.html",
+          "title": "Design System Analysis of Clay",
+          "state": "ok",
+          "sha256": "8e3be13a00ff18b9d7ca1ece0824c6f47850f96f652d822eab2df26881c9a7af"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/clay/preview-dark.html",
+          "final": "https://getdesign.md/design-md/clay/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 40723,
+          "attempts": 1,
+          "file": "clay/preview-dark.html",
+          "title": "Design System Analysis of Clay",
+          "state": "ok",
+          "sha256": "e914ecb292aedb6776d0ac0150ccd1164de28c426fdaf189a6422196b6317486"
+        }
+      },
+      "title": "Clay DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "clickhouse",
+      "detail": "https://getdesign.md/clickhouse/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/clickhouse/DESIGN.md",
+          "final": "https://getdesign.md/design-md/clickhouse/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 25986,
+          "attempts": 1,
+          "file": "clickhouse/DESIGN.md",
+          "state": "ok",
+          "sha256": "50987e29b603cc7503ebe724af810fcf43845e96fdd4083e0fbe5fe00d2cdd2e"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/clickhouse/preview.html",
+          "final": "https://getdesign.md/design-md/clickhouse/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 43537,
+          "attempts": 1,
+          "file": "clickhouse/preview.html",
+          "title": "Design System Analysis of ClickHouse",
+          "state": "ok",
+          "sha256": "fa26c44aa8907d85977cd82b35fb9689a2a0dfd25d7977edf8422c303e55e8ef"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/clickhouse/preview-dark.html",
+          "final": "https://getdesign.md/design-md/clickhouse/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 43610,
+          "attempts": 1,
+          "file": "clickhouse/preview-dark.html",
+          "title": "Design System Analysis of ClickHouse",
+          "state": "ok",
+          "sha256": "6863454f685c31355f8882876d3637337963532d7d41be3afbbef8d317c7be3e"
+        }
+      },
+      "title": "ClickHouse DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "cohere",
+      "detail": "https://getdesign.md/cohere/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/cohere/DESIGN.md",
+          "final": "https://getdesign.md/design-md/cohere/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 20020,
+          "attempts": 1,
+          "file": "cohere/DESIGN.md",
+          "state": "ok",
+          "sha256": "1c49a5a5f88d43841d4f4afa33831328d47a5715048700a3b75086a822575883"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/cohere/preview.html",
+          "final": "https://getdesign.md/design-md/cohere/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 32519,
+          "attempts": 1,
+          "file": "cohere/preview.html",
+          "title": "Design System Analysis of Cohere",
+          "state": "ok",
+          "sha256": "d96e791fb05f4cdd5140010630b0852e2b3a849740bda0bdb0c06a7fada18123"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/cohere/preview-dark.html",
+          "final": "https://getdesign.md/design-md/cohere/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 32562,
+          "attempts": 1,
+          "file": "cohere/preview-dark.html",
+          "title": "Design System Analysis of Cohere",
+          "state": "ok",
+          "sha256": "cb68cce7943628a337e56e47b7d2dd3eaf44d3922e5f8cd1b8d80db4b0f1efe6"
+        }
+      },
+      "title": "Cohere DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "coinbase",
+      "detail": "https://getdesign.md/coinbase/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/coinbase/DESIGN.md",
+          "final": "https://getdesign.md/design-md/coinbase/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 25853,
+          "attempts": 1,
+          "file": "coinbase/DESIGN.md",
+          "state": "ok",
+          "sha256": "c8c67800dd7f58fcc87ed7d267a3bba862e3419e499e8a66d67731a69d2de1d6"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/coinbase/preview.html",
+          "final": "https://getdesign.md/design-md/coinbase/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 41953,
+          "attempts": 1,
+          "file": "coinbase/preview.html",
+          "title": "Design System Analysis of Coinbase",
+          "state": "ok",
+          "sha256": "014ca88a6436a32a2b8b1f60c23583495b72ddb22db28e8e0aed21ae4099d1bb"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/coinbase/preview-dark.html",
+          "final": "https://getdesign.md/design-md/coinbase/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 42026,
+          "attempts": 1,
+          "file": "coinbase/preview-dark.html",
+          "title": "Design System Analysis of Coinbase",
+          "state": "ok",
+          "sha256": "a974af1614290b9f17352530cc3c1623b4c47e76ca4c5c7d2e59ea813b83f4de"
+        }
+      },
+      "title": "Coinbase DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "composio",
+      "detail": "https://getdesign.md/composio/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/composio/DESIGN.md",
+          "final": "https://getdesign.md/design-md/composio/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 20606,
+          "attempts": 1,
+          "file": "composio/DESIGN.md",
+          "state": "ok",
+          "sha256": "e7db886dabecca61f29b83e8f46d7a1e8a43889d30b81bc6e48162ccaafcbb2f"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/composio/preview.html",
+          "final": "https://getdesign.md/design-md/composio/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 37761,
+          "attempts": 1,
+          "file": "composio/preview.html",
+          "title": "Design System Analysis of Composio",
+          "state": "ok",
+          "sha256": "a5f6fd7893d1ea30e5bd4730366b115f000656fa1f81c196728b9e85df6c375e"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/composio/preview-dark.html",
+          "final": "https://getdesign.md/design-md/composio/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 37870,
+          "attempts": 1,
+          "file": "composio/preview-dark.html",
+          "title": "Design System Analysis of Composio",
+          "state": "ok",
+          "sha256": "02e835bcd23521ea57fa412dac730fef3ef6f1884723383a558290bcd3b7b1f8"
+        }
+      },
+      "title": "Composio DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "cursor",
+      "detail": "https://getdesign.md/cursor/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/cursor/DESIGN.md",
+          "final": "https://getdesign.md/design-md/cursor/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 21771,
+          "attempts": 1,
+          "file": "cursor/DESIGN.md",
+          "state": "ok",
+          "sha256": "a3db9b3019dc2f514fdee7cd0ca0a5232c0bd0119e23178e8eebaf6916258d9d"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/cursor/preview.html",
+          "final": "https://getdesign.md/design-md/cursor/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 36321,
+          "attempts": 1,
+          "file": "cursor/preview.html",
+          "title": "Design System Analysis of Cursor",
+          "state": "ok",
+          "sha256": "c2289f353956a97e40172a4901cf070adbd54a1f2bd611364f42d7d2c99034b9"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/cursor/preview-dark.html",
+          "final": "https://getdesign.md/design-md/cursor/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 36412,
+          "attempts": 1,
+          "file": "cursor/preview-dark.html",
+          "title": "Design System Analysis of Cursor",
+          "state": "ok",
+          "sha256": "a3715fa86f60bc5bab9efaff9406c09cf1cad6d2b6a902063344893bc4755e2b"
+        }
+      },
+      "title": "Cursor DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "dell-1996",
+      "detail": "https://getdesign.md/dell-1996/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/dell-1996/DESIGN.md",
+          "final": "https://getdesign.md/design-md/dell-1996/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 34592,
+          "attempts": 1,
+          "file": "dell-1996/DESIGN.md",
+          "state": "ok",
+          "sha256": "7e7fb41b019fd4fdc283a740c10c8f7d98f83ec7c89901ab88b480e0dabf6a6c"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/dell-1996/preview.html",
+          "final": "https://getdesign.md/design-md/dell-1996/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 94346,
+          "attempts": 1,
+          "file": "dell-1996/preview.html",
+          "title": "Design System Analysis of Dell 1996",
+          "state": "ok",
+          "sha256": "37c1228b564e20d2c54419b4c35296eaf4d13d6b0c71943e052f557c2552a6bd"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/dell-1996/preview-dark.html",
+          "final": "https://getdesign.md/design-md/dell-1996/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 95208,
+          "attempts": 1,
+          "file": "dell-1996/preview-dark.html",
+          "title": "Design System Analysis of Dell 1996",
+          "state": "ok",
+          "sha256": "b2f0101ce8e4d000c32f45a0c64156b139e2069ec67aa8408201d45115ca5eed"
+        }
+      },
+      "title": "Dell (1996) DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "discord",
+      "detail": "https://getdesign.md/discord/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/discord/DESIGN.md",
+          "final": "https://getdesign.md/design-md/discord/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 27390,
+          "attempts": 1,
+          "file": "discord/DESIGN.md",
+          "state": "ok",
+          "sha256": "b4be872ea66e4c285aa3c1d9ba954335622913edda916fe035bbd9dfbc545ec9"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/discord/preview.html",
+          "final": "https://getdesign.md/design-md/discord/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 40348,
+          "attempts": 1,
+          "file": "discord/preview.html",
+          "title": "Design System Analysis of Discord",
+          "state": "ok",
+          "sha256": "9503a6413b83063f44f7c65e360f77dd8847dcaeafcc8c1ea88f1acfcb71d34c"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/discord/preview-dark.html",
+          "final": "https://getdesign.md/design-md/discord/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 40928,
+          "attempts": 1,
+          "file": "discord/preview-dark.html",
+          "title": "Design System Analysis of Discord",
+          "state": "ok",
+          "sha256": "8933a81cba6121a631125d341e0b87e449a68838946791b92cc7627f5a939e12"
+        }
+      },
+      "title": "Discord DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "dji",
+      "detail": "https://getdesign.md/dji/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/dji/DESIGN.md",
+          "final": "https://getdesign.md/design-md/dji/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 42268,
+          "attempts": 1,
+          "file": "dji/DESIGN.md",
+          "state": "ok",
+          "sha256": "c8a57520b87286869a88cdd2c07f21080ebda9fb3eee315b11d95c752582c1a9"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/dji/preview.html",
+          "final": "https://getdesign.md/design-md/dji/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 76426,
+          "attempts": 1,
+          "file": "dji/preview.html",
+          "title": "Design System Analysis of DJI",
+          "state": "ok",
+          "sha256": "57900545496caa3b114df630b7d1a509b84fd81dfe0b06683b759cf5cebd758b"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/dji/preview-dark.html",
+          "final": "https://getdesign.md/design-md/dji/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 76981,
+          "attempts": 1,
+          "file": "dji/preview-dark.html",
+          "title": "Design System Analysis of DJI",
+          "state": "ok",
+          "sha256": "890e76369911ac51e3c1b828766e66537f45c0fb16ee272119c8c66a7c482c41"
+        }
+      },
+      "title": "DJI DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "elevenlabs",
+      "detail": "https://getdesign.md/elevenlabs/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/elevenlabs/DESIGN.md",
+          "final": "https://getdesign.md/design-md/elevenlabs/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 20943,
+          "attempts": 1,
+          "file": "elevenlabs/DESIGN.md",
+          "state": "ok",
+          "sha256": "3b359acfaafadbb499c7ed3eebe813a76e0be497a7157b77de207fe275068a66"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/elevenlabs/preview.html",
+          "final": "https://getdesign.md/design-md/elevenlabs/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 38841,
+          "attempts": 1,
+          "file": "elevenlabs/preview.html",
+          "title": "Design System Analysis of ElevenLabs",
+          "state": "ok",
+          "sha256": "395a30b0bbaec98af51498a87756d9ac9c8014bd6d8d52e7e7015273e5e3c6fb"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/elevenlabs/preview-dark.html",
+          "final": "https://getdesign.md/design-md/elevenlabs/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 38932,
+          "attempts": 1,
+          "file": "elevenlabs/preview-dark.html",
+          "title": "Design System Analysis of ElevenLabs",
+          "state": "ok",
+          "sha256": "a5d2b9fa6503c8a08775357b05fadac2586e32006c51bfd1263ffca2faba5ec1"
+        }
+      },
+      "title": "ElevenLabs DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "expo",
+      "detail": "https://getdesign.md/expo/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/expo/DESIGN.md",
+          "final": "https://getdesign.md/design-md/expo/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 21660,
+          "attempts": 1,
+          "file": "expo/DESIGN.md",
+          "state": "ok",
+          "sha256": "1be7e129b6f75afaa12318a7c51ab22f6f74a214dec22c4827cecc519f112363"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/expo/preview.html",
+          "final": "https://getdesign.md/design-md/expo/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 40299,
+          "attempts": 1,
+          "file": "expo/preview.html",
+          "title": "Design System Analysis of Expo",
+          "state": "ok",
+          "sha256": "e51418bb1610103fd83ffdd78f697aab9436a4ccfed442d636bdce5c5e2cb9b7"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/expo/preview-dark.html",
+          "final": "https://getdesign.md/design-md/expo/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 40399,
+          "attempts": 1,
+          "file": "expo/preview-dark.html",
+          "title": "Design System Analysis of Expo",
+          "state": "ok",
+          "sha256": "608ecc242a889badea8ff3d4fb9db5aba6b65dcf4dcd7d0554116ae27e602210"
+        }
+      },
+      "title": "Expo DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "ferrari",
+      "detail": "https://getdesign.md/ferrari/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/ferrari/DESIGN.md",
+          "final": "https://getdesign.md/design-md/ferrari/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 24365,
+          "attempts": 1,
+          "file": "ferrari/DESIGN.md",
+          "state": "ok",
+          "sha256": "1199e2832641cac7e384aaf3b1f3db87f992240cea5d3d1eee04d9dc00acb17c"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/ferrari/preview.html",
+          "final": "https://getdesign.md/design-md/ferrari/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 39075,
+          "attempts": 1,
+          "file": "ferrari/preview.html",
+          "title": "Design System Analysis of Ferrari",
+          "state": "ok",
+          "sha256": "b1d9271cd5d2ebfb506b8c7abdf586a374eeed207a2b326a64e97524bd81d4b2"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/ferrari/preview-dark.html",
+          "final": "https://getdesign.md/design-md/ferrari/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 39190,
+          "attempts": 1,
+          "file": "ferrari/preview-dark.html",
+          "title": "Design System Analysis of Ferrari",
+          "state": "ok",
+          "sha256": "dc108ee02717267fdcdd5d6d6ee822a17b80522446aae5e4fcfbd1ade223891f"
+        }
+      },
+      "title": "Ferrari DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "figma",
+      "detail": "https://getdesign.md/figma/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/figma/DESIGN.md",
+          "final": "https://getdesign.md/design-md/figma/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 32316,
+          "attempts": 1,
+          "file": "figma/DESIGN.md",
+          "state": "ok",
+          "sha256": "716ce8431f47eb8b8135552710e3c4d538bccccf1202e4ceac5428c9aada9972"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/figma/preview.html",
+          "final": "https://getdesign.md/design-md/figma/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 42768,
+          "attempts": 1,
+          "file": "figma/preview.html",
+          "title": "Design System Analysis of Figma",
+          "state": "ok",
+          "sha256": "cceb28d8fae162ca478a8aeaaa725eefbd4defca03a85b7b833abda407d06181"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/figma/preview-dark.html",
+          "final": "https://getdesign.md/design-md/figma/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 43431,
+          "attempts": 1,
+          "file": "figma/preview-dark.html",
+          "title": "Design System Analysis of Figma",
+          "state": "ok",
+          "sha256": "dbb08b2e69cefa7ae3c50d9861c5e8bcf33a273f0273e3e1ce29f74086569e44"
+        }
+      },
+      "title": "Figma DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "framer",
+      "detail": "https://getdesign.md/framer/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/framer/DESIGN.md",
+          "final": "https://getdesign.md/design-md/framer/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 29119,
+          "attempts": 1,
+          "file": "framer/DESIGN.md",
+          "state": "ok",
+          "sha256": "a5d47dddacf5a04577cec0be6fe0fc53b7402254c7686874af3e59bcc7588cb4"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/framer/preview.html",
+          "final": "https://getdesign.md/design-md/framer/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 39953,
+          "attempts": 1,
+          "file": "framer/preview.html",
+          "title": "Design System Analysis of Framer",
+          "state": "ok",
+          "sha256": "2f2bd31648216e261169541cb07b79c0b4b7c75b0643f0b386ee9ee2deb64d11"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/framer/preview-dark.html",
+          "final": "https://getdesign.md/design-md/framer/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 39953,
+          "attempts": 1,
+          "file": "framer/preview-dark.html",
+          "title": "Design System Analysis of Framer",
+          "state": "ok",
+          "sha256": "2f2bd31648216e261169541cb07b79c0b4b7c75b0643f0b386ee9ee2deb64d11"
+        }
+      },
+      "title": "Framer DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "hashicorp",
+      "detail": "https://getdesign.md/hashicorp/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/hashicorp/DESIGN.md",
+          "final": "https://getdesign.md/design-md/hashicorp/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 28023,
+          "attempts": 1,
+          "file": "hashicorp/DESIGN.md",
+          "state": "ok",
+          "sha256": "d2df9be72d867e48d318fd18db04e60a78357c27e392ab921fc2ba7f46951442"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/hashicorp/preview.html",
+          "final": "https://getdesign.md/design-md/hashicorp/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 39596,
+          "attempts": 1,
+          "file": "hashicorp/preview.html",
+          "title": "Design System Analysis of HashiCorp",
+          "state": "ok",
+          "sha256": "c8888900fe6b030eeae440ace5da6b100ee674d7d7ba95548a2efc7114f8f593"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/hashicorp/preview-dark.html",
+          "final": "https://getdesign.md/design-md/hashicorp/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 39596,
+          "attempts": 1,
+          "file": "hashicorp/preview-dark.html",
+          "title": "Design System Analysis of HashiCorp",
+          "state": "ok",
+          "sha256": "c8888900fe6b030eeae440ace5da6b100ee674d7d7ba95548a2efc7114f8f593"
+        }
+      },
+      "title": "HashiCorp DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "hp",
+      "detail": "https://getdesign.md/hp/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/hp/DESIGN.md",
+          "final": "https://getdesign.md/design-md/hp/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 36335,
+          "attempts": 1,
+          "file": "hp/DESIGN.md",
+          "state": "ok",
+          "sha256": "4c9a248046684bdde5311a0c9881814f50e2381c2b0f3c75b02a35fc64bc8bb8"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/hp/preview.html",
+          "final": "https://getdesign.md/design-md/hp/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 45499,
+          "attempts": 1,
+          "file": "hp/preview.html",
+          "title": "Design System Analysis of HP",
+          "state": "ok",
+          "sha256": "d5e62d2799762b4d7055defaf96779bf3b76c5c8744d80699190bc395cf14d7b"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/hp/preview-dark.html",
+          "final": "https://getdesign.md/design-md/hp/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 45528,
+          "attempts": 1,
+          "file": "hp/preview-dark.html",
+          "title": "Design System Analysis of HP",
+          "state": "ok",
+          "sha256": "30f9de48ee37fe31f2114a204f8cdfa976786344d3bcb1506d95d3947887359f"
+        }
+      },
+      "title": "HP DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "ibm",
+      "detail": "https://getdesign.md/ibm/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/ibm/DESIGN.md",
+          "final": "https://getdesign.md/design-md/ibm/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 26481,
+          "attempts": 1,
+          "file": "ibm/DESIGN.md",
+          "state": "ok",
+          "sha256": "46f6fd65b5e7524fed1133b9b3c0dd619f9a0f145fbb2b87f3675c701a88f3bd"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/ibm/preview.html",
+          "final": "https://getdesign.md/design-md/ibm/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 35682,
+          "attempts": 1,
+          "file": "ibm/preview.html",
+          "title": "Design System Analysis of IBM",
+          "state": "ok",
+          "sha256": "6fc3debd2e66438b573a9cb03366cc2d31263fa81c0bce584060dbf13121be23"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/ibm/preview-dark.html",
+          "final": "https://getdesign.md/design-md/ibm/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 35682,
+          "attempts": 1,
+          "file": "ibm/preview-dark.html",
+          "title": "Design System Analysis of IBM",
+          "state": "ok",
+          "sha256": "158d566698da5254632f4216ef9f242462a2036cbab9e75682e8108bc65b8cd2"
+        }
+      },
+      "title": "IBM DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "intercom",
+      "detail": "https://getdesign.md/intercom/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/intercom/DESIGN.md",
+          "final": "https://getdesign.md/design-md/intercom/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 23278,
+          "attempts": 1,
+          "file": "intercom/DESIGN.md",
+          "state": "ok",
+          "sha256": "962be23cd947e87a86b2ffbc0440e9d0808243a6ef3af2aa04e8e7cc04d48ba3"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/intercom/preview.html",
+          "final": "https://getdesign.md/design-md/intercom/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 37505,
+          "attempts": 1,
+          "file": "intercom/preview.html",
+          "title": "Design System Analysis of Intercom",
+          "state": "ok",
+          "sha256": "b10897225771118f24d81c6c02f92729849cd53639bd35db7083edc185b659b7"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/intercom/preview-dark.html",
+          "final": "https://getdesign.md/design-md/intercom/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 37492,
+          "attempts": 1,
+          "file": "intercom/preview-dark.html",
+          "title": "Design System Analysis of Intercom",
+          "state": "ok",
+          "sha256": "9b36fcd91657854466a6df35562d5e8281d097094d040c8ee5b9fa608a13522b"
+        }
+      },
+      "title": "Intercom DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "jobright",
+      "detail": "https://getdesign.md/jobright/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/jobright/DESIGN.md",
+          "final": "https://getdesign.md/design-md/jobright/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 26861,
+          "attempts": 1,
+          "file": "jobright/DESIGN.md",
+          "state": "ok",
+          "sha256": "9e682194e3f846915164189538741133ab1e2779730677e92d28f873f782999b"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/jobright/preview.html",
+          "final": "https://getdesign.md/design-md/jobright/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 37664,
+          "attempts": 1,
+          "file": "jobright/preview.html",
+          "title": "Design System Analysis of Jobright",
+          "state": "ok",
+          "sha256": "36b08c3d15998fbd2d25f1aa2b2f79aa214bc60df2d58eab3ffff94a2e4e2f26"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/jobright/preview-dark.html",
+          "final": "https://getdesign.md/design-md/jobright/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 38541,
+          "attempts": 1,
+          "file": "jobright/preview-dark.html",
+          "title": "Design System Analysis of Jobright",
+          "state": "ok",
+          "sha256": "450ac626ff2a63ce7a09964a89545232e289b2a2316d47535afa79e223a4635c"
+        }
+      },
+      "title": "Jobright DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "kraken",
+      "detail": "https://getdesign.md/kraken/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/kraken/DESIGN.md",
+          "final": "https://getdesign.md/design-md/kraken/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 4350,
+          "attempts": 1,
+          "file": "kraken/DESIGN.md",
+          "state": "ok",
+          "sha256": "41bcbd5642c926a549f0d50f1151484c5776b4536233240c8415cfb79bcf1f38"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/kraken/preview.html",
+          "final": "https://getdesign.md/design-md/kraken/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 17899,
+          "attempts": 1,
+          "file": "kraken/preview.html",
+          "title": "Design System Preview: Kraken (Light)",
+          "state": "ok",
+          "sha256": "0c74a381ec07511cfbdc889a4431df9b87e39d945eea80e8178ce0ac7f57d193"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/kraken/preview-dark.html",
+          "final": "https://getdesign.md/design-md/kraken/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 18078,
+          "attempts": 1,
+          "file": "kraken/preview-dark.html",
+          "title": "Design System Preview: Kraken (Dark)",
+          "state": "ok",
+          "sha256": "3fc5413098e3936c5d7c8fa2bdbdc06d8412d929769322761425eff14c087d1a"
+        }
+      },
+      "title": "Kraken DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "lamborghini",
+      "detail": "https://getdesign.md/lamborghini/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/lamborghini/DESIGN.md",
+          "final": "https://getdesign.md/design-md/lamborghini/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 21119,
+          "attempts": 1,
+          "file": "lamborghini/DESIGN.md",
+          "state": "ok",
+          "sha256": "9aa68c53b481a0befdf72859db5625f85454122294509989aa58414aaee04b34"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/lamborghini/preview.html",
+          "final": "https://getdesign.md/design-md/lamborghini/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 26762,
+          "attempts": 1,
+          "file": "lamborghini/preview.html",
+          "title": "Design System Inspired by Lamborghini",
+          "state": "ok",
+          "sha256": "e46c3eafb7d7f8026255c4404e6948d2c3edd7a88a9a7639e55604121e9c059b"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/lamborghini/preview-dark.html",
+          "final": "https://getdesign.md/design-md/lamborghini/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 25154,
+          "attempts": 1,
+          "file": "lamborghini/preview-dark.html",
+          "title": "Design System Inspired by Lamborghini — Dark Mode",
+          "state": "ok",
+          "sha256": "99995331cdcb15897941b2fc567ec7b8f20b64c6e597c790f0c24fed7073b500"
+        }
+      },
+      "title": "Lamborghini DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "linear.app",
+      "detail": "https://getdesign.md/linear.app/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/linear.app/DESIGN.md",
+          "final": "https://getdesign.md/design-md/linear.app/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 24354,
+          "attempts": 1,
+          "file": "linear.app/DESIGN.md",
+          "state": "ok",
+          "sha256": "30bd30e72c48a16e4bdbd010f2d1c85fab657c6fae3cc85389399aab10f9cb5f"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/linear.app/preview.html",
+          "final": "https://getdesign.md/design-md/linear.app/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 37915,
+          "attempts": 1,
+          "file": "linear.app/preview.html",
+          "title": "Design System Analysis of Linear",
+          "state": "ok",
+          "sha256": "0b0e832008c2631d10aaebe58a7b9a172fe6b407594e5cd3f85091e4d2eefcf9"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/linear.app/preview-dark.html",
+          "final": "https://getdesign.md/design-md/linear.app/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 37915,
+          "attempts": 1,
+          "file": "linear.app/preview-dark.html",
+          "title": "Design System Analysis of Linear",
+          "state": "ok",
+          "sha256": "0b0e832008c2631d10aaebe58a7b9a172fe6b407594e5cd3f85091e4d2eefcf9"
+        }
+      },
+      "title": "Linear DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "lovable",
+      "detail": "https://getdesign.md/lovable/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/lovable/DESIGN.md",
+          "final": "https://getdesign.md/design-md/lovable/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 17384,
+          "attempts": 1,
+          "file": "lovable/DESIGN.md",
+          "state": "ok",
+          "sha256": "92790895c833104072643929ba56ebbf42c8f88ffb7bff1926462545d0ace6c7"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/lovable/preview.html",
+          "final": "https://getdesign.md/design-md/lovable/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 24851,
+          "attempts": 1,
+          "file": "lovable/preview.html",
+          "title": "Design System Preview: Lovable (Light)",
+          "state": "ok",
+          "sha256": "06b08c0668eedc5e1ff210ee15cda12a0cb23138b17a26b12f6961541735ea71"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/lovable/preview-dark.html",
+          "final": "https://getdesign.md/design-md/lovable/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 25040,
+          "attempts": 1,
+          "file": "lovable/preview-dark.html",
+          "title": "Design System Preview: Lovable (Dark)",
+          "state": "ok",
+          "sha256": "854ef78a288b6d7598b49d5c86e74780a424ca92762305ce1e02dcb3788ca735"
+        }
+      },
+      "title": "Lovable DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "mastercard",
+      "detail": "https://getdesign.md/mastercard/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/mastercard/DESIGN.md",
+          "final": "https://getdesign.md/design-md/mastercard/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 26995,
+          "attempts": 1,
+          "file": "mastercard/DESIGN.md",
+          "state": "ok",
+          "sha256": "e76ceaa187f43bd24b8338d2b2314e71e9225b36492e40f32a55782281a10437"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/mastercard/preview.html",
+          "final": "https://getdesign.md/design-md/mastercard/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 35197,
+          "attempts": 1,
+          "file": "mastercard/preview.html",
+          "title": "Design System Analysis of Mastercard",
+          "state": "ok",
+          "sha256": "aba3d19b2d7b4dd16a0efb213c33406f51f26f34fb761fb0b29cc31dd38d2c96"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/mastercard/preview-dark.html",
+          "final": "https://getdesign.md/design-md/mastercard/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 36191,
+          "attempts": 1,
+          "file": "mastercard/preview-dark.html",
+          "title": "Design System Analysis of Mastercard",
+          "state": "ok",
+          "sha256": "cb2e39c2da5ad3c7e3d1e1ff6a05bf93796ff986609cce10b19acb9257e522a7"
+        }
+      },
+      "title": "Mastercard DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "mercury",
+      "detail": "https://getdesign.md/mercury/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/mercury/DESIGN.md",
+          "final": "https://getdesign.md/design-md/mercury/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 25065,
+          "attempts": 1,
+          "file": "mercury/DESIGN.md",
+          "state": "ok",
+          "sha256": "dabb3683422a9841369b0db53ff13ed375b0b6f019157a5c90e9fca165cc111f"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/mercury/preview.html",
+          "final": "https://getdesign.md/design-md/mercury/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 47773,
+          "attempts": 1,
+          "file": "mercury/preview.html",
+          "title": "Design System Analysis of Mercury",
+          "state": "ok",
+          "sha256": "42682c19180e27eb7626d88ef3726a0a230cf7fb2b9fb6e7d490e64303d2a9d2"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/mercury/preview-dark.html",
+          "final": "https://getdesign.md/design-md/mercury/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 48195,
+          "attempts": 1,
+          "file": "mercury/preview-dark.html",
+          "title": "Design System Analysis of Mercury",
+          "state": "ok",
+          "sha256": "cc4ef0490c8c8df471eeee3edb2d1d713dd93e5cf61d3f0fddf0da67c03ea44a"
+        }
+      },
+      "title": "Mercury DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "meta",
+      "detail": "https://getdesign.md/meta/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/meta/DESIGN.md",
+          "final": "https://getdesign.md/design-md/meta/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 37986,
+          "attempts": 1,
+          "file": "meta/DESIGN.md",
+          "state": "ok",
+          "sha256": "306dfad97c006d47b134fb0dbd55ff68d3baa526844d6eb37346373c9ef35339"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/meta/preview.html",
+          "final": "https://getdesign.md/design-md/meta/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 57328,
+          "attempts": 1,
+          "file": "meta/preview.html",
+          "title": "Design System Analysis of Meta",
+          "state": "ok",
+          "sha256": "65a73dce77710b1874f5421a6ace6b84f3bf8d11aa4f7d32be7b1f8cac464e91"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/meta/preview-dark.html",
+          "final": "https://getdesign.md/design-md/meta/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 61760,
+          "attempts": 1,
+          "file": "meta/preview-dark.html",
+          "title": "Design System Analysis of Meta",
+          "state": "ok",
+          "sha256": "578f485907dd3e855d1d84d00b2156ed1d7236952fde501a81e729e1f94e8747"
+        }
+      },
+      "title": "Meta DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "minimax",
+      "detail": "https://getdesign.md/minimax/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/minimax/DESIGN.md",
+          "final": "https://getdesign.md/design-md/minimax/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 37920,
+          "attempts": 1,
+          "file": "minimax/DESIGN.md",
+          "state": "ok",
+          "sha256": "2658b96488bb629749259b152c5ba2912a0e8feb6a03477e265879abd9264c50"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/minimax/preview.html",
+          "final": "https://getdesign.md/design-md/minimax/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 55173,
+          "attempts": 1,
+          "file": "minimax/preview.html",
+          "title": "Design System Analysis of MiniMax",
+          "state": "ok",
+          "sha256": "054b33e48568e3196c98bf8d10fa893d28d90e1394edbd2f260bcb783a053504"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/minimax/preview-dark.html",
+          "final": "https://getdesign.md/design-md/minimax/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 59105,
+          "attempts": 1,
+          "file": "minimax/preview-dark.html",
+          "title": "Design System Analysis of MiniMax",
+          "state": "ok",
+          "sha256": "97dcd93a83295e5122547a5c43f800c02c0adeaba3749416a476da22fb641227"
+        }
+      },
+      "title": "MiniMax DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "mintlify",
+      "detail": "https://getdesign.md/mintlify/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/mintlify/DESIGN.md",
+          "final": "https://getdesign.md/design-md/mintlify/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 44083,
+          "attempts": 1,
+          "file": "mintlify/DESIGN.md",
+          "state": "ok",
+          "sha256": "754ffcf35dcd39ef8aef450085ce936aaca5b872ff92caa66be99e91a5c3d5ec"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/mintlify/preview.html",
+          "final": "https://getdesign.md/design-md/mintlify/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 69392,
+          "attempts": 1,
+          "file": "mintlify/preview.html",
+          "title": "Design System Analysis of Mintlify",
+          "state": "ok",
+          "sha256": "a3966c197ae6387585b8b414330fad053f88d129ebfd4f994cefa2fb10a86e26"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/mintlify/preview-dark.html",
+          "final": "https://getdesign.md/design-md/mintlify/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 75058,
+          "attempts": 1,
+          "file": "mintlify/preview-dark.html",
+          "title": "Design System Analysis of Mintlify",
+          "state": "ok",
+          "sha256": "64c96c6758fd6b51b742ee09aff7d64996acae801fd3f5ed0f97180ea1e592ed"
+        }
+      },
+      "title": "Mintlify DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "miro",
+      "detail": "https://getdesign.md/miro/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/miro/DESIGN.md",
+          "final": "https://getdesign.md/design-md/miro/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 36542,
+          "attempts": 1,
+          "file": "miro/DESIGN.md",
+          "state": "ok",
+          "sha256": "87c71f76297277d64f9679e015a50da88e72d86d7b41badf8733eae1e4cde335"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/miro/preview.html",
+          "final": "https://getdesign.md/design-md/miro/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 65573,
+          "attempts": 1,
+          "file": "miro/preview.html",
+          "title": "Design System Analysis of Miro",
+          "state": "ok",
+          "sha256": "d5773c492dc4fed23ab3fceca680b2d586e1a491426d336ffe7a2a8b7a699606"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/miro/preview-dark.html",
+          "final": "https://getdesign.md/design-md/miro/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 70605,
+          "attempts": 1,
+          "file": "miro/preview-dark.html",
+          "title": "Design System Analysis of Miro",
+          "state": "ok",
+          "sha256": "86001cffafed3310beea9ee9e5ab34e2114ee853b2063ede222fa4153888f5ae"
+        }
+      },
+      "title": "Miro DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "mistral.ai",
+      "detail": "https://getdesign.md/mistral.ai/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/mistral.ai/DESIGN.md",
+          "final": "https://getdesign.md/design-md/mistral.ai/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 35508,
+          "attempts": 1,
+          "file": "mistral.ai/DESIGN.md",
+          "state": "ok",
+          "sha256": "e56a8eeb44ed6e9522c59cd59ddf1d2ace9e435265cce25f8367b4e4b473f13d"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/mistral.ai/preview.html",
+          "final": "https://getdesign.md/design-md/mistral.ai/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 58749,
+          "attempts": 1,
+          "file": "mistral.ai/preview.html",
+          "title": "Design System Analysis of Mistral AI",
+          "state": "ok",
+          "sha256": "b6a086d178f96cbd57b1da9b04ddc922302a285ca4675c5c3e8f2d57f80a8a07"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/mistral.ai/preview-dark.html",
+          "final": "https://getdesign.md/design-md/mistral.ai/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 63580,
+          "attempts": 1,
+          "file": "mistral.ai/preview-dark.html",
+          "title": "Design System Analysis of Mistral AI",
+          "state": "ok",
+          "sha256": "5fd3832ee5e809371db9967aea2f27f6a7839ce3f4f95648b788d953cb3c07c6"
+        }
+      },
+      "title": "Mistral AI DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "mongodb",
+      "detail": "https://getdesign.md/mongodb/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/mongodb/DESIGN.md",
+          "final": "https://getdesign.md/design-md/mongodb/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 32077,
+          "attempts": 1,
+          "file": "mongodb/DESIGN.md",
+          "state": "ok",
+          "sha256": "4523f10efd5ccd46f9aeac3b98626e24bcf907bc0c1e46500cb0e3920f932e71"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/mongodb/preview.html",
+          "final": "https://getdesign.md/design-md/mongodb/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 63446,
+          "attempts": 1,
+          "file": "mongodb/preview.html",
+          "title": "Design System Analysis of MongoDB",
+          "state": "ok",
+          "sha256": "cb126ddc22a1cf884c5a711e0d2f597c83312061735a37a0ae12956c0617a4a9"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/mongodb/preview-dark.html",
+          "final": "https://getdesign.md/design-md/mongodb/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 68241,
+          "attempts": 1,
+          "file": "mongodb/preview-dark.html",
+          "title": "Design System Analysis of MongoDB",
+          "state": "ok",
+          "sha256": "14a9e536de8a50d2686f5a2cc8b5757938a72f512aabc4b3119c2f50c50cbfe0"
+        }
+      },
+      "title": "MongoDB DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "mydealz",
+      "detail": "https://getdesign.md/mydealz/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/mydealz/DESIGN.md",
+          "final": "https://getdesign.md/design-md/mydealz/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 25797,
+          "attempts": 1,
+          "file": "mydealz/DESIGN.md",
+          "state": "ok",
+          "sha256": "598698a1bd0824260d57eb21f728b79cd702916f918de2b6f39b3720ba727872"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/mydealz/preview.html",
+          "final": "https://getdesign.md/design-md/mydealz/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 39754,
+          "attempts": 1,
+          "file": "mydealz/preview.html",
+          "title": "Design System Analysis of mydealz",
+          "state": "ok",
+          "sha256": "bf3c91309af5afa75e9727574d488a9c5b8f70145e54c684d3c830833448e5f4"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/mydealz/preview-dark.html",
+          "final": "https://getdesign.md/design-md/mydealz/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 40016,
+          "attempts": 1,
+          "file": "mydealz/preview-dark.html",
+          "title": "Design System Analysis of mydealz",
+          "state": "ok",
+          "sha256": "9312b838cda02b6e1e0d5b9d199ed101d52fd8290b31df3879448ff0e3a8b040"
+        }
+      },
+      "title": "mydealz DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "nerdwallet",
+      "detail": "https://getdesign.md/nerdwallet/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/nerdwallet/DESIGN.md",
+          "final": "https://getdesign.md/design-md/nerdwallet/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 36240,
+          "attempts": 1,
+          "file": "nerdwallet/DESIGN.md",
+          "state": "ok",
+          "sha256": "478475273beb642f0661fb1aef7107bac5cde69250794bc148b28ee2c61960c7"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/nerdwallet/preview.html",
+          "final": "https://getdesign.md/design-md/nerdwallet/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 50491,
+          "attempts": 1,
+          "file": "nerdwallet/preview.html",
+          "title": "Design System Analysis of NerdWallet",
+          "state": "ok",
+          "sha256": "c9a51d1448c8163bec7e9baed134c01781e0869f90f3749eeb2f26629d4fa50b"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/nerdwallet/preview-dark.html",
+          "final": "https://getdesign.md/design-md/nerdwallet/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 50963,
+          "attempts": 1,
+          "file": "nerdwallet/preview-dark.html",
+          "title": "Design System Analysis of NerdWallet",
+          "state": "ok",
+          "sha256": "6c2aedc903b56151d7760907e8bcfefd45980dbf17c77dc89caeb22d8fff40c1"
+        }
+      },
+      "title": "NerdWallet DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "nike",
+      "detail": "https://getdesign.md/nike/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/nike/DESIGN.md",
+          "final": "https://getdesign.md/design-md/nike/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 36697,
+          "attempts": 1,
+          "file": "nike/DESIGN.md",
+          "state": "ok",
+          "sha256": "d2a3d363665839e2ddc15c91b8a9f3e92b1962ff55a7ca5d964ab3bb88b8186c"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/nike/preview.html",
+          "final": "https://getdesign.md/design-md/nike/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 59415,
+          "attempts": 1,
+          "file": "nike/preview.html",
+          "title": "Design System Analysis of Nike",
+          "state": "ok",
+          "sha256": "8b4948b8f6a4ccdc16d2dd21839e77105e9e25931ed7ef7b9747b68f3225a74a"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/nike/preview-dark.html",
+          "final": "https://getdesign.md/design-md/nike/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 58922,
+          "attempts": 1,
+          "file": "nike/preview-dark.html",
+          "title": "Design System Analysis of Nike",
+          "state": "ok",
+          "sha256": "7c3508a11af34a009999f3bf79abf2469161305a0b50506d346642256eb361c8"
+        }
+      },
+      "title": "Nike DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "nintendo-2001",
+      "detail": "https://getdesign.md/nintendo-2001/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/nintendo-2001/DESIGN.md",
+          "final": "https://getdesign.md/design-md/nintendo-2001/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 38977,
+          "attempts": 1,
+          "file": "nintendo-2001/DESIGN.md",
+          "state": "ok",
+          "sha256": "9630af17090d5c39ba9d8b5915a597a96c7552efe1422b3b8c3f31fb3e636716"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/nintendo-2001/preview.html",
+          "final": "https://getdesign.md/design-md/nintendo-2001/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 40497,
+          "attempts": 1,
+          "file": "nintendo-2001/preview.html",
+          "title": "Design System Analysis of Nintendo.com (2001)",
+          "state": "ok",
+          "sha256": "cde0e43cf8b0629ae476568426b465ab481dad991344a489ed990bb795f293c3"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/nintendo-2001/preview-dark.html",
+          "final": "https://getdesign.md/design-md/nintendo-2001/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 41269,
+          "attempts": 1,
+          "file": "nintendo-2001/preview-dark.html",
+          "title": "Design System Analysis of Nintendo.com (2001)",
+          "state": "ok",
+          "sha256": "5cc304c736914240c948144c58f0be634e6dd1cdb6800cfdf5aed9e10f784a39"
+        }
+      },
+      "title": "Nintendo (2001) DESIGN.md",
+      "detailStatus": 200,
+      "verificationNote": "目录名为 Nintendo (2001)，两份预览标题使用 Nintendo.com (2001)。"
+    },
+    {
+      "slug": "notion",
+      "detail": "https://getdesign.md/notion/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/notion/DESIGN.md",
+          "final": "https://getdesign.md/design-md/notion/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 26889,
+          "attempts": 1,
+          "file": "notion/DESIGN.md",
+          "state": "ok",
+          "sha256": "6dd125ef080ed34f063fe8cd7b274359125aaab57bba4570b60423314951cd48"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/notion/preview.html",
+          "final": "https://getdesign.md/design-md/notion/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 63101,
+          "attempts": 1,
+          "file": "notion/preview.html",
+          "title": "Design System Analysis of Notion",
+          "state": "ok",
+          "sha256": "f7c86c9dda863278e2adde7c2b7617e8ba99b50050100becdbd2aa65f1f49a14"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/notion/preview-dark.html",
+          "final": "https://getdesign.md/design-md/notion/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 65026,
+          "attempts": 1,
+          "file": "notion/preview-dark.html",
+          "title": "Design System Analysis of Notion",
+          "state": "ok",
+          "sha256": "a4f644f75f9a38445c9a253a6f45ef1fbfeff325a5d1bda57e3f17d900ecabec"
+        }
+      },
+      "title": "Notion DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "nvidia",
+      "detail": "https://getdesign.md/nvidia/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/nvidia/DESIGN.md",
+          "final": "https://getdesign.md/design-md/nvidia/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 35591,
+          "attempts": 1,
+          "file": "nvidia/DESIGN.md",
+          "state": "ok",
+          "sha256": "d649be85daf075c98a17071e707e3901c6e19150044a81716acd01ef1169cc83"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/nvidia/preview.html",
+          "final": "https://getdesign.md/design-md/nvidia/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 57707,
+          "attempts": 1,
+          "file": "nvidia/preview.html",
+          "title": "Design System Analysis of NVIDIA",
+          "state": "ok",
+          "sha256": "e5bcfd14fca982f9f66e3ac118a41151e71ccd5ae73152f090c9904f4115d47d"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/nvidia/preview-dark.html",
+          "final": "https://getdesign.md/design-md/nvidia/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 54241,
+          "attempts": 1,
+          "file": "nvidia/preview-dark.html",
+          "title": "Design System Analysis of NVIDIA",
+          "state": "ok",
+          "sha256": "870413698bba97469a555954d6e45d2da32762abbacb888cb81f31077ba6cfc2"
+        }
+      },
+      "title": "NVIDIA DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "ollama",
+      "detail": "https://getdesign.md/ollama/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/ollama/DESIGN.md",
+          "final": "https://getdesign.md/design-md/ollama/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 32747,
+          "attempts": 1,
+          "file": "ollama/DESIGN.md",
+          "state": "ok",
+          "sha256": "3f36f897e5aad870344dd97e282c8f125ad208dc99449bb08dd38b9259d2f451"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/ollama/preview.html",
+          "final": "https://getdesign.md/design-md/ollama/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 46456,
+          "attempts": 1,
+          "file": "ollama/preview.html",
+          "title": "Design System Analysis of Ollama",
+          "state": "ok",
+          "sha256": "583aad9c11971004b3df7fb7d548b36a1bf3514607eed3c2e92d289ca9dac9db"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/ollama/preview-dark.html",
+          "final": "https://getdesign.md/design-md/ollama/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 45631,
+          "attempts": 1,
+          "file": "ollama/preview-dark.html",
+          "title": "Design System Analysis of Ollama",
+          "state": "ok",
+          "sha256": "fe4c43d7e1bb258b7efba9429cdd00aa253399d61418b742ca1c812c700404d1"
+        }
+      },
+      "title": "Ollama DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "opencode.ai",
+      "detail": "https://getdesign.md/opencode.ai/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/opencode.ai/DESIGN.md",
+          "final": "https://getdesign.md/design-md/opencode.ai/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 32647,
+          "attempts": 1,
+          "file": "opencode.ai/DESIGN.md",
+          "state": "ok",
+          "sha256": "d1a8893c4b8ac90b1e86230eee2effa8bd15add3582853477920e32432336dda"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/opencode.ai/preview.html",
+          "final": "https://getdesign.md/design-md/opencode.ai/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 46716,
+          "attempts": 1,
+          "file": "opencode.ai/preview.html",
+          "title": "Design System Analysis of OpenCode",
+          "state": "ok",
+          "sha256": "b71923010b6d1f9b595ab54893c72ba814d408cae357a3d7860ba27cce9f7657"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/opencode.ai/preview-dark.html",
+          "final": "https://getdesign.md/design-md/opencode.ai/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 43997,
+          "attempts": 1,
+          "file": "opencode.ai/preview-dark.html",
+          "title": "Design System Analysis of OpenCode",
+          "state": "ok",
+          "sha256": "45b16022ba786e7d1171ad03d54e05886ac54550290afba506e5a507b170ae19"
+        }
+      },
+      "title": "OpenCode DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "oracle",
+      "detail": "https://getdesign.md/oracle/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/oracle/DESIGN.md",
+          "final": "https://getdesign.md/design-md/oracle/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 42525,
+          "attempts": 1,
+          "file": "oracle/DESIGN.md",
+          "state": "ok",
+          "sha256": "23f03014c1654ff72e9a2185f1c3d1f3b51eabc8124c14f6ddd51b17a36a85a6"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/oracle/preview.html",
+          "final": "https://getdesign.md/design-md/oracle/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 59067,
+          "attempts": 1,
+          "file": "oracle/preview.html",
+          "title": "Design System Analysis of Oracle",
+          "state": "ok",
+          "sha256": "d32401a55877fd61cefa9515117b7224ef16db92ffba47a53cb90959f8902f16"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/oracle/preview-dark.html",
+          "final": "https://getdesign.md/design-md/oracle/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 59522,
+          "attempts": 1,
+          "file": "oracle/preview-dark.html",
+          "title": "Design System Analysis of Oracle",
+          "state": "ok",
+          "sha256": "5fbe3f773eb83062acc7fd6dc8132bd9eca5e99f98298ea62ea23113905bc605"
+        }
+      },
+      "title": "Oracle DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "oura",
+      "detail": "https://getdesign.md/oura/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/oura/DESIGN.md",
+          "final": "https://getdesign.md/design-md/oura/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 31798,
+          "attempts": 1,
+          "file": "oura/DESIGN.md",
+          "state": "ok",
+          "sha256": "8674dbeb48bf7e3ff5271e79a6222084118ba1630db4a2199d1492568850fa08"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/oura/preview.html",
+          "final": "https://getdesign.md/design-md/oura/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 41931,
+          "attempts": 1,
+          "file": "oura/preview.html",
+          "title": "Design System Analysis of Oura",
+          "state": "ok",
+          "sha256": "7e6bb216635d6469628621d07279f963df436f1bc0faf81b676669ecedd66198"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/oura/preview-dark.html",
+          "final": "https://getdesign.md/design-md/oura/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 42296,
+          "attempts": 1,
+          "file": "oura/preview-dark.html",
+          "title": "Design System Analysis of Oura",
+          "state": "ok",
+          "sha256": "586e3861e05701fad726483a1aa593063543838f1425b135264e4ce7e9294b9e"
+        }
+      },
+      "title": "Oura DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "pinterest",
+      "detail": "https://getdesign.md/pinterest/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/pinterest/DESIGN.md",
+          "final": "https://getdesign.md/design-md/pinterest/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 36392,
+          "attempts": 1,
+          "file": "pinterest/DESIGN.md",
+          "state": "ok",
+          "sha256": "26a202fd244e9213d5e2475d81581828da1dd97e089e44639d9783d04f96e4a8"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/pinterest/preview.html",
+          "final": "https://getdesign.md/design-md/pinterest/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 49086,
+          "attempts": 1,
+          "file": "pinterest/preview.html",
+          "title": "Design System Analysis of Pinterest",
+          "state": "ok",
+          "sha256": "0243c4a7d89a70143f04099c269a022034e090e95643bf780c42e6f77f34d41a"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/pinterest/preview-dark.html",
+          "final": "https://getdesign.md/design-md/pinterest/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 47222,
+          "attempts": 1,
+          "file": "pinterest/preview-dark.html",
+          "title": "Design System Analysis of Pinterest",
+          "state": "ok",
+          "sha256": "a056daf6e8aede3c40aed463338f0d6268fde25459be3e95344312d766285eac"
+        }
+      },
+      "title": "Pinterest DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "playstation",
+      "detail": "https://getdesign.md/playstation/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/playstation/DESIGN.md",
+          "final": "https://getdesign.md/design-md/playstation/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 39766,
+          "attempts": 1,
+          "file": "playstation/DESIGN.md",
+          "state": "ok",
+          "sha256": "2a56c109af6cb847fa091b768f719b498ac56b582d010860e73ea5fb72a1590d"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/playstation/preview.html",
+          "final": "https://getdesign.md/design-md/playstation/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 52451,
+          "attempts": 1,
+          "file": "playstation/preview.html",
+          "title": "Design System Analysis of PlayStation",
+          "state": "ok",
+          "sha256": "816aa4e5c4fba05d38cc1649156eb207c4092b82538a11e2192eecfc35ed4efa"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/playstation/preview-dark.html",
+          "final": "https://getdesign.md/design-md/playstation/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 48933,
+          "attempts": 1,
+          "file": "playstation/preview-dark.html",
+          "title": "Design System Analysis of PlayStation",
+          "state": "ok",
+          "sha256": "dd81f9d6bc771a54cd993725893caec7a5d517d48668966d50c5cb1f2eaa1836"
+        }
+      },
+      "title": "PlayStation DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "posthog",
+      "detail": "https://getdesign.md/posthog/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/posthog/DESIGN.md",
+          "final": "https://getdesign.md/design-md/posthog/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 40498,
+          "attempts": 1,
+          "file": "posthog/DESIGN.md",
+          "state": "ok",
+          "sha256": "01f497f751d56296bfcd5eb8806325a4bb4786d364941ec6e65c65fa9ee6d362"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/posthog/preview.html",
+          "final": "https://getdesign.md/design-md/posthog/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 55207,
+          "attempts": 1,
+          "file": "posthog/preview.html",
+          "title": "Design System Analysis of PostHog",
+          "state": "ok",
+          "sha256": "7efcbbde544e6c5f66fde580b3c51cbd4beac67b7705922ace59cb8c538b222e"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/posthog/preview-dark.html",
+          "final": "https://getdesign.md/design-md/posthog/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 52304,
+          "attempts": 1,
+          "file": "posthog/preview-dark.html",
+          "title": "Design System Analysis of PostHog",
+          "state": "ok",
+          "sha256": "4f0ae69a0da5b9b9c6ec6904e44a5db3153ba580ac1060e69231c8d9145301a1"
+        }
+      },
+      "title": "PostHog DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "raycast",
+      "detail": "https://getdesign.md/raycast/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/raycast/DESIGN.md",
+          "final": "https://getdesign.md/design-md/raycast/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 41275,
+          "attempts": 1,
+          "file": "raycast/DESIGN.md",
+          "state": "ok",
+          "sha256": "6e2c5137e4d914b70996d589688374a801b6f29a35c9c019c22abb5e0170bda3"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/raycast/preview.html",
+          "final": "https://getdesign.md/design-md/raycast/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 58399,
+          "attempts": 1,
+          "file": "raycast/preview.html",
+          "title": "Design System Analysis of Raycast",
+          "state": "ok",
+          "sha256": "218c33849432a592ca8295d034835fb322a45f6df00cb276c71f7ef53b590d80"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/raycast/preview-dark.html",
+          "final": "https://getdesign.md/design-md/raycast/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 58399,
+          "attempts": 1,
+          "file": "raycast/preview-dark.html",
+          "title": "Design System Analysis of Raycast",
+          "state": "ok",
+          "sha256": "b8fd98df970d53b8285327856b75ce62fc88a06ef9968eff740c87d14a0bba85"
+        }
+      },
+      "title": "Raycast DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "renault",
+      "detail": "https://getdesign.md/renault/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/renault/DESIGN.md",
+          "final": "https://getdesign.md/design-md/renault/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 30068,
+          "attempts": 1,
+          "file": "renault/DESIGN.md",
+          "state": "ok",
+          "sha256": "45360c1738e1ec42d978c511b4fbd63b2bf099395bd4c9cbdd1aa117c814b25e"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/renault/preview.html",
+          "final": "https://getdesign.md/design-md/renault/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 35635,
+          "attempts": 1,
+          "file": "renault/preview.html",
+          "title": "Design System Analysis of Renault",
+          "state": "ok",
+          "sha256": "8721a69be75cb9dcc1137e4f1e8267e04468cc16ce11d087b4fb0a84e705ee0f"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/renault/preview-dark.html",
+          "final": "https://getdesign.md/design-md/renault/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 35738,
+          "attempts": 1,
+          "file": "renault/preview-dark.html",
+          "title": "Design System Analysis of Renault",
+          "state": "ok",
+          "sha256": "f3bf68fee21c19089597fcc0ec1ffc961750298039ca4e78ff374f3277b5f3f9"
+        }
+      },
+      "title": "Renault DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "replicate",
+      "detail": "https://getdesign.md/replicate/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/replicate/DESIGN.md",
+          "final": "https://getdesign.md/design-md/replicate/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 31495,
+          "attempts": 1,
+          "file": "replicate/DESIGN.md",
+          "state": "ok",
+          "sha256": "c22062d7b4174bf9ced7bc61c48389086cf6eed96a958e098ee70389893b0a15"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/replicate/preview.html",
+          "final": "https://getdesign.md/design-md/replicate/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 35443,
+          "attempts": 1,
+          "file": "replicate/preview.html",
+          "title": "Design System Analysis of Replicate",
+          "state": "ok",
+          "sha256": "1b7ac5e7633203f75aec738d072f4004ff2192f117e938b90b67e5536c50d5db"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/replicate/preview-dark.html",
+          "final": "https://getdesign.md/design-md/replicate/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 35533,
+          "attempts": 1,
+          "file": "replicate/preview-dark.html",
+          "title": "Design System Analysis of Replicate",
+          "state": "ok",
+          "sha256": "97a1ccab9c721398fe5a3552dfbf3581e1e9c1b883c39440df0f6086052c081a"
+        }
+      },
+      "title": "Replicate DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "resend",
+      "detail": "https://getdesign.md/resend/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/resend/DESIGN.md",
+          "final": "https://getdesign.md/design-md/resend/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 31461,
+          "attempts": 1,
+          "file": "resend/DESIGN.md",
+          "state": "ok",
+          "sha256": "99536f1b2380511a539f7f3466d46d351e4bf35a5af0c0df395bdc20af05c9be"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/resend/preview.html",
+          "final": "https://getdesign.md/design-md/resend/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 38751,
+          "attempts": 1,
+          "file": "resend/preview.html",
+          "title": "Design System Analysis of Resend",
+          "state": "ok",
+          "sha256": "0178d93d6c07cff4d71022c0e090157a6885c333e66b5d59725c901e816a271c"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/resend/preview-dark.html",
+          "final": "https://getdesign.md/design-md/resend/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 38751,
+          "attempts": 1,
+          "file": "resend/preview-dark.html",
+          "title": "Design System Analysis of Resend",
+          "state": "ok",
+          "sha256": "1540f0d08356afe9bcb052ff5150325291a8446e5065ffd818d9a5dabafa9515"
+        }
+      },
+      "title": "Resend DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "revolut",
+      "detail": "https://getdesign.md/revolut/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/revolut/DESIGN.md",
+          "final": "https://getdesign.md/design-md/revolut/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 32034,
+          "attempts": 1,
+          "file": "revolut/DESIGN.md",
+          "state": "ok",
+          "sha256": "b7fa8473315541f5d7e7d76f68a77105d255e6dae00d31d5eb34621d1d52de59"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/revolut/preview.html",
+          "final": "https://getdesign.md/design-md/revolut/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 40312,
+          "attempts": 1,
+          "file": "revolut/preview.html",
+          "title": "Design System Analysis of Revolut",
+          "state": "ok",
+          "sha256": "245698fe612af393ee7ff55f6f8b22ef79c81c72c276f84463078323b1d327ae"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/revolut/preview-dark.html",
+          "final": "https://getdesign.md/design-md/revolut/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 40414,
+          "attempts": 1,
+          "file": "revolut/preview-dark.html",
+          "title": "Design System Analysis of Revolut",
+          "state": "ok",
+          "sha256": "a2ed72c8e854e71f02e0a04e542f65a17a5135e5d6ec4694fc72a7413fcfcde4"
+        }
+      },
+      "title": "Revolut DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "runwayml",
+      "detail": "https://getdesign.md/runwayml/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/runwayml/DESIGN.md",
+          "final": "https://getdesign.md/design-md/runwayml/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 31742,
+          "attempts": 1,
+          "file": "runwayml/DESIGN.md",
+          "state": "ok",
+          "sha256": "d542836a644d7252986133d884ff6603a97fc4f3b1e088119d304d73598108ff"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/runwayml/preview.html",
+          "final": "https://getdesign.md/design-md/runwayml/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 35592,
+          "attempts": 1,
+          "file": "runwayml/preview.html",
+          "title": "Design System Analysis of Runway",
+          "state": "ok",
+          "sha256": "bf1fb4ab3ca03730a58592db5c4f6d45d34cb2bce7a98a9d445d64a3a8c92624"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/runwayml/preview-dark.html",
+          "final": "https://getdesign.md/design-md/runwayml/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 35582,
+          "attempts": 1,
+          "file": "runwayml/preview-dark.html",
+          "title": "Design System Analysis of Runway",
+          "state": "ok",
+          "sha256": "885866d2e00dec34e61abb3909eeb5764d4ee3fd831fd63dc171fa1df2f6f09e"
+        }
+      },
+      "title": "Runway DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "sanity",
+      "detail": "https://getdesign.md/sanity/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/sanity/DESIGN.md",
+          "final": "https://getdesign.md/design-md/sanity/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 38553,
+          "attempts": 1,
+          "file": "sanity/DESIGN.md",
+          "state": "ok",
+          "sha256": "110f1bfb78eb9fd3282d7163c0b53c1041f888413ac7429402931a2569668210"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/sanity/preview.html",
+          "final": "https://getdesign.md/design-md/sanity/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 43238,
+          "attempts": 1,
+          "file": "sanity/preview.html",
+          "title": "Design System Analysis of Sanity",
+          "state": "ok",
+          "sha256": "783d42cdda1027eabb821faff3e15a73b6314aaa4e0256a122cfc02f72a16edf"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/sanity/preview-dark.html",
+          "final": "https://getdesign.md/design-md/sanity/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 43074,
+          "attempts": 1,
+          "file": "sanity/preview-dark.html",
+          "title": "Design System Analysis of Sanity",
+          "state": "ok",
+          "sha256": "be500bad69d53387a073ae50ef46a652422fd52d17ad9bd4f78200f01a022e0e"
+        }
+      },
+      "title": "Sanity DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "sap",
+      "detail": "https://getdesign.md/sap/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/sap/DESIGN.md",
+          "final": "https://getdesign.md/design-md/sap/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 33615,
+          "attempts": 1,
+          "file": "sap/DESIGN.md",
+          "state": "ok",
+          "sha256": "f14c951d6112efce488f56d189b9bcdf58f5b9f87ae1e2ee68f062e6a6967d97"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/sap/preview.html",
+          "final": "https://getdesign.md/design-md/sap/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 41536,
+          "attempts": 1,
+          "file": "sap/preview.html",
+          "title": "Design System Analysis of SAP",
+          "state": "ok",
+          "sha256": "c0f481b118f413667f99225d13726e11ea65d21c89efe2ca7a2a36118a0ecd43"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/sap/preview-dark.html",
+          "final": "https://getdesign.md/design-md/sap/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 42039,
+          "attempts": 1,
+          "file": "sap/preview-dark.html",
+          "title": "Design System Analysis of SAP",
+          "state": "ok",
+          "sha256": "33ac2ed27fbde7920d298aa33f0d9046a89c8367a5e45d1bd6dad40c870fd477"
+        }
+      },
+      "title": "SAP DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "sentry",
+      "detail": "https://getdesign.md/sentry/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/sentry/DESIGN.md",
+          "final": "https://getdesign.md/design-md/sentry/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 38401,
+          "attempts": 1,
+          "file": "sentry/DESIGN.md",
+          "state": "ok",
+          "sha256": "379ec92544457bdf25f4d4375e4e20da9c12d392a4bfe962586286f358267716"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/sentry/preview.html",
+          "final": "https://getdesign.md/design-md/sentry/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 65764,
+          "attempts": 1,
+          "file": "sentry/preview.html",
+          "title": "Design System Analysis of Sentry",
+          "state": "ok",
+          "sha256": "74558c994ecf7c53e579f433c6f432dad18adcb072304b652eac557cde89ce52"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/sentry/preview-dark.html",
+          "final": "https://getdesign.md/design-md/sentry/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 66073,
+          "attempts": 1,
+          "file": "sentry/preview-dark.html",
+          "title": "Design System Analysis of Sentry",
+          "state": "ok",
+          "sha256": "fb7574cf26ff3d715897fbb97b32bf22cf619ca30b36992b460cab48caaef480"
+        }
+      },
+      "title": "Sentry DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "shopify",
+      "detail": "https://getdesign.md/shopify/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/shopify/DESIGN.md",
+          "final": "https://getdesign.md/design-md/shopify/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 27058,
+          "attempts": 1,
+          "file": "shopify/DESIGN.md",
+          "state": "ok",
+          "sha256": "7557ff6eb60ca33b8c6ccb8efb1da00043b974be6407550eca5f90648e53de15"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/shopify/preview.html",
+          "final": "https://getdesign.md/design-md/shopify/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 49130,
+          "attempts": 1,
+          "file": "shopify/preview.html",
+          "title": "Design System Analysis of Shopify",
+          "state": "ok",
+          "sha256": "ec937f685150b85af0f2d1c5e6ecc488b5f24954fbda01963407417d8d6fa2ed"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/shopify/preview-dark.html",
+          "final": "https://getdesign.md/design-md/shopify/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 49262,
+          "attempts": 1,
+          "file": "shopify/preview-dark.html",
+          "title": "Design System Analysis of Shopify",
+          "state": "ok",
+          "sha256": "9d5cb3f475b757cd86d73b04012600971549434397828a5e226c67d7ea66af01"
+        }
+      },
+      "title": "Shopify DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "slack",
+      "detail": "https://getdesign.md/slack/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/slack/DESIGN.md",
+          "final": "https://getdesign.md/design-md/slack/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 24520,
+          "attempts": 1,
+          "file": "slack/DESIGN.md",
+          "state": "ok",
+          "sha256": "6f35ee9f8ce00e2556b4135793565b7ddd20b54fd80ce4ad1bff81b3e8c7d9aa"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/slack/preview.html",
+          "final": "https://getdesign.md/design-md/slack/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 40061,
+          "attempts": 1,
+          "file": "slack/preview.html",
+          "title": "Design System Analysis of Slack",
+          "state": "ok",
+          "sha256": "c89c778d8796faabd9caa1a6289593b1a20555c3fddcc8a914fc0f576c42e302"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/slack/preview-dark.html",
+          "final": "https://getdesign.md/design-md/slack/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 40110,
+          "attempts": 1,
+          "file": "slack/preview-dark.html",
+          "title": "Design System Analysis of Slack",
+          "state": "ok",
+          "sha256": "2606027172e9d975b7fef33c96c912d68c28eaf770b2fc4b340a6221fef6a89f"
+        }
+      },
+      "title": "Slack DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "spacex",
+      "detail": "https://getdesign.md/spacex/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/spacex/DESIGN.md",
+          "final": "https://getdesign.md/design-md/spacex/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 19671,
+          "attempts": 1,
+          "file": "spacex/DESIGN.md",
+          "state": "ok",
+          "sha256": "edf77e927ca68c384490f446055101f40573e8c00c44ec2d24a5717220ecae7a"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/spacex/preview.html",
+          "final": "https://getdesign.md/design-md/spacex/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 43683,
+          "attempts": 1,
+          "file": "spacex/preview.html",
+          "title": "Design System Analysis of SpaceX",
+          "state": "ok",
+          "sha256": "03fe8e946ed7041f12534de4a416aef4ab27b609750af05a81ef2bc57ac857fe"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/spacex/preview-dark.html",
+          "final": "https://getdesign.md/design-md/spacex/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 43804,
+          "attempts": 1,
+          "file": "spacex/preview-dark.html",
+          "title": "Design System Analysis of SpaceX",
+          "state": "ok",
+          "sha256": "3b1d055e69998fb1c536c23898b4e5ed9e307dc8210905de44f3c08e0a144eef"
+        }
+      },
+      "title": "SpaceX DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "spotify",
+      "detail": "https://getdesign.md/spotify/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/spotify/DESIGN.md",
+          "final": "https://getdesign.md/design-md/spotify/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 12955,
+          "attempts": 1,
+          "file": "spotify/DESIGN.md",
+          "state": "ok",
+          "sha256": "72e964a6cf551d0603f9854f2f42ee08e97ad4d9e17e037f50f6233508288295"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/spotify/preview.html",
+          "final": "https://getdesign.md/design-md/spotify/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 19662,
+          "attempts": 1,
+          "file": "spotify/preview.html",
+          "title": "Design System Preview: Spotify (Light)",
+          "state": "ok",
+          "sha256": "a4be1973f6704431185b344c4e6e37e7e68799a2a5c388cb951ed2a10ecc4fd5"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/spotify/preview-dark.html",
+          "final": "https://getdesign.md/design-md/spotify/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 19880,
+          "attempts": 1,
+          "file": "spotify/preview-dark.html",
+          "title": "Design System Preview: Spotify (Dark)",
+          "state": "ok",
+          "sha256": "dbc282381e93636ad8b5f085c4edc6aa2c94c97dabb1a32c2bcd074ea04b0a3d"
+        }
+      },
+      "title": "Spotify DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "starbucks",
+      "detail": "https://getdesign.md/starbucks/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/starbucks/DESIGN.md",
+          "final": "https://getdesign.md/design-md/starbucks/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 37329,
+          "attempts": 1,
+          "file": "starbucks/DESIGN.md",
+          "state": "ok",
+          "sha256": "e20338ee10226c63cf2588207288c08e12d60754a53f681657adaf364dfe8fa7"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/starbucks/preview.html",
+          "final": "https://getdesign.md/design-md/starbucks/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 50839,
+          "attempts": 1,
+          "file": "starbucks/preview.html",
+          "title": "Design System Analysis of Starbucks",
+          "state": "ok",
+          "sha256": "16372a8e6731128d48d1e567a28af6887379f4278d8d5df4959072df33cc7cd8"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/starbucks/preview-dark.html",
+          "final": "https://getdesign.md/design-md/starbucks/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 47179,
+          "attempts": 1,
+          "file": "starbucks/preview-dark.html",
+          "title": "Design System Analysis of Starbucks",
+          "state": "ok",
+          "sha256": "2bdff2a1819e27726b3a246edd88918c625379cf545038fb4c3ab0e4c9bf2e24"
+        }
+      },
+      "title": "Starbucks DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "stripe",
+      "detail": "https://getdesign.md/stripe/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/stripe/DESIGN.md",
+          "final": "https://getdesign.md/design-md/stripe/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 24597,
+          "attempts": 1,
+          "file": "stripe/DESIGN.md",
+          "state": "ok",
+          "sha256": "645efe1e1a04ce04548e1f8d70c7231f8b4e1f627c83146e70e48778937f56bf"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/stripe/preview.html",
+          "final": "https://getdesign.md/design-md/stripe/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 45023,
+          "attempts": 1,
+          "file": "stripe/preview.html",
+          "title": "Design System Analysis of Stripe",
+          "state": "ok",
+          "sha256": "4d8fad5f584b416d4587c071e0583f5bb73c099aa9f823104e2842b5391e33db"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/stripe/preview-dark.html",
+          "final": "https://getdesign.md/design-md/stripe/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 44946,
+          "attempts": 1,
+          "file": "stripe/preview-dark.html",
+          "title": "Design System Analysis of Stripe",
+          "state": "ok",
+          "sha256": "ef190ece533fa7f920203acd792ebf47b424fbbbdb458f9e5a905bf2718259b6"
+        }
+      },
+      "title": "Stripe DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "supabase",
+      "detail": "https://getdesign.md/supabase/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/supabase/DESIGN.md",
+          "final": "https://getdesign.md/design-md/supabase/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 21306,
+          "attempts": 1,
+          "file": "supabase/DESIGN.md",
+          "state": "ok",
+          "sha256": "fbe35152a98aceca9148ae110620321f3046808a66b8f7b43cde5409309bacc3"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/supabase/preview.html",
+          "final": "https://getdesign.md/design-md/supabase/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 43923,
+          "attempts": 1,
+          "file": "supabase/preview.html",
+          "title": "Design System Analysis of Supabase",
+          "state": "ok",
+          "sha256": "71b430e76c949b4540ffc1bba8ef2473501c655489d1ba3f2a92c605d9eca514"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/supabase/preview-dark.html",
+          "final": "https://getdesign.md/design-md/supabase/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 44023,
+          "attempts": 1,
+          "file": "supabase/preview-dark.html",
+          "title": "Design System Analysis of Supabase",
+          "state": "ok",
+          "sha256": "eaa0e71c4dfbb528865a200387a85076f17e8dbc334128737b722f0e14f34871"
+        }
+      },
+      "title": "Supabase DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "superhuman",
+      "detail": "https://getdesign.md/superhuman/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/superhuman/DESIGN.md",
+          "final": "https://getdesign.md/design-md/superhuman/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 21868,
+          "attempts": 1,
+          "file": "superhuman/DESIGN.md",
+          "state": "ok",
+          "sha256": "2f1a87bb389e1e8c96c1d146fba60002bc74a13a44547db8fb5d6c784802189d"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/superhuman/preview.html",
+          "final": "https://getdesign.md/design-md/superhuman/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 43782,
+          "attempts": 1,
+          "file": "superhuman/preview.html",
+          "title": "Design System Analysis of Superhuman",
+          "state": "ok",
+          "sha256": "436778a1467c6b873b64dad4909fc63dc33b189d51e7403a0d53a213a6d671bd"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/superhuman/preview-dark.html",
+          "final": "https://getdesign.md/design-md/superhuman/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 43857,
+          "attempts": 1,
+          "file": "superhuman/preview-dark.html",
+          "title": "Design System Analysis of Superhuman",
+          "state": "ok",
+          "sha256": "955a1ef205b55f9e000ac1b3c3600e6e1471e95194d967e01a789c06893dcedc"
+        }
+      },
+      "title": "Superhuman DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "tesla",
+      "detail": "https://getdesign.md/tesla/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/tesla/DESIGN.md",
+          "final": "https://getdesign.md/design-md/tesla/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 22212,
+          "attempts": 1,
+          "file": "tesla/DESIGN.md",
+          "state": "ok",
+          "sha256": "19f2f7e6073d708f46d2512e6bab3c7c417cf2b4d9f57ff6ec6f2e056ea942b0"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/tesla/preview.html",
+          "final": "https://getdesign.md/design-md/tesla/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 31547,
+          "attempts": 1,
+          "file": "tesla/preview.html",
+          "title": "Design System Inspired by Tesla",
+          "state": "ok",
+          "sha256": "591a09ed5fbb68891c14d7ec63f94c727620ae8d0d0c3b138a26a66e73d6cda3"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/tesla/preview-dark.html",
+          "final": "https://getdesign.md/design-md/tesla/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 31912,
+          "attempts": 1,
+          "file": "tesla/preview-dark.html",
+          "title": "Design System Inspired by Tesla — Dark Mode",
+          "state": "ok",
+          "sha256": "216333d3b16ec97e5783d82e419671bff8ac2ed569c5c340f45eca4832c5ff3e"
+        }
+      },
+      "title": "Tesla DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "theverge",
+      "detail": "https://getdesign.md/theverge/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/theverge/DESIGN.md",
+          "final": "https://getdesign.md/design-md/theverge/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 28368,
+          "attempts": 1,
+          "file": "theverge/DESIGN.md",
+          "state": "ok",
+          "sha256": "5da2c3116e6845826b043ac115a80896a399efda2cebc0188981fba2ef9bb526"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/theverge/preview.html",
+          "final": "https://getdesign.md/design-md/theverge/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 43999,
+          "attempts": 1,
+          "file": "theverge/preview.html",
+          "title": "Design System Analysis of The Verge",
+          "state": "ok",
+          "sha256": "a9261df051cf37c84b582c381477ea732a03353affc15f7f326a297f6c1f5441"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/theverge/preview-dark.html",
+          "final": "https://getdesign.md/design-md/theverge/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 43891,
+          "attempts": 1,
+          "file": "theverge/preview-dark.html",
+          "title": "Design System Analysis of The Verge",
+          "state": "ok",
+          "sha256": "a7436df0407331bd58bbb940c79509884d7cf8fea262487b8619229effb89b7f"
+        }
+      },
+      "title": "The Verge DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "together.ai",
+      "detail": "https://getdesign.md/together.ai/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/together.ai/DESIGN.md",
+          "final": "https://getdesign.md/design-md/together.ai/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 38334,
+          "attempts": 1,
+          "file": "together.ai/DESIGN.md",
+          "state": "ok",
+          "sha256": "2a0324f6f4b97c80dff6d0a695b4e7ee66bc0e7c7e094ae4cf1ec400b910d484"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/together.ai/preview.html",
+          "final": "https://getdesign.md/design-md/together.ai/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 106308,
+          "attempts": 1,
+          "file": "together.ai/preview.html",
+          "title": "Design System Analysis of Together AI",
+          "state": "ok",
+          "sha256": "1109037fa7bff31e84c7f1ebd2a22e211dbb180613cb72a109721891a8441be5"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/together.ai/preview-dark.html",
+          "final": "https://getdesign.md/design-md/together.ai/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 106844,
+          "attempts": 1,
+          "file": "together.ai/preview-dark.html",
+          "title": "Design System Analysis of Together AI",
+          "state": "ok",
+          "sha256": "fb25e6b6b8022e4d1a794b998c1ca25e6cbaf68439dc651207fd673ae6b71e29"
+        }
+      },
+      "title": "Together AI DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "uber",
+      "detail": "https://getdesign.md/uber/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/uber/DESIGN.md",
+          "final": "https://getdesign.md/design-md/uber/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 34751,
+          "attempts": 1,
+          "file": "uber/DESIGN.md",
+          "state": "ok",
+          "sha256": "1a281c78ce1f1744dd763ecc7ca0b7ded0c2ccacec56733d47136fd6389b5bca"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/uber/preview.html",
+          "final": "https://getdesign.md/design-md/uber/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 102028,
+          "attempts": 1,
+          "file": "uber/preview.html",
+          "title": "Design System Analysis of Uber",
+          "state": "ok",
+          "sha256": "df72a375cd88ed2a47f56e60306c69b096325521b4d05614e28bd90f39058da7"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/uber/preview-dark.html",
+          "final": "https://getdesign.md/design-md/uber/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 104492,
+          "attempts": 1,
+          "file": "uber/preview-dark.html",
+          "title": "Design System Analysis of Uber",
+          "state": "ok",
+          "sha256": "36f8fc63a58a654b1718adab2aa45c9162883c0d9181414bf21f8770838ad263"
+        }
+      },
+      "title": "Uber DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "vercel",
+      "detail": "https://getdesign.md/vercel/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/vercel/DESIGN.md",
+          "final": "https://getdesign.md/design-md/vercel/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 26310,
+          "attempts": 1,
+          "file": "vercel/DESIGN.md",
+          "state": "ok",
+          "sha256": "e17d893e4d7a90ef375840e4c4da480d59ad63806c323f4ee7e53d1d19b911e0"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/vercel/preview.html",
+          "final": "https://getdesign.md/design-md/vercel/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 24009,
+          "attempts": 1,
+          "file": "vercel/preview.html",
+          "title": "Design System Analysis of Vercel",
+          "state": "ok",
+          "sha256": "3d49cf2cf101c98916f940ff7f51baddf2929b869093d1b9a123ecfe76faf10a"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/vercel/preview-dark.html",
+          "final": "https://getdesign.md/design-md/vercel/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 23437,
+          "attempts": 1,
+          "file": "vercel/preview-dark.html",
+          "title": "Design System Analysis of Vercel",
+          "state": "ok",
+          "sha256": "fce9bce087fe0625d4170e116e34f05f3e37cff6d0ee4a9e64f868622f32a2c5"
+        }
+      },
+      "title": "Vercel DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "vodafone",
+      "detail": "https://getdesign.md/vodafone/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/vodafone/DESIGN.md",
+          "final": "https://getdesign.md/design-md/vodafone/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 28097,
+          "attempts": 1,
+          "file": "vodafone/DESIGN.md",
+          "state": "ok",
+          "sha256": "afdb0377cc056ed47e52f0a51afa9fdecdc95726e8079f8575a8b09bfeb6b767"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/vodafone/preview.html",
+          "final": "https://getdesign.md/design-md/vodafone/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 92098,
+          "attempts": 1,
+          "file": "vodafone/preview.html",
+          "title": "Design System Analysis of Vodafone",
+          "state": "ok",
+          "sha256": "7db0305c0f8defc7c5f826e00f94355b86138a2f036de9fdced2b4fd9989c3bf"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/vodafone/preview-dark.html",
+          "final": "https://getdesign.md/design-md/vodafone/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 92667,
+          "attempts": 1,
+          "file": "vodafone/preview-dark.html",
+          "title": "Design System Analysis of Vodafone",
+          "state": "ok",
+          "sha256": "dfb7c31078fc038d16c9578369e550c1708d46950c287cc3e045cc65418fa3c7"
+        }
+      },
+      "title": "Vodafone DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "voltagent",
+      "detail": "https://getdesign.md/voltagent/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/voltagent/DESIGN.md",
+          "final": "https://getdesign.md/design-md/voltagent/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 25906,
+          "attempts": 1,
+          "file": "voltagent/DESIGN.md",
+          "state": "ok",
+          "sha256": "82ff7e8e6c426fb38a4c92bee768982cf59077029bfa4ed577c3429837a619c1"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/voltagent/preview.html",
+          "final": "https://getdesign.md/design-md/voltagent/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 93104,
+          "attempts": 1,
+          "file": "voltagent/preview.html",
+          "title": "Design System Analysis of Voltagent",
+          "state": "ok",
+          "sha256": "02ed257b4d2155107335d4ed061ece26df894601474032d56075a4d67a67aa54"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/voltagent/preview-dark.html",
+          "final": "https://getdesign.md/design-md/voltagent/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 93704,
+          "attempts": 1,
+          "file": "voltagent/preview-dark.html",
+          "title": "Design System Analysis of Voltagent",
+          "state": "ok",
+          "sha256": "35674925af690245addb9c55611cd0af17989154f07c27ebd646d7742df6f325"
+        }
+      },
+      "title": "VoltAgent DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "warp",
+      "detail": "https://getdesign.md/warp/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/warp/DESIGN.md",
+          "final": "https://getdesign.md/design-md/warp/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 24429,
+          "attempts": 1,
+          "file": "warp/DESIGN.md",
+          "state": "ok",
+          "sha256": "59aab89291657b622735bf0dfc774a89a273cfabcf9bb821f693d6c32204f6fd"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/warp/preview.html",
+          "final": "https://getdesign.md/design-md/warp/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 97065,
+          "attempts": 1,
+          "file": "warp/preview.html",
+          "title": "Design System Analysis of Warp",
+          "state": "ok",
+          "sha256": "1fe83ec6d372984b3df36a48290736370e4cf896f362fece9c7980f50b41f41b"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/warp/preview-dark.html",
+          "final": "https://getdesign.md/design-md/warp/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 97575,
+          "attempts": 1,
+          "file": "warp/preview-dark.html",
+          "title": "Design System Analysis of Warp",
+          "state": "ok",
+          "sha256": "44968adbabcec7566ffc84b947218e6ef7da262aab741e15f150415d657544d1"
+        }
+      },
+      "title": "Warp DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "webflow",
+      "detail": "https://getdesign.md/webflow/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/webflow/DESIGN.md",
+          "final": "https://getdesign.md/design-md/webflow/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 28170,
+          "attempts": 1,
+          "file": "webflow/DESIGN.md",
+          "state": "ok",
+          "sha256": "1719bc01fefe1a7b206f46e0abf9c56d875ccb0140f4994bbd490366dd8f021f"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/webflow/preview.html",
+          "final": "https://getdesign.md/design-md/webflow/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 98746,
+          "attempts": 1,
+          "file": "webflow/preview.html",
+          "title": "Design System Analysis of Webflow",
+          "state": "ok",
+          "sha256": "ff060486966eb46aa3be251b8b1edf49db825ec41dc02f0e061018fb25f56278"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/webflow/preview-dark.html",
+          "final": "https://getdesign.md/design-md/webflow/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 99426,
+          "attempts": 1,
+          "file": "webflow/preview-dark.html",
+          "title": "Design System Analysis of Webflow",
+          "state": "ok",
+          "sha256": "f371c7659d24d97318ef1aea45c914d98ba595c3f60dad974fd02733871f74df"
+        }
+      },
+      "title": "Webflow DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "wired",
+      "detail": "https://getdesign.md/wired/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/wired/DESIGN.md",
+          "final": "https://getdesign.md/design-md/wired/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 23652,
+          "attempts": 1,
+          "file": "wired/DESIGN.md",
+          "state": "ok",
+          "sha256": "01f53e32ce0ce7a4fab27a27ea9bd4e9134e3ab135391cb51745df4eaf082245"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/wired/preview.html",
+          "final": "https://getdesign.md/design-md/wired/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 91129,
+          "attempts": 1,
+          "file": "wired/preview.html",
+          "title": "Design System Analysis of Wired",
+          "state": "ok",
+          "sha256": "ff898a9d9499a5c2ca9d0bbd6c2d363e94bd2114a8664553f0c51126acf2c0ac"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/wired/preview-dark.html",
+          "final": "https://getdesign.md/design-md/wired/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 91825,
+          "attempts": 1,
+          "file": "wired/preview-dark.html",
+          "title": "Design System Analysis of Wired",
+          "state": "ok",
+          "sha256": "8afe8cf1a5b6e528739758878d4e9374981de8de5de412d54f2caab90d8dbe89"
+        }
+      },
+      "title": "WIRED DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "wise",
+      "detail": "https://getdesign.md/wise/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/wise/DESIGN.md",
+          "final": "https://getdesign.md/design-md/wise/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 24577,
+          "attempts": 1,
+          "file": "wise/DESIGN.md",
+          "state": "ok",
+          "sha256": "82d29f1626184a6470b3f8bfa70649c051ca35650fe5d26e9a7feaa667ea11b2"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/wise/preview.html",
+          "final": "https://getdesign.md/design-md/wise/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 96381,
+          "attempts": 1,
+          "file": "wise/preview.html",
+          "title": "Design System Analysis of Wise",
+          "state": "ok",
+          "sha256": "71f9fcf3d08f5a6f3f49843d5e8188f3a1b9a236fc8237b19e94fde9324d780c"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/wise/preview-dark.html",
+          "final": "https://getdesign.md/design-md/wise/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 96884,
+          "attempts": 1,
+          "file": "wise/preview-dark.html",
+          "title": "Design System Analysis of Wise",
+          "state": "ok",
+          "sha256": "92a126e820a7d9b0ded5135218851aca20529d47ea7e3623e839772bab17d48b"
+        }
+      },
+      "title": "Wise DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "x.ai",
+      "detail": "https://getdesign.md/x.ai/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/x.ai/DESIGN.md",
+          "final": "https://getdesign.md/design-md/x.ai/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 21772,
+          "attempts": 1,
+          "file": "x.ai/DESIGN.md",
+          "state": "ok",
+          "sha256": "437c9b83cf1b90702b31e94d7fd5b08e86173ed6b56039bf630ff693f3076698"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/x.ai/preview.html",
+          "final": "https://getdesign.md/design-md/x.ai/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 90568,
+          "attempts": 1,
+          "file": "x.ai/preview.html",
+          "title": "Design System Analysis of xAI",
+          "state": "ok",
+          "sha256": "aec1aa1a4a95ef68833df9f12dad745b557862a5d96c3a9a64191a350de8d422"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/x.ai/preview-dark.html",
+          "final": "https://getdesign.md/design-md/x.ai/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 91075,
+          "attempts": 1,
+          "file": "x.ai/preview-dark.html",
+          "title": "Design System Analysis of xAI",
+          "state": "ok",
+          "sha256": "6d4f061711cc9ae73d361d3c36013c2196f44e8c1917d211e8a908fcc5f6fd85"
+        }
+      },
+      "title": "xAI DESIGN.md",
+      "detailStatus": 200
+    },
+    {
+      "slug": "zapier",
+      "detail": "https://getdesign.md/zapier/design-md",
+      "resources": {
+        "markdown": {
+          "source": "https://getdesign.md/design-md/zapier/DESIGN.md",
+          "final": "https://getdesign.md/design-md/zapier/DESIGN.md",
+          "status": 200,
+          "mime": "text/markdown",
+          "bytes": 22986,
+          "attempts": 1,
+          "file": "zapier/DESIGN.md",
+          "state": "ok",
+          "sha256": "cbb543a434f2f877ebc765f8b18b309e377121407b5cfe7cef8f6086db62df60"
+        },
+        "light": {
+          "source": "https://getdesign.md/design-md/zapier/preview.html",
+          "final": "https://getdesign.md/design-md/zapier/preview",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 88957,
+          "attempts": 1,
+          "file": "zapier/preview.html",
+          "title": "Design System Analysis of Zapier",
+          "state": "ok",
+          "sha256": "2fc9dd0c252e88c2f600b4895e79da1b3c1fb5f50a56dcc5f45789ce47a450c8"
+        },
+        "dark": {
+          "source": "https://getdesign.md/design-md/zapier/preview-dark.html",
+          "final": "https://getdesign.md/design-md/zapier/preview-dark",
+          "status": 200,
+          "mime": "text/html",
+          "bytes": 91274,
+          "attempts": 1,
+          "file": "zapier/preview-dark.html",
+          "title": "Design System Analysis of Zapier",
+          "state": "ok",
+          "sha256": "39cad824db3185f115329722739585e244bd62f727ee7c6486e3a9fed08ab071"
+        }
+      },
+      "title": "Zapier DESIGN.md",
+      "detailStatus": 200
+    }
+  ],
+  "updatedAt": "2026-11-27T01:49:25+08:00"
+}

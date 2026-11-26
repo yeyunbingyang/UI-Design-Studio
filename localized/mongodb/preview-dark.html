@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>深海蓝与品牌绿</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Code+Pro:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #00ed64;
+      --primary-pressed: #008c34;
+      --on-primary: #001e2b;
+      --brand-green: #00ed64;
+      --brand-green-dark: #00684a;
+      --brand-green-soft: #c3f0d2;
+      --brand-teal-deep: #001e2b;
+      --brand-teal: #003d4f;
+      --brand-teal-mid: #00684a;
+      --accent-purple: #7b3ff2;
+      --accent-orange: #fa6e39;
+      --accent-pink: #f06bb8;
+      --accent-blue: #3d4f9f;
+      --canvas: #001220;
+      --canvas-dark: #000810;
+      --surface: #001e2b;
+      --surface-soft: #002230;
+      --surface-feature: #003d2c;
+      --hairline: rgba(255,255,255,0.16);
+      --hairline-soft: rgba(255,255,255,0.08);
+      --hairline-strong: rgba(255,255,255,0.24);
+      --hairline-dark: rgba(255,255,255,0.16);
+      --ink: #ffffff;
+      --charcoal: #e6e9eb;
+      --slate: #b1c0c8;
+      --steel: #8e9ba5;
+      --stone: #6e7a82;
+      --muted: #555c63;
+      --on-dark: #ffffff;
+      --on-dark-muted: #a8b3bc;
+    }
+    body {
+      font-family: 'Inter', 'Euclid Circular A', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--ink);
+      background: var(--canvas);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    .min-width-0, .min-width-0 * { min-width: 0; }
+    .promo-banner {
+      background: var(--brand-teal-deep); color: var(--on-dark);
+      text-align: center; padding: 12px 16px;
+      font-size: 14px; font-weight: 500;
+    }
+    .promo-banner a { color: var(--brand-green); text-decoration: underline; margin-left: 8px; font-weight: 600; }
+    .nav {
+      display: grid; grid-template-columns: 1fr auto 1fr;
+      align-items: center; padding: 0 32px; height: 64px;
+      background: var(--canvas); border-bottom: 1px solid var(--hairline);
+      position: sticky; top: 0; z-index: 100;
+    }
+    .nav-left { display: flex; align-items: center; gap: 20px; justify-self: start; }
+    .nav-brand-link, .nav-brand-link:link, .nav-brand-link:visited, .nav-brand-link:hover, .nav-brand-link:active {
+      text-decoration: none; color: inherit; font-weight: 600; font-size: 15px;
+    }
+    .nav-github, .nav-github:link, .nav-github:visited, .nav-github:hover, .nav-github:active {
+      display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600;
+      color: inherit; text-decoration: none; padding: 5px 10px;
+      border: 1px solid rgba(128,128,128,0.3); border-radius: 6px; opacity: 0.75;
+      transition: opacity 200ms ease, border-color 200ms ease;
+      font-family: inherit; line-height: 1; white-space: nowrap; background: transparent;
+    }
+    .nav-github:hover { opacity: 1; border-color: rgba(128,128,128,0.55); }
+    .nav-github svg { display: block; flex-shrink: 0; }
+    .nav-links { justify-self: center; list-style: none; display: flex; gap: 24px; align-items: center; }
+    .nav-links a { color: var(--charcoal); text-decoration: none; font-size: 14px; font-weight: 500; }
+    .nav-cta {
+      justify-self: end; padding: 10px 22px;
+      background: var(--brand-green); color: var(--on-primary);
+      border: none; border-radius: 9999px; font-weight: 600;
+      font-size: 14px; cursor: pointer; font-family: inherit;
+    }
+    .hero {
+      padding: 96px 32px; max-width: 1280px; margin: 0 auto;
+    }
+    .hero-band-dark {
+      background: var(--brand-teal-deep); color: var(--on-dark);
+      border-radius: 16px; padding: 80px 48px;
+      display: flex; flex-direction: column; gap: 24px;
+      align-items: flex-start; text-align: left;
+    }
+    .hero-band-dark h1 {
+      font-size: 72px; font-weight: 500; line-height: 1.10;
+      color: var(--on-dark); letter-spacing: -1.5px;
+      max-width: 1100px;
+    }
+    .hero-band-dark p {
+      font-size: 18px; color: var(--on-dark-muted); max-width: 720px;
+      line-height: 1.55;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-start; }
+    button { font-family: inherit; cursor: pointer; }
+    .btn-primary {
+      padding: 10px 22px; background: var(--brand-green); color: var(--on-primary);
+      border: none; border-radius: 9999px; font-weight: 600; font-size: 14px;
+    }
+    .btn-secondary {
+      padding: 10px 22px; background: transparent; color: var(--ink);
+      border: 1px solid var(--hairline-strong); border-radius: 9999px;
+      font-weight: 600; font-size: 14px;
+    }
+    .btn-secondary-on-dark {
+      padding: 10px 22px; background: transparent; color: var(--on-dark);
+      border: 1px solid var(--hairline-dark); border-radius: 9999px;
+      font-weight: 600; font-size: 14px;
+    }
+    .btn-ghost {
+      padding: 8px 12px; background: transparent; color: var(--ink);
+      border: none; border-radius: 8px;
+      font-weight: 600; font-size: 14px;
+    }
+    .btn-link {
+      padding: 0; background: transparent; color: var(--brand-green-dark);
+      border: none; font-weight: 500; font-size: 14px; text-decoration: none;
+    }
+    .btn-disabled {
+      padding: 10px 22px; background: var(--hairline); color: var(--muted);
+      border: none; border-radius: 9999px; font-weight: 600; font-size: 14px;
+      cursor: not-allowed;
+    }
+    section {
+      padding: 96px 32px; max-width: 1280px; margin: 0 auto;
+    }
+    .section-heading {
+      font-size: 48px; font-weight: 500; margin-bottom: 12px; color: var(--ink);
+      line-height: 1.20; letter-spacing: -0.5px;
+    }
+    .section-sub { font-size: 16px; color: var(--steel); margin-bottom: 40px; max-width: 720px; line-height: 1.55; }
+    .palette-group { margin-bottom: 48px; }
+    .palette-group h3 { font-size: 18px; font-weight: 600; margin-bottom: 20px; color: var(--ink); }
+    .palette-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+    .swatch { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+    .swatch-color { width: 100%; height: 96px; border-radius: 12px; border: 1px solid var(--hairline-soft); }
+    .swatch-name { font-weight: 500; font-size: 14px; color: var(--ink); }
+    .swatch-hex { font-family: 'Source Code Pro', monospace; font-size: 12px; color: var(--steel); }
+    .swatch-role { font-size: 12px; color: var(--steel); line-height: 1.4; }
+    .type-row {
+      display: grid; grid-template-columns: 280px 1fr;
+      gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--hairline-soft);
+      align-items: baseline;
+    }
+    .type-meta { display: flex; flex-direction: column; gap: 4px; }
+    .type-meta .role { font-size: 14px; font-weight: 500; color: var(--ink); }
+    .type-meta .specs { font-family: 'Source Code Pro', monospace; font-size: 12px; color: var(--steel); }
+    .type-sample { color: var(--ink); }
+    .button-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .button-cell {
+      display: flex; flex-direction: column; gap: 12px;
+      padding: 24px; background: var(--canvas);
+      border: 1px solid var(--hairline); border-radius: 12px;
+      align-items: flex-start; min-width: 0;
+    }
+    .button-cell-spec { font-size: 12px; color: var(--steel); font-family: 'Source Code Pro', monospace; }
+    .button-cell-name { font-size: 14px; font-weight: 500; color: var(--ink); }
+    .badge-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .badge {
+      display: inline-block; padding: 2px 8px;
+      border-radius: 4px; font-size: 13px; font-weight: 600; line-height: 1.4;
+    }
+    .badge-green { background: var(--brand-green); color: var(--on-primary); }
+    .badge-green-soft { background: var(--brand-green-soft); color: var(--brand-green-dark); border-radius: 9999px; padding: 4px 10px; }
+    .badge-purple { background: var(--accent-purple); color: var(--on-dark); }
+    .badge-orange { background: var(--accent-orange); color: var(--on-dark); }
+    .badge-pink { background: var(--accent-pink); color: var(--on-dark); }
+    .badge-popular { background: var(--brand-teal-deep); color: var(--brand-green); border-radius: 9999px; padding: 4px 10px; }
+    /* Cards */
+    .card-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .card-base {
+      background: var(--canvas); border-radius: 12px; padding: 24px;
+      border: 1px solid var(--hairline);
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .card-feature {
+      background: var(--canvas); border-radius: 12px; padding: 32px;
+      border: 1px solid var(--hairline);
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .card-product-deploy {
+      background: var(--canvas); border-radius: 12px; padding: 32px;
+      border: 1px solid var(--hairline);
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .card-product-deploy .indicator { width: 8px; height: 8px; border-radius: 50%; background: var(--brand-green); }
+    .card-feature-dark {
+      background: var(--brand-teal-deep); color: var(--on-dark);
+      border-radius: 12px; padding: 32px;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .card-feature-dark h4, .card-feature-dark p { color: var(--on-dark); }
+    .card-course {
+      background: var(--canvas); border-radius: 12px; padding: 24px;
+      border: 1px solid var(--hairline);
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .card-course .tag-row { margin-bottom: 4px; }
+    .card-course h5 { font-size: 18px; font-weight: 600; color: var(--ink); }
+    .card-course p { font-size: 14px; color: var(--steel); line-height: 1.5; }
+    .card-cert {
+      background: var(--canvas); border-radius: 12px; padding: 24px;
+      border: 1px solid var(--hairline);
+      display: flex; flex-direction: column; gap: 12px; align-items: flex-start;
+    }
+    .card-cert .leaf-icon { width: 48px; height: 48px; background: var(--brand-green-soft); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+    .card-cert h5 { font-size: 16px; font-weight: 600; color: var(--ink); }
+    .card-cert p { font-size: 13px; color: var(--steel); line-height: 1.5; }
+    .card-feature h4, .card-product-deploy h4 { font-size: 22px; font-weight: 500; line-height: 1.35; }
+    .card-feature p, .card-product-deploy p { font-size: 14px; color: var(--steel); line-height: 1.55; }
+    /* Pricing */
+    .pricing-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .pricing-card {
+      background: var(--canvas); border-radius: 12px; padding: 32px;
+      border: 1px solid var(--hairline);
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .pricing-card.featured {
+      background: var(--surface-feature); border: 2px solid var(--brand-green);
+      padding: 31px; position: relative;
+    }
+    .pricing-card.featured .popular-tag { position: absolute; top: -10px; left: 32px; }
+    .pricing-card .tier-name { font-size: 18px; font-weight: 600; color: var(--ink); }
+    .pricing-card .tier-price { font-size: 56px; font-weight: 500; color: var(--ink); letter-spacing: -1px; line-height: 1.1; }
+    .pricing-card .tier-price small { font-size: 14px; font-weight: 400; color: var(--steel); margin-left: 4px; }
+    .pricing-card .tier-feature-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .pricing-card .tier-feature-list li { font-size: 14px; color: var(--charcoal); display: flex; gap: 8px; align-items: flex-start; }
+    .pricing-card .tier-feature-list li::before { content: '✓'; color: var(--brand-green-dark); font-weight: 700; flex-shrink: 0; }
+    /* Forms */
+    .form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .form-field { display: flex; flex-direction: column; gap: 6px; }
+    .form-label { font-size: 14px; font-weight: 500; color: var(--ink); }
+    .text-input {
+      padding: 12px 16px; background: var(--canvas); color: var(--ink);
+      border: 1px solid var(--hairline-strong); border-radius: 8px;
+      font-size: 16px; height: 44px; font-family: inherit;
+    }
+    .text-input:focus { outline: none; border: 2px solid var(--brand-green-dark); padding: 11px 15px; }
+    .search-pill {
+      background: var(--surface); color: var(--steel);
+      padding: 12px 16px; border-radius: 8px; height: 44px;
+      border: 1px solid var(--hairline-strong); font-size: 14px; font-family: inherit;
+      display: inline-flex; align-items: center; gap: 8px; min-width: 280px;
+    }
+    .search-pill-large {
+      background: var(--canvas); color: var(--steel);
+      padding: 16px; border-radius: 8px; height: 56px;
+      border: 1px solid var(--hairline-strong); font-size: 16px; font-family: inherit;
+      display: flex; align-items: center; gap: 12px; width: 100%;
+      max-width: 720px;
+    }
+    .search-pill-large input { flex: 1; border: none; outline: none; font-size: 16px; font-family: inherit; background: transparent; }
+    .search-pill-large .submit-pill { padding: 8px 20px; background: var(--brand-green); color: var(--on-primary); border: none; border-radius: 9999px; font-weight: 600; font-size: 14px; cursor: pointer; }
+    /* Tabs */
+    .seg-tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--hairline); margin-bottom: 24px; }
+    .seg-tab {
+      padding: 12px 16px; background: transparent; color: var(--steel);
+      border: none; border-bottom: 2px solid transparent;
+      font-size: 14px; font-weight: 500; cursor: pointer; font-family: inherit;
+    }
+    .seg-tab.active { color: var(--brand-green-dark); border-bottom: 2px solid var(--brand-green-dark); }
+    .pill-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+    .pill-tab {
+      padding: 8px 16px; background: transparent; color: var(--steel);
+      border: 1px solid var(--hairline); border-radius: 9999px;
+      font-size: 14px; font-weight: 500; cursor: pointer; font-family: inherit;
+    }
+    .pill-tab.active { background: var(--ink); color: var(--on-dark); border-color: var(--ink); }
+    /* Code mockup */
+    .code-mockup-card {
+      background: var(--canvas-dark); color: var(--on-dark);
+      border-radius: 12px; padding: 24px;
+      font-family: 'Source Code Pro', monospace; font-size: 14px; line-height: 1.55;
+    }
+    .code-mockup-card .term-line { display: block; }
+    .code-mockup-card .green { color: var(--brand-green); }
+    .code-mockup-card .gray { color: #6e7681; }
+    .code-mockup-card .yellow { color: #ffd700; }
+    /* Comparison table */
+    .comparison-table {
+      width: 100%; border-collapse: collapse;
+      background: var(--canvas); border: 1px solid var(--hairline);
+      border-radius: 8px; overflow: hidden;
+    }
+    .comparison-table th {
+      background: var(--canvas); color: var(--ink);
+      padding: 16px 20px; text-align: left; font-size: 14px; font-weight: 600;
+      border-bottom: 1px solid var(--hairline);
+    }
+    .comparison-table td {
+      padding: 16px 20px; font-size: 14px; color: var(--ink);
+      border-bottom: 1px solid var(--hairline-soft);
+    }
+    .comparison-table tr:last-child td { border-bottom: none; }
+    .comparison-table .section-divider td {
+      font-size: 11px; font-weight: 600; color: var(--steel);
+      letter-spacing: 1px; text-transform: uppercase;
+      background: var(--surface); padding: 12px 20px;
+    }
+    .check-mark { color: var(--brand-green-dark); font-weight: 700; }
+    /* Service tile */
+    .service-tile {
+      background: var(--canvas); border-radius: 12px; padding: 24px;
+      border: 1px solid var(--hairline);
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .service-tile .icon-zone { width: 32px; height: 32px; background: var(--brand-green-soft); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+    .service-tile h5 { font-size: 16px; font-weight: 600; color: var(--ink); }
+    .service-tile p { font-size: 13px; color: var(--steel); line-height: 1.5; }
+    .why-card {
+      background: var(--surface); border-radius: 12px; padding: 24px;
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    /* Customer testimonial */
+    .testimonial-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .customer-testimonial-card {
+      background: var(--canvas); border-radius: 12px; padding: 32px;
+      border: 1px solid var(--hairline);
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .customer-testimonial-card .quote { font-size: 16px; color: var(--charcoal); line-height: 1.55; }
+    .customer-testimonial-card .author { display: flex; align-items: center; gap: 12px; }
+    .avatar { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, #00ed64, #00684a); flex-shrink: 0; }
+    .author-name { font-size: 13px; font-weight: 500; color: var(--ink); }
+    .author-title { font-size: 12px; color: var(--steel); }
+    /* Logo wall */
+    .logo-wall {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 16px; padding: 32px; background: var(--canvas); border-radius: 12px;
+      border: 1px solid var(--hairline);
+    }
+    .logo-item {
+      padding: 20px; text-align: center; color: var(--steel);
+      font-size: 16px; font-weight: 500;
+    }
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--hairline); border-radius: 12px; overflow: hidden; }
+    .faq-item {
+      background: var(--canvas); padding: 24px;
+      border-bottom: 1px solid var(--hairline);
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .faq-q-text { font-size: 18px; font-weight: 600; color: var(--ink); line-height: 1.4; }
+    .chev { width: 16px; height: 16px; color: var(--steel); flex-shrink: 0; }
+    .faq-a { font-size: 16px; color: var(--steel); margin-top: 12px; line-height: 1.55; }
+    .faq-item.collapsed .faq-a { display: none; }
+    /* CTA banner */
+    .cta-banner-dark {
+      background: var(--brand-teal-deep); color: var(--on-dark);
+      border-radius: 12px; padding: 64px 48px;
+      display: flex; flex-direction: column; gap: 24px;
+      align-items: center; text-align: center;
+    }
+    .cta-banner-dark h4 { font-size: 36px; font-weight: 500; line-height: 1.25; letter-spacing: -0.5px; max-width: 720px; }
+    .cta-banner-dark p { font-size: 16px; color: var(--on-dark-muted); max-width: 540px; }
+    .cta-banner-dark .actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    /* Spacing & radius */
+    .spacing-grid { display: flex; gap: 24px; align-items: flex-end; flex-wrap: wrap; }
+    .spacing-box { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .spacing-visual { background: var(--ink); border-radius: 4px; }
+    .spacing-label { font-size: 12px; font-weight: 500; color: var(--ink); text-align: center; }
+    .spacing-label small { display: block; font-weight: 400; color: var(--steel); font-size: 10px; margin-top: 2px; }
+    .radius-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 24px; }
+    .radius-demo {
+      aspect-ratio: 1; background: var(--surface);
+      border: 2px solid var(--ink);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
+      padding: 12px; font-size: 12px; font-weight: 500; color: var(--ink);
+    }
+    .radius-demo small { font-size: 10px; font-weight: 400; color: var(--steel); margin-top: 2px; }
+    .elevation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+    .elev-cell {
+      background: var(--canvas); border-radius: 12px; padding: 32px;
+      display: flex; flex-direction: column; gap: 8px; min-height: 140px;
+    }
+    .elev-0 { border: 1px solid var(--hairline); }
+    .elev-1 { box-shadow: rgba(0,30,43,0.04) 0px 1px 2px 0px; border: 1px solid var(--hairline); }
+    .elev-2 { box-shadow: rgba(0,30,43,0.08) 0px 4px 12px 0px; }
+    .elev-3 { box-shadow: rgba(0,30,43,0.12) 0px 12px 24px -4px; }
+    .elev-4 { box-shadow: rgba(0,30,43,0.16) 0px 16px 48px -8px; }
+    .elev-name { font-size: 14px; font-weight: 500; color: var(--ink); }
+    .elev-meta { font-size: 12px; color: var(--steel); font-family: 'Source Code Pro', monospace; }
+    .breakpoint-table { width: 100%; border-collapse: collapse; }
+    .breakpoint-table th, .breakpoint-table td {
+      text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--hairline-soft);
+      font-size: 14px;
+    }
+    .breakpoint-table th { font-size: 12px; font-weight: 600; color: var(--steel); background: var(--surface); }
+    .device-ladder {
+      display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap;
+      margin-top: 32px; padding: 32px; background: var(--surface); border-radius: 12px;
+    }
+    .device {
+      background: var(--canvas); border: 1px solid var(--hairline);
+      display: flex; align-items: flex-end; justify-content: center; padding: 8px;
+      font-size: 11px; color: var(--steel); font-weight: 500;
+    }
+    .footer {
+      padding: 64px 32px 32px; background: var(--brand-teal-deep);
+      color: var(--on-dark); font-size: 14px;
+    }
+    .footer-grid {
+      max-width: 1280px; margin: 0 auto;
+      display: grid; grid-template-columns: 240px repeat(auto-fit, minmax(140px, 1fr));
+      gap: 48px; margin-bottom: 48px;
+    }
+    .footer-brand { display: flex; flex-direction: column; gap: 16px; }
+    .footer-brand .wordmark {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 22px; font-weight: 700; color: var(--on-dark);
+      width: fit-content;
+    }
+    .footer-brand .leaf { color: var(--brand-green); }
+    .footer-col h6 { font-size: 14px; font-weight: 600; color: var(--on-dark); margin-bottom: 16px; }
+    .footer-col a { display: block; padding: 4px 0; color: var(--on-dark-muted); text-decoration: none; font-size: 14px; }
+    .footer-credit {
+      max-width: 1280px; margin: 0 auto;
+      padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center; color: var(--on-dark-muted);
+    }
+    .footer-credit a { color: var(--on-dark); text-decoration: none; }
+    .footer-credit a:hover { text-decoration: underline; }
+    .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+
+    /* getdesign.md nav additions */
+    .nav-left { display: flex; align-items: center; gap: 20px; }
+    .nav-brand-link, .nav-brand-link:link, .nav-brand-link:visited, .nav-brand-link:hover, .nav-brand-link:active { text-decoration: none; color: inherit; }
+    .nav-github, .nav-github:link, .nav-github:visited, .nav-github:hover, .nav-github:active {
+      display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600;
+      color: inherit; text-decoration: none; padding: 5px 10px;
+      border: 1px solid rgba(128, 128, 128, 0.3); border-radius: 6px; opacity: 0.75;
+      transition: opacity 200ms ease, border-color 200ms ease;
+      font-family: inherit; line-height: 1; white-space: nowrap;
+    }
+    .nav-github:hover { opacity: 1; border-color: rgba(128, 128, 128, 0.55); }
+    .nav-github svg { display: block; flex-shrink: 0; }
+
+    /* getdesign.md nav centering */
+    .nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+    .nav > .nav-left { justify-self: start; }
+    .nav > .nav-links { justify-self: center; }
+    .nav > :last-child { justify-self: end; }
+
+    /* dark-mode overrides */
+    .nav .nav-github { color: #ffffff; border-color: rgba(255, 255, 255, 0.25); }
+    .nav .nav-github:hover { border-color: rgba(255, 255, 255, 0.5); }
+    .swatch-color { border: 1px solid rgba(255,255,255,0.08); }
+    .nav { background: var(--canvas); border-bottom: 1px solid var(--hairline-soft); }
+    .nav-links a { color: var(--charcoal); }
+    .button-cell { background: var(--surface); border-color: var(--hairline-soft); }
+    .card-base, .card-feature, .card-product-deploy { background: var(--surface); border-color: var(--hairline-soft); }
+    .card-feature-dark { background: #000810; }
+    .card-course, .card-cert { background: var(--surface); border-color: var(--hairline-soft); }
+    .card-cert .leaf-icon { background: rgba(0, 237, 100, 0.15); }
+    .pricing-card { background: var(--surface); border-color: var(--hairline-soft); }
+    .pricing-card.featured { background: var(--surface-feature); border-color: var(--brand-green); }
+    .pricing-card.featured .tier-name, .pricing-card.featured .tier-price { color: var(--ink); }
+    .pricing-card.featured .tier-feature-list li { color: var(--charcoal); }
+    .pricing-card.featured .tier-feature-list li::before { color: var(--brand-green); }
+    .text-input { background: var(--surface-soft); color: var(--ink); border-color: var(--hairline); }
+    .search-pill { background: var(--surface-soft); color: var(--steel); border-color: var(--hairline); }
+    .search-pill-large { background: var(--surface); border-color: var(--hairline); }
+    .search-pill-large input { color: var(--ink); }
+    .seg-tab { color: var(--steel); }
+    .seg-tab.active { color: var(--brand-green); border-bottom-color: var(--brand-green); }
+    .seg-tabs { border-bottom-color: var(--hairline); }
+    .pill-tab { background: var(--surface); color: var(--steel); border-color: var(--hairline); }
+    .pill-tab.active { background: var(--brand-green); color: var(--on-primary); border-color: var(--brand-green); }
+    .comparison-table { background: var(--surface); border-color: var(--hairline-soft); }
+    .comparison-table th { background: var(--surface); color: var(--ink); border-bottom-color: var(--hairline); }
+    .comparison-table td { color: var(--charcoal); border-bottom-color: var(--hairline-soft); }
+    .comparison-table .section-divider td { background: var(--surface-soft); color: var(--steel); }
+    .check-mark { color: var(--brand-green); }
+    .service-tile { background: var(--surface); border-color: var(--hairline-soft); }
+    .service-tile .icon-zone { background: rgba(0, 237, 100, 0.15); }
+    .why-card { background: var(--surface); }
+    .customer-testimonial-card { background: var(--surface); border-color: var(--hairline-soft); }
+    .customer-testimonial-card .quote { color: var(--charcoal); }
+    .author-name { color: var(--ink); }
+    .logo-wall { background: var(--surface); border-color: var(--hairline-soft); }
+    .logo-item { color: var(--steel); }
+    .faq-list { border-color: var(--hairline); }
+    .faq-item { background: var(--surface); border-bottom-color: var(--hairline); }
+    .faq-q-text { color: var(--ink); }
+    .faq-a { color: var(--steel); }
+    .promo-banner { background: var(--surface); color: var(--ink); border-bottom: 1px solid var(--hairline-soft); }
+    .promo-banner a { color: var(--brand-green); }
+    .nav-cta { background: var(--brand-green); color: var(--on-primary); }
+    .btn-secondary { color: var(--ink); border-color: var(--hairline); }
+    .btn-ghost { color: var(--ink); }
+    .btn-link { color: var(--brand-green); }
+    .btn-disabled { background: var(--surface); color: var(--stone); }
+    .spacing-visual { background: var(--ink); }
+    .radius-demo { background: var(--surface); border-color: var(--ink); color: var(--ink); }
+    .elev-cell { background: var(--surface); }
+    .elev-0 { border-color: var(--hairline-soft); }
+    .elev-1 { box-shadow: rgba(0,0,0,0.4) 0px 1px 2px 0px; border-color: var(--hairline-soft); }
+    .elev-2 { box-shadow: rgba(0,0,0,0.4) 0px 4px 12px 0px; }
+    .elev-3 { box-shadow: rgba(0,0,0,0.5) 0px 12px 24px -4px; }
+    .elev-4 { box-shadow: rgba(0,0,0,0.5) 0px 16px 48px -8px; }
+    .breakpoint-table th { background: var(--surface); color: var(--steel); }
+    .breakpoint-table th, .breakpoint-table td { border-bottom-color: var(--hairline-soft); }
+    .device-ladder { background: var(--surface); }
+    .device { background: var(--canvas); border-color: var(--hairline); color: var(--steel); }
+    .footer { background: #000810; }
+    .footer-credit { border-top-color: rgba(255,255,255,0.1); }
+    .cta-banner-dark { background: var(--surface); border: 1px solid var(--hairline-soft); }
+    .code-mockup-card { background: #000810; }
+
+    @media (max-width: 1024px) {
+      section { padding: 64px 32px; }
+      .section-heading { font-size: 36px; }
+      .nav { padding: 0 32px; }
+      .nav > :last-child { display: none; }
+      .type-row { grid-template-columns: 1fr; gap: 8px; }
+      .hero-band-dark h1 { font-size: 48px; }
+      .hero-band-dark { padding: 48px 32px; }
+    }
+    @media (max-width: 720px) {
+      .nav { padding: 12px 20px; height: auto; min-height: 56px; }
+      .nav-links { display: none; }
+      .hero { padding: 48px 20px; }
+      .hero-band-dark { padding: 40px 24px; }
+      .hero-band-dark h1 { font-size: 36px; letter-spacing: -1px; }
+      .hero-band-dark p { font-size: 16px; }
+      section { padding: 48px 20px; }
+      .section-heading { font-size: 28px; }
+      .palette-grid, .button-grid, .card-grid, .pricing-grid, .form-row, .testimonial-grid, .elevation-grid, .radius-grid, .footer-grid {
+        grid-template-columns: 1fr !important; gap: 16px;
+      }
+      .footer { padding: 48px 20px 24px; }
+    }
+  
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="promo-banner">MongoDBAI Hub现时直播. 以向量搜索构建更智能。 <a href="#">学习更多→</a></div>
+
+<div class="hero">
+<div class="hero-band-dark">
+<h1>深海蓝与品牌绿</h1>
+<p>品牌绿、清晰的开发者排版和技术内容卡构成数据平台页面。</p>
+<div class="hero-actions">
+<button class="btn-primary">尝试自由</button>
+<button class="btn-secondary-on-dark">文档</button>
+</div>
+</div>
+</div>
+<section id="colors">
+<h2 class="section-heading">配色</h2>
+<p class="section-sub">由深海军蓝/蓝绿色首屏区块主播的亮亮MongoDB绿色({colors.brand-green}). 强调色调色板(纯色,橙色,粉色,蓝色)类别只保留给课程标记.</p>
+<div class="palette-group">
+<h3>品牌色与强调色</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background: #00ed64;"></div><div class="swatch-name">MongoDB 绿色</div><div class="swatch-hex">#00ed64</div><div class="swatch-role">主要 行动按钮 胶囊形</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #00b545;"></div><div class="swatch-name">绿色深处</div><div class="swatch-hex">#00b545</div><div class="swatch-role">按态绿色</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #00684a;"></div><div class="swatch-name">绿色暗色</div><div class="swatch-hex">#00684a</div><div class="swatch-role">内置链接</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #00a35c;"></div><div class="swatch-name">绿色中间</div><div class="swatch-hex">#00a35c</div><div class="swatch-role">大气 浅色调</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #c3f0d2;"></div><div class="swatch-name">绿色软</div><div class="swatch-hex">#c3f0d2</div><div class="swatch-role">特价等级</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #001e2b;"></div><div class="swatch-name">品牌 蓝绿色 深处</div><div class="swatch-hex">#001e2b</div><div class="swatch-role">首屏区块,页脚</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #003d4f;"></div><div class="swatch-name">品牌蓝绿色</div><div class="swatch-hex">#003d4f</div><div class="swatch-role">中段谱 蓝绿色</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #00684a;"></div><div class="swatch-name">品牌 蓝绿色 中间</div><div class="swatch-hex">#00684a</div><div class="swatch-role">首屏平台 卡片</div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>类强调色(当然标记)</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background: #7b3ff2;"></div><div class="swatch-name">强调色 紫色</div><div class="swatch-hex">#7b3ff2</div><div class="swatch-role">数据库安全( S)</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #fa6e39;"></div><div class="swatch-name">强调色 橙色</div><div class="swatch-hex">#fa6e39</div><div class="swatch-role">搜索主题</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #f06bb8;"></div><div class="swatch-name">粉红色</div><div class="swatch-hex">#f06bb8</div><div class="swatch-role">专题</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #3d4f9f;"></div><div class="swatch-name">蓝色强调色</div><div class="swatch-hex">#3d4f9f</div><div class="swatch-role">阿特拉斯/云层专题</div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>界面表面</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background: #ffffff;"></div><div class="swatch-name">白色页面底色</div><div class="swatch-hex">#ffffff</div><div class="swatch-role">页+卡片 背景</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #001e2b;"></div><div class="swatch-name">页面底色 暗号</div><div class="swatch-hex">#001e2b</div><div class="swatch-role">代码模型</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #f9fbfa;"></div><div class="swatch-name">界面表面</div><div class="swatch-hex">#f9fbfa</div><div class="swatch-role">浅色背景</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #e3fcef;"></div><div class="swatch-name">表面特性</div><div class="swatch-hex">#e3fcef</div><div class="swatch-role">特征等级bg</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #e1e5e8;"></div><div class="swatch-name">细边框</div><div class="swatch-hex">#e1e5e8</div><div class="swatch-role">边框</div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>文字色</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background: #001e2b;"></div><div class="swatch-name">文字色</div><div class="swatch-hex">#001e2b</div><div class="swatch-role">标题,正文</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #1c2d38;"></div><div class="swatch-name">炭灰色</div><div class="swatch-hex">#1c2d38</div><div class="swatch-role">机构重点</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #3d4f5b;"></div><div class="swatch-name">石板灰</div><div class="swatch-hex">#3d4f5b</div><div class="swatch-role">副文本</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #5c6c7a;"></div><div class="swatch-name">钢</div><div class="swatch-hex">#5c6c7a</div><div class="swatch-role">三级, 标题</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #7c8c9a;"></div><div class="swatch-name">石头</div><div class="swatch-hex">#7c8c9a</div><div class="swatch-role">已静音标签</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #a8b3bc;"></div><div class="swatch-name">静音</div><div class="swatch-hex">#a8b3bc</div><div class="swatch-role">禁用</div></div>
+</div>
+</div>
+</section>
+<section id="typography">
+<h2 class="section-heading">字号层级</h2>
+<p class="section-sub">Euclid Circular A across every UI surface — from 72px hero displays to 11px micro labels. Source Code Pro for code mockups.</p>
+<div class="type-row"><div class="type-meta"><span class="role">hero-display</span><span class="specs">72px / 500 / 1.10 / -1.5px</span></div><div class="type-sample" style="font-size: 72px; font-weight: 500; line-height: 1.10; letter-spacing: -1.5px;">一个数据平台</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">display-lg</span><span class="specs">56px / 500 / 1.15 / -1px</span></div><div class="type-sample" style="font-size: 56px; font-weight: 500; line-height: 1.15; letter-spacing: -1px;">与 MongoDB 构建</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">heading-1</span><span class="specs">48px / 500 / 1.20 / -0.5px</span></div><div class="type-sample" style="font-size: 48px; font-weight: 500; line-height: 1.20; letter-spacing: -0.5px;">MongoDB 定价</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">heading-2</span><span class="specs">36px / 500 / 1.25 / -0.5px</span></div><div class="type-sample" style="font-size: 36px; font-weight: 500; line-height: 1.25; letter-spacing: -0.5px;">比较Atlas计划</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">heading-3</span><span class="specs">28px / 500 / 1.30</span></div><div class="type-sample" style="font-size: 28px; font-weight: 500; line-height: 1.30;">卡片 标题</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">heading-5</span><span class="specs">18px / 600 / 1.40</span></div><div class="type-sample" style="font-size: 18px; font-weight: 600; line-height: 1.40;">较小的卡片 标题</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">字幕</span><span class="specs">18px / 400 / 1.50</span></div><div class="type-sample" style="font-size: 18px; font-weight: 400; line-height: 1.50;">首屏字幕</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">body-md</span><span class="specs">16px / 400 / 1.55</span></div><div class="type-sample" style="font-size: 16px; font-weight: 400; line-height: 1.55;">主体文本在文件的传言、营销副本和特征描述中都使用。</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">body-sm</span><span class="specs">14px / 400 / 1.50</span></div><div class="type-sample" style="font-size: 14px; font-weight: 400; line-height: 1.50;">二级体、表细胞、导航</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">caption-bold</span><span class="specs">13px / 600 / 1.40</span></div><div class="type-sample" style="font-size: 13px; font-weight: 600; line-height: 1.40;">布基纳法索/塔格</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">code-md</span><span class="specs">Source Code Pro / 14px / 1.55</span></div><div class="type-sample" style="font-family: 'Source Code Pro', monospace; font-size: 14px;">db.collection.find({$lt) : (帮助) : 100})</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">button-md</span><span class="specs">14px / 600 / 1.30</span></div><div class="type-sample" style="font-size: 14px; font-weight: 600; line-height: 1.30;">胶囊按钮 拉尔</div></div>
+</section>
+<section id="buttons">
+<h2 class="section-heading">按钮样式</h2>
+<p class="section-sub">到处都是胶囊形. 亮的MongoDB绿色是所有表面的行动按钮的主导.</p>
+<div class="button-grid">
+<div class="button-cell"><button class="btn-primary">尝试自由</button><span class="button-cell-name">button-primary</span><span class="button-cell-spec">MongoDB 绿色 胶囊形</span></div>
+<div class="button-cell"><button class="btn-secondary">文档</button><span class="button-cell-name">button-secondary</span><span class="button-cell-spec">提纲胶囊形</span></div>
+<div class="button-cell" style="background: var(--brand-teal-deep);"><button class="btn-primary">开始使用</button><span class="button-cell-name" style="color: var(--on-dark);">button-on-dark</span><span class="button-cell-spec" style="color: var(--on-dark-muted);">绿色胶囊形 于黑暗</span></div>
+<div class="button-cell" style="background: var(--brand-teal-deep);"><button class="btn-secondary-on-dark">查看文件</button><span class="button-cell-name" style="color: var(--on-dark);">button-secondary-on-dark</span><span class="button-cell-spec" style="color: var(--on-dark-muted);">暗色上画的图</span></div>
+<div class="button-cell"><button class="btn-ghost">视图</button><span class="button-cell-name">button-ghost</span><span class="button-cell-spec">安静的鬼魂</span></div>
+<div class="button-cell"><button class="btn-link">学习更多→</button><span class="button-cell-name">button-link</span><span class="button-cell-spec">内含绿色链接</span></div>
+<div class="button-cell"><button class="btn-disabled">无法获取</button><span class="button-cell-name">button-primary-disabled</span><span class="button-cell-spec">已禁用状态</span></div>
+</div>
+</section>
+<section id="badges">
+<h2 class="section-heading">徽章状态( S)</h2>
+<p class="section-sub">混合绿色状态指标和分类编码标签芯片. 课程标记使用彩色的强调色调色板.</p>
+<div class="badge-row">
+<span class="badge badge-green">新设</span>
+<span class="badge badge-green-soft">免费版</span>
+<span class="badge badge-popular">最受欢迎的</span>
+<span class="badge badge-purple">数据库安全( S)</span>
+<span class="badge badge-orange">搜索</span>
+<span class="badge badge-pink">专业</span>
+</div>
+<div class="promo-banner" style="border-radius: 8px; margin-top: 24px;">MongoDBAI Hub现时直播. 以向量搜索构建更智能。 <a href="#">学习更多→</a></div>
+<p style="font-size: 12px; color: var(--steel); margin-top: 8px; font-family: 'Source Code Pro', monospace;">promo-banner — sticky teal strip with green inline link</p>
+</section>
+<section id="cards">
+<h2 class="section-heading">卡片与容器</h2>
+<p class="section-sub">白色功能卡片,深色蓝绿色呼号卡片,课程牌牌带有分类标记,认证牌卡片带有叶-icon区.</p>
+<div class="card-grid">
+<div class="card-base">
+<h4 style="font-size: 18px; font-weight: 600;">标准卡片</h4>
+<p style="font-size: 14px; color: var(--steel); line-height: 1.55;">白色页面底色配有细边框和12px角.（原文参数：12px）</p>
+</div>
+<div class="card-product-deploy">
+<div class="indicator"></div>
+<h4>MongoDB 地图集</h4>
+<p>完全管理云数据库,零下调部署和自动缩放.</p>
+<button class="btn-link" style="padding: 0; align-self: flex-start;">学习更多→</button>
+</div>
+<div class="card-feature-dark">
+<h4>阿特拉斯系统就容易了</h4>
+<p>Vector search, encryption, and 100+ integrations included.</p>
+</div>
+</div>
+<h3 style="font-size: 18px; font-weight: 600; margin: 48px 0 20px;">课程提勒斯(MongoDB大学)</h3>
+<div class="card-grid">
+<div class="card-course">
+<div class="tag-row"><span class="badge badge-orange">大众培训</span></div>
+<h5>与文档模型的关系</h5>
+<p>如何在文档数据库中模拟您的数据。</p>
+<button class="btn-link" style="padding: 0; align-self: flex-start;">开始→</button>
+</div>
+<div class="card-course">
+<div class="tag-row"><span class="badge badge-purple">数据库安全( S)</span></div>
+<h5>M0210:MongoDB数据库和安全</h5>
+<p>MongoDB Atlas探索如何保障您的MongoDB部署.</p>
+<button class="btn-link" style="padding: 0; align-self: flex-start;">开始→</button>
+</div>
+<div class="card-course">
+<div class="tag-row"><span class="badge badge-green">自学节奏</span></div>
+<h5>以矢量搜索构建AI- Powered搜索</h5>
+<p>如何使用MongoDB Atlas矢量搜索以进行AI动力搜索.</p>
+<button class="btn-link" style="padding: 0; align-self: flex-start;">开始→</button>
+</div>
+</div>
+<h3 style="font-size: 18px; font-weight: 600; margin: 48px 0 20px;">认证 卡片</h3>
+<div class="card-grid">
+<div class="card-cert"><div class="leaf-icon">🌱</div><h5>MongoDB 协理开发者考试</h5><p>验证开发者的技能.</p></div>
+<div class="card-cert"><div class="leaf-icon">🌱</div><h5>MongoDB 协理数据建模考试</h5><p>验证数据模型专门知识。</p></div>
+<div class="card-cert"><div class="leaf-icon">🌱</div><h5>MongoDB 阿特拉斯协理管理员考试</h5><p>Atlas业务认证。</p></div>
+<div class="card-cert"><div class="leaf-icon">🌱</div><h5>MongoDB 数据库协理管理员考试</h5><p>数据库管理证书.</p></div>
+</div>
+</section>
+<section id="pricing">
+<h2 class="section-heading">套餐定价</h2><p class="design-demo-note">组件演示。套餐层级、价格字重和操作按钮。数据仅用于样式展示。</p>
+<p class="section-sub">3级(Free / Flex / defentated)与以淡薄薄荷背景和亮绿色边框突出的突出的层次的比较.</p>
+<div class="pricing-grid">
+<div class="pricing-card">
+<span class="tier-name">免费版</span>
+<div class="tier-price">$0<small>/模数</small></div>
+<p style="font-size: 14px; color: var(--steel);">开始使用MongoDB Atlas.</p>
+<ul class="tier-feature-list">
+<li>512 甲基溴存储（原文参数：512 MB）</li>
+<li>共享基础设施</li>
+<li>社区支助</li>
+</ul>
+<button class="btn-secondary" style="margin-top: 8px;">开始使用</button>
+</div>
+<div class="pricing-card featured">
+<div class="popular-tag"><span class="badge badge-popular">最受欢迎的</span></div>
+<span class="tier-name">Flex</span>
+<div class="tier-price">$0.011<small>小时</small></div>
+<p style="font-size: 14px; color: var(--steel);">发展与成长团队。</p>
+<ul class="tier-feature-list">
+<li>自动缩放存储</li>
+<li>包括备份</li>
+<li>电子邮件支持</li>
+<li>5GB 免费月度转让</li>
+</ul>
+<button class="btn-primary" style="margin-top: 8px;">开始审判</button>
+</div>
+<div class="pricing-card">
+<span class="tier-name">专 业</span>
+<div class="tier-price">$0.08<small>小时</small></div>
+<p style="font-size: 14px; color: var(--steel);">用于生产工作量。</p>
+<ul class="tier-feature-list">
+<li>专用基础设施</li>
+<li>高级安保</li>
+<li>24/7 优先支助</li>
+<li>国有公司2 遵守情况</li>
+</ul>
+<button class="btn-secondary" style="margin-top: 8px;">和销售商交谈</button>
+</div>
+</div>
+<h3 style="font-size: 18px; font-weight: 600; margin: 48px 0 20px;">特征比较表</h3><p class="design-demo-note">组件演示。表头、行距、分隔线和状态标签。数据仅用于样式展示。</p>
+<table class="comparison-table">
+<thead>
+<tr><th>特性</th><th style="text-align: center;">免费版</th><th style="text-align: center;">Flex</th><th style="text-align: center;">专 业</th></tr>
+</thead>
+<tbody>
+<tr class="section-divider"><td colspan="4">数据基础结构</td></tr>
+<tr><td>存储</td><td style="text-align: center;">512 甲基溴（原文参数：512 MB）</td><td style="text-align: center;">自动缩放</td><td style="text-align: center;">Up to 4 TB</td></tr>
+<tr><td>矢量搜索</td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td></tr>
+<tr class="section-divider"><td colspan="4">警卫</td></tr>
+<tr><td>静态加密</td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td></tr>
+<tr><td>职业道德中心对等</td><td style="text-align: center;">—</td><td style="text-align: center;">—</td><td style="text-align: center;"><span class="check-mark">✓</span></td></tr>
+<tr class="section-divider"><td colspan="4">支助</td></tr>
+<tr><td>社区支助</td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td></tr>
+<tr><td>优先电子邮件</td><td style="text-align: center;">—</td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td></tr>
+<tr><td>24/7 电话支持</td><td style="text-align: center;">—</td><td style="text-align: center;">—</td><td style="text-align: center;"><span class="check-mark">✓</span></td></tr>
+</tbody>
+</table>
+</section>
+<section id="forms">
+<h2 class="section-heading">窗体输入( I)</h2>
+<p class="section-sub">44px-Tall输入与8px圆角. 焦点转向2px绿色暗黑边界.（原文参数：8px、2px）</p>
+<div class="form-row">
+<div class="form-field">
+<label class="form-label">电子邮箱</label>
+<input class="text-input" placeholder="you@email.com" type="text" value="default state"/>
+</div>
+<div class="form-field">
+<label class="form-label">工作空间名称</label>
+<input autofocus="" class="text-input" style="border: 2px solid var(--brand-green-dark); padding: 11px 15px;" type="text" value="focused state"/>
+</div>
+<div class="form-field">
+<label class="form-label">API 密钥</label>
+<input class="text-input" placeholder="连接字符串" type="text"/>
+</div>
+</div>
+<div style="margin-top: 32px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+<input class="search-pill" placeholder="MongoDB 搜索文件"/>
+<span style="font-size: 12px; color: var(--steel); font-family: 'Source Code Pro', monospace;">search-pill — 44px 高度</span>
+</div>
+<h3 style="font-size: 18px; font-weight: 600; margin: 32px 0 16px;">搜索 胶囊形 大(MongoDB大学)</h3>
+<div class="search-pill-large">
+<span style="color: var(--steel);">🔍</span>
+<input placeholder="搜索内容" type="text"/>
+<button class="submit-pill">搜索</button>
+</div>
+</section>
+<section id="tabs">
+<h2 class="section-heading">标签导航( N)</h2>
+<p class="section-sub">底线式的带绿色活动指示器的分页标签。 胶囊形 用于顶级切换的标签.</p>
+<h3 style="font-size: 18px; font-weight: 600; margin-bottom: 16px;">分页标签</h3>
+<div class="seg-tabs">
+<button class="seg-tab active">大众培训</button>
+<button class="seg-tab">自学节奏</button>
+<button class="seg-tab">教员领导的培训</button>
+<button class="seg-tab">全权证书</button>
+</div>
+<h3 style="font-size: 18px; font-weight: 600; margin: 32px 0 16px;">胶囊形 标签( 定价)</h3>
+<div class="pill-tabs">
+<button class="pill-tab active">MongoDB 地图集</button>
+<button class="pill-tab">企业高级</button>
+</div>
+</section>
+<section id="code">
+<h2 class="section-heading">密码 混音卡片</h2>
+<p class="section-sub">首屏区块的嵌入式终端-美学代码模拟. 暗页面底色带有语法高亮的片段.</p>
+<div class="code-mockup-card">
+<span class="term-line"><span class="gray">$</span> <span class="green">npm 安装</span> mongodb</span>
+<span class="term-line"><span class="gray">$</span> <span class="green">蒙哥,你这混蛋</span> "mongodb+srv://cluster0.mongodb.net" --apikey</span>
+<span class="term-line"> <span class="gray">已连接的→</span></span>
+<br/>
+<span class="term-line"><span class="yellow">一般事务人员(其他职等)1人</span>.collection(<span class="green">"用户"</span>).find({ <span class="green">"活动"</span>: <span class="yellow">真实</span> })</span>
+<span class="term-line"> <span class="gray">/ 返回匹配的文档</span></span>
+</div>
+</section>
+<section id="services">
+<h2 class="section-heading">服务图纸</h2>
+<p class="section-sub">"使用工具与服务自定义部署"——6上方网格带有绿色图标区和短描述.</p>
+<div class="card-grid">
+<div class="service-tile"><div class="icon-zone">🔍</div><h5>MongoDB 地图搜索</h5><p>将全文搜索输入到您的数据库中。</p></div>
+<div class="service-tile"><div class="icon-zone">📊</div><h5>地图集图</h5><p>视觉和探索你的MongoDB数据.</p></div>
+<div class="service-tile"><div class="icon-zone">⚡</div><h5>Atlas流处理</h5><p>MongoDB实时数据处理.</p></div>
+<div class="service-tile"><div class="icon-zone">🔗</div><h5>阿特拉斯数据联合会</h5><p>查询数据源无缝。</p></div>
+<div class="service-tile"><div class="icon-zone">📦</div><h5>Atlas 数据 API</h5><p>以 HTTPS 数据库访问权限构建应用程序。</p></div>
+<div class="service-tile"><div class="icon-zone">🛡</div><h5>在线归档</h5><p>自动存档不经常访问的数据。</p></div>
+</div>
+</section>
+<section id="testimonials">
+<h2 class="section-heading">客户证词</h2>
+<p class="section-sub">白证卡片带引文+作者+标题. 产品内部使用和使用文件页。</p>
+<div class="testimonial-grid">
+<div class="customer-testimonial-card">
+<p class="quote">“MongoDB Atlas给我们提供了灵活性, 以扩大我们的数据库, 与客户的增长同时进行—— 没有人工提供, 没有停机时间。”</p>
+<div class="author"><div class="avatar"></div><div><div class="author-name">已核实的买方</div><div class="author-title">工程铅</div></div></div>
+</div>
+<div class="customer-testimonial-card">
+<p class="quote">"在Atlas内部进行Vector搜索,消除了单独一个矢量数据库的需要. 我们的AI的特征是飞船3x现在更快。"</p>
+<div class="author"><div class="avatar" style="background: linear-gradient(135deg, #00a35c, #003d4f);"></div><div><div class="author-name">客户成功</div><div class="author-title">技术建筑师</div></div></div>
+</div>
+</div>
+</section>
+<section id="logo-wall">
+<h2 class="section-heading">logo 墙</h2>
+<p class="section-sub">客户标识网格——信托-row部分的文字标记演示.</p>
+<div class="logo-wall">
+<div class="logo-item">Coinbase</div>
+<div class="logo-item">莱夫特</div>
+<div class="logo-item">Adobe</div>
+<div class="logo-item">塔塔语Name</div>
+<div class="logo-item">马欣德拉技术</div>
+<div class="logo-item">数据KO</div>
+</div>
+</section>
+<section id="faq">
+<h2 class="section-heading">风琴</h2>
+<p class="section-sub">经常问问题 默认折叠; chevron toggle.</p>
+<div class="faq-list">
+<div class="faq-item">
+<div class="faq-q">
+<span class="faq-q-text">自由级是否可供生产?</span>
+<span class="chev">⌃</span>
+</div>
+<div class="faq-a">自由等级可用于发展、学习和小型项目。 对于生产工作量,我们建议采用Flex或专用级别,并有备份和优先支助。</div>
+</div>
+<div class="faq-item collapsed">
+<div class="faq-q">
+<span class="faq-q-text">我如何从自我管理的部署中迁移?</span>
+<span class="chev">⌄</span>
+</div>
+<div class="faq-a">MongoDB提供LiveMigration工具,用于从自管理集群零下行向Atlas的迁移.</div>
+</div>
+<div class="faq-item collapsed">
+<div class="faq-q">
+<span class="faq-q-text">MongoDB SOC 2 是否符合规定?</span>
+<span class="chev">⌄</span>
+</div>
+<div class="faq-a">是——MongoDB Atlas专用级包括SOC 2 II型合规性加附加企业安全功能.</div>
+</div>
+</div>
+</section>
+<section id="cta-banner">
+<h2 class="section-heading">行动按钮 暗边</h2>
+<p class="section-sub">页面底部深色蓝绿色 行动按钮旗下带有亮绿色主版行动按钮.</p>
+<div class="cta-banner-dark">
+<h4>准备好开始了吗?</h4>
+<p>几分钟后在MongoDB Atlas中启动一个新的集群. 无需信用卡片.</p>
+<div class="actions">
+<button class="btn-primary">尝试自由</button>
+<button class="btn-secondary-on-dark">文档</button>
+</div>
+</div>
+</section>
+<section id="spacing">
+<h2 class="section-heading">间距层级</h2>
+<p class="section-sub">4px 基础单位,8px初等增量. 节奏从48px到120px.（原文参数：8px、48px、120px）</p>
+<div class="spacing-grid">
+<div class="spacing-box"><div class="spacing-visual" style="width: 4px; height: 16px;"></div><div class="spacing-label">4<small>xxs</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 8px; height: 16px;"></div><div class="spacing-label">8<small>xs</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 12px; height: 16px;"></div><div class="spacing-label">12<small>静态</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 16px; height: 16px;"></div><div class="spacing-label">16<small>微额</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 20px; height: 16px;"></div><div class="spacing-label">20<small>升( 升)</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 24px; height: 16px;"></div><div class="spacing-label">24<small>xl</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 32px; height: 16px;"></div><div class="spacing-label">32<small>xxl</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 40px; height: 16px;"></div><div class="spacing-label">40<small>xxxl</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 48px; height: 16px;"></div><div class="spacing-label">48<small>section-sm</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 64px; height: 16px;"></div><div class="spacing-label">64<small>章节</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 96px; height: 16px;"></div><div class="spacing-label">96<small>section-lg</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 120px; height: 16px;"></div><div class="spacing-label">120<small>首屏</small></div></div>
+</div>
+</section>
+<section id="radius">
+<h2 class="section-heading">圆角层级</h2>
+<p class="section-sub">胶囊按钮(9999px),12px标准卡片,8px输入和代码块.（原文参数：12px、8px）</p>
+<div class="radius-grid">
+<div class="radius-demo" style="border-radius: 4px;">4px<small>xs</small></div>
+<div class="radius-demo" style="border-radius: 6px;">6px<small>静态</small></div>
+<div class="radius-demo" style="border-radius: 8px;">8px<small>微额</small></div>
+<div class="radius-demo" style="border-radius: 12px;">12px<small>升( 升)</small></div>
+<div class="radius-demo" style="border-radius: 16px;">16px<small>xl</small></div>
+<div class="radius-demo" style="border-radius: 24px;">24px<small>xxl</small></div>
+<div class="radius-demo" style="border-radius: 9999px;">胶囊形<small>满</small></div>
+</div>
+</section>
+<section id="elevation">
+<h2 class="section-heading">层次与阴影</h2>
+<p class="section-sub">以主平为主. 战略深度在代码上模拟卡片 超过首屏区块.</p>
+<div class="elevation-grid">
+<div class="elev-cell elev-0"><span class="elev-name">Level 0 — Flat</span><span class="elev-meta">边框+细边框</span></div>
+<div class="elev-cell elev-1"><span class="elev-name">Level 1 — Subtle</span><span class="elev-meta">rgba(0,30,43,0.04) 0 1px 2px</span></div>
+<div class="elev-cell elev-2"><span class="elev-name">Level 2 — Card</span><span class="elev-meta">rgba(0,30,43,0.08) 0 4px 12px</span></div>
+<div class="elev-cell elev-3"><span class="elev-name">Level 3 — Mockup</span><span class="elev-meta">rgba(0,30,43,0.12) 0 12px 24px -4px</span></div>
+<div class="elev-cell elev-4"><span class="elev-name">Level 4 — Modal</span><span class="elev-meta">rgba(0,30,43,0.16) 0 16px 48px -8px</span></div>
+</div>
+</section>
+<section id="responsive">
+<h2 class="section-heading">响应式布局</h2>
+<p class="section-sub">Hero scales from 72px → 36px on mobile. 3-tier pricing collapses to 1-up. Course catalog 3-up → 1-up.</p>
+<table class="breakpoint-table">
+<thead><tr><th>断点</th><th>宽度</th><th>密钥更改</th></tr></thead>
+<tbody>
+<tr><td><strong>移动( 小)</strong></td><td>&lt; 480px Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q</td><td>单列. 首屏们 36px. 定价1-up. 课程目录 1-up。</td></tr>
+<tr><td><strong>移动( 大)</strong></td><td>480 – 767px</td><td>菜板2 -up。。 首屏们 48px.</td></tr>
+<tr><td><strong>平板</strong></td><td>768 – 1023px</td><td>2列的特征网格. Pill-tab导航返回. 首屏们 56px.</td></tr>
+<tr><td><strong>桌面端</strong></td><td>1024 – 1279px</td><td>3级定价卡片列. 3-up课程目录. 首屏们 64px.</td></tr>
+<tr><td><strong>宽桌面</strong></td><td>≥ 1280px</td><td>全面72px首屏介绍.（原文参数：72px）</td></tr>
+</tbody>
+</table>
+<h3 style="font-size: 18px; font-weight: 600; margin-top: 32px;">设备梯</h3>
+<div class="device-ladder">
+<div class="device" style="width: 60px; height: 110px;">375px</div>
+<div class="device" style="width: 90px; height: 130px;">480px</div>
+<div class="device" style="width: 130px; height: 150px;">768px</div>
+<div class="device" style="width: 200px; height: 170px;">1024px</div>
+<div class="device" style="width: 280px; height: 200px;">1280+</div>
+</div>
+<h3 style="font-size: 18px; font-weight: 600; margin-top: 32px;">触控区域</h3>
+<ul style="font-size: 14px; color: var(--charcoal); line-height: 1.7; padding-left: 20px;">
+<li>胶囊按钮高度为 40–44px。英文原文将该尺寸与 WCAG AAA 触控要求对照。</li>
+<li>表格输入在44px高度。（原文参数：44px）</li>
+<li>胶囊形(大)搜索在56px制作.（原文参数：56px）</li>
+<li>Pill tabs ~32px → 44px on mobile.</li>
+</ul>
+<h3 style="font-size: 18px; font-weight: 600; margin-top: 32px;">窄屏布局调整</h3>
+<ul style="font-size: 14px; color: var(--charcoal); line-height: 1.7; padding-left: 20px;">
+<li><strong>宣传旗</strong> 保持全宽; 短线位于 &lt; 480px。</li>
+<li><strong>顶端导航</strong> 1024px下方的崩塌为汉堡.（原文参数：1024px）</li>
+<li><strong>首屏区块</strong>:代码模拟卡片移动到手机上文本以下.</li>
+<li><strong>套餐定价</strong>: 3-栏目 – 2-柱状石板 - 柱状石板 - 柱状石板 1- 列车移动。</li>
+<li><strong>课程目录</strong>:3-up → 2-up 平板电脑 → 1-up 移动.</li>
+<li><strong>首屏打字技术</strong>: 72px → 56px → 48px → 36px.</li>
+<li><strong>页脚</strong>:6-列台式计算机 →-列台式计算机 3-列台式计算机 →手风琴移动器.</li>
+</ul>
+</section>
+<footer class="footer">
+<div class="footer-shell">
+<div class="footer-grid">
+<div class="footer-col">
+<h6>VoltAgent 框架</h6>
+<span>类型脚本代理</span>
+<span>工具编程</span>
+<span>多种代理工作流程</span>
+</div>
+<div class="footer-col">
+<h6>伏特Ops LLM 可观测性</h6>
+<span>LLM 跟踪</span>
+<span>实时调试</span>
+<span>视觉时间</span>
+</div>
+<div class="footer-col">
+<h6>生产</h6>
+<span>评价</span>
+<span>即时管理</span>
+<span>护卫</span>
+</div>
+<div class="footer-col">
+<h6>平台</h6>
+<span>伏特Ops 控制台</span>
+<span>开源核心</span>
+<span>代理工程</span>
+</div>
+</div>
+
+</div>
+</footer>
+</body>
+</html>

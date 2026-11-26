@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>纯黑与金色奢华</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --lambo-gold: #FFC000;
+    --dark-gold: #917300;
+    --gold-text: #FFCE3E;
+    --pure-white: #FFFFFF;
+    --absolute-black: #000000;
+    --charcoal: #202020;
+    --dark-iron: #181818;
+    --graphite: #494949;
+    --ash: #7D7D7D;
+    --steel: #969696;
+    --mist: #E6E6E6;
+    --near-white: #F8F8F8;
+    --cyan-pulse: #29ABE2;
+    --link-blue: #3860BE;
+    --teal-action: #1EAEDB;
+    --surface-deep: #0A0A0A;
+    --surface-mid: #141414;
+    --text-primary: #F0F0F0;
+    --text-muted: #888888;
+    --border-dark: #1A1A1A;
+    --font-primary: 'Roboto', Helvetica Neue, Arial, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: var(--font-primary);
+    background: var(--surface-deep);
+    color: var(--text-primary);
+    font-size: 16px; font-weight: 400; line-height: 1.50;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .dark-badge {
+    position: fixed; top: 16px; right: 16px; z-index: 200;
+    background: var(--lambo-gold); color: var(--absolute-black);
+    padding: 6px 14px; border-radius: 0; font-size: 11px; font-weight: 500;
+    letter-spacing: 1px; text-transform: uppercase;
+  }
+
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 40px; background: var(--surface-deep);
+    border-bottom: 1px solid var(--border-dark);
+  }
+  .nav-brand { font-size: 13px; font-weight: 500; color: var(--text-primary); text-decoration: none; letter-spacing: 2px; text-transform: uppercase; }
+  .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+  .nav-links a { font-size: 14px; font-weight: 400; color: var(--text-primary); text-decoration: none; text-transform: uppercase; letter-spacing: 0.2px; transition: color 0.3s; }
+  .nav-links a:hover { color: var(--link-blue); }
+  .nav-cta { background: var(--lambo-gold); color: var(--absolute-black); padding: 12px 24px; border-radius: 0; font-size: 14px; font-weight: 500; text-decoration: none; text-transform: uppercase; letter-spacing: 0.2px; transition: background 0.3s; }
+  .nav-cta:hover { background: var(--dark-gold); }
+
+  .hero {
+    min-height: 100vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; padding: 80px 40px;
+    background: var(--absolute-black); text-align: center; position: relative;
+  }
+  .hero::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at center, rgba(255,192,0,0.04) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero h1 { font-size: 80px; font-weight: 400; line-height: 0.92; color: var(--text-primary); text-transform: uppercase; margin-bottom: 16px; position: relative; }
+  .hero .subtitle { font-size: 16px; font-weight: 300; color: var(--text-muted); margin-bottom: 40px; text-transform: uppercase; letter-spacing: 0.2px; }
+  .hero-buttons { display: flex; gap: 16px; position: relative; }
+  .btn-gold { background: var(--lambo-gold); color: var(--absolute-black); border: none; border-radius: 0; padding: 16px 32px; font-family: var(--font-primary); font-size: 16px; font-weight: 400; cursor: pointer; text-decoration: none; text-transform: uppercase; transition: background 0.3s; }
+  .btn-gold:hover { background: var(--dark-gold); }
+  .btn-ghost { background: transparent; color: var(--text-primary); border: 1px solid var(--text-primary); border-radius: 0; padding: 16px 32px; font-family: var(--font-primary); font-size: 14.4px; font-weight: 300; opacity: 0.5; cursor: pointer; text-decoration: none; text-transform: uppercase; letter-spacing: 0.2px; transition: background 0.3s, opacity 0.3s; }
+  .btn-ghost:hover { background: var(--teal-action); opacity: 0.7; }
+
+  .section { padding: 80px 40px; max-width: 1200px; margin: 0 auto; }
+  .section-title { font-size: 40px; font-weight: 400; color: var(--text-primary); margin-bottom: 8px; text-transform: uppercase; line-height: 1.15; }
+  .section-desc { font-size: 16px; color: var(--text-muted); margin-bottom: 40px; line-height: 1.50; }
+  .section-divider { border: none; border-top: 1px solid var(--border-dark); max-width: 1200px; margin: 0 auto; }
+
+  .color-group-label { font-size: 12px; font-weight: 500; color: var(--text-muted); margin-bottom: 16px; margin-top: 24px; text-transform: uppercase; letter-spacing: 0.96px; }
+  .color-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; margin-bottom: 32px; }
+  .color-swatch { overflow: hidden; }
+  .color-swatch .swatch-block { height: 80px; }
+  .color-swatch .swatch-info { padding: 12px; background: var(--surface-mid); border: 1px solid var(--border-dark); border-top: none; }
+  .color-swatch .swatch-name { font-size: 13px; font-weight: 500; color: var(--text-primary); margin-bottom: 2px; }
+  .color-swatch .swatch-hex { font-size: 12px; color: var(--text-muted); margin-bottom: 4px; font-family: monospace; }
+  .color-swatch .swatch-role { font-size: 11px; color: var(--ash); line-height: 1.3; }
+
+  .type-sample { margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid var(--border-dark); }
+  .type-sample:last-child { border-bottom: none; }
+  .type-label { font-size: 12px; color: var(--text-muted); margin-top: 8px; font-family: monospace; text-transform: none; }
+
+  .button-row { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin-bottom: 16px; }
+  .btn-white { background: var(--pure-white); color: var(--charcoal); border: none; border-radius: 0; padding: 16px 32px; font-family: var(--font-primary); font-size: 14.4px; font-weight: 400; cursor: pointer; text-transform: uppercase; }
+  .btn-black { background: var(--absolute-black); color: var(--text-primary); border: 1px solid var(--text-primary); border-radius: 0; padding: 16px 32px; font-family: var(--font-primary); font-size: 14.4px; font-weight: 400; cursor: pointer; text-transform: uppercase; }
+  .btn-gray { background: var(--steel); color: var(--charcoal); border: none; border-radius: 0; padding: 12px 24px; font-family: var(--font-primary); font-size: 13px; font-weight: 500; cursor: pointer; text-transform: uppercase; }
+
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; margin-bottom: 32px; }
+  .card { background: var(--surface-mid); overflow: hidden; border: 1px solid var(--border-dark); }
+  .card-image { height: 200px; background: var(--absolute-black); display: flex; align-items: center; justify-content: center; }
+  .card-image-placeholder { font-size: 48px; font-weight: 400; color: var(--charcoal); text-transform: uppercase; }
+  .card-body { padding: 24px; }
+  .card-title { font-size: 27px; font-weight: 400; color: var(--text-primary); margin-bottom: 8px; text-transform: uppercase; line-height: 1.37; }
+  .card-desc { font-size: 16px; color: var(--text-muted); line-height: 1.50; margin-bottom: 16px; }
+  .card-link { font-size: 14px; color: var(--text-primary); text-decoration: underline; text-transform: uppercase; letter-spacing: 0.2px; transition: color 0.3s; }
+  .card-link:hover { color: var(--link-blue); }
+
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-label { font-size: 12px; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.96px; }
+  .form-input { font-family: var(--font-primary); font-size: 16px; color: var(--text-primary); background: var(--absolute-black); border: 1px solid var(--charcoal); border-radius: 0; padding: 12px 16px; min-height: 48px; outline: none; transition: border-color 0.3s; }
+  .form-input::placeholder { color: var(--ash); }
+  .form-input:focus { border-color: var(--lambo-gold); }
+  .form-input.error { border-color: #E74C3C; }
+  .form-textarea { font-family: var(--font-primary); font-size: 16px; color: var(--text-primary); background: var(--absolute-black); border: 1px solid var(--charcoal); border-radius: 0; padding: 12px 16px; min-height: 100px; outline: none; resize: vertical; transition: border-color 0.3s; }
+  .form-textarea::placeholder { color: var(--ash); }
+  .form-textarea:focus { border-color: var(--lambo-gold); }
+
+  .spacing-row { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
+  .spacing-box { height: 32px; background: var(--lambo-gold); opacity: 0.5; }
+  .spacing-label { font-size: 12px; color: var(--text-muted); font-family: monospace; min-width: 80px; }
+
+  .radius-row { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 32px; }
+  .radius-item { text-align: center; }
+  .radius-box { width: 80px; height: 80px; background: var(--surface-mid); border: 2px solid var(--charcoal); margin-bottom: 8px; }
+  .radius-value { font-size: 12px; font-weight: 500; color: var(--text-primary); font-family: monospace; }
+  .radius-context { font-size: 11px; color: var(--text-muted); }
+
+  .elevation-row { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 32px; }
+  .elevation-card { width: 200px; padding: 24px; text-align: center; }
+  .elevation-name { font-size: 13px; font-weight: 500; color: var(--text-primary); margin-bottom: 4px; }
+  .elevation-desc { font-size: 11px; color: var(--text-muted); }
+
+  footer { padding: 40px; text-align: center; border-top: 1px solid var(--border-dark); }
+  footer p { font-size: 12px; color: var(--ash); text-transform: uppercase; letter-spacing: 0.96px; }
+
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 40px; }
+    .hero-buttons { flex-direction: column; align-items: center; }
+    .color-grid { grid-template-columns: repeat(2, 1fr); }
+    .form-grid { grid-template-columns: 1fr; }
+    .card-grid { grid-template-columns: 1fr; }
+    nav { padding: 12px 20px; }
+    .section { padding: 60px 20px; }
+    .nav-links { display: none; }
+    .section-title { font-size: 27px; }
+  }
+
+
+  /* Shared VoltAgent footer content */
+  .footer { padding: 64px 48px 40px; text-align: left; color: inherit; background: inherit; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer { padding: 48px 20px 32px; }
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="dark-badge">暗色模式</div>
+
+<section class="hero">
+<h1>纯黑与金色奢华</h1>
+<p class="subtitle">纯黑表面、金色重点和大写标题衬托高性能汽车。</p>
+<div class="hero-buttons">
+<a class="btn-gold" href="#">发现更多</a>
+<a class="btn-ghost" href="#">查看模型</a>
+</div>
+</section>
+<hr class="section-divider"/>
+<section class="section">
+<h2 class="section-title">配色</h2>
+<p class="section-desc">单色黑暗被Lamborghini金币所粉饰.</p>
+<div class="color-group-label">主要</div>
+<div class="color-grid">
+<div class="color-swatch"><div class="swatch-block" style="background:#FFC000;"></div><div class="swatch-info"><div class="swatch-name">Lamborghini 黄金</div><div class="swatch-hex">#FFC000</div><div class="swatch-role">主要 行动按钮 强调色</div></div></div>
+<div class="color-swatch"><div class="swatch-block" style="background:#FFFFFF;"></div><div class="swatch-info"><div class="swatch-name">纯白色</div><div class="swatch-hex">#FFFFFF</div><div class="swatch-role">文本、标志、导航</div></div></div>
+<div class="color-swatch"><div class="swatch-block" style="background:#917300;"></div><div class="swatch-info"><div class="swatch-name">暗金刚</div><div class="swatch-hex">#917300</div><div class="swatch-role">黄金悬浮状态</div></div></div>
+</div>
+<div class="color-group-label">表面与背景</div>
+<div class="color-grid">
+<div class="color-swatch"><div class="swatch-block" style="background:#000000;border:1px solid #1A1A1A;"></div><div class="swatch-info"><div class="swatch-name">Absolute Black</div><div class="swatch-hex">#000000</div><div class="swatch-role">页背景</div></div></div>
+<div class="color-swatch"><div class="swatch-block" style="background:#181818;"></div><div class="swatch-info"><div class="swatch-name">暗铁</div><div class="swatch-hex">#181818</div><div class="swatch-role">深层</div></div></div>
+<div class="color-swatch"><div class="swatch-block" style="background:#202020;"></div><div class="swatch-info"><div class="swatch-name">炭灰色</div><div class="swatch-hex">#202020</div><div class="swatch-role">卡片, 面板</div></div></div>
+</div>
+<div class="color-group-label">中立人</div>
+<div class="color-grid">
+<div class="color-swatch"><div class="swatch-block" style="background:#494949;"></div><div class="swatch-info"><div class="swatch-name">石墨灰</div><div class="swatch-hex">#494949</div><div class="swatch-role">轻便文字</div></div></div>
+<div class="color-swatch"><div class="swatch-block" style="background:#7D7D7D;"></div><div class="swatch-info"><div class="swatch-name">灰尘</div><div class="swatch-hex">#7D7D7D</div><div class="swatch-role">弱化文字色</div></div></div>
+<div class="color-swatch"><div class="swatch-block" style="background:#969696;"></div><div class="swatch-info"><div class="swatch-name">钢</div><div class="swatch-hex">#969696</div><div class="swatch-role">已禁用, 徽章</div></div></div>
+</div>
+<div class="color-group-label">计费</div>
+<div class="color-grid">
+<div class="color-swatch"><div class="swatch-block" style="background:#29ABE2;"></div><div class="swatch-info"><div class="swatch-name">青色脉冲</div><div class="swatch-hex">#29ABE2</div><div class="swatch-role">信息</div></div></div>
+<div class="color-swatch"><div class="swatch-block" style="background:#3860BE;"></div><div class="swatch-info"><div class="swatch-name">链接蓝色</div><div class="swatch-hex">#3860BE</div><div class="swatch-role">链接悬浮</div></div></div>
+<div class="color-swatch"><div class="swatch-block" style="background:#1EAEDB;"></div><div class="swatch-info"><div class="swatch-name">蓝绿色 行动</div><div class="swatch-hex">#1EAEDB</div><div class="swatch-role">鬼魂Btn 悬浮</div></div></div>
+</div>
+</section>
+<hr class="section-divider"/>
+<section class="section">
+<h2 class="section-title">字号层级</h2>
+<p class="section-desc">LamboType — shown with Roboto fallback. All display text uppercase.</p>
+<div class="type-sample"><div style="font-size:80px;font-weight:400;line-height:0.92;text-transform:uppercase;color:var(--text-primary);">特梅拉里奥</div><div class="type-label">首屏显示 - 120px→80px / 400 / 0.92 LH / 大写</div></div>
+<div class="type-sample"><div style="font-size:54px;font-weight:400;line-height:1.19;text-transform:uppercase;color:var(--text-primary);">躲不起来的</div><div class="type-label">部分标题——54px /400 /1.19 LH / 大写</div></div>
+<div class="type-sample"><div style="font-size:27px;font-weight:400;line-height:1.37;text-transform:uppercase;color:var(--text-primary);">新闻LAMBORGHINI世界</div><div class="type-label">特征标题——27px/400/1.37 LH/大写</div></div>
+<div class="type-sample"><div style="font-size:18px;font-weight:400;line-height:1.56;color:var(--text-primary);">情感的舞台 情感的舞台 情感的舞台 情感的舞台 情感的舞台 情感的舞台 情感的舞台 情感的舞台 情感的舞台 权力会精准化,每个细节都讲一个故事.</div><div class="type-label">体型大——18px/400/1.56 LH</div></div>
+<div class="type-sample"><div style="font-size:12px;font-weight:500;line-height:1.83;text-transform:uppercase;letter-spacing:0.96px;color:var(--text-muted);">拉尔巴迪米奇</div><div class="type-label">标签 — 12px / 500 / 大写 / +0.96px</div></div>
+</section>
+<hr class="section-divider"/>
+<section class="section">
+<h2 class="section-title">按钮样式</h2>
+<p class="section-desc">半径0度. 尖锐的角。 金色初等,鬼气次等.</p>
+<div class="button-row"><a class="btn-gold" href="#">发现更多</a><span style="font-size:12px;color:var(--text-muted);font-family:monospace;">黄金强调色 — #FFC000, 0px半径（原文参数：0px）</span></div>
+<div class="button-row"><a class="btn-ghost" href="#">查看模型</a><span style="font-size:12px;color:var(--text-muted);font-family:monospace;">Ghost — transparent, white border, 50% opacity</span></div>
+<div class="button-row"><a class="btn-white" href="#">配置( O)</a><span style="font-size:12px;color:var(--text-muted);font-family:monospace;">白色填充</span></div>
+<div class="button-row"><a class="btn-black" href="#">探索</a><span style="font-size:12px;color:var(--text-muted);font-family:monospace;">黑色边框</span></div>
+<div class="button-row"><a class="btn-gray" href="#">细节</a><span style="font-size:12px;color:var(--text-muted);font-family:monospace;">灰色中性</span></div>
+</section>
+<hr class="section-divider"/>
+<section class="section">
+<h2 class="section-title">卡片示例</h2>
+<p class="section-desc">深暗表面的尖锐化卡片.</p>
+<div class="card-grid">
+<div class="card"><div class="card-image"><span class="card-image-placeholder">T</span></div><div class="card-body"><div class="card-title">泰梅拉里奥</div><div class="card-desc">新型V8混合型超级运动车.</div><a class="card-link" href="#">发现</a></div></div>
+<div class="card"><div class="card-image"><span class="card-image-placeholder">R</span></div><div class="card-body"><div class="card-title">列武埃尔托</div><div class="card-desc">首个V12混合插座HPEV.</div><a class="card-link" href="#">发现</a></div></div>
+<div class="card"><div class="card-image"><span class="card-image-placeholder">U</span></div><div class="card-body"><div class="card-title">乌鲁斯 SE</div><div class="card-desc">世界首台超级SUV.</div><a class="card-link" href="#">发现</a></div></div>
+</div>
+</section>
+<hr class="section-divider"/>
+<section class="section">
+<h2 class="section-title">表单控件</h2>
+<p class="section-desc">黑字的尖锐输入. 金焦边疆.</p>
+<div class="form-grid">
+<div class="form-group"><label class="form-label">默认</label><input class="form-input" placeholder="输入名称" type="text"/></div>
+<div class="form-group"><label class="form-label">焦点</label><input class="form-input" placeholder="聚焦" style="border-color:var(--lambo-gold);" type="text"/></div>
+<div class="form-group"><label class="form-label">错误</label><input class="form-input error" type="text" value="Invalid"/></div>
+<div class="form-group"><label class="form-label">文本区</label><textarea class="form-textarea" placeholder="消息..."></textarea></div>
+</div>
+</section>
+<hr class="section-divider"/>
+<section class="section">
+<h2 class="section-title">间距层级</h2>
+<p class="section-desc">8px基地. 从精细4px到56px区段.（原文参数：8px、4px、56px）</p>
+<div class="spacing-row"><div class="spacing-label">4px</div><div class="spacing-box" style="width:16px;"></div><span style="font-size:11px;color:var(--text-muted);">精细</span></div>
+<div class="spacing-row"><div class="spacing-label">8px</div><div class="spacing-box" style="width:32px;"></div><span style="font-size:11px;color:var(--text-muted);">基础</span></div>
+<div class="spacing-row"><div class="spacing-label">16px</div><div class="spacing-box" style="width:64px;"></div><span style="font-size:11px;color:var(--text-muted);">按钮垫</span></div>
+<div class="spacing-row"><div class="spacing-label">24px</div><div class="spacing-box" style="width:96px;"></div><span style="font-size:11px;color:var(--text-muted);">黄金行动按钮 垫</span></div>
+<div class="spacing-row"><div class="spacing-label">40px</div><div class="spacing-box" style="width:160px;"></div><span style="font-size:11px;color:var(--text-muted);">H-pad 节</span></div>
+<div class="spacing-row"><div class="spacing-label">56px</div><div class="spacing-box" style="width:224px;"></div><span style="font-size:11px;color:var(--text-muted);">第五节</span></div>
+</section>
+<hr class="section-divider"/>
+<section class="section">
+<h2 class="section-title">圆角</h2>
+<p class="section-desc">0是默认值. 尖锐角度是LamborghiniDNA.</p>
+<div class="radius-row">
+<div class="radius-item"><div class="radius-box" style="border-radius:0px;"></div><div class="radius-value">0px</div><div class="radius-context">默认</div></div>
+<div class="radius-item"><div class="radius-box" style="border-radius:2px;"></div><div class="radius-value">2px</div><div class="radius-context">徽章</div></div>
+<div class="radius-item"><div class="radius-box" style="border-radius:20px;"></div><div class="radius-value">20px</div><div class="radius-context">开关</div></div>
+</div>
+</section>
+<hr class="section-divider"/>
+<section class="section" style="background:var(--absolute-black);max-width:100%;padding:80px 40px;">
+<div style="max-width:1200px;margin:0 auto;">
+<h2 class="section-title">层次与阴影</h2>
+<p class="section-desc">无影. 表面颜色层层。</p>
+<div class="elevation-row">
+<div class="elevation-card" style="background:var(--absolute-black);border:1px solid var(--border-dark);"><div class="elevation-name">Level 0 — Abyss</div><div class="elevation-desc">#000000</div></div>
+<div class="elevation-card" style="background:var(--dark-iron);border:1px solid var(--charcoal);"><div class="elevation-name">Level 1 — Surface</div><div class="elevation-desc">#181818</div></div>
+<div class="elevation-card" style="background:var(--charcoal);border:1px solid var(--graphite);"><div class="elevation-name">Level 2 — Panel</div><div class="elevation-desc">#202020</div></div>
+<div class="elevation-card" style="background:rgba(0,0,0,0.7);border:1px solid var(--border-dark);"><div class="elevation-name">Level 3 — Overlay</div><div class="elevation-desc">rgba(0,0,0,0.7)</div></div>
+</div>
+</div>
+</section>
+<footer><p>由Lamborghini启发的设计系统——由 DESIGN.md 由 awesome-design-md 生成</p></footer>
+<footer class="footer">
+<div class="footer-shell">
+<div class="footer-grid">
+<div class="footer-col">
+<h6>VoltAgent 框架</h6>
+<span>类型脚本代理</span>
+<span>工具编程</span>
+<span>多种代理工作流程</span>
+</div>
+<div class="footer-col">
+<h6>伏特Ops LLM 可观测性</h6>
+<span>LLM 跟踪</span>
+<span>实时调试</span>
+<span>视觉时间</span>
+</div>
+<div class="footer-col">
+<h6>生产</h6>
+<span>评价</span>
+<span>即时管理</span>
+<span>护卫</span>
+</div>
+<div class="footer-col">
+<h6>平台</h6>
+<span>伏特Ops 控制台</span>
+<span>开源核心</span>
+<span>代理工程</span>
+</div>
+</div>
+
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>珊瑚红与生活摄影</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --primary: #ff385c;
+    --primary-active: #e00b41;
+    --primary-disabled: #ffd1da;
+    --error: #c13515;
+    --luxe: #460479;
+    --plus: #92174d;
+    --ink: #222222;
+    --body: #3f3f3f;
+    --muted: #6a6a6a;
+    --muted-soft: #929292;
+    --hairline: #dddddd;
+    --hairline-soft: #ebebeb;
+    --border-strong: #c1c1c1;
+    --canvas: #ffffff;
+    --surface-soft: #f7f7f7;
+    --surface-strong: #f2f2f2;
+    --on-primary: #ffffff;
+    --legal-link: #428bff;
+    --shadow: rgba(0, 0, 0, 0.02) 0 0 0 1px, rgba(0, 0, 0, 0.04) 0 2px 6px 0, rgba(0, 0, 0, 0.1) 0 4px 8px 0;
+    --display: 'Inter', 'Airbnb Cereal VF', Circular, -apple-system, system-ui, Roboto, 'Helvetica Neue', sans-serif;
+    --text: 'Inter', 'Airbnb Cereal VF', Circular, -apple-system, system-ui, Roboto, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--canvas); color: var(--ink); font-family: var(--text); font-size: 16px; line-height: 1.5; font-weight: 400; }
+
+  .nav { position: sticky; top: 0; z-index: 100; background: var(--canvas); border-bottom: 1px solid var(--hairline); padding: 0 48px; height: 80px; }
+  .nav-links { list-style: none; display: flex; gap: 32px; align-items: center; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 16px; font-weight: 600; }
+  .nav-links a.active { color: var(--ink); border-bottom: 2px solid var(--ink); padding-bottom: 6px; }
+  .nav-cta { background: transparent; color: var(--ink); border: none; padding: 12px 16px; font-weight: 600; font-size: 14px; cursor: pointer; font-family: inherit; border-radius: 9999px; }
+
+  .hero { padding: 64px 48px; background: var(--canvas); display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; max-width: 1440px; margin: 0 auto; }
+  .hero-content { max-width: 720px; }
+  .hero h1 { font-family: var(--display); font-size: 48px; font-weight: 700; line-height: 1.1; color: var(--ink); margin: 0 0 24px; letter-spacing: -1px; }
+  .hero p { font-size: 18px; color: var(--body); max-width: 540px; margin: 0 0 32px; line-height: 1.5; font-weight: 400; }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-hero-primary { background: var(--primary); color: var(--on-primary); border: none; padding: 14px 24px; height: 48px; font-weight: 500; font-size: 16px; cursor: pointer; font-family: inherit; border-radius: 8px; }
+  .btn-hero-secondary { background: var(--canvas); color: var(--ink); border: 1px solid var(--ink); padding: 13px 23px; height: 48px; font-weight: 500; font-size: 16px; cursor: pointer; font-family: inherit; border-radius: 8px; }
+
+  .hero-art { aspect-ratio: 1; background: var(--surface-soft); border-radius: 14px; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; padding: 24px; }
+  .hero-art::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, #ffe0e6 0%, #fff0f3 50%, var(--surface-soft) 100%); }
+  .hero-art .orb { position: absolute; right: 24px; bottom: 24px; width: 64px; height: 64px; border-radius: 9999px; background: var(--primary); display: flex; align-items: center; justify-content: center; color: var(--on-primary); font-weight: 600; box-shadow: var(--shadow); }
+  .hero-art .heart { position: absolute; top: 24px; right: 24px; width: 40px; height: 40px; border-radius: 9999px; background: var(--canvas); display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 20px; box-shadow: var(--shadow); z-index: 1; }
+  .hero-art .badge { position: absolute; top: 24px; left: 24px; background: var(--canvas); border-radius: 9999px; padding: 4px 10px; font-size: 11px; font-weight: 600; color: var(--ink); box-shadow: var(--shadow); z-index: 1; }
+  .hero-art .label { position: relative; z-index: 1; color: var(--ink); font-weight: 600; font-size: 20px; }
+  .hero-art .sublabel { position: relative; z-index: 1; color: var(--muted); font-size: 14px; margin-top: 4px; font-weight: 400; }
+
+  section { max-width: 1440px; margin: 0 auto; padding: 64px 48px; border-top: 1px solid var(--hairline); }
+  .section-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.32px; color: var(--muted); font-weight: 700; margin-bottom: 12px; }
+  .section-heading { font-family: var(--display); font-size: 28px; font-weight: 700; color: var(--ink); margin-bottom: 16px; line-height: 1.43; }
+  .section-intro { font-size: 16px; color: var(--body); max-width: 720px; margin-bottom: 48px; font-weight: 400; line-height: 1.5; }
+
+  .palette-group { margin-bottom: 56px; }
+  .palette-group h3 { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 20px; }
+  .palette-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+  .swatch { border: 1px solid var(--hairline); background: var(--canvas); border-radius: 14px; overflow: hidden; }
+  .swatch-color { height: 100px; }
+  .swatch-meta { padding: 14px 16px; }
+  .swatch-name { font-weight: 600; font-size: 13px; color: var(--ink); margin-bottom: 4px; }
+  .swatch-hex { font-family: ui-monospace, monospace; font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+  .swatch-role { font-size: 13px; color: var(--body); line-height: 1.5; font-weight: 400; }
+
+  .type-row { display: grid; grid-template-columns: 320px 1fr; gap: 32px; align-items: baseline; padding: 20px 0; border-bottom: 1px solid var(--hairline-soft); }
+  .type-row:last-child { border-bottom: none; }
+  .type-meta { font-size: 12px; color: var(--muted); line-height: 1.5; font-weight: 400; }
+  .type-meta strong { display: block; color: var(--ink); font-weight: 600; font-size: 12px; margin-bottom: 4px; }
+  .type-sample { color: var(--ink); }
+
+  .button-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+  .button-cell { border: 1px solid var(--hairline); padding: 28px; background: var(--canvas); border-radius: 14px; min-width: 0; }
+  .button-label { font-size: 12px; color: var(--ink); font-weight: 600; margin-bottom: 12px; }
+  .button-meta { font-size: 12px; color: var(--muted); margin-top: 14px; line-height: 1.5; font-weight: 400; }
+  .btn { display: inline-block; padding: 14px 24px; height: 48px; font-size: 16px; font-weight: 500; border: none; cursor: pointer; font-family: inherit; line-height: 1.25; border-radius: 8px; }
+  .btn-primary { background: var(--primary); color: var(--on-primary); }
+  .btn-primary-active { background: var(--primary-active); color: var(--on-primary); }
+  .btn-primary-disabled { background: var(--primary-disabled); color: var(--on-primary); cursor: not-allowed; }
+  .btn-secondary { background: var(--canvas); color: var(--ink); border: 1px solid var(--ink); padding: 13px 23px; }
+  .btn-tertiary-text { background: transparent; color: var(--ink); padding: 0; height: auto; text-decoration: underline; font-size: 16px; font-weight: 500; }
+  .btn-pill { background: var(--primary); color: var(--on-primary); border-radius: 9999px; padding: 10px 20px; height: auto; font-size: 14px; font-weight: 500; }
+
+  /* Search bar pill */
+  .search-bar { display: inline-flex; align-items: center; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 9999px; box-shadow: var(--shadow); height: 64px; padding: 0 8px 0 0; max-width: 100%; overflow: hidden; }
+  .search-segment { padding: 12px 24px; border-right: 1px solid var(--hairline); display: flex; flex-direction: column; gap: 2px; min-width: 140px; }
+  .search-segment:last-of-type { border-right: none; }
+  .search-segment-label { font-size: 12px; font-weight: 600; color: var(--ink); }
+  .search-segment-value { font-size: 14px; color: var(--muted); font-weight: 400; }
+  .search-orb { width: 48px; height: 48px; border-radius: 9999px; background: var(--primary); color: var(--on-primary); border: none; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; font-weight: 600; }
+
+  /* Product tabs */
+  .product-tabs { display: inline-flex; gap: 32px; align-items: center; }
+  .product-tab { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 6px 0; cursor: pointer; position: relative; color: var(--muted); font-weight: 600; font-size: 16px; }
+  .product-tab.active { color: var(--ink); border-bottom: 2px solid var(--ink); }
+  .product-tab-icon { width: 32px; height: 32px; border-radius: 9999px; background: linear-gradient(135deg, #fff 0%, var(--surface-strong) 100%); display: flex; align-items: center; justify-content: center; font-size: 16px; position: relative; }
+  .new-tag { position: absolute; top: -8px; right: -16px; background: var(--canvas); color: var(--ink); padding: 2px 6px; border-radius: 9999px; font-size: 8px; font-weight: 700; letter-spacing: 0.32px; text-transform: uppercase; box-shadow: var(--shadow); }
+
+  /* Property cards */
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; min-width: 0; }
+  .card-grid > * { min-width: 0; }
+  .property-card { background: var(--canvas); display: flex; flex-direction: column; gap: 8px; }
+  .property-card-photo { width: 100%; aspect-ratio: 1/1; background: linear-gradient(135deg, #ddd, #bbb); border-radius: 14px; position: relative; overflow: hidden; }
+  .property-card-photo .badge { position: absolute; top: 12px; left: 12px; background: var(--canvas); border-radius: 9999px; padding: 4px 10px; font-size: 11px; font-weight: 600; color: var(--ink); box-shadow: var(--shadow); }
+  .property-card-photo .heart { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; border-radius: 9999px; background: rgba(0,0,0,0.15); color: var(--canvas); display: flex; align-items: center; justify-content: center; font-size: 18px; }
+  .property-card-meta { display: flex; flex-direction: column; gap: 2px; padding: 0 4px; }
+  .property-card-row { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .property-card-title { font-size: 16px; font-weight: 600; color: var(--ink); }
+  .property-card-rating { font-size: 14px; color: var(--ink); font-weight: 400; }
+  .property-card-meta-line { font-size: 14px; color: var(--muted); font-weight: 400; }
+  .property-card-price { font-size: 14px; color: var(--ink); font-weight: 600; margin-top: 4px; }
+  .property-card-price .nightly { font-weight: 400; color: var(--ink); }
+
+  /* Experience cards */
+  .experience-card-photo { width: 100%; aspect-ratio: 4/5; background: linear-gradient(135deg, #f8a, #f57); border-radius: 14px; position: relative; overflow: hidden; }
+  .experience-card-photo .badge { position: absolute; top: 12px; left: 12px; background: var(--canvas); padding: 2px 6px; border-radius: 9999px; font-size: 8px; font-weight: 700; color: var(--ink); letter-spacing: 0.32px; text-transform: uppercase; box-shadow: var(--shadow); }
+
+  /* Rating display */
+  .rating-display-card { display: flex; align-items: center; justify-content: center; gap: 24px; padding: 32px 0; }
+  .rating-laurel { width: 32px; height: 80px; background: var(--ink); -webkit-mask: radial-gradient(ellipse 80% 50% at 100% 50%, transparent 50%, #000 51%); mask: radial-gradient(ellipse 80% 50% at 100% 50%, transparent 50%, #000 51%); opacity: 0.85; }
+  .rating-laurel.right { transform: scaleX(-1); }
+  .rating-number { font-family: var(--display); font-size: 64px; font-weight: 700; color: var(--ink); line-height: 1.1; letter-spacing: -1px; }
+  .rating-tagline { text-align: center; color: var(--muted); font-size: 14px; max-width: 480px; margin: 0 auto 24px; }
+  .rating-stats { display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); padding: 16px 0; }
+  .rating-stat { text-align: center; padding: 8px; border-right: 1px solid var(--hairline); }
+  .rating-stat:last-child { border-right: none; }
+  .rating-stat-value { font-size: 18px; font-weight: 700; color: var(--ink); }
+  .rating-stat-label { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+  /* Amenity rows */
+  .amenity-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }
+  .amenity-row { display: flex; align-items: center; gap: 16px; padding: 12px 0; font-size: 16px; color: var(--ink); }
+  .amenity-icon { width: 24px; height: 24px; border-radius: 4px; background: var(--surface-strong); flex-shrink: 0; }
+
+  /* Reviews card */
+  .reviews-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .review-card { display: flex; flex-direction: column; gap: 12px; }
+  .review-author-row { display: flex; align-items: center; gap: 12px; }
+  .review-avatar { width: 40px; height: 40px; border-radius: 9999px; background: linear-gradient(135deg, var(--primary), var(--luxe)); flex-shrink: 0; }
+  .review-author-name { font-size: 14px; font-weight: 600; color: var(--ink); }
+  .review-author-date { font-size: 13px; color: var(--muted); }
+  .review-excerpt { font-size: 14px; color: var(--ink); line-height: 1.5; }
+
+  /* Host & reservation cards */
+  .listing-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 48px; align-items: start; }
+  .host-card, .reservation-card { background: var(--canvas); border: 1px solid var(--hairline); border-radius: 14px; padding: 24px; box-shadow: var(--shadow); }
+  .host-row { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+  .host-avatar { width: 56px; height: 56px; border-radius: 9999px; background: linear-gradient(135deg, var(--primary), #c13515); }
+  .host-name { font-size: 16px; font-weight: 600; color: var(--ink); }
+  .host-meta { font-size: 14px; color: var(--muted); }
+  .reservation-price { font-size: 21px; font-weight: 700; color: var(--ink); margin-bottom: 16px; }
+  .reservation-price .nightly { font-size: 16px; font-weight: 400; color: var(--ink); }
+  .reservation-date-row { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--ink); border-radius: 8px; }
+  .reservation-date-cell { padding: 10px 12px; border-right: 1px solid var(--ink); }
+  .reservation-date-cell:last-child { border-right: none; }
+  .reservation-date-label { font-size: 10px; font-weight: 700; color: var(--ink); letter-spacing: 0.32px; text-transform: uppercase; }
+  .reservation-date-value { font-size: 14px; color: var(--ink); margin-top: 2px; }
+  .reservation-fees { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--hairline); display: flex; flex-direction: column; gap: 8px; font-size: 14px; }
+  .reservation-fee-row { display: flex; justify-content: space-between; color: var(--ink); }
+
+  /* Date picker */
+  .date-picker { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; max-width: 320px; }
+  .date-day-head { font-size: 12px; color: var(--muted); text-align: center; padding: 4px 0; font-weight: 400; }
+  .date-day { width: 40px; height: 40px; border-radius: 9999px; display: inline-flex; align-items: center; justify-content: center; font-size: 14px; color: var(--ink); cursor: pointer; }
+  .date-day.selected { background: var(--ink); color: var(--canvas); }
+  .date-day.muted { color: var(--muted-soft); }
+
+  /* Forms */
+  .form-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+  .form-cell { min-width: 0; position: relative; }
+  .text-input { width: 100%; background: var(--canvas); color: var(--ink); border: 1px solid var(--hairline); padding: 24px 12px 8px; height: 56px; font-size: 16px; font-family: inherit; font-weight: 400; border-radius: 8px; outline: none; }
+  .text-input:focus, .text-input.focused { border: 2px solid var(--ink); padding: 23px 11px 7px; }
+  .form-floating-label { position: absolute; top: 6px; left: 13px; font-size: 12px; color: var(--muted); font-weight: 500; pointer-events: none; }
+
+  /* City link grid */
+  .city-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px 24px; }
+  .city-block { display: flex; flex-direction: column; gap: 2px; }
+  .city-name { font-size: 16px; font-weight: 600; color: var(--ink); }
+  .city-category { font-size: 14px; color: var(--muted); }
+
+  /* Category strip */
+  .category-strip { display: flex; gap: 32px; border-bottom: 1px solid var(--hairline); margin-bottom: 24px; flex-wrap: wrap; padding-bottom: 0; }
+  .category-tab { padding: 12px 0; color: var(--muted); font-weight: 500; font-size: 14px; cursor: pointer; border-bottom: 2px solid transparent; }
+  .category-tab.active { color: var(--ink); border-bottom-color: var(--ink); }
+
+  /* Spacing scale */
+  .spacing-row { display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
+  .spacing-block { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .spacing-bar { background: var(--ink); height: 28px; }
+  .spacing-label { font-size: 11px; color: var(--muted); font-family: ui-monospace, monospace; }
+
+  /* Radius */
+  .radius-row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .radius-block { width: 96px; height: 96px; background: var(--surface-soft); border: 1px solid var(--hairline); display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--ink); font-weight: 600; font-family: ui-monospace, monospace; }
+
+  /* Elevation */
+  .elevation-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; }
+  .elevation-card { padding: 24px; font-size: 13px; color: var(--ink); border: 1px solid var(--hairline); background: var(--canvas); border-radius: 14px; }
+  .elevation-card h5 { font-weight: 600; color: var(--ink); margin-bottom: 6px; font-size: 12px; }
+  .elevation-card p { color: var(--muted); font-size: 13px; font-weight: 400; line-height: 1.5; }
+  .elevation-card.elevated { box-shadow: var(--shadow); }
+
+  /* Responsive table */
+  .responsive-table { width: 100%; border-collapse: collapse; margin-bottom: 32px; font-size: 14px; }
+  .responsive-table th, .responsive-table td { text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--hairline); }
+  .responsive-table th { font-weight: 600; color: var(--ink); font-size: 12px; text-transform: uppercase; letter-spacing: 0.32px; }
+  .responsive-table td { color: var(--body); font-weight: 400; }
+  .device-ladder { display: flex; align-items: flex-end; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+  .device-bar { background: var(--surface-soft); border: 1px solid var(--hairline); color: var(--muted); text-align: center; padding: 8px; font-size: 11px; font-family: ui-monospace, monospace; flex-shrink: 0; border-radius: 8px; }
+
+  .responsive-sub { margin-top: 32px; }
+  .responsive-sub h4 { font-family: var(--display); font-size: 18px; font-weight: 600; color: var(--ink); margin-bottom: 12px; }
+  .responsive-sub ul { padding-left: 20px; color: var(--body); font-size: 14px; font-weight: 400; line-height: 1.5; }
+
+  .footer { background: var(--canvas); color: var(--ink); padding: 48px; font-size: 13px; font-weight: 400; border-top: 1px solid var(--hairline); }
+  .footer .footer-inner { max-width: 1440px; margin: 0 auto; }
+  .footer .columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-bottom: 32px; }
+  .footer .col-head { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 12px; }
+  .footer .col-link { font-size: 14px; line-height: 2; color: var(--ink); display: block; text-decoration: none; font-weight: 400; }
+  .footer .legal { padding-top: 24px; border-top: 1px solid var(--hairline); font-size: 13px; color: var(--muted); display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .footer .legal a { color: var(--ink); text-decoration: none; }
+
+  .cell, .cell > *, .demo, .button-cell, .component-cell { min-width: 0; }
+  .cell.wide, .button-cell.wide, .component-cell.wide { grid-column: span 2; }
+  @media (max-width: 1024px) {
+    section { padding: 48px 32px; }
+    .section-heading { font-size: 24px; }
+    .nav > :last-child { display: none; }
+    .hero { grid-template-columns: 1fr; gap: 32px; padding: 48px 32px; }
+    .hero h1 { font-size: 36px; }
+    .hero-art, .hero-art-photo { display: none; }
+    .type-row { grid-template-columns: 1fr; gap: 8px; }
+    .type-row .type-meta { padding-bottom: 4px; }
+    .footer .columns { grid-template-columns: repeat(2, 1fr); }
+    .listing-grid { grid-template-columns: 1fr; gap: 24px; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .amenity-list { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 720px) {
+    .cell.wide, .button-cell.wide, .component-cell.wide { grid-column: span 1; }
+    .nav { padding: 0 48px; height: auto; min-height: 56px; }
+    .nav-links { display: none; }
+    .hero { padding: 32px 20px; }
+    .hero h1 { font-size: 28px; }
+    .hero p { font-size: 15px; }
+    section { padding: 40px 20px; }
+    .section-heading { font-size: 22px; }
+    .palette-grid, .button-grid, .card-grid, .form-grid, .elevation-grid, .city-grid { grid-template-columns: 1fr !important; gap: 16px; }
+    .rating-stats { grid-template-columns: repeat(2, 1fr); }
+    .rating-stat:nth-child(2n) { border-right: none; }
+    .spacing-row, .radius-row { gap: 12px; }
+    .responsive-table { font-size: 12px; }
+    .responsive-table th, .responsive-table td { padding: 10px 8px; }
+    .device-ladder { gap: 8px; }
+    .footer { padding: 32px 16px; }
+    .footer .columns { grid-template-columns: 1fr; gap: 16px; }
+    .search-bar { display: flex; flex-direction: column; align-items: stretch; height: auto; border-radius: 14px; padding: 8px; }
+    .search-segment { border-right: none; border-bottom: 1px solid var(--hairline); }
+  }
+
+  /* getdesign.md nav additions */
+  .nav-left { display: flex; align-items: center; gap: 20px; }
+  .nav-brand-link, .nav-brand-link:link, .nav-brand-link:visited, .nav-brand-link:hover, .nav-brand-link:active { text-decoration: none; color: inherit; }
+  .nav-brand { font-family: var(--display); font-weight: 700; font-size: 16px; color: var(--ink); }
+  .nav-github, .nav-github:link, .nav-github:visited, .nav-github:hover, .nav-github:active {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600;
+    color: inherit; text-decoration: none; padding: 5px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.3); border-radius: 6px;
+    opacity: 0.75; transition: opacity 200ms ease, border-color 200ms ease;
+    font-family: inherit; line-height: 1; white-space: nowrap;
+  }
+  .nav-github:hover { opacity: 1; border-color: rgba(128, 128, 128, 0.55); }
+  .nav-github svg { display: block; flex-shrink: 0; }
+
+  /* getdesign.md nav centering */
+  .nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+  .nav > .nav-left { justify-self: start; }
+  .nav > .nav-links { justify-self: center; }
+  .nav > :last-child { justify-self: end; }
+
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+<style data-design-nav="true">
+.design-preview-nav { min-height:48px; }
+.design-preview-nav .nav-brand { white-space:normal; overflow-wrap:anywhere; }
+.design-preview-nav .nav-links { display:flex; flex-wrap:wrap; gap:8px clamp(10px,2vw,26px); padding-block:5px; }
+.design-preview-nav a { text-decoration:none; }
+.design-preview-nav .nav-links a { color:inherit; }
+.design-preview-nav .nav-links a:hover { text-decoration:underline; text-underline-offset:3px; }
+.design-preview-nav a:focus-visible { outline:2px solid currentColor; outline-offset:4px; }
+:is([id^=design-section-],[id=design-overview]) { scroll-margin-top:94px; }
+@media (max-width:760px) {
+  .design-preview-nav { position:static; display:flex; flex-wrap:wrap; gap:3px 12px; padding:8px 12px; height:auto; }
+  .design-preview-nav .nav-left { min-width:0; }
+  .design-preview-nav > .nav-links { flex:1 1 100%; display:flex; padding-inline:0; }
+  .design-preview-nav .nav-cta { display:none; }
+  :is([id^=design-section-],[id=design-overview]) { scroll-margin-top:14px; }
+}
+</style></head>
+<body><nav aria-label="样张章节" class="nav design-preview-nav" data-design-nav="true"><div class="nav-left"><span class="nav-brand">Airbnb</span></div><ul class="nav-links"><li><a href="#design-section-1">配色</a></li><li><a href="#design-section-7">字体</a></li><li><a href="#design-section-8">按钮</a></li></ul><a class="nav-cta" href="#design-overview">概览</a></nav>
+<div class="hero">
+<div class="hero-content">
+<h1 id="design-overview">珊瑚红与生活摄影</h1>
+<p>以房源摄影为视觉主角，白色界面、珊瑚红按钮和圆润卡片构成温暖的旅行体验。</p>
+<div class="hero-actions">
+<button class="btn-hero-primary">搜索</button>
+<button class="btn-hero-secondary">成为东道主</button>
+</div>
+</div>
+<div class="hero-art">
+<div class="badge">客人们喜欢的</div>
+<div class="heart">♥</div>
+<div class="orb">⌕</div>
+<div class="label">威尔明顿的凹陷</div>
+<div class="sublabel">$182 夜间 4.92</div>
+</div>
+</div>
+<section id="colors">
+<div class="section-label">01——科特迪瓦</div>
+<h2 class="section-heading" id="design-section-1">径+文字色+软灰色</h2>
+<p class="section-intro">单张强调色(Rausch)携带每一次初级时刻. 调色板的其余部分为白色页面底色,文字色文本,以及三层灰色细边线. 亚品牌紫色和洋红色只被范围为Luxe和Plus.</p>
+<div class="palette-group">
+<h3>品牌色</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#ff385c;"></div><div class="swatch-meta"><div class="swatch-name">主要( 劳施)</div><div class="swatch-hex">#ff385c</div><div class="swatch-role">所有初级CTA,搜索Ob,心脏保存状态,品牌字号.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#e00b41;"></div><div class="swatch-meta"><div class="swatch-name">primary-active</div><div class="swatch-hex">#e00b41</div><div class="swatch-role">劳施CTAs新闻报.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#ffd1da;"></div><div class="swatch-meta"><div class="swatch-name">primary-disabled</div><div class="swatch-hex">#ffd1da</div><div class="swatch-role">已禁用 行动按钮 浅色调.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#460479;"></div><div class="swatch-meta"><div class="swatch-name">豪华</div><div class="swatch-hex">#460479</div><div class="swatch-role">副品牌强调色——只限Airbnb Luxe.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#92174d;"></div><div class="swatch-meta"><div class="swatch-name">+ 数字</div><div class="swatch-hex">#92174d</div><div class="swatch-role">副品牌强调色——仅限Airbnb Plus.</div></div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>界面表面</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#ffffff; border-bottom:1px solid var(--hairline);"></div><div class="swatch-meta"><div class="swatch-name">页面底色</div><div class="swatch-hex">#ffffff</div><div class="swatch-role">默认页面表面——每个公开页面.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#f7f7f7;"></div><div class="swatch-meta"><div class="swatch-name">surface-soft</div><div class="swatch-hex">#f7f7f7</div><div class="swatch-role">残缺的字段,sub-nav徘徊,过滤带.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#f2f2f2;"></div><div class="swatch-meta"><div class="swatch-name">surface-strong</div><div class="swatch-hex">#f2f2f2</div><div class="swatch-role">Circular icon button surface.</div></div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>细边线和边框</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#dddddd;"></div><div class="swatch-meta"><div class="swatch-name">细边框</div><div class="swatch-hex">#dddddd</div><div class="swatch-role">默认 1px 分隔符。 搜索栏,页脚,桌子</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#ebebeb;"></div><div class="swatch-meta"><div class="swatch-name">hairline-soft</div><div class="swatch-hex">#ebebeb</div><div class="swatch-role">编辑机构更轻的划分器.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#c1c1c1;"></div><div class="swatch-meta"><div class="swatch-name">border-strong</div><div class="swatch-hex">#c1c1c1</div><div class="swatch-role">禁用描边按钮,重点输入大纲.</div></div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>文字色</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#222222;"></div><div class="swatch-meta"><div class="swatch-name">文字色</div><div class="swatch-hex">#222222</div><div class="swatch-role">显示,身体,主导航链接.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#3f3f3f;"></div><div class="swatch-meta"><div class="swatch-name">正文</div><div class="swatch-hex">#3f3f3f</div><div class="swatch-role">长式检讨与体裁抄录.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#6a6a6a;"></div><div class="swatch-meta"><div class="swatch-name">哑巴</div><div class="swatch-hex">#6a6a6a</div><div class="swatch-role">字幕,页脚的子标签,"查看所有"链接.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#929292;"></div><div class="swatch-meta"><div class="swatch-name">muted-soft</div><div class="swatch-hex">#929292</div><div class="swatch-role">禁用链接文本。 很少用过</div></div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>语义色</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#c13515;"></div><div class="swatch-meta"><div class="swatch-name">错误</div><div class="swatch-hex">#c13515</div><div class="swatch-role">内置形式- 验证错误文本。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#428bff;"></div><div class="swatch-meta"><div class="swatch-name">legal-link</div><div class="swatch-hex">#428bff</div><div class="swatch-role">内在法律链接(Privacy,术语)。</div></div></div>
+</div>
+</div>
+</section>
+<section id="typography">
+<div class="section-label">02 ——五指板</div>
+<h2 class="section-heading" id="design-section-7">Airbnb Cereal VF · modest weights</h2>
+<p class="section-intro">Display sizes sit at 22–28px in weight 500/600 — the system trusts photography over typographic muscle. Inter is used here as a substitute for Cereal VF.</p>
+<div class="type-row"><div class="type-meta"><strong>rating-display</strong>64px / 700 / 1.1 / -1px</div><div class="type-sample" style="font-size:64px; font-weight:700; line-height:1.1; letter-spacing:-1px;">4.81</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-xl</strong>28px / 700 / 1.43</div><div class="type-sample" style="font-size:28px; font-weight:700;">未来出逃的灵感</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-lg</strong>22px / 500 / 1.18 / -0.44px</div><div class="type-sample" style="font-size:22px; font-weight:500; line-height:1.18; letter-spacing:-0.44px;">靠近费蒂耶·阿利亚·巴厘海滩</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-md</strong>21px / 700 / 1.43</div><div class="type-sample" style="font-size:21px; font-weight:700;">这个地方提供什么</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-sm</strong>20px / 600 / 1.20 / -0.18px</div><div class="type-sample" style="font-size:20px; font-weight:600;">事情要知道,我告诉你</div></div>
+<div class="type-row"><div class="type-meta"><strong>title-md</strong>16px / 600 / 1.25</div><div class="type-sample" style="font-size:16px; font-weight:600;">威尔明顿</div></div>
+<div class="type-row"><div class="type-meta"><strong>title-sm</strong>16px / 500 / 1.25</div><div class="type-sample" style="font-size:16px; font-weight:500;">支助</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-md</strong>16px / 400 / 1.5</div><div class="type-sample" style="font-size:16px; font-weight:400; line-height:1.5;">安静的别墅,花园, 和直接的海滩通道。 步行八分钟后到村广场.</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-sm</strong>14px / 400 / 1.43</div><div class="type-sample" style="font-size:14px; font-weight:400;">租户 · 3月 12–18 · $182 晚上( 晚上)</div></div>
+<div class="type-row"><div class="type-meta"><strong>标题</strong>14px / 500 / 1.29</div><div class="type-sample" style="font-size:14px; font-weight:500;">何时 谁是</div></div>
+<div class="type-row"><div class="type-meta"><strong>caption-sm</strong>13px / 400 / 1.23</div><div class="type-sample" style="font-size:13px; font-weight:400;">2026 Airbnb 公司 隐私 术语 隐私选择</div></div>
+<div class="type-row"><div class="type-meta"><strong>徽标</strong>11px / 600 / 1.18</div><div class="type-sample" style="font-size:11px; font-weight:600;">客人们喜欢的</div></div>
+<div class="type-row"><div class="type-meta"><strong>uppercase-tag</strong>8px / 700 / 1.25 / 0.32px (uppercase)</div><div class="type-sample" style="font-size:8px; font-weight:700; letter-spacing:0.32px; text-transform:uppercase;">新书</div></div>
+<div class="type-row"><div class="type-meta"><strong>button-md</strong>16px / 500 / 1.25</div><div class="type-sample" style="font-size:16px; font-weight:500;">准备金</div></div>
+<div class="type-row"><div class="type-meta"><strong>nav-link</strong>16px / 600 / 1.25</div><div class="type-sample" style="font-size:16px; font-weight:600;">家庭 经验 服务</div></div>
+</section>
+<section id="components">
+<div class="section-label">03 . 巴特顿 流浪汉.</div>
+<h2 class="section-heading" id="design-section-8">主要、文字色 次要</h2>
+<p class="section-intro">所有按钮都是8px角半径(`{rounded.sm}`). 胶囊形变体升级为分类条状体和特征细胞的全圆形.（原文参数：8px）</p>
+<div class="button-grid">
+<div class="button-cell"><div class="button-label">button-primary</div><button class="btn btn-primary">准备金</button><div class="button-meta">径 / on-primary 白色/ 8px 半径</div></div>
+<div class="button-cell"><div class="button-label">button-primary-active</div><button class="btn btn-primary-active">按下</button><div class="button-meta">primary-active 深红色</div></div>
+<div class="button-cell"><div class="button-label">button-primary-disabled</div><button class="btn btn-primary-disabled" disabled="">准备金</button></div>
+<div class="button-cell"><div class="button-label">button-secondary</div><button class="btn btn-secondary">保存</button><div class="button-meta">页面底色 / 文字色 / 1px 文字色 大纲</div></div>
+<div class="button-cell"><div class="button-label">button-tertiary-text</div><button class="btn btn-tertiary-text">显示更多</button><div class="button-meta">下划线文字色——模式关闭,"显示更多"</div></div>
+<div class="button-cell"><div class="button-label">button-pill-rausch</div><button class="btn btn-pill">成为东道主</button><div class="button-meta">胶囊形 9999px半径, 14px 标签（原文参数：9999px）</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">04 - TOP NAV + 生产塔比斯</div>
+<h2 class="section-heading">三个产品标签:家庭 经验 服务</h2>
+<p class="section-intro">Each tab carries a 32px hand-illustrated icon. Active tab uses a 2px ink underline. NEW tag pin is a tiny rounded pill in uppercase 8px / 700.</p>
+<div class="product-tabs">
+<div class="product-tab active"><div class="product-tab-icon">🏠</div>家园</div>
+<div class="product-tab"><div class="product-tab-icon">🎈<span class="new-tag">新书</span></div>经验</div>
+<div class="product-tab"><div class="product-tab-icon">🛎<span class="new-tag">新书</span></div>服务</div>
+</div>
+</section>
+<section>
+<div class="section-label">05——搜索酒吧</div>
+<h2 class="section-heading">胶囊形 全球搜索, 共三个部分</h2>
+<p class="section-intro">9999px radius, 64px height, white surface, 1px hairline border with the system's single shadow tier applied. Internally divided into Where / When / Who segments. Right edge terminates in a circular Rausch search orb.</p>
+<div class="search-bar">
+<div class="search-segment">
+<div class="search-segment-label">哪里 哪里 哪里 哪里 哪里 哪里 哪里 哪里 哪里 哪里 哪里 哪里 哪里 哪里 哪里 哪里</div>
+<div class="search-segment-value">搜索目的地</div>
+</div>
+<div class="search-segment">
+<div class="search-segment-label">何时</div>
+<div class="search-segment-value">添加日期</div>
+</div>
+<div class="search-segment">
+<div class="search-segment-label">谁</div>
+<div class="search-segment-value">添加来宾</div>
+</div>
+<button aria-label="搜索" class="search-orb">⌕</button>
+</div>
+</section>
+<section>
+<div class="section-label">06 - 类别</div>
+<h2 class="section-heading">内置类标签</h2>
+<p class="section-intro">列表页面的搜索栏下方:`{typography.button-sm}`中水平行的光标变音,加一个2px文字色下划线标记活动选择.（原文参数：2px）</p>
+<div class="category-strip">
+<div class="category-tab active">大众</div>
+<div class="category-tab">艺术和文化</div>
+<div class="category-tab">海滩</div>
+<div class="category-tab">山岳</div>
+<div class="category-tab">户外</div>
+<div class="category-tab">事情做起来</div>
+<div class="category-tab">旅行提示和灵感</div>
+<div class="category-tab">Airbnb 友好公寓</div>
+</div>
+</section>
+<section>
+<div class="section-label">07——财产卡片</div>
+<h2 class="section-heading">照片第一财产 卡片</h2>
+<p class="section-intro">A 1:1 相片板与 `{rounded.md}` 14px 角剪,"贵宾最爱"浮标左上方,心像图案右上方,四行 meta 块下方:标题、位置、日期、价格。</p>
+<div class="card-grid">
+<div class="property-card">
+<div class="property-card-photo">
+<div class="badge">客人们喜欢的</div>
+<div class="heart">♡</div>
+</div>
+<div class="property-card-meta">
+<div class="property-card-row"><div class="property-card-title">威尔明顿</div><div class="property-card-rating">★ 4.92</div></div>
+<div class="property-card-meta-line">包租费</div>
+<div class="property-card-meta-line">玛尔 12 – 18</div>
+<div class="property-card-price">$182 <span class="nightly">晚上( 晚上)</span></div>
+</div>
+</div>
+<div class="property-card">
+<div class="property-card-photo" style="background:linear-gradient(135deg,#ddd,#999);">
+<div class="badge">客人们喜欢的</div>
+<div class="heart">♡</div>
+</div>
+<div class="property-card-meta">
+<div class="property-card-row"><div class="property-card-title">键西方</div><div class="property-card-rating">★ 4.81</div></div>
+<div class="property-card-meta-line">每月租金</div>
+<div class="property-card-meta-line">4月(3个月) 2 – 22</div>
+<div class="property-card-price">$240 <span class="nightly">晚上( 晚上)</span></div>
+</div>
+</div>
+<div class="property-card">
+<div class="property-card-photo" style="background:linear-gradient(135deg,#bbb,#777);">
+<div class="badge">客人们喜欢的</div>
+<div class="heart">♡</div>
+</div>
+<div class="property-card-meta">
+<div class="property-card-row"><div class="property-card-title">雅典</div><div class="property-card-rating">★ 4.95</div></div>
+<div class="property-card-meta-line">公寓租赁</div>
+<div class="property-card-meta-line">5月(半天会议) 4 – 11</div>
+<div class="property-card-price">$167 <span class="nightly">晚上( 晚上)</span></div>
+</div>
+</div>
+<div class="property-card">
+<div class="property-card-photo" style="background:linear-gradient(135deg,#ccc,#888);">
+<div class="heart">♡</div>
+</div>
+<div class="property-card-meta">
+<div class="property-card-row"><div class="property-card-title">波科诺山脉</div><div class="property-card-rating">★ 4.74</div></div>
+<div class="property-card-meta-line">房屋租赁</div>
+<div class="property-card-meta-line">军 18 – 25</div>
+<div class="property-card-price">$298 <span class="nightly">晚上( 晚上)</span></div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="section-label">08 - 经验 卡片</div>
+<h2 class="section-heading">4:5 aspect cards with NEW tag</h2>
+<p class="section-intro">比财产高得多的卡片 照片下面的单行标题。 新的经验上左上角有一根小小的新针</p>
+<div class="card-grid">
+<div class="property-card">
+<div class="experience-card-photo"><div class="badge">新书</div><div class="heart">♡</div></div>
+<div class="property-card-meta">
+<div class="property-card-title">雅典日落烹饪课</div>
+<div class="property-card-meta-line">从$48 / 人</div>
+</div>
+</div>
+<div class="property-card">
+<div class="experience-card-photo" style="background:linear-gradient(135deg,#79c,#358);"><div class="badge">新书</div><div class="heart">♡</div></div>
+<div class="property-card-meta">
+<div class="property-card-title">· Pocono 半日冲浪课</div>
+<div class="property-card-meta-line">从$72 / 人</div>
+</div>
+</div>
+<div class="property-card">
+<div class="experience-card-photo" style="background:linear-gradient(135deg,#bda,#586);"><div class="heart">♡</div></div>
+<div class="property-card-meta">
+<div class="property-card-title">橄榄园散步 克里特岛</div>
+<div class="property-card-meta-line">从$35 / 人</div>
+</div>
+</div>
+<div class="property-card">
+<div class="experience-card-photo" style="background:linear-gradient(135deg,#fac,#a36);"><div class="badge">新书</div><div class="heart">♡</div></div>
+<div class="property-card-meta">
+<div class="property-card-title">· 里斯本</div>
+<div class="property-card-meta-line">从$58 / 人</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="section-label">09——发射装置</div>
+<h2 class="section-heading">签名列表详细时刻</h2>
+<p class="section-intro">64px / 700 评分编号由 Laurel- wreath 饰品侧面. 整个系统中的单一的印刷声响瞬间. 客人最爱的标签线和下面的Stat排.</p>
+<div class="rating-display-card">
+<div class="rating-laurel"></div>
+<div class="rating-number">4.81</div>
+<div class="rating-laurel right"></div>
+</div>
+<p class="rating-tagline">受欢迎的客人——Airbnb上最喜爱的家之一,基于评分,评论,可靠性.</p>
+<div class="rating-stats">
+<div class="rating-stat"><div class="rating-stat-value">4.9</div><div class="rating-stat-label">清洁性</div></div>
+<div class="rating-stat"><div class="rating-stat-value">4.8</div><div class="rating-stat-label">准确性</div></div>
+<div class="rating-stat"><div class="rating-stat-value">4.9</div><div class="rating-stat-label">报到</div></div>
+<div class="rating-stat"><div class="rating-stat-value">4.8</div><div class="rating-stat-label">通讯</div></div>
+<div class="rating-stat"><div class="rating-stat-value">4.7</div><div class="rating-stat-label">数值</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">10——代表+审查</div>
+<h2 class="section-heading">这个地方提供什么</h2>
+<p class="section-intro">桌面上的双柱宽度列表,移动上的1宽度列表. 每行对一 24×24px 图标盘,带有 admenity 标签 `{typography.body-md}`.</p>
+<div class="amenity-list">
+<div class="amenity-row"><div class="amenity-icon"></div>· 200 Mbps( 千兆位)</div>
+<div class="amenity-row"><div class="amenity-icon"></div>海滩通道——海滩前滩</div>
+<div class="amenity-row"><div class="amenity-icon"></div>免费停车</div>
+<div class="amenity-row"><div class="amenity-icon"></div>空调</div>
+<div class="amenity-row"><div class="amenity-icon"></div>厨房</div>
+<div class="amenity-row"><div class="amenity-icon"></div>工作空间——专用</div>
+<div class="amenity-row"><div class="amenity-icon"></div>池头</div>
+<div class="amenity-row"><div class="amenity-icon"></div>允许的宠物</div>
+</div>
+<h3 style="font-family:var(--display); font-size:21px; font-weight:700; color:var(--ink); margin: 48px 0 16px;">审 阅</h3>
+<div class="reviews-grid">
+<div class="review-card">
+<div class="review-author-row"><div class="review-avatar"></div><div><div class="review-author-name">米拉 玛利亚</div><div class="review-author-date">2 数周前 1 Airbnb 年度</div></div></div>
+<p class="review-excerpt">安静的别墅,花园, 和直接的海滩通道。 主持人反应迅速,厨房设备齐全,可以长期停留.</p>
+</div>
+<div class="review-card">
+<div class="review-author-row"><div class="review-avatar" style="background:linear-gradient(135deg,#460479,#92174d);"></div><div><div class="review-author-name">丹尼尔</div><div class="review-author-date">1 月前 3 Airbnb 年数</div></div></div>
+<p class="review-excerpt">照片是诚实的。 街区傍晚可步行,主持人留下了当地市场手工绘制的地图.</p>
+</div>
+</div>
+</section>
+<section>
+<div class="section-label">11 —— 住房+保留卡片</div>
+<h2 class="section-heading">Listing detail: 2-column with sticky reservation rail</h2>
+<p class="section-intro">Left column carries amenities, reviews, and host card. Right column is the sticky `{component.reservation-card}` — nightly price, date selector, guest stepper, primary CTA, fee breakdown.</p>
+<div class="listing-grid">
+<div class="host-card">
+<div class="host-row">
+<div class="host-avatar"></div>
+<div>
+<div class="host-name">由艾连姆主持</div>
+<div class="host-meta">Superhost · 4 years hosting · Speaks English, Turkish</div>
+</div>
+</div>
+<p style="font-size:14px; color:var(--body); line-height:1.5; margin-bottom: 16px;">艾连姆是超级东道主——超级东道主经验丰富,地位高的东道主,致力于提供伟大的停留.</p>
+<button class="btn btn-secondary">联系人主机</button>
+</div>
+<div class="reservation-card">
+<div class="reservation-price">$182 <span class="nightly">晚上( 晚上)</span></div>
+<div class="reservation-date-row">
+<div class="reservation-date-cell">
+<div class="reservation-date-label">报到</div>
+<div class="reservation-date-value">玛尔 12, 2026</div>
+</div>
+<div class="reservation-date-cell">
+<div class="reservation-date-label">离职</div>
+<div class="reservation-date-value">玛尔 18, 2026</div>
+</div>
+</div>
+<div style="margin-top: 12px; border:1px solid var(--ink); border-radius: 8px; padding: 10px 12px;">
+<div class="reservation-date-label">来宾</div>
+<div class="reservation-date-value">2 成人</div>
+</div>
+<button class="btn btn-primary" style="width: 100%; margin-top: 16px;">准备金</button>
+<div class="reservation-fees">
+<div class="reservation-fee-row"><span>$182 × 6 夜间</span><span>$1,092</span></div>
+<div class="reservation-fee-row"><span>清洁费</span><span>$48</span></div>
+<div class="reservation-fee-row"><span>服务费</span><span>$165</span></div>
+<div class="reservation-fee-row" style="border-top: 1px solid var(--hairline); padding-top: 12px; margin-top: 4px; font-weight: 600;"><span>税前共计</span><span>$1,305</span></div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="section-label">12 - 日期 地点</div>
+<h2 class="section-heading">Circular day cells, ink fill on selected</h2>
+<p class="section-intro">40×40px circular cells. Selected days get an ink fill with white text; range states sit on a soft-grey lozenge.</p>
+<div class="date-picker">
+<div class="date-day-head">穆尔</div><div class="date-day-head">图</div><div class="date-day-head">我们</div><div class="date-day-head">切</div><div class="date-day-head">弗尔</div><div class="date-day-head">萨</div><div class="date-day-head">苏</div>
+<div class="date-day muted">25</div><div class="date-day muted">26</div><div class="date-day muted">27</div><div class="date-day muted">28</div><div class="date-day">1</div><div class="date-day">2</div><div class="date-day">3</div>
+<div class="date-day">4</div><div class="date-day">5</div><div class="date-day">6</div><div class="date-day">7</div><div class="date-day">8</div><div class="date-day">9</div><div class="date-day">10</div>
+<div class="date-day">11</div><div class="date-day selected">12</div><div class="date-day">13</div><div class="date-day">14</div><div class="date-day">15</div><div class="date-day">16</div><div class="date-day">17</div>
+<div class="date-day selected">18</div><div class="date-day">19</div><div class="date-day">20</div><div class="date-day">21</div><div class="date-day">22</div><div class="date-day">23</div><div class="date-day">24</div>
+<div class="date-day">25</div><div class="date-day">26</div><div class="date-day">27</div><div class="date-day">28</div><div class="date-day">29</div><div class="date-day">30</div><div class="date-day">31</div>
+</div>
+</section>
+<section>
+<div class="section-label">13 - 形式</div>
+<h2 class="section-heading">浮动标签文本输入</h2>
+<p class="section-intro">56px 身高, 高点, 1px 细边框变厚到 2px 墨子对焦. 标签在输入内向顶部浮动.</p>
+<div class="form-grid">
+<div class="form-cell"><input class="text-input focused" type="text" value="2 adults"/><div class="form-floating-label">来宾</div></div>
+<div class="form-cell"><input class="text-input" placeholder="" type="text"/><div class="form-floating-label">电子邮箱</div></div>
+<div class="form-cell"><input class="text-input" placeholder="" type="text"/><div class="form-floating-label">电话号码</div></div>
+<div class="form-cell wide"><input class="text-input" placeholder="" type="text"/><div class="form-floating-label">给主机的信件</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">14——城市联接全球资源数据库</div>
+<h2 class="section-heading">未来出逃的灵感</h2>
+<p class="section-intro">主页的签名网格. 6- 在桌面上栏,每个单元格都是城市名称 `{typography.title-md}` 在一个分类子标签上 `{typography.body-sm}` 哑哑.</p>
+<div class="city-grid">
+<div class="city-block"><div class="city-name">威尔明顿</div><div class="city-category">包租费</div></div>
+<div class="city-block"><div class="city-name">键西方</div><div class="city-category">每月租金</div></div>
+<div class="city-block"><div class="city-name">克利夫兰</div><div class="city-category">租房费</div></div>
+<div class="city-block"><div class="city-name">伦敦</div><div class="city-category">公寓租赁</div></div>
+<div class="city-block"><div class="city-name">巴塞罗那</div><div class="city-category">公寓租赁</div></div>
+<div class="city-block"><div class="city-name">孟菲斯州</div><div class="city-category">休假租金</div></div>
+<div class="city-block"><div class="city-name">波科诺山脉</div><div class="city-category">房屋租赁</div></div>
+<div class="city-block"><div class="city-name">雅典</div><div class="city-category">公寓租赁</div></div>
+<div class="city-block"><div class="city-name">毛伊语</div><div class="city-category">租房费</div></div>
+<div class="city-block"><div class="city-name">圣维. 彼得堡</div><div class="city-category">休假租金</div></div>
+<div class="city-block"><div class="city-name">北密尔特海滩</div><div class="city-category">租房费</div></div>
+<div class="city-block"><div class="city-name">波特兰</div><div class="city-category">公寓租金</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">15 弹幕板</div>
+<p class="section-intro">4px基部带有2px微步. 64px主要部分.（原文参数：4px、2px、64px）</p>
+<div class="spacing-row">
+<div class="spacing-block"><div class="spacing-bar" style="width:2px;"></div><div class="spacing-label">xxx 2px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:4px;"></div><div class="spacing-label">xs 4px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:8px;"></div><div class="spacing-label">sm 8px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:12px;"></div><div class="spacing-label">md 12px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:16px;"></div><div class="spacing-label">16px 基准</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:24px;"></div><div class="spacing-label">24px 高压压压轴</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:32px;"></div><div class="spacing-label">□ 32px</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:48px;"></div><div class="spacing-label">xxl 48px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:64px;"></div><div class="spacing-label">· 64px</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">16 - 边界拉迪乌斯</div>
+<p class="section-intro">柔软,慷慨的圆形. 按钮在 8px,卡片在 14px,搜索栏全胶囊形(9999px).</p>
+<div class="radius-row">
+<div class="radius-block" style="border-radius:0;">0 − 无</div>
+<div class="radius-block" style="border-radius:4px;">4 − xs 组合键</div>
+<div class="radius-block" style="border-radius:8px;">8 零点</div>
+<div class="radius-block" style="border-radius:14px;">14 数据</div>
+<div class="radius-block" style="border-radius:20px;">20 − lg</div>
+<div class="radius-block" style="border-radius:32px;">32 − xl 数据</div>
+<div class="radius-block" style="border-radius:9999px;">满</div>
+</div>
+</section>
+<section>
+<div class="section-label">17——选举和选举</div>
+<p class="section-intro">基本上只有一层阴影 大多数表面平坦——深度来自摄影和圆形剪辑.</p>
+<div class="elevation-grid">
+<div class="elevation-card"><h5>平面 / 页面底色</h5><p>Body, hero, footer, all editorial bands — 95% of surfaces.</p></div>
+<div class="elevation-card elevated"><h5>卡片 悬浮浮</h5><p>单阴影级——休息时搜索栏,徘徊属性卡片,下放菜单.</p></div>
+<div class="elevation-card"><h5>圆形剪辑</h5><p>照片卡片依靠`{rounded.md}`角剪辑来表示"卡片"感觉没有影子.</p></div>
+</div>
+</section>
+<section id="responsive">
+<div class="section-label">18 - 比利时</div>
+<table class="responsive-table">
+<thead><tr><th>名称</th><th>宽度</th><th>密钥更改</th></tr></thead>
+<tbody>
+<tr><td>手机端</td><td>&lt; 744px Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q</td><td>Hamburger nav; product tabs hide behind sheet; search bar collapses to a single tappable pill; property cards 1-up; reservation collapses to sticky bottom bar.</td></tr>
+<tr><td>平板</td><td>744–1128px</td><td>Top nav keeps tabs; search bar narrows; property cards 2-up; reservation card stays sticky right-rail.</td></tr>
+<tr><td>桌面端</td><td>1128–1440px</td><td>以三个标签为中心,完全顶端导航;全宽搜索栏;属性卡片 4-up;城市网格6-柱.</td></tr>
+<tr><td>宽</td><td>&gt; 1440px 单倍径</td><td>1440px上市/搜索内容封顶;1280px上刊编辑封顶.（原文参数：1440px、1280px）</td></tr>
+</tbody>
+</table>
+<div class="device-ladder">
+<div class="device-bar" style="width:60px; height:120px;">375<br/>手机端</div>
+<div class="device-bar" style="width:90px; height:140px;">600<br/>小型电话</div>
+<div class="device-bar" style="width:140px; height:160px;">744<br/>平板电脑</div>
+<div class="device-bar" style="width:200px; height:180px;">1128<br/>膝上型计算机</div>
+<div class="device-bar" style="width:260px; height:200px;">1280<br/>桌面端</div>
+<div class="device-bar" style="width:320px; height:220px;">1440<br/>宽</div>
+</div>
+<div class="responsive-sub"><h4>触控区域</h4><ul><li>Primary CTAs at minimum 48 × 48px (above WCAG AAA).</li><li>Search orb is 48 × 48px circular — the most-tapped element on the page.</li><li>Heart save button 32 × 32px circular — borderline AAA, compensated by 12px photo padding.</li><li>Date-picker day cells are 40 × 40px circular.</li></ul></div>
+<div class="responsive-sub"><h4>窄屏布局调整</h4><ul><li>顶级产品标签会倒塌成744px以下的汉堡单.（原文参数：744px）</li><li>Search bar's 3 segments collapse into a single-tap entry on mobile.</li><li>财产和城市网格的降列数清净——永远不回流行.</li><li>Reservation card switches from sticky right-rail to sticky bottom bar on mobile.</li></ul></div>
+</section>
+<footer class="footer">
+<div class="footer-shell">
+<div class="footer-grid">
+<div class="footer-col">
+<h6>VoltAgent 框架</h6>
+<span>类型脚本代理</span>
+<span>工具编程</span>
+<span>多种代理工作流程</span>
+</div>
+<div class="footer-col">
+<h6>伏特Ops LLM 可观测性</h6>
+<span>LLM 跟踪</span>
+<span>实时调试</span>
+<span>视觉时间</span>
+</div>
+<div class="footer-col">
+<h6>生产</h6>
+<span>评价</span>
+<span>即时管理</span>
+<span>护卫</span>
+</div>
+<div class="footer-col">
+<h6>平台</h6>
+<span>伏特Ops 控制台</span>
+<span>开源核心</span>
+<span>代理工程</span>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>
