@@ -1,3 +1,4 @@
 # 保留归档哈希以及网页内嵌下载的原始字节
 research/getdesign-home/** -text
 localized/**/DESIGN*.md -text
+"/docs/系统分析_结构优化版 (1).md" -text
