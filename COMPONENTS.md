@@ -1,12 +1,31 @@
-# 组件说明
+# DesignForge Component Guidelines
 
-| 组件 | 输入与状态 | 行为 |
+| Component | Purpose | States / behavior |
 | --- | --- | --- |
-| 风格目录 | 名称、别名、风格词、配色 | 搜索过滤，显示当前选中项 |
-| 品牌详情 | 风格记录、来源和文件 | 可展开来源并下载中英文 Markdown |
-| 预览标签 | 样张、中文、英文 | 同页切换，支持方向键 |
-| 退出服务 | 本机 HTTP 运行状态 | 点击后请求关闭当前实例，显示成功或可重试状态 |
+| App Shell | Shared application frame | Sidebar, top bar, content region |
+| Sidebar | Global navigation | Default, hover, active, keyboard focus, compact |
+| Top Bar | Breadcrumb and global actions | Default, search action, responsive |
+| Dashboard Hero | Product introduction and primary context | Static content, responsive heading |
+| Module Card | Navigation to a business module | Default, hover, focus, active navigation |
+| Module Placeholder | Honest entry state for planned modules | Ready shell, future integration notice |
+| Resource Card | Future resource list item | Loading, default, hover, selected, archived |
+| Preview Frame | Isolated HTML / image / code preview | Loading, loaded, blocked, error |
+| Search and Filter | Resource discovery | Idle, searching, selected filters, empty results |
+| Task Status | Research/import/generation feedback | Queued, running, success, failed, cancelled |
 
-独立打开 HTML 时继续使用静态浏览入口。样张的版式规则见 [DESIGN.md](DESIGN.md)。
+## Shared behavior
 
-样张中的套餐、表单和数据表格保留原有控件与示例数据。章节标题旁的「组件演示」说明指出当前展示的状态、层级或布局。
+- Use semantic buttons and links. A clickable card must have a clear accessible name.
+- Keyboard focus must be visible and must not rely on color alone.
+- Navigation uses a persistent active indicator.
+- Async actions expose pending, success and failure states.
+- Failed submissions retain user input and provide a retry path.
+- Dialogs trap focus while open, close on Escape where appropriate and restore focus to the trigger.
+- Reduced-motion preferences suppress nonessential transforms and transitions.
+
+## Resource previews
+
+- External HTML must run in an isolated iframe or equivalent sandbox.
+- Provide a clear source label and license information near code or asset previews.
+- Preview errors must not hide the original resource file or download action.
+- Never treat a static screenshot as proof that an interactive example works.
