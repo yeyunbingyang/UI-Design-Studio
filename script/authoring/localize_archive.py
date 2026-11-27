@@ -14,7 +14,7 @@ import bleach
 import markdown
 from design_literals import DesignLiterals
 from preview_copy import PreviewEditor, remove_team_credit
-from sample_editorial import DARK_LEADS, DEMO_SPECS, LEADS, SAMPLE_FIT_CSS
+from sample_editorial import DARK_LEADS, DEMO_SPECS, LEADS, ONE_WIN_COPY, SAMPLE_FIT_CSS
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -119,7 +119,7 @@ DOCUMENT_EDITORIAL = {
         "若缺少 Haas Groot Disp 和 Haas Grotesk，可用开源可变字体 **Inter Display** 替代。将 line-height 下调 ~5%，使排版更接近 Haas 较紧凑的大写字母高度。定价区直接使用 Inter Display。macOS / iOS 可使用 **system-ui**。Windows 会回退到 Segoe UI，视觉风格略偏冷。",
 }
 
-SUMMARIES = dict(line.split("|",1) for line in """1win|近黑色背景衬托鲜绿色操作按钮，蓝色用作次级提示和导航。
+SUMMARIES = dict(line.split("|",1) for line in """1win|近黑色界面用鲜绿色标记注册与主要确认，电光蓝用于登录、链接和实时投注提示。
 airbnb|以房源摄影为视觉主角，白色界面、珊瑚红按钮和圆润卡片构成温暖的旅行体验。
 airtable|白底与深色文字形成清晰的编辑式界面，鲜明色块用于区分功能和内容。
 aljazeera|密集排布的新闻版面采用醒目标题、平面表面与橙色品牌强调。
@@ -570,6 +570,8 @@ def preview_strings(soup):
 def prepare_sample(path,title):
     soup = preview_document(decode(path))
     remove_team_credit(soup)
+    if path.parent.name == "1win":
+        title = "1win的设计系统分析"
     for heading in (soup.find("h1"),soup.title):
         if heading:
             heading.clear()
@@ -590,7 +592,7 @@ def polish_sample(soup,slug,filename):
         fit.string = SAMPLE_FIT_CSS[slug]
         soup.head.append(fit)
     hero = soup.h1.find_next("p") if soup.h1 else None
-    if hero:
+    if hero and slug != "1win":
         lead = LEADS.get(slug,SUMMARIES[slug])
         if filename == "preview-dark.html":
             lead = DARK_LEADS.get(slug,lead)
@@ -658,16 +660,16 @@ def cal_chinese_sections(blocks,literals):
     return sections
 
 
-def design_documents(title,front,blocks,translation,cal_sections=None):
-    file_parts = [f"# {title} · 中英文对照\n\n**说明**　中文为本地批量译稿。英文与设计词元沿用官网归档。\n"]
-    if cal_sections is not None:
-        note = "中文按英文规范分章整理。各章补列技术参数原文，文末保留原始设计词元。"
+def design_documents(title,front,blocks,translation,reviewed=None,translated_description=None):
+    if reviewed is not None:
+        note = "中文按英文规范分章校订，文末保留原始设计词元。"
         sources = [block for block in blocks if block.strip()]
-        pairs = zip(sources,cal_sections,strict=True)
+        pairs = zip(sources,reviewed,strict=True)
     else:
         note = "正文含机器初译。检测到译文异常的条目保留英文，文末保留原始设计词元。"
         pairs = ((block,chinese_markdown(block,translation.apply_document)) for block in blocks)
     chinese_parts = [f"# {title} · 设计规范\n\n**说明**　{note}\n"]
+    file_parts = [f"# {title} · 中英文对照\n\n**说明**　{note}\n"]
     for original,chinese in pairs:
         file_parts.append("\n"+chinese)
         chinese_parts.append("\n"+chinese)
@@ -677,7 +679,7 @@ def design_documents(title,front,blocks,translation,cal_sections=None):
     english = render_markdown("".join(blocks))
     if front:
         description = front_description(front)
-        translation_note = translation.apply_document(description) if description else ""
+        translation_note = translated_description if translated_description is not None else translation.apply_document(description) if description else ""
         for parts in (file_parts,chinese_parts):
             parts.append("\n## 设计词元原值\n\n"+(translation_note+"\n\n" if translation_note else ""))
             parts.extend(["```yaml\n",front,"```\n"])
@@ -691,6 +693,7 @@ def main():
     parser.add_argument("--model",type=Path,required=True)
     parser.add_argument("--cache",type=Path,required=True)
     parser.add_argument("--device",choices=["auto","cuda","cpu"],default="auto")
+    parser.add_argument("--brand",help="只更新指定品牌，例如 1win。")
     scope = parser.add_mutually_exclusive_group()
     scope.add_argument("--documents-only",action="store_true",help="只更新文档与总览数据，保留已有样张 HTML。")
     scope.add_argument("--html-only",action="store_true",help="只校订样张和总览风格名称，保留 DESIGN 文件。")
@@ -701,11 +704,15 @@ def main():
     catalog = json.loads(payload[2])
     index = json.loads(INDEX.read_text(encoding="utf-8"))
     assert len(catalog)==len(index["entries"])==85
+    selected = [(item,entry) for item,entry in zip(catalog,index["entries"],strict=True)
+                if args.brand is None or item["slug"]==args.brand]
+    if not selected:
+        parser.error("未找到指定品牌")
     literals = archive_literals()
     translations = Translation(literals)
     editor = PreviewEditor(translations,segments)
     source_data = {}
-    for item,entry in zip(catalog,index["entries"]):
+    for item,entry in selected:
         slug = item["slug"]
         assert slug==entry["slug"] and re.fullmatch(r"[a-z0-9.-]+",slug) and slug not in (".","..")
         for asset in entry["resources"].values():
@@ -715,25 +722,44 @@ def main():
         front,blocks = markdown_sections(original)
         summary = item.get("summaryEn",item["summary"])
         if not args.html_only:
-            if slug != "cal":
+            if slug not in ("cal","1win"):
                 for block in blocks:
                     chinese_markdown(block,translations.collect_document)
-            translations.collect_document(front_description(front))
-        curated = cal_chinese_sections(blocks,literals) if slug == "cal" and not args.html_only else None
+            if slug != "1win":
+                translations.collect_document(front_description(front))
+        curated = None
+        if not args.html_only:
+            if slug == "cal":
+                curated = cal_chinese_sections(blocks,literals)
+            elif slug == "1win":
+                _,reviewed = markdown_sections(decode(ROOT/"script"/"authoring"/"1win.zh.md"))
+                curated = [section for section in reviewed if section.strip()]
+                for source,translated in zip((block for block in blocks if block.strip()),curated,strict=True):
+                    original_values = sum((literals.values(line) for line in source.splitlines()),literals.values(""))
+                    translated_values = sum((literals.values(line) for line in translated.splitlines()),literals.values(""))
+                    if missing := original_values-translated_values:
+                        raise ValueError(f"1win 中文规范缺少原始参数：{dict(missing)}")
         source_data[slug] = (front,blocks,summary,curated)
-        if not args.documents_only:
+        if not args.documents_only and slug != "1win":
             for filename in SAMPLE_FILES:
                 soup = prepare_sample(ARCHIVE/slug/filename,STYLE_LABELS[slug])
                 for _,_,value in sample_copy(soup):
                     editor.collect(value)
-    translations.run(args.model,args.cache,args.device)
-    for item in catalog:
+    if translations.required:
+        translations.run(args.model,args.cache,args.device)
+    for item,_ in selected:
         slug = item["slug"]
         front,blocks,summary,curated = source_data[slug]
         target = LOCALIZED/slug
         target.mkdir(parents=True,exist_ok=True)
         if not args.html_only:
-            bilingual,chinese,chinese_view,english_view = design_documents(item["title"],front,blocks,translations,curated)
+            reviewed_description = (
+                "1win 设计语言分析。近黑底色衬托密集的通栏游戏图块、推广卡与直播投注面板。界面使用粗字重 Inter、平坦的深灰表面，以及鲜绿色与电光蓝两种操作色。"
+                if slug == "1win" else None
+            )
+            bilingual,chinese,chinese_view,english_view = design_documents(
+                item["title"],front,blocks,translations,curated,reviewed_description
+            )
             bilingual_file = target/"DESIGN.zh-en.md"
             if not args.documents_only or not bilingual_file.exists():
                 bilingual_file.write_bytes(bilingual.encode("utf-8"))
@@ -751,7 +777,11 @@ def main():
             for node,attribute,value in list(sample_copy(soup)):
                 if not attribute and node.parent is hero and re.search(r"[\u4e00-\u9fff]",value):
                     continue
-                translated = editor.apply(value)
+                if slug == "1win":
+                    reviewed_text = ONE_WIN_COPY.get(value.strip())
+                    translated = value.replace(value.strip(),reviewed_text,1) if reviewed_text is not None else value
+                else:
+                    translated = editor.apply(value)
                 if not literals.retained(value,translated):
                     translated = value
                 if attribute:
@@ -764,12 +794,15 @@ def main():
             (target/filename).write_text(str(soup),encoding="utf-8")
     if not args.documents_only:
         from refresh_sample_navigation import refresh_samples
-        refresh_samples(catalog,index)
+        refresh_samples([item for item,_ in selected],{**index,"entries":[entry for _,entry in selected]})
     encoded = json.dumps(catalog,ensure_ascii=False,separators=(",",":")).replace("<",r"\u003c")
     current = page.read_text(encoding="utf-8")
     target_payload = re.search(r'(<script id="archive-data" type="application/json">)(.*?)(</script>)',current,re.S)
     page.write_text(current[:target_payload.start(2)]+encoded+current[target_payload.end(2):],encoding="utf-8")
-    print("已生成 85 份独立中文文档。" if args.documents_only else "已校订 170 份中文样张与 85 个风格名称。",flush=True)
+    if not args.html_only:
+        print(f"已生成 {len(selected)} 份独立中文文档。",flush=True)
+    if not args.documents_only:
+        print(f"已生成 {len(selected)*len(SAMPLE_FILES)} 份中文样张。",flush=True)
 
 
 if __name__=="__main__":
