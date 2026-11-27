@@ -20,7 +20,7 @@ from platform_examples import PLATFORM_BY_BRAND, apply_platform_examples, platfo
 from translation_review import CONNECTIVES, TranslationReview
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parent
 ARCHIVE = ROOT / "research" / "getdesign-home"
 LOCALIZED = ROOT / "localized"
 INDEX = ARCHIVE / "index.json"
