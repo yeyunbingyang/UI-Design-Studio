@@ -12,39 +12,39 @@ Intercom营销布是一块软奶油白色的地面(`{colors.canvas}` ≈ #f5f1ec
 
 单色强调色是 **芬奥兰治** (`{colors.fin-orange}` #ff5600) — IntercomAI产品品牌颜色。它浮现在Fin产品CTA、Fin徽章的定价以及一些内含式强调瞬间。它不是系统主色调,系统主色调是木炭 `{colors.ink}`. Intercom 也维持一个小的 **报表调色板** (`{colors.report-blue}`, `{colors.report-green}`, `{colors.report-pink}`, `{colors.report-lime}`)在模型中显示的产物内分析表面。
 
-页面节奏很重 **产品模型**:每个区段的载荷都是高真实度截图,显示 Intercom产品 UI, 以白卡装框, 使用 `{rounded.xl}` 16px 角 销售的铬是故意的安静的,这样产品就可以成为主角.
+页面节奏很重 **产品模型**:每个区段的载荷都是高真实度截图,显示 Intercom产品 UI, 以白卡装框, 使用 `{rounded.xl}` 16px 角 销售的界面框架是故意的安静的,这样产品就可以成为主角.
 
 **关键特征 :**
 - **奶油页面底色** (`{colors.canvas}` #f5f1ec)是该品牌的界定表面——既不是白色,也不是灰色,故意温暖.
-- 产品-屏幕弹射引导的页面节奏:每个节点都设置一个产品模拟卡,营销铬保持最低水平.
+- 产品-屏幕弹射引导的页面节奏:每个节点都设置一个产品模拟卡,营销界面框架保持最低水平.
 - **Saans** 专有 sans-serif 带有整个等级; SaansMono 用于只使用代码的上下文。
 - **木炭矿** `{colors.ink}` (#111111)是系统主——按钮,头条,身体类型都坐落在木炭上.
 - **芬奥兰治** (`{colors.fin-orange}` #ff5600)是AI产品颜色——在Fin CTA和Fin徽章上使用,从未装饰过.
 - 显示跟踪牵引力强烈负( N)-2.0px 打开 72px) 身体留在原处 0.
-- 牌角保持谦虚 `{rounded.lg}` 12px 财务报告和已审计财务报表 `{rounded.xl}` 16px ——从不圆丸;从不圆方.
+- 牌角保持谦虚 `{rounded.lg}` 12px 和 `{rounded.xl}` 16px ——从不圆丸;从不圆方.
 
 
 ## 配色
 
 > Source pages: intercom.com (home), /pricing, /helpdesk, /customers, /helpdesk/inbox.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **木炭矿** ({colors.ink}:系统主表面 头条,身体类型,主CTA丸背景——全部为木炭.
 - **白色** ({colors.on-primary}: 木炭CTAs上的文字;浮牌布.
 - **芬奥兰治** ({colors.fin-orange}:AI产品强调色,在Fin CTA,Fin徽章上使用,还有一小段内线强调瞬间.
 - **橙色报告** ({colors.report-orange}:报告内部使用的略为不同的橙色/用于产品模型的分析调色板.
 - **蓝蓝** ({colors.brand-blue}:饱和品牌蓝色(#0007cb)——用于一套小的营销插图上.
 
-### 表面
+### 界面表面
 - **页面底色** ({colors.canvas}: 默认页面背景——软奶油-白色 #f5f1ec.
-- **表面 1** ({colors.surface-1}:纯白色——用于浮牌(定价,特征,,). product-mockup).
-- **表面 2** ({colors.surface-2}:稍暗的奶油——启动贴现旗,alt-row条纹.
+- **界面表面 1** ({colors.surface-1}:纯白色——用于浮牌(定价,特征,,). product-mockup).
+- **界面表面 2** ({colors.surface-2}:稍暗的奶油——启动贴现旗,alt-row条纹.
 - **细边线** ({colors.hairline}): 1px 纸牌上的边框——软暖灰色(#d3cec6).
 - **柔软的细边线** ({colors.hairline-soft}:甚至FAQ行和页脚列之间的较软的划分.
 - **反向画廊** ({colors.inverse-canvas}:纯黑色——只在证照/引文呼号条上.
 - **反面表面 1** ({colors.inverse-surface-1}: 一步轻一点——在暗处徘徊的脚踏车物品.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** ({colors.ink}:所有头条,车身类型,按钮标签——木炭 #111111.
 - **墨水静音** ({colors.ink-muted}: 二级类型 #626260 — meta 信息,取消选择的定价标签。
 - **Ink Subtle** ({colors.ink-subtle}): Tertiary type at #7b7b78 — footer columns, helper text.
@@ -65,14 +65,14 @@ Intercom营销布是一块软奶油白色的地面(`{colors.canvas}` ≈ #f5f1ec
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 
 - **Saans** — Intercom专有几何色素, 倒置 `Saans Fallback, ui-sans-serif, system-ui`. . . . . . . .
 - **SaansMono** ——独资独资,倒置. `SaansMono Fallback, ui-monospace`产品模型中显示的代码内部使用片段。
 
 同一家族承载着整个等级,等级由大小+字重+跟踪承载,而不是由家族变化承载.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -95,10 +95,10 @@ Intercom营销布是一块软奶油白色的地面(`{colors.canvas}` ≈ #f5f1ec
 - **字重 500 带显示。** Saans 时 间 500 读起来很自信,没有胆量。
 - **负数 letter-spacing 大小的天平。** -2.0px 时 间 72px (≈3% 大小),下至 0 身体上,我们有
 - **线高的显示器紧紧,身体放松.** 1.05 时 间 display-xl, 1.50 身体上,我们的身体。
-- **铬上没有单体** SaansMono 产品UI; 销售铬留在 Saans.
+- **界面框架上没有单体** SaansMono 产品UI; 销售界面框架留在 Saans.
 - **眉部使用句子大小写** 时 间 14px / 500 字重——无全头追踪.
 
-### Note on Font Substitutes
+### 替代字体
 
 If implementing without Saans, suitable substitutes include **Söhne** (paid), **Inter** (free, weight 500), or **Geist Sans** (free). Inter at weight 500 is the closest free substitute; SaansMono can be approximated with **JetBrains Mono** at weight 400.
 
@@ -112,19 +112,19 @@ If implementing without Saans, suitable substitutes include **Söhne** (paid), *
 - 纸牌内部 padding: `{spacing.lg}` 24px 定价/地产卡; `{spacing.xl}` 32px 凭证/贴现卡; `{spacing.xxl}` 48px 是在CTA的旗帜上
 - 胶囊形按钮 padding: 10px vertical · 18px horizontal.
 
-### 网格容器( C)
+### 网格与容器
 
 - 最大内容宽度左右 1280px.
 - Card grids are 3-up at desktop, 2-up at tablet, 1-up at mobile.
 - 定价等级网格为 3-上;下面的比较条显示每层的检查标记。
 - 产品模拟卡横跨全内容宽度——是每个片段的主角.
 
-### 白空间哲学
+### 留白规则
 
 奶油布是工作白空间在另一个品牌。`{spacing.section}` 96px)加升降白牌.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -143,7 +143,7 @@ Intercom 电阻下降阴影 深度通过白亮亮的表面变化来传播
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -186,7 +186,7 @@ Intercom 电阻下降阴影 深度通过白亮亮的表面变化来传播
 - Default: `{colors.canvas}` background, `{colors.ink-muted}` text, rounded `{rounded.pill}`.
 - Selected: `{colors.surface-1}` white background, `{colors.ink}` text — selected = lift onto white.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`pricing-card`** - 每一级 `/pricing`.
 - Background `{colors.surface-1}`, text `{colors.ink}`, type `{typography.body}`, rounded `{rounded.lg}`, padding 24px.
@@ -212,7 +212,7 @@ Intercom 电阻下降阴影 深度通过白亮亮的表面变化来传播
 **`cta-banner`** 关闭接近页面底部的 CTA 面板 。
 - Background `{colors.surface-1}`, text `{colors.ink}`, type `{typography.headline}`, rounded `{rounded.lg}`, padding 48px.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** + **`text-input-focused`** ——在联系和搜索上填表字段。
 - Background `{colors.surface-1}`, text `{colors.ink}`, type `{typography.body}`, rounded `{rounded.md}`, padding 10px 14px.
@@ -235,7 +235,7 @@ Intercom 电阻下降阴影 深度通过白亮亮的表面变化来传播
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 
 - 准备金 `{colors.canvas}` 奶油作为系统的锚面——永不以纯白色取代.
 - Lift cards from cream onto white (`{colors.surface-1}`) for hierarchy.
@@ -245,7 +245,7 @@ Intercom 电阻下降阴影 深度通过白亮亮的表面变化来传播
 - 使用 `{rounded.lg}` 12px 用于卡片和 `{rounded.xl}` 16px 用于产品模拟瓷砖。
 - 将负跟踪按比例应用到显示大小 。
 
-### Don't
+### 应避免的做法
 
 - Don't use pure white as the canvas.
 - Don't use Fin Orange as a section background or as a generic primary CTA.
@@ -257,7 +257,7 @@ Intercom 电阻下降阴影 深度通过白亮亮的表面变化来传播
 - Don't combine charcoal CTAs and Fin Orange CTAs in the same viewport.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -275,14 +275,14 @@ Intercom 电阻下降阴影 深度通过白亮亮的表面变化来传播
 - 定价的胶囊形 ≥40px 高音调音高。
 - 格式输入持有量 ≥44px 触控目标
 
-### 折叠战略
+### 窄屏布局调整
 
 - **顶端导航**: 链接崩溃到下面的汉堡 768px;主 CTA 仍然可见 。
 - **Card grids**: 3-up → 2-up at 1024px → 1-up below 768px.
 - **定价比较**: 下方每层手风琴发生折叠 768px.
 - **显示类型**: `{typography.display-xl}` 72px 比额表走向 `{typography.display-md}` 40px 手机上,我刚从电话里找到的
 
-### 图像行为
+### 图片适配
 
 - 产品UI截图保持了宽度比,永远不裁剪.
 - 门厅的客户标志可能会从 6- 最多为 3- 上层 768px.
@@ -304,7 +304,7 @@ Intercom 电阻下降阴影 深度通过白亮亮的表面变化来传播
 - 电话 **报表调色板** 产品分析仪表板在营销模型中制造; 其完整性被记录,但并非品牌表面颜色。
 - Form-field 检查页面上看不到错误和验证样式。
 - 暗模式没有被记录,因为营销网站没有传送暗主题.
-- 帮助台/收件箱产品表面显示产品UI表示并非正式营销铬.
+- 帮助台/收件箱产品表面显示产品UI表示并非正式营销界面框架.
 - Saans and SaansMono are proprietary; an open-source substitute (Inter, Söhne, Geist) is acceptable.
 
 ## 设计词元原值

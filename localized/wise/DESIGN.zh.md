@@ -24,23 +24,23 @@ Cards are universally pill-rounded — `{rounded.xl}` 24 px is the brand's signa
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Wise 绿色** (`{colors.primary}` — `#9fe870`:品牌通用CTA颜色,每按首键,每"送钱"丸,品牌标志强调色.
 - **Wise 绿色的霍夫** (`{colors.primary-active}` — `#cdffad`: 活动状态的浅绿色.
 - **Wise 绿色中立** (`{colors.primary-neutral}` — `#c5edab`: 中饱和绿色用作中性活性填充.
 - **Wise 绿暗** (`{colors.primary-pale}` — `#e2f6d5`:最浅绿色的柔软表面衬衫/徽章背景.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — `#ffffff`:纯白为卡内置.
 - **软画帘** (`{colors.canvas-soft}` — `#e8ebe6`: 圣洁的页面背景,定义品牌的心情.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — `#0e0f0c`:近黑带有橄榄暖的提示——品牌默认文字和标题颜色.
 - **墨水深处** (`{colors.ink-deep}` — `#163300`:正态表面使用的深层森林绿色墨水.
 - **体质** (`{colors.body}` — `#454745`: 副正文.
 - **静音** (`{colors.mute}` — `#868685`:最低优先的文本——标题,占位符,精细的打印.
 
-### 语义
+### 语义色
 - **Positive** (`{colors.positive}` — `#2ead4b`): Success indicator.
 - **Positive Deep** (`{colors.positive-deep}` — `#054d28`): Pressed positive state.
 - **警告** (`{colors.warning}` — `#ffd11a`: 注意指标。
@@ -58,12 +58,12 @@ Cards are universally pill-rounded — `{rounded.xl}` 24 px is the brand's signa
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 两人的面孔 系统梯子:
 1. **Wise Sans** — proprietary geometric sans with an unusually heavy weight 900 used for all hero displays. The face is the brand's typographic signature. Always at weight 900, never lighter on the marketing surface.
 2. **Inter** 用于子播放(字重) 600),所有身体,并形成标签。 `font-feature-settings: "calt"` 用于背景替代。
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -86,9 +86,9 @@ Cards are universally pill-rounded — `{rounded.xl}` 24 px is the brand's signa
 - **Weight 900 for hero, weight 600 for everything else.** The brand's display ceiling is full-black weight; everything below is semibold.
 - **Wise Sans 以品牌之声, Inter 用于实用性。** 严格角色分离.
 
-### Note on Font Substitutes
+### 替代字体
 Wise Sans 专有。开源替代品 :
-- **显示** — *Inter* 字重 900 或 减 减 *曼罗普* 字重 800 / 900 捕捉几何重度。 *Geist* 字重 800 是一个可通过的第二个选择。
+- **显示** — *Inter* 字重 900 或 *曼罗普* 字重 800 / 900 捕捉几何重度。 *Geist* 字重 800 是一个可通过的第二个选择。
 - **Sub-display + body** — *Inter* is the brand's actual second face.
 
 
@@ -100,12 +100,12 @@ Wise Sans 专有。开源替代品 :
 - **分区编栏**: 带使用 `{spacing.3xl}` 48 px 桌面上上下下层。
 - **纸牌内部**: 牌数 `{spacing.xl}` 24 px.
 
-### 网格容器( C)
+### 网格与容器
 - 销售集装箱中心 ~1200 px.
 - 首屏:在桌面上进行分割布局(左头,货币转换卡右);在移动时堆叠.
 - Feature grids: 2-up / 3-up at desktop.
 
-### 反应战略
+### 响应式布局
 
 #### 断点
 
@@ -118,11 +118,11 @@ Wise Sans 专有。开源替代品 :
 #### 触控区域
 按钮渲染 ~48 px 高( 高)12 垂直粘贴+ 24 。) 。 WCAG AAA , 在所有宽度。
 
-#### 图像行为
+#### 图片适配
 摄影作品稀少;品牌更喜欢在卡片内刻有说明性的SVG和产品模型. 乡村旗缩略图出现在货币行内.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -135,13 +135,13 @@ The brand uses surface contrast (`{colors.canvas-soft}` background vs `{colors.c
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
 | `{rounded.none}` | 0px | 满血乐队. |
 | `{rounded.sm}` | 8px | 内服丸,小 徽. |
-| `{rounded.md}` | 12px | 形态输入,较小的铬. |
+| `{rounded.md}` | 12px | 形态输入,较小的界面框架. |
 | `{rounded.lg}` | 16px | 中大小牌(变种). |
 | `{rounded.xl}` | 24px | The brand's canonical button + card radius. |
 | `{rounded.pill}` | 9999px | 状态药和全辐射强调色 |
@@ -164,7 +164,7 @@ The brand uses surface contrast (`{colors.canvas-soft}` background vs `{colors.c
 **`button-icon-circular`** - 电话 circular 图标按钮。
 - Background `{colors.canvas}`, ink icon, shape `{rounded.full}`.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`card-content`** ——默认白牌.
 - Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.xl}`, shape `{rounded.xl}`. No border, sits on sage canvas.
@@ -181,7 +181,7 @@ The brand uses surface contrast (`{colors.canvas-soft}` background vs `{colors.c
 **`currency-converter-card`** ——品牌的签名交互式部件.
 - Background `{colors.canvas}`, text `{colors.ink}`, 1 px solid `{colors.ink}` border, padding `{spacing.xl}`, shape `{rounded.xl}`. Hosts from/to amount inputs + currency selectors.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——文体文字输入.
 - Background `{colors.canvas}`, text `{colors.ink}`, 1 px solid `{colors.ink}` border, body in `{typography.body-md}`, padding `{spacing.md} {spacing.lg}`, shape `{rounded.md}`.
@@ -192,12 +192,12 @@ The brand uses surface contrast (`{colors.canvas-soft}` background vs `{colors.c
 - Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.md} {spacing.xl}`.
 
 **`nav-link`** ——在导航内链接项目.
-- 文本 `{colors.ink}`,设置在 `{typography.body-sm-strong}`.
+- 文字颜色 `{colors.ink}`,设置在 `{typography.body-sm-strong}`.
 
 **`footer`** 黑暗脚步乐队。
 - Background `{colors.ink}`, text `{colors.canvas-soft}`, padding `{spacing.3xl} {spacing.xl}`. Body in `{typography.body-sm}`.
 
-### 签名组件
+### 标志性组件
 
 **`hero-band`** ——圣人坎瓦斯首屏乐队.
 - Background `{colors.canvas-soft}`, text `{colors.ink}`, padding `{spacing.3xl} {spacing.xl}`. Headline in `{typography.display-mega}` (Wise Sans weight 900).
@@ -214,52 +214,52 @@ The brand uses surface contrast (`{colors.canvas-soft}` background vs `{colors.c
 **`badge-negative`** - 负状态胶囊形。
 - Background `{colors.negative-bg}`, text white, body in `{typography.body-sm-strong}`, padding `{spacing.xs} {spacing.md}`, shape `{rounded.pill}`.
 
-### 实例(说明性)
+### 组合示例
 
-> 自动生成的工具包-模拟演示表面(`scripts/derive-examples-block.mjs`。每个 `ex-*` 条目参考: 下游消费者的品牌原始产品(`/preview-design`, `/generate-kit`) 重新皮肤相同 10 表面一致。 `TO_FILL` 标记表示缺失原始人——在LLM判断传中解析.
+> 以下组合场景由 `scripts/derive-examples-block.mjs` 生成。各 `ex-*` 条目复用品牌基础样式，供 `/preview-design` 和 `/generate-kit` 以统一风格呈现同一套 10 个示例。`TO_FILL` 提示有待核对的基础样式。
 
-**`ex-pricing-tier`** ——默认定价等级卡。 feature-card 带品牌的铬 canvas-soft 表面。
+**`ex-pricing-tier`**：默认套餐卡，沿用功能卡结构和品牌 canvas-soft 底色。
 - 属性 : `backgroundColor`, `textColor`, `borderColor`, `rounded`, `padding`
 
-**`ex-pricing-tier-featured`** ——地貌/高亮的层次——极性-浮点表面(暗色填充+光线文字在光线模式下,浅色填充+暗色文字在暗线模式下).
+**`ex-pricing-tier-featured`**：推荐套餐卡。浅色模式中用深底浅字，深色模式中用浅底深字。
 - 属性 : `backgroundColor`, `textColor`, `rounded`, `padding`
 
-**`ex-product-selector`** ——什么是包含的汇总卡——重新用于SaaS/B2B纵横(NOT为字形产品画廊).
+**`ex-product-selector`**：面向 SaaS / B2B 场景的套餐权益摘要卡。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-cart-drawer`** ——订阅摘要——重新用于SaaS/B2B(每件加件的行项目,而非字面车).
+**`ex-cart-drawer`**：SaaS / B2B 订阅摘要，每个附加项单独列出。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `item-divider`
 
-**`ex-app-shell-row`** ——App Shell 实例中的侧边栏导航行. Active State 使用品牌主标.
+**`ex-app-shell-row`**：应用框架示例里的侧栏导航行，以品牌主色标识选中状态。
 - 属性 : `backgroundColor`, `activeIndicator`, `rounded`, `padding`
 
-**`ex-data-table-cell`** — Default data-table th + td chrome. Header uses mono-caps eyebrow typography; body uses body-sm.
+**`ex-data-table-cell`**：数据表格中 th 与 td 的默认样式。表头采用大写等宽字，正文采用 body-sm。
 - 属性 : `headerBackground`, `headerTypography`, `bodyTypography`, `cellPadding`, `rowBorder`
 
-**`ex-auth-form-card`** ——签入/签入卡. 复用. feature-card 铬 text-input 原始人在里面,他们都在里面
+**`ex-auth-form-card`**：登录与注册卡，复用功能卡和 text-input。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-modal-card`** ——模度对话框表面——与 feature-card 以高的阴影盟誓,
+**`ex-modal-card`**：对话框表面，沿用功能卡样式并加浮层投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-empty-state-card`** ——空状态插图框架.
+**`ex-empty-state-card`**：空状态插图容器。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `captionTypography`
 
-**`ex-toast`** ——通知表面. feature-card 形状 + 中阴影。
+**`ex-toast`**：轻提示，沿用功能卡圆角并使用中等投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `typography`
 
 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` Wise 石灰绿胶囊形是品牌的转换标志
 - Set hero headlines in `{typography.display-mega}` / `{typography.display-xl}` Wise Sans weight 900. Never lighter.
 - 使用 `{rounded.xl}` 24 px 宽宏大量半径是品牌的友好签名。
 - 循环页面表面在 `{colors.canvas-soft}` 圣人页面底色 – `{colors.canvas}` 白色牌,表面对比带高
 - Use the full semantic palette (positive / warning / negative) for in-product status — never repurpose Wise green as success indicator since it IS the brand CTA.
 
-### Don't
+### 应避免的做法
 - Don't introduce a second brand accent. Wise green is the sole identity colour.
 - Don't render the hero in weight 700 or lighter. The brand's display weight is 900.
 - Don't render CTAs as sharp rectangles. The 24 px pill geometry is non-negotiable.

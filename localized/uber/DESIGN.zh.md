@@ -24,30 +24,30 @@ Type is the second decisive voice. Two custom faces carry every page: `UberMove`
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **墨黑笔** (`{colors.primary}` — `#000000`:品牌是唯一的转换颜色,每一颗初级CTA丸,页脚填充,每个暗色宣传带,每个导航登录按钮,系统没有二级强调色.
 - **表面按下** (`{colors.surface-pressed}` — `#e2e2e2`:按态填充白丸——一种软灰色,只在活性/按态中使用.
 - **Black Elevated** (`{colors.black-elevated}` — `#282828`): A near-black used on hover for the translucent white tab-toggle pill. Documented as a system colour because it appears on a recurring brand control.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — `#ffffff`: 默认的页面背景.
 - **软画帘** (`{colors.canvas-soft}` — `#efefef`: 类芯片的软灰色填充,骑行-求车卡内方的成形-输入行,以及微妙的胶囊形按钮.
 - **软罐头** (`{colors.canvas-softer}` — `#f3f3f3`:一种稍轻的灰色,用作白色表面的嵌入式填充物.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — `#000000`:光表面的每一个标题和身体段落.
 - **Body** (`{colors.body}` — `#5e5e5e`): Secondary text — captions, sub-headings, supporting copy.
 - **细边线中间** (`{colors.hairline-mid}` — `#4b4b4b`:一种中格用于页脚内侧的哑联文本和面包屑风格的导航.
 - **静音** (`{colors.mute}` — `#afafaf`:最轻的文本角色——占位符文本,精细印刷,低优先级元数据.
 - **On Dark** (`{colors.on-dark}` — `#ffffff`): All text on `{colors.ink}` surfaces (footer, dark promo bands).
 
-### 语义
+### 语义色
 The brand does not maintain a separate error / success / warning palette in its public marketing surface. Validation cues come from the primary black or from the brand's editorial illustrations. The `#0000ee` link colour is the system's only chromatic — it's the browser-default link blue, appearing in body-copy inline links inside legal / footer text.
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 Two custom faces carry the entire system:
 
 1. **A custom geometric display sans** (extracted as `UberMove`) for every headline. Weight 700 only; no italic; no tracking variation. Sizes range from `display-sm` 20 px up to `display-xxl` 52 px on the hero. Line-heights tighten to 1.22 – 1.25 at display sizes for a poured-on-the-page look.
@@ -55,7 +55,7 @@ Two custom faces carry the entire system:
 
 两人面孔共享家族DNA,但绝不重合角色——显示面孔从未带身体段落;文字面孔从未带首屏头条.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 使用 |
 |---|---|---|---|---|
@@ -79,9 +79,9 @@ Two custom faces carry the entire system:
 - **追踪没有繁荣。** 显示面部从不显示字母间距,正反两面.
 - **两人面相,两人角色.** UberMove 用于展示; UberMoveText 永远不要穿过溪流
 
-### Note on Font Substitutes
+### 替代字体
 两种面孔是专有的,开源替代品:
-- **显示色素** — *Inter* 字重 700 与 `font-feature-settings: "ss01"` 启用的来得最近 。 *Geist* 字重 700 也是第二好的选择。
+- **显示色素** — *Inter* 字重 700 配合 `font-feature-settings: "ss01"` 启用的来得最近 。 *Geist* 字重 700 也是第二好的选择。
 - **Text sans** — *Inter* weights 400 / 500 match the geometric width and x-height. *Plus Jakarta Sans* is a softer alternative if the brand wants a less neutral feel.
 
 
@@ -94,7 +94,7 @@ Two custom faces carry the entire system:
 - **纸牌内部贴纸**: 内容卡坐落于 `{spacing.2xl}` 24 px; 骑行请求表使用 `{spacing.lg}` 16 px 保持形式紧凑。
 - **内含空档**:按钮行,类芯片行,应用存储胶囊形行使用 `{spacing.md}` 12 px 兄弟姐妹之间。
 
-### 网格容器( C)
+### 网格与容器
 - **最大宽度**: ~1200 px 容器; 以水平沟槽为中心 `{spacing.3xl}` 32 px 桌面上, `{spacing.lg}` 16 px 手机上,我刚从电话里找到的
 - **列图案**:
   - Promo-card rows: 2-up at desktop (image left + content right, alternating sides), 1-up at mobile.
@@ -102,10 +102,10 @@ Two custom faces carry the entire system:
   - FAQ列:全宽单列.
   - App-download pills: 2-up at desktop (Rider + Driver), 1-up at mobile.
 
-### 白空间哲学
+### 留白规则
 Card-to-card spacing carries the rhythm — between two stacked promo cards there's roughly a full `{spacing.3xl}` 32 px gutter; inside a card the headline / paragraph / CTA stack is tight (`{spacing.sm}` 8 px between siblings). The black promo bands and the footer have no internal hairlines — content sits on flat ink with white text.
 
-### 反应战略
+### 响应式布局
 
 #### 断点
 
@@ -120,20 +120,20 @@ Card-to-card spacing carries the rhythm — between two stacked promo cards ther
 #### 触控区域
 The pill `button-primary` renders at ~44 px tall (10 px vertical padding + 24 px label line-height); the larger `button-large-rounded` at ~56 px. Both meet WCAG AAA at all breakpoints. Category chips inflate to ≥ 44 px tall through extra padding on touch viewports.
 
-#### 折叠战略
+#### 窄屏布局调整
 - **Nav**: full link row + Help / Log in / Sign up pills at desktop. Collapses to logo + hamburger at mobile; menu overlays full-screen with the same link list stacked.
 - **Ride-request form card**: at desktop, the form sits inside a max-490-px `{rounded.xl}` card with shadow. At mobile, full-width with edge-to-edge.
 - **Promo cards**: at desktop, image-left + content-right (or alternating). At mobile, image always above content.
 - **年度展示卡**: 平面从 a 。 2:3 桌面框架为 a 4:3 移动帧; 日期文本大小按比例调整.
 
-#### 图像行为
-- **编辑插图**: 4:3 或 减 减 16:9 硬尖矩形; 从未裁剪成圆形, 从未倾斜过。 外观保存 。
+#### 图片适配
+- **编辑插图**: 4:3 或 16:9 硬尖矩形; 从未裁剪成圆形, 从未倾斜过。 外观保存 。
 - **摄影**: 相同——平方形或景观;内框 `{rounded.xl}` 硬币卡。
 - **地图在骑行请求流中**:在卡片内满血;圆角跟随母卡.
 - **标记栏**: SVG 矢量,单色,一致高度.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -150,19 +150,19 @@ The pill `button-primary` renders at ~44 px tall (10 px vertical padding + 24 px
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
 | `{rounded.none}` | 0px | 满血首屏乐队,足足填满,原始图像边缘. |
 | `{rounded.md}` | 8px | 乘车申请卡内输入窗体字段. |
-| `{rounded.lg}` | 12px | 较小的二级卡铬。 |
+| `{rounded.lg}` | 12px | 较小的二级卡界面框架。 |
 | `{rounded.xl}` | 16px | 冠卡半径——宣传卡,内容卡,骑行-求票表卡,年度亮相卡,大圆形按钮. |
 | `{rounded.pill}` | 999px | 品牌的签名交互形状——每个胶囊形按钮,类芯片,app-download pill,图标按钮. |
 | `{rounded.pill-tab}` | 36px | 首屏身上的半透明-白色标签切换胶囊形(Ride / Drive). |
 | `{rounded.full}` | 9999px | 与《公约》第22条 `{rounded.pill}` 资源 circular 图标容器。 |
 
-### 摄影几何
+### 图片形状
 - **编辑插图**: 4:3 宣传卡内景; 16:9 用于全宽显示框。
 - **司机/骑手肖像**: 4:5 肖像裁剪; 由 `{rounded.xl}` 16 px 硬币卡。
 - **年度展示图像**: 2:3 桌面上的肖像画,缩放到 4:3 移动时。图像填充卡片;头条覆盖底片。
@@ -192,7 +192,7 @@ The pill `button-primary` renders at ~44 px tall (10 px vertical padding + 24 px
 **`button-tab-translucent`** ——首屏骑行请求表(Ride/Drive)上的标签切换.
 - Background `{colors.canvas}`, text `{colors.ink}`, label in `{typography.body-md-strong}`, shape `{rounded.pill-tab}` 36 px (off-shape, deliberately tighter than the canonical 999 px pill).
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`card-content`** ——舟山内容卡.
 - Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.2xl}`, shape `{rounded.xl}` 16 px. No shadow on the default state.
@@ -209,7 +209,7 @@ The pill `button-primary` renders at ~44 px tall (10 px vertical padding + 24 px
 **`promo-card-on-dark`** ——极性飞扬的黑色宣传卡.
 - Background `{colors.ink}`, text `{colors.on-dark}`, padding `{spacing.2xl}`, shape `{rounded.xl}`. Used for the "Drive with Uber" mid-page band.
 
-**`request-form-card`** 首屏骑马的要求 形成铬。
+**`request-form-card`** 首屏骑马的要求 形成界面框架。
 - Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.lg}`, shape `{rounded.xl}`. Carries Level 2 card drop shadow.
 
 **`request-form-input-row`** ——请求格式卡内每栏.
@@ -218,7 +218,7 @@ The pill `button-primary` renders at ~44 px tall (10 px vertical padding + 24 px
 **`showcase-image-card`** — the giant "GO•GET 2026" annual showcase card.
 - Background `{colors.ink}`, text `{colors.on-dark}` overlay, padding `{spacing.3xl}`, shape `{rounded.xl}`. Display-xxl headline overlays the bottom of the image.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——文体文字输入.
 - Background `{colors.canvas-soft}`, text `{colors.ink}`, body in `{typography.body-md}`, padding `{spacing.lg}`, shape `{rounded.md}` 8 px.
@@ -232,12 +232,12 @@ The pill `button-primary` renders at ~44 px tall (10 px vertical padding + 24 px
 - Background `{colors.canvas}` on light pages, switches to `{colors.ink}` on the rare dark page (e.g., Uber Eats hero). Padding `{spacing.lg} {spacing.3xl}`.
 
 **`nav-link`** —— 内侧的链接行 `nav-bar`.
-- 文本 `{colors.ink}`,设置在 `{typography.body-md-strong}` 500 字重。
+- 文字颜色 `{colors.ink}`,设置在 `{typography.body-md-strong}` 500 字重。
 
 **`footer`** ——深黑脚步乐队.
 - Background `{colors.primary}` (the brand's only true black surface), text `{colors.on-dark}`, padding `{spacing.3xl} {spacing.3xl}`. Body in `{typography.body-sm}`; column eyebrows in `{typography.body-md-strong}`.
 
-### 签名组件
+### 标志性组件
 
 **`hero-band-light`** ——白首屏带骑行求证.
 - Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.3xl} {spacing.3xl}`. Headline in `{typography.display-xxl}` (52 px / 700) on the left; `request-form-card` on the right.
@@ -260,56 +260,56 @@ The pill `button-primary` renders at ~44 px tall (10 px vertical padding + 24 px
 ### 链接
 
 **`link-blue`** —— 法律/页脚精细印刷内部的系统默认浏览器-蓝链接.
-- 文本 `{colors.link}` (`#0000ee`),体内 `{typography.body-md}`.
+- 文字颜色 `{colors.link}` (`#0000ee`),体内 `{typography.body-md}`.
 
 **`link-on-dark`** ——暗带内部的白色链接.
-- 文本 `{colors.on-dark}`,身体在 `{typography.body-md}`.
+- 文字颜色 `{colors.on-dark}`,身体在 `{typography.body-md}`.
 
 **`link-mute`** ——音响的灰色链接在页脚柱内.
-- 文本 `{colors.hairline-mid}`,身体在 `{typography.body-md}`.
+- 文字颜色 `{colors.hairline-mid}`,身体在 `{typography.body-md}`.
 
 **`link-mute-soft`** ——最轻的灰色链接,用于暗面低优先级的二级文本.
-- 文本 `{colors.mute}`,身体在 `{typography.body-md}`.
+- 文字颜色 `{colors.mute}`,身体在 `{typography.body-md}`.
 
-### 实例(说明性)
+### 组合示例
 
-> 自动生成的工具包-模拟演示表面(`scripts/derive-examples-block.mjs`。每个 `ex-*` 条目参考: 下游消费者的品牌原始产品(`/preview-design`, `/generate-kit`) 重新皮肤相同 10 表面一致。 `TO_FILL` 标记表示缺失原始人——在LLM判断传中解析.
+> 以下组合场景由 `scripts/derive-examples-block.mjs` 生成。各 `ex-*` 条目复用品牌基础样式，供 `/preview-design` 和 `/generate-kit` 以统一风格呈现同一套 10 个示例。`TO_FILL` 提示有待核对的基础样式。
 
-**`ex-pricing-tier`** ——默认定价等级卡。 feature-card 带品牌的铬 canvas-soft 表面。
+**`ex-pricing-tier`**：默认套餐卡，沿用功能卡结构和品牌 canvas-soft 底色。
 - 属性 : `backgroundColor`, `textColor`, `borderColor`, `rounded`, `padding`
 
-**`ex-pricing-tier-featured`** ——地貌/高亮的层次——极性-浮点表面(暗色填充+光线文字在光线模式下,浅色填充+暗色文字在暗线模式下).
+**`ex-pricing-tier-featured`**：推荐套餐卡。浅色模式中用深底浅字，深色模式中用浅底深字。
 - 属性 : `backgroundColor`, `textColor`, `rounded`, `padding`
 
-**`ex-product-selector`** ——什么是包含的汇总卡——重新用于SaaS/B2B纵横(NOT为字形产品画廊).
+**`ex-product-selector`**：面向 SaaS / B2B 场景的套餐权益摘要卡。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-cart-drawer`** ——订阅摘要——重新用于SaaS/B2B(每件加件的行项目,而非字面车).
+**`ex-cart-drawer`**：SaaS / B2B 订阅摘要，每个附加项单独列出。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `item-divider`
 
-**`ex-app-shell-row`** ——App Shell 实例中的侧边栏导航行. Active State 使用品牌主标.
+**`ex-app-shell-row`**：应用框架示例里的侧栏导航行，以品牌主色标识选中状态。
 - 属性 : `backgroundColor`, `activeIndicator`, `rounded`, `padding`
 
-**`ex-data-table-cell`** — Default data-table th + td chrome. Header uses mono-caps eyebrow typography; body uses body-sm.
+**`ex-data-table-cell`**：数据表格中 th 与 td 的默认样式。表头采用大写等宽字，正文采用 body-sm。
 - 属性 : `headerBackground`, `headerTypography`, `bodyTypography`, `cellPadding`, `rowBorder`
 
-**`ex-auth-form-card`** ——签入/签入卡. 复用. feature-card 铬 text-input 原始人在里面,他们都在里面
+**`ex-auth-form-card`**：登录与注册卡，复用功能卡和 text-input。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-modal-card`** ——模度对话框表面——与 feature-card 以高的阴影盟誓,
+**`ex-modal-card`**：对话框表面，沿用功能卡样式并加浮层投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-empty-state-card`** ——空状态插图框架.
+**`ex-empty-state-card`**：空状态插图容器。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `captionTypography`
 
-**`ex-toast`** ——通知表面. feature-card 形状 + 中阴影。
+**`ex-toast`**：轻提示，沿用功能卡圆角并使用中等投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `typography`
 
 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` (`#000000`),每粒初级CTA胶囊形,每个可见的景点各一个黑胶囊形是品牌的整个转换故事.
 - 使用 `{rounded.pill}` 999 px 。每张牌子上都有按键、芯片、应用胶囊形。胶囊形是品牌的几何符号。
 - 显示牌 `{rounded.xl}` 16 px ——宣传卡,内容卡,乘务要求表卡,年度秀卡均共享此半径.
@@ -317,7 +317,7 @@ The pill `button-primary` renders at ~44 px tall (10 px vertical padding + 24 px
 - 使用极性飞腾的黑色促导带中段来断开白白调节奏。极性移就是深度提示 。
 - 锁定每张带有 4:3 编辑插图;从不使用通用股票图像.
 
-### Don't
+### 应避免的做法
 - Don't introduce a second brand accent colour (orange, blue, green). The brand's entire UI is black-and-white plus grayscale; new accents flatten the system.
 - Don't render the primary CTA as a `{rounded.xl}` rectangle except inside the larger ride-request flow (where `button-large-rounded` is the documented exception).
 - Don't use all-caps display headlines. Sentence-case is the voice; uppercase is restricted to rare eyebrow tags.

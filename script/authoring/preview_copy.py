@@ -3,6 +3,7 @@
 import re
 from urllib.parse import urlparse
 from sample_editorial import EXACT as EDITORIAL_EXACT
+from translation_review import CONNECTIVES
 
 
 EXACT = dict(line.split("|",1) for line in """Brand & Accent|品牌色与强调色
@@ -16,17 +17,40 @@ Text|文字色
 Semantic|语义色
 Text & Semantic|文字色与语义色
 Color Palette|配色
+Colors|配色
+Color|配色
+Foundation|设计基础
+Foundations|设计基础
+Component|组件
+Components|组件
+Composite|组合场景
+Composites|组合场景
+Responsive|响应式
+System|系统规则
+Shape|形状
+Shapes|形状
+Depth|视觉深度
+Layout|布局
+Form Elements|表单控件
+Forms|表单
+Buttons|按钮
+Cards|卡片
+Badges|徽标
+Navigation|导航
 Typography Scale|字号层级
 Typography|字体排版
 Button Variants|按钮样式
 Card Examples|卡片示例
 Cards & Containers|卡片与容器
+Containers|容器
 Cards & Surfaces|卡片与表面
 Signature Components|标志性组件
 Pricing Tiers|套餐定价
 Product Selector|产品选择器
 Responsive Behavior|响应式布局
-Elevation & Depth|层次与阴影
+Elevation & Depth|层次与深度
+Elevation|视觉层次
+Radius|圆角
 Spacing Scale|间距层级
 Border Radius Scale|圆角层级
 Border Radius|圆角
@@ -362,6 +386,32 @@ def normalized(text):
     return " ".join(text.strip().split()).casefold()
 
 
+NUMBERED_SECTION = re.compile(r"(\d{1,2})\s*[-—–·./]\s*([a-z][a-z &/-]+)",re.I)
+NUMBERED_LABEL = re.compile(r"([a-z][a-z &/-]+)\s*[·—–]\s*(\d{1,2})",re.I)
+SLASH_SECTION = re.compile(r"/\s*(\d{1,2})\s*/\s*([a-z][a-z &/-]+)",re.I)
+
+
+def exact_copy(text):
+    key = normalized(text)
+    if key in CONNECTIVES:
+        return CONNECTIVES[key]
+    if key in EXACT:
+        return EXACT[key]
+    if slashed := SLASH_SECTION.fullmatch(key):
+        number,label = slashed.groups()
+        return f"/ {number} / {EXACT[label]}" if label in EXACT else None
+    numbered = NUMBERED_SECTION.fullmatch(key)
+    if numbered:
+        number,label = numbered.groups()
+    elif numbered := NUMBERED_LABEL.fullmatch(key):
+        label,number = numbered.groups()
+    else:
+        return None
+    if translation := EXACT.get(label.strip()):
+        return f"{number} · {translation}"
+    return None
+
+
 def editorial_text(source,translated):
     for pattern,replacement in UI_FIXES:
         translated = re.sub(pattern,replacement,translated)
@@ -429,7 +479,7 @@ class PreviewEditor:
 
     def collect(self,text):
         for part in SENTENCES.split(text):
-            if normalized(part) in EXACT or not re.search(r"[a-zA-Z]{2,}",part):
+            if exact_copy(part) or not re.search(r"[a-zA-Z]{2,}",part):
                 continue
             masked,_ = self.masked(part.strip())
             if masked:
@@ -437,12 +487,12 @@ class PreviewEditor:
             self.translation.collect(part)
 
     def apply(self,text):
-        whole = EXACT.get(normalized(text))
+        whole = exact_copy(text)
         if whole:
             return text[:len(text)-len(text.lstrip())]+whole+text[len(text.rstrip()):]
 
         def line(part):
-            exact = EXACT.get(normalized(part))
+            exact = exact_copy(part)
             if exact:
                 return exact
             if re.fullmatch(r"(?:x{1,5}[sl]|[sml]|2xl|3xl|4xl|e\.g\.)",part.strip(),re.I):
@@ -464,6 +514,8 @@ class PreviewEditor:
         padding_right = text[len(text.rstrip()):]
         content = " ".join(line(part) for part in SENTENCES.split(text.strip()))
         content = editorial_text(text,content)
+        if re.search(r"(?:\bQ\s*){4,}|\bQZ[A-Z]Q\b",content,re.I):
+            return text
         present = {re.sub(r"\s+","",value).casefold() for value in TECHNICAL.findall(content)}
         missing = list(dict.fromkeys(value for value in TECHNICAL.findall(text)
                                          if re.sub(r"\s+","",value).casefold() not in present))

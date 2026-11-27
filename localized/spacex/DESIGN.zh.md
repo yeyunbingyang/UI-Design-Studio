@@ -26,18 +26,18 @@ Typography splits between **D-DIN-Bold** for display tiers (uppercase, tight tra
 
 > **Source pages:** home (`/`), `/shop`, `/vehicles/starship`, `/humanspaceflight/overview`, `/mission`.
 
-### 品牌和 强调色
+### 品牌色与强调色
 The brand has no accent colors. Black and white do all the chromatic work; photography supplies every other hue.
 
-### 表面
+### 界面表面
 - **风景之夜** (`{colors.canvas-night}` — `#000000`:默认营销布,纯黑色,无锡.
 - **夜幕轻柔** (`{colors.canvas-night-soft}` — `#0a0a0a`: 微小的被抬起的近黑,用于内容章节,这些章节需要与纯黑首屏微妙的区分.
 - **光线** (`{colors.canvas-light}` — `#ffffff`:店址产品表面.
 - **风帆 凉爽** (`{colors.canvas-cool}` — `#f0f0fa`: 一种苍白的凉蓝白,用作商店场地上的次要表面,以及某些鬼按钮的悬浮布.
-- **黑暗的细边线** (`{colors.hairline-on-dark}` — `#3a3a3f`): 1px 暗色表面铬的边框。
+- **黑暗的细边线** (`{colors.hairline-on-dark}` — `#3a3a3f`): 1px 暗色表面界面框架的边框。
 - **光线上的细边线** (`{colors.hairline-on-light}` — `#e0e0e8`:店址卡上的边框.
 
-### 文本
+### 文字颜色
 - **小学** (`{colors.on-primary}` — `#ffffff`:暗布上的默认文本;整个营销网站的主导文本颜色.
 - **On Primary Mute** (`{colors.on-primary-mute}` — `#f0f0fa`): Slightly cooled-white used for secondary text on dark surfaces — barely distinguishable from `{colors.on-primary}` but enough to suggest a hierarchy.
 - **墨水( 墨水 )** (`{colors.ink}` — `#000000`: 光面上的默认文本(商店站点).
@@ -50,7 +50,7 @@ The brand has no accent colors. Black and white do all the chromatic work; photo
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 
 显示层是 **D-DIN-Bold** ——由德国DIN启发的浓缩工业桑斯 1451 标准(在自动巴恩道路标志和工程蓝图上使用)。 **Arial Narrow**,则 Arial,则 Verdana ——倒置链将宽度压缩优先于装饰品.
 
@@ -58,7 +58,7 @@ The brand has no accent colors. Black and white do all the chromatic work; photo
 
 D-DIN is freely available from the **DIN Type Foundry** (and a free version under the same name is widely distributed). For maximum brand fidelity, use D-DIN directly; as a substitute, **Inter** at heavy weights (700+) with letter-spacing of 1.6px positive tracking approximates the rhythm. Avoid serif or humanist sans alternatives.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -73,11 +73,11 @@ D-DIN is freely available from the **DIN Type Foundry** (and a free version unde
 
 ### 原则
 - **Uppercase across display.** Every display tier renders in uppercase. The brand never uses sentence-case display headlines.
-- **显示时要紧竖起** 0.95 时 间 80px 财务报告和已审计财务报表 1.2 时 间 60px ——类型堆栈 工程师-紧凑.
+- **显示时要紧竖起** 0.95 时 间 80px 和 1.2 时 间 60px ——类型堆栈 工程师-紧凑.
 - **Wide horizontal tracking.** Positive 0.96–1.6px tracking on display sizes; positive 0.96–1.17px on caps eyebrows. The wide tracking is the brand's signature optical air.
 - **No mono.** Code blocks are not part of the brand's typographic system.
 
-### Note on Font Substitutes
+### 替代字体
 **D-DIN** is freely available (the original DIN-style face under that name is widely distributed). When unavailable, use **Inter** at 700 weight with `letter-spacing: 1.6px`, `text-transform: uppercase`, and `line-height: 0.95` for display sizes — this matches the rhythm. Avoid Helvetica or Arial at default weights — the brand needs the condensed industrial cut. Avoid serif fallbacks entirely.
 
 
@@ -88,16 +88,16 @@ D-DIN is freely available from the **DIN Type Foundry** (and a free version unde
 - **脚本**: `{spacing.xxs}` 4px · `{spacing.xs}` 8px · `{spacing.sm}` 12px · `{spacing.md}` 16px · `{spacing.lg}` 18px · `{spacing.xl}` 24px · `{spacing.xxl}` 32px · `{spacing.huge}` 48px.
 - **分区编栏**:关于营销的全景波段——上面/下面没有内部粘贴;照片是部分。 48–64px 垂直粘贴。
 
-### 网格容器( C)
+### 网格与容器
 - 营销页面没有容器——每个乐队都是全景端口-宽,全景端口-高(或接近),整个帧都充满了摄影.
 - 商店产品 grid: 4-up at desktop, 2-up at tablet, 1-up at mobile.
 - 类型坐落在内侧 ~1200px 阅读栏目时,横向以全血照片为中心。
 
-### 白空间哲学
+### 留白规则
 The marketing pages have minimal traditional whitespace — the photograph occupies all space. "Whitespace" here means the dark sky in a rocket photograph or the empty stretch of Martian terrain. Negative space is photographic, not a UI choice. On the shop site whitespace returns to standard 32px grid gutters.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -112,17 +112,17 @@ Photography and autoplaying rocket-launch video are the only decorative depth. T
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
 | `{rounded.xs}` | 4px | 表格输入(商店网站) |
 | `{rounded.sm}` | 8px | 商店产品卡、光盘、录像机 |
-| `{rounded.md}` | 16px | 较大的表面铬 |
+| `{rounded.md}` | 16px | 较大的表面界面框架 |
 | `{rounded.pill}` | 32px | Ghost)概述了避孕药CTAs(品牌的签名按钮形状). |
 | `{rounded.full}` | 9999px | Circular 视频框上的播放按钮覆盖 |
 
-### 摄影几何
+### 图片形状
 Every photograph is full-viewport-bleed, edge-to-edge, never inset in a card on the marketing site. On the shop site, product photography sits inside `{rounded.sm}` 8px containers with no shadow. Aspect ratios on marketing photography vary with the source image — there is no enforced ratio; the photograph leads.
 
 
@@ -139,7 +139,7 @@ Every photograph is full-viewport-bleed, edge-to-edge, never inset in a card on 
 **`button-filled-cool`** ——在店面产品卡上填充变种.
 - Background `{colors.canvas-cool}`, text `{colors.ink}`, same pill geometry. Used as "Add to cart" or similar product CTAs.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`card-photo-band`** ——上市版全血摄影乐队.
 - Background `{colors.canvas-night}`, padding 0, rounded `{rounded.xs}`. The photograph fills the entire band; type and CTA sit overlaid.
@@ -147,7 +147,7 @@ Every photograph is full-viewport-bleed, edge-to-edge, never inset in a card on 
 **`card-shop-product`** ——店址上的产品卡.
 - Background `{colors.canvas-light}`, padding `{spacing.md}` 16px, rounded `{rounded.sm}` 8px, 1px `{colors.hairline-on-light}` border. Product photo on top, name in `{typography.body-md}`, price in `{typography.body-md}` 700 weight, "Add to cart" button at the bottom.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——在店址上形成输入.
 - Background `{colors.canvas-light}`, text `{colors.ink}`, type `{typography.body-md}`, padding `{spacing.sm} {spacing.md}` (12px 16px), rounded `{rounded.xs}` 4px, 1px `{colors.hairline-on-light}` border.
@@ -157,17 +157,17 @@ Every photograph is full-viewport-bleed, edge-to-edge, never inset in a card on 
 **`nav-bar-overlay`** ——上行导航横跨市场营销网站.
 - Background `{colors.canvas-night}` (transparent over the hero photo), text `{colors.on-primary}`, type `{typography.button-cap}` (uppercase). Logo wordmark on the left at ~147×19px, nav items horizontal in caps, padding `{spacing.xl} {spacing.xxl}` (24px 32px). The nav is fixed/sticky on scroll, retaining the overlay treatment.
 
-### 签名组件
+### 标志性组件
 
 **Full-Bleed Photo / Video Hero** — every marketing band is a full-viewport photograph or autoplaying rocket-launch video. Type and CTA sit overlaid on the photograph at high opacity with no scrim. The photograph is graded so type lands cleanly without an overlay layer.
 
 **Uppercase Display Headline** — the 80px D-DIN-Bold uppercase headline with 1.6px positive tracking is the brand's most recognizable typographic moment. Always uppercase, always bold-weight, always positively tracked.
 
 **`link-on-dark`** 暗布上连线
-- 文本 `{colors.link-on-dark}` 上面有下划线
+- 文字颜色 `{colors.link-on-dark}` 上面有下划线
 
 **`link-on-light`** ——光帆上线性链接.
-- 文本 `{colors.ink}` 以坚固的划线盟誓,
+- 文字颜色 `{colors.ink}` 以坚固的划线盟誓,
 
 **`footer-dark`** ——全站页脚.
 - Background `{colors.canvas-night}`, text `{colors.on-primary}`, type `{typography.caption}`, padding `{spacing.xxl} {spacing.xl}` (32px 24px). Holds nav columns in `{typography.micro-cap}` (uppercase), and a small legal/copyright row at the bottom.
@@ -175,14 +175,14 @@ Every photograph is full-viewport-bleed, edge-to-edge, never inset in a card on 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 使用全血摄影或自动播放视频作为每个营销乐队的主导装饰元素.
 - Render display tiers in uppercase D-DIN-Bold with positive 0.96–1.6px letter-spacing — the wide tracking is the signature.
 - Use a single `{button-ghost-on-dark}` per band — the brand does NOT show two CTAs side by side on marketing surfaces.
 - Pair every photograph with type that respects the imagery — no scrims, no gradients, no overlays. Grade the photo, not the canvas.
 - 保持导航覆盖样式( K)transparent,"白在形象上")在营销页面上.
 
-### Don't
+### 应避免的做法
 - Don't introduce brand accent colors — black, white, and photography are the entire palette.
 - Don't use drop shadows or gradient overlays on dark canvas — they fight the photography.
 - Don't render display tiers in sentence-case or title-case — uppercase is the brand.
@@ -190,7 +190,7 @@ Every photograph is full-viewport-bleed, edge-to-edge, never inset in a card on 
 - Don't use serif or humanist sans alternatives — the condensed industrial DIN cut is non-negotiable.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -207,13 +207,13 @@ Every photograph is full-viewport-bleed, edge-to-edge, never inset in a card on 
 - Ghost pill buttons hit ≥ 50×50px due to the 18px vertical padding × 13px line-height. WCAG AAA compliant.
 - 窗体字段停留在 44px 最低身高。
 
-### 折叠战略
+### 窄屏布局调整
 - 显示阶梯大小 80 → 60 → 48 → 40px 穿过断点
 - 摄影重裁成焦科 宽度较小(火箭中心,火星景观中心).
 - 顶端导航崩溃到下面的汉堡 768px;菜单保留了暗的上覆处理.
 - Shop product grid stair-steps 4-up → 2-up → 1-up.
 
-### 图像行为
+### 图片适配
 营销摄影用途 `srcset` 用于桌面 /平板 / 移动,主要断点有艺术导向作物。移动作物倾向于中心焦点主题;宽作物倾向于环境背景(完全发射台,全火星视野) 。
 
 

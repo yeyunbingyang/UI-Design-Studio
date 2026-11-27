@@ -54,12 +54,12 @@ Lovable's website radiates warmth through restraint. The entire page sits on a c
 
 ## 3. 字法规则
 
-### 字体家族
+### 字体族
 - **主要**: `Camera Plain Variable`,带有后退: `ui-sans-serif, system-ui`
 - **字重范围**: 400 (身体/阅读), 480 (特别展示), 600 (标题/强调)
 - **特性**: 具有连续字重轴的可变字体——允许微调中间字重,如 480.
 
-### 等级
+### 字号层级
 
 | Role | Font | Size | Weight | Line Height | Letter Spacing | Notes |
 |------|------|------|--------|-------------|----------------|-------|
@@ -124,14 +124,14 @@ Lovable's website radiates warmth through restraint. The entire page sits on a c
 - Opacity: 0.5 (default), 0.8 (active)
 - 使用: 附加动作, 计划模式切换, 语音记录
 
-### 纸牌和集装箱
+### 卡片与容器
 - Background: `#f7f4ed` (matches page)
 - 边框 : `1px solid #eceae4`
 - 半径 : 12px (标准), 16px (特写), 8px (契约)
 - No box-shadow by default — borders define boundaries
-- 图像卡 : `1px solid #eceae4` 与 12px 半径
+- 图像卡 : `1px solid #eceae4` 配合 12px 半径
 
-### 输入表单( F)
+### 输入框与表单
 - Background: `#f7f4ed`
 - 文本 : `#1c1c1c`
 - 边框 : `1px solid #eceae4`
@@ -186,19 +186,19 @@ Lovable's website radiates warmth through restraint. The entire page sits on a c
 - 缩放 : 8px, 10px, 12px, 16px, 24px, 32px, 40px, 56px, 80px, 96px, 128px, 176px, 192px, 208px
 - 规模在顶端慷慨扩张——各科使用. 80px–208px 编辑呼吸室的垂直间距
 
-### 网格容器( C)
+### 网格与容器
 - 最大内容 width: approximately 1200px (centered)
 - 首屏:以大型垂直贴板为中心单柱(96px+)
 - 特性部分 : 2–3 列网格
 - 带多栏链接布局的全宽页脚
 - 显示带有居中卡网格的大小写区域
 
-### 白空间哲学
+### 留白规则
 - **编辑慷慨**: Lovable区段边界的间隔为粗略( ) 。80px–208px) 温暖的奶油背景使得这些外延人感觉舒适而不是空洞.
 - **内容驱动节奏**: 紧凑的卡片内部间隔(12–24px)与宽的节间隙形成对比,形成一种读取节奏,在焦点内容和视觉休息之间替换.
 - **Section separation**: Footer uses `1px solid #eceae4` border and 16px radius container. Sections defined by generous spacing rather than border lines.
 
-### 圆角刻度
+### 圆角层级
 - Micro (4px): Small buttons, interactive elements
 - 标准( 4)6px:按钮、输入、导航菜单
 - 舒适( 舒适( 舒适) )8px: 压缩卡, divis
@@ -227,7 +227,7 @@ Lovable's website radiates warmth through restraint. The entire page sits on a c
 
 ## 7。 。 。 。 。 。
 
-### 执行
+### 建议做法
 - Use the warm cream background (`#f7f4ed`) as the page foundation — it's the brand's signature warmth
 - Use Camera Plain Variable at display sizes with negative letter-spacing (-0.9px to -1.5px)
 - 衍生出所有灰色 `#1c1c1c` 不同程度的不透明 肾脏统一
@@ -237,7 +237,7 @@ Lovable's website radiates warmth through restraint. The entire page sits on a c
 - Use full-pill radius (9999px) only for action pills and icon buttons
 - 应用不透明 0.8 用于反应触觉反馈的状态
 
-### Don't
+### 应避免的做法
 - Don't use pure white (`#ffffff`) as a page background — the cream is intentional
 - Don't use heavy box-shadows for cards — borders are the containment mechanism
 - Don't introduce saturated accent colors — the palette is intentionally warm-neutral
@@ -267,7 +267,7 @@ Lovable's website radiates warmth through restraint. The entire page sits on a c
 - 胶囊形按钮 : 9999px 半径可创建大型的容易开发的目标
 - 菜单切换 : 6px 带适当尺寸的半径按钮
 
-### 折叠战略
+### 窄屏布局调整
 - Hero: 60px → 48px → 36px headline scaling with proportional letter-spacing
 - 导航:水平链接 = 汉堡菜单 768px
 - 特性卡 : 3-栏目 – 2-栏 – 单栏叠叠
@@ -276,7 +276,7 @@ Lovable's website radiates warmth through restraint. The entire page sits on a c
 - Footer: multi-column → stacked single column
 - 区域间距 : 128px+ → 64px 移动
 
-### 图像行为
+### 图片适配
 - 维护模板截图 `1px solid #eceae4` 大小边框
 - 12px 跨断点保存的边界半径
 - 符合一致的图像图片库图像

@@ -6,9 +6,9 @@
 
 ## 概览
 
-Raycast销售网站读作扩展产品截图。 铬是销售规模的内产指挥调色板:纯近黑页面底色( )`{colors.canvas}` — `#07080a`),细边线 1px 边框( E)`{colors.hairline}` — `#242728`),命令式纸牌,在中间有圆角 6 财务报告和已审计财务报表 16px, Inter 带有打印 **编号03 启用全站台的样式集** (一个单一字符——候补字符) `g` ——这样就 Raycast一种白色的CTA胶囊形 将每个主动作锁定在原处 以及小片饱和强调色 保留给分类插图
+Raycast销售网站读作扩展产品截图。 界面框架是销售规模的内产指挥调色板:纯近黑页面底色( )`{colors.canvas}` — `#07080a`),细边线 1px 边框( E)`{colors.hairline}` — `#242728`),命令式纸牌,在中间有圆角 6 和 16px, Inter 带有打印 **编号03 启用全站台的样式集** (一个单一字符——候补字符) `g` ——这样就 Raycast一种白色的CTA胶囊形 将每个主动作锁定在原处 以及小片饱和强调色 保留给分类插图
 
-该系统实际上有一个表面模式——暗色,有一个微弱的三步式表面梯子(`{colors.canvas}` → `{colors.surface}` → `{colors.surface-elevated}` → `{colors.surface-card}`) 携带卡片,卡片面板,以及密钥盖格莱弗背景。签名装饰刻度是 **红色对角- 斜线梯度带** 跨越主页的主角顶端,作为头条后面的发射屏形模具(唯一一次饱和红色出现在铬上),在那个单一时刻之外,铬中的颜色被保留给扩展内类的强调色和特征插图:Hacker News 黄色, Slack 红色 Linear 绿色,信息蓝色。
+该系统实际上有一个表面模式——暗色,有一个微弱的三步式表面梯子(`{colors.canvas}` → `{colors.surface}` → `{colors.surface-elevated}` → `{colors.surface-card}`) 携带卡片,卡片面板,以及密钥盖格莱弗背景。签名装饰刻度是 **红色对角- 斜线梯度带** 跨越主页的主角顶端,作为头条后面的发射屏形模具(唯一一次饱和红色出现在界面框架上),在那个单一时刻之外,界面框架中的颜色被保留给扩展内类的强调色和特征插图:Hacker News 黄色, Slack 红色 Linear 绿色,信息蓝色。
 
 设计理念是"营销页是产品",节奏节奏慷慨(.`{spacing.section}` 96px),但页面从未中断到直肠连续性——整个网站坐落在一个连续的暗模式,全血产品UI截图显示 Raycast'实际命令调色板/存储/AI聊天表面,以及打字连接设置(`ss03`)是从产品内应用的文本渲染中继承的.
 
@@ -18,7 +18,7 @@ Raycast销售网站读作扩展产品截图。 铬是销售规模的内产指挥
 - Inter 打印为 `font-feature-settings: "calt", "kern", "liga", "ss03"` 启用全站点的 Ss03 备选 `g` 也是品牌声音的一部分
 - 细边线 1px 边框( E)`{colors.hairline}` — #242728) 携带每张牌边缘;系统中没有投影
 - Multi-radius card vocabulary: `{rounded.sm}` (6px) for keycaps, `{rounded.md}` (8px) for buttons and small cards, `{rounded.lg}` (10px) for feature cards, `{rounded.xl}` (16px) for hero command-palette mockup containers
-- 饱和类强调色(`{colors.accent-yellow}` 黑客新闻公司 `{colors.accent-red}` 资源 Slack/Apple, `{colors.accent-green}` 用于生产工具, `{colors.accent-blue}` 缩写为“在信息中”),只显示在扩展图片内——从未出现在铬上。
+- 饱和类强调色(`{colors.accent-yellow}` 黑客新闻公司 `{colors.accent-red}` 资源 Slack/Apple, `{colors.accent-green}` 用于生产工具, `{colors.accent-blue}` 缩写为“在信息中”),只显示在扩展图片内——从未出现在界面框架上。
 - Signature red diagonal-stripe gradient band at the very top of the hero — three angled stripes in `{colors.hero-stripe-start}` → `{colors.hero-stripe-end}`, used once per page maximum
 
 
@@ -26,14 +26,14 @@ Raycast销售网站读作扩展产品截图。 铬是销售规模的内产指挥
 
 > **Source pages:** `/` (home), `/store` (extension marketplace), `/core-features/ai` (feature page), `/pricing` (plan tiers), `/thomas/hacker-news` (single extension detail). The chrome palette is identical across all five pages — the dark surface ladder, hairline borders, white CTA, and ss03-enabled typography are the same on every page.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **白色** (`{colors.primary}` — `#ffffff`:通用的初级CTA避孕药背景. "下载"/"安装扩展"/"Get Pro"——每个初级动作都携带.
 - **白色按键** (`{colors.primary-pressed}` — `#e8e8e8`:按下-状态为主药——一个单调.
 - **小学** (`{colors.on-primary}` — `#000000`:白色的CTA上纯黑色文本——只有黑色作为文本出现在系统中.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — `#07080a`:纯-近黑页背景,每页的主导面.
-- **表面** (`{colors.surface}` — `#0d0d0d`:卡片和高架面板背景——比页面底色轻一个诺奇.
+- **界面表面** (`{colors.surface}` — `#0d0d0d`:卡片和高架面板背景——比页面底色轻一个诺奇.
 - **地面升华** (`{colors.surface-elevated}` — `#101111`): button-tertiary 满, text-input 满, store-search-bar 满, pill-tab-active 满座。
 - **表面卡片** (`{colors.surface-card}` — `#121212`): app-icon-tile 尾部,键盘填充,命令-盘列悬浮。
 - **Button FG (in-card)** (`{colors.button-fg}` — `#18191a`): rare deep-card variant used inside featured pricing tier card backgrounds.
@@ -41,7 +41,7 @@ Raycast销售网站读作扩展产品截图。 铬是销售规模的内产指挥
 - **柔软的细边线** (`{colors.hairline-soft}` — `rgba(255,255,255,0.08)`:甚至半透明超像覆盖上更微弱的边界.
 - **发条坚固** (`{colors.hairline-strong}` — `rgba(255,255,255,0.16)`: 强壮 1px 平分,正常细边线读作太软。
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — `#f4f4f6`: 暗布上的主头条,略为淡白,以图与近黑背景的通体一致性.
 - **体质** (`{colors.body}` — `#cdcdcd`:默认段落文本和内线链接颜色.
 - **木炭矿** (`{colors.charcoal}` — `#d3d3d4`: 浅色的更亮身体,其中墨水读音太软.
@@ -51,25 +51,25 @@ Raycast销售网站读作扩展产品截图。 铬是销售规模的内产指挥
 - **黑暗时** (`{colors.on-dark}` — `#ffffff`:交互式状态主文本(按钮标签,焦点标签).
 - **暗哑** (`{colors.on-dark-mute}` — `rgba(255,255,255,0.72)`: 暗面半透明二次文字.
 
-### 语义
+### 语义色
 - **蓝天** (`{colors.accent-blue}` — `#57c1ff`) + **软** (`{colors.accent-blue-soft}` — `rgba(87,193,255,0.15)`:信息与信息徽章——内用特征插图和稀有的"新"胶囊形.
 - **红调** (`{colors.accent-red}` — `#ff6161`) + **软** (`{colors.accent-red-soft}` — `rgba(255,97,97,0.15)`:破坏性/误差指标+ Slack/Apple 扩展插图中的类别强调色。
 - **青绿** (`{colors.accent-green}` — `#59d499`) + **软** (`{colors.accent-green-soft}` — `rgba(89,212,153,0.15)`: 扩展插图中成功状态+生产力类别强调色.
 - **黄褐色** (`{colors.accent-yellow}` — `#ffc533`) + **软** (`{colors.accent-yellow-soft}` — `rgba(255,197,51,0.15)`:"警告"语义+"黑客新闻"橙黄色,作为主页首屏中最突出的强调色插图出现.
 
 ### 品牌渐变
-- **首屏们 Stripe 渐变** ——三条对角红条纹层跨主页首屏顶端,从. `{colors.hero-stripe-start}` (`#ff5757`改为: `{colors.hero-stripe-end}` (`#a1131a`),系统在铬上唯一的色度梯度——每页最大使用一次,并保留给首屏发射-散弹瞬间.
+- **首屏们 Stripe 渐变** ——三条对角红条纹层跨主页首屏顶端,从. `{colors.hero-stripe-start}` (`#ff5757`改为: `{colors.hero-stripe-end}` (`#a1131a`),系统在界面框架上唯一的色度梯度——每页最大使用一次,并保留给首屏发射-散弹瞬间.
 - **键首梯度** ——小键格背景使用微妙的 linear- 毕业从 `{colors.key-bg-start}` (`#121212`改为: `{colors.key-bg-end}` (`#0d0d0d`),该数值表示 Raycast键盘盖UI的微弱 3戴基的感觉。
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 **Inter** is the system's primary face, loaded with the `Inter Fallback` system fallback variant. Critically, Raycast enables `font-feature-settings: "calt", "kern", "liga", "ss03"` site-wide — the **ss03 stylistic set** swaps in Inter's alternate `g` glyph (single-story open `g`), which is the brand's signature typographic detail. Standard ligatures (`liga`), kerning (`kern`), and contextual alternates (`calt`) are also active. The display tier additionally enables `ss02` and `ss08` and disables standard `liga` to render the hero "Raycast Pro" wordmark with its distinctive geometric construction.
 
 根本没有 monospace 内含外使用的面额 `<code>` 文档中的芯片; 营销页面使用 Inter 给一切。
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -90,9 +90,9 @@ Raycast销售网站读作扩展产品截图。 铬是销售规模的内产指挥
 | `{typography.button-md}` | 14px | 500 | 1.6 | 0.2px | 标准按钮标签 |
 
 ### 原则
-等级制度在 1.6- 身体和一具高线梯子 1.1–1.4 用于显示/标题的梯子。 Letter-spacing 始终是积极的(0.1–0.4px)——略开类型——它给出了: Raycast铬是空气质量的 体型虽然深色。 `ss03` 风格化的套装是品牌最独特的印刷细节;没有它,身体面部就完全一样的变质了. Inter 输了 Raycast签名渲染。
+等级制度在 1.6- 身体和一具高线梯子 1.1–1.4 用于显示/标题的梯子。 Letter-spacing 始终是积极的(0.1–0.4px)——略开类型——它给出了: Raycast界面框架是空气质量的 体型虽然深色。 `ss03` 风格化的套装是品牌最独特的印刷细节;没有它,身体面部就完全一样的变质了. Inter 输了 Raycast签名渲染。
 
-### Note on Font Substitutes
+### 替代字体
 Inter is open-source and Google-Fonts-hosted; load it directly. To preserve the brand's signature look, you must enable `font-feature-settings: "calt", "kern", "liga", "ss03"` on the body element. Without `ss03`, the typography is recognizably "Inter default" rather than "Raycast." On systems where Inter cannot be loaded, the documented fallback is `Inter Fallback` (a self-hosted variant) → `system-ui`. **JetBrains Mono** or **Geist Mono** are acceptable substitutes for inline code chips when needed, though Raycast's marketing chrome rarely uses code-styled text.
 
 
@@ -103,7 +103,7 @@ Inter is open-source and Google-Fonts-hosted; load it directly. To preserve the 
 - **托肯斯(前题):** `{spacing.xxs}` (2px) · `{spacing.xs}` (4px) · `{spacing.sm}` (8px) · `{spacing.md}` (12px) · `{spacing.lg}` (16px) · `{spacing.xl}` (24px) · `{spacing.xxl}` (32px) · `{spacing.section}` (96px).
 - **Universal section rhythm:** every page in the set uses `{spacing.section}` (96px) as the vertical gap between major content blocks. Card grids use `{spacing.lg}` (16px) gutters; in-card padding sits at `{spacing.xl}` (24px) for feature cards and `{spacing.lg}` (16px) for store extension cards.
 
-### 网格容器( C)
+### 网格与容器
 - **最大 width:** ~1240px content area at desktop with 24px gutters (~48px at ultrawide). Hero command-palette mockups run wider (~1080px) with the page background extending to full bleed.
 - **存储扩展名 grid:** 2-up at desktop with rows of 2 cards stacked, collapsing to 1-up at mobile. Each card is a horizontal layout with a large square app icon at the left and copy + Install button at the right.
 - **定价等级 grid:** 3-up at desktop (Free / Pro / Pro+Advanced AI), collapsing to 1-up stacked at mobile.
@@ -111,11 +111,11 @@ Inter is open-source and Google-Fonts-hosted; load it directly. To preserve the 
 - **比较表:** 等级牌以下的定价页面全宽—— 5-栏表(Free / Pro / Advanced AI / Custom for Teams / Entertainment),有特征行.
 - **Footer:** 6-column horizontal link grid at desktop, collapsing to 2-up at tablet and 1-up at mobile.
 
-### 白空间哲学
+### 留白规则
 Whitespace is generous and the canvas is uninterrupted. Sections sit 96px apart with no decorative dividers between them — the dark canvas continues edge-to-edge from hero to footer. Inside a section, content is left-aligned in a tight column, with command-palette mockup imagery occupying the right 50–60% of the band on home-page feature rows. The signature decorative element — the red diagonal-stripe gradient band — only appears in the very first hero band; from the second section down, the page is monochrome dark.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -136,7 +136,7 @@ Whitespace is generous and the canvas is uninterrupted. Sections sit 96px apart 
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -148,11 +148,11 @@ Whitespace is generous and the canvas is uninterrupted. Sections sit 96px apart 
 | `{rounded.xl}` | 16px | 大型首屏指挥-palette模拟容器,超大小特性面板 |
 | `{rounded.full}` | 9999px | Pill-tab 芯片, 外形圆形 |
 
-半径词汇群紧密地在 4 财务报告和已审计财务报表 16px, 以大多数铬在 6–10px系统从未平坦(0px)在牌上,从未超过 16px 惟圆圆丸.
+半径词汇群紧密地在 4 和 16px, 以大多数界面框架在 6–10px系统从未平坦(0px)在牌上,从未超过 16px 惟圆圆丸.
 
-### 摄影几何
+### 图片形状
 There is no traditional photography. Visual elements are limited to:
-- **命令-盘式模型** ——完全忠诚. Raycast 用户界面截图 16:9 或 减 减 4:3 内侧 `{rounded.xl}` (16px(a) 集装箱。
+- **命令-盘式模型** ——完全忠诚. Raycast 用户界面截图 16:9 或 4:3 内侧 `{rounded.xl}` (16px(a) 集装箱。
 - **应用程序图标牌** — 48–64px 平方圆 `{rounded.md}` (8px),显示真实的应用程序图标.
 - **幻象圆圈** — 32–40px 时 间 `{rounded.full}` 用于扩展作者属性。
 - **首屏们 stripe 渐变** ——全血洗洗,无容积比.
@@ -199,7 +199,7 @@ There is no traditional photography. Visual elements are limited to:
 - Background `{colors.accent-blue-soft}`, text `{colors.accent-blue}`, type `{typography.caption-sm}`, padding `2px 8px`, rounded `{rounded.xs}`.
 - 稀有的"新"/"Beta"内含标记.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** + **`text-input-focused`**
 - Default: background `{colors.surface-elevated}`, text `{colors.on-dark}`, 1px solid `{colors.hairline}`, type `{typography.body-md}`, padding `8px 12px`, height ~36px, rounded `{rounded.md}`.
@@ -209,10 +209,10 @@ There is no traditional photography. Visual elements are limited to:
 - Background `{colors.surface-elevated}`, text `{colors.on-dark}`, type `{typography.body-md}`, padding `10px 16px`, height ~44px, rounded `{rounded.md}`.
 - 坐在商店页面的顶端,左边有一个放大镜图标,“搜索商店...” 占位符。 其高度略高于标准 。 `text-input`.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`command-palette-card`** ——主页首屏指挥-palette模型
-- 集装箱:背景 `{colors.surface}`, 1px 固态 `{colors.hairline}`, 编译 0 (模拟内容填充卡),四舍五入 `{rounded.lg}` 或 减 减 `{rounded.xl}` 取决于首屏的大小。
+- 集装箱:背景 `{colors.surface}`, 1px 固态 `{colors.hairline}`, 编译 0 (模拟内容填充卡),四舍五入 `{rounded.lg}` 或 `{rounded.xl}` 取决于首屏的大小。
 - Layout: top header strip with macOS traffic-light dots + a search input row, body with a vertical stack of `{component.command-palette-row}` items, bottom-right keycap hint cluster.
 
 **`command-palette-row`** + **`command-palette-row-active`** 命令调色板内单行
@@ -236,7 +236,7 @@ There is no traditional photography. Visual elements are limited to:
 - Layout: tier name in `{typography.heading-xl}` (24px), price in larger numeric in `{typography.display-lg}`, body description in `{typography.body-lg}`, CTA `{component.button-primary}` (or `{component.button-secondary}` for free tier), feature checklist with `✓` glyphs.
 
 **`pricing-tier-card-featured`** 中间的“Pro”等级
-- 同样的铬,但背景翻转到 `{colors.surface-elevated}` (一个noch打火机)——唯一能将突出的等级与周围的牌区分开的视觉提示.
+- 同样的界面框架,但背景翻转到 `{colors.surface-elevated}` (一个noch打火机)——唯一能将突出的等级与周围的牌区分开的视觉提示.
 
 **`hero-stripe-band`** ——主页红字首屏. stripe 渐变
 - Background `{colors.canvas}` with three diagonal red stripes layered across the top half (`{colors.hero-stripe-start}` → `{colors.hero-stripe-end}`).
@@ -281,7 +281,7 @@ There is no traditional photography. Visual elements are limited to:
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 将整个站点以一个连续的暗模式渲染。 系统中没有光变体 。
 - Use `{colors.primary}` (white pill) for every primary CTA. There is no second primary color — white IS the brand action.
 - 建造从表面颜色梯度的高度(`{colors.canvas}` → `{colors.surface}` → `{colors.surface-elevated}` → `{colors.surface-card}`永远不要从阴影中消失
@@ -289,9 +289,9 @@ There is no traditional photography. Visual elements are limited to:
 - 锁定 a `{component.command-palette-card}` 装作首屏的影像 真实的 Raycast 联合调查局是品牌。
 - 使用 `{component.keycap}` 格言内含以指示键盘快捷键。 subtle key- bg 梯度(`{colors.key-bg-start}` → `{colors.key-bg-end}`)是该品牌唯一的"深度"装饰.
 - 准备金 `{colors.hero-stripe-start}` → `{colors.hero-stripe-end}` 首屏乐队每页红色梯度精确一次。 永远不要重复 stripe 页面中更深的梯度。
-- 使用饱和类强调色( S)`{colors.accent-yellow}`, `{colors.accent-red}`, `{colors.accent-green}`, `{colors.accent-blue}`)只使用内部扩展和特征插图——从不使用铬按钮或文本.
+- 使用饱和类强调色( S)`{colors.accent-yellow}`, `{colors.accent-red}`, `{colors.accent-green}`, `{colors.accent-blue}`)只使用内部扩展和特征插图——从不使用界面框架按钮或文本.
 
-### Don't
+### 应避免的做法
 - Don't introduce a light mode. The system is dark-only by design.
 - Don't add drop shadows on cards. Elevation is built from the surface ladder, not from shadows.
 - Don't replace `{colors.primary}` (white) with a tinted accent for the primary CTA. Pure white is the brand action color.
@@ -301,7 +301,7 @@ There is no traditional photography. Visual elements are limited to:
 - Don't pad cards with 32px+ on all sides. The system runs tight at 16–24px in-card padding.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -318,7 +318,7 @@ There is no traditional photography. Visual elements are limited to:
 ### 触控区域
 All interactive elements meet WCAG AA at 36px+. `{component.button-primary}` and `{component.button-tertiary}` sit at 36px height with 16px padding. `{component.text-input}` sits at 36px. `{component.store-search-bar}` sits at 44px (above AAA). `{component.pill-tab}` is ~24–28px height with 10px padding extending to 36–40px tappable via inline padding (above AA but below AAA — intentional, the chips are compact). `{component.install-button}` sits at ~32px height with 14px padding.
 
-### 折叠战略
+### 窄屏布局调整
 - **初等导航 :** 桌面水平组 – 平板汉堡抽屉 768px。白色的“下载”CTA在每一个断点都保持可见。
 - **首屏命令- palette 模拟:** 桌面全真性 2- 列,左侧有副本 + 右侧有模拟 + 平板堆放,下方有模拟 + 移动模拟天平下至 ~80% 宽度。
 - **存储扩展名 grid:** 2-up → 1-up at tablet.
@@ -328,7 +328,7 @@ All interactive elements meet WCAG AA at 36px+. `{component.button-primary}` and
 - **科 科 padding:** `{spacing.section}` (96px(台式计算机) – 64px 平板电脑 48px 移动。
 - **Hero headline:** `{typography.display-xl}` (64px) at desktop, scaling 56px / 44px / 36px down the breakpoint stack.
 
-### 图像行为
+### 图片适配
 系统里唯一的"形象"是产品 Raycast UI 截图和小型app-icon 资产 :
 - **命令-盘式模型** 与容器一起流动的缩放; 产品内UI本身对每个断点具有响应性和重置性。
 - **缩写** 留在原地 继续 48–64px fixed 大小,在每一断点上;它们用软的行块,以较窄的宽度包裹。
@@ -350,14 +350,14 @@ All interactive elements meet WCAG AA at 36px+. `{component.button-primary}` and
 
 - **Mobile screenshots not captured** — responsive behavior synthesizes Raycast's mobile pattern (hamburger drawer, single-column grid, hero downscale) from desktop evidence and the breakpoint stack.
 - **Hover states not documented** by system policy. Raycast's in-product app has rich hover behavior on command-palette rows that this document doesn't capture.
-- **产品中的应用铬** (实际数) Raycast 运行于macOS上的发射装置)在营销截图中被引用,但没有作为单独的UI系统在这里被记录. 营销网站被记录;产品内应用表面是它自己的设计系统.
+- **产品中的应用界面框架** (实际数) Raycast 运行于macOS上的发射装置)在营销截图中被引用,但没有作为单独的UI系统在这里被记录. 营销网站被记录;产品内应用表面是它自己的设计系统.
 - **黑暗模式是唯一模式** ——在捕获的表面没有光变.
 - **Form validation states** beyond the focused-input border treatment are not present in the captured surfaces.
-- **认证的铬** (账号仪表板,计费设置,团队管理)不包含在抓取的页面中.
+- **认证的界面框架** (账号仪表板,计费设置,团队管理)不包含在抓取的页面中.
 
 ## 设计词元原值
 
-Raycast销售系统读取的像扩展产品截图。 铬是产品中铬的销售规模:纯-近黑页面底色,细边线 1px 边框,命令式卡片, Inter 带有 Ss 的打印03 结构集启用了全站,白色的CTA胶囊形,以及一套小的饱和类强调色颜色(黄/红/绿/蓝),用于扩展和特征插图. 节节奏慷慨(~96px),但页面从未断开通体连续性——整个网站都坐落在一个连续的暗模式中.
+Raycast销售系统读取的像扩展产品截图。 界面框架是产品中界面框架的销售规模:纯-近黑页面底色,细边线 1px 边框,命令式卡片, Inter 带有 Ss 的打印03 结构集启用了全站,白色的CTA胶囊形,以及一套小的饱和类强调色颜色(黄/红/绿/蓝),用于扩展和特征插图. 节节奏慷慨(~96px),但页面从未断开通体连续性——整个网站都坐落在一个连续的暗模式中.
 
 ```yaml
 ---

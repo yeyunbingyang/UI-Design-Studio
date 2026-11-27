@@ -68,12 +68,12 @@ Typography is the voice of this darkness. LamboType — a custom Neo-Grotesk typ
 
 ## 3. 字法规则
 
-### 字体家族
+### 字体族
 - **Display & UI**: `LamboType`, Roboto, Helvetica Neue, Arial — custom Neo-Grotesk typeface by Character Type for Lamborghini's 2024 brand refresh. Available in widths from Normal to Ultracompressed and weights from Light (300) to Black. Features 12° angled terminals inspired by aerodynamic car geometry, hexagonal construction logic, and support for 200+ languages including Latin, Cyrillic, and Greek
 - **倒计时/UI**: `Open Sans` ——作为系统退缩而用于某些按钮/格式上下文
 - **No italic variants** observed on the marketing site — the brand voice is always upright
 
-### 等级
+### 字号层级
 
 | Role | Size | Weight | Line Height | Letter Spacing | Notes |
 |------|------|--------|-------------|----------------|-------|
@@ -131,14 +131,14 @@ All buttons use **zero border-radius** — sharp, angular rectangles that echo t
 - 默认: bg `#969696`文本中,请输入 `#202020`
 - 用于:二级/三级动作,类似徽章的按钮
 
-### 纸牌和集装箱
+### 卡片与容器
 - Background: `#202020` (Charcoal) on black canvas, or `#000000` on lighter sections
 - 边框 : `0px 1px solid #202020` 分区分隔符的底边框
 - Border-radius: 0px (完全尖锐的角)
 - 阴影: 最小, 使用覆盖不透明来进行深度
 - 内容: 白白的全血胶照片+覆盖文本
 
-### 输入表单( F)
+### 输入框与表单
 - 销售站点上最小形式存在
 - 切换元素 : border-radius 20px (唯一四舍五入元素),边框 1px 固态 `#DDDDDD`
 - Cookie 横幅输入样式: 黑色白文本, 带有 `#7D7D7D` 边框
@@ -173,17 +173,17 @@ All buttons use **zero border-radius** — sharp, angular rectangles that echo t
 - **分区编栏**: 48–56px 垂直, 显示 40px 水平
 - **间隔小**: 2–5px 用于细微调整(贴板、边距)
 
-### 网格容器( C)
+### 网格与容器
 - **框架**: 靴子网格系统(容器+行+col)
 - **最大宽度**: 1440px (最大断点)
 - **列数**编号: 标准 12- 柱状的靴子网格
 - **满血**:首屏区段断网以填充视点边缘到对角
 - **内容领域**: 居中 1200px max-width 容器( 容器)
 
-### 白空间哲学
+### 留白规则
 Lamborghini uses darkness as whitespace. The generous black expanses between content blocks serve the same function as white space in a light design — creating breathing room that elevates each element to the status of exhibit. A model name floating in the middle of a black viewport has the same visual weight as a gallery piece on a white wall. The absence of color IS the design.
 
-### 圆角刻度
+### 圆角层级
 | Value | Context |
 |-------|---------|
 | 0px | 默认所有文件——按钮、卡片、容器、图像 |
@@ -197,7 +197,7 @@ Lamborghini uses darkness as whitespace. The generous black expanses between con
 | 职等 | 治疗 | 使用 |
 |-------|-----------|-----|
 | 职等 0 (阿毗昙. | `#000000` 平面 | 页面背景, 深层 |
-| 职等 1 (沙脸) | `#181818` 或 减 减 `#202020` | 纸牌、内容板、高档 |
+| 职等 1 (沙脸) | `#181818` 或 `#202020` | 纸牌、内容板、高档 |
 | 职等 2 (汇总) | `rgba(0,0,0,0.7)` | 模版背景,视频暗淡 |
 | 职等 3 (雾) | `rgba(0,0,0,0.5)` | 轻度叠加, 悬浮状态 |
 | 职等 4 (中声) | `rgba(0,0,0,0.25)` | 微深提示( T) |
@@ -214,7 +214,7 @@ Lamborghini 传统的投影是看不见的,相反,系统通过从 absolute 黑�
 
 ## 7。 。 。 。 。 。
 
-### 执行
+### 建议做法
 - 使用 absolute 黑色( 4)`#000000`)作为主要背景——永远不要以暗灰色作为替代.
 - 应用 Lamborghini 黄金( O)`#FFC000`完全用于主要CTA按钮——从未用于装饰目的
 - Set all display headings in uppercase with LamboType — the brand voice is always SHOUTING
@@ -226,7 +226,7 @@ Lamborghini 传统的投影是看不见的,相反,系统通过从 absolute 黑�
 - 使用重 400 (定期)头条新闻——类型面够有特色,没有大胆强调.
 - 保持灰色调色板的色调——所有中性都是纯灰色的,没有颜色的色调
 
-### Don't
+### 应避免的做法
 - 增加金色以外的强调色颜色——单色加金系是神圣的
 - 应用 border-radius 切换到按钮或卡片——曲线边缘与角车辆美学相矛盾
 - Use LamboType in italic or decorative styles — the brand is always upright and direct
@@ -258,7 +258,7 @@ Lamborghini 传统的投影是看不见的,相反,系统通过从 absolute 黑�
 - 汉堡菜单:大触摸目标(~48px 平方正方形)
 - Hexagonal pause button: approximately 48px diameter
 
-### 折叠战略
+### 窄屏布局调整
 - **导航**: 总是基于汉堡("MENU"+图标)——任何断点上都无水平导航扩展
 - **首屏视频**: 保持所有断点的全视港高度, 调整 object-fit
 - **Display type**: Scales from 120px (desktop) → 80px (tablet) → 54px/40px (mobile)
@@ -266,7 +266,7 @@ Lamborghini 传统的投影是看不见的,相反,系统通过从 absolute 黑�
 - **网格列**: 3-栏目 – 2-栏目 – 1- 列进
 - **节间距**: 减少从 56px → 40px → 24px 垂直粘贴
 
-### 图像行为
+### 图片适配
 - 首屏视频的使用 `object-fit: cover` 保持电影的布局,大小不一
 - 车辆图像在集装箱内标出保持宽度比例
 - 活动摄影作物在窄屏幕上显示视门宽度

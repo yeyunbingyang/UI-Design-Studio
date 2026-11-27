@@ -9,14 +9,14 @@
 Revolut营销布在高调双模系统运作:a
 **近黑故事布** (`{colors.canvas-dark}` — `#000000`)
 并轮流进行计划 并进行计划
-与 **白色目录带** (`{colors.canvas-light}` — `#ffffff`),该
+配合 **白色目录带** (`{colors.canvas-light}` — `#ffffff`),该
 host comparison tables, FAQ rows, and download tiles. The two modes switch
 以全血带而不是柔软的过渡;各节按住每个节
 其它的创造杂志的散文节奏 品牌以知名。
 
 显示的打字法是 **Aeonik Pro 字重 500**,在大小上从
 20px to 136px. The flagship hero ("Banking & Beyond", "Join the 70+ million
-使用 Revolut")坐着 80–136px 与 `lineHeight: 1.0` 和紧负数
+使用 Revolut")坐着 80–136px 配合 `lineHeight: 1.0` 和紧负数
 letter-spacing。身体类型是 **Inter** 字重 400 开放源代码,
 no-nonsense, paired with positive tracking (`0.24px`) on UI labels for
 机械精度略高一点
@@ -40,13 +40,13 @@ no-nonsense, paired with positive tracking (`0.24px`) on UI labels for
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **钴紫色** (`{colors.primary}` — `#494fdf`:品牌强调色,预留特色计划卡(英语:`{component.plan-card-featured}`),品牌字标图标,以及白话区中的二级CTA.
 - **钴亮度** (`{colors.primary-bright}` — `#4f55f1`:一种单步亮变体,用于内联颜色和强调色-相片头.
 - **钴深层** (`{colors.primary-deep}` — `#3a40c4`:钴元素的活性/压态.
 - **On-Primary** (`{colors.on-primary}` — `#ffffff`: 标签颜色, 上方 `{colors.primary}` 表面, 显示
 
-### 表面
+### 界面表面
 - **光线** (`{colors.canvas-light}` — `#ffffff`: FAQ 的白色目录模式,下载瓦片,比较表.
 - **暗色画** (`{colors.canvas-dark}` — `#000000`:讲故事页面底色——真黑,从不近黑.
 - **表面软** (`{colors.surface-soft}` — `#f4f4f4`:一种在下载瓦片,软扣,以及白色带内嵌卡片组上使用的微妙的脱白.
@@ -57,7 +57,7 @@ no-nonsense, paired with positive tracking (`0.24px`) on UI labels for
 - **细边线暗** (`{colors.hairline-dark}` — `rgba(255,255,255,0.12)`: 暗区相应的低相位分解器.
 - **发条坚固** (`{colors.hairline-strong}` — `#191c1f`:结构全强分机和轻卡的提纲.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — `#191c1f`:主文字颜色,显著的比纯黑色更温暖,与白色页面底色对齐,以进行身体可辨识.
 - **体质** (`{colors.body}` — `#1f2226`:长形体,在哪里 `{colors.ink}` 感觉有点太尖锐了
 - **木炭矿** (`{colors.charcoal}` — `#3a3d40`: 标题,二级导航.
@@ -68,7 +68,7 @@ no-nonsense, paired with positive tracking (`0.24px`) on UI labels for
 - **On-Dark** (`{colors.on-dark}` — `#ffffff`): primary text on `{colors.canvas-dark}`.
 - **On-Dark 静音** (`{colors.on-dark-mute}` — `rgba(255,255,255,0.72)`: 暗区中第二文本.
 
-### 语义
+### 语义色
 - **调和Teal** (`{colors.accent-teal}` — `#00a87e`: 用于产品模拟插图.
 - **青色浅蓝色** (`{colors.accent-light-blue}` — `#007bc2`: 暗相片头的内含链接颜色.
 - **亚冠蓝连线** (`{colors.accent-blue-link}` — `#376cd5`: 白色表面的默认内线链接颜色.
@@ -79,22 +79,22 @@ no-nonsense, paired with positive tracking (`0.24px`) on UI labels for
 - **粉红色** (`{colors.accent-pink}` — `#e61e49`:深粉色——产品摄影和类图示内用.
 - **危险** (`{colors.accent-danger}` — `#e23b4a`:破坏性/错误状态.
 - **深红** (`{colors.accent-deep-red}` — `#8b0000`: 内置错误文本.
-- **亚新布朗** (`{colors.accent-brown}` — `#936d62`:金属卡片铬中所使用的单温中性.
+- **亚新布朗** (`{colors.accent-brown}` — `#936d62`:金属卡片界面框架中所使用的单温中性.
 - **链接** (`{colors.link}` — `#376cd5`: 默认内置链接颜色。 与 `{colors.accent-blue-link}`.
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 
 Revolut 船是两家的堆栈:
 
 - **Aeonik Pro** — proprietary humanist sans-serif used for all display sizes (20px+) at weight 500. Carries the brand's editorial confidence; tightens dramatically with negative letter-spacing at large sizes.
-- **Inter** – 身体、按钮标签、标题和元数据开源工作马。总是在字重上 400 或 减 减 600,有正跟踪(`0.16–0.24px`)在UI标签上.
+- **Inter** – 身体、按钮标签、标题和元数据开源工作马。总是在字重上 400 或 600,有正跟踪(`0.16–0.24px`)在UI标签上.
 
 何时 Aeonik Pro 无法获得许可, **Inter Display**, **桑斯将军**,或 **索恩语** 它们是可信的替代物,它们都具有温暖的几何字符。 -1% letter-spacing 显示大小,以匹配原有的紧度。
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -121,7 +121,7 @@ Revolut 船是两家的堆栈:
 - 首屏CTAs使用这个 Aeonik Pro `{typography.button-lg}` 变体;首屏下面的一切都使用 Inter `{typography.button-md}`.
 - Inline links inside dark photo regions step up to weight 700 (`{typography.link-emph}`) so they hold contrast against the canvas without using the cobalt accent.
 
-### Note on Font Substitutes
+### 替代字体
 
 When Aeonik Pro is unavailable, clamp display `lineHeight` to 1.0 explicitly and apply -1% letter-spacing on display sizes. Inter Display, General Sans, or Söhne will read closest to the original. Inter is open-source and should be used directly.
 
@@ -134,19 +134,19 @@ When Aeonik Pro is unavailable, clamp display `lineHeight` to 1.0 explicitly and
 - Section padding: `{spacing.section}` (88px) vertical between bands; `{spacing.band}` (120px) on the hero band and the closing planning section.
 - Card internal padding: `{spacing.xxl}` (32px) on `{component.feature-card-light}`, `{component.plan-card}`, `{component.feature-card-dark}`.
 
-### 网格容器( C)
+### 网格与容器
 - **最大内容宽度** ≈ 1200px 身体部位;首屏乐队全速奔跑。
 - **Plan grid**: 4-up plan cards on the home page, stacking 2-up at tablet and 1-up at small mobile.
 - **Feature grid**: 3-up at desktop, 2-up at tablet, 1-up at mobile.
-- **产品模拟带**:单张全宽首屏照片的手机或卡片模具,没有周围的铬——资产本身就是部分.
+- **产品模拟带**:单张全宽首屏照片的手机或卡片模具,没有周围的界面框架——资产本身就是部分.
 
-### 白空间哲学
+### 留白规则
 - Whitespace is generous and editorial — sections breathe at 88–120px so display headlines have room to register at 80–136px without feeling cramped.
 - Inside cards, padding stays at 32px so feature copy and plan tiers have a consistent rhythm.
 - 细边线 `{colors.hairline-light}` 分隔器取代白色表面的阴影; `{colors.hairline-dark}` 承担着在黑暗地区相应的角色.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -166,7 +166,7 @@ The system has **no traditional drop-shadow language**. Surfaces register depth 
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -177,11 +177,11 @@ The system has **no traditional drop-shadow language**. Surfaces register depth 
 | `{rounded.xl}` | 28px | 产品模拟容器。 |
 | `{rounded.full}` | 9999px | Buttons, pills, badges, tabs. |
 
-### 摄影几何
-- 电话模型 : 9:19.5 (垂直)与 `{rounded.xl}` 装置上的角落 铬。
+### 图片形状
+- 电话模型 : 9:19.5 (垂直)与 `{rounded.xl}` 装置上的角落 界面框架。
 - Card mockups: 1.586:1 (credit-card aspect) with `{rounded.lg}` corners.
-- 终端/POS模型: 4:3 与 `{rounded.xl}` 角落和大量贴在装置周围。
-- 生活方式摄影( 稀有): 16:9 与 `{rounded.lg}` 转角
+- 终端/POS模型: 4:3 配合 `{rounded.xl}` 角落和大量贴在装置周围。
+- 生活方式摄影( 稀有): 16:9 配合 `{rounded.lg}` 转角
 
 
 ## 组件
@@ -213,7 +213,7 @@ The system has **no traditional drop-shadow language**. Surfaces register depth 
 - Background `{colors.surface-soft}`, label `{colors.ink}`, type `{typography.button-sm}`, `rounded: {rounded.full}`, padding `8px 16px`, height 36px.
 - Sub-nav 芯片,滤波药
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`hero-band-dark`** ——满血的黑暗首屏.
 - Background `{colors.canvas-dark}`, text `{colors.on-dark}`, type `{typography.display-xxl}` for the title, padding `{spacing.section}` (88px) vertical, `rounded: {rounded.none}`.
@@ -241,13 +241,13 @@ The system has **no traditional drop-shadow language**. Surfaces register depth 
 
 **`product-mockup`** ——全资产品资产.
 - Background `{colors.canvas-dark}`, the asset itself fills the band, `rounded: {rounded.xl}` on the device chrome.
-- 电话、卡片和终端模型——没有标题上线,也没有周围的铬。
+- 电话、卡片和终端模型——没有标题上线,也没有周围的界面框架。
 
 **`download-tile`** ——应用商店下载瓦片
 - Background `{colors.surface-soft}`, text `{colors.ink}`, type `{typography.body-sm}`, `rounded: {rounded.md}`, padding `12px 20px`, height 56px.
 - App Store + Google Play 下载按钮,并列.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——默认输入
 - Background `{colors.canvas-light}`, text `{colors.ink}`, type `{typography.body-md}`, 1px solid `{colors.hairline-light}`, `rounded: {rounded.md}`, padding `14px 16px`, height 56px.
@@ -265,7 +265,7 @@ The system has **no traditional drop-shadow language**. Surfaces register depth 
 **`sub-nav-pill`** — sub-nav 芯片
 - 胶囊形在暗片段(如"个人","商业","Premium")内横向排位设置, `{component.sub-nav-pill}` 造型风格.
 
-### 签名组件
+### 标志性组件
 
 **`badge-tag`** 中性标记
 - Background `{colors.surface-soft}`, text `{colors.ink}`, type `{typography.caption}`, `rounded: {rounded.full}`, padding `4px 12px`.
@@ -282,17 +282,17 @@ The system has **no traditional drop-shadow language**. Surfaces register depth 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 切换到间距的完整带 `{colors.canvas-dark}` (故事)和(故事) `{colors.canvas-light}` (目录),双模节奏是核心.
 - 使用 `{component.button-primary}` (白丸在暗处)作为每个暗首屏乐队的主要CTA,这是品牌最响亮的动作.
 - 准备金 `{colors.primary}` 表示有特色的计划卡和品牌字号——钴应该感觉像刻意的邮票,而不是彩色主题.
-- 设置首屏头条 **Aeonik Pro 500** 时 间 80–136px 与 `lineHeight: 1.0` 和大负数 letter-spacing.
+- 设置首屏头条 **Aeonik Pro 500** 时 间 80–136px 配合 `lineHeight: 1.0` 和大负数 letter-spacing.
 - 使用 **Inter** 用于身体、按钮标签、标题—— 永远不要替换 Aeonik Pro 身体类型。
 - Apply `{rounded.full}` to every button and pill; `{rounded.lg}` (20px) to feature and plan cards; `{rounded.md}` (12px) to inputs.
 - 显示产品模型在暗片段内全血化——资产IS该段.
 - 使用宽强调色调色板( Name`{colors.accent-teal}`, `{colors.accent-pink}`, `{colors.accent-light-green}`) 产品插图和图标图中仅包含产品插图和图示.
 
-### Don't
+### 应避免的做法
 - Don't use accent colours (`{colors.accent-teal}`, `{colors.accent-pink}`, etc.) as button surfaces. They live inside illustrations only.
 - Don't use a near-black canvas. The brand is `#000000`, not `#0a0a0a`.
 - Don't pair white text with cobalt violet inside body content — `{colors.primary}` is for the featured plan card surface, not large prose.
@@ -303,7 +303,7 @@ The system has **no traditional drop-shadow language**. Surfaces register depth 
 - Don't pair `{colors.canvas-dark}` with another dark surface beyond `{colors.surface-elevated}`. The surface ladder has only two dark steps.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -321,14 +321,14 @@ The system has **no traditional drop-shadow language**. Surfaces register depth 
 - `{component.text-input}` 谓 56px 高 —— 风琴技术级无障碍。
 - `{component.button-pill-sm}` (36px) 被撞到(或) 44px 移动中通过垫装调整。
 
-### 折叠战略
+### 窄屏布局调整
 - 顶级导航崩溃到汉堡 < 1024px; 字号和 `{component.button-primary}` 保持锚定。
 - 首屏们 `{typography.display-xxl}` 夹子 : 136px → 80px → 64px → 48px 穿过断点梯子
 - 计划网格步骤从 4- 最多为 2- 上边 < 1024px 改为: 1- 上边 < 768px.
 - 产品模拟波段在每个断点保持全血;资产作物是内在的,而不是信箱。
 - Sub-nav 胶囊形从包装行转换为水平滚动扶轮, 位置为 < 768px.
 
-### 图像行为
+### 图片适配
 - Phone and card mockups are served at 1.5× and 2× DPR; below 768px the system swaps to a smaller hero crop.
 - 产品摄影在每个断点保留自己的大气照明——没有反应性变种资产.
 

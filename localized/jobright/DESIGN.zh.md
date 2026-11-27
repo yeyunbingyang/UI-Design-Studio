@@ -26,17 +26,17 @@ Jobright is the marketing site of an AI job-hunting platform, and its design rad
 
 源页分析:主页、推荐工作页、雇主页、大约页和tnt页。调色板在五大调色板上是一致的,是一种严格控制的薄荷/黑色/白色系统。
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **春明会** (`{colors.primary}` — #00f0a0:品牌为一电强调色,颜色为标志标志,链接,签名绿胶囊形按钮,分数亮点,内置强调.
 - **On-Primary** (`{colors.on-primary}` — #000000:薄荷绿色按钮上方使用的黑色标签,其中暗色的薄荷读取时用最大拳头.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — #ffffff: 默认页和卡片背景.
 - **薄荷页面底色** (`{colors.canvas-mint}` — #ecffe0: 带着主角,特征块,FAQ,和CTA部分的苍白的弹簧薄荷乐队——系统的主要表面.
 - **软表面** (`{colors.surface-soft}` — #f2f4f5:用于套面板和输入的浅灰色工具填充.
 - **细边线** (`{colors.hairline}` — #e5e7eb): 1px 纸牌和分割边框。
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — #000000:标题,体文,以及每个黑胶囊形按钮和暗带的填充.
 - **静音** (`{colors.muted}` — #86909c: 副文本,标题,和页脚链接.
 - **黑暗时** (`{colors.on-dark}` — #ffffff: 黑色滴答和睾丸带上设置的文本.
@@ -44,10 +44,10 @@ Jobright is the marketing site of an AI job-hunting platform, and its design rad
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 双家作么生. **Titillium Web** ——一个大胆,略微凝固的人文主义的桑斯——搭载每一个显示标题和章节标题,使该页充满自信,高能的声音. **Inter** 处理所有身体复制、UI标签、按钮和标题,保持内容密集的清洁和清晰。重缩头条和光线、空气化身体复制之间的对比是系统的核心打印张力。
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -66,7 +66,7 @@ Jobright is the marketing site of an AI job-hunting platform, and its design rad
 ### 原则
 Headlines are big, heavy, and condensed for maximum confidence; body copy stays light (Inter 300) and roomy. The pairing lets marketing headlines shout while product detail stays quiet and scannable.
 
-### Note on Font Substitutes
+### 替代字体
 Both Titillium Web and Inter are open-source Google fonts — use them directly. If a fallback is needed, Titillium Web degrades to a condensed sans (e.g. "Arial Narrow", system-ui) and Inter to Helvetica/Arial with no metric adjustment.
 
 
@@ -77,13 +77,13 @@ Both Titillium Web and Inter are open-source Google fonts — use them directly.
 - **托肯斯(前题)**: `{spacing.xxs}` 4px · `{spacing.xs}` 8px · `{spacing.sm}` 12px · `{spacing.md}` 16px · `{spacing.lg}` 24px · `{spacing.xl}` 32px · `{spacing.xxl}` 48px · `{spacing.section}` 96px.
 - 特写牌坐着 `{spacing.lg}`;全宽带呼吸 `{spacing.section}`大型主药用的是宽的 `{spacing.sm} {spacing.section}` 贴纸
 
-### 网格容器( C)
+### 网格与容器
 内容以 ~1200px 容器(一个宽度最大的断点) 1600→575px ) 特性块作为两栏行运行——复制+CTA在一边,a product-mockup 另一张牌——在页面下交替,然后倒塌,在窄屏幕上堆叠单列。 3-上;页脚求职栏作为单水平控制行运行.
 
-### 白空间哲学
+### 留白规则
 白空间慷慨且由乐队驱动. 页面通过交替全宽的色彩带来进行内容组合——用于营销的淡薄薄荷,用于中性内容的白色,用于滴答器和有特色的引文的全黑色,同时带有室内垂直的垫板,可以防止高能量类型感到拥挤.
 
-### 反应战略
+### 响应式布局
 
 #### 断点
 | 名称 | 宽度 | 密钥更改 |
@@ -96,14 +96,14 @@ Both Titillium Web and Inter are open-source Google fonts — use them directly.
 #### 触控区域
 初级(`{component.button-primary}`)和绿色(`{component.button-green}`胶囊形能充裕的垫子 供舒适的 ≥44px 跳动高度。 导航崩溃到汉堡下方 768px 同时也保持黑色的"现在的Join"胶囊形的可见性.
 
-#### 折叠战略
+#### 窄屏布局调整
 The top nav collapses to a hamburger under 768px, keeping the black CTA pill. Two-column feature rows stack image-below-copy; the 3-up testimonial grid reflows to 1–2 up; the footer job-search bar wraps its select controls. The full-width mint and black bands stay full-bleed at every width.
 
-#### 图像行为
+#### 图片适配
 Product-mockup 图像坐落在圆形白卡内( Name`{rounded.card}` / `{rounded.md}`),以柔软的影子飘过薄荷乐队. 首屏用圆形的视频卡带领,神通和记分环是 circular (`{rounded.full}`),折叠下图像懒惰;工作勾勒卷轴作为连续的马奎.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -119,7 +119,7 @@ There is no gradient system; depth is band-and-card based. Playful accents — e
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -132,7 +132,7 @@ There is no gradient system; depth is band-and-card based. Playful accents — e
 | `{rounded.card}` | 40px | Product-mockup feature cards (asymmetric 0/40/40 corner) |
 | `{rounded.full}` | 9999px | 幻象、记分环、脚步搜索栏 |
 
-### 摄影几何
+### 图片形状
 产品模型坐落在圆形白卡内 16–40px 角数( E)`{rounded.md}` / `{rounded.card}`),通常有一个不对称的尖角,用于一个独特的斜角。 circular 记分环是圆的(`{rounded.full}`),首屏视频是圆形卡片(英语:`{rounded.md}`).
 
 
@@ -152,7 +152,7 @@ There is no gradient system; depth is band-and-card based. Playful accents — e
 **`button-dark-square`** ——一个平方黑色的通用按钮
 - Background `{colors.ink}`, white label `{colors.on-dark}`, type `{typography.button}`, rounded `{rounded.sm}`, padding `{spacing.sm} {spacing.md}`.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`feature-card`** ——白头翁 product-mockup 显示一个 AI 特性的卡片
 - Background `{colors.canvas}`, type `{typography.body-md}`, rounded `{rounded.card}` (40px, with one asymmetric sharp corner), padding `{spacing.lg}`, floating on a soft shadow over the mint band.
@@ -166,7 +166,7 @@ There is no gradient system; depth is band-and-card based. Playful accents — e
 **`score-ring`** - 电话 circular AI 匹配分数指标
 - 白色表面 `{colors.canvas}`,薄荷值 `{colors.primary}` 输入 `{typography.heading-4}`,四舍五入 `{rounded.full}`大小 64px.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** 搜索和形成字段
 - Background `{colors.canvas}`, 1px `{colors.hairline}` border, text `{colors.ink}`, type `{typography.body-md}`, rounded `{rounded.sm}`, padding `{spacing.sm} {spacing.md}`.
@@ -182,7 +182,7 @@ There is no gradient system; depth is band-and-card based. Playful accents — e
 **`footer`** ——站点页脚
 - Background `{colors.canvas}`, muted `{colors.muted}` links in `{typography.body-sm}`, padding `{spacing.section}`. Multi-column link groups, logo, social icons, and the `{component.job-search-bar}` above it.
 
-### 签名组件
+### 标志性组件
 
 **`hero`** - 白薄荷首屏乐队
 - Background `{colors.canvas-mint}`, black display headline `{typography.display}`, padding `{spacing.section}`, with a rounded `{component.video-card}` and a black `{component.button-primary}`.
@@ -205,45 +205,45 @@ There is no gradient system; depth is band-and-card based. Playful accents — e
 **`cta-band`** - 结束"让我们 Jobright 带你们去... 乐队
 - Background `{colors.canvas-mint}`, black headline `{typography.heading-2}`, padding `{spacing.section}`, with a `{component.button-green}` and a hand-drawn illustration.
 
-### 实例(说明性)
+### 组合示例
 
-> 自动生成的工具包-模拟演示表面(`scripts/derive-examples-block.mjs`。每个 `ex-*` 条目参考: 下游消费者的品牌原始产品(`/preview-design`, `/generate-kit`) 重新皮肤相同 10 表面一致。 `TO_FILL` 标记表示缺失原始人——在LLM判断传中解析.
+> 以下组合场景由 `scripts/derive-examples-block.mjs` 生成。各 `ex-*` 条目复用品牌基础样式，供 `/preview-design` 和 `/generate-kit` 以统一风格呈现同一套 10 个示例。`TO_FILL` 提示有待核对的基础样式。
 
-**`ex-pricing-tier`** ——默认定价等级卡。 feature-card 带品牌的铬 canvas-soft 表面。
+**`ex-pricing-tier`**：默认套餐卡，沿用功能卡结构和品牌 canvas-soft 底色。
 - 属性 : `backgroundColor`, `textColor`, `borderColor`, `rounded`, `padding`
 
-**`ex-pricing-tier-featured`** ——地貌/高亮的层次——极性-浮点表面(暗色填充+光线文字在光线模式下,浅色填充+暗色文字在暗线模式下).
+**`ex-pricing-tier-featured`**：推荐套餐卡。浅色模式中用深底浅字，深色模式中用浅底深字。
 - 属性 : `backgroundColor`, `textColor`, `rounded`, `padding`
 
-**`ex-product-selector`** ——什么是包含的汇总卡——重新用于SaaS/B2B纵横(NOT为字形产品画廊).
+**`ex-product-selector`**：面向 SaaS / B2B 场景的套餐权益摘要卡。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-cart-drawer`** ——订阅摘要——重新用于SaaS/B2B(每件加件的行项目,而非字面车).
+**`ex-cart-drawer`**：SaaS / B2B 订阅摘要，每个附加项单独列出。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `item-divider`
 
-**`ex-app-shell-row`** ——App Shell 实例中的侧边栏导航行. Active State 使用品牌主标.
+**`ex-app-shell-row`**：应用框架示例里的侧栏导航行，以品牌主色标识选中状态。
 - 属性 : `backgroundColor`, `activeIndicator`, `rounded`, `padding`
 
-**`ex-data-table-cell`** — Default data-table th + td chrome. Header uses mono-caps eyebrow typography; body uses body-sm.
+**`ex-data-table-cell`**：数据表格中 th 与 td 的默认样式。表头采用大写等宽字，正文采用 body-sm。
 - 属性 : `headerBackground`, `headerTypography`, `bodyTypography`, `cellPadding`, `rowBorder`
 
-**`ex-auth-form-card`** ——签入/签入卡. 复用. feature-card 铬 text-input 原始人在里面,他们都在里面
+**`ex-auth-form-card`**：登录与注册卡，复用功能卡和 text-input。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-modal-card`** ——模度对话框表面——与 feature-card 以高的阴影盟誓,
+**`ex-modal-card`**：对话框表面，沿用功能卡样式并加浮层投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-empty-state-card`** ——空状态插图框架.
+**`ex-empty-state-card`**：空状态插图容器。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `captionTypography`
 
-**`ex-toast`** ——通知表面. feature-card 形状 + 中阴影。
+**`ex-toast`**：轻提示，沿用功能卡圆角并使用中等投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `typography`
 
 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` 标志、链接、绿色胶囊形 和突出的—— 一种带有品牌的电动强调色。
 - 将节奏带在薄荷带上(`{colors.canvas-mint}`),与白色和全黑色的带交替.
 - 使用黑药( U)`{rounded.lg}`初级CTA和薄荷绿胶囊形(`{rounded.pill}`),用于一个签名强调色动作.
@@ -251,7 +251,7 @@ There is no gradient system; depth is band-and-card based. Playful accents — e
 - 浮点 product-mockup 纸牌(`{rounded.card}`)在薄荷带上软阴影上演示AI特性.
 - 保持按键的胶囊形形状和高孔不透——黑上薄荷或白上薄荷.
 
-### Don't
+### 应避免的做法
 - Don't introduce the product-UI tag/score palette (Ant-style pastels) as brand chrome — the marketing system is mint, black, and white only.
 - Don't fill a primary CTA with `{colors.primary}` green as the default — the everyday primary is the black pill; green is the one accent pill.
 - Don't set body copy in Titillium Web or headlines in Inter — the display/UI font roles are fixed.

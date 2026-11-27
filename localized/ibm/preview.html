@@ -210,11 +210,11 @@
   :is([id^=design-section-],[id=design-overview]) { scroll-margin-top:14px; }
 }
 </style></head>
-<body><nav aria-label="样张章节" class="nav design-preview-nav" data-design-nav="true"><div class="nav-left"><span class="nav-brand">IBM</span></div><ul class="nav-links"><li><a href="#design-section-2">字体</a></li><li><a href="#design-section-3">按钮</a></li><li><a href="#design-section-4">卡片</a></li><li><a href="#design-section-11">表单</a></li><li><a href="#design-section-15">布局</a></li></ul><a class="nav-cta" href="#design-overview">概览</a></nav>
+<body data-platform-type="数据与企业平台"><nav aria-label="样张章节" class="nav design-preview-nav" data-design-nav="true"><div class="nav-left"><span class="nav-brand">IBM</span></div><ul class="nav-links"><li><a href="#design-section-2">字体</a></li><li><a href="#design-section-3">按钮</a></li><li><a href="#design-section-4">卡片</a></li><li><a href="#design-section-11">表单</a></li><li><a href="#design-section-15">布局</a></li></ul><a class="nav-cta" href="#design-overview">概览</a></nav>
 <header class="hero">
 <div class="hero-content">
 <h1 id="design-overview">企业蓝与结构网格</h1>
-<p>基于 Carbon 的结构化网格和企业蓝，面向大型产品与信息密集界面。</p>
+<p>这套企业营销页面沿用 Carbon Design System。白色表面与炭灰色文字为基础，IBM Blue（#0f62fe）是唯一强调色。整体平整方正，圆角为 0–4px；展示文字采用 300 字重的 Plex Sans。</p>
 <div class="hero-actions">
 <button class="btn btn-primary">注册</button>
 <button class="btn btn-tertiary">读取文件→</button>
@@ -222,52 +222,52 @@
 </div>
 </header>
 <section id="palette">
-<div class="section-eyebrow">01 — 彩色调色板</div>
+<div class="section-eyebrow">01 · 配色</div>
 <h2 class="section-heading">调色板</h2>
 <div class="palette-group-heading">品牌色与强调色</div>
 <div class="palette-grid">
-<div class="swatch"><div class="swatch-color" style="background:#0f62fe"></div><div class="swatch-info"><div class="swatch-name">IBM 蓝色</div><div class="swatch-hex">#0f62fe</div><div class="swatch-role">单品牌强调色——主CTA,链接,焦点环.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#0f62fe"></div><div class="swatch-info"><div class="swatch-name">IBM Blue</div><div class="swatch-hex">#0f62fe</div><div class="swatch-role">单品牌强调色——主CTA,链接,焦点环.</div></div></div>
 <div class="swatch"><div class="swatch-color" style="background:#0043ce"></div><div class="swatch-info"><div class="swatch-name">Blue 60</div><div class="swatch-hex">#0043ce</div><div class="swatch-role">被绑住的链接状态。</div></div></div>
 <div class="swatch"><div class="swatch-color" style="background:#002d9c"></div><div class="swatch-info"><div class="swatch-name">Blue 80</div><div class="swatch-hex">#002d9c</div><div class="swatch-role">按"主按钮"号.</div></div></div>
 </div>
 <div class="palette-group-heading">界面表面</div>
 <div class="palette-grid">
-<div class="swatch"><div class="swatch-color" style="background:#ffffff;border-bottom:1px solid var(--hairline)"></div><div class="swatch-info"><div class="swatch-name">页面底色</div><div class="swatch-hex">#ffffff</div><div class="swatch-role">默认页面背景。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#ffffff;border-bottom:1px solid var(--hairline)"></div><div class="swatch-info"><div class="swatch-name">Canvas</div><div class="swatch-hex">#ffffff</div><div class="swatch-role">默认页面背景。</div></div></div>
 <div class="swatch"><div class="swatch-color" style="background:#f4f4f4"></div><div class="swatch-info"><div class="swatch-name">Surface 1</div><div class="swatch-hex">#f4f4f4</div><div class="swatch-role">浅灰色——输入框,alt-row条纹,细细的带.</div></div></div>
-<div class="swatch"><div class="swatch-color" style="background:#e0e0e0"></div><div class="swatch-info"><div class="swatch-name">表面 2 / 细边框 数据</div><div class="swatch-hex">#e0e0e0</div><div class="swatch-role">卡片边界, 禁用田, 分隔器。</div></div></div>
-<div class="swatch"><div class="swatch-color" style="background:#161616"></div><div class="swatch-info"><div class="swatch-name">反向画廊</div><div class="swatch-hex">#161616</div><div class="swatch-role">脚印表面——页面上只有暗色表面.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#e0e0e0"></div><div class="swatch-info"><div class="swatch-name">Surface 2 / Hairline</div><div class="swatch-hex">#e0e0e0</div><div class="swatch-role">卡片边界, 禁用田, 分隔器。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#161616"></div><div class="swatch-info"><div class="swatch-name">Inverse Canvas</div><div class="swatch-hex">#161616</div><div class="swatch-role">脚印表面——页面上只有暗色表面.</div></div></div>
 </div>
 <div class="palette-group-heading">文字色</div>
 <div class="palette-grid">
-<div class="swatch"><div class="swatch-color" style="background:#161616"></div><div class="swatch-info"><div class="swatch-name">文字色</div><div class="swatch-hex">#161616</div><div class="swatch-role">头条和强调的体型。</div></div></div>
-<div class="swatch"><div class="swatch-color" style="background:#525252"></div><div class="swatch-info"><div class="swatch-name">弱化文字色</div><div class="swatch-hex">#525252</div><div class="swatch-role">次要类型——meta,副标题.</div></div></div>
-<div class="swatch"><div class="swatch-color" style="background:#8c8c8c"></div><div class="swatch-info"><div class="swatch-name">弱化文字色</div><div class="swatch-hex">#8c8c8c</div><div class="swatch-role">第三级类型——已禁用,辅助说明,标题.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#161616"></div><div class="swatch-info"><div class="swatch-name">Ink</div><div class="swatch-hex">#161616</div><div class="swatch-role">头条和强调的体型。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#525252"></div><div class="swatch-info"><div class="swatch-name">Ink Muted</div><div class="swatch-hex">#525252</div><div class="swatch-role">次要类型——meta,副标题.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#8c8c8c"></div><div class="swatch-info"><div class="swatch-name">Ink Subtle</div><div class="swatch-hex">#8c8c8c</div><div class="swatch-role">第三级类型——已禁用,辅助说明,标题.</div></div></div>
 </div>
 <div class="palette-group-heading">语义色</div>
 <div class="palette-grid">
-<div class="swatch"><div class="swatch-color" style="background:#24a148"></div><div class="swatch-info"><div class="swatch-name">成功绿色</div><div class="swatch-hex">#24a148</div><div class="swatch-role">碳绿色-50——成功状态.</div></div></div>
-<div class="swatch"><div class="swatch-color" style="background:#f1c21b"></div><div class="swatch-info"><div class="swatch-name">警告黄色</div><div class="swatch-hex">#f1c21b</div><div class="swatch-role">Carbon yellow-30 — warning states.</div></div></div>
-<div class="swatch"><div class="swatch-color" style="background:#da1e28"></div><div class="swatch-info"><div class="swatch-name">红字错误</div><div class="swatch-hex">#da1e28</div><div class="swatch-role">碳红-60——错误表示;危险按钮.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#24a148"></div><div class="swatch-info"><div class="swatch-name">Success Green</div><div class="swatch-hex">#24a148</div><div class="swatch-role">碳绿色-50——成功状态.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#f1c21b"></div><div class="swatch-info"><div class="swatch-name">Warning Yellow</div><div class="swatch-hex">#f1c21b</div><div class="swatch-role">Carbon yellow-30 — warning states.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#da1e28"></div><div class="swatch-info"><div class="swatch-name">Error Red</div><div class="swatch-hex">#da1e28</div><div class="swatch-role">碳红-60——错误表示;危险按钮.</div></div></div>
 </div>
 </section>
 <section id="typography" style="background: var(--surface-1);">
-<div class="section-eyebrow">02 ——字型缩放</div>
+<div class="section-eyebrow">02 · 字号层级</div>
 <h2 class="section-heading" id="design-section-2">字体排版</h2>
 <div class="type-row"><div class="type-meta"><strong>display-xl</strong>76px · 300 · 1.17 · -0.5px · IBM Plex Sans</div><div class="type-sample" style="font-size:72px;font-weight:300;line-height:1.17;letter-spacing:-0.5px">来见见鲍勃,你的SDLC搭档</div></div>
 <div class="type-row"><div class="type-meta"><strong>display-lg</strong>60px · 300 · 1.17 · -0.4px</div><div class="type-sample" style="font-size:56px;font-weight:300;line-height:1.17;letter-spacing:-0.4px">更聪明的生意。 真正的影响。</div></div>
 <div class="type-row"><div class="type-meta"><strong>display-md</strong>42px · 300 · 1.20 · 0</div><div class="type-sample" style="font-size:42px;font-weight:300;line-height:1.20">企业技术</div></div>
-<div class="type-row"><div class="type-meta"><strong>标题</strong>32px · 400 · 1.25</div><div class="type-sample" style="font-size:32px;font-weight:400;line-height:1.25">卡片 收藏标题</div></div>
+<div class="type-row"><div class="type-meta"><strong>headline</strong>32px · 400 · 1.25</div><div class="type-sample" style="font-size:32px;font-weight:400;line-height:1.25">卡片 收藏标题</div></div>
 <div class="type-row"><div class="type-meta"><strong>card-title</strong>24px · 400 · 1.33</div><div class="type-sample" style="font-size:24px;font-weight:400;line-height:1.33">功能卡片 标题</div></div>
-<div class="type-row"><div class="type-meta"><strong>子标题</strong>20px · 400 · 1.40</div><div class="type-sample" style="font-size:20px;font-weight:400;line-height:1.40">显示头条标题的正文</div></div>
+<div class="type-row"><div class="type-meta"><strong>subhead</strong>20px · 400 · 1.40</div><div class="type-sample" style="font-size:20px;font-weight:400;line-height:1.40">显示头条标题的正文</div></div>
 <div class="type-row"><div class="type-meta"><strong>body-lg</strong>18px · 400 · 1.50</div><div class="type-sample" style="font-size:18px;font-weight:400;line-height:1.50">首屏小标题和领头段落。</div></div>
-<div class="type-row"><div class="type-meta"><strong>正文</strong>16px · 400 · 1.50 · 0.16px</div><div class="type-sample" style="font-size:16px;font-weight:400;line-height:1.50;letter-spacing:0.16px">默认机身——Carbon的签名0.16px正跟踪是排字语音的一部分.（原文参数：0.16px）</div></div>
+<div class="type-row"><div class="type-meta"><strong>body</strong>16px · 400 · 1.50 · 0.16px</div><div class="type-sample" style="font-size:16px;font-weight:400;line-height:1.50;letter-spacing:0.16px">默认机身——Carbon的签名0.16px正跟踪是排字语音的一部分.（原文参数：0.16px）</div></div>
 <div class="type-row"><div class="type-meta"><strong>body-sm</strong>14px · 400 · 1.29 · 0.16px</div><div class="type-sample" style="font-size:14px;font-weight:400;line-height:1.29;letter-spacing:0.16px">卡片体,脚列.</div></div>
 <div class="type-row"><div class="type-meta"><strong>body-emphasis</strong>14px · 600 · 1.29 · 0.16px</div><div class="type-sample" style="font-size:14px;font-weight:600;line-height:1.29;letter-spacing:0.16px">选中标签, 下划线</div></div>
-<div class="type-row"><div class="type-meta"><strong>标题</strong>12px · 400 · 1.33 · 0.32px</div><div class="type-sample" style="font-size:12px;font-weight:400;line-height:1.33;letter-spacing:0.32px">说明和meta</div></div>
-<div class="type-row"><div class="type-meta"><strong>按钮</strong>14px · 400 · 1.29 · 0.16px</div><div class="type-sample" style="font-size:14px;font-weight:400;line-height:1.29;letter-spacing:0.16px">注册</div></div>
+<div class="type-row"><div class="type-meta"><strong>caption</strong>12px · 400 · 1.33 · 0.32px</div><div class="type-sample" style="font-size:12px;font-weight:400;line-height:1.33;letter-spacing:0.32px">说明和meta</div></div>
+<div class="type-row"><div class="type-meta"><strong>button</strong>14px · 400 · 1.29 · 0.16px</div><div class="type-sample" style="font-size:14px;font-weight:400;line-height:1.29;letter-spacing:0.16px">注册</div></div>
 </section>
 <section id="components">
-<div class="section-eyebrow">03  —按钮变体</div>
+<div class="section-eyebrow">03 · 按钮样式</div>
 <h2 class="section-heading" id="design-section-3">按钮</h2>
 <div class="button-grid">
 <div class="button-cell"><span class="button-label">button-primary</span><button class="b-btn b-primary">注册</button></div>
@@ -279,13 +279,13 @@
 </div>
 </section>
 <section id="cards" style="background: var(--surface-1);">
-<div class="section-eyebrow">04 — Cards &amp; Containers</div>
+<div class="section-eyebrow">04 · 卡片与容器</div>
 <h2 class="section-heading" id="design-section-4">卡片</h2>
 <div class="card-grid">
-<div class="feature-card"><div><div class="feature-eyebrow">feature-card</div><h3 class="feature-heading">AI助理人员</h3><p class="feature-body">计划并驾驶复杂的工程,配备智能代理和助手.</p></div><a href="#" style="font-size:14px;font-weight:600;letter-spacing:0.16px">探索→</a></div>
-<div class="feature-card"><div><div class="feature-eyebrow">feature-card</div><h3 class="feature-heading">数据管理</h3><p class="feature-body">信任的数据,你需要 驱动你最关键的AI倡议。</p></div><a href="#" style="font-size:14px;font-weight:600;letter-spacing:0.16px">探索→</a></div>
-<div class="feature-card"><div><div class="feature-eyebrow">feature-card</div><h3 class="feature-heading">安全和治理</h3><p class="feature-body">AI保障保护你最关键的数据 和规模充满信心。</p></div><a href="#" style="font-size:14px;font-weight:600;letter-spacing:0.16px">探索→</a></div>
-<div class="feature-card-elevated"><div><div class="feature-eyebrow">feature-card-elevated</div><h3 class="feature-heading">综合复原力</h3><p class="feature-body">实现企业经营现代化,保护企业经营免受网络威胁.</p></div><a href="#" style="font-size:14px;font-weight:600;letter-spacing:0.16px">探索→</a></div>
+<div class="feature-card"><div><div class="feature-eyebrow">feature-card</div><h3 class="feature-heading">AI助理人员</h3><p class="feature-body">计划并驾驶复杂的工程,配备智能代理和助手.</p></div><a data-static-example="" style="font-size:14px;font-weight:600;letter-spacing:0.16px">探索→</a></div>
+<div class="feature-card"><div><div class="feature-eyebrow">feature-card</div><h3 class="feature-heading">数据管理</h3><p class="feature-body">信任的数据,你需要 驱动你最关键的AI倡议。</p></div><a data-static-example="" style="font-size:14px;font-weight:600;letter-spacing:0.16px">探索→</a></div>
+<div class="feature-card"><div><div class="feature-eyebrow">feature-card</div><h3 class="feature-heading">安全和治理</h3><p class="feature-body">AI保障保护你最关键的数据 和规模充满信心。</p></div><a data-static-example="" style="font-size:14px;font-weight:600;letter-spacing:0.16px">探索→</a></div>
+<div class="feature-card-elevated"><div><div class="feature-eyebrow">feature-card-elevated</div><h3 class="feature-heading">综合复原力</h3><p class="feature-body">实现企业经营现代化,保护企业经营免受网络威胁.</p></div><a data-static-example="" style="font-size:14px;font-weight:600;letter-spacing:0.16px">探索→</a></div>
 </div>
 <div style="margin-top:48px">
 <div class="hero-card">
@@ -318,7 +318,7 @@
 </div>
 </section>
 <section>
-<div class="section-eyebrow">05 - 形式要素</div>
+<div class="section-eyebrow">05 · 表单控件</div>
 <h2 class="section-heading" id="design-section-11">表单</h2>
 <div class="form-grid">
 <div class="form-field"><label class="form-label">text-input − 默认</label><input class="form-input" placeholder="工作邮箱" type="email"/></div>
@@ -330,7 +330,7 @@
 </div>
 </section>
 <section style="background: var(--surface-1);">
-<div class="section-eyebrow">06 —— 间距</div>
+<div class="section-eyebrow">06 · 间距层级</div>
 <h2 class="section-heading">间距</h2>
 <div class="spacing-row">
 <div class="spacing-cell"><div class="spacing-bar" style="width:4px"></div><div class="spacing-meta">xxx 4px 数据</div></div>
@@ -344,8 +344,8 @@
 </div>
 </section>
 <section>
-<div class="section-eyebrow">07 — 圆角半径 比例尺</div>
-<h2 class="section-heading">半径</h2>
+<div class="section-eyebrow">07 · 圆角层级</div>
+<h2 class="section-heading">圆角</h2>
 <p style="color:var(--ink-muted);max-width:540px;font-size:16px;letter-spacing:0.16px;margin:0 0 32px">碳承诺平整0px角. 其他的词元则存在产品/移动表面,但很少在营销上浮出水面.（原文参数：0px）</p>
 <div class="radius-row">
 <div class="radius-cell"><div class="radius-box" style="border-radius:0"></div><div class="radius-meta">0px( 默认)</div></div>
@@ -357,8 +357,8 @@
 </div>
 </section>
 <section style="background: var(--surface-1);">
-<div class="section-eyebrow">08 高度和深度</div>
-<h2 class="section-heading">升迁</h2>
+<div class="section-eyebrow">08 · 层次与深度</div>
+<h2 class="section-heading">视觉层次</h2>
 <div class="elevation-grid">
 <div class="elev-card elev-0">Level 0 — flat</div>
 <div class="elev-card elev-1">Level 1 — hairline</div>
@@ -367,10 +367,10 @@
 </div>
 </section>
 <section>
-<div class="section-eyebrow">09 反应行为</div>
-<h2 class="section-heading" id="design-section-15">反应</h2>
+<div class="section-eyebrow">09 · 响应式布局</div>
+<h2 class="section-heading" id="design-section-15">响应式</h2>
 <table class="responsive-table">
-<thead><tr><th>名称</th><th>宽度</th><th>密钥更改</th></tr></thead>
+<thead><tr><th>名称</th><th>宽度</th><th>布局变化</th></tr></thead>
 <tbody>
 <tr><td>最大</td><td>1584px</td><td>碳最大电网; 沟渠扩展</td></tr>
 <tr><td>桌面 XL 软件</td><td>1312px</td><td>默认桌面布局</td></tr>
@@ -406,32 +406,32 @@
 </div>
 </div>
 </section>
-<footer class="footer">
+<footer class="footer" data-platform-example="footer">
 <div class="footer-shell">
-<div class="footer-grid">
+<p class="design-demo-note">栏目演示 · 数据与企业平台</p><div class="footer-grid">
 <div class="footer-col">
-<h6>VoltAgent 框架</h6>
-<span>类型脚本代理</span>
-<span>工具编程</span>
-<span>多种代理工作流程</span>
+<h6>数据管理</h6>
+<span>数据接入</span>
+<span>数据目录</span>
+<span>数据质量</span>
 </div>
 <div class="footer-col">
-<h6>伏特Ops LLM 可观测性</h6>
-<span>LLM 跟踪</span>
-<span>实时调试</span>
-<span>视觉时间</span>
+<h6>分析与协作</h6>
+<span>报表</span>
+<span>工作流</span>
+<span>团队空间</span>
 </div>
 <div class="footer-col">
-<h6>生产</h6>
-<span>评价</span>
-<span>即时管理</span>
-<span>护卫</span>
+<h6>平台资源</h6>
+<span>接口文档</span>
+<span>部署指南</span>
+<span>合规说明</span>
 </div>
 <div class="footer-col">
-<h6>平台</h6>
-<span>伏特Ops 控制台</span>
-<span>开源核心</span>
-<span>代理工程</span>
+<h6>支持</h6>
+<span>服务状态</span>
+<span>帮助中心</span>
+<span>问题反馈</span>
 </div>
 </div>
 </div>

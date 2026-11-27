@@ -23,13 +23,13 @@ Type pairs **CoinbaseDisplay** for hero headlines with **CoinbaseSans** for body
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Coinbase Blue** (`{colors.primary}` — #0052ff): The single brand color. Every primary CTA pill, the Coinbase wordmark, and inline brand links.
 - **Coinbase 蓝色活动** (`{colors.primary-active}` — #003ecc:按州黑于初药.
 - **Coinbase 蓝色已禁用** (`{colors.primary-disabled}` — #a8b8cc: faded-blue tint for disable CTAs. : 用于残疾的CTA 的花色蓝色色色.
 - **黄褐色** (`{colors.accent-yellow}` — #f4b000:一种小的子品牌强调色在比特币/资产格莱弗上非常节制地使用了在功能卡片内填充. Illustrative- only, not a active color.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — #ffffff:默认的页面层.
 - **表面软** (`{colors.surface-soft}` — #f7f7f7: 微调交替带表面.
 - **表面坚固** (`{colors.surface-strong}` — #eef0f3: 轻灰色填充在次要按钮后面, 搜索胶囊形, 资产-虹板.
@@ -40,7 +40,7 @@ Type pairs **CoinbaseDisplay** for hero headlines with **CoinbaseSans** for body
 - **细边线** (`{colors.hairline}` — #dee1e6: 默认 1px 白色表面的分隔器。
 - **柔软的细边线** (`{colors.hairline-soft}` — #eef0f3: 较轻的分隔器——与 `{colors.surface-strong}`.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — #0a0b0d:显示标题,主导航,体格强调.
 - **体质** (`{colors.body}` — #5b616e: 默认的运行文本——略凉灰色.
 - **强体** (`{colors.body-strong}` — #0a0b0d:与墨水相同,用于更强的强调.
@@ -57,12 +57,12 @@ Type pairs **CoinbaseDisplay** for hero headlines with **CoinbaseSans** for body
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 系统运行 **库因巴斯游戏** (播放头条), **库恩巴桑斯** (身体,导航,标题,按钮), **铜基孔** (虹字体),和 **库因巴索莫** 。倒数堆栈 : `-apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`.
 
 显示/身体分裂是功能性的: CoinbaseDisplay只携带首屏头条; CoinbaseSans 携带其他一切.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -88,7 +88,7 @@ Type pairs **CoinbaseDisplay** for hero headlines with **CoinbaseSans** for body
 - **负数 letter-spacing 仅显示。** 显示用途 -1px 改为: -2px 跟踪; 身体停留在 0.
 - **每一个号码都写着CoinbaseMono.** 资产价格,百分比变化,任何表格都用库因巴索莫制成。
 
-### Note on Font Substitutes
+### 替代字体
 库因巴斯迪斯普斯、库因巴斯桑斯和库因巴斯莫诺获得许可 Coinbase 字型为字形。
 - **库因巴斯游戏 – Inter** 字重 400, letter-spacing -1.5%.
 - **桑斯监狱 – Inter** 字重 400/600.
@@ -103,17 +103,17 @@ Type pairs **CoinbaseDisplay** for hero headlines with **CoinbaseSans** for body
 - **Section padding:** `{spacing.section}` (96px) for every major editorial band.
 - **内部卡片 padding:** `{spacing.xl}` (32px)用于特写卡和产品-UI模型.
 
-### 网格容器( C)
+### 网格与容器
 - **最大内容 width:** ~1200px centered. Hero photography full-bleed.
 - **编辑机构:** 单身 12- 列网格 - 列网格 - Colind grade.
 - **Feature card grids:** 2-up at desktop for hero splits, 3-up for benefit grids.
 - **Footer:** 6-column link list at desktop.
 
-### 白空间哲学
+### 留白规则
 慷慨的社论节奏——更接近彭博或"金融时报",而不是交易仪表板. 96px 带间; 带内卡片坐 24px 密度生活在登录墙后,而不是在营销上。
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -129,7 +129,7 @@ Type pairs **CoinbaseDisplay** for hero headlines with **CoinbaseSans** for body
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -187,7 +187,7 @@ Pill for interactive, card-radius (24px) for containers, full circle for icons. 
 
 ### 交易表面
 
-**`asset-row`** ——资产清单(勘探,财富)的横向行. transparent, 1px 细边线分隔符。 版式 : 32px circular 资产图标左侧, 资产名称+勾选器, 价格栏 `{typography.number-display}`, 24h 更改栏为 `{component.price-up-cell}` 或 减 减 `{component.price-down-cell}`.
+**`asset-row`** ——资产清单(勘探,财富)的横向行. transparent, 1px 细边线分隔符。 版式 : 32px circular 资产图标左侧, 资产名称+勾选器, 价格栏 `{typography.number-display}`, 24h 更改栏为 `{component.price-up-cell}` 或 `{component.price-down-cell}`.
 
 **`price-up-cell`** + **`price-down-cell`** —— 内置价格变化单元格。仅颜色 : 绿色或红色文本 。 `{typography.number-display}`,没有背景填充。
 
@@ -213,7 +213,7 @@ Pill for interactive, card-radius (24px) for containers, full circle for icons. 
 
 **`cta-band-dark`** ——脚前"控制你的钱"乐队. `{colors.surface-dark}`文本中,请输入 `{colors.on-dark}`垂直编目 96px. 居中标题+两个CTA.
 
-**`footer-light`** ——关闭白话筒页脚。背景 `{colors.canvas}`文本中,请输入 `{colors.body}`. 6-列链接列表。
+**`footer-light`**：白底页脚。底色为 `{colors.canvas}`，文字为 `{colors.body}`，链接列表为 6-column（六列）。
 
 **`footer-link`** — Individual footer link. Background transparent, text `{colors.body}`.
 
@@ -222,7 +222,7 @@ Pill for interactive, card-radius (24px) for containers, full circle for icons. 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` (Coinbase Blue),用于初级CTA,词标,品牌-glyph插图,内置强调色链接.
 - 将每个 CTA 设定为 `{rounded.pill}` (100px;每个资产格言为: `{rounded.full}`.
 - 保持 Coinbase 显示头条重播 400.
@@ -230,7 +230,7 @@ Pill for interactive, card-radius (24px) for containers, full circle for icons. 
 - 将 CoinbaseMano 中的每个数值通过 `{typography.number-display}`.
 - 给每个黑暗首屏配上一层层的产品 -UI模拟卡堆.
 
-### Don't
+### 应避免的做法
 - Don't introduce a secondary brand color. Coinbase Blue is the only action color; trading green/red are semantic-only.
 - Don't bold display copy — display sits at weight 400; bolding shifts the brand voice.
 - Don't add drop shadow tiers — system has one shadow tier.
@@ -240,7 +240,7 @@ Pill for interactive, card-radius (24px) for containers, full circle for icons. 
 - Don't extract a CTA color from a third-party widget (cookie consent, OneTrust). The brand's CTA color is what appears on actual product CTAs, not on injected modals.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -257,7 +257,7 @@ Pill for interactive, card-radius (24px) for containers, full circle for icons. 
 - Asset icon circles at 32px — borderline; padded 8px row creates effective 48px tap zone.
 - 搜索胶囊形 44px 高度——在AAA.
 
-### 折叠战略
+### 窄屏布局调整
 - 顶端导航切换到下面的汉堡单 768px。签名 CTA 时保持可见。
 - 首屏h( 首屏h)1 下移步骤 : 80 → 64 → 52 → 44 → 36px 显示最小的屏幕。
 - 分层产品- UI 模拟卡从崩溃 2-3 移动时堆成单张卡。
@@ -278,7 +278,7 @@ Pill for interactive, card-radius (24px) for containers, full circle for icons. 
 
 ## 已知缺口
 
-- 库因巴斯迪斯佩克、库因巴斯桑斯、库因巴斯莫诺获得许可证; Inter 财务报告和已审计财务报表 JetBrains Mono 被记录为替代物。
+- 库因巴斯迪斯佩克、库因巴斯桑斯、库因巴斯莫诺获得许可证; Inter 和 JetBrains Mono 被记录为替代物。
 - 产品内部交易表面(订单书,图表,订单表)在登录墙后——本文件只涵盖营销.
 - 动画时间超出范围.
 - 形式验证状态超出焦点,在捕获的表面看不到。

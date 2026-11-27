@@ -538,11 +538,11 @@
   :is([id^=design-section-],[id=design-overview]) { scroll-margin-top:14px; }
 }
 </style></head>
-<body><nav aria-label="样张章节" class="nav design-preview-nav" data-design-nav="true"><div class="nav-left"><span class="nav-brand">Ollama</span></div><ul class="nav-links"><li><a href="#design-section-1">配色</a></li><li><a href="#design-section-2">字体</a></li><li><a href="#design-section-3">按钮</a></li><li><a href="#design-section-4">卡片</a></li><li><a href="#design-section-7">表单</a></li><li><a href="#design-section-8">布局</a></li></ul><a class="nav-cta" href="#design-overview">概览</a></nav>
+<body data-platform-type="开发工具"><nav aria-label="样张章节" class="nav design-preview-nav" data-design-nav="true"><div class="nav-left"><span class="nav-brand">Ollama</span></div><ul class="nav-links"><li><a href="#design-section-1">配色</a></li><li><a href="#design-section-2">字体</a></li><li><a href="#design-section-3">按钮</a></li><li><a href="#design-section-4">卡片</a></li><li><a href="#design-section-7">表单</a></li><li><a href="#design-section-8">布局</a></li></ul><a class="nav-cta" href="#design-overview">概览</a></nav>
 <header class="hero">
 <div class="hero-content">
 <h1 id="design-overview">单色等宽终端</h1>
-<p>终端式排版与单色表面，用简洁的组件呈现本地模型工具。</p>
+<p>这套界面以文档为中心，首页像一份 Markdown README。纸白背景、居中标题、黑色胶囊主按钮和行内安装命令构成首屏，省去渐变和装饰性摄影。控件只用黑、白和三种中性灰，交互元素均为全圆角。标题用 SF Pro Rounded，正文用系统无衬线体，代码用 ui-monospace。</p>
 <div class="hero-actions">
 <button class="btn btn-primary">下载</button>
 <button class="btn btn-secondary">登录</button>
@@ -551,66 +551,66 @@
 </header>
 <!-- COLOR PALETTE -->
 <section id="colors">
-<p class="section-eyebrow">01 — 颜色</p>
+<p class="section-eyebrow">01 · 配色</p>
 <h2 class="section-heading" id="design-section-1">配色</h2>
 <p class="section-desc">纯黑色在纯白色上,为机体和元数据有三个中性灰色. 单反向的暗面——用于"Max"定价卡片——是整个系统中唯一的彩色瞬间.</p>
 <div class="palette-block">
 <p class="palette-block-label">品牌色</p>
 <div class="palette-grid">
-<div class="swatch"><div class="swatch-color" style="background:#000000"></div><div class="swatch-meta"><p class="swatch-name">纯黑色(初级)</p><p class="swatch-hex">#000000</p><p class="swatch-role">每个主行动按钮,每个黑色胶囊形,每一个导航链接,每一个固态图标</p></div></div>
-<div class="swatch"><div class="swatch-color" style="background:#090909"></div><div class="swatch-meta"><p class="swatch-name">深文字色</p><p class="swatch-hex">#090909</p><p class="swatch-role">初级胶囊形 的按态黑色</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#000000"></div><div class="swatch-meta"><p class="swatch-name">Pure Black (primary)</p><p class="swatch-hex">#000000</p><p class="swatch-role">每个主行动按钮,每个黑色胶囊形,每一个导航链接,每一个固态图标</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#090909"></div><div class="swatch-meta"><p class="swatch-name">Ink Deep</p><p class="swatch-hex">#090909</p><p class="swatch-role">初级胶囊形 的按态黑色</p></div></div>
 </div>
 </div>
 <div class="palette-block">
 <p class="palette-block-label">界面表面</p>
 <div class="palette-grid">
-<div class="swatch"><div class="swatch-color" style="background:#ffffff;box-shadow:inset 0 0 0 1px var(--hairline)"></div><div class="swatch-meta"><p class="swatch-name">页面底色</p><p class="swatch-hex">#ffffff</p><p class="swatch-role">页面本身——几乎每个表面</p></div></div>
-<div class="swatch"><div class="swatch-color" style="background:#fafafa"></div><div class="swatch-meta"><p class="swatch-name">软表面</p><p class="swatch-hex">#fafafa</p><p class="swatch-role">Install-snippet 胶囊形 搜索 胶囊形 二次芯片背景</p></div></div>
-<div class="swatch"><div class="swatch-color" style="background:#171717"></div><div class="swatch-meta"><p class="swatch-name">表面暗色( T)</p><p class="swatch-hex">#171717</p><p class="swatch-role">单反转"Max"定价卡片底色</p></div></div>
-<div class="swatch"><div class="swatch-color" style="background:#e5e5e5"></div><div class="swatch-meta"><p class="swatch-name">细边框</p><p class="swatch-hex">#e5e5e5</p><p class="swatch-role">1px 卡片 边界, FAQ 行分隔符, 页脚上线</p></div></div>
-<div class="swatch"><div class="swatch-color" style="background:#d4d4d4"></div><div class="swatch-meta"><p class="swatch-name">发条坚固</p><p class="swatch-hex">#d4d4d4</p><p class="swatch-role">需要额外分离的分界线稍强一些</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#ffffff;box-shadow:inset 0 0 0 1px var(--hairline)"></div><div class="swatch-meta"><p class="swatch-name">Canvas</p><p class="swatch-hex">#ffffff</p><p class="swatch-role">页面本身——几乎每个表面</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#fafafa"></div><div class="swatch-meta"><p class="swatch-name">Soft Surface</p><p class="swatch-hex">#fafafa</p><p class="swatch-role">Install-snippet 胶囊形 搜索 胶囊形 二次芯片背景</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#171717"></div><div class="swatch-meta"><p class="swatch-name">Surface Dark</p><p class="swatch-hex">#171717</p><p class="swatch-role">单反转"Max"定价卡片底色</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#e5e5e5"></div><div class="swatch-meta"><p class="swatch-name">Hairline</p><p class="swatch-hex">#e5e5e5</p><p class="swatch-role">1px 卡片 边界, FAQ 行分隔符, 页脚上线</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#d4d4d4"></div><div class="swatch-meta"><p class="swatch-name">Hairline Strong</p><p class="swatch-hex">#d4d4d4</p><p class="swatch-role">需要额外分离的分界线稍强一些</p></div></div>
 </div>
 </div>
 <div class="palette-block">
 <p class="palette-block-label">文字色</p>
 <div class="palette-grid">
-<div class="swatch"><div class="swatch-color" style="background:#000000"></div><div class="swatch-meta"><p class="swatch-name">文字色</p><p class="swatch-hex">#000000</p><p class="swatch-role">标题、主导航链接、光线按钮文本、价格</p></div></div>
-<div class="swatch"><div class="swatch-color" style="background:#525252"></div><div class="swatch-meta"><p class="swatch-name">炭灰色</p><p class="swatch-hex">#525252</p><p class="swatch-role">List-item 文本和副文本</p></div></div>
-<div class="swatch"><div class="swatch-color" style="background:#737373"></div><div class="swatch-meta"><p class="swatch-name">正文</p><p class="swatch-hex">#737373</p><p class="swatch-role">默认体色、 FAQ 答案、 页脚链接文本</p></div></div>
-<div class="swatch"><div class="swatch-color" style="background:#a3a3a3"></div><div class="swatch-meta"><p class="swatch-name">静音</p><p class="swatch-hex">#a3a3a3</p><p class="swatch-role">标题文本, 终端“ 评论” 灰色, 最小的强调</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#000000"></div><div class="swatch-meta"><p class="swatch-name">Ink</p><p class="swatch-hex">#000000</p><p class="swatch-role">标题、主导航链接、光线按钮文本、价格</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#525252"></div><div class="swatch-meta"><p class="swatch-name">Charcoal</p><p class="swatch-hex">#525252</p><p class="swatch-role">List-item 文本和副文本</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#737373"></div><div class="swatch-meta"><p class="swatch-name">Body</p><p class="swatch-hex">#737373</p><p class="swatch-role">默认体色、 FAQ 答案、 页脚链接文本</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#a3a3a3"></div><div class="swatch-meta"><p class="swatch-name">Mute</p><p class="swatch-hex">#a3a3a3</p><p class="swatch-role">标题文本, 终端“ 评论” 灰色, 最小的强调</p></div></div>
 </div>
 </div>
 <div class="palette-block">
 <p class="palette-block-label">终端交通灯(仅挂载)</p>
 <div class="palette-grid">
-<div class="swatch"><div class="swatch-color" style="background:#ff5f56"></div><div class="swatch-meta"><p class="swatch-name">终端红</p><p class="swatch-hex">#ff5f56</p><p class="swatch-role">关闭窗口点</p></div></div>
-<div class="swatch"><div class="swatch-color" style="background:#ffbd2e"></div><div class="swatch-meta"><p class="swatch-name">终端黄色</p><p class="swatch-hex">#ffbd2e</p><p class="swatch-role">最小化点</p></div></div>
-<div class="swatch"><div class="swatch-color" style="background:#27c93f"></div><div class="swatch-meta"><p class="swatch-name">终端绿色</p><p class="swatch-hex">#27c93f</p><p class="swatch-role">缩放点</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#ff5f56"></div><div class="swatch-meta"><p class="swatch-name">Terminal Red</p><p class="swatch-hex">#ff5f56</p><p class="swatch-role">关闭窗口点</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#ffbd2e"></div><div class="swatch-meta"><p class="swatch-name">Terminal Yellow</p><p class="swatch-hex">#ffbd2e</p><p class="swatch-role">最小化点</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#27c93f"></div><div class="swatch-meta"><p class="swatch-name">Terminal Green</p><p class="swatch-hex">#27c93f</p><p class="swatch-role">缩放点</p></div></div>
 </div>
 </div>
 </section>
 <!-- TYPOGRAPHY -->
 <section id="typography">
-<p class="section-eyebrow">02 - 类型</p>
+<p class="section-eyebrow">02 · 字体排版</p>
 <h2 class="section-heading" id="design-section-2">字号层级</h2>
 <p class="section-desc">SF Pro Rounded for display, system sans for body, ui-monospace for code. The roundness of the heading face is the only personality the chrome carries.</p>
-<div class="type-row"><div class="type-meta"><strong>display-xl</strong>SF Pro Rounded<br/>36px / 500 /小时 1.11</div><div class="type-sample" style="font-family:var(--font-display);font-size:36px;font-weight:500;line-height:1.11">使用开放模型的最简单构建方式</div></div>
-<div class="type-row"><div class="type-meta"><strong>display-lg</strong>SF Pro Rounded<br/>30px / 500 /小时 1.2</div><div class="type-sample" style="font-family:var(--font-display);font-size:30px;font-weight:500;line-height:1.2">定价</div></div>
-<div class="type-row"><div class="type-meta"><strong>heading-lg</strong>SF Pro Rounded<br/>24px / 600 /小时 1.33</div><div class="type-sample" style="font-family:var(--font-display);font-size:24px;font-weight:600;line-height:1.33">自动操作</div></div>
-<div class="type-row"><div class="type-meta"><strong>heading-md</strong>ui-sans-serif<br/>20px / 500 /小时 1.4</div><div class="type-sample" style="font-family:var(--font-ui);font-size:20px;font-weight:500;line-height:1.4">推荐等级名称或卡片标题</div></div>
-<div class="type-row"><div class="type-meta"><strong>heading-sm</strong>ui-sans-serif<br/>18px / 500 /小时 1.56</div><div class="type-sample" style="font-family:var(--font-ui);font-size:18px;font-weight:500;line-height:1.56">FAQ 问题标签</div></div>
-<div class="type-row"><div class="type-meta"><strong>body-md</strong>ui-sans-serif<br/>16px / 400 /小时 1.5</div><div class="type-sample" style="font-family:var(--font-ui);font-size:16px;font-weight:400;line-height:1.5">默认的体型复制品携带着每个段落,FAQ答案,以及16px正常重量的长式传言部分.（原文参数：16px）</div></div>
-<div class="type-row"><div class="type-meta"><strong>body-strong</strong>ui-sans-serif<br/>16px / 500 /小时 1.5</div><div class="type-sample" style="font-family:var(--font-ui);font-size:16px;font-weight:500;line-height:1.5">内含式强调或主导航链接</div></div>
-<div class="type-row"><div class="type-meta"><strong>body-sm</strong>ui-sans-serif<br/>14px / 400 /小时 1.43</div><div class="type-sample" style="font-family:var(--font-ui);font-size:14px;font-weight:400;line-height:1.43">特性弹出或页脚链接</div></div>
-<div class="type-row"><div class="type-meta"><strong>body-sm-strong</strong>ui-sans-serif<br/>14px / 500 /小时 1.43</div><div class="type-sample" style="font-family:var(--font-ui);font-size:14px;font-weight:500;line-height:1.43">按钮标签,定价栏眉</div></div>
-<div class="type-row"><div class="type-meta"><strong>caption-sm</strong>ui-sans-serif<br/>12px / 400 /小时 1.33</div><div class="type-sample" style="font-family:var(--font-ui);font-size:12px;font-weight:400;line-height:1.33">页脚版权行</div></div>
-<div class="type-row"><div class="type-meta"><strong>code-md</strong>ui-monospace<br/>16px / 400 /小时 1.5</div><div class="type-sample" style="font-family:var(--font-mono);font-size:16px;font-weight:400;line-height:1.5">卷曲 - fSSL https://example.com/install.sh | sh 曲轴</div></div>
-<div class="type-row"><div class="type-meta"><strong>code-sm</strong>ui-monospace<br/>14px / 400 /小时 1.43</div><div class="type-sample" style="font-family:var(--font-mono);font-size:14px;font-weight:400;line-height:1.43">$ ollama --version</div></div>
-<div class="type-row"><div class="type-meta"><strong>button-md</strong>ui-sans-serif<br/>14px / 500 /小时 1</div><div class="type-sample" style="font-family:var(--font-ui);font-size:14px;font-weight:500;line-height:1">下载</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-xl</strong>SF Pro Rounded<br/>36px / 500 / lh 1.11</div><div class="type-sample" style="font-family:var(--font-display);font-size:36px;font-weight:500;line-height:1.11">使用开放模型的最简单构建方式</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-lg</strong>SF Pro Rounded<br/>30px / 500 / lh 1.2</div><div class="type-sample" style="font-family:var(--font-display);font-size:30px;font-weight:500;line-height:1.2">定价</div></div>
+<div class="type-row"><div class="type-meta"><strong>heading-lg</strong>SF Pro Rounded<br/>24px / 600 / lh 1.33</div><div class="type-sample" style="font-family:var(--font-display);font-size:24px;font-weight:600;line-height:1.33">自动操作</div></div>
+<div class="type-row"><div class="type-meta"><strong>heading-md</strong>ui-sans-serif<br/>20px / 500 / lh 1.4</div><div class="type-sample" style="font-family:var(--font-ui);font-size:20px;font-weight:500;line-height:1.4">推荐等级名称或卡片标题</div></div>
+<div class="type-row"><div class="type-meta"><strong>heading-sm</strong>ui-sans-serif<br/>18px / 500 / lh 1.56</div><div class="type-sample" style="font-family:var(--font-ui);font-size:18px;font-weight:500;line-height:1.56">FAQ 问题标签</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-md</strong>ui-sans-serif<br/>16px / 400 / lh 1.5</div><div class="type-sample" style="font-family:var(--font-ui);font-size:16px;font-weight:400;line-height:1.5">默认的体型复制品携带着每个段落,FAQ答案,以及16px正常重量的长式传言部分.（原文参数：16px）</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-strong</strong>ui-sans-serif<br/>16px / 500 / lh 1.5</div><div class="type-sample" style="font-family:var(--font-ui);font-size:16px;font-weight:500;line-height:1.5">内含式强调或主导航链接</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-sm</strong>ui-sans-serif<br/>14px / 400 / lh 1.43</div><div class="type-sample" style="font-family:var(--font-ui);font-size:14px;font-weight:400;line-height:1.43">特性弹出或页脚链接</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-sm-strong</strong>ui-sans-serif<br/>14px / 500 / lh 1.43</div><div class="type-sample" style="font-family:var(--font-ui);font-size:14px;font-weight:500;line-height:1.43">按钮标签,定价栏眉</div></div>
+<div class="type-row"><div class="type-meta"><strong>caption-sm</strong>ui-sans-serif<br/>12px / 400 / lh 1.33</div><div class="type-sample" style="font-family:var(--font-ui);font-size:12px;font-weight:400;line-height:1.33">页脚版权行</div></div>
+<div class="type-row"><div class="type-meta"><strong>code-md</strong>ui-monospace<br/>16px / 400 / lh 1.5</div><div class="type-sample" style="font-family:var(--font-mono);font-size:16px;font-weight:400;line-height:1.5">卷曲 - fSSL https://example.com/install.sh | sh 曲轴</div></div>
+<div class="type-row"><div class="type-meta"><strong>code-sm</strong>ui-monospace<br/>14px / 400 / lh 1.43</div><div class="type-sample" style="font-family:var(--font-mono);font-size:14px;font-weight:400;line-height:1.43">$ ollama --version</div></div>
+<div class="type-row"><div class="type-meta"><strong>button-md</strong>ui-sans-serif<br/>14px / 500 / lh 1</div><div class="type-sample" style="font-family:var(--font-ui);font-size:14px;font-weight:500;line-height:1">下载</div></div>
 </section>
 <!-- BUTTONS -->
 <section id="components">
-<p class="section-eyebrow">03 - 组件</p>
+<p class="section-eyebrow">03 · 组件</p>
 <h2 class="section-heading" id="design-section-3">按钮样式</h2>
 <p class="section-desc">黑色胶囊形,白色概括为胶囊形,白色胶囊形在暗色上,以及一个禁用状态. 这就是整个按钮词汇。</p>
 <div class="button-grid">
@@ -665,7 +665,7 @@
 </section>
 <!-- TERMINAL & PRICING -->
 <section>
-<p class="section-eyebrow">04  —牌</p>
+<p class="section-eyebrow">04 · 卡片</p>
 <h2 class="section-heading" id="design-section-4">卡片示例</h2>
 <p class="section-desc">两个卡片家族:带有macOS交通灯的终端模型,以及套餐层级的卡片. 第三层翻转为暗反转变体.</p>
 <div style="margin-bottom:48px">
@@ -762,7 +762,7 @@
 </section>
 <!-- FORMS -->
 <section>
-<p class="section-eyebrow">06 - 表格</p>
+<p class="section-eyebrow">06 · 表单</p>
 <h2 class="section-heading" id="design-section-7">表单控件</h2>
 <p class="section-desc">所有投入都是胶囊控件,角圆圆圆. 焦点依赖于浏览器-默认半透明蓝环——系统中唯一的蓝色.</p>
 <div class="form-grid">
@@ -793,7 +793,7 @@
 </section>
 <!-- SPACING -->
 <section>
-<p class="section-eyebrow">07 — 版式</p>
+<p class="section-eyebrow">07 · 布局</p>
 <h2 class="section-heading" id="design-section-8">间距层级</h2>
 <p class="section-desc">8px base unit with finer 2/4/6px steps. Section rhythm sits at 88px — the universal vertical gap between major content blocks.</p>
 <div class="spacing-row">
@@ -804,12 +804,12 @@
 <div class="spacing-cell"><div class="spacing-bar" style="width:16px"></div><span class="spacing-label">16 高压压压轴</span></div>
 <div class="spacing-cell"><div class="spacing-bar" style="width:24px"></div><span class="spacing-label">□ 24</span></div>
 <div class="spacing-cell"><div class="spacing-bar" style="width:32px"></div><span class="spacing-label">xxl 32 数据</span></div>
-<div class="spacing-cell"><div class="spacing-bar" style="width:88px"></div><span class="spacing-label">· 88</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:88px"></div><span class="spacing-label">88 · 章节</span></div>
 </div>
 </section>
 <!-- RADIUS -->
 <section>
-<p class="section-eyebrow">08 — 形状</p>
+<p class="section-eyebrow">08 · 形状</p>
 <h2 class="section-heading">圆角层级</h2>
 <p class="section-desc">所有工作都由两个值来完成:胶囊形(9999px)为每个交互元素,卡片为12px. 之间没有（原文参数：12px）</p>
 <div class="radius-row">
@@ -822,8 +822,8 @@
 </section>
 <!-- ELEVATION -->
 <section>
-<p class="section-eyebrow">09 — 深度( 深度)</p>
-<h2 class="section-heading">层次与阴影</h2>
+<p class="section-eyebrow">09 · 视觉深度</p>
+<h2 class="section-heading">层次与深度</h2>
 <p class="section-desc">无落影. 唯一超越了"爱"的 1px 细边框是最高定价卡上使用的倒置暗面.</p>
 <div class="elevation-grid">
 <div class="elevation-card level-0"><div class="elevation-name">Level 0 — Flat</div><div class="elevation-spec">无边框/ 无阴影</div></div>
@@ -833,13 +833,13 @@
 </section>
 <!-- RESPONSIVE -->
 <section id="layout">
-<p class="section-eyebrow">10 反应性</p>
+<p class="section-eyebrow">10 · 响应式</p>
 <h2 class="section-heading">响应式布局</h2>
 <p class="section-desc">5 响应式断点 区有文件-第一崩盘策略. 节奏收缩 88px → 64px → 48px 下楼的路上。</p>
 <table class="responsive-table">
-<thead><tr><th>名称</th><th>宽度</th><th>密钥更改</th></tr></thead>
+<thead><tr><th>名称</th><th>宽度</th><th>布局变化</th></tr></thead>
 <tbody>
-<tr><td>桌面大块</td><td>1280px+</td><td>默认 —— 720px 内容列, 3 上标</td></tr>
+<tr><td>宽屏桌面</td><td>1280px+</td><td>默认 —— 720px 内容列, 3 上标</td></tr>
 <tr><td>桌面端</td><td>1024px</td><td>相同的布局; 导航仍然水平</td></tr>
 <tr><td>平板电脑</td><td>850px</td><td>定价 3 列 → 2+1; 搜索药片压缩</td></tr>
 <tr><td>平板内窄</td><td>768px</td><td>定价卡片重排到 1 堆叠; 导航成为汉堡包</td></tr>
@@ -851,12 +851,12 @@
 <div class="device phone-large"><span class="name">640</span><span class="label">手机端</span></div>
 <div class="device tablet"><span class="name">768</span><span class="label">平板内窄</span></div>
 <div class="device desktop-small"><span class="name">1024</span><span class="label">桌面端</span></div>
-<div class="device desktop"><span class="name">1280</span><span class="label">桌面大块</span></div>
+<div class="device desktop"><span class="name">1280</span><span class="label">宽屏桌面</span></div>
 </div>
 <div class="responsive-sub-block">
 <h3>触控区域</h3>
 <ul>
-<li><strong>华达州议会:</strong> button-primary 财务报告和已审计财务报表 button-secondary 时 间 36px 高与高与高 20px 粘贴( 有效 ~36×80px 不错</li>
+<li><strong>华达州议会:</strong> button-primary 和 button-secondary 时 间 36px 高与高与高 20px 粘贴( 有效 ~36×80px 不错</li>
 <li><strong>文本输入 :</strong> 40px高处与16px贴板.（原文参数：40px、16px）</li>
 <li><strong>搜索 胶囊形 :</strong> 36px高处与16px贴板.（原文参数：36px、16px）</li>
 <li><strong>页脚链接 :</strong> 12px caption with ~12px line-height + 8px vertical padding (~32–36px tap row).</li>
@@ -875,32 +875,32 @@
 </ul>
 </div>
 </section>
-<footer class="footer">
+<footer class="footer" data-platform-example="footer">
 <div class="footer-shell">
-<div class="footer-grid">
+<p class="design-demo-note">栏目演示 · 开发工具</p><div class="footer-grid">
 <div class="footer-col">
-<h6>VoltAgent 框架</h6>
-<span>类型脚本代理</span>
-<span>工具编程</span>
-<span>多种代理工作流程</span>
+<h6>开发环境</h6>
+<span>项目配置</span>
+<span>运行环境</span>
+<span>团队协作</span>
 </div>
 <div class="footer-col">
-<h6>伏特Ops LLM 可观测性</h6>
-<span>LLM 跟踪</span>
-<span>实时调试</span>
-<span>视觉时间</span>
+<h6>开发资源</h6>
+<span>快速开始</span>
+<span>技术文档</span>
+<span>示例项目</span>
 </div>
 <div class="footer-col">
-<h6>生产</h6>
-<span>评价</span>
-<span>即时管理</span>
-<span>护卫</span>
+<h6>交付运维</h6>
+<span>部署记录</span>
+<span>运行日志</span>
+<span>状态监控</span>
 </div>
 <div class="footer-col">
-<h6>平台</h6>
-<span>伏特Ops 控制台</span>
-<span>开源核心</span>
-<span>代理工程</span>
+<h6>支持</h6>
+<span>使用指南</span>
+<span>更新记录</span>
+<span>问题反馈</span>
 </div>
 </div>
 </div>

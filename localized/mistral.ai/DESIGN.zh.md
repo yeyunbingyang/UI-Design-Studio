@@ -23,7 +23,7 @@ The system pairs PP Editorial Old (a near-serif elegant display face) for hero d
 
 > Source pages: mistral.ai/ (homepage), /products/studio (Le Studio product), /solutions/coding (coding solution), /news/vibe-remote-agents-mistral-medium-3-5 (news), /contact (contact form), /services (services tiers). Token coverage was identical across all six pages.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **雾橙** ({colors.primary}: 初级CTA颜色,品牌橙色
 - **橙深** ({colors.primary-deep}: 压态和加亮变体
 - **阳光 300** ({colors.sunshine-300}:大气淡橙黄色
@@ -40,16 +40,16 @@ The system pairs PP Editorial Old (a near-serif elegant display face) for hero d
 - **奶油深层** ({colors.cream-deeper}: 徽章/塔格芯片的饱和度更高
 - **碧海深处** ({colors.beige-deep}: 凝胶表面 1px 边框颜色
 
-### 表面
+### 界面表面
 - **白色页面底色** ({colors.canvas}: 页面背景和卡片表面
-- **表面** ({colors.surface}: 更安静的背景
+- **界面表面** ({colors.surface}: 更安静的背景
 - **表面凝胶** ({colors.surface-cream}: 黄油黄色表面
 - **表面代码** ({colors.surface-code}暗色( 暗色 ) : code-block / IDE 模拟表面
 - **细边线** ({colors.hairline}): 1px 边框
 - **柔软的细边线** ({colors.hairline-soft}: 静者
 - **发条坚固** ({colors.hairline-strong}: 强壮 1px 输入边框
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** ({colors.ink}:主要头条和正文
 - **墨迹** ({colors.ink-tint}: 首屏覆盖文字的稍柔的黑色
 - **木炭矿** ({colors.charcoal}:机构重点
@@ -61,20 +61,20 @@ The system pairs PP Editorial Old (a near-serif elegant display face) for hero d
 - **黑暗的静音** ({colors.on-dark-muted}: 减少不透明度的白色
 - **On Cream** ({colors.on-cream}): Ink text on cream surfaces
 
-### 语义
+### 语义色
 - **链接** ({colors.link}: 内置链接颜色( 匹配主橙色)
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 **PP Editorial Old** (Display):Mistral的签名近塞里夫优雅的显示类型,用于首屏显示,大量,编辑部分的开页. Carries a 略显古典,智能的性格,与当代产品定位形成对比. Fallbacks:'Times New Roman', Georgia, serif.
 
 **Inter** (UI Propose): 用于身体,导航,按钮,标签,标题的可变类型面。 退后: ui-sans-serif, system-ui, -apple-system, sans-serif.
 
 **JetBrains Mono** (代码): Monospace 用于代码块和 IDE 模型。退后: 'SF Mono', Menlo, Consolas, monospace.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 家庭 | 使用 |
 |---|---|---|---|---|---|---|
@@ -114,18 +114,18 @@ The system pairs PP Editorial Old (a near-serif elegant display face) for hero d
 - **节奏**: 销售页面使用 `{spacing.section-lg}` (96px);内容页面收紧到 `{spacing.section}` (64px)
 - **Card internal padding**: `{spacing.xl}` (24px) for compact cards; `{spacing.xxl}` (32px) for feature panels and form panels
 
-### 网格容器( C)
-- 营销页面使用情况 1280px max-width 与 32px 沟槽
+### 网格与容器
+- 营销页面使用情况 1280px max-width 配合 32px 沟槽
 - 首屏乐队使用 2- 桌面上的柱子分割( 左文本, 日落摄影右)
 - Le Studio产品页的使用 3- 首屏下面的上层特征网格
 - 联系页使用 1- 以奶油窗面板为中心(柱形布局)~520px max-width)
 - 服务页面使用 4- 带有奶油特性面板分隔条的层次卡布局
 
-### 白空间哲学
+### 留白规则
 Marketing surfaces give content generous breathing room — `{spacing.hero}` (120px) hero padding lets the mountain-sunset photography fill the frame. Form pages tighten dramatically: contact form panel uses `{spacing.xxl}` (32px) internal padding, fields stack on `{spacing.md}` (16px) gap.
 
 
-## 层次与阴影
+## 层次与深度
 
 该系统主要运行平坦,从摄影中具有战略大气深度.
 
@@ -145,7 +145,7 @@ Marketing surfaces give content generous breathing room — `{spacing.hero}` (12
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -159,7 +159,7 @@ Marketing surfaces give content generous breathing room — `{spacing.hero}` (12
 
 The radius scale is sober and editorial — Mistral does NOT use pill buttons. `{rounded.md}` (8px) for buttons, `{rounded.lg}` (12px) for cards, `{rounded.full}` reserved for badges and the rare pill tab.
 
-### 摄影几何
+### 图片形状
 - 首屏摄影是全血的大气山太阳图象,没有内部框架
 - IDE/code mockups render with `{rounded.lg}` (12px) corners on dark canvas
 - 客户标识墙以一致方式显示内含的字签 60–80px 高度( E)
@@ -192,7 +192,7 @@ The radius scale is sober and editorial — Mistral does NOT use pill buttons. `
 **`button-link`** ——内含橙色文字链接.
 - Background transparent, text `{colors.primary}`, typography `{typography.body-sm-medium}`, padding `0`. Underline on activation.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`card-base`** ——标准内容卡.
 - Background `{colors.canvas}`, rounded `{rounded.lg}`, padding `{spacing.xl}`, border `1px solid {colors.hairline-soft}`.
@@ -218,7 +218,7 @@ The radius scale is sober and editorial — Mistral does NOT use pill buttons. `
 **`pricing-card-featured`** ——特色定价等级(尖叫背景+橙色边框).
 - Background `{colors.cream}`, rounded `{rounded.lg}`, padding `{spacing.xxl}`, border `2px solid {colors.primary}`.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——标准文本字段.
 - Background `{colors.canvas}`, text `{colors.ink}`, border `1px solid {colors.hairline-strong}`, rounded `{rounded.md}`, padding `{spacing.sm} {spacing.md}`, height 44px.
@@ -294,7 +294,7 @@ The radius scale is sober and editorial — Mistral does NOT use pill buttons. `
 - 左:Mistral M-mark标志+"MISTRAL AI_"字标记+水平链接列表(Products, Solutions, Research, Blog, Clients, Company).
 - 右:"联系销售"链接+黑溢"Try Studio"CTA.
 
-### 签名组件
+### 标志性组件
 
 **`hero-band-sunset`** ——大气日落首屏乐队.
 - Background gradient `linear-gradient(135deg, {colors.sunshine-700} 0%, {colors.sunshine-900} 60%, {colors.primary} 100%)` overlaid on photographic mountain landscape.
@@ -318,7 +318,7 @@ The radius scale is sober and editorial — Mistral does NOT use pill buttons. `
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` 仅针对初级CTA和活跃状态的(饱和橙色)
 - 使用 **日落时 stripe 带** 每一页的脚下,这是品牌最能识别的签名
 - 平对 PP Editorial Old (播放)与 Inter (UI)——从不以通用替代品取代
@@ -327,7 +327,7 @@ The radius scale is sober and editorial — Mistral does NOT use pill buttons. `
 - Anchor heroes with photographic mountain-sunset imagery (or its visual equivalent — atmospheric gradient sky)
 - 使用 stat-display 符号( PP 编辑器) 56px)用于stat调用以保持编辑性能.
 
-### Don't
+### 应避免的做法
 - Don't use pill-shaped buttons (`{rounded.full}`) — Mistral's geometry is sober and editorial, not playful
 - 越橘子/黄黄/奶油夕阳调色板,不要增加强调色颜色
 - Don't reduce hero leading below 1.05 — the editorial display needs that magazine-grade tightness
@@ -336,7 +336,7 @@ The radius scale is sober and editorial — Mistral does NOT use pill buttons. `
 - Don't drop the sunset stripe band from any page bottom — it's the brand's continuity element
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 | 名称 | 宽度 | 密钥更改 |
@@ -352,7 +352,7 @@ The radius scale is sober and editorial — Mistral does NOT use pill buttons. `
 - 格式输入提供时间 44px 高度( E)
 - 胶囊形标签渲染到 ~32px 高的, 颠倒到 44px 移动
 
-### 折叠战略
+### 窄屏布局调整
 - **宣传旗** 保持全宽; 切换到 < 480px
 - **顶端导航** 下级 1024px 倒塌到汉堡
 - **首屏乐队**: 2- 柱形首屏(文本 + 摄影) 崩溃堆叠到 < 1024px
@@ -362,7 +362,7 @@ The radius scale is sober and editorial — Mistral does NOT use pill buttons. `
 - **Footer**: 5-column desktop → 3-column tablet → 1-column accordion mobile
 - **日落 stripe 带** 在所有断点上保持全宽
 
-### 图像行为
+### 图片适配
 - 山日照使用量 16:9 比例,含全血比例
 - IDE 模拟图像保持跨断点的宽度比
 - 客户端标志墙以一致的方式显示文字标记 60–80px 高度( E)

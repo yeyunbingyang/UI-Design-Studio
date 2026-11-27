@@ -24,11 +24,11 @@ Typography does almost all of the heavy lifting. A single proprietary sans, `abc
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Black** (`{colors.primary}`): The single brand action colour. Every primary CTA, every pricing-tier subscription button, every form submit pill resolves to this exact black. Used as the footer canvas as well, which extends the brand voice through the bottom of every page.
 - **Paper White** (`{colors.on-primary}`): Type colour on `{colors.primary}` surfaces; canvas of every reading section.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}`:主阅读页背景.
 - **圆筒暖** (`{colors.canvas-warm}`:近不可接受的脱白,用于在纯白之上抬起工作室-页的砖块半圆,而不失去纸的感觉.
 - **地表特征** (`{colors.hairline}`: 特色定价等级("Pro")后面的填充,以及某些桌式的横幅后面的填充——选用它近乎零饱和,所以读作一个直线步骤而不是填充.
@@ -37,7 +37,7 @@ Typography does almost all of the heavy lifting. A single proprietary sans, `abc
 - **闪光** (`{colors.scrim}`: 电影首屏摄影所铺设的大气暗层;行为为全血影像模块的"舞台"色彩.
 - **Footer** (`{colors.footer}`): Near-pure black footer canvas, one notch warmer than `{colors.primary}` so it sits visually distinct when the two stack.
 
-### 文本
+### 文字颜色
 - **Ink** (`{colors.ink}`): Primary heading and body text on `{colors.canvas}`; closest the system gets to absolute black for type.
 - **墨水软** (`{colors.ink-soft}`: 导航链接,次要标题,体格强调——比墨水软一击.
 - **Graphite** (`{colors.graphite}`): Standard body copy across marketing sections, balancing readability with calm.
@@ -46,16 +46,16 @@ Typography does almost all of the heavy lifting. A single proprietary sans, `abc
 - **石头** (`{colors.stone}`:脚眉盖和田占位符.
 - **Ash** (`{colors.ash}`): The lightest readable neutral — captions on tiles, pricing fine-print.
 
-### 语义
+### 语义色
 The system does not introduce signal colours (red, green, yellow). Validation states in forms rely on borders and copy rather than colour shifts. Where the contact form indicates a required field, the only visual cue is an asterisk in `{colors.ink}` paired with helper text in `{colors.graphite}`.
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 The entire system runs on a single proprietary sans, **abcNormal**, with `abcNormal Fallback` declared as the substitute. It is a humanist neo-grotesque in the lineage of ABC Diatype — uniform stroke contrast, flat terminals, slightly compressed counters, and a confident lowercase that suits Runway's all-lowercase wordmark. The face is used at every level; there is no second display font, no monospace, no italic specimen across marketing pages.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -79,28 +79,28 @@ The entire system runs on a single proprietary sans, **abcNormal**, with `abcNor
 - **紧紧地引导着展示,慷慨地引导着身体.** 显示大小锁定到 `line-height: 1.0`身体放松下来 `1.5`。对比值使各节具有明确的“标题-当时的段落”节奏。
 - **Uppercase reserved for two roles.** `{typography.eyebrow}` for section labels, `{typography.micro-caps}` for footer columns and small tags. Body copy is never set in uppercase.
 
-### Note on Font Substitutes
+### 替代字体
 If `abcNormal` is unavailable, the closest open-source substitutes are **ABC Diatype** (commercial) or **Inter** at -0.02em tracking on display sizes. When using Inter, lift display sizes by ~1px and pull `letter-spacing` slightly tighter (-1.4px at 48px) to recover the compressed silhouette of the original.
 
 
 ## 布局
 
 ### 间距系统
-- **基地单位**: 8px (与 4px 财务报告和已审计财务报表 6px 用于内置元素间隙的微步骤).
+- **基地单位**: 8px (与 4px 和 6px 用于内置元素间隙的微步骤).
 - **托肯斯(前题)**: `{spacing.xxs}` 4px · `{spacing.xs}` 8px · `{spacing.sm}` 12px · `{spacing.md}` 16px · `{spacing.lg}` 24px · `{spacing.xl}` 32px · `{spacing.xxl}` 48px · `{spacing.section}` 64px · `{spacing.section-lg}` 96px.
 - 内挂牌坐着 `{spacing.lg}` (24px) 节垂直节奏在两者之间替换 `{spacing.section}` (64px)用于紧读带和 `{spacing.section-lg}` (96px)用于主要模块之间的编辑间断。内置按钮编码为 `{spacing.sm}` 垂直/ 垂直 `{spacing.lg}` 水平。
 
-### 网格容器( C)
+### 网格与容器
 - 销售页在一个中央容器内制作,封顶接近 1280px 宽屏断点;文档保持宽大的左/右沟(~`{spacing.xxl}`以上每一断点 1024px.
 - The pricing surface is a 5-column equal-width grid (Free / Standard / Pro / Unlimited / Enterprise) on widescreen; each column is a vertical strip separated by 1-pixel `{colors.hairline-soft}` rules rather than gaps.
 - Research/products listings use a 12-column underlying grid where each row presents a 5/7 split: media thumbnail on the left (5 columns), aligned text block on the right (7 columns).
 - 工作室的网页故意打破纪律: 编辑海报牌的密集、不规则的瓦片, `{typography.body-tight}`,没有一致的栏目统计——该页意在读作程序网格.
 
-### 白空间哲学
+### 留白规则
 空格在 Runway 区域由 64–96px 垂直; 区域内的牌由 16–24px 空格。没有卡片阴影或彩色表面可供布局 。 `{colors.canvas}` 节奏来自 line-height 工作室的网页是例外的;它们密集的海报网格几乎被对比所笼罩,这就是重点——它们像印刷目录一样阅读。
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -117,7 +117,7 @@ The system avoids drop shadows entirely. Depth is created by photographic layeri
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -128,10 +128,10 @@ The system avoids drop shadows entirely. Depth is created by photographic layeri
 | `{rounded.lg}` | 16px | 警报旗、首屏摄影容器、全血型CTA板 |
 | `{rounded.full}` | 9999px | 每一个初级按钮(CTA药),工作室标记药 |
 
-### 摄影几何
+### 图片形状
 - **首屏静态** 它们是满血的,没有圆形的——它们延伸到页面边缘,以感受电影而不是像卡片一样的感觉.
 - **包含的首屏面板** (中页插曲) `{rounded.lg}` 角,表示"模块"而不是"页面".
-- **研究缩略图** 已经 16:9 与 `{rounded.md}` 转角和a `{colors.surface-cool}` 占位符填满。
+- **研究缩略图** 已经 16:9 配合 `{rounded.md}` 转角和a `{colors.surface-cool}` 占位符填满。
 - **工作室海报牌** 方程比(平方 4:5, 景观)和使用 `{rounded.md}` 角; 故意行为 aspect-ratio 不一致是工作室的网格 其程序目录的感觉。
 - **Avatar/logo lockups** in the partner row are rendered without rounding, in flat black wordmarks on `{colors.canvas}`, evenly spaced.
 
@@ -163,7 +163,7 @@ The system avoids drop shadows entirely. Depth is created by photographic layeri
 **`nav-link`** ——上栏菜单项
 - Background `{colors.canvas}`, text `{colors.ink-soft}`, type `{typography.link-sm}`, padding `{spacing.xs}` vertical.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`pricing-card`** ——每个标准等级(自由,标准,无限制,企业).
 - Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.lg}`, no rounding, separated from neighbouring tiers by 1px `{colors.hairline-soft}` column rules.
@@ -196,7 +196,7 @@ The system avoids drop shadows entirely. Depth is created by photographic layeri
 **`media-thumbnail`** ——图像占位符
 - Background `{colors.surface-cool}`, rounded `{rounded.md}`, ratio 16:9 by default, image lazy-loads on top.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`form-field`** ——每个联系人形式输入(选择、文本、文本区域)
 - Background `{colors.canvas}`, text `{colors.ink}`, label above field in `{typography.body}` `{colors.ink}`, helper text in `{typography.meta}` `{colors.stone}`.
@@ -221,7 +221,7 @@ The system avoids drop shadows entirely. Depth is created by photographic layeri
 **`footer-link`** ——链接列表项目
 - Background `{colors.footer}`, text `{colors.on-primary}`, type `{typography.body}`.
 
-### 签名组件
+### 标志性组件
 
 **定价 5- 科隆斯布(英语:Column Slab) - 科隆斯布(英语:Column Slab)** — Runway定价模块异常平坦: a 5- 层次板,没有彩色的边框,没有阴影,没有徽章丝带。`{colors.hairline}` )和稍重的动作按钮。将 Free → Enterprise 变成一个连续的板块而不是单独的浮牌的决定是页面的中央设计移动。
 
@@ -232,7 +232,7 @@ The system avoids drop shadows entirely. Depth is created by photographic layeri
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` 用于初级动作和页脚; 使用 `{button-primary}` 每一个主要的CTA,没有不同的角半径或填充。
 - 堆叠大写 `{typography.eyebrow}` 结束 `{typography.display}` 每一个主要区块的打开器都是系统的签名锁。
 - Use `{colors.hairline}` infill — never a coloured border — when one item in a comparison must read as featured.
@@ -241,7 +241,7 @@ The system avoids drop shadows entirely. Depth is created by photographic layeri
 - 锁定显示标题为负数 letter-spacing (`-0.9px` 改为: `-1.2px`)——紧跟追踪是品牌声音的核心.
 - 使用 `{rounded.full}` 扣子胶囊形和 `{rounded.none}` 用于表格/网格单元格。绝不混合。
 
-### Don't
+### 应避免的做法
 - 勿将强调色颜色(蓝色,绿色,红色)引入营销表面—— Runway声音是单色的 加上摄影
 - 深度是照相和直肠,不是物质的。
 - Don't badge the featured pricing tier with a coloured ribbon or border — the surface step is the badge.
@@ -251,7 +251,7 @@ The system avoids drop shadows entirely. Depth is created by photographic layeri
 - Don't render the runway wordmark in title-case or with a brand colour. It is always lowercase, in `{colors.ink}` on light surfaces and `{colors.on-primary}` on dark.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -270,13 +270,13 @@ The system avoids drop shadows entirely. Depth is created by photographic layeri
 - `{nav-link}` 项 获取 `{spacing.sm}` 移动菜单内垂直粘贴,在不改变打字功能的情况下扩展水龙头目标.
 - Pricing-tier `{button-primary}` 将全栏宽线扩展为移动式。
 
-### 折叠战略
+### 窄屏布局调整
 - **纳芙.** 居中桌面菜单崩溃为打开覆盖表的单个汉堡; 右侧 `{button-primary}` 尝试 Runway" 汉堡上方保持可见的持久作用。
 - **定价** 5-柱状板坍塌为单柱叠加的卡片,在xxs; 特征 `{colors.hairline}` 填充在Pro卡上保存,所以直肠提示能活下来。
 - **研究网格.** 5/7 分割崩溃到图像上方,文本下方,在 sm; 缩略图圆形(`{rounded.md}`)被保留.
 - **脚足.** 6- 柱状链接网格崩溃到 2- 柱子在sm和 1-xxs的栏;小写 `runway` 字签在下方左下方, 法律链接堆栈。
 
-### 图像行为
+### 图片适配
 - 首屏照片在移动(垂直-拾取)上交换到更紧的作物,因此焦点主体保持xxs宽度的中心.
 - `{media-thumbnail}` 集装箱保存其 16:9 每一断点的比率; `{colors.surface-cool}` 占位符在懒惰的负荷中填充颜料。
 - 工作室海报瓦片在每个断点保留其原始的侧面比——砖瓦只是重新流到较少的柱子.
@@ -284,11 +284,11 @@ The system avoids drop shadows entirely. Depth is created by photographic layeri
 
 ## 迭代指南
 
-1. 一次聚焦一个组件。从 `{button-primary}` 财务报告和已审计财务报表 `{nav-bar}` - 它们在每一页上都出现,并锁定系统。
+1. 一次聚焦一个组件。从 `{button-primary}` 和 `{nav-bar}` - 它们在每一页上都出现,并锁定系统。
 2. 直接引用组件名称和符号( Q)`{colors.ink}`, `{button-primary-on-dark}`, `{rounded.full}`()——不解释或替代六重值。
 3. 运行 `npx @google/design.md lint DESIGN.md` 编辑后 - `broken-ref`, `contrast-ratio`,以及 `orphaned-tokens` 警告旗自动漂移。
 4. 添加新的变体作为单独的 `components:` 条目( 4)`-pressed`, `-disabled`, `-focused`)——永远不要埋藏在传言中.
-5. 默认复制到 `{typography.body}` 重点 `{typography.body-strong}`准备金 `{typography.eyebrow}` 财务报告和已审计财务报表 `{typography.micro-caps}` 用于两个特定角色(打开部分和页脚栏)。
+5. 默认复制到 `{typography.body}` 重点 `{typography.body-strong}`准备金 `{typography.eyebrow}` 和 `{typography.micro-caps}` 用于两个特定角色(打开部分和页脚栏)。
 6. 保留 `{colors.primary}` 稀有——如果一个单一的视点中出现一个以上的黑溢出动作,则次元中和到 `{button-ghost}`.
 7. 介绍摄影时,请输入 `{colors.scrim}` 避免中段摄影强调色, 而不是覆盖全部内容宽度, 它们是在系统外读取。
 

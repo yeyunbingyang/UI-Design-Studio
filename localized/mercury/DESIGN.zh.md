@@ -26,20 +26,20 @@ One colour carries the actions in both worlds: Mercury Indigo (`{colors.primary}
 
 > 来源页分析:主页,定价页,以及商业-银行产品页.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Mercury 英迪戈语Name** (`{colors.primary}` — #5266eb:"开户"药,年价切换,计划名称中的品牌强调色("Plus","Pro"),以及"P". 10% 轻度世界二次胶囊形后面的颜色
 - **On Primary** (`{colors.on-primary}` — #ffffff): labels on indigo.
 - **佩里温克勒** (`{colors.periwinkle}` — #9cb4e8: 使用时间 20% 透明度作为"接触销售"胶囊形在暗处的填充.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — #fbfcfd:产品和定价页的浅页背景.
-- **表面** (`{colors.surface}` — #ffffff):定价卡内的分级栏,以及 email-capture 字段。
+- **界面表面** (`{colors.surface}` — #ffffff):定价卡内的分级栏,以及 email-capture 字段。
 - **表面细纹** (`{colors.surface-tint}` — #fbfbff:定价比较卡包装,比白话低语凉爽.
 - **薰衣草** (`{colors.lavender}` — #edecfb: 光页上的特性和产品卡.
 - **夜 间** (`{colors.night}` — #171721: 导航栏,主页页面底色,每个页页页的页脚.
 - **夜升起,我爱她** (`{colors.night-raised}` — #1e1e2a: 暗黑主页上的特色和聚光灯卡.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — #28253b:头条和身体在光页上.
 - **墨水中学** (`{colors.ink-secondary}` — #554e7b: 说明,标题和光页上的眉毛.
 - **黑暗时** (`{colors.on-dark}` — #ededf3:头条和主文在夜光下.
@@ -49,11 +49,11 @@ One colour carries the actions in both worlds: Mercury Indigo (`{colors.primary}
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 - **arcadiaDisplay**: Mercury标题、 统计和大引用的自定义显示面, 以字重计 480 并且卡片大小的追踪显示有微弱的正数
 - **arcadia**: 匹配文本面值以复制体( ) (360–400),UI标签和按钮(420),和小大写眉毛(500).
 
-### 等级
+### 字号层级
 
 | 调试 | 家庭 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|---|
@@ -74,7 +74,7 @@ One colour carries the actions in both worlds: Mercury Indigo (`{colors.primary}
 - 头条在卡片大小下获得一触正追踪,而不是通常的负收紧.
 - Uppercase is reserved for small eyebrows.
 
-### Note on Font Substitutes
+### 替代字体
 arcadia and arcadiaDisplay are proprietary. Inter (variable, used at 350–480) is the closest open-source match for both. Keep the light weights, and add about 0.01em of tracking at display sizes to match arcadiaDisplay's open fit.
 
 
@@ -85,15 +85,15 @@ arcadia and arcadiaDisplay are proprietary. Inter (variable, used at 350–480) 
 - **脚本**: `{spacing.xs}` 8px · `{spacing.sm}` 12px · `{spacing.md}` 16px · `{spacing.lg}` 20px · `{spacing.xl}` 24px · `{spacing.xxl}` 32px · `{spacing.huge}` 40px · `{spacing.section}` 80px · `{spacing.section-lg}` 128px.
 - 纸牌垫 `{spacing.xxl}` 和胶囊形 20px 水平。 区域由 `{spacing.section}` 改为: `{spacing.section-lg}` 垂直空间。
 
-### 网格容器( C)
+### 网格与容器
 - Content is centered in a column of roughly 1100–1200px. Headlines are narrower (~600px) and centered.
 - Feature cards run in 2- and 3-up grids. The pricing card is a 3-column comparison table about 900px wide.
 - 拆分部分将文本栏与产品模拟对齐.
 
-### 白空间哲学
+### 留白规则
 宽大的垂直空间和中心头条使每个部分都有一个平静的,类似画廊的速度。纸牌依赖于填充颜色而不是边框来与页面底色分开。
 
-### 反应战略
+### 响应式布局
 
 #### 断点
 | 名称 | 宽度 | 密钥更改 |
@@ -106,17 +106,17 @@ arcadia and arcadiaDisplay are proprietary. Inter (variable, used at 350–480) 
 #### 触控区域
 胶囊形是 40px 高, 电子邮件抓取是 46px。在触摸设备上,垫子击中区域到 44px.
 
-#### 折叠战略
+#### 窄屏布局调整
 - 导航滴药会倒入菜单,“开户”胶囊形会一直可见。
 - Card grids reflow 3 → 2 → 1 columns.
 - 头条大小为流体,与景点为比例.
 - 电子邮件将字段堆放在狭长屏幕上的按钮上方。
 
-#### 图像行为
+#### 图片适配
 Product mockups and illustrations sit inside rounded cards (`{rounded.md}`) or float on the canvas. Hero photography on the homepage is full-bleed and fades into the night canvas.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -132,7 +132,7 @@ Product mockups and illustrations sit inside rounded cards (`{rounded.md}`) or f
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -145,8 +145,8 @@ Product mockups and illustrations sit inside rounded cards (`{rounded.md}`) or f
 | `{rounded.pill}` | 40px | 中药和导航药 |
 | `{rounded.full}` | 9999px | 回合图标按钮、切换、电子邮件抓取 |
 
-### 摄影几何
-产品截图和插图 `{rounded.md}` 或 减 减 `{rounded.lg}` 框式,首屏摄影是全血型的,客户标志是作为平面单色条形物出现的.
+### 图片形状
+产品截图和插图 `{rounded.md}` 或 `{rounded.lg}` 框式,首屏摄影是全血型的,客户标志是作为平面单色条形物出现的.
 
 
 ## 组件
@@ -171,11 +171,11 @@ Product mockups and illustrations sit inside rounded cards (`{rounded.md}`) or f
 
 **`button-outline-light`**: a grey-violet pill at 10% opacity with a 1px border at 22% and an `{colors.ink}` label. Used for "Contact sales" on light heroes.
 
-**`button-small`**: a 32px- 整个版本 `button-tint-light` 输入 `{typography.ui-sm}` 与 0 × 16px 垫( “扩展全部 ” ) 。
+**`button-small`**: a 32px- 整个版本 `button-tint-light` 输入 `{typography.ui-sm}` 配合 0 × 16px 垫( “扩展全部 ” ) 。
 
 **`button-icon-round`**: circular 图标控件( 图标控件) (`{rounded.full}`)用于游戏/暂停和聚光灯卡上的"+"支付.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`**: 电子邮件字段 `{typography.ui}` 文本, 单词 20px 左边的垫子, 46px 高度,还有 `{rounded.xl}` 左边缘,所以它会连接到旁边的按钮上
 
@@ -183,19 +183,19 @@ Product mockups and illustrations sit inside rounded cards (`{rounded.md}`) or f
 
 **`toggle-switch`**: a `{colors.primary}` 胶囊形开关在旁边 `{colors.ink-secondary}` `{typography.ui}` 标签(“年度定价”15% )),"("关闭").
 
-### 纸牌和集装箱
+### 卡片与容器
 
-**`feature-card-dark`**: `{colors.night-raised}` 满, `{rounded.md}` 转角 `{spacing.xxl}` 贴纸, a `{typography.heading-2}` 标题在 `{colors.on-dark}` 财务报告和已审计财务报表 `{colors.fog}` 身体复制,用于主页聚光灯和特征卡片。
+**`feature-card-dark`**: `{colors.night-raised}` 满, `{rounded.md}` 转角 `{spacing.xxl}` 贴纸, a `{typography.heading-2}` 标题在 `{colors.on-dark}` 和 `{colors.fog}` 身体复制,用于主页聚光灯和特征卡片。
 
 **`feature-card-light`**: 相同的形状 `{colors.lavender}`,与 `{colors.ink}` 标题和标题 `{colors.ink-secondary}` `{typography.body-lg}` 用于产品平台卡。
 
 **`pricing-card`**: a `{colors.surface-tint}` wrapper with `{rounded.md}` corners and a very faint shadow. It holds a header row with a `eyebrow-label` and `toggle-switch`, then three `pricing-tier-column`s.
 
-**`pricing-tier-column`**: 白色柱,计划名称在 `{typography.heading-2}` (计划后缀在 `{colors.primary}`),价格,a `{colors.ink-secondary}` 说明,a `button-tint-light` 或 减 减 `button-primary`,并有一个图标引导的特性列表。
+**`pricing-tier-column`**: 白色柱,计划名称在 `{typography.heading-2}` (计划后缀在 `{colors.primary}`),价格,a `{colors.ink-secondary}` 说明,a `button-tint-light` 或 `button-primary`,并有一个图标引导的特性列表。
 
 **`accordion-row`**: 一条全宽的行, 并带有主要图标, a `{typography.ui-sm}` 标签,一个后期的切夫龙, 10px 垂直粘贴和 a 1px `{colors.fog}` 用于计划比较和FAQs。
 
-### 签名组件
+### 标志性组件
 
 **`eyebrow-label`**: uppercase `{typography.eyebrow}` in `{colors.ink-secondary}` on light pages and `{colors.fog}` on dark ("COMPARE PLANS").
 
@@ -207,45 +207,45 @@ Product mockups and illustrations sit inside rounded cards (`{rounded.md}`) or f
 
 **`site-footer`**: a `{colors.night}` 带多列链接列表的带 `{colors.fog}`,列头输入 `{colors.on-dark}`,并长块 `{typography.legal}` 免责声明。
 
-### 实例(说明性)
+### 组合示例
 
 > 自动生成的工具包-模拟演示表面(`scripts/derive-examples-block.mjs`。每个 `ex-*` 条目参考: 下游消费者的品牌原始产品(`/preview-design`, `/generate-kit`) 重新皮肤相同 10 表面一致。
 
-**`ex-pricing-tier`** ——默认定价等级卡。 feature-card 带品牌的铬 canvas-soft 表面。
+**`ex-pricing-tier`**：默认套餐卡，沿用功能卡结构和品牌 canvas-soft 底色。
 - 属性 : `backgroundColor`, `textColor`, `borderColor`, `rounded`, `padding`
 
-**`ex-pricing-tier-featured`** ——地貌/高亮的层次——极性-浮点表面(暗色填充+光线文字在光线模式下,浅色填充+暗色文字在暗线模式下).
+**`ex-pricing-tier-featured`**：推荐套餐卡。浅色模式中用深底浅字，深色模式中用浅底深字。
 - 属性 : `backgroundColor`, `textColor`, `rounded`, `padding`
 
-**`ex-product-selector`** ——什么是包含的汇总卡——重新用于SaaS/B2B纵横(NOT为字形产品画廊).
+**`ex-product-selector`**：面向 SaaS / B2B 场景的套餐权益摘要卡。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-cart-drawer`** ——订阅摘要——重新用于SaaS/B2B(每件加件的行项目,而非字面车).
+**`ex-cart-drawer`**：SaaS / B2B 订阅摘要，每个附加项单独列出。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `item-divider`
 
-**`ex-app-shell-row`** ——App Shell 实例中的侧边栏导航行. Active State 使用品牌主标.
+**`ex-app-shell-row`**：应用框架示例里的侧栏导航行，以品牌主色标识选中状态。
 - 属性 : `backgroundColor`, `activeIndicator`, `rounded`, `padding`
 
-**`ex-data-table-cell`** — Default data-table th + td chrome. Header uses mono-caps eyebrow typography; body uses body-sm.
+**`ex-data-table-cell`**：数据表格中 th 与 td 的默认样式。表头采用大写等宽字，正文采用 body-sm。
 - 属性 : `headerBackground`, `headerTypography`, `bodyTypography`, `cellPadding`, `rowBorder`
 
-**`ex-auth-form-card`** ——签入/签入卡. 复用. feature-card 铬 text-input 原始人在里面,他们都在里面
+**`ex-auth-form-card`**：登录与注册卡，复用功能卡和 text-input。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-modal-card`** ——模度对话框表面——与 feature-card 以高的阴影盟誓,
+**`ex-modal-card`**：对话框表面，沿用功能卡样式并加浮层投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-empty-state-card`** ——空状态插图框架.
+**`ex-empty-state-card`**：空状态插图容器。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `captionTypography`
 
-**`ex-toast`** ——通知表面. feature-card 形状 + 中阴影。
+**`ex-toast`**：轻提示，沿用功能卡圆角并使用中等投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `typography`
 
 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 使用 `{colors.primary}` 用于视图上最重要的单一动作,通常为"打开账户".
 - 制作半透明避孕药(`{rounded.pill}`:紫色-灰色或近温克色在暗色,英迪戈或灰紫色的色线在光线上.
 - 带有 `{colors.night}` 导航和脚步。
@@ -253,7 +253,7 @@ Product mockups and illustrations sit inside rounded cards (`{rounded.md}`) or f
 - 将牌与页面底色分开, 并填充( Name`{colors.lavender}`, `{colors.night-raised}`而不是边际或沉重的阴影。
 - 中心部分头条和给条 `{spacing.section}` 或更多垂直空间。
 
-### Don't
+### 应避免的做法
 - 少用一个固件 `{colors.primary}` 按钮。其他的都保持半透明。
 - Don't set text in heavy bold weights. The brand never goes above 500.
 - 动作上不要使用硬的简写按钮或方角.

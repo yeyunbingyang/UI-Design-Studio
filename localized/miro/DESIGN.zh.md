@@ -24,7 +24,7 @@ Roobert PRO — Miro's custom display face — anchors every typographic surface
 
 > Source pages: miro.com/ (homepage), /pricing/ (4-tier comparison), /products/ai-workflows/ (AI product), /agile/ (vertical landing), /customers/ (story directory). Token coverage was identical across all five pages.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Miro 黄色** ({colors.brand-yellow}:品牌可识别金丝雀黄色——字标颜色,上标宣传旗,"黄牌"丸.
 - **黄深** ({colors.brand-yellow-deep}: 悬浮状态和突出度的变种变暗
 - **黄光** ({colors.yellow-light}:标签芯片的淡黄色背景锡
@@ -41,9 +41,9 @@ Roobert PRO — Miro's custom display face — anchors every typographic surface
 - **品牌粉红** ({colors.brand-pink}: 粉色淡粉色表示软调用
 - **橙色的光线** ({colors.brand-orange-light}: 特征卡背景的软橙色
 
-### 表面
+### 界面表面
 - **Canvas White** ({colors.canvas}): Page background and primary card surface
-- **表面** ({colors.surface}: 细小的一节背景, search-pill 休息时间
+- **界面表面** ({colors.surface}: 细小的一节背景, search-pill 休息时间
 - **表面软** ({colors.surface-soft}: 静静分科
 - **表面黄色** ({colors.surface-yellow}: 标签芯片的淡黄色丁丁表面
 - **表面定价特征** ({colors.surface-pricing-featured}: 彩色薰衣草,用于突出定价等级
@@ -51,7 +51,7 @@ Roobert PRO — Miro's custom display face — anchors every typographic surface
 - **柔软的细边线** ({colors.hairline-soft}: 静点的桌排分隔器
 - **发条坚固** ({colors.hairline-strong}: 强壮 1px 输入边框
 
-### 文本
+### 文字颜色
 - **墨水深处** ({colors.ink-deep}: 轻便特性卡上的标题
 - **墨水( 墨水 )** ({colors.ink}:主要头条和正文
 - **木炭矿** ({colors.charcoal}: 机构重点案文
@@ -62,7 +62,7 @@ Roobert PRO — Miro's custom display face — anchors every typographic surface
 - **黑暗时** ({colors.on-dark}: 暗面的白文本
 - **黑暗的静音** ({colors.on-dark-muted}: 暗色上减少不透明白色
 
-### 语义
+### 语义色
 - **成功成绩** ({colors.success-accent}:确认/成功指标绿色
 - **品牌红** ({colors.brand-red}: 错误背景的软红色
 - **品牌红色暗色** ({colors.brand-red-dark}: 错误边框的更强烈红色
@@ -70,10 +70,10 @@ Roobert PRO — Miro's custom display face — anchors every typographic surface
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 **Roobert PRO** (小学): Miro定制几何 sans-serif 类型面。从超大小到每个UI表面使用 80px 显示为首屏 11px 微标签 面部具有略微圆形,友好的特征,与品牌的游戏产品定位相匹配. Fallbacks: Noto Sans,,. -apple-system, BlinkMacSystemFont, sans-serif.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -111,17 +111,17 @@ Roobert PRO — Miro's custom display face — anchors every typographic surface
 - **节奏**: 销售页面使用 `{spacing.section-lg}` (96px),价格比较收紧到 `{spacing.section}` (64px); 客户故事堆栈使用 `{spacing.xxl}` (32px)
 - **Card internal padding**: `{spacing.xl}` (24px) for compact cards; `{spacing.xxl}` (32px) for feature panels
 
-### 网格容器( C)
-- 营销页面使用情况 1280px max-width 与 32px 沟槽
+### 网格与容器
+- 营销页面使用情况 1280px max-width 配合 32px 沟槽
 - 定价页面 4- 桌面上的一级牌行( 自由/ 启动 / 商业/ 企业)
 - 客户故事页面使用 2- 带过滤器的列网
 - AI 工作流程页面使用 2- 柱子首屏,然后, 3- 上层特性网格
 
-### 白空间哲学
+### 留白规则
 Marketing surfaces give content generous breathing room — `{spacing.hero}` (120px) hero padding gives the small wordmark room to breathe. Pricing surfaces tighten dramatically.
 
 
-## 层次与阴影
+## 层次与深度
 
 该系统主要运行平坦,在首屏模型上具有战略深度.
 
@@ -141,7 +141,7 @@ Marketing surfaces give content generous breathing room — `{spacing.hero}` (12
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -155,7 +155,7 @@ Marketing surfaces give content generous breathing room — `{spacing.hero}` (12
 | `{rounded.feature}` | 32px | 首屏CTA旗下卡片 |
 | `{rounded.full}` | 9999px | All buttons, pill tabs, badges |
 
-### 摄影几何
+### 图片形状
 - Real Miro board mockups render with `{rounded.xl}` (16px) corners and a subtle drop shadow
 - Customer story cards use `{rounded.xxxl}` (28px) corners with full-bleed photography
 - 使用模板卡缩略图 `{rounded.xl}` (16px) 图片内容
@@ -194,7 +194,7 @@ Marketing surfaces give content generous breathing room — `{spacing.hero}` (12
 **`button-icon-circular`** — 36×36px circular 工具按钮。
 - Background `{colors.canvas}`, text `{colors.ink}`, border `1px solid {colors.hairline}`, rounded `{rounded.full}`.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`card-base`** ——标准内容卡.
 - Background `{colors.canvas}`, rounded `{rounded.xl}`, padding `{spacing.xl}`, border `1px solid {colors.hairline-soft}`.
@@ -229,7 +229,7 @@ Marketing surfaces give content generous breathing room — `{spacing.hero}` (12
 **`pricing-card-enterprise`** ——暗黑坎瓦斯企业级卡.
 - Background `{colors.primary}`, text `{colors.on-primary}`, rounded `{rounded.xl}`, padding `{spacing.xxl}`.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——标准文本字段.
 - Background `{colors.canvas}`, text `{colors.ink}`, border `1px solid {colors.hairline-strong}`, rounded `{rounded.md}`, padding `{spacing.sm} {spacing.md}`, height 44px.
@@ -313,7 +313,7 @@ Marketing surfaces give content generous breathing room — `{spacing.hero}` (12
 - 左侧:黄色方形 Miro 单词标记+水平链接列表(Production, Solutions,Resources).
 - Right: "Login / Pricing / Contact sales" links + black-pill "Get started free".
 
-### 签名组件
+### 标志性组件
 
 **`hero-band-marketing`** - 营销首屏乐队。
 - Background `{colors.canvas}`, padding `{spacing.hero}`.
@@ -333,7 +333,7 @@ Marketing surfaces give content generous breathing room — `{spacing.hero}` (12
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.brand-yellow}` 用于文字标记、顶端宣传旗和“黄色标签”芯片
 - 使用 `{colors.primary}` (黑色)作为所有表面的主要CTA
 - 同一景点的白面卡(黄色、玫瑰、珊瑚、泰尔)
@@ -342,7 +342,7 @@ Marketing surfaces give content generous breathing room — `{spacing.hero}` (12
 - 使用真实 Miro- 板模型作为特征插图
 - 维护 Roobert PRO 跨越每个UI表面
 
-### Don't
+### 应避免的做法
 - Don't use `{colors.brand-yellow}` on standard CTAs or large background surfaces
 - 黄牌和品牌面条之外不要增加强调色颜色
 - Don't soften corners on buttons; the pill is a brand signature
@@ -351,7 +351,7 @@ Marketing surfaces give content generous breathing room — `{spacing.hero}` (12
 - Don't use stock photography — show the live product board UI
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 | 名称 | 宽度 | 密钥更改 |
@@ -368,7 +368,7 @@ Marketing surfaces give content generous breathing room — `{spacing.hero}` (12
 - 格式输入提供时间 44px 高度( E)
 - 过滤器滴入渲染到 ~36px 高的, 颠倒到 44px 移动
 
-### 折叠战略
+### 窄屏布局调整
 - **宣传旗** 保持全宽; 切换到 < 480px
 - **顶端导航** 下级 1024px 倒塌到汉堡
 - **首屏乐队**: 2-柱子首屏崩溃 堆积在 < 1024px
@@ -377,7 +377,7 @@ Marketing surfaces give content generous breathing room — `{spacing.hero}` (12
 - **首屏打字技术**: 80px → 60px 平板电脑 48px 移动大号 ∗_ 36px 移动小号
 - **Footer**: 6-column desktop → 3-column tablet → 2-column mobile → accordion at small mobile
 
-### 图像行为
+### 图片适配
 - 白板模型保持宽度比; 懒惰地装入折叠以下
 - 客户故事摄影用途 16:9 比例,含全血比例
 - logo 墙以一致方式显示字标记 100px 高度( E)

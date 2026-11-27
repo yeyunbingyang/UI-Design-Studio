@@ -26,23 +26,23 @@ Body type is **Inter Variable**, with Framer leaning hard into Inter's character
 
 > Source pages: framer.com (home), /ai/, /startups/, /marketplace/templates/nudge/, /gallery/a16z-speedrun-×-tonik, /pricing.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **纯白** ({colors.primary}:品牌主面,每粒主CTA胶囊形,每张显示头条,每张页面底色上的身体线.
 - **Sky Blue** ({colors.accent-blue}): The single chromatic accent. Hyperlinks, focused-input rings, and a few selection states. Never used for backgrounds or as a brand fill.
 
-### 表面
+### 界面表面
 - **页面底色** ({colors.canvas}:默认页面背景——近黑带微弱的暖气,页脚,定价,首屏,FAQ都坐在上面.
-- **表面 1** ({colors.surface-1}:页面底色上方的一步——定价卡,二级按钮,模具瓦片.
-- **表面 2** ({colors.surface-2}:以上两步——特色定价卡,首屏丸背景,选价标签.
+- **界面表面 1** ({colors.surface-1}:页面底色上方的一步——定价卡,二级按钮,模具瓦片.
+- **界面表面 2** ({colors.surface-2}:以上两步——特色定价卡,首屏丸背景,选价标签.
 - **细边线** ({colors.hairline}): 1px 输入组的边框, comparison-table 分数。
 - **柔软的细边线** ({colors.hairline-soft}:Subtler 划分器——在FAQ行和页脚列规则之间.
 - **反向画廊** ({colors.inverse-canvas}:纯白色 – 用作浅色暗色胶囊形CTA的表面,以及嵌入在显示网格中的一小组浅色模版模板缩略图.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** ({colors.ink}:所有头条和强调的体型——纯白色.
 - **Ink Muted** ({colors.ink-muted}): Secondary type — gray (#999999) used for meta info, footer columns, comparison-row labels, deselected pricing tabs. Hierarchy on the dark canvas is carried by ink → ink-muted contrast, not by weight changes.
 
-### 语义
+### 语义色
 - **成功绿色** ({colors.semantic-success}: 定价 comparison-table 支票标记 格氏填充,不是表面
 
 ### 品牌渐变( 签名)
@@ -56,13 +56,13 @@ These four sit as oversized atmospheric tiles inside otherwise monochrome card g
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 
 - **GT Walsheim Framer Medium** / **GT Walsheim Medium** — Framer's display typeface. Geometric, slightly humanist, very confident at large sizes with extreme negative tracking. Fallbacks: `GT Walsheim Medium Placeholder` system font.
 - **Inter Variable** ——系统车身型式。 使用时有广泛的 OpenType 字符变体 : `cv01` (候补)1"), `cv05` (备选案文"g"), `cv09` (备选案文"i"/"l"), `cv11` (候补)0"), `ss03` / `ss07` 结构化的套装, `dlig` 自由裁量结扎,以及 `tnum` 用于表格中的数字。结果是一个身体声音,它感觉自己说话时不使用自定义面孔。
 - **Inter** — Used selectively for `{typography.headline}` (the 22px / 20px tier). The non-variable cut catches small tracking targets that the variable file rounds.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -86,7 +86,7 @@ These four sit as oversized atmospheric tiles inside otherwise monochrome card g
 - **字重留在狭长的乐队里.** 显示位置 500,身体在 400, body-sm标题 500。分级由大小+跟踪来进行,而不是由 700/900 斜坡 斜坡
 - **紧行高处处.** 连身体都跑来跑去 1.30 — Framer编辑基调比典型的SaaS营销更密集.
 
-### Note on Font Substitutes
+### 替代字体
 
 If implementing without GT Walsheim Medium, suitable open-source substitutes include **Mona Sans**, **Geist**, or **Inter** at weight 600–700 with manually tightened tracking. Mona Sans's hairline weights at 100–300 are particularly close to Framer's cleaner section openers. Inter Variable is open-source — keep it as-is and preserve the documented OpenType variants.
 
@@ -101,18 +101,18 @@ If implementing without GT Walsheim Medium, suitable open-source substitutes inc
 - 胶囊形按钮 padding: 10px vertical · 15px horizontal — `{components.button-primary}`.
 - Section padding (vertical): roughly `{spacing.section}` 96px on home; tighter (~64px) on pricing comparison.
 
-### 网格容器( C)
+### 网格与容器
 
 - 最大内容宽度位于 1199px 断点,有侧沟 向着 `{spacing.xl}` 。在桌面上。
 - Card grids on the home gallery use 2-up at desktop, collapsing to 1-up below 810px.
 - 定价等级网格为 4- 横跨文件记录的断点;其下方的比较表使用带水平滚动的、宽度窄的左侧固定宽度列。
 
-### 白空间哲学
+### 留白规则
 
 暗色的页面底色是白空间 轻点的品牌靠着白空气 分开的片段 Framer 偏倚黑色的长长的伸展,中间浮着一个单一的超大小的语句。通过模式变化将各部分分开:一串木炭卡,然后是一串带有梯度聚光灯的黑色卡,然后回到木炭——像暗片中的切片.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -132,7 +132,7 @@ If implementing without GT Walsheim Medium, suitable open-source substitutes inc
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 Framer提取的半径集异常颗粒( Q)1px, 4px, 5px, 6px, 8px, 10px, 12px, 15px, 20px, 30px, 40px, 100px)以下命名的尺度选择营销表面实际消耗的水平。
 
@@ -177,13 +177,13 @@ Framer提取的半径集异常颗粒( Q)1px, 4px, 5px, 6px, 8px, 10px, 12px, 15p
 - Default: `{colors.canvas}` background, `{colors.ink-muted}` text, rounded `{rounded.pill}`.
 - Selected: `{colors.surface-2}` background, `{colors.ink}` text — selected = lift, not color. Surface depth communicates "active" without needing a chromatic fill.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** + **`text-input-focused`** - 表格字段在 `/pricing` (座标,货币转换器)和产品预览表面.
 - Background `{colors.surface-1}`, text `{colors.ink}`, type `{typography.body}`, rounded `{rounded.md}`, padding 10px 14px.
 - 焦点状态保留着相同的表面;焦点环是水平-3 蓝色丁丁型阴影 `rgba(0,153,255,0.15)` 0 0 0 1px.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`pricing-card`** - 每一级 `/pricing`.
 - Background `{colors.surface-1}`, text `{colors.ink}`, type `{typography.body}`, rounded `{rounded.xl}`, padding 24px.
@@ -235,7 +235,7 @@ Framer提取的半径集异常颗粒( Q)1px, 4px, 5px, 6px, 8px, 10px, 12px, 15p
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 
 - 准备金 `{colors.primary}` (白话)和 `{colors.canvas}` (近黑)作为系统的两个锚面,页面的每个带选择一个或另一个.
 - 推动显示大小 letter-spacing 强烈的负面- `{typography.display-xxl}` 时 间 -5.5px 是一个品牌签名,而不是一个结构上的意外。
@@ -245,10 +245,10 @@ Framer提取的半径集异常颗粒( Q)1px, 4px, 5px, 6px, 8px, 10px, 12px, 15p
 - 保持车体类型 Inter Variable 带有字符变体 `cv01`, `cv05`, `cv09`, `cv11`, `ss03`, `ss07` 启用——品牌声音取决于他们.
 - Use surface lift (canvas → surface-1 → surface-2) to mark hierarchy on dark, not opacity changes on white type.
 
-### Don't
+### 应避免的做法
 
 - Don't ship a light-mode marketing page. Framer's identity is dark.
-- 外面不要介绍中音灰色文字 `{colors.ink-muted}`。等级为二进制 : `ink` 或 减 减 `ink-muted`.
+- 外面不要介绍中音灰色文字 `{colors.ink-muted}`。等级为二进制 : `ink` 或 `ink-muted`.
 - Don't use `{colors.accent-blue}` as a brand fill (e.g., a blue CTA pill). The blue is a signal color, not a surface.
 - Don't square off CTAs. Pill (`{rounded.pill}`) or full circle is the brand vocabulary.
 - Don't reduce the negative letter-spacing on display sizes "for accessibility". The compression is intrinsic to the brand voice; reduce the SIZE if needed, but keep the percentage.
@@ -256,7 +256,7 @@ Framer提取的半径集异常颗粒( Q)1px, 4px, 5px, 6px, 8px, 10px, 12px, 15p
 - Don't combine more than one chromatic accent. The palette is monochrome plus one blue plus the gradient family — not "blue, green, and red".
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -273,14 +273,14 @@ Framer提取的半径集异常颗粒( Q)1px, 4px, 5px, 6px, 8px, 10px, 12px, 15p
 - Circular 图标按钮(`button-icon-circular`)是(或)是(或)是(或)是(或)是(或)是(或)是(或)是(或)是(或)是(或)是(或)是(或)是(或)是(或)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是(或是)是(或是)是)是(或是)是(或是)是(或是(或是)是(或是)是(或是( 40px 并成长为 44px 触摸视点
 - Pricing-tab pills hold ≥40px tap height; below 810px they may collapse into a horizontal-scroll row instead of stacking.
 
-### 折叠战略
+### 窄屏布局调整
 
 - **导航**: 水平导航, 带中心连接组 + 右安眠药对 崩溃到下面的汉堡包上 810px。该词 `button-primary` 保持可见的在酒吧。
 - **Card grids**: the gallery and template-card grids go 2-up on desktop → 1-up on mobile. Gradient spotlight cards retain `{rounded.xxl}` corners at every viewport — they don't bleed.
 - **定价比较表**: 下方每级手风琴发生坍塌 810px 以避免横向滚动。
 - **显示类型**: `{typography.display-xxl}` 110px 缩放 `{typography.display-lg}` 62px 平板电脑和 `{typography.display-md}` 32px 移动中,保留百分比负数 letter-spacing.
 
-### 图像行为
+### 图片适配
 
 - 嵌入式产品模型(包含活性浏览器框架) Framer——建成的工地)保持其尺寸比,永远不收成.
 - 渐变聚光灯卡保持其跨断点的梯度方向——梯度方向是品牌光谱的一部分.

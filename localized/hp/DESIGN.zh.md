@@ -26,13 +26,13 @@ HP reads like a long-running consumer-electronics catalog crossed with an enterp
 
 > **No Interaction sub-section.** Hover colors are silently filtered. Allowed sub-sections: Brand & Accent, Surface, Text, Semantic.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **HP 电蓝色** (`{colors.primary}` — `#024ad8`:系统单调信号——主CTA填充,链接颜色, chevron-decoration 填充, 活动 sub-nav 指标。
 - **亮蓝色** (`{colors.primary-bright}` — `#296ef9`:一种在暗片内使用的略轻的变体(A.testimonial-card 按钮,暗带CTA链接),其中深蓝色会泥巴化.
 - **深海军** (`{colors.primary-deep}` — `#0e3191`:按下状态表示主CTA和访问的-链接颜色.
 - **软蓝色** (`{colors.primary-soft}` — `#c9e0fc`): pale-blue 客户-故事卡片和选择芯片内表面使用。
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — `#ffffff`: 通用页面背景. 白色,完全不透明.
 - **纸张** (`{colors.paper}` — `#ffffff`:卡片表面——与页面底色一样白色,有细边线边框或阴影提供升降机.
 - **云门** (`{colors.cloud}` — `#f7f7f7`:最浅灰色的段带,用于交替行间背景和产品版卡片组.
@@ -41,7 +41,7 @@ HP reads like a long-running consumer-electronics catalog crossed with an enterp
 - **Bloom Coral / Bloom Rose** (`{colors.bloom-coral}` / `{colors.bloom-rose}` — `#ff5050`, `#f9d4d2`): the "Get 25% off" sale-tag chip + soft pink lifestyle accent on the sale hero.
 - **风暴雾/海/深** (`{colors.storm-mist}`, `{colors.storm-sea}`, `{colors.storm-deep}` — `#8ebdce`, `#7fadbe`, `#356373`:为打印机-图案图案背景预留的构造暴风声,以及支持的图案性强调色.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — `#1a1a1a`:白色表面的通用文本颜色——头条,体,按钮标签,导航.
 - **墨水深处** (`{colors.ink-deep}` — `#000000`: 纯黑色用于字签和 1px 发条上打着警徽图案
 - **墨水软** (`{colors.ink-soft}` — `#292929`: 内部使用的备用近黑 dark-navy 板块作为微妙的文字转变.
@@ -49,20 +49,20 @@ HP reads like a long-running consumer-electronics catalog crossed with an enterp
 - **木炭矿** (`{colors.charcoal}` — `#3d3d3d`: 白色表面的哑巴色体——二级描述, fine-print 免责声明。
 - **Graphite** (`{colors.graphite}` — `#636363`): smaller-print color, used for legal lines and timestamp metadata.
 
-### 语义
+### 语义色
 - **布鲁姆深** (`{colors.bloom-deep}` — `#b3262b`) + **布鲁姆葡萄酒** (`{colors.bloom-wine}` — `#5a1313`:错误和折角色。深砖根据位置来读作“出售”或“破坏性”。
 - **风暴深层** (`{colors.storm-deep}` — `#356373`:用作中性状态强调色(如打印机-平面图级"Versatile"级颜色).
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 
 声音是 **单身家庭**: Forma DJR Micro (HP几何怪异,倒置 Arial)横跨每个表面——显示,身体,按钮,标题. Forma DJR Micro 是一种宽的,略圆形的杂耍,设计时光学尺寸小,在UI-色度上可辨认。 HP 以字重运行它 400 身体,为 500 显示头条, 600/700 用于加亮和按钮标签。
 
 The 16/14/12-px caption tier carries the catalog metadata — model numbers, spec rows, fine print — at weight 400 with a 1.4–1.5 line-height. Button labels lift to weight 600/700 with positive 0.5–1.1px letter-spacing and uppercase transform — the only place the system tracks letters.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -89,7 +89,7 @@ The typographic decision worth flagging: HP runs **weight 500 for every display 
 
 Forma DJR Micro's rounded-grotesque shapes do most of the warmth. There's no italic in the system except inside legal disclaimers; emphasis is carried by weight (500 → body-emphasis, 700 → caption-bold) instead.
 
-### Note on Font Substitutes
+### 替代字体
 
 Forma DJR Micro is proprietary (Commercial Type / Mark Caneso). Closest open-source substitutes:
 - **Inter** 重量 400 / 500 / 600 / 700 - 略小于 Forma DJR Micro; 颠倒 font-size 由 ~3% 补偿
@@ -103,7 +103,7 @@ Forma DJR Micro is proprietary (Commercial Type / Mark Caneso). Closest open-sou
 
 ### 间距系统
 
-- **基地单位**: 8px。 更小的半步步数 。 4px。比例表很温和——大多数纸片铺设土地位于 16px 或 减 减 24px; 节间距 80px.
+- **基地单位**: 8px。 更小的半步步数 。 4px。比例表很温和——大多数纸片铺设土地位于 16px 或 24px; 节间距 80px.
 - **托肯斯(前题)**: `{spacing.xxs}` 4px · `{spacing.xs}` 8px · `{spacing.sm}` 12px · `{spacing.md}` 16px · `{spacing.lg}` 20px · `{spacing.xl}` 24px · `{spacing.xxl}` 32px · `{spacing.section}` 80px
 - **Section padding**: `{spacing.section}` (80px) vertical between major bands on desktop; collapses to ~48px on mobile.
 - **Card internal padding**: `{spacing.xl}` (24px) for product cards; `{spacing.xxl}` (32px) for promo strips and feature cards; `{spacing.md}` (16px) for compact article tiles.
@@ -111,7 +111,7 @@ Forma DJR Micro is proprietary (Commercial Type / Mark Caneso). Closest open-sou
 
 电话 80px 节间隙是通用节奏常数——它出现在每个主页的乐队之间,在主角和打印机-计划页的比较表之间,以及在笔记本电脑-商店页的功能行之间.
 
-### 网格容器( C)
+### 网格与容器
 
 - **桌面 max-width**: 1366px 含有全血色的扫描片区域背景的内容容器。
 - **首屏们**:单张全宽照片卡(主页和笔记本hub首屏),头条上盖位置为左上或右上.
@@ -119,12 +119,12 @@ Forma DJR Micro is proprietary (Commercial Type / Mark Caneso). Closest open-sou
 - **定价等级**: 4 列数 >1024px, 2x2 网格 : 768–1023px,下方单柱手风琴 768px.
 - **Footer**: 5-column link grid at >1024px, collapsing to 2-column then accordion on mobile.
 
-### 白空间哲学
+### 留白规则
 
 Whitespace is **commercial-clean** — generous around hero photography, tight around catalog spec rows. Product cards leave breathing room above and below the photo (≥32px) so the laptop or printer reads as a hero shot rather than a thumbnail. The fine-print disclaimer regions (legal, footnote rows) tighten line-height to 1.3 and shrink type to 11–12px so the bulk of fine print stays compact.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -144,7 +144,7 @@ The system's most distinctive depth gesture is the **HP blue chevron pair** — 
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -158,7 +158,7 @@ The system's most distinctive depth gesture is the **HP blue chevron pair** — 
 
 该系统保持明确的两级哲学: **按钮保持锐度** (4px,几乎直线),而 **纸牌和相片框保持软** (16px)这个分割是视觉特征——尖锐的交互元素对较软的容器表面.
 
-### 摄影几何
+### 图片形状
 
 Hero photography sits in `{rounded.xl}` (16px) frames with no border. Product family thumbnails inside the laptop-grid are 1:1 (square) on a `{colors.canvas}` background, padded so the laptop is shown at ~70% of the frame. Customer-story photography uses 16:9 inside the same `{rounded.xl}` frame. There are no full-bleed circular avatars; testimonial avatars are 4px-rounded squares.
 
@@ -191,7 +191,7 @@ Hero photography sits in `{rounded.xl}` (16px) frames with no border. Product fa
 - Background `{colors.canvas}`, text `{colors.primary}`, type `{typography.link-md}`, padding `{spacing.xxs} 0`
 - 用于:"见细节","多读"内卡和免责行
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`card-product`** ——工作马产品瓦片.
 - Background `{colors.canvas}`, rounded `{rounded.xl}` (16px), padding `{spacing.xl}` (24px), Soft Lift shadow
@@ -205,7 +205,7 @@ Hero photography sits in `{rounded.xl}` (16px) frames with no border. Product fa
 
 **`card-pricing-tier`** + **`card-pricing-tier-featured`**
 - Background `{colors.canvas}`, rounded `{rounded.xl}`, padding `{spacing.xl}`, Soft Lift shadow
-- 分级名称在 `{typography.display-sm}`月价单位 `{typography.display-md}` 与 `{typography.caption-md}` cadence,页数标题,完整特性列表,主 CTA
+- 分级名称在 `{typography.display-sm}`月价单位 `{typography.display-md}` 配合 `{typography.caption-md}` cadence,页数标题,完整特性列表,主 CTA
 - 特级载体 `{colors.primary}` 标价加a的文本强调色 `{colors.primary}` 薄的顶边框, 而不是彩色卡片背景 —— 从未倒转为暗色 。
 
 **`card-customer-story`** ——三升证瓦.
@@ -231,7 +231,7 @@ Hero photography sits in `{rounded.xl}` (16px) frames with no border. Product fa
 - Background `{colors.ink}`, text `{colors.on-ink}`, rounded `{rounded.xl}`, padding `{spacing.xxl} 48px`
 - 曾用于:"工期何时开始妨碍工期?"中篇宣传,SMB证材板
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** + **`text-input-focused`**
 - Background `{colors.canvas}`, text `{colors.ink}`, rounded `{rounded.md}`, padding `{spacing.sm} {spacing.md}`, height 44px
@@ -275,7 +275,7 @@ Hero photography sits in `{rounded.xl}` (16px) frames with no border. Product fa
 - 活动:背景 `{colors.ink}`文本中,请输入 `{colors.on-primary}`,同为圆形
 - Used on the laptop-shop page for "All / Trending / On Sale" filtering, and on the homepage "How can we help?" closing band
 
-### 签名组件
+### 标志性组件
 
 **`chevron-decoration`** ——几何蓝色斜线摩蒂夫
 - Background `{colors.primary}`, rounded `{rounded.none}`, no shadow
@@ -299,9 +299,9 @@ Hero photography sits in `{rounded.xl}` (16px) frames with no border. Product fa
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` 用于初级CTA,链接颜色,以及 `chevron-decoration` 动机——每个视图最多两次
-- 设置每个标题 Forma DJR Micro 字重 500 与 line-height 1.0 ——抵制冲撞重心的冲动,以首屏为尺度.
+- 设置每个标题 Forma DJR Micro 字重 500 配合 line-height 1.0 ——抵制冲撞重心的冲动,以首屏为尺度.
 - Use `{rounded.xl}` (16px) for cards and photo frames; `{rounded.md}` (4px) for buttons and inputs — keep the two-tier split sharp
 - 白双倍 `{colors.canvas}` 带状带 `{colors.cloud}` (`#f7f7f7`交替带;让灰色做呼吸
 - 关闭每页节奏的 a dark-navy `{colors.ink}` 板块——"我们能帮什么忙?"序曲+脚步
@@ -309,7 +309,7 @@ Hero photography sits in `{rounded.xl}` (16px) frames with no border. Product fa
 - 仅对产品卡和定价级使用软提升阴影——保留平面段幅
 - 内置框架产品摄影 `{rounded.xl}` 容器; 从未使用全血 circular 口罩
 
-### Don't
+### 应避免的做法
 - Don't introduce secondary saturated colors outside `{colors.primary}` family + the `bloom-coral` sale-tag and `storm` printer-plan accents
 - Don't apply heavy material shadows — depth is via color contrast (cloud vs. white) and Soft Lift only
 - Don't round buttons above `{rounded.md}` (4px); a soft 8px+ button reads as a different brand
@@ -319,7 +319,7 @@ Hero photography sits in `{rounded.xl}` (16px) frames with no border. Product fa
 - Don't replace the HP wordmark with a generic sans lockup; the wordmark is a custom mark with its own ratio
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -335,7 +335,7 @@ Hero photography sits in `{rounded.xl}` (16px) frames with no border. Product fa
 
 Every interactive element clears 44×44px on mobile. `button-primary` at 44px height + 24px horizontal padding meets WCAG-AAA touch target. `category-tab` at 8px 20px padding bumps to 12px 24px on touch screens. Nav-link tap areas extend invisibly beyond the text run to the full 44px row height. Sticky cart/sign-in icons in the top nav use 44×44 invisible hit boxes around their visible 24×24 glyph.
 
-### 折叠战略
+### 窄屏布局调整
 
 - **工具条**: 在每个断点上保持可见; 滴下会倒塌为下面的单个“ 账户” 图标 768px
 - **顶端导航**: 中间类别列表崩溃为下面的汉堡抽屉 1024px; 右侧搜索+签名+墨盒保持可见
@@ -344,7 +344,7 @@ Every interactive element clears 44×44px on mobile. `button-primary` at 44px he
 - **定价比较表**: 4- 桌面崩溃时的列网格 2x2 牌匾上,然后在移动时堆放到单个手风琴式的牌
 - **Footer**: 5-column link grid → 2-column tablet → single-column accordion on mobile; HP wordmark stays flush left
 
-### 图像行为
+### 图片适配
 
 Hero photography uses `{rounded.xl}` containers at every breakpoint. The chevron decorations vanish on mobile; the underlying photo card centers in the viewport. Lifestyle photography in the testimonial and "how-can-we-help" bands maintains 16:9 ratio with horizontal cropping rather than letterboxing on mobile. There are no art-direction crop swaps between desktop and mobile — the same image is used at every size.
 

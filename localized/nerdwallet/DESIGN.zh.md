@@ -7,7 +7,7 @@
 
 ## 概览
 
-NerdWallet 是一个比较引擎, 上面有编辑外套, 设计反映了两个半边。 `{colors.primary}` 梯度乐队带白头条,旁线行和一套信任徽章——这是品牌唯一提高声音的地方。该乐队下面的一切都掉到 `{colors.canvas}` 财务报告和已审计财务报表 `{colors.canvas-soft}`,其中密集率表和产品卡可以做实际工作。过渡是突然的:一个饱和的绿色矩形,然后是一个非常长的非常安静的文档。
+NerdWallet 是一个比较引擎, 上面有编辑外套, 设计反映了两个半边。 `{colors.primary}` 梯度乐队带白头条,旁线行和一套信任徽章——这是品牌唯一提高声音的地方。该乐队下面的一切都掉到 `{colors.canvas}` 和 `{colors.canvas-soft}`,其中密集率表和产品卡可以做实际工作。过渡是突然的:一个饱和的绿色矩形,然后是一个非常长的非常安静的文档。
 
 调色板几乎是单色的Hue. `{colors.primary}` 是一个深层的绿色,它充满了每个按钮,每个活性标签和每个评分星, 并且它下面坐着一整层的薄荷—— `{colors.mint-50}`, `{colors.mint-100}`, `{colors.mint-200}` —— 洗刷部分面板、图标瓦和相框。这些薄荷纸的表面面积巨大,远大于任何强调色,这使得一页财务表格无法作为电子表格阅读。绿家族之外的唯一颜色是: `{colors.link}` 用来连接内线 和一个石灰家族用来强调。
 
@@ -27,7 +27,7 @@ NerdWallet 是一个比较引擎, 上面有编辑外套, 设计反映了两个�
 
 来源:主页 高产储蓄比较页 最佳信用卡页.
 
-### 品牌和 强调色
+### 品牌色与强调色
 
 - **Spruce** (`{colors.primary}` — #008254): the brand. It fills `{button-primary}`, `{icon-circle-active}`, rating stars and every in-body green link, and it is the base of the editorial hero gradient. By pixel volume it is the single most-used non-neutral in the system.
 - **深层螺旋** (`{colors.primary-deep}` — #006642: 填充( ) `{stat-block-dark}`坐在薄荷专家点名的暗黑统计面板
@@ -38,24 +38,24 @@ NerdWallet 是一个比较引擎, 上面有编辑外套, 设计反映了两个�
 - **红灯** (`{colors.lime-accent}` — #ddfa88:用于比较页上突出标记的亮度的石灰.
 - **丝带状林姆** (`{colors.lime-ribbon}` — #a8ea4c: 灰末端的叶片 `{marquee-ribbon}` 梯度——石灰家族唯一覆盖大面积表面的地方.
 
-### 表面
+### 界面表面
 
 - **页面底色** (`{colors.canvas}` — #ffffff:页,导航栏和每张卡.
 - **软画像** (`{colors.canvas-soft}` — #f7f7f7: 长对比页后面的页线和填充 `{button-secondary}`。它比储蓄页上任何其他表面都包含更多的区域。
-- **薄荷 50** (`{colors.mint-50}` — #effcf8:最漂亮的洗涤,用于 `{section-panel-mint}` 财务报告和已审计财务报表 `{icon-circle-inactive}`.
-- **薄荷 100** (`{colors.mint-100}` — #e3faf2: 一步,用于 `{media-frame-mint}` 财务报告和已审计财务报表 `{award-ribbon-pill}`.
+- **薄荷 50** (`{colors.mint-50}` — #effcf8:最漂亮的洗涤,用于 `{section-panel-mint}` 和 `{icon-circle-inactive}`.
+- **薄荷 100** (`{colors.mint-100}` — #e3faf2: 一步,用于 `{media-frame-mint}` 和 `{award-ribbon-pill}`.
 - **薄荷 200** (`{colors.mint-200}` — #b7ecda:最饱和的薄荷,保留给小强调的填充.
 - **细边线** (`{colors.hairline}` — #ebebec:桌排与内卡之间规则.
-- **强发条** (`{colors.hairline-strong}` — #d8d9da: 可见的边框 `{product-card}` 财务报告和已审计财务报表 `{button-outline}`.
+- **强发条** (`{colors.hairline-strong}` — #d8d9da: 可见的边框 `{product-card}` 和 `{button-outline}`.
 
-### 文本
+### 文字颜色
 
 - **墨水( 墨水 )** (`{colors.ink}` — #000000:每个标题和产品名称,纯黑色,不软化.
 - **体质** (`{colors.body}` — #3d4045: 运行复制和 `{spec-cell}` 标签。
 - **静音** (`{colors.muted}` — #64666a: 标题、披露行和 `{eyebrow-label}`.
 - **异样** (`{colors.faint}` — #b1b3b5:最安静的一级,用于去强调元数据.
 
-### 语义
+### 语义色
 
 - **链接** (`{colors.link}` — #005fb9: 内置表格和卡片内的链接,始终下划线.
 - **信息** (`{colors.info}` — #4b99e6:一种用于支持信息标记的较轻的蓝色.
@@ -64,13 +64,13 @@ NerdWallet 是一个比较引擎, 上面有编辑外套, 设计反映了两个�
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 
-**Gotham** 财务报告和已审计财务报表 **GothamDisplay** 携带整个系统 Gotham 处理身体复制、UI标签、标题和最大的主页头条; GothamDisplay 更紧凑的显示剪辑,在编辑标题中大多取自 14 财务报告和已审计财务报表 40px。对称是不寻常的,因为显示切片是用在 *较小* 大小比文本切的最大,所以两者重叠通过比例尺的中间,而不是在大小边界上干净地分割.
+**Gotham** 和 **GothamDisplay** 携带整个系统 Gotham 处理身体复制、UI标签、标题和最大的主页头条; GothamDisplay 更紧凑的显示剪辑,在编辑标题中大多取自 14 和 40px。对称是不寻常的,因为显示切片是用在 *较小* 大小比文本切的最大,所以两者重叠通过比例尺的中间,而不是在大小边界上干净地分割.
 
 The weight range is wide and genuinely used: 300 for body copy, 500 and 600 for interface text, 700 for headings and labels, and 900 available at the top. Body copy at weight 300 against 700 headings is what gives the long editorial pages their airy feel despite very tight corner radii. A serif, **Chronicle Display**, appears on the long-form editorial pages as a secondary face.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -94,9 +94,9 @@ The weight range is wide and genuinely used: 300 for body copy, 500 and 600 for 
 
 Hierarchy is carried by weight contrast more than by size. The gap between weight-300 body and weight-700 headings is wide enough that adjacent sizes (20px heading against 18px lead) still read as distinct levels. Uppercase is reserved for two roles — `{typography.eyebrow}` section labels and button text — and never used for headings.
 
-### Note on Font Substitutes
+### 替代字体
 
-Gotham 财务报告和已审计财务报表 GothamDisplay 被许可的面孔。 **蒙特塞拉特** 是最接近可广泛获取的几何学替代 Gotham,虽然运行的稍宽,需要小的负跟踪显示大小; **近新星** 或 减 减 **约斯特** 中,如果有的话,则接近比例。 300 体型复制字重——降至 400 折叠重数与等级关系对比。替换编辑器 serif 与 **播放集显示** 或 减 减 **来源 Serif 4**.
+Gotham 和 GothamDisplay 被许可的面孔。 **蒙特塞拉特** 是最接近可广泛获取的几何学替代 Gotham,虽然运行的稍宽,需要小的负跟踪显示大小; **近新星** 或 **约斯特** 中,如果有的话,则接近比例。 300 体型复制字重——降至 400 折叠重数与等级关系对比。替换编辑器 serif 配合 **播放集显示** 或 **来源 Serif 4**.
 
 
 ## 布局
@@ -105,18 +105,18 @@ Gotham 财务报告和已审计财务报表 GothamDisplay 被许可的面孔。 
 
 - **基地单位**: 8px.
 - **脚本**: `{spacing.xxs}` 4px · `{spacing.xs}` 8px · `{spacing.sm}` 12px · `{spacing.md}` 16px · `{spacing.lg}` 20px · `{spacing.xl}` 24px · `{spacing.xxl}` 32px · `{spacing.section}` 40px.
-- `{spacing.md}` 即普遍控制垫-两者 `{button-primary}` 财务报告和已审计财务报表 `{button-secondary}` 使用平面 16px 以四面八方的角表示,
+- `{spacing.md}` 即普遍控制垫-两者 `{button-primary}` 和 `{button-secondary}` 使用平面 16px 以四面八方的角表示,
 - `{button-outline}` 打破模式为 `8px 16px`让它比旁边的扣子短得多
 
-### 网格容器( C)
+### 网格与容器
 
 Content centres in a container of roughly 1200px inside the 1280px viewport. The homepage runs a 5-up category tile grid that steps down to 4-up and 2-up. Editorial pages use a single wide column for the hero band and then a full-width comparison table with five semantic columns — institution, rating, headline rate, bonus, and action. Product cards on the credit-cards page are full-width blocks stacked vertically, each subdivided into a spec grid of three to four cells.
 
-### 白空间哲学
+### 留白规则
 
 白空间内部组件紧凑,彼此之间宽敞。桌排相邻,只有一条连接它们之间的细边线,但一个比较块和下一个比较块之间的空隙很大。薄荷板充当呼吸室,仍然带有内容,而不是留下空地,系统会掉在苍白的地上。 `{colors.mint-50}` 并让密度下降。
 
-### 反应战略
+### 响应式布局
 
 #### 断点
 
@@ -125,24 +125,24 @@ Content centres in a container of roughly 1200px inside the 1280px viewport. The
 | 小型移动 | < 425px | 单列; 比较表成为堆叠的卡片; 导航减少为标志加菜单 |
 | 手机 | 425–599px | 单列; 光谱网格崩溃为每行一列 |
 | Large mobile | 600–767px | Two-up category tiles; table columns begin to drop |
-| 平板 | 768–1023px | 横向分类铁路卷轴;产品卡保留其动作栏 |
+| Tablet | 768–1023px | Category rail scrolls horizontally; product cards keep their action column |
 | 笔记本 | 1024–1279px | 装有收紧沟槽的完整桌布局 |
 | 桌面 | ≥ 1280px | 集装箱宽度的全版式 |
 
 #### 触控区域
 
-`{button-primary}` 财务报告和已审计财务报表 `{button-secondary}` 清除 44×44 舒适的在他们的公寓 `{spacing.md}` 贴纸 `{button-outline}` 时 间 `8px 16px` 位置接近最小值,需要其触摸宽度的扩展。 `{icon-circle-active}` 财务报告和已审计财务报表 `{icon-circle-inactive}` 接近时 44px 铁路类别
+`{button-primary}` 和 `{button-secondary}` 清除 44×44 舒适的在他们的公寓 `{spacing.md}` 贴纸 `{button-outline}` 时 间 `8px 16px` 位置接近最小值,需要其触摸宽度的扩展。 `{icon-circle-active}` 和 `{icon-circle-inactive}` 接近时 44px 导航条类别
 
-#### 折叠战略
+#### 窄屏布局调整
 
 导航时尽可能地保持文字标记,搜索和两个账户控制,首先放弃分类链接. 比较页上的横向分类铁轨成为卷轴条而不是包扎. 比较表是主要的响应事件:在平板断点下方每行回流成堆叠卡,其中机构标志,评级和评分成为垂直字段,动作按钮全线通. `{expert-tip-panel}` 保持薄荷的充份,但滴水不漏 `{stat-block-dark}` 复制品下面,而不是旁边
 
-#### 图像行为
+#### 图片适配
 
 机构标志作为固定高的灰度的标志提供,绝不收割。 `{media-frame-mint}` 时 间 `{rounded.xxxl}`. 产品艺术——信用卡面孔——在 fixed 内部小方面 `{product-card}` 绝不是满足的。 circular 时 间 `{rounded.full}` 在一个小的重叠堆栈中。
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -161,7 +161,7 @@ The system is deliberately flat. Both shadow definitions sit at 4–5% opacity a
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -179,7 +179,7 @@ The system is deliberately flat. Both shadow definitions sit at 4–5% opacity a
 
 比例很大,但使用量的字重在小端。 `{rounded.xs}`,卡片在 `{rounded.lg}`,并且只有装饰表面——薄荷面板和照相框——可以到达 `{rounded.xxxl}`. 几个部件使用不对称的弧度,它们只用顶角或主要角对接相邻的块。
 
-### 摄影几何
+### 图片形状
 
 Editorial photography sits inside `{media-frame-mint}` at `{rounded.xxxl}`, typically at a portrait or square crop. Author avatars are `{rounded.full}` at roughly 32px, overlapped in threes. Institution logos are placed on white at their native aspect with generous padding so competing brand marks never touch. Illustration is used at roughly 64px square inside `{category-tile}`.
 
@@ -199,10 +199,10 @@ Editorial photography sits inside `{media-frame-mint}` at `{rounded.xxxl}`, typi
 - 与 `{button-primary}` 与填充和文本角色互换,所以对称读作一个控件,有两个重量.
 
 **`button-outline`** ——紧凑型公用事业控制.
-- 文本 `{colors.primary}`类型 `{typography.ui-label}`,四舍五入 `{rounded.lg}`, 编译 `8px 16px`, 1px `{colors.hairline-strong}` 边界,没有填满。
+- 文字颜色 `{colors.primary}`类型 `{typography.ui-label}`,四舍五入 `{rounded.lg}`, 编译 `8px 16px`, 1px `{colors.hairline-strong}` 边界,没有填满。
 - 唯一一个既离方圆半径又离平板的按钮——明显比填充的对更短,更柔软.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`product-card`**
 - Background `{colors.canvas}`, text `{colors.ink}`, type `{typography.body-md}`, rounded `{rounded.lg}`, 1px `{colors.hairline-strong}` border, Elevation Level 2.
@@ -221,7 +221,7 @@ Editorial photography sits inside `{media-frame-mint}` at `{rounded.xxxl}`, typi
 
 **`expert-tip-panel`**
 - Background `{colors.lime-panel}`, text `{colors.ink}`, type `{typography.body-md}`, rounded `{rounded.lg}`.
-- 签名编辑部分:宽阔的苍白的带子,由粗箭头前缀的标签打开,带咨询副本和主机 `{stat-block-dark}` 财务报告和已审计财务报表 `{stat-chip-light}` 里面的,我看见了,我看见了
+- 签名编辑部分:宽阔的苍白的带子,由粗箭头前缀的标签打开,带咨询副本和主机 `{stat-block-dark}` 和 `{stat-chip-light}` 里面的,我看见了,我看见了
 
 **`stat-block-dark`**
 - Background `{colors.primary-deep}`, text `{colors.on-primary}`, type `{typography.stat-value}`, rounded `{rounded.lg}`.
@@ -235,32 +235,32 @@ Editorial photography sits inside `{media-frame-mint}` at `{rounded.xxxl}`, typi
 - Background `{colors.canvas}`, text `{colors.ink}`, type `{typography.ui-label}`, rounded `{rounded.lg}`.
 - 领先的格言、标签和后继的切夫龙 被一个 `{colors.hairline}` 规则。
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`**
-- 文本 `{colors.ink}`类型 `{typography.body-md}`,四舍五入 `{rounded.none}`.
-- 平面角。系统没有输入填充,也没有自己的边界,它们坐落在一个供应铬的边框容器内,这就是输入本身几乎没有结构的原因。
+- 文字颜色 `{colors.ink}`类型 `{typography.body-md}`,四舍五入 `{rounded.none}`.
+- 平面角。系统没有输入填充,也没有自己的边界,它们坐落在一个供应界面框架的边框容器内,这就是输入本身几乎没有结构的原因。
 
 ### 导航
 
 **`nav-bar`** (德士克托普语).
 - Background `{colors.canvas}`, text `{colors.ink}`, type `{typography.ui-label}`.
-- 左侧的字签,八个类链接中心,然后搜索, `{button-secondary}` 财务报告和已审计财务报表 `{button-primary}` 白话在每一页,不管下面的乐队
+- 左侧的字签,八个类链接中心,然后搜索, `{button-secondary}` 和 `{button-primary}` 白话在每一页,不管下面的乐队
 
 **`nav-bar`** (移动)
 - 保留单词标记,搜索和两个账户控制;分类链接移动到菜单后面.
 
 **`icon-circle-active`** / **`icon-circle-inactive`**
 - Active fills `{colors.primary}` with an `{colors.on-primary}` glyph; inactive fills `{colors.mint-50}` with a `{colors.primary}` glyph. Both `{rounded.full}`.
-- 将横向类别铁路在比较页上方组成,每个线下加标签,并加划线标记活动项目。
+- 将横向类别导航条在比较页上方组成,每个线下加标签,并加划线标记活动项目。
 
 **`breadcrumb`**
-- 文本 `{colors.on-primary}` 时 间 `{typography.caption}`,设定在绿色首屏乐队 与切夫龙分离器。
+- 文字颜色 `{colors.on-primary}` 时 间 `{typography.caption}`,设定在绿色首屏乐队 与切夫龙分离器。
 
 **`footer`**
 - Background `{colors.canvas-soft}`, text `{colors.body}`, type `{typography.body-sm}`.
 
-### 签名组件
+### 标志性组件
 
 **`hero-band`**
 - Background `{colors.primary}` running as a horizontal gradient toward a lighter green, text `{colors.on-primary}`, type `{typography.body-md}`.
@@ -285,10 +285,10 @@ Editorial photography sits inside `{media-frame-mint}` at `{rounded.xxxl}`, typi
 - `{link-inline}` 使用情况 `{colors.link}` 附有辅助参考的下划线; `{link-green}` 使用情况 `{colors.primary}` 两者共存于同一张牌上,并具有不同的意图。
 
 **`eyebrow-label`**
-- 文本 `{colors.muted}` 时 间 `{typography.eyebrow}`,大写,开源合伙人和资源科。
+- 文字颜色 `{colors.muted}` 时 间 `{typography.eyebrow}`,大写,开源合伙人和资源科。
 
 **`logo-wordmark`**
-- 文本 `{colors.primary}` 时 间 `{typography.heading-4}`,前面有一个标记 携带 `{colors.logo-lime}`.
+- 文字颜色 `{colors.primary}` 时 间 `{typography.heading-4}`,前面有一个标记 携带 `{colors.logo-lime}`.
 
 **`rate-card`**
 - Background `{colors.canvas}`, text `{colors.ink}`, type `{typography.body-sm}`, rounded `{rounded.xxl}`.
@@ -306,45 +306,45 @@ Editorial photography sits inside `{media-frame-mint}` at `{rounded.xxxl}`, typi
 - Background `{colors.lime-ribbon}` running as a gradient into `{colors.primary}`, text `{colors.primary}`, type `{typography.ui-label}`.
 - A full-bleed diagonal band of repeated uppercase slogans separated by small sparkle glyphs, tilted a few degrees off horizontal and bleeding past both viewport edges. It is the loudest element in the system and the only place the lime family fills a large surface.
 
-### 实例(说明性)
+### 组合示例
 
 > Kit-miror 演示表面。这些不是从 NerdWallet 它们是标准SaaSUI模式 重新皮肤 NerdWallet'原始人,因此,这个文档的每个消费者都会对品牌而不是模板默认形成相同的十面.
 
-**`ex-pricing-tier`** ——默认定价等级卡。 feature-card 带品牌的铬 canvas-soft 表面。
+**`ex-pricing-tier`**：默认套餐卡，沿用功能卡结构和品牌 canvas-soft 底色。
 - 属性 : `backgroundColor`, `textColor`, `borderColor`, `rounded`, `padding`
 
-**`ex-pricing-tier-featured`** ——地貌/高亮的层次——极性-浮点表面(暗色填充+光线文字在光线模式下,浅色填充+暗色文字在暗线模式下).
+**`ex-pricing-tier-featured`**：推荐套餐卡。浅色模式中用深底浅字，深色模式中用浅底深字。
 - 属性 : `backgroundColor`, `textColor`, `rounded`, `padding`
 
-**`ex-product-selector`** ——什么是包含的汇总卡——重新用于SaaS/B2B纵横(NOT为字形产品画廊).
+**`ex-product-selector`**：面向 SaaS / B2B 场景的套餐权益摘要卡。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-cart-drawer`** ——订阅摘要——重新用于SaaS/B2B(每件加件的行项目,而非字面车).
+**`ex-cart-drawer`**：SaaS / B2B 订阅摘要，每个附加项单独列出。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `item-divider`
 
-**`ex-app-shell-row`** ——App Shell 实例中的侧边栏导航行. Active State 使用品牌主标.
+**`ex-app-shell-row`**：应用框架示例里的侧栏导航行，以品牌主色标识选中状态。
 - 属性 : `backgroundColor`, `activeIndicator`, `rounded`, `padding`
 
-**`ex-data-table-cell`** — Default data-table th + td chrome. Header uses mono-caps eyebrow typography; body uses body-sm.
+**`ex-data-table-cell`**：数据表格中 th 与 td 的默认样式。表头采用大写等宽字，正文采用 body-sm。
 - 属性 : `headerBackground`, `headerTypography`, `bodyTypography`, `cellPadding`, `rowBorder`
 
-**`ex-auth-form-card`** ——签入/签入卡. 复用. feature-card 铬 text-input 原始人在里面,他们都在里面
+**`ex-auth-form-card`**：登录与注册卡，复用功能卡和 text-input。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-modal-card`** ——模度对话框表面——与 feature-card 以高的阴影盟誓,
+**`ex-modal-card`**：对话框表面，沿用功能卡样式并加浮层投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-empty-state-card`** ——空状态插图框架.
+**`ex-empty-state-card`**：空状态插图容器。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `captionTypography`
 
-**`ex-toast`** ——通知表面. feature-card 形状 + 中阴影。
+**`ex-toast`**：轻提示，沿用功能卡圆角并使用中等投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `typography`
 
 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 
 - 花费 `{colors.primary}` 仅关于动作和活动状态的——按钮,评分星,活动标签,内在链接.
 - Reach for the mint ladder (`{colors.mint-50}` → `{colors.mint-200}`) when a section needs separation; it is the system's substitute for elevation.
@@ -355,7 +355,7 @@ Editorial photography sits inside `{media-frame-mint}` at `{rounded.xxxl}`, typi
 - 给出每个比较图a `{typography.caption}` 上面贴着标签 `{colors.body}`永远不要内在。
 - Open editorial pages with `{hero-band}` and then drop immediately to a light canvas; do not carry the green further down.
 
-### Don't
+### 应避免的做法
 
 - Don't round the filled buttons. `{rounded.xs}` is a deliberate choice against the softness of the illustration style.
 - Don't add drop shadows to cards — use the `{colors.hairline-strong}` border instead. The system's only shadows sit at 4–5% opacity.

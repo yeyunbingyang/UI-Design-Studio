@@ -1,13 +1,42 @@
 # HTML 内容审查
 
+## 首屏缩略图验收
+
+运行 `python script/authoring/refresh_sample_navigation.py` 生成 85 张本地 WebP，逐一核对品牌路径和图像尺寸。离线抽看 Notion、Stripe、1win、Warp 和 Cal.com 的首屏结构，确认图中省去介绍正文，详情仍可阅读。桌面验证目录滚动、搜索、键盘进入、返回焦点和图片缺失回退。375px 验证搜索、下拉切换和三个预览标签。
+
+## 按新版标准建立的修复清单
+
+### 本轮修复结果
+
+- 170 份中文实时样张复扫通过，连续 Q 和残留占位码均无命中。源句无法可靠还原时显示原文，其他品牌的英文单元格仍待逐格校订。
+- HP 常规和深色样张的五行断点数据及四张层次卡已校订，保留原始断点和投影参数。常规样张在 1440px 和 375px 离线检查，页面宽度与 iframe 视口一致。
+- 实时样张中空片段链接改为静态展示，目录和本地交互页面继续沿用既有路由。255 份归档哈希及 85 项双语下载字节通过核对。
+
+### 初次扫描基线
+
+按 [预览 HTML 编写与审查标准](../预览HTML编写与审查标准.md) 扫描 174 份项目 HTML。以下数字按文件计数，同一文件可能命中多项。119 份英文单元格候选与 66 份占位链接需要结合源文或控件用途确认。
+
+| 页面与模式 | 章节与元素 | 问题或结果 | 原文依据 | 验证方式 | 状态 |
+| --- | --- | --- | --- | --- | --- |
+| 86 份样张，含 HP 常规样张 | 正文与表格单元格 | 连续 Q 占位符。HP 出现在手机断点宽度旁。 | HP 归档的响应式布局表 | 全量正则扫描与截图复核 | 待修复 |
+| 119 份样张，含 HP 常规样张 | 表格单元格 | 命中至少五个词的纯英文文本。HP 四行布局说明确认为英文残留。 | 对应品牌的英文归档表格 | 自动筛查，逐格语义复核待完成 | 待修复 |
+| HP 常规样张 | 层次与深度四张卡 | 卡片名称、用途说明出现误译，需逐卡对照。 | 平面区、细边框、轻投影、浮层及原投影表达式 | 截图复核 | 待修复 |
+| HP 常规样张 | 窄屏整体宽度 | iframe 内容宽 360px，视口 343px，需定位溢出元素。 | 原样张响应式规则与本项目窄屏标准 | 375px 离线实测 | 待修复 |
+| 66 份项目页面 | `href="#"` 链接 | 逐项确认目录返回、静态占位或应提供目标的操作。 | 页面现有路由与原始链接 | 全量扫描 | 待修复 |
+| 174 份项目页面 | ID 与静态片段链接 | 扫描无重复 ID 或缺失的非空片段目标。 | 当前 HTML 中的目标 ID | 全量静态扫描 | 通过 |
+| 1win、HP、Together AI 常规样张 | 章节导航与核心内容 | 离线可加载。首个章节链接可通过键盘激活。 | 页面章节导航目标 | 1440px 与 375px 浏览器实测 | 通过 |
+| 85 项品牌数据 | 源文件与双语数据 | 255 份归档哈希及 85 项双语下载字节一致。 | 归档索引与磁盘文件 | SHA-256 与字节比对 | 通过 |
+
+技术值逐格比对、全量卡片语义、其他键盘控件及具体字体回退与素材影响仍需逐页复核。本轮浏览器记录的字体加载状态不代表每个品牌字体均可离线取得。
+
 本次逐份登记 170 份中文样张和 3 个本地页面。170 份官网 HTML 作为章节、控件和样式对照，另校验 85 份 Markdown 原件。原件共 255 份，文件字节数与 SHA-256 均与归档索引一致。
 
 ## 校订办法
 
-- 首屏按风格、可见特征和设计用途组织。样张配色会改变首屏主体时，单独说明对应模式。
+- 首屏标题使用目录风格名，系统说明按归档翻译。常规与深色归档说明有差异时，分别校订。
 - 章节和控件沿用归档结构。CSS 色值、字体定义、断点、链接、资源地址及控件参数通过原件对照核验。展示文案用统一的中文术语描述词元、用途和状态。
 - 定价、登录、数据表格等通用区块补充组件演示标识。组件参数和示例数据沿用归档。
-- 用 [sample_editorial.py](../script/authoring/sample_editorial.py) 管理首屏和场景说明，用 [preview_copy.py](../script/authoring/preview_copy.py) 管理源文匹配及译文校订。运行 `python script/authoring/localize_archive.py --html-only` 重新生成样张和章节导航。
+- 用 `sample_overviews.py` 管理首屏译文，用 `sample_editorial.py` 和 `preview_copy.py` 管理场景说明及术语。执行 `localize_archive.py --html-only` 重新生成样张，随后重建样张导航。
 
 ## 验证结果
 
@@ -25,6 +54,83 @@
 | Starbucks | 分档品牌绿、字距、按下缩放、会员文案，以及常规和深色表面的差异。修复窄屏字号示例溢出。 |
 | Stripe | 品牌与表面底色词元、输入框聚焦、间距基准，以及定价网格的列数变化。 |
 
+## 本轮译文复审
+
+复审覆盖 85 份中文 DESIGN 和 170 份 HTML 样张。生成器优先应用已核对的术语与连接词。Together AI 的「/ 01 / 配色」保留原分隔符与编号。
+
+Warp 的卡片、输入框、标志性组件和组合示例，以及半岛电视台的栏目色条、直播时间轴和响应式说明已对照原文校订。核对了这些段落的色值、字体名、尺寸、断点和词元引用。
+
+本轮按语境修正的条目为中文 DESIGN 181 处、HTML 100 处。共 28 项保留英文。原因包括词义需结合上下文判断，以及译文未通过技术原值检查。下列源句开头可用于定位。
+
+<details>
+<summary>保留英文的条目</summary>
+
+- [apple/DESIGN.zh.md](../localized/apple/DESIGN.zh.md)
+  - A photography-first interface that turns marketing into a museum gallery. Edge-to-edge prod…（筛查项：铬）
+- [binance/preview-dark.html](../localized/binance/preview-dark.html)
+  - Full top-nav; 5-col markets table; trading dashboards in 8/4 split (chart + side rail).（筛查项：铁路）
+- [binance/preview.html](../localized/binance/preview.html)
+  - Full top-nav; 5-col markets table; trading dashboards in 8/4 split (chart + side rail).（筛查项：铁路）
+- [dell-1996/preview-dark.html](../localized/dell-1996/preview-dark.html)
+  - An order-tracking console: a left account rail beside a status panel that pairs a horizonta…（筛查项：铁路）
+- [dell-1996/preview.html](../localized/dell-1996/preview.html)
+  - An order-tracking console: a left account rail beside a status panel that pairs a horizonta…（筛查项：铁路）
+- [figma/DESIGN.zh.md](../localized/figma/DESIGN.zh.md)
+  - Figma&#x27;s marketing canvas is, at the system level, an editor-clean black-and-white frame. Th…（筛查项：铬）
+- [meta/preview-dark.html](../localized/meta/preview-dark.html)
+  - Mobile-first reflow: hero stacks, pill nav becomes hamburger, three-up grids flatten, PDP r…（筛查项：铁路）
+  - Single column. Hero drops to display-lg. Pill tabs collapse to hamburger. PDP rail → sticky…（筛查项：铁路）
+- [meta/preview.html](../localized/meta/preview.html)
+  - Mobile-first reflow: hero stacks, pill nav becomes hamburger, three-up grids flatten, PDP r…（筛查项：铁路）
+  - Single column. Hero drops to display-lg. Pill tabs collapse to hamburger. PDP rail → sticky…（筛查项：铁路）
+- [nerdwallet/DESIGN.zh.md](../localized/nerdwallet/DESIGN.zh.md)
+  - | Tablet | 768–1023px | Category rail scrolls horizontally; product cards keep their action…（筛查项：铁路）
+- [nerdwallet/preview-dark.html](../localized/nerdwallet/preview-dark.html)
+  - Category rail scrolls horizontally; product cards keep their action column（筛查项：铁路）
+- [nerdwallet/preview.html](../localized/nerdwallet/preview.html)
+  - Category rail scrolls horizontally; product cards keep their action column（筛查项：铁路）
+- [nintendo-2001/DESIGN.zh.md](../localized/nintendo-2001/DESIGN.zh.md)
+  - **Carbon Navy** (`{colors.ink}` — #21242e): Primary text on light chrome, and the fill of t…（筛查项：铁路）
+- [nintendo-2001/preview-dark.html](../localized/nintendo-2001/preview-dark.html)
+  - Darkest command slab — nav, rail, footer（筛查项：铁路）
+- [nvidia/DESIGN.zh.md](../localized/nvidia/DESIGN.zh.md)
+  - NVIDIA&#x27;s type system is unusually flat: most chrome and body roles render at the same line-…（筛查项：铬）
+  - The system&#x27;s most distinctive secondary CTA: a clear pane bordered in NVIDIA Green. Used fo…（筛查项：窗帘）
+- [ollama/preview.html](../localized/ollama/preview.html)
+  - SF Pro Rounded for display, system sans for body, ui-monospace for code. The roundness of t…（筛查项：铬）
+- [opencode.ai/DESIGN.zh.md](../localized/opencode.ai/DESIGN.zh.md)
+  - The chrome is austere: warm cream canvas (`{colors.canvas}` — `#fdfcfc` with a faint blush)…（筛查项：铬）
+- [pinterest/preview.html](../localized/pinterest/preview.html)
+  - Pinterest Red primary, gray-cream secondary, transparent tertiary, plus pill-on-image and c…（筛查项：铬）
+- [playstation/DESIGN.zh.md](../localized/playstation/DESIGN.zh.md)
+  - Used in the &quot;Great PS4 &amp; PS5 games&quot; rail and the PS5 games listing grid.（筛查项：铁路）
+  - | desktop-small | 1024px | Game tile rail collapses to 3-up; sub-nav remains horizontal |（筛查项：铁路）
+- [resend/DESIGN.zh.md](../localized/resend/DESIGN.zh.md)
+  - Resend&#x27;s marketing surfaces sit on a near-pure black canvas with off-white text and a singl…（筛查项：铬）
+- [resend/preview-dark.html](../localized/resend/preview-dark.html)
+  - Surface-deep background with traffic-light chrome and a Geist Mono body. Tab strip pinned j…（筛查项：铬）
+- [resend/preview.html](../localized/resend/preview.html)
+  - Surface-deep background with traffic-light chrome and a Geist Mono body. Tab strip pinned j…（筛查项：铬）
+- [sentry/DESIGN.zh.md](../localized/sentry/DESIGN.zh.md)
+  - **Window-Chrome UI Mock** — product UI screenshots framed in `{rounded.xxl}` containers, of…（筛查项：铬）
+- [theverge/DESIGN.zh.md](../localized/theverge/DESIGN.zh.md)
+  - **Column patterns**: a 12-column underlying grid that resolves into 3-column hero + 1-colum…（筛查项：铁路）
+  - Stacked vertically with 12–16px gap, the rail continuing between them（筛查项：铁路）
+
+</details>
+
+全部生成结果复扫本轮词表。255 份归档哈希通过，85 项中英文阅读区与下载数据一致。桌面与 375px 离线抽查 Warp、1win、Together AI、半岛电视台和 Cal.com，验证章节导航、阅读与下载。
+
+## 平台类型示例
+
+场景复审覆盖 58 个通用试样，其中 38 份使用三列卡片。14 份产品或服务选项已移除旧的套餐和价格说明。无目标的按钮与占位链接改为静态展示，Dell 三列卡片链接到同页装机配置，表格勾选和表单输入仍可操作。
+
+Dell 1996 的场景围绕 Dimension XPS Pro 与 DT-XPS-P166，Notion 的场景围绕产品手册工作区。1440px 与 375px 离线复核了 Dell 1996、Notion、Warp、Stripe、Uber 和 Framer。255 份归档、85 项中英文下载和本地交互样张通过字节核对。
+
+85 项已登记平台类型。170 份样张中共替换 100 处共享四栏页脚及 58 个通用场景。保留原有 CSS、品牌代表场景和导航锚点。归档原件、中英文下载及本地交互样张经过字节核对。
+
+在 1440px 与 375px 离线抽查 Framer、Cal.com、BMW、半岛电视台和 Dell 1996。核对页脚栏目、章节跳转、Dell 电脑配置与数据表勾选，以及 Framer 双语下载。
+
 ## 本地页面
 
 | 页面 | 审查记录 |
@@ -35,7 +141,7 @@
 
 ## 中文样张逐份登记
 
-自动检查共覆盖 3243 个章节标题、2873 个控件、98 条演示标识和 507 个导航链接。每个文件后的三个数字依次为章节标题、控件和演示标识数。首屏标题与总览风格名一致。扫描范围包含可见文案和本地化属性。
+自动检查共覆盖 3243 个章节标题、2873 个控件、98 条演示标识和 507 个导航链接。每个文件后的三个数字依次为章节标题、控件和演示标识数。首屏标题与目录风格名一致。扫描范围包含可见文案和本地化属性。
 
 | 风格 | 常规样张 | 深色归档样张 | 首屏处理 |
 | --- | --- | --- | --- |

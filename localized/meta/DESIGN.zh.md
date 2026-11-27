@@ -8,7 +8,7 @@
 
 Meta'商业表面(主页,查询配置器,雷班产品细节,处方页)读作自信的硬件商品商. 品牌声音为摄影第一:大型全本产品图像主导于上层房地产,白空间和紧凑的排版结构承载了其余部分. 该系统具有可识别的双CTA模式——一种黑色丸形初级在营销表面转向饱和钴蓝色(英语:Satural cobal blue).{colors.primary})在买入-现在的流中,配以一个概述的鬼按钮进行二次导航.
 
-Optimistic VF — Meta变形显示面孔——锁定整个系统,范围从1到1到1到1到2到2到2到3 64px 首屏显示为 12px 标题,脸 `ss01` 财务报告和已审计财务报表 `ss02` 风格套装在每一个标题角色之间都被切换,为品牌的略微人文主义,友好的几何特征做出了贡献. 768px 系统崩溃了:首屏堆,胶囊形导航变成汉堡,三叠格的特性网格平整为一列,产品配置器将右侧的电线摘要降低为 sticky 底边栏.
+Optimistic VF — Meta变形显示面孔——锁定整个系统,范围从1到1到1到1到2到2到2到3 64px 首屏显示为 12px 标题,脸 `ss01` 和 `ss02` 风格套装在每一个标题角色之间都被切换,为品牌的略微人文主义,友好的几何特征做出了贡献. 768px 系统崩溃了:首屏堆,胶囊形导航变成汉堡,三叠格的特性网格平整为一列,产品配置器将右侧的电线摘要降低为 sticky 底边栏.
 
 **关键特征 :**
 - Stark white canvas ({colors.canvas}) carrying full-bleed product photography with `{rounded.xxxl}` (32px) corner softening on showcase tiles
@@ -23,7 +23,7 @@ Optimistic VF — Meta变形显示面孔——锁定整个系统,范围从1到1�
 
 > Source pages: meta.com/ (homepage), /ai-glasses/ray-ban-meta-skyler-gen-2/ (PDP), /quest/quest-3s/buy-now/ (configurator), /ai-glasses/prescription/ (lens upsell). Token coverage was identical across all four pages — the design system is genuinely unified.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **钴小学** ({colors.primary}: 买到的现CTA颜色,每"添加到推车","配置","预订购"按钮在商流和右侧的购买面板上使用.
 - **深钴** ({colors.primary-deep}: 钴原生物的压态和暗面变体;也为主动链接颜色.
 - **软钴** ({colors.primary-soft}: 信息征召的透明背景锡(`{colors.primary-soft}` 时 间 15% 阿尔法).
@@ -31,13 +31,13 @@ Optimistic VF — Meta变形显示面孔——锁定整个系统,范围从1到1�
 - **Meta 链接蓝色** ({colors.meta-link}: 保留用于遗留导航和页脚连接的支付费用。
 - **紫色奥库卢** ({colors.oculus-purple}: VR产品强调色——用于Quest品牌的表面内部,用于类别强调.
 
-### 表面
+### 界面表面
 - **白色页面底色** ({colors.canvas}:页背景和主卡表面.
 - **Soft Cloud** ({colors.surface-soft}): Subtle product-thumbnail and warranty-card background; also the search-pill rest state.
 - **细边线灰色** ({colors.hairline}): 1px 输入边框和窗体控制分隔符。
 - **柔软的细边线** ({colors.hairline-soft}:卡片上使用的静音分机,脚部分隔器,和节间断.
 
-### 文本
+### 文字颜色
 - **Deep Ink** ({colors.ink-deep}): Primary headline and body text on light surfaces.
 - **墨水( 墨水 )** ({colors.ink}:标准正文和副标题文本.
 - **木炭矿** ({colors.charcoal}:三级体文字和形式-按钮标签.
@@ -45,7 +45,7 @@ Optimistic VF — Meta变形显示面孔——锁定整个系统,范围从1到1�
 - **钢** ({colors.steel}: 较静的字幕文本和页脚链接等级.
 - **石头** ({colors.stone}: 已停用或不再强调标签.
 
-### 语义
+### 语义色
 - **成功** ({colors.success}:"股票","自由回归"确认.
 - **注意了,我们得去救救他们** ({colors.attention}:中优先级警报和定时点播.
 - **警告** ({colors.warning}: 宣传旗("Get") 25% 关闭...) 和有限时间标记。
@@ -55,12 +55,12 @@ Optimistic VF — Meta变形显示面孔——锁定整个系统,范围从1到1�
 
 ## 字体排版
 
-### 字体家族
-**Optimistic VF** 谓 Meta专有变量显示面部。 Helvetica, Arial,诺托桑斯。可变轴从 300 (轻) heading-md,用于编辑性头条,如"向前看")通过. 500 (播放,首屏, heading-sm最多为 700 (子标题,身体强调,按钮标签). Stylistic sets. `ss01` 财务报告和已审计财务报表 `ss02` 被切换到每个标题角色上——它们软化了几何形状,给这种类型一个稍有人性化的呼吸.
+### 字体族
+**Optimistic VF** 谓 Meta专有变量显示面部。 Helvetica, Arial,诺托桑斯。可变轴从 300 (轻) heading-md,用于编辑性头条,如"向前看")通过. 500 (播放,首屏, heading-sm最多为 700 (子标题,身体强调,按钮标签). Stylistic sets. `ss01` 和 `ss02` 被切换到每个标题角色上——它们软化了几何形状,给这种类型一个稍有人性化的呼吸.
 
 中学 Helvetica 倒置链用于技术显微镜(12px) 内侧的光谱表和页脚精细的打印。
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 打开类型 | 使用 |
 |---|---|---|---|---|---|---|
@@ -95,16 +95,16 @@ Optimistic VF — Meta变形显示面孔——锁定整个系统,范围从1到1�
 - **节奏**: 销售科,分设于 `{spacing.section-lg}` (80px); 产品细节部分压缩为 `{spacing.section}` (64px); FAQ 堆栈进一步收紧到 `{spacing.xxl}` (32px).
 - **Card internal padding**: Standard `{spacing.xxl}` (32px); icon-feature tiles compress to `{spacing.xl}` (24px); promo-strip cards expand to `{spacing.section}` (64px) for hero presence.
 
-### 网格容器( C)
-- 营销页面 max-width 坐在这 1280px 与 32–48px 沟渠.
-- PDP 版式使用 a 2-柱子拆分:首屏画廊(~58% 宽度)+ sticky 购买铁路(~42%,与 `max-width: 380px` 火车上。
+### 网格与容器
+- 营销页面 max-width 坐在这 1280px 配合 32–48px 沟渠.
+- PDP 版式使用 a 2-柱子拆分:首屏画廊(~58% 宽度)+ sticky 购买侧栏(~42%,与 `max-width: 380px` 火车上。
 - Three-up feature grids ("Why buy from Meta") use a 24px column gap; six-up product thumbnail rows (color/SKU pickers) use a 12px gap.
 
-### 白空间哲学
+### 留白规则
 白空间是产品-摄影-第一。首屏部分给出产品图像 50–70% ; 复制后, 将氧气供呼吸 `{spacing.xxl}` 改为: `{spacing.xxxl}` 配置器内部,白空间收紧了 —— 买现在的面板是信息化的, 并且 `{spacing.base}` 改为: `{spacing.lg}` 选项组之间的节奏 。
 
 
-## 层次与阴影
+## 层次与深度
 
 系统主要运行平坦,高度保留在两个交互层:
 
@@ -122,7 +122,7 @@ Optimistic VF — Meta变形显示面孔——锁定整个系统,范围从1到1�
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -137,7 +137,7 @@ Optimistic VF — Meta变形显示面孔——锁定整个系统,范围从1到1�
 | `{rounded.full}` | 100px | 胶囊形按钮、标签芯片、徽章 |
 | `{rounded.circle}` | 50% | 彩色表条, circular 图标按钮 |
 
-### 摄影几何
+### 图片形状
 - 产品首屏摄影 `{rounded.xxxl}` (32px)帧比矩形更频繁.
 - 彩色/ 材料表是完美的圆圈( Name`{rounded.circle}`, 32px 直径, 2px 选中时为白色边框环 。
 - 平方产品缩略图( S)`aspect-ratio: 1/1`使用( ) `{rounded.xl}` 圆相.
@@ -173,7 +173,7 @@ Optimistic VF — Meta变形显示面孔——锁定整个系统,范围从1到1�
 **`button-icon-circular`** — 40×40px circular 工具按钮( 木马箭头、 共享、 最喜欢) 。
 - Background `{colors.canvas}`, icon color `{colors.ink}`, rounded `{rounded.circle}`.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`card-product-feature`** ——带有产品摄影和复制品的白色特征卡(主页"体育指定","先进,内外").
 - Background `{colors.canvas}`, rounded `{rounded.xxxl}`, padding `{spacing.xxl}`, border `1px solid {colors.hairline-soft}`.
@@ -199,7 +199,7 @@ Optimistic VF — Meta变形显示面孔——锁定整个系统,范围从1到1�
 **`why-buy-tile`** — 4- 下层市场区有砖块
 - Background `{colors.canvas}`, rounded `{rounded.xl}`, padding `{spacing.xxl} {spacing.xl}`, border `1px solid {colors.hairline-soft}`. Heading in `{typography.subtitle-lg}`, body in `{typography.body-sm}`.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——标准表单字段(fower 电子邮件订阅,支持表单).
 - Background `{colors.canvas}`, text `{colors.ink}`, border `1px solid {colors.hairline}`, rounded `{rounded.lg}`, padding `{spacing.md}`, height 44px.
@@ -251,21 +251,21 @@ Optimistic VF — Meta变形显示面孔——锁定整个系统,范围从1到1�
 **面包屑( PDP)** ——产品首屏之上的内置路径("Glasses QQ Ray-Ban"). Meta · 斯凯勒( 基) 2)").
 - 字体排版 `{typography.body-sm}`,在 `{colors.stone}`叶片中 `{colors.ink}`中,父链接 `{colors.steel}`.
 
-### 签名组件
+### 标志性组件
 
 **`hero-band-marketing`** ——全血摄影首屏,配有覆版+双CTA对.
 - 暗色或照片背景的边际对边产品摄影。 `{typography.hero-display}` 白色,标题下方: 1- 线条字幕输入 `{typography.subtitle-md}` 接下来 `button-primary` + `button-secondary` 双人
 
-**`product-gallery-pdp`** ——产品细节页主首屏: 4- 左侧竖立的缩略图条,大型产品图像中心, sticky 购买铁路右。
+**`product-gallery-pdp`** ——产品细节页主首屏: 4- 左侧竖立的缩略图条,大型产品图像中心, sticky 购买侧栏右。
 - Thumbnails: 80×80px, `{rounded.lg}`, `{colors.surface-soft}` background, 1px `{colors.hairline-soft}` border (active border switches to `{colors.ink-deep}`).
 - Main image area: ~720×720px on desktop, `{rounded.xxxl}` rounding, photographic surface.
-- Sticky 铁路用途 `card-checkout-summary`.
+- Sticky rail uses `card-checkout-summary`.
 
 **`color-sku-picker-row`** ——六上网格的方形产品变体,名称+价格均低于每方.
 - 平铺背景 `{colors.surface-soft}`,四舍五入 `{rounded.lg}`,图像加插 `{spacing.base}`。主动的平板边关机 `2px solid {colors.ink-deep}`。在平板下面:变种名称 `{typography.body-sm-bold}` 价格 `{typography.body-sm}`.
 
 **`feature-icon-row`** ——四项保证福利("免费"). 2- 免费送货) 30- 日回),"无忧无虑的保修","买现在,付以后".
-- 4- 柱形网格,每个单元格使用 `card-icon-feature` 铬加一个 32px 上行图标,头条 `{typography.subtitle-lg}`, 身体( 身体) `{typography.body-sm}`.
+- 4- 柱形网格,每个单元格使用 `card-icon-feature` 界面框架加一个 32px 上行图标,头条 `{typography.subtitle-lg}`, 身体( 身体) `{typography.body-sm}`.
 
 **`faq-accordion`** ——可扩展的QQA项目的垂直堆栈.
 - Each item uses `faq-accordion-item` chrome. Question in `{typography.subtitle-lg}` left, chevron icon (`{colors.steel}`, 20px) right. Expanded answer drops in `{typography.body-md}` text below with `{spacing.base}` top padding.
@@ -282,7 +282,7 @@ Optimistic VF — Meta变形显示面孔——锁定整个系统,范围从1到1�
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` (cobalt)仅用于买入-现在的CTA——它的视觉字重之所以有意义,正是因为它没有出现在营销页面上.
 - 使用 `{colors.ink-button}` (黑色)用于营销表面初级CTA。 `{colors.button-secondary}` 鬼魂的二次行动大纲
 - 应用 `{rounded.full}` 每一个按钮,每一个类胶囊形,每一个徽章,每一个芯片——按钮从不平整 Meta系统
@@ -290,7 +290,7 @@ Optimistic VF — Meta变形显示面孔——锁定整个系统,范围从1到1�
 - 开机 `ss01, ss02` 用于任何 Optimistic VF 朝向,没有其他的,没有一套风格
 - 使用 300- 字重 `{typography.heading-md}` 编辑副标题的——它创造了品牌的标志视觉节奏,以对抗 500- 字重级的展示
 
-### Don't
+### 应避免的做法
 - Don't use `{colors.primary}` (cobalt) for marketing-surface primary buttons — it conflicts with Meta's brand-history positioning of black-CTA-on-white-canvas marketing.
 - Don't introduce additional accent colors beyond cobalt + Oculus purple. The hardware brand is deliberately monochromatic outside its product photography.
 - 药扣的角落别软化 `{rounded.full}`胶囊形是品牌标志
@@ -299,7 +299,7 @@ Optimistic VF — Meta变形显示面孔——锁定整个系统,范围从1到1�
 - Don't apply heavy shadows to marketing cards. Elevation is a commerce-flow signal, not a marketing flourish.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 | 名称 | 宽度 | 密钥更改 |
@@ -316,15 +316,15 @@ Optimistic VF — Meta变形显示面孔——锁定整个系统,范围从1到1�
 - 彩色监视圆是 32×32px击中AAA,手表携带 12px 周围的清晰打击区(有效打击目标) ~56px).
 - 格式输入提供时间 44px 高度与主按钮高度一致。
 
-### 折叠战略
+### 窄屏布局调整
 - **宣传旗** 在所有断点上保持全宽; 切换到 ellipsis 使用小型移动,保留内联网支付。
 - **Pill-tab 导航** 下级 768px 崩溃后会变成汉堡抽屉; 活动标签会作为封闭导航内的标签来渲染。
 - **PDP 版式**: 购买摘要上方的画廊堆栈 < 1024px;摘要变成一个 sticky 底栏,价格+“加推车”按钮,位置为 < 768px。整个摘要仍可滚动于 sticky 栏。
-- **特性网格** (3- 起来, 4- 上) 崩溃到 2- 上边 768–1023px 财务报告和已审计财务报表 1- 上边 < 768px。卡片粘贴压缩从 `{spacing.xxl}` 改为: `{spacing.xl}` 现场 1- 上断点
+- **特性网格** (3- 起来, 4- 上) 崩溃到 2- 上边 768–1023px 和 1- 上边 < 768px。卡片粘贴压缩从 `{spacing.xxl}` 改为: `{spacing.xl}` 现场 1- 上断点
 - **Hero typography**: `{typography.hero-display}` (64px) drops to `{typography.heading-lg}` (36px) at < 768px and `{typography.heading-sm}` (24px) at < 480px.
 - **Footer**: 6-column desktop layout reflows to 2-column at tablet and accordion-collapsed groups at mobile.
 
-### 图像行为
+### 图片适配
 - Product photography uses 1:1 (thumbnails, color pickers), 4:3 (PDP gallery), and 16:9 (homepage promo strips) ratios.
 - 首屏摄影全能 `{rounded.xxxl}` 角;懒散的叠下.
 - 产品变异图像保存 `{rounded.lg}` 缩略图横跨所有断点——它们从不全程移动.

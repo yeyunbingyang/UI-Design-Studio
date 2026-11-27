@@ -15,13 +15,13 @@ Claude.com is the warmest, most editorial interface in the AI-product category. 
 2. **轻霜卡** (`{colors.surface-card}`)——特色卡背景.
 3. **暗海军产品表面** (`{colors.surface-dark}`)——代码编辑器模型,模型显示卡,脚前CTA,脚脚本身
 
-黑暗的表面是哪里, 黑暗的表面是哪里 Claude 显示其产品铬 – 代码块,终端输出,模型比较表,代理流图。奶油到黑暗的对比是页面的节奏。
+黑暗的表面是哪里, 黑暗的表面是哪里 Claude 显示其产品界面框架 – 代码块,终端输出,模型比较表,代理流图。奶油到黑暗的对比是页面的节奏。
 
 **关键特征 :**
 - Warm cream canvas (`{colors.canvas}` — #faf9f5) with dark warm-ink text (`{colors.ink}` — #141413). The brand's defining color choice.
 - 珊瑚初级CTA(`{colors.primary}` — #cc785c。 很少在单个按钮上使用, 慷慨地在满血的珊瑚呼喊卡上使用。
 - Slab-serif display headlines via Copernicus / Tiempos Headline at weight 400 with negative letter-spacing. Pairs with humanist sans body for a literary editorial voice.
-- 暗海军产品模拟卡(`{colors.surface-dark}` — #181715)携带代码块,终端板,模型比较数据——品牌以规模显示产品铬,而不是抽象的营销插图.
+- 暗海军产品模拟卡(`{colors.surface-dark}` — #181715)携带代码块,终端板,模型比较数据——品牌以规模显示产品界面框架,而不是抽象的营销插图.
 - 轻奶油特色卡(`{colors.surface-card}` — #efe9de)——比页面底色略暗,用于内容驱动的特性解释.
 - 反射线-斜射标记——一个黑色小星状的格子(英语:4-speak radial)——作为品牌字标前缀和内容标记出现.
 - Border radius is hierarchical: `{rounded.md}` (8px) for buttons + inputs, `{rounded.lg}` (12px) for content + product cards, `{rounded.xl}` (16px) for the hero illustration container, `{rounded.pill}` for badges.
@@ -30,14 +30,14 @@ Claude.com is the warmest, most editorial interface in the AI-product category. 
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **珊瑚/小学** (`{colors.primary}` — #cc785c: 签名 Anthropic 暖珊瑚. 在每个主要的CTA背景上使用,在满血的珊瑚呼号卡上使用,在品牌的字号强调色上使用. 尖号标志外最公认的Anthropic 颜色.
 - **珊瑚活性** (`{colors.primary-active}` — #a9583e: 新闻/悬浮-达克变种.
 - **珊瑚残废** (`{colors.primary-disabled}` — #e6dfd8: 脱饱和奶油丁酸残废状态.
 - **调和Teal** (`{colors.accent-teal}` — #5db8a6:在二级产品表面使用节制(端数状态指标,连接器页面中的"主动连接"点).
 - **琥珀节** (`{colors.accent-amber}` — #e8a55a: 分类徽章和内含亮点上使用的小型伴暖通.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — #faf9f5:默认的页层. 丁香奶油——温暖,故意不纯白色.
 - **表面软** (`{colors.surface-soft}` — #f5f0e8: 区划符,非常柔软的带状背景.
 - **表面卡片** (`{colors.surface-card}` — #efe9de:特色卡,内容卡,比页面底色更暗的一步.
@@ -48,7 +48,7 @@ Claude.com is the warmest, most editorial interface in the AI-product category. 
 - **Hairline** (`{colors.hairline}` — #e6dfd8): The 1px border tone on cream surfaces. Same hex as `{colors.primary-disabled}` — borders feel like one elevation step rather than ink lines.
 - **柔软的细边线** (`{colors.hairline-soft}` — #ebe6df:同一带内使用的几乎可视分机.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — #141413:所有头条和主文,温暖的黑暗,略微淡出纯黑.
 - **Body Strong** (`{colors.body-strong}` — #252523): Emphasized paragraphs, lead text.
 - **体质** (`{colors.body}` — #3d3d3a: 默认的运行文本颜色.
@@ -58,7 +58,7 @@ Claude.com is the warmest, most editorial interface in the AI-product category. 
 - **黑暗时** (`{colors.on-dark}` — #faf9f5: 暗表面使用的凝胶-丁酸白色(去除页面底色色调).
 - **暗软** (`{colors.on-dark-soft}` — #a09d96:页脚体文字,暗模中的次要标签.
 
-### 语义
+### 语义色
 - **成功** (`{colors.success}` — #5db872:绿色状态点,"可用"指标.
 - **警告** (`{colors.warning}` — #d4a017:警告警示(在营销表面有报道).
 - **错误** (`{colors.error}` — #c64545:验证错误.
@@ -66,7 +66,7 @@ Claude.com is the warmest, most editorial interface in the AI-product category. 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 The system runs **Copernicus** (or **Tiempos Headline** as substitute) as the slab-serif display face for headlines, and **StyreneB** (or **Inter** as substitute) as the humanist sans for body, navigation, and UI labels. **JetBrains Mono** handles code blocks. The fallback stack walks `Tiempos Headline, Garamond, "Times New Roman", serif` for display and `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif` for body.
 
 显示/身体的分割是编辑:
@@ -74,7 +74,7 @@ The system runs **Copernicus** (or **Tiempos Headline** as substitute) as the sl
 - StyreneB 萨斯( 字重) 400-500) 身体、导航、按钮、标题、标签
 - JetBrains Mono → all code blocks and terminal text
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -96,9 +96,9 @@ The system runs **Copernicus** (or **Tiempos Headline** as substitute) as the sl
 ### 原则
 Display sizes use weight 400 (regular), never bold. Negative letter-spacing (-0.3 to -1.5px) is essential — Copernicus without it reads as off-brand. The serif character is what gives Anthropic its literary, considered voice; switching to a sans-serif display would make Claude feel like every other AI tool.
 
-身体类型保持字重 400 段落、字重 500 圣体是人文主义的(StyreneB)——永远不几何. Inter 由于其类似的人道主义比例,是可以接受的替代物; Helvetica 或 减 减 Arial 将太中立 打破温暖的饮食感觉。
+身体类型保持字重 400 段落、字重 500 圣体是人文主义的(StyreneB)——永远不几何. Inter 由于其类似的人道主义比例,是可以接受的替代物; Helvetica 或 Arial 将太中立 打破温暖的饮食感觉。
 
-### Note on Font Substitutes
+### 替代字体
 If Copernicus / Tiempos Headline is unavailable, **Cormorant Garamond** at weight 500 with -0.02em letter-spacing is the closest open-source approximation. **EB Garamond** is a fallback. For StyreneB, **Inter** is the closest match — both are humanist sans designed for screen reading. **Söhne** is another close alternative if licensed.
 
 
@@ -111,18 +111,18 @@ If Copernicus / Tiempos Headline is unavailable, **Cormorant Garamond** at weigh
 - **Card internal padding:** `{spacing.xl}` (32px) for feature cards, pricing tier cards, model comparison cards; `{spacing.lg}` (24px) for code-window cards and connector tiles.
 - **Callout / CTA bands:** `{spacing.xxl}` (48px) inside coral callout cards; 64px inside the larger dark CTA band.
 
-### 网格容器( C)
+### 网格与容器
 - **最大内容 width:** ~1200px centered.
 - **编辑机构:** 单身 12-列网格;首屏经常使用 6/6 拆分(h)1 左,插图右).
 - **Feature card grids:** 3-up at desktop, 2-up at tablet, 1-up at mobile.
 - **Connector tile grids:** 4-up or 6-up at desktop, 2-up at tablet, 1-up at mobile.
 - **定价 grid:** 3-up at desktop (Free / Pro / Team / Enterprise often), 1-up at mobile.
 
-### 白空间哲学
+### 留白规则
 奶油页面底色+ serif 显示 + 慷慨的内部编织 创建编辑间隔 —— Claude 读作长形杂志栏而非营销模板。 96px; 白空间内卡是宽大的( )32px),让类型呼吸。
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -132,7 +132,7 @@ If Copernicus / Tiempos Headline is unavailable, **Cormorant Garamond** at weigh
 | Dark surface card | `{colors.surface-dark}` background — no shadow | Code editor mockups, model showcase cards |
 | 暗影的暗影 暗影的暗影的暗影 | 低阿尔法时的阴影 | 覆盖状态(系统使用 `0 1px 3px rgba(20,20,19,0.08)` 很少见) |
 
-高地哲学是 **颜色块先, 阴影稀有**,大多数深度来自奶油-vs-暗面对比. 阴影是最小的,暗面模型有自己的内部产品铬(代码编辑器滚动条,行号,语法突出),这些产品不需要外部阴影就可以增加细节.
+高地哲学是 **颜色块先, 阴影稀有**,大多数深度来自奶油-vs-暗面对比. 阴影是最小的,暗面模型有自己的内部产品界面框架(代码编辑器滚动条,行号,语法突出),这些产品不需要外部阴影就可以增加细节.
 
 ### 装饰性深度
 - 炭疽杆菌-标记甘油(4- 光线星号)作为小黑标志出现在品牌字标中,作为内容标记在内线中出现.
@@ -142,7 +142,7 @@ If Copernicus / Tiempos Headline is unavailable, **Cormorant Garamond** at weigh
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -184,7 +184,7 @@ When photography is used (rare — mostly testimonials), avatars crop to perfect
 
 **`text-link`** ——内置体链接于 `{colors.primary}` 压轴线下; 珊瑚内线连接是系统最显著的小细节之一。
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`hero-band`** 奶油罐头首屏 6-6 grid: h1 + sub-headline + button row on the left, hero illustration card or product mockup card on the right. Vertical padding `{spacing.section}` (96px).
 
@@ -192,9 +192,9 @@ When photography is used (rare — mostly testimonials), avatars crop to perfect
 
 **`feature-card`** 用于 3- 上层特性网格。背景 `{colors.surface-card}` (#efe9de 稍暗的奶油,圆形 `{rounded.lg}` (12px),内部粘贴 `{spacing.xl}` (32px。在顶部带一个小图标,一个 `{typography.title-md}` 头条,和身体描述 `{typography.body-md}`.
 
-**`product-mockup-card-dark`** - 显示实际的暗色海军卡 Claude 产品铬(聊天界面、代码编辑器、代理控制)。 `{colors.surface-dark}`,四舍五入 `{rounded.lg}`内部粘贴 `{spacing.xl}` (32px。 。 运算文本标签 。 `{colors.on-dark}` 和以下产品UI碎片。
+**`product-mockup-card-dark`** - 显示实际的暗色海军卡 Claude 产品界面框架(聊天界面、代码编辑器、代理控制)。 `{colors.surface-dark}`,四舍五入 `{rounded.lg}`内部粘贴 `{spacing.xl}` (32px。 。 运算文本标签 。 `{colors.on-dark}` 和以下产品UI碎片。
 
-**`code-window-card`** ——一张专门暗卡,显示一个有行号的代码编辑器,语法高亮代码在 `{typography.code}` (JetBrains Mono),有时在下面设置“运行”按钮或终端输出面板。 `{colors.surface-dark}` 与 `{colors.surface-dark-soft}` 内置码块,四舍五入 `{rounded.lg}`, 编译 `{spacing.lg}` (24px) 的标志视觉要素。 Claude 代码产品页.
+**`code-window-card`** ——一张专门暗卡,显示一个有行号的代码编辑器,语法高亮代码在 `{typography.code}` (JetBrains Mono),有时在下面设置“运行”按钮或终端输出面板。 `{colors.surface-dark}` 配合 `{colors.surface-dark-soft}` 内置码块,四舍五入 `{rounded.lg}`, 编译 `{spacing.lg}` (24px) 的标志视觉要素。 Claude 代码产品页.
 
 **`model-comparison-card`** — Used on the homepage's "Which problem are you up against?" section comparing Opus / Sonnet / Haiku. Background `{colors.canvas}` with hairline border, rounded `{rounded.lg}`, internal padding `{spacing.xl}` (32px). Carries the model name, a short capability blurb, and a `{component.text-link}` to learn more.
 
@@ -206,7 +206,7 @@ When photography is used (rare — mostly testimonials), avatars crop to perfect
 
 **`connector-tile`** — Used on the connectors page's integration grid. Background `{colors.canvas}` with hairline border, rounded `{rounded.lg}`, padding 20px. Each tile carries a logo at top, a `{typography.title-sm}` connector name, and a short description.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——标准文本输入。背景 `{colors.canvas}`文本中,请输入 `{colors.ink}`类型 `{typography.body-md}`,四舍五入 `{rounded.md}` (8px), 贴 10px × 14px高度( 高度) 40px. 1px 细边线边界在 `{colors.hairline}`.
 
@@ -235,16 +235,16 @@ When photography is used (rare — mostly testimonials), avatars crop to perfect
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 霜页面底色上每页都锁定,纯白读作"任何其他AI工具";暖色的锡是品牌差异.
 - 使用 Copernicus serif 显示标题。对齐 StyreneB 圣体 负 letter-spacing 显示大小为不可谈判的。
 - 准备金 `{colors.primary}` 初级社区协议和全血型 `{component.callout-card-coral}` 千万别把强调色画到别的地方去
-- 使用 `{component.product-mockup-card-dark}` 财务报告和已审计财务报表 `{component.code-window-card}` 显示实际 Claude 产品铬。当您可以显示真实代码时,不要涂上代码的营销插图。
+- 使用 `{component.product-mockup-card-dark}` 和 `{component.code-window-card}` 显示实际 Claude 产品界面框架。当您可以显示真实代码时,不要涂上代码的营销插图。
 - 平对 `{component.feature-card}` (尖叫声)与 `{component.product-mockup-card-dark}` 换带的(navy),奶油到暗的节奏是品牌的节奏机制.
 - 使用 Anthropic 标记格莱弗作为品牌字标记前缀, 绝不在字标记本身内将标记反转为白刻在暗处.
 - 应用 `{spacing.section}` (96px)在主要乐队之间.
 
-### Don't
+### 应避免的做法
 - Don't use cool grays or pure white for canvas. Cream is the brand.
 - 大胆一点 serif 显示字重。 Copernicus 时 间 700 读作爆炸性;系统留在 400.
 - Don't use cool blue or saturated cyan as a brand accent. The coral is the brand voltage.
@@ -254,7 +254,7 @@ When photography is used (rare — mostly testimonials), avatars crop to perfect
 - Don't add hover state styling beyond what the system already encodes — primary darkens on press; nothing else changes.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -271,14 +271,14 @@ When photography is used (rare — mostly testimonials), avatars crop to perfect
 - `{component.text-input}` 高度为 40px.
 - Connector tile entire card area is tappable; effective tap area >> 44px.
 
-### 折叠战略
+### 窄屏布局调整
 - 顶级导航崩溃到汉堡 < 768px;菜单作为全屏奶油纸打开.
 - 首屏乐队的 6-6 网格崩溃到移动上的单列——h1 +子标题+按钮先,然后是下面的插图/模拟卡.
 - 特色网格减少柱数,而不是缩小牌数.
 - 定价等级卡崩溃 4 → 2 → 1; 特色级的暗面在每个断点上保持视差分明.
 - Code-window cards retain code legibility at every breakpoint by allowing horizontal scroll within the card rather than wrapping code lines.
 
-### 图像行为
+### 图片适配
 - 暗模拟器内的代码块 fixed font-size; 水平滚动在移动上而不是包扎.
 - 首屏插图比例尺;线条艺术中风在移动上略微微微微瘦.
 - 证物中的照片 在每个断点上转圈
@@ -297,12 +297,12 @@ When photography is used (rare — mostly testimonials), avatars crop to perfect
 
 ## 已知缺口
 
-- Copernicus 财务报告和已审计财务报表 StyreneB 被许可使用 Anthropic 类型面, 且不能作为公共网络字体。 替代( )Tiempos Headline /加拉蒙德勋章/EB加拉蒙德勋章 serif; Inter / Söhne for sans)在排版部分有记载.
+- Copernicus 和 StyreneB 被许可使用 Anthropic 类型面, 且不能作为公共网络字体。 替代( )Tiempos Headline /加拉蒙德勋章/EB加拉蒙德勋章 serif; Inter / Söhne for sans)在排版部分有记载.
 - Anthropic radial-spike-mark是作为内置SVG而提供的品牌格莱弗;它在此没有作为系统符号正式化. 把它当作一个标志资产.
 - 动画和过渡时间(聊天消息透露,主页上的代码块打字机效果,代理流图动画)不在范围.
 - 表格验证状态超出 `{component.text-input-focused}` 不被提取 – 错误/ 成功状态需要注册或反馈流程来确认。
 - 实际 Claude 产品表面( 4)claude.ai聊天界面)与营销网站共享一些符号,但添加了许多产品特定组件(聊天泡沫,消息工具,文件上传芯片,对话历史侧栏),这些内容超出了此营销表面文档的范围.
-- 某些页面上的“代理”/“计算机使用”演示卡,显示动画 Claude 控制浏览器——静态截图不能完全捕捉动画的铬.
+- 某些页面上的“代理”/“计算机使用”演示卡,显示动画 Claude 控制浏览器——静态截图不能完全捕捉动画的界面框架.
 
 ## 设计词元原值
 

@@ -27,17 +27,17 @@ Surfaces barely lift. Cards are white (`{colors.canvas-elevated}`) on the #fafaf
 
 > 来源页分析:主页、AI网关页、客户页和定价页。每页的墨水/扫描/海绳三强调色重复;强调色蓝色(`{colors.link}`)价格上表面,网格化停止在首屏中生活.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **墨水( 墨水 )** (`{colors.primary}` / `{colors.ink}` — #171717:该品牌定义了近黑. 头部,主CTA填充,标志,以及最黑暗的文本层. Paired with. `{colors.on-primary}` (白话).
 - **Vercel Blue** (`{colors.link}` — #0070f3): the link and accent blue — inline links, pricing highlights, focus signals. Darker press tone `{colors.link-deep}` (#0761d1), pale wash `{colors.link-soft}` (#d3e5ff).
-- **紫罗兰** (`{colors.violet}` — #7928ca), **青色** (`{colors.cyan}` — #50e3c2), **粉红色** (`{colors.pink}` — #ff0080), **红** (`{colors.magenta}` — #eb367f:色调强调色家族,节制用于插图强调色,作为网格化的停声,从未像铬填充一样.
+- **紫罗兰** (`{colors.violet}` — #7928ca), **青色** (`{colors.cyan}` — #50e3c2), **粉红色** (`{colors.pink}` — #ff0080), **红** (`{colors.magenta}` — #eb367f:色调强调色家族,节制用于插图强调色,作为网格化的停声,从未像界面框架填充一样.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — #fafafa:默认的页背景——近白面表所有东西都坐着.
 - **升迁** (`{colors.canvas-elevated}` — #ffffff:纯白色的牌,按钮,输入,和代码块从页面底色上抬起.
-- **Hairline-Soft 表面** (`{colors.hairline-soft}` — #f2f2f2:最微弱的灰色填充,用于巧妙的交替面板和凹井。
+- **Hairline-Soft 界面表面** (`{colors.hairline-soft}` — #f2f2f2:最微弱的灰色填充,用于巧妙的交替面板和凹井。
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — #171717:主要标题和高强调文本。
 - **体质** (`{colors.body}` — #4d4d4d:标准段落和二级副本,导航链接.
 - **Mute** (`{colors.mute}` — #8f8f8f): lower-emphasis captions, logo-strip labels, metadata.
@@ -46,7 +46,7 @@ Surfaces barely lift. Cards are white (`{colors.canvas-elevated}`) on the #fafaf
 ### 边框
 - **细边线** (`{colors.hairline}` — #ebebeb: 计数器 1px 每一个卡片、输入和分隔器上的边框——系统的结构工作马。
 
-### 语义
+### 语义色
 - **错误** (`{colors.error}` — #ee0000: 验证/破坏性,具有深层的压电层 `{colors.error-deep}` (#c50000).
 - **警告** (`{colors.warning}` — #f5a623: 谨慎状态, 柔软 `{colors.warning-soft}` 深处 `{colors.warning-deep}` 等级。
 - **成功** 地图到 `{colors.link}` (#0070f3)——蓝色双人作为正/主动信号.
@@ -61,10 +61,10 @@ These, blended together, form the hero's multi-stop mesh.
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 The system runs entirely on **Geist** — Vercel's own type family. **Geist Sans** (with an `Arial` system fallback) sets all UI and prose; **Geist Mono** sets code, inline technical tokens, and the small uppercase section eyebrows. There is no third face. Geist Sans is a clean geometric-humanist sans; substitute **Inter** if Geist is unavailable, and **JetBrains Mono** or **IBM Plex Mono** for Geist Mono.
 
-### 等级
+### 字号层级
 
 | 调试                       | 大小 | 字重 | 线条高度 | 字母间距 | 使用                                   |
 | --------------------------- | ---- | ------ | ----------- | -------------- | ------------------------------------- |
@@ -85,7 +85,7 @@ The system runs entirely on **Geist** — Vercel's own type family. **Geist Sans
 - Weight is binary: 600 for headings and 500 for buttons/labels; everything else is 400. There is no light or black weight, and no italic.
 - Geist Mono 仅保留两个角色——代码,以及小大写眉毛标签,这些标签引入了像光谱表头这样的部分。
 
-### Note on Font Substitutes
+### 替代字体
 Geist Sans and Geist Mono are freely available (open-source, via Vercel / Google Fonts). If unavailable, **Inter** (sans) and **JetBrains Mono** (mono) are the closest open substitutes; keep heading weight at 600 and preserve the negative display tracking.
 
 
@@ -97,15 +97,15 @@ Geist Sans and Geist Mono are freely available (open-source, via Vercel / Google
 - **Card interiors** sit at `{spacing.lg}`–`{spacing.xl}` (24–32px); **section bands** run `{spacing.4xl}`–`{spacing.section}` (96–128px) of vertical rhythm.
 - **按钮绑定** 横向的 营销胶囊形 `0px 14px`,导航按钮 `0px 6px` 高度由下列人员设定: line-height 而不是垂直的垫。
 
-### 网格容器( C)
+### 网格与容器
 - 居中( C) max-width 集装箱(~1200px),带有舒适的沟槽;首屏和CTA乐队将其内容集中.
 - 使用特性部分 2- 起来, 3- 上,还有 4- 向上移动的发条卡网 1- 宽度很窄
 - 定价页面使用多栏级网格;客户页上标注/案例研究网格.
 
-### 白空间哲学
+### 留白规则
 白空是结构的,近白页面底色和宽大的块块块编织完成分离工作;卡片由细毛线而不是粗厚的背景组合,页面呼吸——带间纵向差距较大,卡片内部节奏紧凑.
 
-### 反应战略
+### 响应式布局
 
 #### 断点
 | 名称    | 宽度   | 密钥更改                                                                              |
@@ -118,14 +118,14 @@ Geist Sans and Geist Mono are freely available (open-source, via Vercel / Google
 #### 触控区域
 销售胶囊形`{components.button-primary}`)和导航按钮清除 44px WCAG-AAA目标通过线高8驱动高度. Circular 图标按钮(`{components.button-icon-circular}`保持足够的命中区。
 
-#### 折叠战略
+#### 窄屏布局调整
 导航行在菜单触发器后面崩溃;多列发卡网格重流到单列;代码编辑器和节点图示缩放或滚动而不是不合理缩小;定价级网格堆积垂直.
 
-#### 图像行为
+#### 图片适配
 The hero mesh gradient is a CSS/SVG composition that scales fluidly. Feature illustrations (node graphs, code editors) are vector/HTML, ink-on-white, scaling crisply. Customer logos sit in a greyscale strip. No heavy raster photography.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等        | 治疗                                                                                  | 使用                                                 |
 | ------------ | ------------------------------------------------------------------------------------------ | --------------------------------------------------- |
@@ -141,7 +141,7 @@ The hero **mesh gradient** is the only atmospheric element — a soft multi-stop
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试                     | 数值  | 使用                                             |
 | ------------------------- | ------ | ----------------------------------------------- |
@@ -153,7 +153,7 @@ The hero **mesh gradient** is the only atmospheric element — a soft multi-stop
 | `{rounded.pill}`          | 100px  | 销售CTA药                             |
 | `{rounded.full}`          | 9999px | Circular 图标按钮、 浮雕、 导航幽灵链接 |
 
-半径语言为双模式:紧 6px 用于功能性铬的方形、用于营销的全胶囊形和类别标签,以及 12–16px 内容卡在中间。
+半径语言为双模式:紧 6px 用于功能性界面框架的方形、用于营销的全胶囊形和类别标签,以及 12–16px 内容卡在中间。
 
 ### 几何
 牌是矩形,在 12–16px 半径; 营销按钮和分类标签为全药; 图标按钮和假人为 circular。说明是线性字重的矢量图形,用白纸墨印。
@@ -191,12 +191,12 @@ The hero **mesh gradient** is the only atmospheric element — a soft multi-stop
 **`button-icon-circular`** — circular 图标/旋转木马控件
 - Background `{colors.canvas-elevated}`, text `{colors.ink}`, 1px hairline `{colors.hairline}`, type `{typography.body-lg}`, rounded `{rounded.full}`, no padding.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** 默认窗体字段
 - Background `{colors.canvas-elevated}`, ink text `{colors.ink}`, 1px hairline `{colors.hairline}`, type `{typography.body-md}`, rounded `{rounded.sm}`, padding `{spacing.xs} {spacing.sm}`.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`feature-card`** ——平面细边线内容卡.
 - Background `{colors.canvas-elevated}`, 1px hairline `{colors.hairline}`, ink text `{colors.ink}`, type `{typography.body-md}`, rounded `{rounded.md}`, padding `{spacing.lg}`. The workhorse grid tile, often holding a node-graph or code illustration.
@@ -229,7 +229,7 @@ The hero **mesh gradient** is the only atmospheric element — a soft multi-stop
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 保持页面底色近白( Name`{colors.canvas}`并让近黑墨水(`{colors.ink}`) 带有标题,CTA,和边框——系统是黑白二重奏.
 - 首屏网格梯度和小插图强调色的封装颜色; 保留 `{colors.link}` 链接和焦点。
 - Use the two button shapes by context: black pill (`{components.button-primary}`) for marketing CTAs, 6px square (`{components.button-primary-sm}`) for nav/app.
@@ -237,7 +237,7 @@ The hero **mesh gradient** is the only atmospheric element — a soft multi-stop
 - 设置标题 Geist 桑斯语Name 600 带有紧紧负跟踪; 带有大写标签的段落 Geist Mono 眉毛( 双眉)`{typography.mono-eyebrow}`).
 - 故意踩踏灰色文本梯度 : `{colors.ink}` → `{colors.body}` → `{colors.mute}` → `{colors.faint}`.
 
-### Don't
+### 应避免的做法
 - Don't fill large surfaces with the accent colors — violet/cyan/pink/blue live in the gradient and illustrations, not as chrome.
 - Don't mix the button shapes within one context — marketing CTAs stay pills, app/nav controls stay 6px squares.
 - Don't pile on shadows — depth is a 1px hairline plus, at most, a finely-layered low-alpha shadow stack.
@@ -247,7 +247,7 @@ The hero **mesh gradient** is the only atmospheric element — a soft multi-stop
 
 ## 设计词元原值
 
-分析 Vercel设计语言—— Geist 系统,一种尖锐的黑色近白开发者平台美学,其中单一的墨水调带每个标题,CTA,和边框,页面允许自己的唯一颜色是多站的网状梯度(cyan / blue / violet / magenta / 琥珀),仅限于首屏. Geist 珊丝驱动的紧跟显示类型, Geist Mono 标注技术眉毛, 和丸形黑色按钮标记营销 CTAs 的同时 6px 方形按钮处理应用和导航铬.
+分析 Vercel设计语言—— Geist 系统,一种尖锐的黑色近白开发者平台美学,其中单一的墨水调带每个标题,CTA,和边框,页面允许自己的唯一颜色是多站的网状梯度(cyan / blue / violet / magenta / 琥珀),仅限于首屏. Geist 珊丝驱动的紧跟显示类型, Geist Mono 标注技术眉毛, 和丸形黑色按钮标记营销 CTAs 的同时 6px 方形按钮处理应用和导航界面框架.
 
 ```yaml
 ---

@@ -27,7 +27,7 @@ Surfaces are defined by hairlines and the faintest layered shadows rather than h
 
 > Source pages analysed: the Notion home page plus Pricing, Enterprise, Product (AI), Product (Agents), and Startups. Every secondary page resolved to the same core palette — Notion runs one tightly-scoped system across the marketing site.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Notion 蓝色** (`{colors.primary}` — #0075de: 单结构强调色。初级 CTA 填充("Get") Notion ),内置链接颜色,活动塔布和焦点信号。这是唯一一种能描绘动作的颜色。
 - **Pressed Blue** (`{colors.primary-active}` — #005bab): the darker press state of the primary CTA.
 - **深渊** (`{colors.secondary}` — #213183:黑暗首屏"夜"乐队背景及其贴星座场;深处 brand-blue 用于全血反转的节.
@@ -41,27 +41,27 @@ Surfaces are defined by hairlines and the faintest layered shadows rather than h
 - **贴纸绿色** (`{colors.accent-green}` — #1aae39)
 - **贴纸 布朗** (`{colors.accent-brown}` — #523410)
 
-### 表面
+### 界面表面
 - **白色** (`{colors.canvas}` / `{colors.surface}` — #ffffff:卡片和面板表面,导航栏,形成字段.
 - **温暖纸** (`{colors.canvas-soft}` — #f6f5f4:签名页页面底色和页脚乐队——一个温暖的离白,使整个网站像文件一样平静.
 - **Hairline** (`{colors.hairline}` — #e6e6e6): 1px card borders and dividers, a black-at-10%-on-white blend kept solid for token reuse.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — #000000:主要标题和正文(交 ~95% α代表一个柔软的真黑.
 - **温暖的炭** (`{colors.ink-secondary}` — #31302e: 次级体型复制和页脚文本.
 - **石头** (`{colors.ink-muted}` — #615d59: 支持/ 哑音复制.
 - **灰尘** (`{colors.ink-faint}` — #a39e98: 标题,元数据,占位符文本.
 
-### 语义
-Notion'营销表面不会暴露系统铬中的专用错误/成功调色板——状态由贴纸调色板(如. `{colors.accent-green}` 而不是单独的语义坡道。
+### 语义色
+Notion'营销表面不会暴露系统界面框架中的专用错误/成功调色板——状态由贴纸调色板(如. `{colors.accent-green}` 而不是单独的语义坡道。
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 The entire system is set in **`NotionInter`** — Notion's tuned cut of Inter — with a fallback stack of `Inter, -apple-system, system-ui, "Segoe UI", Helvetica, Arial`. A single family carries everything from 64px display headlines to 12px eyebrows; there is no serif, no monospace display face. OpenType `lnum` (lining numerals) and `locl` features are enabled on body and heading roles.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -80,7 +80,7 @@ The entire system is set in **`NotionInter`** — Notion's tuned cut of Inter �
 ### 原则
 Notion's type voice is **tight, heavy, and quiet-confident**. Headlines lean on weight 700 and aggressive negative tracking (more negative the larger the size) so display copy feels set, not stretched. Body copy stays at a comfortable 1.5 line-height for document readability. The contrast between a heavy 700 headline and a calm 400 body is the primary expressive lever — there is no decorative typography, only a clear hierarchy.
 
-### Note on Font Substitutes
+### 替代字体
 `NotionInter` 是一个开源的专有调制 **Inter** 家庭——替代 Inter 直接 大约 Notion显示紧凑度, 应用负数 letter-spacing 上表中的数值明确(Inter 默认跟踪时,读取的比 `NotionInter`).
 
 
@@ -91,13 +91,13 @@ Notion's type voice is **tight, heavy, and quiet-confident**. Headlines lean on 
 - **托肯斯(前题)**: `{spacing.xxs}` 4px · `{spacing.xs}` 8px · `{spacing.sm}` 12px · `{spacing.md}` 16px · `{spacing.lg}` 24px · `{spacing.xl}` 28px · `{spacing.xxl}` 32px.
 - 纸牌内部铺设土地 `{spacing.lg}` (24px); 工具按钮使用紧 4px/14px; 窗体字段页 `{spacing.xxs}`- 比例 6px。区域间隙堆叠更大的步骤。
 
-### 网格容器( C)
+### 网格与容器
 Content is centred in a wide max-width column (~1080–1300px on desktop per the extracted breakpoints) with generous outer gutters. Feature sections alternate between full-width text blocks and 2-up / 3-up card grids; the pricing page widens to a 4-column plan table. The dark hero spans full-bleed edge to edge while body sections respect the centred container.
 
-### 白空间哲学
+### 留白规则
 Whitespace is the primary grouping device. Sections are separated by large vertical gaps rather than rules, and cards sit on the warm canvas with quiet hairlines instead of heavy frames. The effect is document-like: airy, scannable, and never crowded.
 
-### 反应战略
+### 响应式布局
 
 #### 断点
 | 名称 | 宽度 | 密钥更改 |
@@ -110,14 +110,14 @@ Whitespace is the primary grouping device. Sections are separated by large verti
 #### 触控区域
 胶囊形CTAs(`button-primary`, `button-secondary`)和工具按钮(`button-utility`携带舒适的水龙头垫板;瞄准 44×44px 移动时最小命中区, 即使在标签收缩时仍保留垂直的贴板 。
 
-#### 折叠战略
+#### 窄屏布局调整
 The top nav condenses to a hamburger below the tablet breakpoint; multi-column card grids collapse to a single stacked column; the pricing plan table reflows from 4 side-by-side columns into stacked plan cards. Section padding tightens but the warm-canvas rhythm is preserved.
 
-#### 图像行为
+#### 图片适配
 产品截图和插图 `{rounded.lg}` 框和缩放在网格单元格中。粘贴图是小型固定规模的装饰资产,可重流,但不会收缩。
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -133,7 +133,7 @@ Notion高程哲学是 **几乎没...**: 阴影是由许多近透明层所建,因
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -144,7 +144,7 @@ Notion高程哲学是 **几乎没...**: 阴影是由许多近透明层所建,因
 | `{rounded.xl}` | 16px | Large containers, image wells |
 | `{rounded.full}` | 9999px | 销售胶囊形 密码 徽章 circular 图标按钮 |
 
-### 摄影几何
+### 图片形状
 Product screenshots are framed in rounded `{rounded.lg}` / `{rounded.xl}` wells, typically full-bleed within their container with a hairline edge. Illustration tiles use colour-blocked header bands above white card bodies. Avatars and app-icon stickers are small, sometimes fully circular (`{rounded.full}`). There is no heavy art-direction crop — images scale within their rounded frame.
 
 
@@ -175,7 +175,7 @@ Product screenshots are framed in rounded `{rounded.lg}` / `{rounded.xl}` wells,
 **`button-icon-circular`** - 木马/媒体控制
 - Circular `{rounded.full}` 半透明控制 `rgba(0,0,0,0.05)` 补足和 `{colors.on-primary}` glyph,用于幻灯片和播放/暂停控制;应用 a `scale(0.9)` 压变。
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`feature-card`** 内容/特征卡
 - 白色表面 `{colors.surface}`, `{colors.ink}` 文本, 单词 `{typography.body-md}`,四舍五入 `{rounded.lg}` (12px), 贴 `{spacing.lg}` (24px),工作马的营销卡;经常被贴纸调色板上的彩色密闭插图带所顶住。默认高程是平的(只有线条).
@@ -189,12 +189,12 @@ Product screenshots are framed in rounded `{rounded.lg}` / `{rounded.xl}` wells,
 **`pricing-plan-card-featured`** ——重点计划栏.
 - 温暖 `{colors.canvas-soft}` 填满将建议等级从白人兄弟姐妹身上抬起,相同 `{rounded.md}` 形状和贴垫。用表面的锡而不是用彩色的边框来区分。
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** — Text / number field
 - White surface `{colors.surface}`, `{colors.ink}` text, `{typography.body-sm}`, 1px `rgb(221,221,221)` border, rounded `{rounded.xs}` (4px), padding `6px`. Square-ish corners deliberately tighter than the pill CTAs. Focus adds the soft Level-1 shadow.
 
-### 签名组件
+### 标志性组件
 
 **`hero-band`** -黑暗的"夜晚"首屏 -黑暗的"夜晚"首屏 - 黑暗的"夜晚"首屏 - Dark "night" hero
 - Full-bleed deep indigo `{colors.secondary}` band carrying `{typography.display-1}` white headline, sticker-constellation field, and a `button-primary` + `button-secondary` CTA pair. The single inverted dark island in an otherwise daylight page.
@@ -205,45 +205,45 @@ Product screenshots are framed in rounded `{rounded.lg}` / `{rounded.xl}` wells,
 **`footer`** ——站点页脚
 - 温暖 `{colors.canvas-soft}` 乐队, `{colors.ink-secondary}` 链接文本在 `{typography.caption}`, 编译 `{spacing.xxl}`。多栏链接目录关闭每个页面。
 
-### 实例(说明性)
+### 组合示例
 
 > 奇幻怪兽的演示表面,每个 `ex-*` 条目参考: 下游消费者的品牌原始产品(`/preview-design`, `/generate-kit`) 重新皮肤相同 10 表面一致。
 
-**`ex-pricing-tier`** ——默认定价等级卡。 feature-card 带品牌的铬 canvas-soft 表面。
+**`ex-pricing-tier`**：默认套餐卡，沿用功能卡结构和品牌 canvas-soft 底色。
 - 属性 : `backgroundColor`, `textColor`, `borderColor`, `rounded`, `padding`
 
-**`ex-pricing-tier-featured`** ——地貌/高亮的层次——极性-浮点表面(暗色填充+光线文字在光线模式下,浅色填充+暗色文字在暗线模式下).
+**`ex-pricing-tier-featured`**：推荐套餐卡。浅色模式中用深底浅字，深色模式中用浅底深字。
 - 属性 : `backgroundColor`, `textColor`, `rounded`, `padding`
 
-**`ex-product-selector`** ——什么是包含的汇总卡——重新用于SaaS/B2B纵横(NOT为字形产品画廊).
+**`ex-product-selector`**：面向 SaaS / B2B 场景的套餐权益摘要卡。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-cart-drawer`** ——订阅摘要——重新用于SaaS/B2B(每件加件的行项目,而非字面车).
+**`ex-cart-drawer`**：SaaS / B2B 订阅摘要，每个附加项单独列出。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `item-divider`
 
-**`ex-app-shell-row`** ——App Shell 实例中的侧边栏导航行. Active State 使用品牌主标.
+**`ex-app-shell-row`**：应用框架示例里的侧栏导航行，以品牌主色标识选中状态。
 - 属性 : `backgroundColor`, `activeIndicator`, `rounded`, `padding`
 
-**`ex-data-table-cell`** — Default data-table th + td chrome. Header uses mono-caps eyebrow typography; body uses body-sm.
+**`ex-data-table-cell`**：数据表格中 th 与 td 的默认样式。表头采用大写等宽字，正文采用 body-sm。
 - 属性 : `headerBackground`, `headerTypography`, `bodyTypography`, `cellPadding`, `rowBorder`
 
-**`ex-auth-form-card`** ——签入/签入卡. 复用. feature-card 铬 text-input 原始人在里面,他们都在里面
+**`ex-auth-form-card`**：登录与注册卡，复用功能卡和 text-input。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-modal-card`** ——模度对话框表面——与 feature-card 以高的阴影盟誓,
+**`ex-modal-card`**：对话框表面，沿用功能卡样式并加浮层投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-empty-state-card`** ——空状态插图框架.
+**`ex-empty-state-card`**：空状态插图容器。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `captionTypography`
 
-**`ex-toast`** ——通知表面. feature-card 形状 + 中阴影。
+**`ex-toast`**：轻提示，沿用功能卡圆角并使用中等投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `typography`
 
 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` 用于主要行动、内在链接和主动/焦点信号——无装饰。
 - 保持页面的温暖 `{colors.canvas-soft}` 页面底色; 使用纯白色 `{colors.surface}` 用于卡片和字段创建温和的图形/地面。
 - Let the sticker palette (`{colors.accent-pink}`, `{colors.accent-teal}`, `{colors.accent-orange}`, …) live only in illustrations, icon tiles and category dots.
@@ -252,7 +252,7 @@ Product screenshots are framed in rounded `{rounded.lg}` / `{rounded.xl}` wells,
 - 定义表面 `{colors.hairline}` 和那不远处的,1 影子而不是沉重的滴影。
 - 保留深渊的indigo `{colors.secondary}` "夜"治疗单首屏瞬间,不重复乐队.
 
-### Don't
+### 应避免的做法
 - Don't paint a CTA or structural fill in any sticker-palette colour — those are decoration only.
 - Don't introduce a second structural accent alongside `{colors.primary}`.
 - Don't put pill `{rounded.full}` radii on form fields — inputs stay tight at `{rounded.xs}` (4px).
@@ -262,7 +262,7 @@ Product screenshots are framed in rounded `{rounded.lg}` / `{rounded.xl}` wells,
 
 ## 设计词元原值
 
-分析 Notion设计语言——一种建立在一种不白的布料上,近乎黑色的温和的纸质凸轮生产力系统. Inter 类型,以及一个单一的自信蓝色,被一个玩耍的多彩贴纸调色板所凸现,在铬保持安静时,它能做所有个性的工作。
+分析 Notion设计语言——一种建立在一种不白的布料上,近乎黑色的温和的纸质凸轮生产力系统. Inter 类型,以及一个单一的自信蓝色,被一个玩耍的多彩贴纸调色板所凸现,在界面框架保持安静时,它能做所有个性的工作。
 
 ```yaml
 ---

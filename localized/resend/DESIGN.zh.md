@@ -40,12 +40,12 @@ marketing prose and **Inter** for UI labels, while code blocks render in
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **初等白种** (`{colors.primary}` — `#fcfdff`:该品牌事实上的强调色. 预留了用于 `{component.button-primary}` (白药在黑页面底色上) Domaine display 标题和正文颜色。白色是页面底色上最响亮的颜色——这就是签名。
 - **初等开始** (`{colors.primary-on}` — `#000000`: 标签颜色, 上方 `{colors.primary}` 白色胶囊形上的黑色文字是品牌的CTA图案.
 - **表面光线** (`{colors.surface-light}` — `#f1f7fe`:一种微妙的蓝色丁丁型脱白,用作活动/压抑状态 `{component.button-primary}`.
 
-### 表面
+### 界面表面
 - **Canvas** (`{colors.canvas}` — `#000000`): the default page background. True black, never near-black.
 - **表面卡片** (`{colors.surface-card}` — `#0a0a0c`:标准内置卡表面,比页面底色轻一点,可以记录升降的阶梯.
 - **地面升华** (`{colors.surface-elevated}` — `#101012`:在特色定价等级和鬼按钮表面使用的第二高阶.
@@ -54,7 +54,7 @@ marketing prose and **Inter** for UI labels, while code blocks render in
 - **发条坚固** (`{colors.hairline-strong}` — `rgba(255,255,255,0.14)`: 结构 1px 纸牌、密码井和输入的边框。
 - **分块软** (`{colors.divider-soft}` — `rgba(255,255,255,0.04)`:页脚列之间的低相隔分数.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — `#fcfdff`: 暗页面底色上主文本颜色. Faintly blue-cool 感觉像印刷纸而不是纯白流行.
 - **体质** (`{colors.body}` — `rgba(252,253,255,0.86)`:长形体文字,纯墨会觉得太尖.
 - **木炭矿** (`{colors.charcoal}` — `rgba(252,253,255,0.7)`:标题,二级导航标签.
@@ -64,7 +64,7 @@ marketing prose and **Inter** for UI labels, while code blocks render in
 - **On-Light** (`{colors.on-light}` — `#000000`: 稀有区域内的标签颜色 email-mockup 白牌(原变种).
 - **On-Light 静音** (`{colors.on-light-mute}` — `rgba(0,0,51,0.7)`: 电子邮件模型中的第二文本。
 
-### 语义
+### 语义色
 - **亚青橙** (`{colors.accent-orange}` — `#ff801f`+ 发光( )`{colors.accent-orange-glow}` — `rgba(255,89,0,0.22)`: 大气暖洗固定在"电子邮件重构"/客户故事部分. 固体橙色从不作为按钮或表面出现——只有光线.
 - **黄褐色** (`{colors.accent-yellow}` — `#ffc53d`:内置中用突出字和"一流开发者经验"关键点名.
 - **蓝天** (`{colors.accent-blue}` — `#3b9eff`+ 发光( )`{colors.accent-blue-glow}` — `rgba(0,117,255,0.34)`:内置链接颜色与"整合本周末"部分的凉爽大气洗.
@@ -75,7 +75,7 @@ marketing prose and **Inter** for UI labels, while code blocks render in
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 
 Resend 船体四条家用堆栈:
 
@@ -86,7 +86,7 @@ Resend 船体四条家用堆栈:
 
 When proprietary families cannot be licensed, **Söhne** or **Tiempos Headline** stand in for Domaine Display, and **Geist** or **Inter Tight** can replace ABC Favorit. Inter and Geist Mono are open-source and should be used directly.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -111,7 +111,7 @@ When proprietary families cannot be licensed, **Söhne** or **Tiempos Headline**
 - ABC Favorit 总是跟着我跑 `ss01 / ss04 / ss11` 参与; Inter 从未带 OpenType 特性。代码为 Geist Mono 永远不带绳索。
 - 内置链接使用 `{typography.button-sm}` 阳性 letter-spacing (`0.35px`和 (中文(简体) ). ABC Favorit ——小间隔的微动使它具有交互的传导精度.
 
-### Note on Font Substitutes
+### 替代字体
 
 何时 Domaine Display 无法使用, 夹 `lineHeight` 改为: 1.0 明确和适用 `font-feature-settings: "ss01", "liga"` 替换 serif 以模仿替代的格言。 Tiempos Headline 将读得最接近。 ABC Favorit 替代品( 4)Geist, Inter 紧)通常默认为松散跟踪——应用 -0.5% letter-spacing 身体大小来补偿。
 
@@ -124,20 +124,20 @@ When proprietary families cannot be licensed, **Söhne** or **Tiempos Headline**
 - Section padding: `{spacing.section}` (96px) vertical between bands; `{spacing.band}` (128px) on the hero stripe and closing footer transition.
 - Card internal padding: `{spacing.xxl}` (32px) on `{component.feature-card}`, `{component.pricing-tier}`, and `{component.code-window}`.
 
-### 网格容器( C)
+### 网格与容器
 - **最大内容宽度** ≈ 1200px 身体部分。
 - **Feature grid**: 3 columns at desktop, 2 at tablet, 1 at mobile.
 - **定价**: 3- 以桌面为中心的电网; 中心电网级促进到 `{component.pricing-tier-featured}` (单步线的表面).
 - **代码- 音阶分割**: a 2- 上分 —— 叙述性副本左侧, `{component.code-window}` 右侧 —— 崩溃堆叠到 < 1024px.
 - **电子邮件模拟带**: 一张白牌(640px 最大宽度)以暗页面底色为中心,宽度垂直的贴纸可以像印刷杂志的套装一样读取.
 
-### 白空间哲学
+### 留白规则
 - 白空间是编辑和慷慨的——满腔的章节呼吸在 96–128px 这么说吧 Domaine Display 头条有空间登记规模。
 - 内卡,贴纸留在 32px 特征复制和密码井 与外网保持一致的节奏
-- 细边线 `{colors.hairline}` 财务报告和已审计财务报表 `{colors.hairline-strong}` 背负角色的投影会在更亮的系统中进行;暗布完全压制传统的投影深度.
+- 细边线 `{colors.hairline}` 和 `{colors.hairline-strong}` 背负角色的投影会在更亮的系统中进行;暗布完全压制传统的投影深度.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -157,7 +157,7 @@ The system has **no traditional drop shadow language**. Every surface either get
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -169,7 +169,7 @@ The system has **no traditional drop shadow language**. Every surface either get
 | `{rounded.xl}` | 16px | 更大的功能面板。 |
 | `{rounded.full}` | 9999px | 胶囊形 状态点 贡献者阿凡达人. |
 
-### 摄影几何
+### 图片形状
 - 该系统几乎没有使用摄影. 视觉兴趣来自打字机+大气光线+代码井+白色的电子邮件卡插件.
 - When portraits appear (testimonial avatars), they are circular (`{rounded.full}`) at 32px, sitting inline with body copy.
 - 电子邮件模拟卡运行于 4:5 肖像面, 与 `{rounded.lg}` 转角
@@ -192,7 +192,7 @@ The system has **no traditional drop shadow language**. Every surface either get
 - Background `{colors.canvas}`, label `{colors.ink}`, 1px `{colors.hairline-strong}`, type `{typography.button-md}`, `rounded: {rounded.md}`, height 36px.
 - 三级动作; 以自己的方式出现在内含链接旁边.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`hero-stripe`** ——满血首屏.
 - Background `{colors.canvas}`, text `{colors.ink}`, type `{typography.display-xxl}` for the headline, padding `96px 32px`, `rounded: {rounded.none}`.
@@ -216,7 +216,7 @@ The system has **no traditional drop shadow language**. Every surface either get
 
 **`code-window`** - 代码很好
 - Background `{colors.surface-deep}`, text `{colors.body}`, type `{typography.code-md}`, 1px `{colors.hairline-strong}`, `rounded: {rounded.lg}`, padding `{spacing.xl}` (24px).
-- 包括a 3- 点点交通灯光排在顶端 `{colors.accent-red}` / `{colors.accent-yellow}` / `{colors.accent-green}` 铬,加上下面的标签条。
+- 包括a 3- 点点交通灯光排在顶端 `{colors.accent-red}` / `{colors.accent-yellow}` / `{colors.accent-green}` 界面框架,加上下面的标签条。
 
 **`code-tab`** ——代码语言标签
 - Background `{colors.surface-card}`, text `{colors.charcoal}`, type `{typography.code-md}`, `rounded: {rounded.sm}`, padding `6px 12px`.
@@ -226,7 +226,7 @@ The system has **no traditional drop shadow language**. Every surface either get
 - Background `{colors.surface-card}` (or the rare `#ffffff` when rendered as a light-island inset), text `{colors.ink}` (or `{colors.on-light}` for white insets), type `{typography.body-md}`, `rounded: {rounded.lg}`, padding 0.
 - 用来演示电子邮件输出。
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——默认输入
 - Background `{colors.surface-card}`, text `{colors.ink}`, type `{typography.body-sm}`, 1px `{colors.hairline-strong}`, `rounded: {rounded.md}`, padding `10px 14px`, height 40px.
@@ -244,7 +244,7 @@ The system has **no traditional drop shadow language**. Every surface either get
 **`sub-nav-pill`** 避孕药型 sub-nav
 - 胶囊形在内容上方水平行设置(例如客户指数), `{component.sub-nav-pill}` 造型风格.
 
-### 签名组件
+### 标志性组件
 
 **`badge-pill`** 中性胶囊形
 - Background `{colors.surface-elevated}`, text `{colors.body}`, type `{typography.caption}`, `rounded: {rounded.full}`, padding `4px 10px`.
@@ -265,17 +265,17 @@ The system has **no traditional drop shadow language**. Every surface either get
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 使用 `{colors.canvas}` (真黑)作为默认的页面背景。每个公共页面都住在这里 。
 - 准备金 `{component.button-primary}` 唯一一个坚固的亮光表面 最多每个视野一个
-- 设置首屏头条 **Domaine Display** 时 间 76–96px 与 `lineHeight: 1.0` 财务报告和已审计财务报表 `ss01 / ss04 / ss11` 开始使用功能。
+- 设置首屏头条 **Domaine Display** 时 间 76–96px 配合 `lineHeight: 1.0` 和 `ss01 / ss04 / ss11` 开始使用功能。
 - 使用 **ABC Favorit** 市场营销机构, **Inter** 用于UI标签, **Geist Mono** 保持车道的严格
 - Build elevation from translucent-white hairlines, not drop shadows.
 - 使用 `{colors.accent-*-glow}` 象征低不透明度的光圈大气洗涤——从不像固体表面.
 - 设置按钮和输入到 `{rounded.md}` (8px); 牌和密码井 `{rounded.lg}` (12px(胶囊形和假发) `{rounded.full}`.
 - Use the white email-mockup inset sparingly — it's the only deliberately-light surface and should feel like a print pull-quote.
 
-### Don't
+### 应避免的做法
 - Don't use a near-black canvas. The brand sits on `#000000`, not `#0a0a0a`.
 - 大气强调色符号不要用固体颜色. `{colors.accent-orange}` 光线是用来显示背景的。
 - Don't add drop shadows to feature cards or code wells. Translucent white borders carry depth on this canvas.
@@ -286,7 +286,7 @@ The system has **no traditional drop shadow language**. Every surface either get
 - Don't bring photography front-and-centre. The brand reads as type-and-code, not photography-led.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -304,14 +304,14 @@ The system has **no traditional drop shadow language**. Every surface either get
 - `{component.text-input}` is 40px tall — comfortable but not large. Mobile scales to 48px via padding.
 - `{component.sub-nav-pill}` 留在原点 36px 桌面上, 40px 手机上,我刚从电话里找到的
 
-### 折叠战略
+### 窄屏布局调整
 - 顶级导航崩溃到汉堡 < 1024px; 字号和 `{component.button-primary}` 保持锚定。
 - 首屏们 `{typography.display-xxl}` 夹子 : 96px → 76px → 56px → 44px 穿过断点梯子
 - 定价 3- 垂直堆叠在 < 1024px 与突出的层次 剩下的中心设置。
 - Code-story splits switch from side-by-side to stacked at < 1024px, code well always second.
 - 大气的光度有节宽度,但保持同样的不透明度——它们在小的视点上自然消退.
 
-### 图像行为
+### 图片适配
 - 电子邮件模拟卡的重传 1:1 的边框,以保持可读性。
 - 大气光是CSS梯度——没有资产成本,没有断点变化.
 - 客户证物留下 32px circular 不论断点如何

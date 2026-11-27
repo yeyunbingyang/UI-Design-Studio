@@ -32,13 +32,13 @@ The typography uses SpotifyMixUI and SpotifyMixUITitle — proprietary fonts fro
 - **暗色表面** (`#181818`:卡片、容器、提升表面
 - **中暗线** (`#1f1f1f`:按钮背景,交互式表面
 
-### 文本
+### 文字颜色
 - **白色** (`#ffffff`): `--text-base`,主文本
 - **Silver** (`#b3b3b3`): Secondary text, muted labels, inactive nav
 - **近白线** (`#cbcbcb`: 略亮的副文本
 - **光线** (`#fdfdfd`: 最大强调值近纯白色
 
-### 语义
+### 语义色
 - **负红色** (`#f3727f`): `--text-negative`,错误状态
 - **橙色警告( 警告)** (`#ffa42b`): `--text-warning`状态
 - **蓝色** (`#539df5`): `--text-announcement`信息状态
@@ -64,7 +64,7 @@ The typography uses SpotifyMixUI and SpotifyMixUITitle — proprietary fonts fro
 - **标题**: `SpotifyMixUITitle`,倒计时: `CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, Helvetica Neue, helvetica, arial, Hiragino Sans, Hiragino Kaku Gothic ProN, Meiryo, MS Gothic`
 - **用户界面/ 机体**: `SpotifyMixUI`,同样的倒叠
 
-### 等级
+### 字号层级
 
 | Role | Font | Size | Weight | Line Height | Letter Spacing | Notes |
 |------|------|------|--------|-------------|----------------|-------|
@@ -96,7 +96,7 @@ The typography uses SpotifyMixUI and SpotifyMixUITitle — proprietary fonts fro
 
 **暗胶囊形**
 - Background: `#1f1f1f`
-- 文本 : `#ffffff` 或 减 减 `#b3b3b3`
+- 文本 : `#ffffff` 或 `#b3b3b3`
 - 铺垫: 8px 16px
 - 半径 : 9999px (满药)
 - 使用:导航胶囊形、辅助动作
@@ -129,7 +129,7 @@ The typography uses SpotifyMixUI and SpotifyMixUITitle — proprietary fonts fro
 - 半径 : 50% (圆)
 - 使用: 播放/暂停控制
 
-### 纸牌和集装箱
+### 卡片与容器
 - Background: `#181818` or `#1f1f1f`
 - 半径 : 6px–8px
 - No visible borders on most cards
@@ -155,17 +155,17 @@ The typography uses SpotifyMixUI and SpotifyMixUITitle — proprietary fonts fro
 - 基部单位: 8px
 - 缩放 : 1px, 2px, 3px, 4px, 5px, 6px, 8px, 10px, 12px, 14px, 15px, 16px, 20px
 
-### 网格容器( C)
+### 网格与容器
 - Sidebar (fixed) + main content area
 - 网格化的专辑/播放列表卡
 - 底部的全宽现播放栏
 - 响应内容区域填补剩余空间
 
-### 白空间哲学
+### 留白规则
 - **暗压缩**: Spotify 包的内容密集——播放列表网格,音轨列表,导航都紧密地间隔。 暗色背景在元素之间提供了视觉休息,不需要大间隔。
 - **呼吸室内的内容密度**:这是一个应用,而不是营销网站,每个像素都服务于收听体验.
 
-### 圆角刻度
+### 圆角层级
 - 最小( 微米)2px:徽章,明确标记
 - 浅色( 微弱)4px: 输入,小元素
 - 标准( 4)6px: 专辑艺术容器,卡片
@@ -182,7 +182,7 @@ The typography uses SpotifyMixUI and SpotifyMixUITitle — proprietary fonts fro
 | 职等 | 治疗 | 使用 |
 |-------|-----------|-----|
 | Base (Level 0) | `#121212` background | Deepest layer, page background |
-| 表面( 级别) 1) | `#181818` 或 减 减 `#1f1f1f` | 纸牌、侧边栏、集装箱 |
+| 表面( 级别) 1) | `#181818` 或 `#1f1f1f` | 纸牌、侧边栏、集装箱 |
 | 升( 级别) 2) | `rgba(0,0,0,0.3) 0px 8px 8px` | 下拉菜单, 悬浮牌 |
 | 对话框( 级别) 3) | `rgba(0,0,0,0.5) 0px 8px 24px` | 模块、叠加、菜单 |
 | 套接字( 边界) | `rgb(18,18,18) 0px 1px 0px, rgb(124,124,124) 0px 0px 0px 1px inset` | 输入边框 |
@@ -192,7 +192,7 @@ The typography uses SpotifyMixUI and SpotifyMixUITitle — proprietary fonts fro
 
 ## 7。 。 。 。 。 。
 
-### 执行
+### 建议做法
 - 使用近黑背景( I)`#121212`–`#1f1f1f`——通过遮荫变异的深度.
 - 应用 Spotify 绿色( G)`#1ed760`)只用于游戏控制、活动状态和主要CTA
 - Use pill shape (500px–9999px) for all buttons — circular (50%) for play controls
@@ -201,7 +201,7 @@ The typography uses SpotifyMixUI and SpotifyMixUITitle — proprietary fonts fro
 - 使用重阴影( U)`0.3–0.5 opacity`),用于在暗色背景上提升元素.
 - Let album art provide color — the UI itself is achromatic
 
-### Don't
+### 应避免的做法
 - Don't use Spotify Green decoratively or on backgrounds — it's functional only
 - 初等表面不要用光背景——暗沉是核心
 - Don't skip the pill/circle geometry on buttons — square buttons break the identity
@@ -224,7 +224,7 @@ The typography uses SpotifyMixUI and SpotifyMixUITitle — proprietary fonts fro
 | 桌面 | 1024–1280px | 完整的桌面布局 |
 | Large Desktop | >1280px | Expanded grid |
 
-### 折叠战略
+### 窄屏布局调整
 - Sidebar: full → collapsed → hidden
 - 专辑 grid: 5 columns → 3 → 2 → 1
 - 现时播放栏:保持大小

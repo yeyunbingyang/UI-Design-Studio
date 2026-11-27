@@ -26,12 +26,12 @@ NVIDIA其营销系统就像一部学习图形设计的工程文献——每页�
 
 > **Source pages:** `/tr-tr/` (primary homepage), `/en-eu/industries/healthcare-life-sciences/`, `/en-eu/solutions/ai/`, `/en-eu/ai/foundry/`. The chrome palette is identical across all four — only photography and copy vary.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **NVIDIA 绿色** (`{colors.primary}` — `#76b900`:品牌,每个主CTA,每个活跃状态,每个连接在暗面上承受,每个角广场,以及品牌的词标本身.
 - **NVIDIA 绿色暗色** (`{colors.primary-dark}` — `#5a8d00`:按下状态为主按钮——一个比品牌绿色更深的单音节.
-- **青色苍白** (`{colors.accent-green-pale}` — `#bff230`:编辑点名和装饰性微块中常用的罕见突出点锡;从未在铬上使用过.
+- **青色苍白** (`{colors.accent-green-pale}` — `#bff230`:编辑点名和装饰性微块中常用的罕见突出点锡;从未在界面框架上使用过.
 
-### 表面
+### 界面表面
 - **页面页面底色** (`{colors.canvas}` — `#ffffff`:每页的正文,卡片直接在上面坐着,上面有细边线规则.
 - **软表面** (`{colors.surface-soft}` — `#f7f7f7`面包屑条, sub-nav,边边比较面板,交替行背景。
 - **黑页面底色** (`{colors.surface-dark}` — `#000000`:首屏章,暗CTA条,页脚,主导航,系统"框架"颜色.
@@ -39,7 +39,7 @@ NVIDIA其营销系统就像一部学习图形设计的工程文献——每页�
 - **细边线** (`{colors.hairline}` — `#cccccc`): 1px 纸牌边框,表格规则,页脚链接区之间的分隔符.
 - **发条坚固** (`{colors.hairline-strong}` — `#5e5e5e`): 1px 暗面上的分隔符(脚列规则,暗模卡边缘).
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — `#000000`: 头条和正文 `{colors.canvas}`.
 - **体质** (`{colors.body}` — `#1a1a1a`:纯黑太重的长式段落文本.
 - **静音** (`{colors.mute}` — `#757575`:元数据,面包屑分离器,页脚版权.
@@ -48,7 +48,7 @@ NVIDIA其营销系统就像一部学习图形设计的工程文献——每页�
 - **On Dark** (`{colors.on-dark}` — `#ffffff`): primary text on `{colors.surface-dark}`.
 - **暗哑** (`{colors.on-dark-mute}` — `rgba(255,255,255,0.7)`:二级脚步链接文本和暗黑扫描体复制.
 
-### 语义
+### 语义色
 - **错误** (`{colors.error}` — `#e52020`:验证消息,破坏性确认.
 - **深处出错** (`{colors.error-deep}` — `#650b0b`:按下错误按钮的状态;按下悬浮的验证图标.
 - **警告** (`{colors.warning}` — `#df6500`:小心点名,失色的文献标语.
@@ -65,13 +65,13 @@ NVIDIA其营销系统就像一部学习图形设计的工程文献——每页�
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 - **NVIDIA-EMEA** is the proprietary brand sans-serif used across every text role on the site. It carries weights 400 (regular) and 700 (bold) and falls back to Arial → Helvetica.
-- **字体帅呆了 6 专业版** 财务报告和已审计财务报表 **字体帅呆了 6 锐利** 专门用于图示(切夫龙、社会格言、面包屑分离器、搜索/菜单图标),尺寸 14–22px.
+- **字体帅呆了 6 专业版** 和 **字体帅呆了 6 锐利** 专门用于图示(切夫龙、社会格言、面包屑分离器、搜索/菜单图标),尺寸 14–22px.
 
 NVIDIA's type system is unusually flat: most chrome and body roles render at the same line-height (1.25–1.5) with the only meaningful variation coming from weight (400 vs 700) and size. The system relies on weight contrast — not size jumps and not color tinting — to establish hierarchy, which gives marketing copy and technical documentation an editorial newspaper feel.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -97,7 +97,7 @@ NVIDIA's type system is unusually flat: most chrome and body roles render at the
 ### 原则
 The typography is brand-locked: NVIDIA-EMEA is used at every level, no serif, no display variant, no monospace, no italic. Hierarchy is built almost entirely from size and weight — color is reserved for emphasis (`{colors.primary}` on links over dark, `{colors.link-blue}` on light) and never used to separate type tiers.
 
-### Note on Font Substitutes
+### 替代字体
 NVIDIA-EMEA is proprietary. The closest open-source pairing is **Inter** (weights 400/700) — its x-height and stroke contrast match NVIDIA-EMEA's optical metrics within ~2% at body sizes. **Arial** is the official documented fallback and is acceptable for any system where Inter is unavailable. Avoid Helvetica Now or Helvetica Neue substitutes; their slightly tighter cap heights drift away from the brand's geometry.
 
 
@@ -109,19 +109,19 @@ NVIDIA-EMEA is proprietary. The closest open-source pairing is **Inter** (weight
 - **Universal section rhythm:** every page in the set uses `{spacing.section}` (64px) as the vertical gap between major content blocks. Card grids use `{spacing.xl}` (24px) gutters; in-card padding sits at `{spacing.xl}` to `{spacing.xxl}` depending on density.
 - **首屏专辑 padding:** 80px vertical / 48px horizontal — the largest spacing in the system, reserved for `{component.hero-card-dark}`.
 
-### 网格容器( C)
+### 网格与容器
 - **最大 width:** ~1280px content area at desktop, with 24px gutters that grow to ~48px at ultrawide.
 - **列图案 :**
   - Card grids: 4-up at desktop, 3-up at 1024px, 2-up at 768px, 1-up at 480px.
   - 长式文本 : 2- 栏 60/40 桌面、 单列和侧边栏的分割( body + sidebar) < 960px.
   - Footer: 6-up link columns at desktop, collapsing to 2-up on tablet, full accordion on mobile.
-- **纸牌方面 :** 产品卡 1:1 或 减 减 4:3 与 16:9 上方的图像 + 1–2 中,将使用“资源卡” 3:2 图像带有更长的描述块.
+- **纸牌方面 :** 产品卡 1:1 或 4:3 配合 16:9 上方的图像 + 1–2 中,将使用“资源卡” 3:2 图像带有更长的描述块.
 
-### 白空间哲学
+### 留白规则
 白空间是结构的,不是大气的。 `{spacing.section}` 节奏——没有装饰性的分化器,没有空的"呼吸室"带,没有各节间梯度过渡. 空气感来自 `{colors.canvas}` 身体部分在 `{colors.surface-dark}` 章节块,而不是来自任意一个组件内的慷慨铺设。
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -141,7 +141,7 @@ NVIDIA's system has effectively no drop-shadow elevation in card or content surf
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -152,7 +152,7 @@ NVIDIA's system has effectively no drop-shadow elevation in card or content surf
 
 The system is aggressively angular. Outside of avatar/icon circles, no element exceeds 2px radius. The 2px is enough to soften the optical aliasing on a sharp edge but small enough that the system reads as engineering-grade rather than consumer-friendly.
 
-### 摄影几何
+### 图片形状
 - **首屏图像 :** 满血 16:9 (桌面)裁剪到 4:5 手机上画像
 - **纸卡图像 :** 16:9 资源卡顶部的缩略图; 1:1 产品/SKU卡的方形; 3:2 编辑文章卡。
 - **装饰性角方形:** 12×12px 标准牌,缩放为 16×16 首屏的呼唤
@@ -172,14 +172,14 @@ The system is aggressively angular. Outside of avatar/icon circles, no element e
 
 **`button-outline`** - 轻型页面底色上的次要
 - Background transparent, text `{colors.ink}`, 2px solid `{colors.primary}` border, type `{typography.button-md}`, padding `11px 13px`, rounded `{rounded.sm}`.
-- 系统最独特的二级CTA:一个与以下两边相邻的清晰的窗帘: NVIDIA Green. 用于"读文献","观看视频","Compare Products"——二级动作,仍能赢得品牌色彩.
+- The system's most distinctive secondary CTA: a clear pane bordered in NVIDIA Green. Used for "Read the Documentation", "Watch the Video", "Compare Products" — second-tier actions that still earn the brand color.
 
 **`button-outline-on-dark`** ——纲要 `{colors.surface-dark}`
 - Background transparent, text `{colors.on-dark}`, 1px solid `{colors.on-dark}`, type `{typography.button-md}`, rounded `{rounded.sm}`.
 - 深色首屏/脚手CTA条中使用的白色黑边变型与主绿色按钮对齐.
 
 **`button-ghost-link`** ——内置箭头链接
-- 文本 `{colors.primary}` 带有小右箭头图标,类型 `{typography.button-md}`,没有背景,没有边框,四舍五入 `{rounded.none}`.
+- 文字颜色 `{colors.primary}` 带有小右箭头图标,类型 `{typography.button-md}`,没有背景,没有边框,四舍五入 `{rounded.none}`.
 - “ 学习更多 + ” 付薪 , 坐在资源卡和长形区块的底部。 箭头为大写和粗体 。 `{typography.caption-md}`- 等同治疗
 
 **`button-disabled`**
@@ -195,7 +195,7 @@ The system is aggressively angular. Outside of avatar/icon circles, no element e
 - Background `{colors.surface-soft}`, text `{colors.body}`, type `{typography.caption-md}`, padding `4px 10px`, rounded `{rounded.sm}` (uppercase).
 - 文档类型 / 类别标签位于资源卡("WHITE PAPER","WEBINAR","BLOG")的顶端.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** + **`text-input-focused`**
 - Default: background `{colors.canvas}`, text `{colors.ink}`, 1px solid `{colors.hairline}`, type `{typography.body-md}`, padding `12px 16px`, height `44px`, rounded `{rounded.sm}`.
@@ -279,7 +279,7 @@ The system is aggressively angular. Outside of avatar/icon circles, no element e
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` 初级CTA、活动状态、装饰角方形和 NVIDIA 将它视为宝贵的资源。
 - 堆栈首屏/脚的章节 `{colors.surface-dark}` 和身体科室 `{colors.canvas}` - 换成一段可以预测的节奏
 - 锁定 a `{component.corner-square}` 以至每张可复用卡的一角。这是系统的身份标记。
@@ -288,7 +288,7 @@ The system is aggressively angular. Outside of avatar/icon circles, no element e
 - Stack content sections at `{spacing.section}` (64px) rhythm with no decorative dividers between them.
 - 平对 `{component.button-primary}` (绿色填充) `{component.button-outline}` (绿色边框),用于初级+二级动作对.
 
-### Don't
+### 应避免的做法
 - Don't introduce drop shadows on cards or content surfaces. The only allowed shadow is the 5px ambient on sticky chrome.
 - Don't substitute `{colors.success-deep}`, `{colors.accent-green-pale}`, or any other green for `{colors.primary}` in CTAs. The brand green is precise.
 - Don't use `{colors.link-blue}` outside of inline body-prose links. It is not a button color, not a chrome color.
@@ -298,7 +298,7 @@ The system is aggressively angular. Outside of avatar/icon circles, no element e
 - Don't put `{component.button-primary}` on a `{colors.canvas}` background where green-on-white would clash with photo content — use `{component.button-outline}` instead and reserve fill for dark surfaces.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -315,7 +315,7 @@ The system is aggressively angular. Outside of avatar/icon circles, no element e
 ### 触控区域
 All interactive elements meet WCAG AA (≥ 44×44px). `{component.button-primary}` sits at 44px height with 24px horizontal padding. `{component.text-input}` sits at 44px. `{component.pill-tab}` sits at ~40px height with extended hit-target padding to 44px. `{component.button-outline}` matches the 44px standard. Footer links are 18–20px line-height with 8–12px vertical padding to keep tap targets at ~36–44px depending on link length.
 
-### 折叠战略
+### 窄屏布局调整
 - **初等导航 :** 桌面中心组 – 平板汉堡抽屉 768px.
 - **纸牌 grid:** 4-up → 3-up → 2-up → 1-up at 1024, 768, and 480px; 沟槽从 24px 改为: 16px 手机上,我刚从电话里找到的
 - **Footer:** 6-up link columns → 2-up at tablet → full accordion at mobile (each column header becomes a tap-to-expand row).
@@ -324,7 +324,7 @@ All interactive elements meet WCAG AA (≥ 44×44px). `{component.button-primary
 - **科 科 padding:** `{spacing.section}` (64px(台式计算机) – 48px 平板电脑 32px 移动。
 - **长式文本 :** 桌面 60/40 车体+侧栏 → 平板/移动单柱,并用侧栏推向下方。
 
-### 图像行为
+### 图片适配
 - 首屏形象使用艺术指导作物: 16:9 桌面交换中的宽首屏 4:5 移动上的肖像,所以主题保持中心,标题文本仍然有覆盖空间.
 - 纸牌图像是 fixed 方面(16:9 资源, 1:1 以产品为单位),其比例比值而非断点之间的重生.
 - All non-critical imagery is lazy-loaded as the user scrolls into the next grid row.
@@ -347,7 +347,7 @@ All interactive elements meet WCAG AA (≥ 44×44px). `{component.button-primary
 - **Hover states not documented** by system policy.
 - **对话框/ 模式样式** 超越在捕获表面看不到的本地环境选择器覆盖。
 - **窗体字段样式** 用于完整注册/联系表在捕获的表面中不存在——只记录内在搜索和基本文本输入。
-- **登录/ 认证的铬** 而不是在被俘的页面。
+- **登录/ 认证的界面框架** 而不是在被俘的页面。
 
 ## 设计词元原值
 

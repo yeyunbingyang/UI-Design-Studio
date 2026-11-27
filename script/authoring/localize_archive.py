@@ -14,7 +14,10 @@ import bleach
 import markdown
 from design_literals import DesignLiterals
 from preview_copy import PreviewEditor, remove_team_credit
-from sample_editorial import DARK_LEADS, DEMO_SPECS, LEADS, ONE_WIN_COPY, SAMPLE_FIT_CSS
+from sample_editorial import DEMO_SPECS, ONE_WIN_COPY, REVIEWED_DOCUMENT_COPY, SAMPLE_FIT_CSS
+from sample_overviews import DARK_OVERVIEWS, OVERVIEWS
+from platform_examples import PLATFORM_BY_BRAND, apply_platform_examples, platform_targets
+from translation_review import CONNECTIVES, TranslationReview
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -26,9 +29,18 @@ GLOSSARY = {
     "Design System Analysis": "设计系统分析", "Overview": "概览",
     "Color Palette": "配色", "Colors": "配色", "Typography": "字体排版",
     "Typography Scale": "字号层级", "Foundations": "设计基础", "Layout": "布局",
-    "Spacing Scale": "间距刻度", "Border Radius": "圆角", "Border Radius Scale": "圆角刻度",
-    "Elevation & Depth": "层次与阴影", "Responsive Behavior": "响应式规则",
-    "Components": "组件", "Button Variants": "按钮变体", "Buttons": "按钮",
+    "Foundation": "设计基础", "Brand & Accent": "品牌色与强调色",
+    "Cards & Containers": "卡片与容器", "Signature Components": "标志性组件",
+    "Inputs & Forms": "输入框与表单", "Examples (illustrative)": "组合示例",
+    "Do": "建议做法", "Don't": "应避免的做法", "Photography Geometry": "图片形状",
+    "Surface": "界面表面", "Text": "文字颜色", "Semantic": "语义色",
+    "Font Family": "字体族", "Hierarchy": "字号层级", "Principles": "原则",
+    "Note on Font Substitutes": "替代字体", "Grid & Container": "网格与容器",
+    "Whitespace Philosophy": "留白规则", "Responsive Strategy": "响应式布局",
+    "Breakpoints": "断点", "Collapsing Strategy": "窄屏布局调整", "Image Behavior": "图片适配",
+    "Spacing Scale": "间距层级", "Border Radius": "圆角", "Border Radius Scale": "圆角层级",
+    "Elevation & Depth": "层次与深度", "Responsive Behavior": "响应式布局",
+    "Components": "组件", "Button Variants": "按钮样式", "Buttons": "按钮",
     "Cards & Surfaces": "卡片与表面", "Form Elements": "表单控件",
     "Pricing Tiers": "定价分级", "Product Selector": "产品选项", "Data Table": "数据表格",
     "Auth Forms": "账号表单", "Modal Dialog": "模态弹窗", "Empty State": "空状态",
@@ -44,7 +56,7 @@ GLOSSARY = {
     "Mobile": "手机", "Tablet": "平板", "Desktop": "桌面", "Laptop": "笔记本",
     "Dashboards": "仪表板", "Dashboard": "仪表板", "Settings": "设置",
     "Plans and features": "套餐与功能", "Form": "表单", "Input": "输入框",
-    "Card Examples": "卡片试样", "Badge Pastels": "浅彩徽标", "Surface": "表面",
+    "Card Examples": "卡片试样", "Badge Pastels": "浅彩徽标",
     "Monochrome with badge pastels": "单色界面与浅彩徽标",
     "Black on white, monochrome action layer": "白底黑字的单色操作层",
     "Light gray feature cards + product UI fragments": "浅灰功能卡与产品界面片段",
@@ -113,6 +125,42 @@ UNRELIABLE_DOCUMENT_COPY = re.compile(
 )
 REPEATED_DOCUMENT_COPY = re.compile(r"([\u4e00-\u9fff]{2,12})(?:[，,。 ]*\1){2,}")
 DOCUMENT_EDITORIAL = {
+    '''Warp is an "agentic development environment" — a terminal application that wraps an AI agent — and its marketing site mirrors the product's posture: a single dark band running the entire page, warmer than pure black (`{colors.canvas}` `#2b2622` carries a hint of brown-beige from the brand's oklch-defined warmth value), with copy set almost entirely in Inter. The page reads more like a developer's reading-mode editor than a marketing surface.''':
+        "Warp 是集成 AI 代理的终端开发环境。营销页使用贯穿页面的暖深色背景，底色 `{colors.canvas}`（`#2b2622`）在 oklch 色彩体系中带轻微褐色倾向。文字主要采用 Inter，阅读体验接近开发者编辑器的阅读模式。",
+    "The decoration is restrained. Two terminal screenshots open the hero (split between the two main product modes — agent + terminal). A partner-logo strip (Anthropic / OpenAI / Google / Stanford) sits below the hero on a slightly warmer tile surface. A single testimonial card with a portrait photograph. A press-coverage list. Then the page closes with download tiles for Mac / Linux / Windows. There is no gradient, no atmospheric backdrop, no illustration system.":
+        "装饰保持克制。首屏用两张截图分别展示代理与终端模式，下方以偏暖的表面承载合作伙伴标识（Anthropic / OpenAI / Google / Stanford）。随后是带肖像的推荐语和媒体报道列表，页尾提供 Mac / Linux / Windows 下载卡片。页面主要依靠终端截图和产品信息呈现内容。",
+    "Type is the second decisive voice. Hero display sits at 64 px Inter weight 400 with `-1.6px` tracking — restrained for a hero, deliberately quiet. The brand carries DM Mono as its monospace face for code blocks, and Instrument Serif italics occasionally appear for editorial moments. Body text is 16 px Inter at line-height 1.5, very readable.":
+        "首屏采用 64 px 的 Inter，400 字重，字距为 `-1.6px`。代码块用等宽字体 DM Mono（monospace），部分编辑式文字使用 Instrument Serif 斜体。正文为 16 px 的 Inter，line-height 为 1.5。",
+    '''A single primary "color" — really an off-white `{colors.primary}` (`#f7f5f0`) — that doubles as text on canvas and as the button-primary fill. There is no chromatic brand accent.''':
+        "暖白主色 `{colors.primary}`（`#f7f5f0`）同时用于页面文字和 button-primary 底色，承担整套界面的强调角色。",
+    "Warm dark canvas (`{colors.canvas}` `#2b2622`) is the only page surface. The brand's defining tone is the brown-warmth, not pure black.":
+        "页面使用偏褐的暖深底 `{colors.canvas}`（`#2b2622`），形成统一的品牌基调。",
+    "Extremely tight button radii — 3 / 4 px (1 / 2× the brand's `{rounded.md}` 4 px base) — the brand never uses generous pill shapes for CTAs. Only icon containers use `{rounded.full}`.":
+        "按钮使用小圆角 3 / 4 px。原文记载其比例为 1 / 2×，并列出 `{rounded.md}` 的基准值 4 px。全圆角 `{rounded.full}` 用于图标容器。",
+    "Inter sans + DM Mono mono is the canonical pairing. Instrument Serif appears as a third editorial face for occasional italics.":
+        "无衬线 Inter 和等宽 DM Mono 是基础字体组合，Instrument Serif 偶尔以斜体用于编辑式排版。",
+    "Terminal-mockup imagery is the brand's only consistent decorative system — no gradients, no atmospheric overlays.":
+        "终端界面示意是贯穿页面的主要视觉素材。",
+    "A subtle warm tint runs through every neutral; even body text and dividers carry a hint of warmth rather than neutral gray.":
+        "中性色统一略偏暖，正文和分隔线也保留这一色调。",
+    '''**Off White Primary** (`{colors.primary}` — `#f7f5f0`): The brand's "primary" is a warm off-white. Used as button-primary fill, as default text on canvas, as the wordmark color. There is no chromatic brand accent — the off-white IS the brand's distinguishing tone.''':
+        "**暖白主色**（`{colors.primary}`，`#f7f5f0`）用于 button-primary 底色、页面默认文字和品牌字标，承担品牌识别。",
+    "**Canvas** (`{colors.canvas}` — `#2b2622`): The warm dark page background. Resolved from `oklch(22.0% 0.004 84.6)`. Slightly browner than pure black, slightly warmer than a neutral gray — the warmth IS the brand's identity.":
+        "**页面底色**（`{colors.canvas}`，`#2b2622`）由 `oklch(22.0% 0.004 84.6)` 换算，呈略偏褐的暖深色。",
+    "**Canvas Soft** (`{colors.canvas-soft}` — `#383330`): A lighter warm-dark fill used for cards, mockup chrome, and partner-logo tiles.":
+        "**柔和深底**（`{colors.canvas-soft}`，`#383330`）用于卡片、界面示意的外框及合作伙伴标识图块。",
+    "**Hairline** (`{colors.hairline}` — `#3f3a36`): 1 px solid divider on dark surfaces.":
+        "**细分隔线**（`{colors.hairline}`，`#3f3a36`）用于深色表面的 1 px 实线。",
+    "**Ink** (`{colors.ink}` — `#f7f5f0`): Default text on canvas — same off-white as the primary, intentionally unified.":
+        "**主文字色**（`{colors.ink}`，`#f7f5f0`）用于页面默认文字，与暖白主色一致。",
+    "**Body Strong** (`{colors.body-strong}` — `#dad2c1`): Mid-emphasis body text.":
+        "**强调正文色**（`{colors.body-strong}`，`#dad2c1`）用于中等强调的正文。",
+    "**Body** (`{colors.body}` — `#c9c0ad`): Secondary body text — captions, supporting copy, press-coverage rows.":
+        "**次级正文色**（`{colors.body}`，`#c9c0ad`）用于图注、辅助说明和媒体报道列表。",
+    "**Mute** (`{colors.mute}` — `#aea69c`): Lowest-priority text — timestamps, fine print, footer secondary lines. Resolved from `oklch(71.5% 0.008 84.6)`.":
+        "**弱文字色**（`{colors.mute}`，`#aea69c`）由 `oklch(71.5% 0.008 84.6)` 换算。用于时间戳、小字和页脚次要内容。",
+    "The brand doesn't surface a separate error / warning / success palette in its marketing pages. Validation cues come from the unified off-white system; in-product semantic colors live in the terminal application proper.":
+        "营销页的校验提示沿用统一的暖白色。错误、警告和成功等语义色由终端应用内部定义。",
     'SF Pro Display + SF Pro Text — negative letter-spacing at display sizes for the signature "Apple tight" headline feel.':
         "使用 SF Pro Display 和 SF Pro Text。大字号标题采用负的 letter-spacing，呈现 Apple 标志性的紧凑字距。",
     "If Haas Groot Disp and Haas Grotesk are unavailable, **Inter Display** (variable) is the closest open-source substitute for both — adjust line-height down by ~5% to match Haas's tighter cap-height. For the pricing sub-system, use Inter Display directly. On macOS / iOS, **system-ui** is sufficient; on Windows, the chain falls through to Segoe UI, which is a usable but slightly cooler substitute.":
@@ -386,6 +434,7 @@ class Translation:
         self.literals = literals
         self.required = set()
         self.values = GLOSSARY.copy()
+        self.review = TranslationReview()
 
     def parts(self,text,protect_design=False):
         if text.strip() in GLOSSARY:
@@ -402,24 +451,30 @@ class Translation:
         yield from segments(text[cursor:])
 
     def collect(self,text):
-        self.required.update(part for fixed,part in self.parts(text) if not fixed)
+        self.required.update(part for fixed,part in self.parts(text) if not fixed and part.casefold() not in CONNECTIVES)
 
     def collect_document(self,text):
-        if text not in DOCUMENT_EDITORIAL:
-            self.required.update(part for fixed,part in self.parts(text,protect_design=True) if not fixed)
+        if text not in DOCUMENT_EDITORIAL and text not in REVIEWED_DOCUMENT_COPY:
+            self.required.update(part for fixed,part in self.parts(text,protect_design=True)
+                                 if not fixed and part.casefold() not in CONNECTIVES)
         return text
 
+    def phrase(self,part):
+        if part.casefold() in CONNECTIVES:
+            return CONNECTIVES[part.casefold()]
+        return self.values[part]
+
     def apply(self,text):
-        return "".join(part if fixed else self.values[part].replace("▁"," ") for fixed,part in self.parts(text))
+        return "".join(part if fixed else self.phrase(part).replace("▁"," ") for fixed,part in self.parts(text))
 
     def apply_document(self,text):
-        if text in DOCUMENT_EDITORIAL:
-            edited = DOCUMENT_EDITORIAL[text]
+        edited = REVIEWED_DOCUMENT_COPY.get(text,DOCUMENT_EDITORIAL.get(text))
+        if edited is not None:
             return edited if self.literals.retained(text,edited) else text
         terms = [(wrong,correct) for english,wrong,correct in DOCUMENT_TERMS if re.search(english,text,re.I)]
         parts = []
         for fixed,part in self.parts(text,protect_design=True):
-            value = part if fixed else self.values[part]
+            value = part if fixed else self.phrase(part)
             if not fixed:
                 for wrong,correct in terms:
                     value = re.sub(wrong,correct,value)
@@ -427,9 +482,10 @@ class Translation:
                     return text
             parts.append(value)
         translated = "".join(parts)
-        if not self.literals.retained(text,translated):
+        reviewed = self.review.inspect(text,translated,self.literals.retained)
+        if reviewed is None or not self.literals.retained(text,reviewed):
             return text
-        return translated
+        return reviewed
 
     def run(self,model,cache,device):
         import ctranslate2
@@ -567,44 +623,68 @@ def preview_strings(soup):
                 yield node,key,value
 
 
-def prepare_sample(path,title):
+def prepare_sample(path):
     soup = preview_document(decode(path))
     remove_team_credit(soup)
-    if path.parent.name == "1win":
-        title = "1win的设计系统分析"
-    for heading in (soup.find("h1"),soup.title):
-        if heading:
-            heading.clear()
-            heading.string = title
+    style = STYLE_LABELS[path.parent.name]
+    soup.h1.string = style
+    soup.title.string = style
     return soup
 
 
-def sample_copy(soup):
+def sample_copy(soup,translate_intro=False):
+    heading = soup.h1
+    intro = heading.find_next("p") if heading else None
+    # 颜色名称和字体规格属于设计标识，描述与示例文字仍可本地化。
+    technical_labels = {id(tag) for tag in soup.select(
+        ".swatch-name,.color-name,.color-swatch-name,.token-name,"
+        ".type-meta,.type-spec,.type-label,.color-hex"
+    )}
+    for hex_value in soup.find_all(string=re.compile(r"^\s*#[0-9a-fA-F]{6}\s*$")):
+        label = hex_value.parent.find_previous_sibling()
+        if label and set(label.get("class", ())) & {"name", "chip-name"}:
+            technical_labels.add(id(label))
     for node,key,value in preview_strings(soup):
-        if key or node.parent.name not in ("h1","title"):
+        if key or not any(parent is heading or (not translate_intro and parent is intro)
+                          or parent.name=="title" or id(parent) in technical_labels for parent in node.parents):
             yield node,key,value
 
 
-def polish_sample(soup,slug,filename):
-    """将长篇首屏说明和通用场景标识与样张结构对齐。"""
+def replace_sample_text(element,text):
+    """替换说明文字时复用原来的字体、换行和代码元素。"""
+    parts = re.split(r"\{\d+\}",text)
+    inline = element.find_all(recursive=False)
+    if len(parts)!=len(inline)+1:
+        raise ValueError(f"样张译文的行内结构与源文不符：{text}")
+    for tag in inline:
+        tag.extract()
+    element.clear()
+    element.append(parts[0])
+    for tag,part in zip(inline,parts[1:],strict=True):
+        element.append(tag)
+        element.append(part)
+
+
+def restore_sample_intro(soup,slug,filename,literals):
+    """逐段对应归档首屏说明，保留行内结构和原始参数。"""
+    intro = soup.h1.find_next("p")
+    text = OVERVIEWS[slug]
+    if filename == "preview-dark.html":
+        text = DARK_OVERVIEWS.get(slug,text)
+    source = intro.get_text().replace("sticky note","note")
+    source = re.sub(r"(?<=\d)-line-height\b"," line-height",source)
+    replace_sample_text(intro,text)
+    lost = literals.values(source)-literals.values(intro.get_text())
+    if lost:
+        raise ValueError(f"{slug}/{filename} 的首屏说明缺少原值：{dict(lost)}")
+
+
+def polish_sample(soup,slug):
+    """保留窄屏适配和通用场景标识。"""
     if slug in SAMPLE_FIT_CSS:
         fit = soup.new_tag("style",attrs={"data-design-fit":"true"})
         fit.string = SAMPLE_FIT_CSS[slug]
         soup.head.append(fit)
-    hero = soup.h1.find_next("p") if soup.h1 else None
-    if hero and slug != "1win":
-        lead = LEADS.get(slug,SUMMARIES[slug])
-        if filename == "preview-dark.html":
-            lead = DARK_LEADS.get(slug,lead)
-        if not hero.find(["code","a","input","button"]):
-            hero.clear()
-            hero.string = lead
-        elif slug == "mastercard":
-            hero.clear()
-            hero.append(lead + " 词元来源见 ")
-            reference = soup.new_tag("code",string="DESIGN.md")
-            hero.append(reference)
-            hero.append("。")
     demos = []
     for heading in soup.find_all(["h2","h3"]):
         source = " ".join(heading.stripped_strings)
@@ -612,7 +692,7 @@ def polish_sample(soup,slug,filename):
         if description:
             note = soup.new_tag("p",attrs={"class":"design-demo-note"})
             demos.append((heading,note,"组件演示。"+description+"数据仅用于样式展示。"))
-    return hero,demos
+    return demos
 
 
 def render_markdown(text):
@@ -694,6 +774,7 @@ def main():
     parser.add_argument("--cache",type=Path,required=True)
     parser.add_argument("--device",choices=["auto","cuda","cpu"],default="auto")
     parser.add_argument("--brand",help="只更新指定品牌，例如 1win。")
+    parser.add_argument("--review-log",type=Path,help="记录语境校订和保留英文的条目。")
     scope = parser.add_mutually_exclusive_group()
     scope.add_argument("--documents-only",action="store_true",help="只更新文档与总览数据，保留已有样张 HTML。")
     scope.add_argument("--html-only",action="store_true",help="只校订样张和总览风格名称，保留 DESIGN 文件。")
@@ -704,6 +785,8 @@ def main():
     catalog = json.loads(payload[2])
     index = json.loads(INDEX.read_text(encoding="utf-8"))
     assert len(catalog)==len(index["entries"])==85
+    if set(PLATFORM_BY_BRAND)!={entry["slug"] for entry in index["entries"]}:
+        raise ValueError("平台类型映射与归档品牌清单不一致")
     selected = [(item,entry) for item,entry in zip(catalog,index["entries"],strict=True)
                 if args.brand is None or item["slug"]==args.brand]
     if not selected:
@@ -742,7 +825,8 @@ def main():
         source_data[slug] = (front,blocks,summary,curated)
         if not args.documents_only and slug != "1win":
             for filename in SAMPLE_FILES:
-                soup = prepare_sample(ARCHIVE/slug/filename,STYLE_LABELS[slug])
+                soup = prepare_sample(ARCHIVE/slug/filename)
+                restore_sample_intro(soup,slug,filename,literals)
                 for _,_,value in sample_copy(soup):
                     editor.collect(value)
     if translations.required:
@@ -753,6 +837,7 @@ def main():
         target = LOCALIZED/slug
         target.mkdir(parents=True,exist_ok=True)
         if not args.html_only:
+            translations.review.location = f"{slug}/DESIGN.zh.md"
             reviewed_description = (
                 "1win 设计语言分析。近黑底色衬托密集的通栏游戏图块、推广卡与直播投注面板。界面使用粗字重 Inter、平坦的深灰表面，以及鲜绿色与电光蓝两种操作色。"
                 if slug == "1win" else None
@@ -772,17 +857,20 @@ def main():
         if args.documents_only:
             continue
         for filename in SAMPLE_FILES:
-            soup = prepare_sample(ARCHIVE/slug/filename,item["style"])
-            hero,demos = polish_sample(soup,slug,filename)
-            for node,attribute,value in list(sample_copy(soup)):
-                if not attribute and node.parent is hero and re.search(r"[\u4e00-\u9fff]",value):
-                    continue
+            translations.review.location = f"{slug}/{filename}"
+            soup = prepare_sample(ARCHIVE/slug/filename)
+            examples = platform_targets(soup)
+            if slug != "1win":
+                restore_sample_intro(soup,slug,filename,literals)
+            demos = polish_sample(soup,slug)
+            for node,attribute,value in list(sample_copy(soup,translate_intro=slug=="1win")):
                 if slug == "1win":
                     reviewed_text = ONE_WIN_COPY.get(value.strip())
                     translated = value.replace(value.strip(),reviewed_text,1) if reviewed_text is not None else value
                 else:
                     translated = editor.apply(value)
-                if not literals.retained(value,translated):
+                translated = translations.review.inspect(value,translated,literals.retained)
+                if translated is None or not literals.retained(value,translated):
                     translated = value
                 if attribute:
                     node[attribute] = translated
@@ -791,6 +879,15 @@ def main():
             for heading,note,copy in demos:
                 note.string = copy
                 heading.insert_after(note)
+            apply_platform_examples(soup,slug,examples)
+            # 实时样张禁用脚本，空片段链接在此处仅作视觉试样。
+            for link in soup.select('a[href="#"]'):
+                link.attrs.pop("href")
+                link["data-static-example"] = ""
+            if slug == "hp":
+                for table in soup.select(".responsive-table"):
+                    table.select_one("thead th").string = "设备"
+                    table.wrap(soup.new_tag("div",attrs={"style":"max-width:100%;overflow-x:auto","tabindex":"0","role":"region","aria-label":"响应式布局表"}))
             (target/filename).write_text(str(soup),encoding="utf-8")
     if not args.documents_only:
         from refresh_sample_navigation import refresh_samples
@@ -803,6 +900,9 @@ def main():
         print(f"已生成 {len(selected)} 份独立中文文档。",flush=True)
     if not args.documents_only:
         print(f"已生成 {len(selected)*len(SAMPLE_FILES)} 份中文样张。",flush=True)
+    if args.review_log:
+        report = {"counts":translations.review.counts,"fallbacks":sorted(translations.review.fallbacks)}
+        args.review_log.write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 
 
 if __name__=="__main__":

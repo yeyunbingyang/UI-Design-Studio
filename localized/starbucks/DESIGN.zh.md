@@ -82,7 +82,7 @@ No structural gradient tokens observed. Surface hierarchy is solid-color-block t
 
 ## 3. 字法规则
 
-### 字体家族
+### 字体族
 
 - **小学:** `SoDoSans, "Helvetica Neue", Helvetica, Arial, sans-serif` — Starbucks几乎每层都使用的专有型公司型号
 - **正在装入退步 :** `"Helvetica Neue", Helvetica, Arial, sans-serif` ——用户在 SoDoSans 装入前看到的内容
@@ -91,7 +91,7 @@ No structural gradient tokens observed. Surface hierarchy is solid-color-block t
 
 No OpenType stylistic sets explicitly activated at `:root`.
 
-### 等级
+### 字号层级
 
 | Role | Size | Weight | Line Height | Letter Spacing | Notes |
 |------|------|--------|-------------|----------------|-------|
@@ -123,7 +123,7 @@ No OpenType stylistic sets explicitly activated at `:root`.
 - **特定背景的字型交换** — serif 奖励,事业的脚本——是刻意的,是本地化的,绝不要与同一面的原始桑混在一起。
 - **Body text never goes pure black** — it sits at `rgba(0,0,0,0.87)` to match the warm-neutral canvas temperature.
 
-### Note on Font Substitutes
+### 替代字体
 
 SoDoSans is proprietary to Starbucks (licensed from House Industries, not publicly available). Reasonable open-source substitutes:
 - **Inter** (Google字体)——类似的人文几何比例,宽重范围.
@@ -206,7 +206,7 @@ If substituting, verify the tight `-0.01em` / `-0.16px` tracking still reads wel
 - Font: 14px, weight 400
 - 已定位 fixed 右下方, 连接在视图边缘
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **内容卡( 默认)**
 - Background: `#ffffff` (`--cardBackgroundColor`)
@@ -244,14 +244,14 @@ If substituting, verify the tight `-0.01em` / `-0.16px` tracking still reads wel
 - 合并垂直 padding: `11.2rem`
 - 半径继承了卡片的光谱( R)`12px`)
 
-### 输入表单( F)
+### 输入框与表单
 
 **浮动标签输入**
 - 标签在焦点/填充时浮在输入边框上方
 - 桌面标签字体大小 : `1.9rem` 默认, 动画为 `1.4rem` 活动时
 - 移动标签字体大小 : `1.6rem` 默认, 动画为 `1.3rem` 活动
 - Label horizontal offset: `12px` from left
-- 活动标签翻译:最多 `-12px` 与 `-50%` Y 翻译
+- 活动标签翻译:最多 `-12px` 配合 `-50%` Y 翻译
 - 外地 padding: `12px`
 - 水平窗体 padding: `1.6rem`
 - 验证: 有效字段获得 `rgba(green-light, 0.33)` 锡特; 无效字段获得 `rgba(red, 0.05)` 锡特
@@ -291,7 +291,7 @@ If substituting, verify the tight `-0.01em` / `-0.16px` tracking still reads wel
 Full-width `#1E3932` (House Green) band with:
 - 左:白头线+子头+CTA行
 - 右:产品摄影或插图
-- 拆分比例 ~40/60 或 减 减 50/50 视各节而定
+- 拆分比例 ~40/60 或 50/50 视各节而定
 - 白文本全用 `rgba(255,255,255,0.70)` 备查副本
 - CTA 遵循绿色对绿色的反转( 白色填充) + 暗色( 白色大纲) 配对的大纲
 
@@ -331,7 +331,7 @@ Full-width `#1E3932` (House Green) band with:
 **数字步进器**
 - Embedded inside an Add-in row when a quantity is required (e.g., Strawberry Fruit Inclusions scoop)
 - `−` minus button + count number + `+` plus button, all inline right of the label
-- 按钮 : circular `32×32px` 与 `1px solid #d6dbde` 边框, 中性灰色图标
+- 按钮 : circular `32×32px` 配合 `1px solid #d6dbde` 边框, 中性灰色图标
 - 数 : 16/700 文字黑点居中
 
 **Customize Button**
@@ -358,7 +358,7 @@ Full-width `#1E3932` (House Green) band with:
 - 半径 : `50px` (满药)
 - 铺垫: `4px 12px`
 - Content: "200★ item" where `★` is a small filled star glyph — indicates the Rewards Stars required to redeem this item
-- 字体: 近似新星 13/700 与 `0.5px` letter-spacing
+- 字体: 近似新星 13/700 配合 `0.5px` letter-spacing
 - 仅用于可奖励的产品
 
 **产品描述带**
@@ -426,18 +426,18 @@ Full-width `#1E3932` (House Green) band with:
 
 **通用节奏常数 :** `1.6rem` (16px)作为默认的外侧沟槽、卡片贴垫基线和文本大小出现在每一页中 3 体 —— 系统最频繁的间隔单元。
 
-### 网格容器( C)
+### 网格与容器
 
 - 列宽度尺度 : `--columnWidthSmall: 343px` / `Medium: 500px` / `Large: 720px` / `XLarge: 1440px`
 - 礼品卡网格使用一个 3-5- 电网的响应性电网 `~343px` 瓷砖
 - 奖励状态部分 : 3- 上深绿色面板 `lg+` 断点
 - 首屏:不对称分裂 40% (图) / 60% (内容)通过 `--headerCrateProportion` / `--contentCrateProportion`
 
-### 白空间哲学
+### 留白规则
 
 白空间带有"咖啡馆里空间充裕"的感觉. 部分贴补倾斜(英语:40–64px。内容块由白空而不是分隔符分隔。`#f2f0eb`)本身是白色卡片和绿色特征带之间的视觉呼吸.
 
-### 圆角刻度
+### 圆角层级
 
 | 数值 | 使用 |
 |-------|-----|
@@ -470,7 +470,7 @@ Full-width `#1E3932` (House Green) band with:
 
 ## 7。 。 。 。 。 。
 
-### 执行
+### 建议做法
 - 使用中性温暖( U)`#f2f0eb`)或陶瓷(`#edebe9`)作为页面页面底色而不是纯白色——温暖的奶油是签名.
 - 将绿色的层次绘制到其预期的表面作用上—— Starbucks 绿色为标题,绿色ACCENTAs, 绿色为深带, 提升为装饰
 - 继续追踪 `-0.01em` / `-0.16px` 整个系统
@@ -482,7 +482,7 @@ Full-width `#1E3932` (House Green) band with:
 - Use the Frap circular CTA as the persistent floating order entry on every shopping surface
 - Let the cream canvas breathe between content cards — use whitespace, not dividers
 
-### Don't
+### 应避免的做法
 - 勿用纯白色作为页页面底色——温暖的奶油温度是载荷的
 - Don't pick "one brand green" — the four-green system is intentional; using only `#006241` everywhere flattens the brand
 - Don't use Gold as a general-purpose accent — it's a Rewards signal only
@@ -516,7 +516,7 @@ Inferred from component width tokens and progressive nav heights:
 - 废物用途 `--frapTouchOffset: calc(-1 * .8rem)` 以扩展水龙头区域 8px 超越视觉边缘。
 - 表格浮标输入器在移动上增大标签字体大小( Q)1.6rem 基础对 1.9rem 桌面)——以臂长的手拍和读取比较容易.
 
-### 折叠战略
+### 窄屏布局调整
 
 - **Global nav height scales progressively**: 64 → 72 → 83 → 99px across breakpoints, not a single value
 - **首屏分裂崩溃**: 40/60 移动时不对称的分割 ~ 堆叠(图像顶部,下方内容)
@@ -525,7 +525,7 @@ Inferred from component width tokens and progressive nav heights:
 - **Outer gutter scales**: 16px → 24px → 40px as viewport grows
 - **奖励 3-列状态面板**: 移动时堆叠到单列
 
-### 图像行为
+### 图片适配
 
 - 首屏产品摄影作物在移动上垂直收紧;内容成为视觉主播
 - 礼品卡插图 保存宽度比; 纸牌网格重流
@@ -556,7 +556,7 @@ Inferred from component width tokens and progressive nav heights:
 
 2. "设计与怀特的"内容卡"("White").`#ffffff`)背景情况 `12px` border-radius,分层阴影 `0 0 0.5px rgba(0,0,0,0.14), 0 1px 1px rgba(0,0,0,0.24)`。 标本内容 `16–24px` (`--space-3` 改为: `--space-4`。 设置在中立的温暖上( ) 。`#f2f0eb`页面页面底色与 `16px` 和兄弟姐妹的距离" ("我和兄弟的距离")
 
-3. "制造了浮着的废墟 circular 命令按钮... `56px` 直径,绿色`#00754A`)填充,白色购物袋图标居中。层层阴影: `0 0 6px rgba(0,0,0,0.24)` + `0 8px 12px rgba(0,0,0,0.14)`. Fixed 右下位置为 `-0.8rem` 触摸偏移。活动状态会崩溃环境阴影到 `0 8px 12px rgba(0,0,0,0)` 与 `scale(0.95)`."
+3. "制造了浮着的废墟 circular 命令按钮... `56px` 直径,绿色`#00754A`)填充,白色购物袋图标居中。层层阴影: `0 0 6px rgba(0,0,0,0.24)` + `0 8px 12px rgba(0,0,0,0.14)`. Fixed 右下位置为 `-0.8rem` 触摸偏移。活动状态会崩溃环境阴影到 `0 8px 12px rgba(0,0,0,0)` 配合 `scale(0.95)`."
 
 4. " 打造了深绿色的特色乐队——与House Green(英语:House Green (film))的全线段.`#1E3932`)背景。左栏:白色SoDoSans h2 时 间 24px 字重 600,然后是文字白软(`rgba(255,255,255,0.70)`) 身体段落和一个带有两个按钮的 CTA 列( 初等版的白文本为绿色 ACCent 文本, 中等版的深白边框为外观 ) 。 右栏: 产品摄影 。 分割比例 。 40/60,垂直于下方 `768px`."
 
@@ -590,4 +590,4 @@ When refining existing screens generated with this design system:
 - 每一组成部分的具体动画时间超出少数记录的时间(`--duration: 0.4s`, `--iconTransition: all ease-out 0.2s`, `--expanderDuration: 300ms`) 不被捕获到每个交互表面
 - 格式错误状态全样式(红色边框字重,图标放置)可见于锡词元上,但并非详尽提取
 - 职业页特定组件(cup-name card, 搜索无线电网格)以符号名称引用,但本提取内容未涵盖
-- Starbucks 签证卡/ Starbucks-卡(SVC) 详细的模拟规格提示如下: `--svcRoundedCorners` 财务报告和已审计财务报表 `--svcShadowFilter` 符号,但未充分记录
+- Starbucks 签证卡/ Starbucks-卡(SVC) 详细的模拟规格提示如下: `--svcRoundedCorners` 和 `--svcShadowFilter` 符号,但未充分记录

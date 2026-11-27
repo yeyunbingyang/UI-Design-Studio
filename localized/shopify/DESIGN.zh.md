@@ -8,7 +8,7 @@
 
 Shopify 运行两个平行的设计轨道,共享打印DNA和一个单一按钮词汇,但在页面底色极性上却存在差异。 `{colors.canvas-night}` (`#000000`)——满腔血色的影视摄影商,巨型. `{typography.display-xxl}` 诺伊语头条 Haas 字重显示格罗捷斯克 330 (一种薄薄的,几乎是编辑剪辑的),和单CTA:一种白色的黑胶囊形,带有形态. `button-outline-on-dark`。这些页面读起来就像一个高档印刷杂志的传播:很多黑色,很多负空间,摄影不与文本竞争,每个乐队只有一个动作.
 
-交易音轨翻转到 `{colors.canvas-light}` 财务报告和已审计财务报表 `{colors.canvas-cream}` 价格水平、比较表和注册流量都坐落在这个更轻的页面底色上, 上面有相同的胶囊形按钮系统,但反极性(一种用白文本的坚固黑胶囊形,或一种 `{colors.aloe-10}` 薄荷丸,用于特色/"开始免费试听"级,强调色—— `{colors.aloe-10}` 薄荷和 `{colors.pistachio-10}` 活塞——只出现在轻轨上,从未出现在电影黑暗首屏的页面.
+交易音轨翻转到 `{colors.canvas-light}` 和 `{colors.canvas-cream}` 价格水平、比较表和注册流量都坐落在这个更轻的页面底色上, 上面有相同的胶囊形按钮系统,但反极性(一种用白文本的坚固黑胶囊形,或一种 `{colors.aloe-10}` 薄荷丸,用于特色/"开始免费试听"级,强调色—— `{colors.aloe-10}` 薄荷和 `{colors.pistachio-10}` 活塞——只出现在轻轨上,从未出现在电影黑暗首屏的页面.
 
 字法分为三个家族. **诺伊 Haas 格罗特斯克显示** 重量( 微小) (330–500)处理每个显示,标题,和编辑时刻——品牌的特征是薄显示剪切. **Inter Variable** 时 间 420–550 权重处理每个UI机构,按钮标签,标题,并形成字段——不与显示对战的效用文本. **ui-monospace** 仅出现在代码块和稀有的技术眉毛中。在所有三个家族中, OpenType `ss03` 风格集是启用的——这是该品牌的人物级签名,普遍适用.
 
@@ -26,19 +26,19 @@ Shopify 运行两个平行的设计轨道,共享打印DNA和一个单一按钮�
 
 > **Source pages:** home (`/`), `/start`, `/website/builder`, `/pricing`.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Aloe** (`{colors.aloe-10}` — `#c1fbd4`): The featured-tier and "growth" accent. Used as a pill button background on light surfaces and as a feature-card fill in the pricing comparison band.
 - **皮萨奇奥** (`{colors.pistachio-10}` — `#d4f9e0`:柔软于aloe;用作宽段带填充轻轨,以信号不同类别的特点,而不离开绿色家族.
 - **Cool Link Tones** (`{colors.link-cool-1}` `#9dabad`, `{colors.link-cool-2}` `#9797a2`, `{colors.link-cool-3}` `#bdbdca`, `{colors.link-mint}` `#99b3ad`): Muted footer / tertiary link colors used on dark surfaces to create a quiet hierarchy below the primary white type.
 
-### 表面
+### 界面表面
 - **风景之夜** (`{colors.canvas-night}` — `#000000`:纯黑色首屏,电影故事页,页脚.
 - **夜幕降临** (`{colors.canvas-night-elevated}` — `#0a0a0a`: 电影表面的卡片,视频帧.
 - **Surface Elevated Dark** (`{colors.surface-elevated-dark}` — `#1e2c31`): Dark teal-shifted surface used on a small subset of dark cards to introduce subtle depth without breaking the black.
 - **光线** (`{colors.canvas-light}` — `#ffffff`:定价,注册,比较表.
 - **油菜酱** (`{colors.canvas-cream}` — `#fbfbf5`:定价页背景页面底色上使用的微小温暖的淡白——与 `#ffffff` 却增加了编辑上的热情
 - **细边线光** (`{colors.hairline-light}` — `#e4e4e7`): 1px 边框,在轻卡,桌牌分隔符上。
-- **细边线暗** (`{colors.hairline-dark}` — `#1e2c31`): 1px 边框上,有可见铬的稀有暗卡。
+- **细边线暗** (`{colors.hairline-dark}` — `#1e2c31`): 1px 边框上,有可见界面框架的稀有暗卡。
 
 ### 阴影梯
 - **Shade-30** (`{colors.shade-30}` — `#d4d4d8`): Tag / chip background on light, footer hairline on dark.
@@ -47,14 +47,14 @@ Shopify 运行两个平行的设计轨道,共享打印DNA和一个单一按钮�
 - **Shade-60** (`{colors.shade-60}` — `#52525b`): Tertiary text on light, deep on dark.
 - **Shade-70** (`{colors.shade-70}` — `#3f3f46`): Pressed-state of the primary pill button; deep dark surface accent.
 
-### 文本
+### 文字颜色
 - **Ink** (`{colors.ink}` — `#000000`): All text on light canvas.
 - **小学** (`{colors.on-primary}` — `#ffffff`: 暗布上的所有文字+填充的溢出标签.
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 
 The display tier is **Neue Haas Grotesk Display** at thin weights (330–500). When unavailable, fall back to **Helvetica** at light weight, then Arial. The thin-weight cut is the brand — no substitution should default to weight 400+.
 
@@ -64,7 +64,7 @@ The display tier is **Neue Haas Grotesk Display** at thin weights (330–500). W
 
 打开的Type `ss03` 样式集可以在每个角色中被启用。它会改变特定的格律形式(小写) `a`, `g`,单层数字),用于略微多几何字符。 `font-feature-settings: "ss03"` 身体元素或根。
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -89,7 +89,7 @@ The display tier is **Neue Haas Grotesk Display** at thin weights (330–500). W
 - **Display in NHGD, body in Inter.** Don't push body roles up to NHGD; don't push display roles down to Inter.
 - **追踪电梯在展示中** 电话 96px 首屏会得到 +2.4px 积极跟踪——薄胶片需要空气。 70px 下方,跟踪返回 0.
 
-### Note on Font Substitutes
+### 替代字体
 Open substitutes for Neue Haas Grotesk Display: **Helvetica Now Display** (proprietary) or **Inter Display** at light weights (open-source) are the closest matches. Avoid Helvetica Neue at default weight — it's too heavy for the brand's thin tier. **Inter Variable** is open-source via Google Fonts and is the canonical body face — no substitute needed.
 
 
@@ -101,16 +101,16 @@ Open substitutes for Neue Haas Grotesk Display: **Helvetica Now Display** (propr
 - **分区编栏**: `{spacing.huge}` 64–128px ; 崩溃到 ~48px 以密度为优先的交易页面。
 - **Card internal padding**: `{spacing.xxl}` 32px on pricing cards; `{spacing.xl}` 24px on compact tag rows.
 
-### 网格容器( C)
+### 网格与容器
 - 电影首屏的网页使用宽 max-width 集装箱(~1440–1600px)与脱落边缘摄影,逃出容器.
 - Pricing collapses through 4-up → 2-up → 1-up tiers based on viewport.
 - 机构内容中心 ~720–840px 读取长窗体页面上的列。
 
-### 白空间哲学
+### 留白规则
 The cinematic track treats whitespace as the brand's most valuable asset — sections often have 128–192px of vertical air between content blocks, with photography filling the rest. The transactional track tightens to ~48–64px between bands because users are scanning, comparing, and acting. The contrast between the two whitespace philosophies is part of the brand voice.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -126,7 +126,7 @@ On the cinematic track, depth comes from photography — full-bleed merchant ima
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -134,10 +134,10 @@ On the cinematic track, depth comes from photography — full-bleed merchant ima
 | `{rounded.sm}` | 5px | 图像容器(小) |
 | `{rounded.md}` | 8px | 格式输入、录像框、小卡片 |
 | `{rounded.lg}` | 12px | 定价卡、特征卡 |
-| `{rounded.xl}` | 20px (一些不对称卡上只使用顶端) | 首屏相框、电影卡片、铬 |
+| `{rounded.xl}` | 20px (一些不对称卡上只使用顶端) | 首屏相框、电影卡片、界面框架 |
 | `{rounded.pill}` | 9999px | All buttons, pill tags, mint chips |
 
-### 摄影几何
+### 图片形状
 摄影完全无边框。在电影版的页面上,它完全从容器中逃出;在交易版上,它坐落在内部 `{rounded.lg}` 客户-日志条条中的“神通”处理是统一高度的简单灰度文字标记(~24–32px),在单横向条形中对齐.
 
 
@@ -158,7 +158,7 @@ On the cinematic track, depth comes from photography — full-bleed merchant ima
 **`button-aloe-pill`** 定价页面上的CTA。
 - Background `{colors.aloe-10}`, text `{colors.ink}`, same pill geometry. Used for the "Start free trial" tier.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`card-pricing`** ——定价页上的标准等级卡.
 - Background `{colors.canvas-light}`, padding `{spacing.xxl}`, rounded `{rounded.lg}` 12px, 1px `{colors.hairline-light}` border. Title in `{typography.heading-xl}`, price in `{typography.display-md}`, body in `{typography.body-md}`, CTA pinned to the bottom as `button-primary-pill`.
@@ -175,7 +175,7 @@ On the cinematic track, depth comes from photography — full-bleed merchant ima
 **`card-photo-frame`** ——电影版页面上全血摄影容器.
 - Background `{colors.canvas-night}`, padding 0, rounded `{rounded.xl}` 20px (often top-only). The photo IS the content; no inner padding, no overlay text inside the card.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——光表面标准文字输入.
 - Background `{colors.canvas-light}`, text `{colors.ink}`, type `{typography.body-md}`, padding `{spacing.sm}+ {spacing.md}` (10px 12px), rounded `{rounded.md}` 8px, 1px `{colors.hairline-light}` border.
@@ -196,7 +196,7 @@ On the cinematic track, depth comes from photography — full-bleed merchant ima
 **`pill-tag-shade`** ——在光面上贴上中立标记.
 - Background `{colors.shade-30}`, text `{colors.ink}`, otherwise same shape as `pill-tag-mint`.
 
-### 签名组件
+### 标志性组件
 
 **电影摄影层** ——首屏身上的满血商画照片,不覆盖斜纹,不覆盖文字形象;相反,该类型坐落在照片上下方的干净的负空间,品牌将摄影视为编辑传播,而不是装饰.
 
@@ -214,15 +214,15 @@ On the cinematic track, depth comes from photography — full-bleed merchant ima
 
 ## 设计建议与禁忌
 
-### 执行
-- 准备金 `{colors.aloe-10}` 财务报告和已审计财务报表 `{colors.pistachio-10}` 光线赛道上没有出现 电影黑页上没有
-- 总是使用 `{rounded.pill}` 按钮; 永远 `{rounded.md}` 或 减 减 `{rounded.lg}`.
-- 显示字重级 330; 颠倒到 400 或 减 减 500 打破品牌的薄片签名.
+### 建议做法
+- 准备金 `{colors.aloe-10}` 和 `{colors.pistachio-10}` 光线赛道上没有出现 电影黑页上没有
+- 总是使用 `{rounded.pill}` 按钮; 永远 `{rounded.md}` 或 `{rounded.lg}`.
+- 显示字重级 330; 颠倒到 400 或 500 打破品牌的薄片签名.
 - Use full-bleed photography on cinematic pages — let it escape the container.
 - Apply `font-feature-settings: "ss03"` globally; the stylistic set is the brand's typographic signature.
 - 配白型黑页面底色和白斑状轮廓药;配黑型黑页面底色和充装黑丸.
 
-### Don't
+### 应避免的做法
 - Don't introduce a third canvas color — stick to black or light/cream. Greys, beiges, and blues are not in the system.
 - Don't add drop shadows on cinematic dark cards beyond the subtle inset top-highlight; the cinematic track wants flat blackness.
 - 下方不要缩小显示等级 `{typography.display-md}` (48px)在首屏表面;下面是作为片段头读的,而不是显示.
@@ -230,7 +230,7 @@ On the cinematic track, depth comes from photography — full-bleed merchant ima
 - Don't replace the pill shape with a rounded-rectangle button anywhere.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -245,13 +245,13 @@ On the cinematic track, depth comes from photography — full-bleed merchant ima
 - Pill buttons hit ≥ 44×44px on mobile via 12px vertical padding × 16px line-height. WCAG AAA compliant.
 - 窗体字段停留在 44px 最小高度跨越所有断点。
 
-### 折叠战略
+### 窄屏布局调整
 - Display sizes scale down through the breakpoint stair: 96 → 70 → 55 → 48 → 36px on mobile.
 - 电影摄影的收成宽度小 将焦点放在边缘的高度
 - Pricing tiers stair-step 4-up → 2-up → 1-up; the featured aloe tier stays visually distinguished at every step.
 - 顶端导航崩溃到下面的汉堡 768px;菜单继承页面底色极性。
 
-### 图像行为
+### 图片适配
 摄影用反应能力 `srcset` 移动作物更喜欢近身作物; 宽广作物更喜欢环境/储存前缘。
 
 

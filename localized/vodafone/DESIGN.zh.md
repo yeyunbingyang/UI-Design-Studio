@@ -16,7 +16,7 @@ Type is the second decisive voice. Vodafone's custom display sans (extracted as 
 **关键特征 :**
 - 单一的初级 CTA 颜色 `{colors.primary}` (`#e60000`) — Vodafone 红色,初等时装药 pill-outline 二级。没有第三个按钮变体。
 - 大型大写显示字重 800 (`{typography.display-hero}` 品牌的标志。 300- 字重头条兄弟姐妹(`{typography.display-lg}` / `{typography.display-md}`处理比较平静的第二时刻。
-- 电话 `speechmark-logo-orb` ——红方托管. Vodafone'引号-标记图标——是装饰性铬唯一一块不是CTA的,它支撑着每个页面的品牌中心.
+- 电话 `speechmark-logo-orb` ——红方托管. Vodafone'引号-标记图标——是装饰性界面框架唯一一块不是CTA的,它支撑着每个页面的品牌中心.
 - Pill geometry on every interactive shape — `{rounded.pill-lg}` 60 px for buttons, `{rounded.pill-md}` 32 px for inline badges. Card chrome stays at `{rounded.card}` 6 px.
 - 双波段的页面节奏—— `{colors.ink}` 黑暗首屏/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ `{colors.canvas}` 轻度含量。没有中带灰色;该品牌使用表面对比,而不是软中性,用于高架。
 - 编辑摄影(真肖像,真城市,真电缆)是唯一一致的装饰系统——没有插图,没有大气梯度.
@@ -24,32 +24,32 @@ Type is the second decisive voice. Vodafone's custom display sans (extracted as 
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Vodafone Red** (`{colors.primary}` — `#e60000`): The single brand accent. Every primary CTA pill, every speechmark logo, every conversion target. The most iconic red in telecom — never desaturated, never used at scale for body fills (reserved for high-attention surfaces).
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — `#ffffff`: 默认的光线内容背景.
 - **软画帘** (`{colors.canvas-soft}` — `#f2f2f2`: 一种近白锡作为 badge-chip 。 。 。
 - **墨水( 墨水 )** (`{colors.ink}` — `#25282b`:品牌近黑表面——用作暗黑首屏乐队,导航背景,脚步填充,双倍作为光表面的主要文字颜色.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — `#25282b`:光表面的每一个标题和身体段落.
 - **体质** (`{colors.body}` — `#7e7e7e`: 轻表面的次要正文——标题,元数据,辅助副本.
 - **静音** (`{colors.mute}` — `#bebebe`:最下优先的文本颜色——占位符文本,低键页脚链接.
 - **On Dark** (`{colors.on-dark}` — `#ffffff`): All text on `{colors.ink}` surfaces (hero, footer, nav).
 
-### 语义
+### 语义色
 The brand does not maintain a separate semantic palette. The primary red doubles as validation / destructive signal when needed; success / warning use are reserved for in-product contexts and are not part of the documented marketing system.
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 单一的自定义面孔携带整个系统: **Vodafone**,品牌的专有展示圣人。 300 (轻), 400 (经常), 600, 700,以及 800 ——系统中的每一个角色都来自这个家族。没有单一的伴侣;技术标签(在营销表面)借的是相同的面孔,尺寸较小。
 
 icomoon图标-font 被装入专有格莱弗,但不会作为打印角色渲染.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -77,7 +77,7 @@ icomoon图标-font 被装入专有格莱弗,但不会作为打印角色渲染.
 - **整个家庭都是单身** 品牌从来不混 serif 或单体进入打印系统。一致性就是平静。
 - **追踪在显示大小上保持紧凑.** `-1px` 时 间 144 px 是一个品牌的校准; 恢复到中性跟踪, 软化了表层的外观。
 
-### Note on Font Substitutes
+### 替代字体
 The Vodafone display sans is proprietary. Open-source substitutes:
 - **显示色素** — *Inter* 字重 800 以首屏比例 `letter-spacing: -1px` 是最接近的自由匹配。 *Geist* 字重 700–800 也是第二好成绩。
 - **较轻显示字重(300)** — *Inter* 字重 300 拥有 line-height 不错 48 px 显示大小。
@@ -92,15 +92,15 @@ The Vodafone display sans is proprietary. Open-source substitutes:
 - **纸牌内部贴纸**: 使用故事卡 `{spacing.lg}` 16 px 环绕图像 + 头条。
 - **内含空档**: 按钮行和芯片行 `{spacing.md}` 12 px 兄弟姐妹之间。
 
-### 网格容器( C)
+### 网格与容器
 - 销售内容使用宽容器(实际上与 `{spacing.3xl}` 桌面上的沟槽,移动式的缩水).
 - Story-card grids: 2-up at desktop, 1-up at mobile.
 - 首屏摄影填满了观景台;头条在左上方覆盖.
 
-### 白空间哲学
+### 留白规则
 首屏的大规模显示头条拥有整个页面的顶部;下面的白空间宽大,让第二乐团呼吸. 内含卡片,头条和复制拥抱关闭(Control).`{spacing.sm}` 8 px 差距,然后是更大的差距(第1段)`{spacing.3xl}`)在下一张牌之前,脚步乐队是暗而稠密的.
 
-### 反应战略
+### 响应式布局
 
 #### 断点
 
@@ -114,20 +114,20 @@ The Vodafone display sans is proprietary. Open-source substitutes:
 #### 触控区域
 The `button-primary` pill renders at ~52 px tall (12 px vertical padding + 28 px line-height). All buttons comfortably meet WCAG AAA at every breakpoint.
 
-#### 折叠战略
+#### 窄屏布局调整
 - **导航**: 桌面上的完整链接行。 移动时折叠到汉堡菜单; 菜单打开时为暗面, 链接列表堆叠相同 。
 - **首屏们**: 巨大的显示头条的缩放流畅。在移动时,摄影作物只收紧到数字的脸上。
 - **Story-card grid**: 2-up → 1-up at the breakpoint above.
 - **语音标记标志**: 保持一致的大小 relative 切换到周围内容; 绝不缩小到下面 ~48 px.
 
-#### 图像行为
-- **首屏摄影**: 满血 16:9 或 减 减 4:3 桌面上的肖像; 移动时收紧裁剪。
-- **Story-card 缩略图**: 16:9 内侧景观 `{rounded.card}` 6 px 铬。
+#### 图片适配
+- **首屏摄影**: 满血 16:9 或 4:3 桌面上的肖像; 移动时收紧裁剪。
+- **Story-card 缩略图**: 16:9 内侧景观 `{rounded.card}` 6 px 界面框架。
 - **语音标记或**: 总是作为红色 SVG 引号图标渲染, 从未替换 。
 - **标记栏(如果在伙伴网页上出现)**: 一致高度的单色SVG.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -135,7 +135,7 @@ The `button-primary` pill renders at ~52 px tall (12 px vertical padding + 28 px
 | 职等 1 —— 细边线 | 1 px 固态 `{colors.ink}` 边框。 | 表格输入, `divider-on-dark` 中间的页脚列。 |
 | 职等 2 黑暗的边界 | 1 px 固态 `{colors.on-dark}` 边框 `{colors.ink}` 表面, 显示 | 坐在黑暗首屏乐队上的按钮 |
 
-品牌不使用软滴影;深度来自极度-浮点之间 `{colors.ink}` 财务报告和已审计财务报表 `{colors.canvas}` 乐队。
+品牌不使用软滴影;深度来自极度-浮点之间 `{colors.ink}` 和 `{colors.canvas}` 乐队。
 
 ### 装饰性深度
 - **编辑摄影**:首屏照片(真人肖像或环境镜头)是品牌唯一真正的大气效应.
@@ -144,7 +144,7 @@ The `button-primary` pill renders at ~52 px tall (12 px vertical padding + 28 px
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -156,9 +156,9 @@ The `button-primary` pill renders at ~52 px tall (12 px vertical padding + 28 px
 | `{rounded.pill-lg}` | 60px | The brand's signature CTA pill — every primary and secondary button. |
 | `{rounded.full}` | 9999px | Circular 图标容器(例如视频播放/暂停)。 |
 
-### 摄影几何
-- 首屏肖像:边缘对边缘 16:9 或 减 减 4:3 并且没有内部框架。
-- Story-card 缩略图 : 16:9 内侧景观 `{rounded.card}` 铬。
+### 图片形状
+- 首屏肖像:边缘对边缘 16:9 或 4:3 并且没有内部框架。
+- Story-card 缩略图 : 16:9 内侧景观 `{rounded.card}` 界面框架。
 - 语音标记标识符 : `{rounded.sm}` 角(可视化为斜方形标记;SVG标记本身填充圆形).
 
 
@@ -178,15 +178,15 @@ The `button-primary` pill renders at ~52 px tall (12 px vertical padding + 28 px
 **`button-icon-circular`** ——圆白图标按钮(视频播放/暂停/chevron).
 - Background `{colors.canvas}`, ink icon, 1 px solid `{colors.canvas}` outline (effectively borderless), shape `{rounded.full}`.
 
-### 纸牌和集装箱
+### 卡片与容器
 
-**`card-content`** ——默认 story-card 铬。
+**`card-content`** ——默认 story-card 界面框架。
 - Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.lg}`, shape `{rounded.card}` 6 px. Hosts a 16:9 thumbnail at the top + headline + caption.
 
 **`card-hero`** ——作为主演故事使用的略大一些的牌变体.
 - 与 `card-content` 标题缩放到 `{typography.display-sm}`.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——文体文字输入.
 - Background `{colors.canvas}`, text `{colors.ink}`, 1 px solid `{colors.ink}` border, body in `{typography.body-sm}`, padding `{spacing.md} {spacing.lg}`, shape `{rounded.sm}` 6 px.
@@ -197,12 +197,12 @@ The `button-primary` pill renders at ~52 px tall (12 px vertical padding + 28 px
 - Background `{colors.ink}`, text `{colors.on-dark}`, padding `{spacing.lg} {spacing.3xl}`. Layout: logo left, link row right with login / search affordances.
 
 **`nav-link`** ——内设的链接项目. `nav-bar`.
-- 文本 `{colors.on-dark}`,设置在 `{typography.body-sm}`.
+- 文字颜色 `{colors.on-dark}`,设置在 `{typography.body-sm}`.
 
 **`footer`** 黑暗脚步乐队。
 - Background `{colors.ink}`, text `{colors.on-dark}`, padding `{spacing.3xl} {spacing.3xl}`. Body in `{typography.body-sm}`; column eyebrows in `{typography.caption-uppercase}`.
 
-### 签名组件
+### 标志性组件
 
 **`hero-band-dark`** ——暗海军/沉克首屏乐队主持大型展品头条.
 - Background `{colors.ink}` with full-bleed editorial photography overlay at reduced opacity; text `{colors.on-dark}`; padding `{spacing.3xl} {spacing.3xl}`. Headline in `{typography.display-hero}` (uppercase, weight 800).
@@ -222,45 +222,45 @@ The `button-primary` pill renders at ~52 px tall (12 px vertical padding + 28 px
 **`divider-on-dark`** - 电话 1 px 暗面上各节/列之间使用的细边线.
 - 1 px 固态 `{colors.on-dark}` (经常在 25 % 构成部分一级的不透明问题)。
 
-### 实例(说明性)
+### 组合示例
 
-> 自动生成的工具包-模拟演示表面(`scripts/derive-examples-block.mjs`。每个 `ex-*` 条目参考: 下游消费者的品牌原始产品(`/preview-design`, `/generate-kit`) 重新皮肤相同 10 表面一致。 `TO_FILL` 标记表示缺失原始人——在LLM判断传中解析.
+> 以下组合场景由 `scripts/derive-examples-block.mjs` 生成。各 `ex-*` 条目复用品牌基础样式，供 `/preview-design` 和 `/generate-kit` 以统一风格呈现同一套 10 个示例。`TO_FILL` 提示有待核对的基础样式。
 
-**`ex-pricing-tier`** ——默认定价等级卡。 feature-card 带品牌的铬 canvas-soft 表面。
+**`ex-pricing-tier`**：默认套餐卡，沿用功能卡结构和品牌 canvas-soft 底色。
 - 属性 : `backgroundColor`, `textColor`, `borderColor`, `rounded`, `padding`
 
-**`ex-pricing-tier-featured`** ——地貌/高亮的层次——极性-浮点表面(暗色填充+光线文字在光线模式下,浅色填充+暗色文字在暗线模式下).
+**`ex-pricing-tier-featured`**：推荐套餐卡。浅色模式中用深底浅字，深色模式中用浅底深字。
 - 属性 : `backgroundColor`, `textColor`, `rounded`, `padding`
 
-**`ex-product-selector`** ——什么是包含的汇总卡——重新用于SaaS/B2B纵横(NOT为字形产品画廊).
+**`ex-product-selector`**：面向 SaaS / B2B 场景的套餐权益摘要卡。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-cart-drawer`** ——订阅摘要——重新用于SaaS/B2B(每件加件的行项目,而非字面车).
+**`ex-cart-drawer`**：SaaS / B2B 订阅摘要，每个附加项单独列出。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `item-divider`
 
-**`ex-app-shell-row`** ——App Shell 实例中的侧边栏导航行. Active State 使用品牌主标.
+**`ex-app-shell-row`**：应用框架示例里的侧栏导航行，以品牌主色标识选中状态。
 - 属性 : `backgroundColor`, `activeIndicator`, `rounded`, `padding`
 
-**`ex-data-table-cell`** — Default data-table th + td chrome. Header uses mono-caps eyebrow typography; body uses body-sm.
+**`ex-data-table-cell`**：数据表格中 th 与 td 的默认样式。表头采用大写等宽字，正文采用 body-sm。
 - 属性 : `headerBackground`, `headerTypography`, `bodyTypography`, `cellPadding`, `rowBorder`
 
-**`ex-auth-form-card`** ——签入/签入卡. 复用. feature-card 铬 text-input 原始人在里面,他们都在里面
+**`ex-auth-form-card`**：登录与注册卡，复用功能卡和 text-input。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-modal-card`** ——模度对话框表面——与 feature-card 以高的阴影盟誓,
+**`ex-modal-card`**：对话框表面，沿用功能卡样式并加浮层投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-empty-state-card`** ——空状态插图框架.
+**`ex-empty-state-card`**：空状态插图容器。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `captionTypography`
 
-**`ex-toast`** ——通知表面. feature-card 形状 + 中阴影。
+**`ex-toast`**：轻提示，沿用功能卡圆角并使用中等投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `typography`
 
 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` Vodafone 红色用于初级CTA和 `speechmark-logo-orb`。每个转换目标都使用红胶囊形。
 - 设置首屏头条 `{typography.display-hero}` 字重 800 紧紧的上层楼 `-1px` 追踪,那副天线的表情是品牌声音
 - 使用 `{rounded.pill-lg}` 60 px 品牌从来不会在CTAs上使用方形角.
@@ -268,7 +268,7 @@ The `button-primary` pill renders at ~52 px tall (12 px vertical padding + 28 px
 - 与大型显示头条覆盖的对等编辑肖像摄影——该组合是品牌的标志.
 - 以一致大小渲染语音标记标志 relative 以至周围内容——这是品牌在每个页面上的重力中心.
 
-### Don't
+### 应避免的做法
 - Don't introduce a second accent colour. The brand operates with red + ink + grayscale only.
 - Don't render headlines in sentence case at hero scale. Hero display IS uppercase weight 800.
 - 千万别把主CTA变成方形矩形 60 px 药是不可谈判的。

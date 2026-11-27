@@ -18,7 +18,7 @@ The palette is deliberately narrow: deep midnight as the dominant canvas, electr
 - 粘贴图解系统:用手绘图解的浮游吉祥物字符,出现在节节交叉处,从不内置卡片——它们创造密集的信息块之间的节奏和个性.
 - Uppercase eyebrow + button caps in `{typography.button-cap}` and `{typography.eyebrow}`, with a consistent 0.2px tracking lift, give the brand its "developer console" cadence.
 - Single-primary CTA hierarchy: every page has one filled button reading either `{colors.primary}` on light or `{colors.on-primary}` on dark; outlined and ghost variants are downgraded.
-- 纸牌表面跟随页面底色:暗片段嵌入暗片(`{colors.ink-deep}` 轻小的发条 轻小的发条 白牌 `{colors.hairline-cloud}` 边框 —— 铬保持一致性,只有极性翻转。
+- 纸牌表面跟随页面底色:暗片段嵌入暗片(`{colors.ink-deep}` 轻小的发条 轻小的发条 白牌 `{colors.hairline-cloud}` 边框 —— 界面框架保持一致性,只有极性翻转。
 - 奶油白色层的定价-页色节奏,带有一个暗反的"特质"层(`{colors.surface-night}`),避免了典型的强调色边框特征模式.
 
 
@@ -26,7 +26,7 @@ The palette is deliberately narrow: deep midnight as the dominant canvas, electr
 
 > **Source pages:** home (`/welcome/`), product/error-monitoring, contact/enterprise, pricing.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **午夜紫罗兰** (`{colors.primary}` — `#150f23`:系统的主要动作颜色和最深的表面音调。用于在光面上填充的主按钮, code-block 和最强的黑牌
 - **墨水紫罗兰** (`{colors.ink-deep}` — `#1f1633`:从初级稍稍提升,这是营销首屏页面底色和光面默认的体文字颜色——一个单一的词元做双重义务作为背景和墨水.
 - **Electric Lime** (`{colors.accent-lime}` — `#c2ef4e`): The signature highlight color. Wrapped around individual headline keywords as a syntax-highlight chip (`{rounded.xs}` corner, no padding-y, 12px padding-x). Also used as the squiggly footer divider stroke. Never a button background.
@@ -35,7 +35,7 @@ The palette is deliberately narrow: deep midnight as the dominant canvas, electr
 - **Deep Violet** (`{colors.accent-violet-deep}` — `#422082`): The select-dropdown fill on contact forms; also used on spotlight cards inside dark sections.
 - **中紫罗兰** (`{colors.accent-violet-mid}` — `#79628c`: 标记芯片填充和在暗表面晕音.
 
-### 表面
+### 界面表面
 - **暗黑的画像** (`{colors.surface-canvas-dark}` — `#1f1633`:首屏,产品,和特征页背景. 载承最深的大气字重.
 - **夜 间** (`{colors.surface-night}` — `#150f23`:暗布上的卡片,代码块,以及"特质"定价等级.
 - **浅色画像** (`{colors.surface-canvas-light}` — `#ffffff`:定价,接触,以及密集参考页背景.
@@ -44,28 +44,28 @@ The palette is deliberately narrow: deep midnight as the dominant canvas, electr
 - **发条酷** (`{colors.hairline-cool}` — `#cfcfdb`): 1px 边框,在文本输入和窗体字段上。
 - **细边线云** (`{colors.hairline-cloud}` — `#e5e7eb`): Pricing-table 分词和 pricing-card 光帆上的边框。
 
-### 文本
+### 文字颜色
 - **小学** (`{colors.on-primary}` — `#ffffff`:所有暗布上的文字,所有CTA标签在填充的暗按钮上.
 - **墨水( 墨水 )** (`{colors.ink}` — `#1f1633`:光帆上的机身文字;与暗页面底色相同的六进制,重新定位为类型.
 - **墨水出版社** (`{colors.ink-press}` — `#1a1a1a`: 预留了按下/主动状态的倒置按钮.
 - **黑暗的静音** (`{colors.on-dark-muted}` — `rgba(255,255,255,0.72)`: 暗页面底色上的副文本,标题,和表单元格值.
 - **On Dark Faint** (`{colors.on-dark-faint}` — `rgba(255,255,255,0.18)`): Translucent surface-on-dark — used for ghost button fills and dimmed nav items.
 
-### 语义
+### 语义色
 - **焦点环** (`{colors.ring-focus}` — `rgba(59,130,246,0.5)`:半透明蓝焦环——系统中唯一的蓝色,保留用于键盘聚焦于形式字段.
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 
 显示层是一个专有的几何色素的色素,其比例粗糙、接近凝固,具有略微具有颠覆性的个性(闭合孔径、光学压力字母表)。 **Rubik** 重度的视觉连续。
 
 用户界面等级是: **Rubik** ——Google字体上的开源希伯来语/拉丁语sans——系统回落(`-apple-system, system-ui, Segoe UI, Helvetica, Arial`). Rubik 处理每个身体、标题、按钮和眉毛角色。
 
-代码层是 **Monaco** 与 Menlo 财务报告和已审计财务报表 Ubuntu Mono 倒置——用于代码块,安装片段,以及内置的符号.
+代码层是 **Monaco** 配合 Menlo 和 Ubuntu Mono 倒置——用于代码块,安装片段,以及内置的符号.
 
-### 等级
+### 字号层级
 
 | 调试                           | 大小 | 字重 | 线条高度 | 字母间距 | 使用                                                                                |
 | ------------------------------- | ---- | ------ | ----------- | -------------- | ---------------------------------------------------------------------------------- |
@@ -91,7 +91,7 @@ The palette is deliberately narrow: deep midnight as the dominant canvas, electr
 - **Caps with tracking.** All button labels and eyebrows are uppercase with 0.2px tracking. This is the brand's typographic signature — a console-prompt cadence applied to UI affordances.
 - **头条作为语法.** 首屏显示是结构化的,所以可以将一个单一的关键字包裹在一个 `{colors.accent-lime}` 突出显示芯片而不干扰读取顺序。将石灰芯片作为甘油级装饰,而不是单独的组件。
 
-### Note on Font Substitutes
+### 替代字体
 Rubik 是在 Google 字体上的开源,是除首屏显示以外的所有事项的安全默认。对于专有显示系统,合适的开源替代是 **空间格罗特斯克** (重力较重) **阿尔基沃** (半凝聚重量),或 **圣胡博特会** 轴重为重的轴线,均带有相同的圆块近凝固的硅胶。 line-height 下调 0.05 以大尺寸的面孔更紧凑
 
 
@@ -104,17 +104,17 @@ Rubik 是在 Google 字体上的开源,是除首屏显示以外的所有事项�
 - **Card internal padding**: `{spacing.xxl}` 32px on pricing cards and large feature cards; `{spacing.lg}` 16px on compact tag/badge groups.
 - **窗体字段编解**: `{spacing.sm}` 8px 垂直, 显示 `{spacing.md}` 12px 水平 - 匹配 text-input 直接表示符号。
 
-### 网格容器( C)
+### 网格与容器
 - 销售页使用宽厚的中央集装箱,外侧沟槽宽;最大宽度围绕 1152px (提取的断点之一),内容在内部有弹性,横跨 12 概念栏。
 - 定价分为 a 4- 桌面上的一级牌行,崩溃到 2- 中宽度和 1- 移动。
 - 联系表使用 2- 单光扫描面板内的柱形场布局(第一/最后名称并列).
 - 断点楼梯 1440 → 1152 → 992 → 768 → 640 → 576 ——见应变行为.
 
-### 白空间哲学
+### 留白规则
 The dark canvas absorbs whitespace differently from light. On dark surfaces the brand stretches `{spacing.section}` generously between bands so floating mascots and starfield textures have room to breathe. On light surfaces (pricing, contact) the whitespace tightens — content density takes priority because users are scanning, comparing, and acting. Rule of thumb: hero and feature surfaces are spacious, transactional surfaces are dense.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗                                                                      | 使用                                                                                                                                   |
 | ----- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -130,7 +130,7 @@ Sentry's depth doesn't come from drop shadows — it comes from the **starfield 
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试            | 数值  | 使用                                                         |
 | ---------------- | ------ | ----------------------------------------------------------- |
@@ -138,11 +138,11 @@ Sentry's depth doesn't come from drop shadows — it comes from the **starfield 
 | `{rounded.sm}`   | 6px    | 文本输入, 搜索框                                   |
 | `{rounded.md}`   | 8px    | 初键和倒置按钮, 代码块, 选择下拉 |
 | `{rounded.lg}`   | 10px   | 通用潜水器,容器块                              |
-| `{rounded.xl}`   | 12px   | 定价卡、特征卡、导航胶囊形、铬        |
+| `{rounded.xl}`   | 12px   | 定价卡、特征卡、导航胶囊形、界面框架        |
 | `{rounded.xxl}`  | 18px   | 图像容器,大型首屏插图                  |
 | `{rounded.full}` | 9999px | 幻象们, circular 图标按钮                              |
 
-### 摄影几何
+### 图片形状
 网站不使用传统摄影——它使用 **插图标签和产品 UI 截图** 产品 UI 模拟器位于内部 `{rounded.xxl}` 18px 容器,常常略微倾斜,与没有边框的暗色页面底色相对. 粘贴吉祥物根本没有容器——它们直接被铺在页面底色上,常常是重叠的段边界来断网. Avatar处理(在客户-logo条形中)是简单的灰度字标,而不是照片.
 
 
@@ -169,7 +169,7 @@ Sentry's depth doesn't come from drop shadows — it comes from the **starfield 
 **`button-disabled`**
 - Background `{colors.hairline-cloud}`, text `{colors.on-dark-muted}`, otherwise identical to `button-primary`.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`card-pricing`** ——定价页上的标准等级卡.
 - Background `{colors.surface-canvas-light}`, text `{colors.ink-deep}`, padding `{spacing.xxl}` 32px, rounded `{rounded.xl}` 12px, 1px `{colors.hairline-cloud}` border. Headline at top in `{typography.heading-md}`, price in `{typography.display-large}`, feature list in `{typography.body-md}`, primary CTA pinned to the bottom of the card.
@@ -186,7 +186,7 @@ Sentry's depth doesn't come from drop shadows — it comes from the **starfield 
 **`code-block`** ——代码/安装片段.
 - Background `{colors.surface-night}`, text `{colors.on-primary}` rendered in `{typography.code}`. Padding `{spacing.lg}` 16px, rounded `{rounded.md}`. On dark canvas the code block is barely lifted from canvas — only the slightly deeper fill differentiates it.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——联系表第一/最后/电子邮件/etc字段。
 - Background `{colors.surface-canvas-light}`, text `{colors.ink-deep}`, type `{typography.body-md}`, padding `{spacing.sm} {spacing.md}` (8px 12px), rounded `{rounded.sm}` 6px, 1px `{colors.hairline-cool}` border.
@@ -212,7 +212,7 @@ Sentry's depth doesn't come from drop shadows — it comes from the **starfield 
 **`chip-lime-keyword`** ——签名内含突出显示在首屏显示头条内包裹单词.
 - Background `{colors.accent-lime}`, text `{colors.ink-deep}`, type matches the surrounding `{typography.display-hero}`, rounded `{rounded.xs}` 4px, padding `0 {spacing.md}` (12px horizontal, 0 vertical so the chip hugs the cap-height).
 
-### 签名组件
+### 标志性组件
 
 **粘贴吉祥物层** ——用手递的轮廓和饱和图绘制的插图人物(宇航员,漫画怪物,交通锥,调试浮雕). `{colors.accent-pink}` / `{colors.accent-lime}` 填充。吉祥物被放在区块交叉口,往往重叠区块边界,由 30–40% 具有装饰性的区块标记和品牌人格载体——从不装在牌内,从不装扣。
 
@@ -220,7 +220,7 @@ Sentry's depth doesn't come from drop shadows — it comes from the **starfield 
 
 **星野首屏纹理** ——在非常低的不透明度下,在首屏页面底色上覆盖着一个微弱的白色紫色的披针形图案,在暗色页面底色上添加大气深度,没有明显的装饰,执行时作为背景图像,而不是重复CSS.
 
-**窗口- 剪辑 UI 模拟器** ——产品 UI 截图框中 `{rounded.xxl}` 容器,经常倾斜 ±2–3 离轴度, 将重叠的段落边界定位在暗色特征页上。 铬本身只是一个圆形图像, 带有微妙的细边线; 内容是实际产品 UI 。
+**Window-Chrome UI Mock** — product UI screenshots framed in `{rounded.xxl}` containers, often tilted ±2–3 degrees off axis, positioned overlapping section boundaries on the dark feature pages. The chrome itself is just a rounded image with a subtle hairline; the content is the actual product UI.
 
 **`link-on-dark`** — inline links in body copy on dark surfaces. Default text is `{colors.on-primary}` rendered in `{typography.body-md}` with a persistent underline; the underline is the entire affordance, no color change. Sits flush in copy with no padding, no rounded corners beyond the inherited `{rounded.xs}`.
 
@@ -232,7 +232,7 @@ Sentry's depth doesn't come from drop shadows — it comes from the **starfield 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - Reserve `{colors.accent-lime}` for keyword-highlight chips inside display headlines and the footer squiggle divider — never use it as a button background, never as body text.
 - Pair every `button-primary` with `{typography.button-cap}` in uppercase with 0.2px tracking — the cadence is part of the brand, not a stylistic option.
 - 处理暗页面底色( T) (`{colors.surface-canvas-dark}`)和浅布(`{colors.surface-canvas-light}`)作为两个完整的世界——让一个自己销售/版面,另一个自己交易版面,没有半量度.
@@ -240,7 +240,7 @@ Sentry's depth doesn't come from drop shadows — it comes from the **starfield 
 - 使用 `card-pricing-featured` (暗反向级),而不是对标价栏设置强调色边框的轻度级.
 - 默认正文 line-height 改为: 1.5 函数界面表面和 2.0 市场营销表面的区别是故意的。
 
-### Don't
+### 应避免的做法
 - Don't introduce additional accent colors beyond `{colors.accent-lime}` and `{colors.accent-pink}` — adding teal, orange, or yellow dilutes the violet-and-lime signature.
 - Don't apply drop shadows to cards on dark canvas — depth comes from texture and illustration, not from light-on-dark shadows that would muddy the violet.
 - Don't use `{typography.display-hero}` (88px) for anything except the marketing hero — even sub-pages cap at `{typography.display-large}` (60px).
@@ -249,7 +249,7 @@ Sentry's depth doesn't come from drop shadows — it comes from the **starfield 
 - Don't put illustrated mascots inside cards or constrained containers — their job is to break grid, not occupy it.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -268,14 +268,14 @@ Sentry's depth doesn't come from drop shadows — it comes from the **starfield 
 - 导航中的药牌和徽章以及特征表面都留在上面 32×32px 即使在小的移动断点上,它们也会扩大,而不是缩小。
 - 窗体字段停留在 44px 移动联系页面的最低高度。
 
-### 折叠战略
+### 窄屏布局调整
 - **首屏显示头条** 滴滴从 88px → 60px → 48px 穿过断点楼梯;石灰关键字芯片保留了每一步的垫和角半径.
 - **Pricing tiers** stair-step from 4-up → 2-up → 1-up. The featured dark tier always remains visually distinguished — it never loses its inversion at any breakpoint.
 - **贴纸吉祥物** 逐渐取消强调:在桌面上,它们与区段边界重叠;在平板板上,它们转向在区段编版内线;在小型移动中,大多数是隐藏在 `display: none` 以保持内容可扫描。
 - **顶端导航** 倒塌到下面的汉堡包 768px; 下拉菜单使用与页面相同的页面底色极性(暗对首屏,轻对定价).
 - **Code blocks** preserve 16px Monaco at every breakpoint — they never scale down — but switch to horizontal scroll on overflow rather than wrap.
 
-### 图像行为
+### 图片适配
 - 产品UI按比例模拟规模;在小型移动中,它们常常锚定在一边缘,有水平溢出,而不是缩小到不可见度.
 - Sticker mascots scale by 50–70% at mobile breakpoints, preserving their personality but ceding screen space to content.
 - 石灰脚将SVG的宽度缩放到容器,同时保持中风宽度的视觉上的一致性。

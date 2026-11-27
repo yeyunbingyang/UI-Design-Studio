@@ -10,7 +10,7 @@ Ollama's site is the most aggressively under-designed marketing surface in the A
 
 设计哲学是几何:每个交互元素崩溃到 `{rounded.full}` (9999px)——扣子,搜索胶囊形, install-snippet 胶囊形、文字输入和终端-交通-光线点。没有装饰性的投影、没有梯度、没有首屏插图。卡片(罕见的,在 `/pricing`)使用软 `{rounded.lg}` (12px)和a 数据 1px 细边线 整个系统中的单反转瞬间是暗黑的"Max"定价级——. `{colors.surface-dark}` 白色文字——在原本平整的布局中,它充当唯一一个注意的表面。
 
-字型对 SF Pro Rounded (显示标题、 字重) 500–600)与操作系统的默认sans(`ui-sans-serif`用于身体和 `ui-monospace` 头面的圆形是铬带的唯一"个性"——它轻轻地回响了 `{rounded.full}` 按钮几何,而不对其装饰。
+字型对 SF Pro Rounded (显示标题、 字重) 500–600)与操作系统的默认sans(`ui-sans-serif`用于身体和 `ui-monospace` 头面的圆形是界面框架带的唯一"个性"——它轻轻地回响了 `{rounded.full}` 按钮几何,而不对其装饰。
 
 **关键特征 :**
 - 纸张- 白色 `{colors.canvas}` 端到端没有表面交替——整页是一个连续的工作表
@@ -26,18 +26,18 @@ Ollama's site is the most aggressively under-designed marketing surface in the A
 
 > **Source pages:** `/` (home) and `/pricing`. The chrome palette is identical across both — only content changes.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **纯黑色** (`{colors.primary}` — `#000000`:品牌,每个主CTA,每个黑丸,每个导航中的链接,以及每个固态图标,没有其他"品牌颜色".
 - **墨水深处** (`{colors.ink-deep}` — `#090909`:按压状态黑为主药——纯度以下的单点.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — `#ffffff`:页本身,几乎是系统的每一面表面.
 - **软表面** (`{colors.surface-soft}` — `#fafafa`): install-snippet 胶囊形背景,搜索胶囊形,二次芯片背景, 交替填满需要的一排。
 - **表面暗色( T)** (`{colors.surface-dark}` — `#171717`:暗黑的"Max"定价卡和暗的CTA条,系统中的单反面.
 - **细边线** (`{colors.hairline}` — `#e5e5e5`): 1px 牌面边框,页脚上方的分隔线,FAQ行之间的分隔线.
 - **发条坚固** (`{colors.hairline-strong}` — `#d4d4d4`: 罕见的略强分化器,其中需要额外分离(例如,在无关的FAQ组之间).
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — `#000000`:所有头条,主导航链接,轻表面的按钮文本,定价卡的价格.
 - **木炭矿** (`{colors.charcoal}` — `#525252`): list-item 文本和禁用状态的二级副本。
 - **体质** (`{colors.body}` — `#737373`:段落副本的默认正文颜色,FAQ答案,页脚链接文本——系统纯黑后使用最多的文本颜色.
@@ -45,7 +45,7 @@ Ollama's site is the most aggressively under-designed marketing surface in the A
 - **On Dark** (`{colors.on-dark}` — `#ffffff`): primary text on `{colors.surface-dark}`.
 - **暗哑** (`{colors.on-dark-mute}` — `rgba(255,255,255,0.7)`: 暗黑"马克斯"定价卡内二级拷贝.
 
-### 语义
+### 语义色
 系统实际上在其公共营销表面没有错误/成功/警告调色板——没有验证状态,没有破坏性流量,也没有横幅. 唯一"语义"色彩是终端模拟器内的macOS终端交通灯:
 
 - **终端红** (`{colors.terminal-red}` — `#ff5f56`:近窗点.
@@ -60,14 +60,14 @@ These appear only inside `{component.terminal-card}` and have no other use.
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 - **SF Pro Rounded** (display headings) — Apple's rounded geometric sans, used at weights 500 and 600 for headlines from `{typography.display-xl}` (36px) down to `{typography.heading-lg}` (24px). Falls back to `system-ui` → `-apple-system`.
 - **ui-sans-serif** (body, links, buttons, captions) — the operating system's default sans-serif. Carries every non-display text role at 12–20px. Falls back through `system-ui` and platform emoji families.
 - **ui-monospace** (code, install snippet, command tags) — the OS default monospace. Used inside the terminal mockup, the inline `curl` install pill, and any inline `<code>` formatting. Falls back to SFMono-Regular → Menlo → Monaco → Consolas.
 
 组合 SF Pro Rounded 显示 + 系统 sans body + 系统单码是故意的“ 库存 ” Apple" ——设计决定是没有打字的决定. 品牌显示面像会与系统的文件感觉竞争.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -88,7 +88,7 @@ These appear only inside `{component.terminal-card}` and have no other use.
 ### 原则
 The typography is built for legibility at small sizes on a flat-white canvas. SF Pro Rounded's softened terminals on the heading face do almost all of the brand expression; everything below 20px collapses into the operating system's default sans, which renders identically to the way docs.ollama.com and the Ollama CLI's own help text would appear in a terminal. There is almost no letter-spacing variation, no display-only weights, no italic, and the heading-to-body ratio compresses tightly (36 → 30 → 24 → 20 → 16) so the page reads as a single readable column rather than a marketing pyramid.
 
-### Note on Font Substitutes
+### 替代字体
 SF Pro Rounded is Apple-licensed and ships only on macOS/iOS. On other systems it falls back to `system-ui` (Segoe UI / Roboto / DejaVu Sans depending on platform) — Ollama explicitly accepts that the heading face will look slightly different on Windows/Linux. The closest open-source substitute is **Nunito** (rounded geometric sans, weights 500/600). For the body face, **Inter** is a near-perfect match for `system-ui` rendered metrics. For code, **JetBrains Mono** or **Fira Code** are the canonical open-source substitutes for `ui-monospace`.
 
 
@@ -100,18 +100,18 @@ SF Pro Rounded is Apple-licensed and ships only on macOS/iOS. On other systems i
 - **Universal section rhythm:** every page uses `{spacing.section}` (88px) as the vertical gap between major content blocks (hero → automate → start local/scale cloud → your data stays yours → get-started footer call). This is the single largest spacing token in the system and it is used liberally.
 - **Card internal padding:** pricing cards sit at `{spacing.xxl}` (32px) all around; FAQ rows use `{spacing.lg}` (16px) vertical with no horizontal padding.
 
-### 网格容器( C)
+### 网格与容器
 - **最大 width:** ~720px content column on the home page (the whole page is laid out as a single narrow reading column with optional 2-column splits inside specific sections).
 - **定价 grid:** 3-up cards at desktop with a max content width of ~960px; 崩溃为 1- 上层 768px.
 - **自动分割工作 :** 桌面 50/50 左文本/右文本-刻度-缩放;移动堆栈垂直,文本下方的终端。
 - **问:** 单柱叠行,全线 720px 内容栏。
 - **Footer:** single-row of small body-sm links, center-aligned at desktop, wrapping to two rows on narrow screens.
 
-### 白空间哲学
+### 留白规则
 Whitespace is the entire layout. Sections are separated by 88px of plain white air, never by decorative dividers, never by colored bands. Inside a section, content sits in a tight reading column with no decorative columns, callout boxes, or lifted cards. The site treats the page as a long-form Markdown document, and the air between sections is the equivalent of a blank line in Markdown source.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -129,7 +129,7 @@ The system has no drop-shadow elevation at all. Nothing lifts, nothing floats, n
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -141,7 +141,7 @@ The system has no drop-shadow elevation at all. Nothing lifts, nothing floats, n
 
 主要的形状词汇只是两个值:丸(pills, 或 label)`{rounded.full}`用于一切互动和 12px (`{rounded.lg}`),对于系统中的几张牌,没有中度的"软牌"——表面是胶囊形或长方形,角子大到可以读作故意软.
 
-### 摄影几何
+### 图片形状
 There is no photography. The only image-like elements are:
 - **The llama mascot** — a hand-drawn line illustration, ~80–120px on the hero, ~32–48px when it appears as a pricing-card eyebrow icon.
 - **锁图标** ——隐私部分的单中风线绘制.
@@ -170,7 +170,7 @@ There is no photography. The only image-like elements are:
 **`button-disabled`**
 - Background `{colors.surface-soft}`, text `{colors.mute}`, rounded `{rounded.full}` — flat soft gray.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`search-pill`** + **`search-pill-focused`**
 - Default: background `{colors.surface-soft}`, text `{colors.ink}`, type `{typography.body-sm}`, padding `8px 16px`, height `36px`, rounded `{rounded.full}`. Anchored in the center of the primary nav with a small magnifier icon prefix and "Search models" placeholder.
@@ -188,7 +188,7 @@ There is no photography. The only image-like elements are:
 - Background `{colors.surface-soft}`, text `{colors.ink}` in `{typography.code-sm}`, padding `6px 12px`, rounded `{rounded.full}`.
 - 用于“自动工作”部分 `ollama launch openclaw` 示例芯片和类似的内置命令演示。
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`terminal-card`** ——主页仅"产品预览".
 - 集装箱:背景 `{colors.canvas}`, 1px 固态 `{colors.hairline}`, 编译 `{spacing.lg}` (16px),四舍五入 `{rounded.lg}`.
@@ -242,16 +242,16 @@ There is no photography. The only image-like elements are:
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 将页面当作马克下文档: 单读列, 大量 `{spacing.section}` 隔节间空气,没有装饰的分隔器.
 - 使用 `{component.button-primary}` 每一个主动作都没有绿色,蓝色,没有品牌的特制CTA.
 - Default to `{rounded.full}` for any interactive element. Cards get `{rounded.lg}` (12px) and that is the only exception.
 - 使用 `{typography.display-xl}` SF Pro Rounded 给首屏头条和 `{typography.body-md}` 系统 sans 用于其他所有。避免中间显示大小。
 - 准备金 `{component.pricing-card-dark}` (反向的暗面)每个页一页一"看这里"的准确时刻——永远不要使用两次.
-- 内部安装命令和 CLI 示例 `{component.install-snippet}` 或 减 减 `{component.terminal-card}` 与 `{typography.code-md}` / `{typography.code-sm}`。代码是一等元件。
+- 内部安装命令和 CLI 示例 `{component.install-snippet}` 或 `{component.terminal-card}` 配合 `{typography.code-md}` / `{typography.code-sm}`。代码是一等元件。
 - 保留这个系统唯一的插图,就是这个品牌。
 
-### Don't
+### 应避免的做法
 - 切勿引入梯度、 抛光阴影或大气背景。 页面底色是纯的 。 `{colors.canvas}`.
 - Don't add brand colors. The system is `{colors.primary}` (black) on `{colors.canvas}` (white) with `{colors.body}` (gray) text. That is it.
 - Don't soften pills or sharpen cards — pills stay `{rounded.full}`, cards stay `{rounded.lg}`. Don't introduce `{rounded.md}` for buttons or `{rounded.full}` for cards.
@@ -260,7 +260,7 @@ There is no photography. The only image-like elements are:
 - Don't fill long-form pages with marketing chrome. FAQ answers stay in `{colors.body}` body-md prose with no decorative containers.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -275,7 +275,7 @@ There is no photography. The only image-like elements are:
 ### 触控区域
 All interactive elements meet WCAG AA at the 36–40px height range. `{component.button-primary}` and `{component.button-secondary}` sit at 36px height with 20px horizontal padding, giving an effective tappable area of ~36×80px which exceeds the 44×44px AAA threshold via the inline padding. `{component.text-input}` sits at 40px. `{component.search-pill}` sits at 36px height with 16px padding. Footer links use `{typography.caption-sm}` (12px) but receive ~12px line-height + ~8px vertical padding for a tappable row of ~32–36px.
 
-### 折叠战略
+### 窄屏布局调整
 - **初等导航 :** 桌面水平 ~ 平板窄汉堡抽屉 768px。黑色的“下载” CMA 保持所有宽度可见;它永远不会倒塌到菜单中。
 - **搜索胶囊形 :** 桌面 fixed 宽度 ~360px □ 平板压缩为 ~240px ~ 移动崩溃到只使用图标, 并有全宽覆盖的水龙头.
 - **定价 grid:** 3-up → 2+1 → 1-up stacked at 850, 768, and below. The dark "Max" card stays in its inverted treatment at every breakpoint.
@@ -284,7 +284,7 @@ All interactive elements meet WCAG AA at the 36–40px height range. `{component
 - **区域间距 :** `{spacing.section}` (88px(台式计算机) – 64px 平板电脑 48px 移动。
 - **Install-snippet 胶囊形:** 包装 `curl` 文本改为在窄屏幕上第二行而不是截断; 复制的相册仍固定在右边缘。
 
-### 图像行为
+### 图片适配
 唯一图像资产是Lama吉祥物(在多个分辨率下为raster PNG ) : 16/32/48/64/180/192/512px) 。 于 fixed 首屏和定价卡上的像素尺寸而不是按应答的缩放——品牌资产被当成一个标志,而不是首屏形象.
 
 

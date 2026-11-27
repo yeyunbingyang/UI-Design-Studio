@@ -24,7 +24,7 @@ The brand's signature mint green ({colors.brand-green}) appears sparingly but de
 
 > Source pages: mintlify.com/ (homepage), /startups (program page), /pricing (comparison), /docs/components/tabs (live documentation). Token coverage was identical across all four pages.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Mintlify 薄荷** ({colors.brand-green}:签名强调色 – 用于首屏"开始"的避孕药按钮,功能列表中的绿色检查标记,特色定价等级的边框强调色,侧边栏活动指标点.
 - **深薄荷** ({colors.brand-green-deep}:按/活化变种薄荷强调色.
 - **软薄荷** ({colors.brand-green-soft}: 用于成功状态和确认表面的浅色背景锡.
@@ -34,7 +34,7 @@ The brand's signature mint green ({colors.brand-green}) appears sparingly but de
 - **品牌错误** ({colors.brand-error}:红色用于要求域标签和错误突出显示.
 - **证橙** ({colors.testimonial-orange}:暖珊瑚-橙色用于 "Cursor" 证证和暖呼唤表露.
 
-### 表面
+### 界面表面
 - **白色页面底色** ({colors.canvas}:主页和卡片背景.
 - **暗色画** ({colors.canvas-dark}: 宣传旗,暗反光表面,代码编辑器包装.
 - **Surface** ({colors.surface}): Subtle section backgrounds, search-pill rest, code-inline background, sidebar active state.
@@ -47,7 +47,7 @@ The brand's signature mint green ({colors.brand-green}) appears sparingly but de
 - **Hero Sky From / To** ({colors.hero-sky-from}, {colors.hero-sky-to}): Atmospheric sky-blue to soft cream gradient on the homepage hero.
 - **Hero Dark From / To** ({colors.hero-dark-from}, {colors.hero-dark-to}): Dark teal to mint gradient on the startups hero.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** ({colors.ink}:主要头条和CTA文本.
 - **木炭矿** ({colors.charcoal}:正文,正文, code-inline 观前缘.
 - **标 题** ({colors.slate}: 次级文本和元数据。
@@ -57,20 +57,20 @@ The brand's signature mint green ({colors.brand-green}) appears sparingly but de
 - **黑暗时** ({colors.on-dark}: 暗面上的白文本(首屏乐队,代码块,宣传旗).
 - **黑暗的静音** ({colors.on-dark-muted}: 减少偏僻度白色用于 code-block 暗处的页眉和元数据。
 
-### 语义
+### 语义色
 - 错误音调来源于 `{colors.brand-error}` 用于输入边框、所需域标签和验证消息。
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 **Inter** (主语):可变型号优化,可识别。在每一个UI表面使用——正文、标题、导航、按钮标签、标题。倒置: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif.
 
 **Geist Mono** (代码): Monospace 代码块内使用的字型,内置代码引用,类型签名(如. `string`, `number`, `boolean`),以及 API 文档中的财产名称。SF Mono', Menlo, Consolas, 'Geist Mono 倒计时 monospace.
 
 The brand uses no italic variants of either face — emphasis comes from weight (500/600), color shift, or background highlighting (in code references).
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -111,18 +111,18 @@ The brand uses no italic variants of either face — emphasis comes from weight 
 - **节奏**: 销售页面使用 `{spacing.section-lg}` (96px)主要频段之间;价格比较收紧到 `{spacing.section}` (64px); 使用文件表面 `{spacing.xxl}` (32px)小节之间
 - **Card internal padding**: Standard `{spacing.xl}` (24px) for compact cards; `{spacing.xxl}` (32px) for pricing cards and feature panels; testimonial card pushes to `{spacing.section}` (64px) for hero-card presence
 
-### 网格容器( C)
-- 营销页面使用a 1280px max-width 与 32px 沟槽
+### 网格与容器
+- 营销页面使用a 1280px max-width 配合 32px 沟槽
 - 首屏和特色乐队经常使用 2-柱子分块(左文本、插图/右缩)
 - Pricing page renders 3 tier cards in a row at desktop (FREE / Lift Off / Custom), then a comprehensive feature comparison table below
 - 文档页面使用严格 3- 栏 grid: left sidebar nav (~240px), center prose (~720px max-width), right TOC (~200px)
 - 使用logo墙壁 6- 顾客标志的排数 80–100px 高度各处
 
-### 白空间哲学
+### 留白规则
 Marketing surfaces give content generous breathing room — `{spacing.hero}` (120px) above-the-fold creates space for atmospheric gradient backdrops to read clearly. Documentation tightens dramatically: section gaps drop to `{spacing.xxl}` (32px), table rows pack to `{spacing.md}` (16px), sidebar nav compresses to `{spacing.xs}` (8px) vertical rhythm.
 
 
-## 层次与阴影
+## 层次与深度
 
 该系统主要运行于具有战略大气深度的平坦地带。
 
@@ -142,7 +142,7 @@ Marketing surfaces give content generous breathing room — `{spacing.hero}` (12
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -156,7 +156,7 @@ Marketing surfaces give content generous breathing room — `{spacing.hero}` (12
 
 The radius scale is tightly disciplined — the brand never uses a corner softening between `{rounded.md}` (8px) and `{rounded.lg}` (12px) for the same component family. Pill buttons (`{rounded.full}`) are used universally; rectangular cards use `{rounded.lg}` (12px) consistently.
 
-### 摄影几何
+### 图片形状
 - 首屏插图(云,火箭)坐落在全血的梯度背景上,没有内部框架
 - Customer logo walls use 1:1 ratio cells without rounding (logos are presented inline as wordmarks)
 - 使用作证照片 1:1 边框 `{rounded.md}` (8px) 软化
@@ -192,7 +192,7 @@ The radius scale is tightly disciplined — the brand never uses a corner soften
 **`button-icon-circular`** — 32×32px circular 工具按钮(关闭、复制、箭头)。
 - Background `{colors.canvas}`, text `{colors.ink}`, border `1px solid {colors.hairline}`, rounded `{rounded.full}`.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`card-base`** 标准文件/地物卡。
 - Background `{colors.canvas}`, rounded `{rounded.lg}`, padding `{spacing.xl}`, border `1px solid {colors.hairline}`.
@@ -225,7 +225,7 @@ The radius scale is tightly disciplined — the brand never uses a corner soften
 **`startup-program-card`** ——含有百克网格+应用CTA的较大应用/程序卡.
 - Background `{colors.canvas}`, rounded `{rounded.lg}`, padding `{spacing.xxl}`, border `1px solid {colors.hairline}`.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——标准文本字段.
 - Background `{colors.canvas}`, text `{colors.ink}`, border `1px solid {colors.hairline}`, rounded `{rounded.md}`, padding `{spacing.sm} {spacing.md}`, height 40px.
@@ -291,7 +291,7 @@ The radius scale is tightly disciplined — the brand never uses a corner soften
 **`feature-comparison-row`** ——比较表内各行.
 - Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.md} {spacing.lg}`, bottom border `1px solid {colors.hairline-soft}`. Section dividers in `{typography.micro-uppercase}` `{colors.steel}`.
 
-**`sidebar-nav-item`** + **`sidebar-nav-item-active`** ——文献左铁路链接条目.
+**`sidebar-nav-item`** + **`sidebar-nav-item-active`** ——文献左侧栏链接条目.
 - Inactive: background transparent, text `{colors.steel}`, typography `{typography.body-sm}`, rounded `{rounded.sm}`, padding `{spacing.xs} {spacing.md}`.
 - 活动:背景 `{colors.surface}`文本中,请输入 `{colors.ink}`,打印 `{typography.body-sm-medium}`.
 
@@ -312,7 +312,7 @@ The radius scale is tightly disciplined — the brand never uses a corner soften
 **顶端导航( 文档)** ——中线压缩导航. search-pill 和右侧账户/升级的CTA。
 - Background `{colors.canvas}`, height ~56px. Search-pill at center, "Documentation / Guides / API Reference / Changelog" links + "Talk to us" + green "Get started" right.
 
-### 签名组件
+### 标志性组件
 
 **`hero-band-sky`** ——主页首屏,以大气天蓝色为奶油梯度和云插图.
 - Background gradient `linear-gradient(180deg, {colors.hero-sky-from} 0%, {colors.hero-sky-to} 100%)`, text `{colors.on-dark}` (early portion of gradient) shifting to `{colors.ink}` further down, padding `{spacing.hero}`.
@@ -345,7 +345,7 @@ The radius scale is tightly disciplined — the brand never uses a corner soften
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.brand-green}` (Mintlify 薄荷),仅用于强调色 CTA 和 活动状态指示器——每个视图强调色按钮都带有字重
 - Use `{colors.primary}` (black) as the dominant CTA on light backgrounds; switch to `button-on-dark` (white pill) on dark hero bands
 - 应用 `{rounded.full}` 切换到每个按钮和胶囊形; 绝不软化胶囊形角
@@ -354,7 +354,7 @@ The radius scale is tightly disciplined — the brand never uses a corner soften
 - Apply `{rounded.lg}` (12px) consistently on cards; use `{rounded.md}` (8px) only on compact UI like search pills and code blocks
 - Keep documentation prose at `{typography.body-md}` (16px) with 1.50 line-height — never compress
 
-### Don't
+### 应避免的做法
 - Don't use `{colors.brand-green}` on body text or large surfaces — it loses signal
 - Don't introduce additional accent colors beyond mint, tag-blue, error-red, and the testimonial orange
 - 平面文件卡上不要用厚的阴影; 保留高架用于首屏产品模拟
@@ -363,7 +363,7 @@ The radius scale is tightly disciplined — the brand never uses a corner soften
 - Don't use Inter for code or Geist Mono for prose — the typeface assignment IS the brand voice
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 | 名称 | 宽度 | 密钥更改 |
@@ -380,7 +380,7 @@ The radius scale is tightly disciplined — the brand never uses a corner soften
 - 格式输入提供时间 40px 高度; 凸起到 44px 移动
 - 侧边栏导航项渲染于 ~32px 高 —— 颠倒 44px 移动抽屉
 
-### 折叠战略
+### 窄屏布局调整
 - **宣传旗** 保持全宽; 切换到 < 480px
 - **顶端导航** 下级 1024px 崩溃到汉堡; 水平链接移动到抽屉中
 - **首屏乐队**: 2-柱式首屏(文本+模拟)崩溃堆叠到 < 1024px; 移动中文本下面的模拟
@@ -390,7 +390,7 @@ The radius scale is tightly disciplined — the brand never uses a corner soften
 - **Customer logo wall**: 6-up → 3-up at tablet → 2-up at mobile
 - **Footer**: 5-column desktop → 2-column tablet → accordion at mobile
 
-### 图像行为
+### 图片适配
 - 首屏插图(云,火箭)懒散的与首屏乐队;在所有断点保持脆脆(基于SVG)
 - 产品模型在断点之间保持其尺寸比;比例尺
 - 客户标识使用 SVG 字签; 视网膜显示时保持简洁
@@ -405,7 +405,7 @@ The radius scale is tightly disciplined — the brand never uses a corner soften
 5. 默认为 `{typography.body-md}` 身体和身体的 `{typography.subtitle}` 标题下移 `hero-display → display-lg → heading-1 → heading-2 → heading-3 → heading-4 → heading-5`.
 6. 保留 `{colors.brand-green}` 仅限强调色瞬间。如果它出现在一般表面上,请询问它是否赢得了这个角色。
 7. 胶囊形形状的按钮( $`{rounded.full}`总是; 平方按钮在此语言中表示“ 第三方部件 ” 。
-8. 传言文件属于 `{typography.body-md}` 16px 与 1.50 line-height 任何更密集的事物都会破坏阅读体验.
+8. 传言文件属于 `{typography.body-md}` 16px 配合 1.50 line-height 任何更密集的事物都会破坏阅读体验.
 
 
 ## 已知缺口

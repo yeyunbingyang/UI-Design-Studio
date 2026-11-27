@@ -27,11 +27,11 @@ Type runs BMW's licensed **BMW Type Next Latin** at two weights: heavy 700 (disp
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **BMW 蓝色( 初级)** (`{colors.primary}` — #1c69d4: 单品牌动作颜色. 全部主CTA,"Learn More"链接前缀(蓝色文本),. nav-link 状态。按下 转换为 `{colors.primary-active}` (#0653b6).
 - **M 蓝光** (`{colors.m-blue-light}` — #0066b1) + **M 蓝色暗色** (`{colors.m-blue-dark}` — #1c69d4) + **M 红色** (`{colors.m-red}` — #e22718: M 彩色调 stripe ——只出现在公司网站的M型版面和"M"徽章上,从未作为CTA的颜色.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — #ffffff:默认页面表面.
 - **表面软** (`{colors.surface-soft}` — #f7f7f7:脚步和子导航带的软灰色.
 - **表面卡片** (`{colors.surface-card}` — #fafafa: 样卡照片块后面的灯牌.
@@ -43,7 +43,7 @@ Type runs BMW's licensed **BMW Type Next Latin** at two weights: heavy 700 (disp
 - **Hairline** (`{colors.hairline}` — #e6e6e6): The 1px divider — input outline, configurator card outline, table separator.
 - **Hairline Strong** (`{colors.hairline-strong}` — #cccccc): A more visible 1px outline — disabled secondary buttons, emphasized table border.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — #262626:所有显示和主文本,不纯黑色——柔软的反对摄影.
 - **体质** (`{colors.body}` — #3c3c3c: 默认运行的文本.
 - **强体** (`{colors.body-strong}` — #1a1a1a:强调段落和主文。
@@ -53,7 +53,7 @@ Type runs BMW's licensed **BMW Type Next Latin** at two weights: heavy 700 (disp
 - **黑暗时** (`{colors.on-dark}` — #ffffff: 黑首屏乐队的白文本.
 - **暗软** (`{colors.on-dark-soft}` — #bbbbbb: 暗带上稍微微微声的白文本的二次文本.
 
-### 语义
+### 语义色
 - **成功** (`{colors.success}` — #22c55e:确认消息和"可用"指标.
 - **Warning** (`{colors.warning}` — #f59e0b): Warning callouts.
 - **错误** (`{colors.error}` — #dc2626:验证错误.
@@ -61,7 +61,7 @@ Type runs BMW's licensed **BMW Type Next Latin** at two weights: heavy 700 (disp
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 系统运行 **BMW Type Next Latin** 中,两个切数:正则(显示 + UI 标签)和 **BMW Type Next Latin 光线** (body + 二次复制) 倒数堆叠 : `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`.
 
 显示/ 身体分割功能 :
@@ -71,7 +71,7 @@ Type runs BMW's licensed **BMW Type Next Latin** at two weights: heavy 700 (disp
 
 This three-way split mirrors BMW M's — corporate and the M sub-brand share the same typographic DNA; only the weight/size ratios differ.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -95,7 +95,7 @@ This three-way split mirrors BMW M's — corporate and the M sub-brand share the
 - **UPPERCASE 内置链接** ——"LEARN More"风格的CTA运行大写与 1.5px 追踪,"机器精度"的声音
 - **字重 400 住在一条狭窄的路** - 仅说明和 nav-link,两个中性效用角色。
 
-### Note on Font Substitutes
+### 替代字体
 BMW Type Next Latin 是一个许可的 BMW 类型。开源选项 :
 - **Inter** (variable) — close match at weight 700/300. Leave letter-spacing at 0.0em.
 - **萨伊拉凝固** - 稍微压缩一点 BMW 类型感觉。
@@ -109,17 +109,17 @@ BMW Type Next Latin 是一个许可的 BMW 类型。开源选项 :
 - **Section padding:** `{spacing.section}` (80px) for every major editorial band.
 - **内部卡片 padding:** `{spacing.lg}` (24px),用于模型和特征卡.
 
-### 网格容器( C)
+### 网格与容器
 - **最大内容 width:** ~1440px center-aligned.
 - **编辑机构:** 单人 12- 列网格 - 列网格 - Colind grade.
 - **Model card grids:** 4-up or 5-up at desktop, 2-up at tablet, 1-up on mobile.
 - **配置目录网格 :** 3- 上滤波器行+ 4- 车卡,密集布局。
 
-### 白空间哲学
+### 留白规则
 BMW白空间策略比 BMW M运动-动力-格伦迪耶——公司方面更受公用事业驱动。 80px (不是M的吗? 96px。卡片贴纸是 24px (不是M的吗? 32px。页面密度较大,更能发挥经销商的作用。
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -137,7 +137,7 @@ BMW白空间策略比 BMW M运动-动力-格伦迪耶——公司方面更受公
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -149,10 +149,10 @@ BMW白空间策略比 BMW M运动-动力-格伦迪耶——公司方面更受公
 | `{rounded.pill}` | 9999px | 某些上下文中的过滤芯片( 稀有) |
 | `{rounded.full}` | 9999px / 50% | 幻象,你应该知道, circular 图标按钮 |
 
-半径等级为二进制 : **长方形的,所有的一切, circular 仅用于图标按钮。** 明显偏离了柔软的萨阿斯方言 Apple 或 减 减 Cal.com - 更接近于 BMW 企业-自主化的"工程精度"语音.
+半径等级为二进制 : **长方形的,所有的一切, circular 仅用于图标按钮。** 明显偏离了柔软的萨阿斯方言 Apple 或 Cal.com - 更接近于 BMW 企业-自主化的"工程精度"语音.
 
-### 摄影几何
-- 首屏摄影在 16:9 或 减 减 21:9 电影比例。
+### 图片形状
+- 首屏摄影在 16:9 或 21:9 电影比例。
 - 模特卡片照片坐着 16:10,边缘对边缘 `{rounded.none}` 转角
 - 配置车让坐落在白色的工作室背景上,全色的硅光可见.
 
@@ -175,7 +175,7 @@ BMW白空间策略比 BMW M运动-动力-格伦迪耶——公司方面更受公
 
 **`text-link`** ——内线链接 内线复制体. `{colors.ink}` 文本,默认时不下划线;下划线。
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`hero-band-dark`** — Full-width dark navy hero. Background `{colors.surface-dark}`, text `{colors.on-dark}`, vertical padding `{spacing.section}` (80px). Centered: model name in `{typography.display-xl}` (64px / 700) + sub-headline + vehicle render (right-aligned or below). A single `{component.button-primary}` (blue) or `{component.button-secondary-on-dark}`.
 
@@ -197,7 +197,7 @@ BMW白空间策略比 BMW M运动-动力-格伦迪耶——公司方面更受公
 
 **`configurator-option-tile`** + **`configurator-option-tile-selected`** — Configurator selection cell (color, wheels, upholstery). Inactive: background `{colors.canvas}`, 1px hairline. Selected: 2px `{colors.primary}` border. Padding 16px × 24px, radius `{rounded.none}`.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——标准文本输入。背景 `{colors.canvas}`文本中,请输入 `{colors.ink}`类型 `{typography.body-md}`,四舍五入 `{rounded.none}` (0px), 贴 14px × 16px高度( 高度) 48px, 1px 细边线边界,在焦点上,边界厚至墨水.
 
@@ -215,12 +215,12 @@ BMW白空间策略比 BMW M运动-动力-格伦迪耶——公司方面更受公
 
 **`cta-band-photo`** — A pre-footer "Discover the New iX3"-style band. Background `{colors.surface-dark}` with a full-bleed vehicle photo. Centered headline in `{typography.display-md}` (32px / 700) + a single `{component.button-secondary-on-dark}`. 80px padding.
 
-**`footer`** ——收尾软灰色页脚。背景 `{colors.surface-soft}` (#f7f7f7 ——不是纯白——软灰色),文本 `{colors.body}`. A 4-列链接列表:模型/服务/交易商/左右。垂直编目 64px。下面,一个版权线,在 `{typography.body-sm}` 与 `{colors.muted}`.
+**`footer`** ——收尾软灰色页脚。背景 `{colors.surface-soft}` (#f7f7f7 ——不是纯白——软灰色),文本 `{colors.body}`. A 4-列链接列表:模型/服务/交易商/左右。垂直编目 64px。下面,一个版权线,在 `{typography.body-sm}` 配合 `{colors.muted}`.
 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 每一页都坐着 `{colors.canvas}` (纯白色); 储备 `{colors.surface-dark}` 仅限首屏乐队
 - 与初级CTA对等 `{colors.primary}` (BMW 蓝色)+ `{colors.on-primary}` 白文本 + 颜色 `{rounded.none}` 0px 角——公司签名.
 - 设置显示头条 BMW Type Next Latin 700 和身体在光线中 300。对比是不容谈判的。
@@ -229,7 +229,7 @@ BMW白空间策略比 BMW M运动-动力-格伦迪耶——公司方面更受公
 - 节奏保持在 `{spacing.section}` (80px) ——比 BMW M's 96px.
 - 保留 M 三角色 stripe 用于M型型环境与运动运动分机.
 
-### Don't
+### 应避免的做法
 - Don't add a brand color other than blue — BMW Blue is the only primary action color.
 - Don't use pill or rounded buttons — `{rounded.none}` (0px) rectangular IS the brand button.
 - Don't drop display weight to 500 — the system uses 700 / 400 / 300; 500 is absent.
@@ -240,7 +240,7 @@ BMW白空间策略比 BMW M运动-动力-格伦迪耶——公司方面更受公
 - Don't mix languages in a single page — UI language must stay consistent.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -256,14 +256,14 @@ BMW白空间策略比 BMW M运动-动力-格伦迪耶——公司方面更受公
 - `{component.text-input}` 高度( E) 48px.
 - 分类标签运行 12px 垂直粘贴, 给出有效的水龙头区域 > 44px.
 
-### 折叠战略
+### 窄屏布局调整
 - 顶部的导航崩溃到下面的汉堡 768px;菜单作为全屏工作表打开。
 - 首屏乐队的内部布局降为单列.
 - Model card grid 4-up/5-up → 2-up → 1-up.
 - 配置器过滤芯片行在移动上横向滚动.
 - M 彩色调 stripe 留在原点 4px 高度跨越每一个断点。
 
-### 图像行为
+### 图片适配
 - 模型在每个断点都使尺度保持原生的侧面比率。
 - 首屏摄影可能转向移动上更垂直的作物(艺术方向).
 - 车辆库存照片可能从 16:9 改为: 4:3 手机上,我刚从电话里找到的

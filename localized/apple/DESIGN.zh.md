@@ -27,12 +27,12 @@ Store and shop surfaces retain the same chassis but switch modes. The product co
 
 > **Source pages analyzed:** homepage, environment, store, iPhone 17 Pro buy page, accessories index. The color system is identical across all five surfaces; only the surface-mode mix differs.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **蓝色行动** (`{colors.primary}` — #0066cc: 单一品牌级交互颜色,所有文本链接,所有蓝色丸CTA("更多学习","Buy"),以及焦点环根。这是 Apple'是静但通用的"点击我"信号。按态通过主动比例变换而不是六角变换转至稍暗的变体。
 - **聚焦蓝** (`{colors.primary-focus}` — #0071e3:一个稍亮一点的蓝色行动兄弟,保留给键盘焦点环按键(`outline: 2px solid`).
 - **Sky Link Blue** (`{colors.primary-on-dark}` — #2997ff): A brighter blue used on dark surfaces for in-copy links and inline callouts, where Action Blue would disappear against the tile background.
 
-### 表面
+### 界面表面
 - **纯白** (`{colors.canvas}` — #ffffff: 占优势的页面底色 内容,公用卡,存储牌,配置格.
 - **纸质纸质** (`{colors.canvas-parchment}` — #f5f5f7: 签名 Apple 。用于转换光片、页脚区域以及存储工具区中的默认页布。与白色的区别足够大,可以创建节奏。
 - **Pearl Button** (`{colors.surface-pearl}` — #fafafc): A near-white used as the fill for secondary "ghost" buttons — lighter than the parchment canvas so the button still reads as a button against `{colors.canvas-parchment}`.
@@ -42,7 +42,7 @@ Store and shop surfaces retain the same chassis but switch modes. The product co
 - **纯黑色** (`{colors.surface-black}` — #000000: 预留真空——视频播放器背景,边缘对边缘摄影覆盖,全球导航栏背景.
 - **半透明芯片灰色** (`{colors.surface-chip-translucent}` — #d2d2d7: 用于摄影的半透明灰色芯片的基六进制 circular 控制按钮。在生产中,应用于 ~64% α as `rgba(210, 210, 215, 0.64)`.
 
-### 文本
+### 文字颜色
 - **近黑墨水( 近黑墨水)** (`{colors.ink}` — #1d1d1f:每条头条,每段身体的声音,以及暗的效用按钮的填充. 选择而非纯黑色来保持页面感觉摄影而不是打印.
 - **体质** (`{colors.body}` — #1d1d1f: 与墨水相同的六分级- Apple 光表面所有文字都使用一个近黑音.
 - **黑暗时的身体** (`{colors.body-on-dark}` — #ffffff:所有暗色瓷砖和全局导航栏上的文本.
@@ -60,12 +60,12 @@ Store and shop surfaces retain the same chassis but switch modes. The product co
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 - **显示**: `SF Pro Display, system-ui, -apple-system, sans-serif` — Apple专有显示面, 优化大小 ≥ 19px。定义每个头条的声音。
 - **体/UI 数据**: `SF Pro Text, system-ui, -apple-system, sans-serif` ——用于体型复制,标题,按钮,以及下文链接的文本优化变体. 20px.
 - **打开类型特性**: `font-variant-numeric: numerator` 显示大小依赖于紧凑的跟踪而不是上下文的连接。
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -95,7 +95,7 @@ Store and shop surfaces retain the same chassis but switch modes. The product co
 - **Line-height is context-specific.** Display sizes use 1.07–1.19 (tight). Body uses 1.47. Utility link stacks in the footer/store use an unusually relaxed 2.41 (`{typography.dense-link}`). The 2.41 is not a bug — it's how the footer's dense link columns breathe.
 - **字重 500 故意缺席。** 梯子是... 梯子是... 300 / 400 / 600 / 700。中量级读数总是使用 600.
 
-### Note on Font Substitutes
+### 替代字体
 SF Pro is Apple's proprietary system font. When building off-system:
 
 - Use `system-ui, -apple-system, BlinkMacSystemFont` as the first stack entry — on macOS/iOS/Safari this resolves to the real SF Pro.
@@ -114,16 +114,16 @@ SF Pro is Apple's proprietary system font. When building off-system:
 - **按钮 padding:** 8–11px vertical, 15–22px horizontal.
 - **Universal rhythm constants:** the 17px body line-height multiplier (~25px line) and 21px tagline size show up on every analyzed page.
 
-### 网格容器( C)
+### 网格与容器
 - **最大内容 width:** ~980px on text-heavy sections (environment), ~1440px on product grids (store, accessories), full-bleed for product tiles (homepage).
 - **Column patterns:** 3 to 5 column utility card grid on store/accessories; 2-column side-by-side tiles on homepage occasional sections; single-column centered stack on product tile heroes.
 - **盖特斯:** 20–24px 介于电源网格中的卡片之间。
 
-### 白空间哲学
+### 留白规则
 Apple白空间是产品的脚踏板,每个瓦片至少要先用 64px 气流在头条和头条之上 48–64px 产品制造从未挤满;产品图像的最近内容至少是 40px 页脚是唯一能打破这个区域的地方,那里, Apple 故意使整个信息架构 清晰可见
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -137,12 +137,12 @@ Apple白空间是产品的脚踏板,每个瓦片至少要先用 64px 气流在�
 ### 装饰性深度
 - **大气图像** 环境页面(照片图象)上显示情绪;没有涉及CSS梯度。
 - **边缘对边缘的瓦片交替** 创造节奏,没有边框或阴影——颜色变化本身就是分裂者.
-- **Backdrop-filter 模糊** 打开 `{component.sub-nav-frosted}` 财务报告和已审计财务报表 `{component.floating-sticky-bar}` 创造出"浮在内容上"的效果,是功能性的,而不是装饰性的.
+- **Backdrop-filter 模糊** 打开 `{component.sub-nav-frosted}` 和 `{component.floating-sticky-bar}` 创造出"浮在内容上"的效果,是功能性的,而不是装饰性的.
 
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -154,7 +154,7 @@ Apple白空间是产品的脚踏板,每个瓦片至少要先用 64px 气流在�
 | `{rounded.pill}` | 9999px | 蓝胶囊形CTA sub-nav 购买按钮、配置器选项芯片、搜索输入——签名 Apple 胶囊形 |
 | `{rounded.full}` | 9999px / 50% | Circular 移动在摄影上的控制芯片 |
 
-### 摄影几何
+### 图片形状
 - **首屏图像**:满血, 21:9 或高点在主页上; 16:9 产品是真实的,常常在成为瓷砖背景的有色表面拍摄。
 - **产品制造**:PNG/WebP 透明;休息在表面的瓦片上,并拾取系统阴影.
 - **Accessory grid**: square 1:1 crops at `{rounded.lg}` (18px) radius, light neutral backgrounds, product centered with 20–40px internal padding.
@@ -190,7 +190,7 @@ Apple白空间是产品的脚踏板,每个瓦片至少要先用 64px 气流在�
 
 **`text-link-on-dark`** —— 暗牌上内置体链接 `{colors.primary-on-dark}` (天空连线蓝色) #2997ff——行动蓝将消失,反对 `{colors.surface-tile-1}`.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`product-tile-light`** — Full-bleed light tile. Background `{colors.canvas}` (white), text `{colors.ink}`, rounded `{rounded.none}` (0 — tiles touch edges), vertical padding `{spacing.section}` (80px). Centered stack: product name in `{typography.display-lg}` (40px / 600) → one-line tagline in `{typography.lead}` (28px / 400) → two `{component.button-primary}` CTAs ("Learn more" / "Buy") → product render resting on the surface with the system shadow.
 
@@ -212,7 +212,7 @@ Apple白空间是产品的脚踏板,每个瓦片至少要先用 64px 气流在�
 
 **`floating-sticky-bar`** — Floats at the bottom of the viewport on the iPhone 17 Pro buy page during scroll. Background `{colors.canvas-parchment}` at 80% opacity with `backdrop-filter: blur(N)`, height 64px, padding 12px × 32px. Left: running price total in `{typography.body}`. Right: `{component.button-primary}` ("Add to Bag").
 
-### 输入表单( F)
+### 输入框与表单
 
 **`search-input`** — The accessories search input. Background `{colors.canvas}`, text `{colors.ink}` in `{typography.body}` (17px), 1px solid `rgba(0, 0, 0, 0.08)` border, rounded `{rounded.pill}` (full pill — search is also pill-shaped, matching the CTA grammar), padding 12px × 20px, height 44px. Leading icon: search glyph at 14px, muted tint.
 
@@ -225,9 +225,9 @@ Apple白空间是产品的脚踏板,每个瓦片至少要先用 64px 气流在�
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 使用 `{colors.primary}` (蓝色行动) #0066cc),对于每一个交互元素——链接,丸CTA,焦点信号——和别无其他,单调强调色是不可谈判的.
-- 设置标题 `{typography.hero-display}` 或 减 减 `{typography.display-lg}` 负数 letter-spacing (`-0.28 → -0.374px`) 获得签名 "Apple 紧紧的"卡登斯。
+- 设置标题 `{typography.hero-display}` 或 `{typography.display-lg}` 负数 letter-spacing (`-0.28 → -0.374px`) 获得签名 "Apple 紧紧的"卡登斯。
 - 运行复制体 。 `{typography.body}` (17px / 400 / 1.47 / -0.374px)——没有 16px. 附加像素定义了品牌的读取速度.
 - 候补 `{component.product-tile-light}` (或纸条)和 `{component.product-tile-dark}` 用于全血节奏。颜色变化是分隔符。
 - 准备金 `{rounded.pill}` 用于主蓝CTA和任何其它应读作"动作"的元素(配置芯片,搜索输入, sticky 。 。 。
@@ -235,7 +235,7 @@ Apple白空间是产品的脚踏板,每个瓦片至少要先用 64px 气流在�
 - Use `transform: scale(0.95)` as the active/press state on every button — it's the system-wide micro-interaction.
 - 保持全局导航 `{colors.surface-black}` (真黑)——这是大部分页上唯一出现纯黑的地方.
 
-### Don't
+### 应避免的做法
 - Don't introduce a second accent color; every "click me" signal is `{colors.primary}` (Action Blue).
 - Don't add shadows to cards, buttons, or text — shadow is reserved for product imagery.
 - Don't use gradients as decorative backgrounds; atmosphere comes from photography.
@@ -246,7 +246,7 @@ Apple白空间是产品的脚踏板,每个瓦片至少要先用 64px 气流在�
 - Don't use `{colors.primary-on-dark}` (Sky Link Blue) on light surfaces — it's the dark-tile-only variant. Action Blue is for light surfaces.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -268,17 +268,17 @@ Apple白空间是产品的脚踏板,每个瓦片至少要先用 64px 气流在�
 - `{component.button-icon-circular}` 完全就是这个意思 44 × 44px.
 - Global nav utility links are smaller (~32 × 80px) — they deliberately sit at a tighter target because they're precision desktop actions, and the mobile hamburger replaces them at ≤ 833px.
 
-### 折叠战略
+### 窄屏布局调整
 - **Global nav**: full horizontal link row on desktop → collapses to Apple logo + hamburger + bag icon at 834px and below.
 - **Sub-nav**: category name + inline links + primary CTA → category name + primary CTA only at mobile; inline links move into a hamburger tray.
 - **Product tiles**: stack from 2-column to 1-column at 834px; vertical padding tightens from 80px → 48px at small-phone.
 - **通用网格** (商店,配件): 5- 科尔 - 4-col( 双关)1440px) → 3-col( 双关)1068px) → 2-col( 双关)834px) → 1-col( 双关)640px).
 - **Hero typography**: `{typography.hero-display}` (56px) → `{typography.display-lg}` (40px) at 1068px → 34px at 640px → 28px at 419px.
 
-### 图像行为
+### 图片适配
 - All product imagery uses responsive `srcset` with breakpoint-matched crops.
 - 首屏摄影可以在移动时切换艺术方向(例如,环境页的远景作物在移动上比高,设定对象不同).
-- 产品使这些产品得以维持 1:1 或 减 减 4:3 跨断点的大小比;只有比例变化。
+- 产品使这些产品得以维持 1:1 或 4:3 跨断点的大小比;只有比例变化。
 - 懒惰负载是默认的;上面的首屏负载是急切的.
 
 
@@ -300,7 +300,7 @@ Apple白空间是产品的脚踏板,每个瓦片至少要先用 64px 气流在�
 - Some component imagery is dynamic (rotating product hero) and its specific copy varies per surface — component specs name the structure, not the rotating content.
 - 储存和配件通用卡的暗模对等器没有出现在分析的页面上;记录的系统是白天/光线支配变体 Apple 默认的船舶。
 - 大气摄影(Environmental page mounta vista)是一种内容资产,而不是设计标志;文件记载 `{component.environment-quote-card}` 仅描述结构表面。
-- 准确 backdrop-filter 模糊半径在 `{component.sub-nav-frosted}` 财务报告和已审计财务报表 `{component.floating-sticky-bar}` 依赖平台; 生产 CSS 用途 `saturate(180%) blur(20px)` 以作为典型的基线,但价值并没有正式化作为象征.
+- 准确 backdrop-filter 模糊半径在 `{component.sub-nav-frosted}` 和 `{component.floating-sticky-bar}` 依赖平台; 生产 CSS 用途 `saturate(180%) blur(20px)` 以作为典型的基线,但价值并没有正式化作为象征.
 
 ## 设计词元原值
 

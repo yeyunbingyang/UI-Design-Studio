@@ -15,7 +15,7 @@ HashiCorp's marketing canvas is a near-black ground that serves a multi-product 
 **关键特征 :**
 - 黑坎瓦斯营销系统: `{colors.canvas}` 首屏、身体、定价、比较表和页脚的表面。
 - **产品颜色标识**: 地形 `{colors.product-terraform}`, 断层 `{colors.product-vault}`键, 键位 `{colors.product-waypoint}`流浪汉 `{colors.product-vagrant}`领事 `{colors.product-consul}`,游牧 `{colors.product-nomad}`边框 `{colors.product-boundary}` ——每个都有自己的按钮+卡变体.
-- 显示头条运行 hashicorpSans 600/700 与 line-height 1.17–1.21 (紧);身体运行 同一家庭在 500 与 1.50–1.71 (松动)——比例差距是品牌的声音.
+- 显示头条运行 hashicorpSans 600/700 配合 line-height 1.17–1.21 (紧);身体运行 同一家庭在 500 配合 1.50–1.71 (松动)——比例差距是品牌的声音.
 - CTA 形状为 `{rounded.md}` 8px ——不是胶囊形——保持系统读作开发者工具而不是消费者应用.
 - Charcoal surface lift (canvas → surface-1 → surface-2) instead of shadow-driven elevation.
 - 1px translucent gray hairlines (`rgba(178,182,189,0.1)`) define cards and dividers — the borders are felt more than seen.
@@ -26,22 +26,22 @@ HashiCorp's marketing canvas is a near-black ground that serves a multi-product 
 
 > Source pages: hashicorp.com/en (home), /en/infrastructure-cloud, /en/products/terraform, /en/pricing, /en/resources?contentType=PDF.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **黑色** ({colors.primary}:系统主表层,坎瓦,页脚,比较表,首屏——都是黑色的.
 - **白色** ({colors.on-primary}: 黑色反向文本; 页面底色 `button-primary`.
 - **蓝天** ({colors.accent-blue}:超链接横跨营销表面.
 - **紫色访问** ({colors.semantic-visited}: 访问链接状态.
 
-### 表面
+### 界面表面
 - **页面底色** ({colors.canvas}: 默认页面背景.
-- **表面 1** ({colors.surface-1}: 木炭在页面底色上方的一步——特色卡,定价卡,资源瓦片.
-- **表面 2** ({colors.surface-2}:以上两步——特色定价卡,二级按钮,悬浮产品铬.
-- **表面 3** ({colors.surface-3}:以上三步——小筹码,徽章, sub-nav 背景。 。
+- **界面表面 1** ({colors.surface-1}: 木炭在页面底色上方的一步——特色卡,定价卡,资源瓦片.
+- **界面表面 2** ({colors.surface-2}:以上两步——特色定价卡,二级按钮,悬浮产品界面框架.
+- **界面表面 3** ({colors.surface-3}:以上三步——小筹码,徽章, sub-nav 背景。 。
 - **细边线** ({colors.hairline}): 1px 以牌和分牌为边框。
 - **柔软的细边线** ({colors.hairline-soft}: 潜行者划分器 - comparison-table 排行数.
 - **反向画廊** ({colors.inverse-canvas}:纯白色——用作表面 `button-primary` 仅此而已
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** ({colors.ink}:所有头条和强调的体型——纯白色.
 - **墨水静音** ({colors.ink-muted}: 二级类型 #b2b6bd — meta 信息,页脚列。
 - **Ink Subtle** ({colors.ink-subtle}): Tertiary type at #656a76 — form helper text, timestamps, footnotes.
@@ -58,7 +58,7 @@ HashiCorp'营销不是由一个单一的强调色颜色来维持的——它是�
 - **游牧绿** ({colors.product-nomad}:游牧区。
 - **边界珊瑚** ({colors.product-boundary}: 边界段.
 
-### 语义
+### 语义色
 - **成功** ({colors.semantic-success}:正态(也作为游牧绿色重新使用).
 - **警告** ({colors.semantic-warning}: 警告状态(亦为Vault 黄色).
 - **错误** ({colors.semantic-error}:错误状态(也是红领事).
@@ -69,13 +69,13 @@ HashiCorp'营销不是由一个单一的强调色颜色来维持的——它是�
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 
 - **hashicorpSans** — HashiCorp's proprietary marketing typeface. Geometric, clean, slightly humanist. Fallback stack `__hashicorpSans_Fallback_96f0ca` (system font), then `-apple-system, BlinkMacSystemFont, Segoe UI, helvetica, arial`.
 
 同一家族携带显示器、身体、按钮和字幕——不单独显示+身体对称。500 体 体 / 体 质 600 重点/ 700 和故意采取的 line-height 对比(紧紧的显示,放松的身体).
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -99,7 +99,7 @@ HashiCorp'营销不是由一个单一的强调色颜色来维持的——它是�
 - **Eyebrow positive-tracked uppercase 12px is the section header.** Every meaningful section has one above the headline.
 - **No mono.** Despite being a developer-tools brand, the marketing surface uses no monospace face — code voice is reserved for in-product surfaces.
 
-### Note on Font Substitutes
+### 替代字体
 
 If implementing without hashicorpSans, suitable open-source substitutes include **Inter** (closest geometric character set), **Geist Sans**, or **IBM Plex Sans**. Inter at weights 500 / 600 / 700 closely approximates hashicorpSans's proportions; expect to manually adjust line-heights down by ~0.02 to match.
 
@@ -114,19 +114,19 @@ If implementing without hashicorpSans, suitable open-source substitutes include 
 - 按钮 padding: 10px vertical · 18px horizontal on `{components.button-primary}`.
 - Universal rhythm constant: `{spacing.section}` (96px) vertical gap between major sections.
 
-### 网格容器( C)
+### 网格与容器
 
 - 最大内容宽度左右 1280px 侧排沟缩放 `{spacing.xxl}` 桌面上下至 `{spacing.lg}` 手机上,我刚从电话里找到的
 - Product card grids are 3-up on desktop, 2-up at tablet, 1-up on mobile.
 - 定价等级网格为 3- 跨桌面; 下方的比较表使用固定的左宽列。
 - 资源目录 (PDF 库) 使用 4- 上方的缩略图网
 
-### 白空间哲学
+### 留白规则
 
 The dark canvas IS the whitespace. Sections separate by surface lift (canvas → surface-1) rather than by gaps in white. Within a section, generous `{spacing.xl}` 32px gaps separate cards; `{spacing.lg}` 24px separates rows.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -146,7 +146,7 @@ The dark canvas IS the whitespace. Sections separate by surface lift (canvas →
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -191,7 +191,7 @@ The dark canvas IS the whitespace. Sections separate by surface lift (canvas →
 
 (紫色、游牧绿色、红色领事、 边界珊瑚与红色领航者遵循同样的模式) `{colors.product-*}` 符号。 )
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`product-card`** ——默认产品展示卡——表面-1 木炭(变种).
 - Background `{colors.surface-1}`, text `{colors.ink}`, type `{typography.body}`, rounded `{rounded.lg}`, padding 24px.
@@ -219,7 +219,7 @@ The dark canvas IS the whitespace. Sections separate by surface lift (canvas →
 **`resource-card`** ——PDF/白纸/指南砖在资源目录中.
 - Background `{colors.surface-1}`, text `{colors.ink}`, type `{typography.body-sm}`, rounded `{rounded.lg}`, padding 16px.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** + **`text-input-focused`** ——在座椅计价表和联系表上填表。
 - Background `{colors.surface-1}`, text `{colors.ink}`, type `{typography.body}`, rounded `{rounded.md}`, padding 10px 14px.
@@ -254,7 +254,7 @@ The dark canvas IS the whitespace. Sections separate by surface lift (canvas →
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 
 - 准备金 `{colors.canvas}` (黑色)和(黑色) `{colors.surface-1}` (charcoal)作为系统的两个锚面,页面的每个带都是一个或另一个.
 - 介绍关于具体内容的一节时 HashiCorp 产品,使用该产品 `{colors.product-*}` 表示一致——对于节片胶囊形,CTA按钮,以及(酌情)展示卡片背景.
@@ -264,7 +264,7 @@ The dark canvas IS the whitespace. Sections separate by surface lift (canvas →
 - Use surface lift (canvas → surface-1 → surface-2) to express hierarchy on dark.
 - 产品身份储备产品色谱卡;保持通用特征卡 `{colors.surface-1}`.
 
-### Don't
+### 应避免的做法
 
 - Don't ship a light-mode marketing page. HashiCorp's marketing brand IS dark.
 - 千万不要在文件外 引入中音灰色文字 `ink` / `ink-muted` / `ink-subtle` 设置。
@@ -275,7 +275,7 @@ The dark canvas IS the whitespace. Sections separate by surface lift (canvas →
 - Don't replace `hashicorpSans` with a display-only sans for headlines and a different family for body. The brand is held together by one family across the full hierarchy.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -293,14 +293,14 @@ The dark canvas IS the whitespace. Sections separate by surface lift (canvas →
 - 胶囊形是 24px 高高的桌面上,并成长到 28px 触摸视点
 - 格式输入持有量 ≥44px 触摸视点上瞄准点
 
-### 折叠战略
+### 窄屏布局调整
 
 - **导航**: 水平导航, 右侧的 CTAs 崩溃到下面的汉堡包覆盖 768px. 初级CTA 保持可见于酒吧。
 - **Product card grid**: 3-up → 2-up at 1024px → 1-up below 768px.
 - **定价比较表**: 下方每级手风琴发生坍塌 768px 以避免横向滚动。
 - **显示类型**: `{typography.display-xl}` 80px 比额表走向 `{typography.display-md}` 40px 移动,同时保留负轨比例。
 
-### 图像行为
+### 图片适配
 
 - 3D product illustrations (cubes, safes, etc.) maintain aspect ratio and never crop; below 768px they shrink rather than reflow.
 - 客户标志水平地刻画比例,并可能以窄宽度包裹到第二行。

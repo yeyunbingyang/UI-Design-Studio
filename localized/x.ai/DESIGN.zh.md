@@ -24,7 +24,7 @@ Every interactive element is a pill (`{rounded.pill}` 9999 px) with 1 px white-t
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **白色** (`{colors.primary}` — `#ffffff`:该品牌的主要"颜色"——用作按钮轮廓, button-primary 装填,全部显示文本,品牌的签名是白色的近黑的.
 - **日落橙色** (`{colors.accent-sunset}` — `#ff7a17`:一种在产品插图和强调色片段内使用的暖橙色.
 - **日落软体** (`{colors.accent-sunset-soft}` — `#ffc285`:日落强调色的较轻变体.
@@ -33,31 +33,31 @@ Every interactive element is a pill (`{rounded.pill}` 9999 px) with 1 px white-t
 - **微风蓝** (`{colors.accent-breeze}` — `#a0c3ec`: 柔软的蓝色——说明性强调色.
 - **午夜时分** (`{colors.accent-midnight}` — `#0d1726`:深蓝黑色用于说明背景.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — `#0a0a0a`:默认的近黑页背景,品牌是唯一真实的表面.
 - **软画帘** (`{colors.canvas-soft}` — `#1a1c20`:一个稍轻的暗填充,用于悬浮的导航项和工具提示.
 - **页面底色卡** (`{colors.canvas-card}` — `#191919`: 装填产品版卡内使用的木炭卡.
 - **页面底色中间** (`{colors.canvas-mid}` — `#363a3f`:一种用于嵌入式表面和代码模拟背景的中暗.
 - **细边线** (`{colors.hairline}` — `#212327`): 1 px 固体分裂器在黑暗表面。
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — `#ffffff`:页面底色上的默认文本——纯白.
 - **墨水车** (`{colors.ink-hover}` — `#fafaf7`: 稍稍脱白用于悬浮状态(在组件规格中过滤出每条无悬浮政策).
 - **体质** (`{colors.body}` — `#dadbdf`: 次要体文本——支持性副本字重较轻.
 - **中间/ 静音** (`{colors.body-mid}` — `#7d8187`:中线体和哑文本——标题,精细印刷.
 
-### 语义
+### 语义色
 The brand doesn't surface a separate semantic palette on the marketing site. Validation cues use the white-on-canvas hierarchy.
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 两人的面孔 系统梯子:
 1. **universalSans** – 用于每个显示、身体、按钮和链接角色的专有几何色素。 400 只在营销表面(品牌的束缚是声音的一部分). 负面 letter-spacing 显示大小时,是视觉签名。
 2. **GeistMono** 用于大写部分眉毛、标签标题和公尺计数器。1.2 – 1.4 px时 . 12 – 14 px.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -78,10 +78,10 @@ The brand doesn't surface a separate semantic palette on the marketing site. Val
 - **显示大小时严格负跟踪 。** 恢复到中性跟踪会失去精准感.
 - **GeistMono uppercase for eyebrows.** Tracked positively (1.4 px) to make the mono read as a code comment.
 
-### Note on Font Substitutes
+### 替代字体
 universalSans 专有。开源替代品 :
-- **显示 + 体** — *Inter* 字重 400 与 `-0.04em` 改为: `-0.02em` letter-spacing 显示大小最接近。 *Geist* 也是第二好的选择。
-- **单声道** — *Geist Mono* 确是有文据的品牌伙伴, *JetBrains Mono* 或 减 减 *IBM 普莱克斯·莫诺* 均为候补。
+- **显示 + 体** — *Inter* 字重 400 配合 `-0.04em` 改为: `-0.02em` letter-spacing 显示大小最接近。 *Geist* 也是第二好的选择。
+- **单声道** — *Geist Mono* 确是有文据的品牌伙伴, *JetBrains Mono* 或 *IBM 普莱克斯·莫诺* 均为候补。
 
 
 ## 布局
@@ -92,11 +92,11 @@ universalSans 专有。开源替代品 :
 - **分区编栏**: 首屏/ 内容带 。 `{spacing.4xl}` 64 px 。在桌面上。
 - **纸牌内部贴纸**: `{spacing.xl}` 24 px.
 
-### 网格容器( C)
+### 网格与容器
 - 销售内容中心 ~1200 px.
 - 产品/公告卡 grid: 2-up at desktop, 1-up at mobile.
 
-### 反应战略
+### 响应式布局
 
 #### 断点
 
@@ -108,23 +108,23 @@ universalSans 专有。开源替代品 :
 #### 触控区域
 按钮渲染 ~32 – 40 px 高( 高)8 垂直粘贴+ 20 移动充气区与WCAG相会 44 × 44 px.
 
-#### 图像行为
+#### 图片适配
 The brand uses sparse SVG illustrations for product moments (Grok, Voice, API). No photography on the marketing surface.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
 | Level 0 — Flat | No shadow, no border. | Default. |
-| 职等 1 —— 细边线 | 1 px 固态 `{colors.hairline}` 边框。 | 纸牌铬,按钮轮廓(带有半透明白色). |
+| 职等 1 —— 细边线 | 1 px 固态 `{colors.hairline}` 边框。 | 纸牌界面框架,按钮轮廓(带有半透明白色). |
 
 品牌没有阴影, 细边线边框带所有的高位提示。
 
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -147,7 +147,7 @@ The brand uses sparse SVG illustrations for product moments (Grok, Voice, API). 
 **`button-outline-sm`** ——卡片类CTA中所使用的较小的轮廓胶囊形.
 - 与 `button-outline-on-dark` 使用更紧的垫装 `{spacing.xs} {spacing.md}`.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`card-content`** ——默认内容卡.
 - Background `{colors.canvas-card}` (`#191919`), text `{colors.ink}`, 1 px solid `{colors.hairline}` border, padding `{spacing.xl}`, shape `{rounded.sm}` 8 px.
@@ -155,7 +155,7 @@ The brand uses sparse SVG illustrations for product moments (Grok, Voice, API). 
 **`card-feature-product`** ——产品地物卡(Grok / Voice / API).
 - 与 `card-content`。主机为 SVG 插图 + 头条 + 身体 + 纲要胶囊形 CTA。
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——暗面的标准文本输入.
 - Background `{colors.canvas-soft}`, text `{colors.ink}`, 1 px solid `{colors.hairline}`, body in `{typography.body-md}`, padding `{spacing.md} {spacing.lg}`, shape `{rounded.sm}` 8 px.
@@ -166,12 +166,12 @@ The brand uses sparse SVG illustrations for product moments (Grok, Voice, API). 
 - Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.md} {spacing.xl}`.
 
 **`nav-link`** ——在导航内链接项目.
-- 文本 `{colors.ink}`,设置在 `{typography.body-sm}`.
+- 文字颜色 `{colors.ink}`,设置在 `{typography.body-sm}`.
 
 **`footer`** - 脚步乐队。
 - Background `{colors.canvas}`, text `{colors.body}`, padding `{spacing.3xl} {spacing.xl}`. Body in `{typography.body-sm}`.
 
-### 签名组件
+### 标志性组件
 
 **`hero-band`** ——那个有着大规模显示头条的黑暗首屏.
 - Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.4xl} {spacing.xl}`. Headline in `{typography.display-xl}` (96 px weight 400 with `-2.4 px` tracking).
@@ -185,52 +185,52 @@ The brand uses sparse SVG illustrations for product moments (Grok, Voice, API). 
 **`divider-hairline`** - 电话 1 px 区域段之间的线条。
 - 1 px 固态 `{colors.hairline}`.
 
-### 实例(说明性)
+### 组合示例
 
-> 自动生成的工具包-模拟演示表面(`scripts/derive-examples-block.mjs`。每个 `ex-*` 条目参考: 下游消费者的品牌原始产品(`/preview-design`, `/generate-kit`) 重新皮肤相同 10 表面一致。 `TO_FILL` 标记表示缺失原始人——在LLM判断传中解析.
+> 以下组合场景由 `scripts/derive-examples-block.mjs` 生成。各 `ex-*` 条目复用品牌基础样式，供 `/preview-design` 和 `/generate-kit` 以统一风格呈现同一套 10 个示例。`TO_FILL` 提示有待核对的基础样式。
 
-**`ex-pricing-tier`** ——默认定价等级卡。 feature-card 带品牌的铬 canvas-soft 表面。
+**`ex-pricing-tier`**：默认套餐卡，沿用功能卡结构和品牌 canvas-soft 底色。
 - 属性 : `backgroundColor`, `textColor`, `borderColor`, `rounded`, `padding`
 
-**`ex-pricing-tier-featured`** ——地貌/高亮的层次——极性-浮点表面(暗色填充+光线文字在光线模式下,浅色填充+暗色文字在暗线模式下).
+**`ex-pricing-tier-featured`**：推荐套餐卡。浅色模式中用深底浅字，深色模式中用浅底深字。
 - 属性 : `backgroundColor`, `textColor`, `rounded`, `padding`
 
-**`ex-product-selector`** ——什么是包含的汇总卡——重新用于SaaS/B2B纵横(NOT为字形产品画廊).
+**`ex-product-selector`**：面向 SaaS / B2B 场景的套餐权益摘要卡。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-cart-drawer`** ——订阅摘要——重新用于SaaS/B2B(每件加件的行项目,而非字面车).
+**`ex-cart-drawer`**：SaaS / B2B 订阅摘要，每个附加项单独列出。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `item-divider`
 
-**`ex-app-shell-row`** ——App Shell 实例中的侧边栏导航行. Active State 使用品牌主标.
+**`ex-app-shell-row`**：应用框架示例里的侧栏导航行，以品牌主色标识选中状态。
 - 属性 : `backgroundColor`, `activeIndicator`, `rounded`, `padding`
 
-**`ex-data-table-cell`** — Default data-table th + td chrome. Header uses mono-caps eyebrow typography; body uses body-sm.
+**`ex-data-table-cell`**：数据表格中 th 与 td 的默认样式。表头采用大写等宽字，正文采用 body-sm。
 - 属性 : `headerBackground`, `headerTypography`, `bodyTypography`, `cellPadding`, `rowBorder`
 
-**`ex-auth-form-card`** ——签入/签入卡. 复用. feature-card 铬 text-input 原始人在里面,他们都在里面
+**`ex-auth-form-card`**：登录与注册卡，复用功能卡和 text-input。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-modal-card`** ——模度对话框表面——与 feature-card 以高的阴影盟誓,
+**`ex-modal-card`**：对话框表面，沿用功能卡样式并加浮层投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-empty-state-card`** ——空状态插图框架.
+**`ex-empty-state-card`**：空状态插图容器。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `captionTypography`
 
-**`ex-toast`** ——通知表面. feature-card 形状 + 中阴影。
+**`ex-toast`**：轻提示，沿用功能卡圆角并使用中等投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `typography`
 
 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.canvas}` (`#0a0a0a`)作为唯一的页面表面,品牌仅是暗色的canvas.
-- 设置首屏头条 `{typography.display-xl}` 通用三联赛字重 400 与 `-2.4 px` 追踪,精度就是声音
+- 设置首屏头条 `{typography.display-xl}` 通用三联赛字重 400 配合 `-2.4 px` 追踪,精度就是声音
 - 使用 `{rounded.pill}` 9999 px 胶囊形是品牌
 - 平价通用桑斯(判决案件) GeistMono UPPERCASE(眼睛眉,标签,标注计数器).
 - 大纲按钮使用白透明边框——品牌在其大纲胶囊形上从未使用固白边框.
 
-### Don't
+### 应避免的做法
 - Don't introduce a light-mode counterpart. xAI is dark-canvas only.
 - Don't bold display headlines. Weight 400 is the entire scale.
 - Don't use filled buttons broadly. The brand uses outline pills almost exclusively; one Sign Up white-filled pill is the rare exception.

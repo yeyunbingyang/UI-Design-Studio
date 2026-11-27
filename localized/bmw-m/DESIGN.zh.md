@@ -15,7 +15,7 @@ Type voice runs **BMW Type Next Latin** in two cuts: regular for display + nav l
 **关键特征 :**
 - 近纯黑页面底色( 3)`{colors.canvas}` — #000),与白色类型. 系统几乎完全颠倒——没有光模营销表面.
 - Display headlines in UPPERCASE BMW Type Next Latin at weight 700. Sub-heads stay sentence-case at lighter weight.
-- 红色( M)`{colors.m-blue-light}` / `{colors.m-blue-dark}` / `{colors.m-red}`)用作 4px 品牌的分音器,M字标记强调色,以及运动运动的铬——从不作为按钮或填充.
+- 红色( M)`{colors.m-blue-light}` / `{colors.m-blue-dark}` / `{colors.m-red}`)用作 4px 品牌的分音器,M字标记强调色,以及运动运动的界面框架——从不作为按钮或填充.
 - 摄影可以填充整个波段的边缘对角. 汽车总是视觉主题;UI染色体回落到摄影上覆盖的小白色标签上.
 - 按钮是平的 `{rounded.none}` (0px)角和大写字母间隔标签,"工业精度"长方形的圆筒是品牌.
 - 整个系统的边界半径大多为零。 `{rounded.full}` 打开 circular 图标按钮(木卫一箭头、聊天机器人发射器)和 `{rounded.sm}` 吃一小片切片胶囊形
@@ -24,14 +24,14 @@ Type voice runs **BMW Type Next Latin** in two cuts: regular for display + nav l
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Primary** (`{colors.primary}` — #ffffff): The system's primary type and CTA color. Used for h1/h2/h3 display, body text on dark, and primary button labels (the buttons themselves are transparent or canvas-colored — the white text + outline IS the button).
-- **M 蓝光** (`{colors.m-blue-light}` — #0066b1: M 三角彩色第一站 stripe使用在M型臂章强调色和运动车手的铬上.
+- **M 蓝光** (`{colors.m-blue-light}` — #0066b1: M 三角彩色第一站 stripe使用在M型臂章强调色和运动车手的界面框架上.
 - **M Blue Dark** (`{colors.m-blue-dark}` — #1c69d4): The middle stop. The same hex as `{colors.bmw-blue}` — BMW's heritage corporate blue, repurposed as the middle band of the M stripe.
 - **M 红色** (`{colors.m-red}` — #e22718:第三站。在 stripe 和马达运动-快速点火。
 - **电蓝色** (`{colors.electric-blue}` — #0653b6: MxDrive电动模型页面中使用的单独电动车辆强调色,与传统蓝色的区别——感觉更冷,更数字化.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — #000000: 每一个营销表面的默认页面层。 true black.
 - **表面软** (`{colors.surface-soft}` — #0d0d0d:一种几乎不区分的黑色,用于光谱表细胞和脚贴条.
 - **表面卡片** (`{colors.surface-card}` — #1a1a1a:卡片,二级按钮,图标-按钮背景.
@@ -42,20 +42,20 @@ Type voice runs **BMW Type Next Latin** in two cuts: regular for display + nav l
 - **Hairline** (`{colors.hairline}` — #3c3c3c): The 1px divider tone on dark surfaces. Used between body sections, between table rows, around card outlines.
 - **发条坚固** (`{colors.hairline-strong}` — #262626: 与六进制相同 `{colors.surface-elevated}` ——边界感觉像一步高,而不是墨线.
 
-### 文本
+### 文字颜色
 - **墨水/ 暗色时** (`{colors.on-dark}` — #ffffff: 暗页面底色上所有头条和主文本.
 - **体质** (`{colors.body}` — #bbbbbb: 默认的运行文本颜色( 略微冷于纯白) 。 用于正文段落和二次元数据 。
 - **Body Strong** (`{colors.body-strong}` — #e6e6e6): Emphasized body / lead paragraph.
 - **静音** (`{colors.muted}` — #7e7e7e:页脚链接,面包屑,标题.
 
-### 语义
+### 语义色
 - **警告** (`{colors.warning}` — #f4b400:技术警告点名令使用非常少。
 - **成功** (`{colors.success}` — #0fa336: 订单确认状态(仅见于市场营销表面).
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 **BMW Type Next Latin** is BMW's licensed display + body typeface. The system uses two cuts: regular and Light. The fallback stack walks `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`.
 
 分量是故意的字重级:
@@ -64,7 +64,7 @@ Type voice runs **BMW Type Next Latin** in two cuts: regular for display + nav l
 
 The contrast between heavy display and light body is BMW's editorial signature — never blur it by using regular (400) display or medium (500) body.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -87,7 +87,7 @@ The system contrasts heavy headlines (700) against very light body (300) at all 
 
 UPPERCASE display is the default voice for h1/h2 — sentence case appears on body and intro paragraphs but rarely on headlines. The all-caps treatment is a brand-voice signal, not a stylistic choice.
 
-### Note on Font Substitutes
+### 替代字体
 If BMW Type Next Latin is unavailable, **Inter** (variable) at 700/300 is the closest open-source substitute. Adjust display headline tracking to -0.5px to match BMW Type's tighter spacing at large sizes. **Saira Condensed** is an alternative for headlines if a slightly more compressed feel is desired.
 
 
@@ -101,36 +101,36 @@ If BMW Type Next Latin is unavailable, **Inter** (variable) at 700/300 is the cl
 - **Card internal padding:** `{spacing.lg}` (24px) for content and model cards; `{spacing.xl}` (40px) for spec-cell tables.
 - **Gutters:** `{spacing.lg}` (24px) between cards in 3-up grids; `{spacing.md}` (16px) inside footer columns.
 
-### 网格容器( C)
+### 网格与容器
 - **最大内容 width:** ~1440px centered on marketing pages — wider than typical SaaS to give photography breathing room.
 - **编辑机构:** 单身 12-柱状网格;照片带流血成血(无) max-width).
 - **Card grids:** 3-up at desktop, 2-up at tablet, 1-up at mobile.
 - **Footer:** 4-column link list at desktop, 2-up at tablet, 1-up at mobile.
 
-### 白空间哲学
+### 留白规则
 BMW M trusts photography to do the visual work. Whitespace around photography is restrained — the cars fill the frame, and copy sits below or beside them in tightly-aligned columns. Where whitespace appears (between body sections, around CTAs), it's always uniform `{spacing.section}` (96px). The system never adds atmospheric backdrops, gradients, or decoration — empty space stays as empty black canvas.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
 | Flat | No shadow, no border | Body sections, top nav, footer, photo bands |
 | 软细边线 | 1px `{colors.hairline}` 边框 | 分区、卡片大纲、表格行 |
 | Card surface | `{colors.surface-card}` background over canvas — no shadow | Feature photo cards, magazine cards, chatbot launcher |
-| 摄影深度 | 具有边缘到边缘作物的全血摄影 | 首屏带,运动特征——通过主题物的深度,而不是铬. |
+| 摄影深度 | 具有边缘到边缘作物的全血摄影 | 首屏带,运动特征——通过主题物的深度,而不是界面框架. |
 
-系统使用不落影,不层层的铬. 深度完全来自摄影(主题+镜头+照明),黑色页面底色与略带的对比. `{colors.surface-card}`.
+系统使用不落影,不层层的界面框架. 深度完全来自摄影(主题+镜头+照明),黑色页面底色与略带的对比. `{colors.surface-card}`.
 
 ### 装饰性深度
-- **M Stripe 分隔符** (`{component.m-stripe-divider}`): A 4px- 带M三色线的横向分线器(`{colors.m-blue-light}` → `{colors.m-blue-dark}` → `{colors.m-red}`用于运动场的铬、模型-尾部头部和品牌标识瞬间。 stripe 系统是唯一的"装饰性"元素——用于标注意义。
+- **M Stripe 分隔符** (`{component.m-stripe-divider}`): A 4px- 带M三色线的横向分线器(`{colors.m-blue-light}` → `{colors.m-blue-dark}` → `{colors.m-red}`用于运动场的界面框架、模型-尾部头部和品牌标识瞬间。 stripe 系统是唯一的"装饰性"元素——用于标注意义。
 - **碳纤维表面**: 技术- 规格页使用 `{colors.carbon-gray}` (#2b2b2b) 带有微妙纹理覆盖的单元格。这是单页处理,而不是全系统模式。
 - **摄影深度**:全弹道车是深度. 光照在摄影中(轨迹灯,日落的光线)会做投影在SaaS系统中的提升工作.
 
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -142,8 +142,8 @@ BMW M trusts photography to do the visual work. Whitespace around photography is
 
 The radius hierarchy is "almost always 0, sometimes circular." This binary radius decision is a deliberate brand-language choice — sharp rectangles read as engineered precision; circles read as functional controls. Nothing in between.
 
-### 摄影几何
-首屏摄影充满全宽,没有圆形。 网格内保留照片卡 `{rounded.none}` 角,边对边图像. 碳轮详细镜头和运动场坑照片使用 16:9 或 减 减 21:9 电影-视星等比率。 4:5 画像作物,也有尖锐的角。
+### 图片形状
+首屏摄影充满全宽,没有圆形。 网格内保留照片卡 `{rounded.none}` 角,边对边图像. 碳轮详细镜头和运动场坑照片使用 16:9 或 21:9 电影-视星等比率。 4:5 画像作物,也有尖锐的角。
 
 
 ## 组件
@@ -166,7 +166,7 @@ The radius hierarchy is "almost always 0, sometimes circular." This binary radiu
 
 **`text-link`** — Inline uppercase letterspaced links ("VIEW ALL MODELS", "READ MORE"). `{typography.label-uppercase}`, white on dark, no underline. The chevron arrow → glyph appears next to most link labels.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`hero-photo-band`** ——全宽黑色带,全宽的汽车摄影充斥了大部分帧. h.1 使用情况 `{typography.display-xl}` (80px / 700),坐在左侧的相片上,经常在照片上加一个小字幕. `{typography.body-md}` 下方。垂直贴板 `{spacing.xxl}` (64px),无卡片框——照片就是乐队.
 
@@ -184,17 +184,17 @@ The radius hierarchy is "almost always 0, sometimes circular." This binary radiu
 
 **`category-tab`** + **`category-tab-active`** ——杂志和专题页中使用的类别选择标签(如“ALL ^ MAGAZINE → MODELES → LIFESTYLE → MOTORSPORT ”)。标签在 `{typography.label-uppercase}`中,当前状态更改文本颜色 `{colors.body}` 改为: `{colors.on-dark}` 并添加一个 2px 标签下方为白色的下划线。没有背景填充,也没有圆角。
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** — Standard text input on dark surfaces. Background `{colors.surface-card}`, text `{colors.on-dark}`, type `{typography.body-md}`, rounded `{rounded.none}` (0px), padding 12px × 16px, height 48px. 1px hairline border. Focus state thickens the border to white.
 
 **`cookie-consent-card`** — A right-side cookie-banner card visible on the homepage. Background `{colors.canvas}` with 1px hairline, rounded `{rounded.none}`, padding `{spacing.lg}` (24px). Body text in `{typography.body-sm}` (14px / 300) — Light weight even for legal text. Two buttons stacked at bottom: primary outline + text-link.
 
-### 签名组件
+### 标志性组件
 
 **`m-stripe-divider`** - 风景 4px 水平 stripe 携带M 三角色( 3) (`{colors.m-blue-light}` → `{colors.m-blue-dark}` → `{colors.m-red}`),用作运动场染色体上的分机,品牌标识区间,以及分类标签上的悬浮状态指标,是系统中最显著的非打字元素.
 
-**`cta-band-photo`** ——前脚"Drive an M"CTA乐队,搭载全弹光摄影机,拍摄一辆汽车在轨角角,头条中央在其中. `{typography.display-md}` 备注a `{component.button-primary-outline}` 下方。垂直贴板 80px. CTA通过全血摄影而不是铬继承了其余页面的编辑重力.
+**`cta-band-photo`** ——前脚"Drive an M"CTA乐队,搭载全弹光摄影机,拍摄一辆汽车在轨角角,头条中央在其中. `{typography.display-md}` 备注a `{component.button-primary-outline}` 下方。垂直贴板 80px. CTA通过全血摄影而不是界面框架继承了其余页面的编辑重力.
 
 ### Footer
 
@@ -203,16 +203,16 @@ The radius hierarchy is "almost always 0, sometimes circular." This binary radiu
 
 ## 设计建议与禁忌
 
-### 执行
-- 装满血压的汽车摄影每页都锁定,汽车是品牌辨识度;铬反向关闭.
-- 使用 UPPERCASE 显示头条 `{typography.display-xl}` 或 减 减 `{typography.display-lg}`。句子显示为非品牌。
+### 建议做法
+- 装满血压的汽车摄影每页都锁定,汽车是品牌辨识度;界面框架反向关闭.
+- 使用 UPPERCASE 显示头条 `{typography.display-xl}` 或 `{typography.display-lg}`。句子显示为非品牌。
 - 双层重显示器( 4)700) 轻身(300。加权对比是编辑签名。
 - 保留 M 三角色 stripe 品牌标识时刻——文字标记强调色,运动车手的染色体,模具徽章. 永不作为扣填或表面.
 - 使用 `{rounded.none}` (0px)默认。 `{rounded.full}` 资源 circular 图标按钮。
 - 字母空格全页标签, 位于 1.5px. "机器"的感觉是不可谈判的.
 - 使用 `{spacing.section}` (96px),主要编辑段之间,用于网格对齐的垂直节奏.
 
-### Don't
+### 应避免的做法
 - 千万别在M三色外引入品牌颜色(`{colors.m-blue-light}` / `{colors.m-blue-dark}` / `{colors.m-red}`)和遗产 `{colors.bmw-blue}`.
 - Don't bold body type. Body stays at 300 (Light) — bumping to 400 or 500 makes the page feel marketing-bombastic instead of European-engineered.
 - Don't use rounded buttons. The rectangular silhouette IS the brand. Rounded corners read as consumer-tech, not motorsport.
@@ -222,7 +222,7 @@ The radius hierarchy is "almost always 0, sometimes circular." This binary radiu
 - 下方不要大写追踪 1.5px 按钮标签上——间隔让他们感觉"机器化".
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -235,18 +235,18 @@ The radius hierarchy is "almost always 0, sometimes circular." This binary radiu
 
 ### 触控区域
 - `{component.button-primary}` 制作时间为 48 × 48px 最低——满足世界水兵大会AAA的要求。
-- `{component.button-icon}` 财务报告和已审计财务报表 `{component.carousel-arrow}` 完全一样 48 × 48 - 舒适地高于 44 × 44 最低点
+- `{component.button-icon}` 和 `{component.carousel-arrow}` 完全一样 48 × 48 - 舒适地高于 44 × 44 最低点
 - `{component.text-input}` 高度为 48px.
 - 分类标签为文本专用标签 12px 垂直粘贴; 有效的水龙头区域会合 44px 与周围的间隔。
 
-### 折叠战略
+### 窄屏布局调整
 - 顶端导航崩溃到汉堡单 < 768px;菜单打开时为满屏黑色,上面为M 三角彩色 stripe 顶端的
 - 摄影在每一个断点都保持满血状态——从不倒塌到边角的容器.
 - Card grids reduce columns rather than scaling cards down; photography retains its native aspect ratio.
 - 光谱表崩溃从 4- 最多为 2- 最多为 1-上; 光谱值保持为 `{typography.display-sm}` 不论栏数。
 - M型分裂器留在 4px 高度跨越所有断点。
 
-### 图像行为
+### 图片适配
 - 首屏摄影作物反应敏捷——桌面上更宽的作物,移动上垂直的作物.
 - 生活方式和运动场的照片保留了原生的侧面比例;系统从不写字母框或柱框.
 - M字标记+三彩色标志按视港宽度比例进行比例比例标定.
@@ -276,7 +276,7 @@ The radius hierarchy is "almost always 0, sometimes circular." This binary radiu
 
 ## 设计词元原值
 
-以白色近黑页面底色为主的马达运动-工程接口 BMW Type Next Latin 品牌没有装潢电压——它的能量来自满载汽车摄影(车在轨、驾驶舱镜头、碳纤维细节)和标志性的M三色 stripe 使用标记、分机和运动场铬作为品牌标志。 类型保持轻度到中度字重,以感受欧洲工程,从未有美国炸弹。 使用标记、分机和运动场的标志,但不会影响欧洲。
+以白色近黑页面底色为主的马达运动-工程接口 BMW Type Next Latin 品牌没有装潢电压——它的能量来自满载汽车摄影(车在轨、驾驶舱镜头、碳纤维细节)和标志性的M三色 stripe 使用标记、分机和运动场界面框架作为品牌标志。 类型保持轻度到中度字重,以感受欧洲工程,从未有美国炸弹。 使用标记、分机和运动场的标志,但不会影响欧洲。
 
 ```yaml
 ---

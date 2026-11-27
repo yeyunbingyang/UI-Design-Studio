@@ -22,16 +22,16 @@ The brand voice carries through in two anchors: a vivid Dell-red CTA panel on th
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Dell 红色** (`{colors.primary}` — #e91d2a:品牌的签名红色. 预留主页CTA面板("At") 页面存档备份,存于互联网档案馆. Dell.com,我们会帮助你找到正确的系统...),右上方的电话号码,以及PC杂志读者选择的封条环,从未作为卡片体填充.
 - **Dell 黄色** (`{colors.yellow-sticker}` — #fcc20f: 贴纸黄色——"BUY a" DELL" 标语在顶部,角"NEW!" 闪烁了重叠的新产品行.
 - **Dell Purple** (`{colors.purple-stripe}` — #6a26a4): The accent stripe behind the lowercase ".com" / "DELL" wordmark text — appears inside the "BUY a DELL" sticker chrome only.
 
-### 表面
+### 界面表面
 - **框架墨水** (`{colors.frame-ink}` — #000000:纯黑色。页面框架、顶端横幅背景、按钮填充以及全部 1 px 丝带卡发条.
 - **页面底色** (`{colors.canvas}` — #ffffff: 框内真白,页面,丝带卡标题栏填充,图标标签导航背景.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — #000000: 身体文本,标题,访问前的链接副本。纯黑色; 内无暖近黑色软化 1996.
 - **链接** (`{colors.link}` — #0000ee: 经典 Mosaic / 网景 3.x 默认链接蓝色。 下划线内主播( “ Copyright ” , “( 使用条件 ) ) , 下划线内“ from Dell‘获奖服务与支援团队').
 
@@ -46,12 +46,12 @@ The brand voice carries through in two anchors: a vivid Dell-red CTA panel on th
 - **Steel** (`{colors.tint-steel}` — #a5b8c0): Dimension XPS Pro ribbon body
 - **佩里温克勒** (`{colors.tint-periwinkle}` — #8c9ae0: PowerEdge丝带体
 
-锡是饱和的,但并不生动——它们坐落在真正的中性铬下方,这是GIF时代的网络安全帕莱特四分法的标志.
+锡是饱和的,但并不生动——它们坐落在真正的中性色度下方,这是GIF时代的网络安全帕莱特四分法的标志.
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 
 三个系统上层的家庭,没有网友(网友尚未存在):
 
@@ -59,7 +59,7 @@ The brand voice carries through in two anchors: a vivid Dell-red CTA panel on th
 - **Helvetica** (倒计时 : Arial, system-ui sans)——产品排标题,按钮标签,上旗"BUILD YouRON COMPETER. ONLINE"头条,总是粗体((BUILD YouRON COMPETER. ONLLINE).700),总是全能的.
 - **Times New Roman** (倒计时: serif)——身体复制。每个段落,每个标题,每个内线主播都坐落在默认的时代罗马语中。这些塞里夫斯即刻日期设计——现代网络上的身体文本几乎永远没有 serif.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 使用 |
 |---|---|---|---|---|
@@ -79,7 +79,7 @@ The brand voice carries through in two anchors: a vivid Dell-red CTA panel on th
 - No letter-spacing tracking adjustments — pixel-fonts in 1996 didn't reward it. Everything is set at the browser's default kern.
 - Line-height 显示时紧紧( E)1.0)和关于身体的常规(第1款)1.4)——从印刷-磁铁编目布局中被搁置.
 
-### Note on Font Substitutes
+### 替代字体
 All three families are operating-system defaults on every consumer OS shipped in 1996 (Windows 95: Arial / Times New Roman; Mac OS 7.5+: Helvetica / Times). The brand had no fallback strategy because no fallback was needed — the fonts were always present. Modern reproductions can stay on this exact stack (Arial Black / Helvetica / Times New Roman) for authenticity.
 
 
@@ -92,15 +92,15 @@ All three families are operating-system defaults on every consumer OS shipped in
 - **纸牌内部贴纸**: `{spacing.md}` 12 px 垂直/ 垂直 `{spacing.lg}` 16 px 水平在丝带卡体上。
 - **节垂直节奏**: `{spacing.section}` 40 px 产品-肋骨堆栈之间; `{spacing.section-sm}` 32 px 介于眉毛颜色块和它的首张丝带卡之间.
 
-### 网格容器( C)
+### 网格与容器
 - 固定的圆形桌布局 760 px 范围——事实上 1996 标准目标 800×600 显示器带有一个小卷轴条沟。
 - Two-column outer structure: left rail (~28 %) carries the homepage icon-link grid + CTA red panel; right column (~72 %) carries the product ribbon stack.
 - 现代意义上的电网系统没有——每个区段都是自己的. `<table>` 带有硬码列宽的声明。
 
-### 白空间哲学
+### 留白规则
 Tight by modern standards. Catalog density wins over editorial breath — every pixel inside the black frame is doing work (illustration, color block, headline, body). The compensating decompression happens *inside* each ribbon card: white title bar + tinted body block + product photo notch creates internal breathing room without enlarging the overall page.
 
-### 反应战略
+### 响应式布局
 
 #### 断点
 | 名称 | 宽度 | 密钥更改 |
@@ -113,17 +113,17 @@ Tight by modern standards. Catalog density wins over editorial breath — every 
 #### 触控区域
 1996 had no notion of touch — the original designs assume mouse-only. Modern reproductions need to widen the icon-label nav targets to 44 × 44 px minimum at mobile (the 1996 icons sat at ~24 × 24 with 8 px label below, well under modern guidelines).
 
-#### 折叠战略
+#### 窄屏布局调整
 - At ≤ 768 px, the homepage's left-rail icon-link grid (Online Store / Service / Why Dell? / Government / Worldwide / Order Status / Company Info / U.S. Careers) collapses from a 2 × 4 grid to a single-column stack
 - 带卡右尖产品图片 Notch 成为移动时的顶端对齐全宽图像
 - 顶部横幅的标记线("BUILD Your OMN Computer.ONLINE")缩小了一个类型级;电话号码包裹在BUY-a-DELL贴纸下方.
 - Footer icon-label nav stays 4-up at all widths — the icons are small enough to survive
 
-#### 图像行为
+#### 图片适配
 Product photos are bitmap GIFs with hand-applied bevel shadows — they were authored at fixed pixel widths (typically 80–120 px wide). The right-edge notch effect was achieved by table-cell negative spacing. Modern reproductions should keep the bevel shadow effect (it's signature) but use SVG drop-shadow or CSS `filter: drop-shadow(2px 2px 0 #000)` to recreate it crisply at high-DPI.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -143,7 +143,7 @@ There are **no soft shadows** in the 1996 design — every depth cue is either a
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -152,7 +152,7 @@ There are **no soft shadows** in the 1996 design — every depth cue is either a
 
 电话 1996 设计是有效的 **双** 半径模式:方(每样)和圆(装饰性封条贴)。 4 / 8 / 12 px 微妙半径级——该词汇属于后波茨特拉克网络.
 
-### 摄影几何
+### 图片形状
 Product photos are rectangular GIFs with their own internal beveled "monitor" framing — they sit at native pixel dimensions, never scaled. Aspect ratios cluster around 4:3 (the era's standard CRT shape). Avatars don't exist on this site — staff photography was reserved for "About Dell" pages not captured in these snapshots.
 
 
@@ -164,7 +164,7 @@ Product photos are rectangular GIFs with their own internal beveled "monitor" fr
 
 **`page-frame`** ——整个景点周围的字面黑边.
 - Background `{colors.frame-ink}`, padding `{spacing.sm}` 8 px on every side, no radius.
-- 页面坐落 *内* 将它视为不可转让的集装箱铬;在移动中折叠是可以接受的(至) ~4 px),但移除它会完全失去品牌.
+- 页面坐落 *内* 将它视为不可转让的集装箱界面框架;在移动中折叠是可以接受的(至) ~4 px),但移除它会完全失去品牌.
 
 **`top-banner`** ——纯黑条条横跨顶端,白色"BUILD your own Computer. ONLINE"头条+子标线,黄色"BUY a" DELL贴在右边,红色1-800-213-DELL" 电话号码。
 - Background `{colors.frame-ink}`, text `{colors.canvas}`, type `{typography.heading-2}`, padding 12 px vertical / 16 px horizontal, no radius.
@@ -174,7 +174,7 @@ Product photos are rectangular GIFs with their own internal beveled "monitor" fr
 **`section-eyebrow-olive`** ——大锡色块,持有块状的节块标题(“DIMENSION DESKTOPS”). 使用在维度产品页的顶部.
 - Background `{colors.tint-olive}`, text `{colors.ink}`, type `{typography.display}` (Arial Black 36 / 900), padding 24 × 16, no radius.
 
-**`section-eyebrow-salmon`** ——与OptiPlex线的鲑鱼-平克填充("OPTIPLEX DESKTOP SYS")的同色铬.
+**`section-eyebrow-salmon`** ——与OptiPlex线的鲑鱼-平克填充("OPTIPLEX DESKTOP SYS")的同色界面框架.
 - Background `{colors.tint-salmon}`, otherwise identical to the olive variant.
 
 ### 丝带卡
@@ -243,45 +243,45 @@ All seven share identical chrome: 1 px solid `{colors.frame-ink}` border, `{spac
 **`footer-band`** — the bottom of every page: icon-label nav row, classic-blue Copyright link, "(Terms of Use)" parenthetical, browser-compatibility small print, and the Microsoft BackOffice / Internet Explorer logo banners.
 - Background `{colors.canvas}`, text `{colors.ink}`, 1 px top border in frame-ink, type `{typography.body-sm}`, padding 16 px.
 
-### 实例(说明性)
+### 组合示例
 
-> 自动生成的工具包-模拟演示表面(`scripts/derive-examples-block.mjs`。每个 `ex-*` 条目参考: 下游消费者的品牌原始产品(`/preview-design`, `/generate-kit`) 重新皮肤相同 10 表面一致。 `TO_FILL` 标记表示缺失原始人——在LLM判断传中解析.
+> 以下组合场景由 `scripts/derive-examples-block.mjs` 生成。各 `ex-*` 条目复用品牌基础样式，供 `/preview-design` 和 `/generate-kit` 以统一风格呈现同一套 10 个示例。`TO_FILL` 提示有待核对的基础样式。
 
-**`ex-pricing-tier`** ——默认定价等级卡。 feature-card 与基白色表面的铬.
+**`ex-pricing-tier`** ——默认定价等级卡。 feature-card 与基白色表面的界面框架.
 - 属性 : `backgroundColor`, `textColor`, `borderColor`, `rounded`, `padding`
 
-**`ex-pricing-tier-featured`** ——地貌/高亮的层次——极性-浮点表面(暗色填充+光线文字在光线模式下,浅色填充+暗色文字在暗线模式下).
+**`ex-pricing-tier-featured`**：推荐套餐卡。浅色模式中用深底浅字，深色模式中用浅底深字。
 - 属性 : `backgroundColor`, `textColor`, `rounded`, `padding`
 
-**`ex-product-selector`** ——什么是包含的汇总卡——重新用于SaaS/B2B纵横(NOT为字形产品画廊).
+**`ex-product-selector`**：面向 SaaS / B2B 场景的套餐权益摘要卡。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-cart-drawer`** ——订阅摘要——重新用于SaaS/B2B(每件加件的行项目,而非字面车).
+**`ex-cart-drawer`**：SaaS / B2B 订阅摘要，每个附加项单独列出。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `item-divider`
 
-**`ex-app-shell-row`** ——App Shell 实例中的侧边栏导航行. Active State 使用品牌主标.
+**`ex-app-shell-row`**：应用框架示例里的侧栏导航行，以品牌主色标识选中状态。
 - 属性 : `backgroundColor`, `activeIndicator`, `rounded`, `padding`
 
-**`ex-data-table-cell`** — Default data-table th + td chrome. Header uses mono-caps eyebrow typography; body uses body-sm.
+**`ex-data-table-cell`**：数据表格中 th 与 td 的默认样式。表头采用大写等宽字，正文采用 body-sm。
 - 属性 : `headerBackground`, `headerTypography`, `bodyTypography`, `cellPadding`, `rowBorder`
 
-**`ex-auth-form-card`** ——签入/签入卡. 复用. feature-card 铬 text-input 原始人在里面,他们都在里面
+**`ex-auth-form-card`**：登录与注册卡，复用功能卡和 text-input。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-modal-card`** ——模度对话框表面——与 feature-card 以高的阴影盟誓,
+**`ex-modal-card`**：对话框表面，沿用功能卡样式并加浮层投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-empty-state-card`** ——空状态插图框架.
+**`ex-empty-state-card`**：空状态插图容器。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `captionTypography`
 
-**`ex-toast`** ——通知表面. feature-card 形状 + 中阴影。
+**`ex-toast`**：轻提示，沿用功能卡圆角并使用中等投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `typography`
 
 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - Keep the literal `{components.page-frame}` black border on every page — this is the brand's single most identifiable container chrome.
 - 准备金 `{colors.primary}` (Dell 红色) `{components.cta-block-red}` 面板和 `{components.phone-callout}` 其它用途都稀释了紧急信号
 - 使用八种丝带卡色(`{colors.tint-olive}` /圣贤/沙门/桃李/石灰/天/钢/旁冬克)为一. *家庭* ——选择每条产品线一条,并坚持该线跨线营销表面.
@@ -290,7 +290,7 @@ All seven share identical chrome: 1 px solid `{colors.frame-ink}` border, `{spac
 - 将每个 CTA / 按钮显示在 `{rounded.none}` (0 px) 现代软辐射按钮背叛了时代.
 - Use hand-painted bevels / hard-edge GIF shadows on stickers and product photos. Never substitute a soft CSS shadow.
 
-### Don't
+### 应避免的做法
 - Don't introduce a chromatic accent outside the eight catalog tints + Dell red + Dell yellow + classic link blue. The palette is closed by design.
 - Don't soften any corner. `{rounded.none}` is the universal modifier; only award seals get `{rounded.full}`.
 - Don't replace Times Roman body with Arial / Helvetica / Inter / a webfont — the serif body is the era's signature.

@@ -25,12 +25,12 @@ Type voice runs **Inter** at confident weights — 700 for display headlines (wi
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Primary (Electric Yellow)** (`{colors.primary}` — #faff69): The signature brand color. All primary CTA backgrounds, large stat-callout numbers, full-bleed yellow CTA cards. The yellow is the brand.
 - **初等活动** (`{colors.primary-active}` — #e6eb52:按/悬浮-darker变种.
 - **初级残疾人** (`{colors.primary-disabled}` — #3a3a1f: 暗页面底色上不饱和的暗黄.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — #0a0a0a:默认的页层,近纯黑色.
 - **表面软** (`{colors.surface-soft}` — #121212: 区划器,极软的带状锡.
 - **表面卡片** (`{colors.surface-card}` — #1a1a1a:特色卡,代码窗口,产品模型,定价等级卡.
@@ -39,7 +39,7 @@ Type voice runs **Inter** at confident weights — 700 for display headlines (wi
 - **细边线** (`{colors.hairline}` — #2a2a2a): 1px 边框在卡片上。
 - **发条坚固** (`{colors.hairline-strong}` — #3a3a3a: 输入的重力分解器强调和强调.
 
-### 文本
+### 文字颜色
 - **墨水/ 暗色时** (`{colors.on-dark}` — #ffffff:所有头条和主文本.
 - **体质** (`{colors.body}` — #cccccc: 默认的运行文本颜色.
 - **Body Strong** (`{colors.body-strong}` — #e6e6e6): Emphasized paragraphs.
@@ -55,12 +55,12 @@ Type voice runs **Inter** at confident weights — 700 for display headlines (wi
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 系统运行 **Inter** 显示、身体、导航、按钮、标题。 **JetBrains Mono** 操作代码块。倒数堆栈走 `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`.
 
 单一家庭办法是经过深思熟虑的: Inter 字重 700 + 600 + 400 涵盖整个等级,不需要 serif 或显示反声音。 Inter 以自信的胆量 ClickHouse 精确的,工程化的感觉 匹配数据库的性能第一定位。
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -85,7 +85,7 @@ Display weights stay at 700 across all sizes. Negative letter-spacing (-1 to -2.
 
 身体和标签保持字重 400 / 500 / 600. 等级制建立在大小+字重的基础上,而不是建立在家庭对比上。
 
-### Note on Font Substitutes
+### 替代字体
 Inter 的开源和文件选择。 **索恩语** 是一种商业上的近似选择,如果获得许可的话。 **Geist** 也是现代的另一种选择。
 
 
@@ -97,17 +97,17 @@ Inter 的开源和文件选择。 **索恩语** 是一种商业上的近似选�
 - **科 科 padding:** `{spacing.section}` (96px)在主要乐队之间.
 - **Card internal padding:** `{spacing.xl}` (32px) for feature cards, pricing tiers; `{spacing.lg}` (24px) for code-window cards and event cards.
 
-### 网格容器( C)
+### 网格与容器
 - **最大内容 width:** ~1280px centered.
 - **编辑机构:** 单身 12-列网格;首屏经常使用 7/5 拆分(h)1 左边,代码模拟右)。
 - **Feature card grids:** 3-up at desktop, 2-up at tablet, 1-up at mobile.
 - **定价 grid:** 3-4 up at desktop, 1-up at mobile.
 
-### 白空间哲学
+### 留白规则
 ClickHouse 使用密集,略压缩的白空间,适合开发者工具品牌——宽宏大量,可以读取编辑,紧凑,可以感受到"工程级"而不是"营销-软". Section hythm at 96px 标准;卡片内部粘贴保留在 32px 用于特性卡。
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -125,7 +125,7 @@ ClickHouse 使用密集,略压缩的白空间,适合开发者工具品牌——�
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -155,7 +155,7 @@ ClickHouse 使用密集,略压缩的白空间,适合开发者工具品牌——�
 
 **`button-icon-circular`** — 36 × 36 circular 图标按钮。
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`hero-band`** - 黑角首屏与我们一起 7-5 grid: h1 + sub-headline + button row on the left, code-window or product mockup on the right. Vertical padding `{spacing.section}` (96px).
 
@@ -179,7 +179,7 @@ ClickHouse 使用密集,略压缩的白空间,适合开发者工具品牌——�
 
 **`customer-logo-strip`** — Horizontal monochrome customer-logo strip. Background `{colors.canvas}`, logos in `{colors.muted}`, vertical padding `{spacing.xl}` (32px).
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** — Dark text input. Background `{colors.surface-card}`, text `{colors.on-dark}`, rounded `{rounded.md}` (8px), padding 10px × 14px, height 40px.
 
@@ -204,7 +204,7 @@ ClickHouse 使用密集,略压缩的白空间,适合开发者工具品牌——�
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 黑页面底色上每页都锁定,黄+黑对接是品牌辨识度.
 - 准备金 `{colors.primary}` (黄)初级CTA, stat-callout 数字,和全血黄的CTA带。黄在元素级的稀缺性+在带级的丰度是它强大的原因。
 - 使用 Inter 字重 700 用于每个显示标题, 以及 -1 改为: -2.5px letter-spacing.
@@ -212,7 +212,7 @@ ClickHouse 使用密集,略压缩的白空间,适合开发者工具品牌——�
 - 使用 `{component.stat-callout}` 数字以建立可信度(社区大小、贡献者、性能基准)。黄色统计数字是签名。
 - 锁定每个带 `{spacing.section}` (96px) 垂直节奏.
 
-### Don't
+### 应避免的做法
 - Don't introduce a second brand color. ClickHouse is monochromatic + yellow.
 - 胆子不要超重 700 或使用字重 500 等级取决于大小,而不是字重等级。
 - 不得使用黄色作为体文字或者在故意黄牌之外用大表面填充.
@@ -222,7 +222,7 @@ ClickHouse 使用密集,略压缩的白空间,适合开发者工具品牌——�
 - Don't add hover state styling beyond what the system already encodes.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -238,14 +238,14 @@ ClickHouse 使用密集,略压缩的白空间,适合开发者工具品牌——�
 - `{component.button-icon-circular}` at exactly 36 × 36 — slightly under WCAG 44, visually centered.
 - `{component.text-input}` 高度为 40px.
 
-### 折叠战略
+### 窄屏布局调整
 - 顶级导航崩溃到汉堡 < 768px.
 - 首屏们 7-5 网格 → 移动上的单列.
 - 特色卡网格减少列而非缩放.
 - Code-window 保留牌 font-size; 移动卡片内横向滚动.
 - 定价等级卡崩溃 4 → 2 → 1; 突出的黄色保持鲜明。
 
-### 图像行为
+### 图片适配
 - 暗模拟器内的代码块 fixed font-size; 水平滚动在移动上而不是包扎.
 - 单色条中的客户标识保留了本地宽度;移动时的行包.
 

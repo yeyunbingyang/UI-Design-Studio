@@ -24,11 +24,11 @@ The brand's strongest visual signature is the **AI-timeline pill palette**: five
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Cursor 橙色** (`{colors.primary}` — #f54e00: 初级CTA胶囊形,词签,首屏强调色,很少使用.
 - **Cursor 橙色活动** (`{colors.primary-active}` — #d04200:新闻州.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — #f7f7f4:温暖的奶油页楼.
 - **软画帘** (`{colors.canvas-soft}` — #fafaf7): IDE-pane 模拟器内的背景。
 - **表面卡片** (`{colors.surface-card}` — #ffffff:纯白牌表面——与奶油页面底色的微小对比.
@@ -39,7 +39,7 @@ The brand's strongest visual signature is the **AI-timeline pill palette**: five
 - **柔软的细边线** (`{colors.hairline-soft}` — #efeee8:轻分者.
 - **发条坚固** (`{colors.hairline-strong}` — #cfcdc4: 更强的面板大纲.
 
-### 文本
+### 文字颜色
 - **Ink** (`{colors.ink}` — #26251e): Display, body emphasis. Warm near-black.
 - **体质** (`{colors.body}` — #5a5852: 默认的运行文本.
 - **Body Strong** (`{colors.body-strong}` — #26251e): Same as ink.
@@ -54,17 +54,17 @@ The brand's strongest visual signature is the **AI-timeline pill palette**: five
 - **编辑** (`{colors.timeline-edit}` — #c0a8dd: 薰衣草.
 - **完成( E)** (`{colors.timeline-done}` — #c08532:温暖的金色.
 
-### 语义
+### 语义色
 - **成功** (`{colors.semantic-success}` — #1f8a65:确认指标。
 - **错误** (`{colors.semantic-error}` — #cf2d56:验证错误.
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 **CursorGothic** is the licensed display + body family. Fallback: `system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif`. Code surfaces switch to **JetBrains Mono**.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -88,7 +88,7 @@ The brand's strongest visual signature is the **AI-timeline pill palette**: five
 - **负数 letter-spacing 仅显示。** -0.11px 改为: -2.16px 追踪。
 - **JetBrains Mono 每一个代码表面。**
 
-### Note on Font Substitutes
+### 替代字体
 CursorGothic is licensed. Open-source substitute: **Inter** at weight 400 with letter-spacing -1.5%. Or **GT Sectra** for a more editorial feel.
 
 
@@ -99,17 +99,17 @@ CursorGothic is licensed. Open-source substitute: **Inter** at weight 400 with l
 - **脚本 :** `{spacing.xxs}` 4px · `{spacing.xs}` 8px · `{spacing.sm}` 12px · `{spacing.base}` 16px · `{spacing.md}` 20px · `{spacing.lg}` 24px · `{spacing.xl}` 32px · `{spacing.xxl}` 48px · `{spacing.section}` 80px.
 - **科 科 padding:** 80px.
 
-### 网格容器( C)
+### 网格与容器
 - 最大内容 width: ~1200px.
 - 编辑机构: 12- 列网格 - 列网格 - Colind grade.
 - Feature card grids: 2-up at desktop for splits, 3-up for benefits.
 - Footer: 5-column at desktop.
 
-### 白空间哲学
+### 留白规则
 热衷的编辑节奏——比技术网站更接近印刷杂志。 奶油页面底色有很多呼吸室;乐队内的卡片坐得很近(例如:16-24px —— —— —— —— 。
 
 
-## 层次与阴影
+## 层次与深度
 
 系统使用 **仅限细边线深度**。没有投影,没有高架。卡片通过屏幕上浮 1px 细边线和轻微的白色对乳激素对比.
 
@@ -127,7 +127,7 @@ CursorGothic is licensed. Open-source substitute: **Inter** at weight 400 with l
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -214,14 +214,14 @@ CursorGothic is licensed. Open-source substitute: **Inter** at weight 400 with l
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` (Cursor 橙色),用于初级CTA和品牌词标.
 - Keep display weight at 400. The editorial voice depends on this.
 - 来,用奶油 `{colors.canvas}` 页面层——永远不要纯白。
 - 将每个代码表面( 内置、 块、 IDE 窗体) 渲染为 JetBrains Mono.
 - 只在产品内代理可视化内部使用时间线贴面——从不作为系统动作颜色.
 
-### Don't
+### 应避免的做法
 - Don't introduce a secondary brand action color. Cursor Orange is the only one.
 - 显示时不要降为粗体重量( Q)700+). 杂志的声音取决于 400.
 - Don't add drop shadows. Hairlines + ink-on-cream contrast carry the depth.
@@ -229,7 +229,7 @@ CursorGothic is licensed. Open-source substitute: **Inter** at weight 400 with l
 - Don't extract a CTA color from a third-party widget (cookie consent, OneTrust). The brand's CTA is what appears on actual product CTAs.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -244,7 +244,7 @@ CursorGothic is licensed. Open-source substitute: **Inter** at weight 400 with l
 - 初级CTA 时间 40px 高度——在WCAG AA,为AAA加注.
 - Download CTA at 44px — at AAA.
 
-### 折叠战略
+### 窄屏布局调整
 - 顶端导航切换到下面的汉堡包 768px.
 - IDE模拟多面板崩溃为移动上单一主面板预览.
 - 特性 grid: 3-up → 2-up → 1-up.

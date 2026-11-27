@@ -1,6 +1,7 @@
 """恢复中文样张的风格导航，并从渲染结果更新总览小样。"""
 
 import argparse
+from io import BytesIO
 import json
 from pathlib import Path
 import re
@@ -86,6 +87,7 @@ MEASURE = r"""(previous) => {
     return candidate.getBoundingClientRect().width && color !== 'rgba(0, 0, 0, 0)' && color !== 'transparent';
   });
   return {canvas:background,ink,accent:button ? getComputedStyle(button).backgroundColor : previous.accent,
+    hasAction:Boolean(button),weight:headings?.fontWeight,
     gradient:gradients.join(', '),font:headings?.fontFamily ?? 'Georgia, serif'};
 }"""
 
@@ -188,7 +190,32 @@ def refresh_samples(catalog,index,chrome=CHROME):
         for item in catalog:
             page.goto((LOCALIZED/item["slug"]/"preview.html").as_uri(),wait_until="load")
             item["samplePalette"] = page.evaluate(MEASURE,item["palette"])
+            capture_directory_hero(page,item)
         chrome.close()
+
+
+def capture_directory_hero(page,item):
+    from PIL import Image
+
+    # 只在截图页面隐藏首屏介绍，样张文件仍保留完整内容。
+    bounds = page.evaluate("""() => {
+      const title = document.querySelector('h1');
+      const hero = title?.closest('.hero');
+      if (!hero) return null;
+      const intro = [...hero.querySelectorAll('p')].find(
+        element => title.compareDocumentPosition(element) & Node.DOCUMENT_POSITION_FOLLOWING);
+      if (intro) intro.style.setProperty('display','none','important');
+      return {width:document.documentElement.clientWidth,
+        height:Math.ceil(hero.getBoundingClientRect().bottom + scrollY)};
+    }""")
+    if not bounds or min(bounds.values())<=0:
+        raise ValueError(f"{item['slug']} 的首屏截图范围无效")
+    png = page.screenshot(full_page=True,clip={"x":0,"y":0,**bounds},animations="disabled")
+    destination = LOCALIZED/item["slug"]/"directory-hero.webp"
+    with Image.open(BytesIO(png)) as picture:
+        picture.thumbnail((640,1200),Image.Resampling.LANCZOS)
+        picture.save(destination,"WEBP",quality=84)
+        item["directoryHero"] = {"width":picture.width,"height":picture.height}
 
 
 def main():

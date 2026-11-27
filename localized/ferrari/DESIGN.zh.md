@@ -26,13 +26,13 @@ Ferrari's marketing site reads as cinematic editorial — closer to a luxury-mag
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Rosso Corsa** (`{colors.primary}` — #da291c): The iconic Ferrari racing red. Primary CTA fill, Cavallino mark, F1 driver-position highlights. Used scarcely.
 - **Rosso Corsa Active** (`{colors.primary-active}` — #b01e0a): Press state.
 - **Rosso Corsa Hover-darker** (`{colors.primary-hover}` — #9d2211): Documented for completeness; per the no-hover policy this is not used in preview HTML.
 - **超帆黄** (`{colors.accent-yellow-hypersail}` — #fff200) + **黄色** (`{colors.accent-yellow}` — #f6e500: 副品牌强调色,为超帆帆船计划和全球 focus-ring 颜色,不是主汽车调色板的一部分
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — #181818:近黑页楼层——永远不纯黑,微微暖.
 - **高空的画廊** (`{colors.canvas-elevated}` — #303030:暗布上的纸牌和面板.
 - **光线** (`{colors.canvas-light}` — #ffffff: 白话编辑段(前作上市,定价).
@@ -45,7 +45,7 @@ Ferrari's marketing site reads as cinematic editorial — closer to a luxury-mag
 - **光线细边线** (`{colors.hairline-on-light}` — #d2d2d2): 1px 轻频段的分隔符。
 - **柔软的细边线** (`{colors.hairline-soft}` — #ebebeb:轻分者.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — #ffffff:显示,身体强调暗色.
 - **体质** (`{colors.body}` — #969696: 暗处默认运行文本 。
 - **Body Strong** (`{colors.body-strong}` — #ffffff): Same as ink.
@@ -54,7 +54,7 @@ Ferrari's marketing site reads as cinematic editorial — closer to a luxury-mag
 - **静音软体** (`{colors.muted-soft}` — #8f8f8f: 已禁用链接文本.
 - **On Primary** (`{colors.on-primary}` — #ffffff): White text on Rosso Corsa.
 
-### 语义
+### 语义色
 - **信息** (`{colors.semantic-info}` — #4c98b9:信息徽章,呼喊背景.
 - **Success** (`{colors.semantic-success}` — #03904a): Confirmation.
 - **警告** (`{colors.semantic-warning}` — #f13a2c: 验证警告.
@@ -62,10 +62,10 @@ Ferrari's marketing site reads as cinematic editorial — closer to a luxury-mag
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 **FerrariSans** is the licensed single sans family across every text role. Fallback: `-apple-system, system-ui, sans-serif`. No display/body family split.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -89,8 +89,8 @@ Ferrari's marketing site reads as cinematic editorial — closer to a luxury-mag
 - **导航标签为大写 0.65px 追踪。** 符合CTA的声音。
 - **负数 letter-spacing 仅显示。** -0.36px 改为: -1.6px 显示大小; 身体保持为 0.
 
-### Note on Font Substitutes
-FerrariSans 已获得许可。开源替换 : **Inter** 字重 500 与 letter-spacing -1%,或 **索恩语** 更接近人文主义的分寸
+### 替代字体
+FerrariSans 已获得许可。开源替换 : **Inter** 字重 500 配合 letter-spacing -1%,或 **索恩语** 更接近人文主义的分寸
 
 
 ## 布局
@@ -100,17 +100,17 @@ FerrariSans 已获得许可。开源替换 : **Inter** 字重 500 与 letter-spa
 - **脚本 :** `{spacing.xxxs}` 4px · `{spacing.xxs}` 8px · `{spacing.xs}` 16px · `{spacing.sm}` 24px · `{spacing.md}` 32px · `{spacing.lg}` 48px · `{spacing.xl}` 64px · `{spacing.xxl}` 96px · `{spacing.super}` 128px.
 - **Section padding:** `{spacing.xxl}` (96px) for major bands; `{spacing.super}` (128px) reserved for hero band depth.
 
-### 网格容器( C)
+### 网格与容器
 - 最大内容 width: ~1280px on editorial bands. Hero photography goes full-bleed.
 - 编辑机构: 12- 列网格 - 列网格 - Colind grade.
 - Feature card grids: 2-up at desktop for hero splits, 3-up for benefit grids, 4-up for preowned listing tiles.
 - Footer: 5-column at desktop.
 
-### 白空间哲学
+### 留白规则
 优雅的编辑节奏。电影首屏摄影占据了慷慨的景点房地产;身体部分坐落在下面的编辑布局更紧凑。 canvas-light 编辑乐队(前作,定价)的密度比黑暗电影乐队要紧.
 
 
-## 层次与阴影
+## 层次与深度
 
 系统使用 **图片深度+亮度-步骤** 高空,只有一个小软体 `{shadow.small}` 以提取的符号记录。
 
@@ -119,7 +119,7 @@ FerrariSans 已获得许可。开源替换 : **Inter** 字重 500 与 letter-spa
 | 平面( 扫描) | `{colors.canvas}` (#181818) | 车体带,页脚 |
 | 纸牌 | `{colors.canvas-elevated}` (#303030) | 驾驶卡,生活车牌 |
 | 轻波段 | `{colors.canvas-light}` (#ffffff) | 预购上市,定价 |
-| 细边线边框 | 1px `{colors.hairline}` 或 减 减 `{colors.hairline-on-light}` | 纸牌轮廓, 分隔符 |
+| 细边线边框 | 1px `{colors.hairline}` 或 `{colors.hairline-on-light}` | 纸牌轮廓, 分隔符 |
 | 软滴 | `0 4px 8px rgba(0,0,0,0.1)` | 单层阴影卡 |
 | 摄影 | 电影全血影像 | 首屏乐队,活泼的照片 |
 
@@ -131,7 +131,7 @@ FerrariSans 已获得许可。开源替换 : **Inter** 字重 500 与 letter-spa
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -162,7 +162,7 @@ FerrariSans 已获得许可。开源替换 : **Inter** 字重 500 与 letter-spa
 
 **`button-outline-on-dark`** — Transparent with 1px white border. Background transparent, text `{colors.ink}`, 1px white border, same sharp 0px corners.
 
-**`button-outline-on-light`** — Transparent 与 1px 浅带上的墨边界.
+**`button-outline-on-light`** — Transparent 配合 1px 浅带上的墨边界.
 
 **`button-tertiary-text`** ——内置文本链接,大写跟踪.
 
@@ -215,7 +215,7 @@ FerrariSans 已获得许可。开源替换 : **Inter** 字重 500 与 letter-spa
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` (罗索·科萨)主要CTAs、Cavallino标记和F1 种族位置突出。
 - 设定每一次 CTA 时间 `{rounded.none}` (0px 尖角)——品牌的标志精度.
 - Render CTA labels in uppercase with 1.4px tracking via `{typography.button}`.
@@ -223,7 +223,7 @@ FerrariSans 已获得许可。开源替换 : **Inter** 字重 500 与 letter-spa
 - 使用清晰的 8px 间距梯度( E)`xxxs` 结束 `super`)而不是临时的px值。
 - 保持显示字重 500 - 永远不要大胆
 
-### Don't
+### 应避免的做法
 - Don't introduce a saturated brand color other than Rosso Corsa.
 - 切片或胶囊形不要用 尖锐的 0px 角是品牌按钮。
 - Don't bold display copy. The cinematic photography does the visual heavy-lifting.
@@ -233,7 +233,7 @@ FerrariSans 已获得许可。开源替换 : **Inter** 字重 500 与 letter-spa
 - Don't extract a CTA color from a third-party widget (cookie consent, OneTrust). The brand's CTA color is what appears on actual product CTAs, not on injected modals.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -248,7 +248,7 @@ FerrariSans 已获得许可。开源替换 : **Inter** 字重 500 与 letter-spa
 - 初级CTA 时间 48px 高度——在WCAG AAA(AAA)44 × 44).
 - 导航项目将大写渲染为 0.65px 跟踪,加载,以有效 48px 电磁带区域。
 
-### 折叠战略
+### 窄屏布局调整
 - 顶端导航切换到下面的汉堡包 768px.
 - 首屏照片通过艺术方向每断点重新布局——桌面搭载宽阔的电影;移动作物收紧或转向垂直.
 - 特性卡 grid: 4-up → 3-up → 2-up → 1-up.

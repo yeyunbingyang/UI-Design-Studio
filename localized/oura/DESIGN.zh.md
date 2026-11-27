@@ -27,7 +27,7 @@ Oura's web presence reads like a printed field journal that learned to breathe. 
 
 > 分析的资料来源:主页、 Oura 环 5 存储页面、活动与移动页面、临床与科学专家页面。下面的调色板将全部四个调和成一个系统。
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **蓝色行动** (`{colors.primary}` — #2a72de: 单色转换颜色。将初级CTA丸(“爆炸”、“所有产品”)填充为 `{colors.on-primary}` 文本。没有其它地方使用,不是用于链接,也不是用于强调色。
 - **Stone** (`{colors.stone}` — #4a4741): the warm taupe-brown brand neutral. Carries the wordmark, secondary/editorial pill buttons, form-field fills, circular-icon outlines, and default link color. This is the color that makes Oura feel "Oura."
 - **Clay** (`{colors.clay}` — #6b443d:一种暖红褐色的,用于配音带和内容卡片(例如活动页的"你的"). Oura 活动得分"乐队.
@@ -35,35 +35,35 @@ Oura's web presence reads like a printed field journal that learned to breathe. 
 - **Gold** (`{colors.gold}` — #af751b) / **Ochre** (`{colors.ochre}` — #bc924c) / **Gold Soft** (`{colors.gold-soft}` — #ddaa61) / **Gold Pale** (`{colors.gold-pale}` — #ddbe78) / **Gold Deep** (`{colors.gold-deep}` — #684d07): the mustard ramp. Powers warm illustration, the activity-ring dashboard card, and score data-visualisation.
 - **Forest** (`{colors.forest}` — #224228) / **Olive** (`{colors.olive}` — #5c6f5d) / **Sage** (`{colors.sage}` — #849671) / **Sage Mute** (`{colors.sage-mute}` — #7b886d) / **Sage Pale** (`{colors.sage-pale}` — #ced4b8): the olive ramp, used for calm accent bands, illustration, and secondary data-visualisation.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — #f7f1e8:所有编辑和营销表面的签名热纸背景.
-- **表面** (`{colors.surface}` — #ffffff:纯白的,为高的牌, circular "+"在人牌上上覆盖按钮.
+- **界面表面** (`{colors.surface}` — #ffffff:纯白的,为高的牌, circular "+"在人牌上上覆盖按钮.
 - **表面灰质** (`{colors.surface-grey}` — #ececec:产品页梯度和光功率的光端填充.
 - **银** (`{colors.silver}` — #cccac7:产品显示页上使用的凉爽灰色,并作为选定的tab边框.
 - **墨水带** (`{colors.ink-band}` — #000000:脚步/新闻乐队的真黑舞台.
 - **墨水带柔软** (`{colors.ink-band-soft}` — #19191c:指足部表面所用的近黑,比纯黑色更暖的毛发.
 - **细边线** (`{colors.hairline}` — #e1dcd3: 温暖 1px 奶油上的分水器(一种低不透明度的墨水混合在页面底色上)。
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — #1c1b1a:主要标题和奶油上的身体文字.
 - **Stone** (`{colors.stone}` — #4a4741): secondary text and editorial emphasis on cream.
 - **灰尘** (`{colors.ash}` — #838280: 哑灰色表示 meta 文本、标题下的标题和工具标题。
 - **静音** (`{colors.mute}` — #a8a5a0: 温暖灰色,用于最安静的字幕和暗带上的副文本.
 - **黑暗时** (`{colors.on-dark}` — #ffffff: 墨水银界上的文字和图标.
 
-### 语义
+### 语义色
 - **错误** (`{colors.error}` — #e33a22: 形式字段的验证和焦点- 错误状态( 焦点电子邮件字段边框) 。
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 Two families carry the entire system, and the tension between them is the point.
 
-- **Editorial New** (`{typography.display}`, `{typography.heading-1}`, `{typography.heading-2}`, `{typography.lead}`: 轻度,高低调过渡 serif 用于显示标题、标题和偶尔出现的轻质铅段。 100 财务报告和已审计财务报表 300 ——所以大尺寸读作优雅,而非重.活动页用斜体字("move")显示. *以手定式编辑方式繁荣。
+- **Editorial New** (`{typography.display}`, `{typography.heading-1}`, `{typography.heading-2}`, `{typography.lead}`: 轻度,高低调过渡 serif 用于显示标题、标题和偶尔出现的轻质铅段。 100 和 300 ——所以大尺寸读作优雅,而非重.活动页用斜体字("move")显示. *以手定式编辑方式繁荣。
 - **AkkuratLL** (`{typography.heading-3}` 结束 `{typography.caption}`:一种中立的瑞士杂耍,它能做所有真正的阅读工作——子标题,身体,UI标签,按钮,标题. 300 / 400 / 600 / 700.
 
-### 等级
+### 字号层级
 
 | 调试 | 家庭 | 大小 | 字重 | 线条高度 | 使用 |
 |---|---|---|---|---|---|
@@ -87,7 +87,7 @@ Two families carry the entire system, and the tension between them is the point.
 - 细微显示字重。 serif 头条靠着字重 100–300,所以规模——而不是大胆——就形成了等级.
 - 静态超线。 区域背景设置为 `{typography.eyebrow}` (上行,轻追)而非重踢者.
 
-### Note on Font Substitutes
+### 替代字体
 Both faces are proprietary. For open-source builds, substitute **Editorial New** with **Fraunces** or **Newsreader** (both high-contrast serifs — set optical size high and weight low to match the thin display feel), and **AkkuratLL** with **Inter** or **Hanken Grotesk** (neutral grotesques with similar x-height). When substituting, nudge display line-height up slightly (Fraunces runs a touch taller than Editorial New) and keep body tracking at 0.
 
 
@@ -98,15 +98,15 @@ Both faces are proprietary. For open-source builds, substitute **Editorial New**
 - **脚本**: `{spacing.xxs}` 4px · `{spacing.xs}` 8px · `{spacing.sm}` 12px · `{spacing.md}` 16px · `{spacing.lg}` 24px · `{spacing.xl}` 32px.
 - 纸牌内部坐着 `{spacing.lg}`; 紧凑的效用组合(窗体编版、芯片编版) , 位于 `{spacing.sm}`–`{spacing.md}`节奏故意很大——空白奶油分离内容块的纵向长空,让摄影和头条呼吸.
 
-### 网格容器( C)
+### 网格与容器
 - Content is center-constrained within a wide max-width, with full-bleed photography breaking out to the viewport edges.
 - 运行的卡网 3- 上(人牌、福利三等奖)和 4- 上(新闻/专家木马),倒塌走向 1- 上窄屏幕上。
 - 产品页面替代以边际对边媒体为中心单栏展示.
 
-### 白空间哲学
+### 留白规则
 Empty cream is a design element, not leftover space. Large silences between sections group related content and pace the scroll like chapters. UI chrome stays minimal so the eye rests on imagery and headlines.
 
-### 反应战略
+### 响应式布局
 
 #### 断点
 | 名称 | 宽度 | 密钥更改 |
@@ -121,17 +121,17 @@ Empty cream is a design element, not leftover space. Large silences between sect
 #### 触控区域
 胶囊形按钮( Name`button-primary`, `button-secondary`和 (中文(简体) ). circular 图标按钮(`button-icon-circular`) 大小,可自在地敲击;至少保持交互控制 44×44px 手提箭头和"+" person-card 按钮是 circular 和手指大小的。
 
-#### 折叠战略
+#### 窄屏布局调整
 - 水平导航在平板断点下方坍塌为汉堡;推车和文字标记持续.
 - Multi-column card grids collapse 4-up → 2-up → 1-up.
 - 银制品展示使其中心单柱媒体保持大小各异,并简单缩放图像.
 - 脚注链接列从 a 重流 4- 排成一排成一排
 
-#### 图像行为
+#### 图片适配
 摄影是全血型的,艺术方向的,在移动上往往有边缘到边缘. 产品图像使用大辐射圆框(英语:Ligd-radus rounded frame).`{rounded.xl}`);编辑图像经常是无圆形的全血,图像在部分进入视门时懒散地排入.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -148,7 +148,7 @@ Empty cream is a design element, not leftover space. Large silences between sect
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -160,7 +160,7 @@ Empty cream is a design element, not leftover space. Large silences between sect
 | `{rounded.xl}` | 40px | 商店页面上的大型产品图像卡 |
 | `{rounded.full}` | 9999px | 胶囊形扣子 标签 circular 图标按钮, 统计徽章 |
 
-### 摄影几何
+### 图片形状
 产品和生活方式图像慷慨和轻度:产品卡的使用 `{rounded.xl}`、编辑和人物图像的使用 `{rounded.lg}` 或运行无半径的全血。人牌是近似外形的矩形,小的 circular 转角处"+"付价. Stat reactionout (").99%", "95%", "90%") 坐在完美的圆圈里("`{rounded.full}`).
 
 
@@ -201,7 +201,7 @@ Empty cream is a design element, not leftover space. Large silences between sect
 **`button-icon-circular`** — Circular 图标控件
 - Circular (`{rounded.full}`) control for carousel arrows and the person-card "+" affordance. Two flavours: a white surface circle (`{colors.surface}`) with a hairline edge for the "+" overlays, and a stone-outlined circle for the carousel arrows.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** 通讯/电子邮件栏
 - Background `{colors.stone}`, text `{colors.on-stone}`, `{typography.body-sm}`, radius `{rounded.md}` (12px), padding roughly 8px vertical / 20px left with a trailing submit affordance on the right. The dark taupe fill makes the field feel like part of the footer rather than a bright form box.
@@ -209,7 +209,7 @@ Empty cream is a design element, not leftover space. Large silences between sect
 **`text-input-focused`** ——焦点/错误字段
 - 将田地抬到浅水面上(`{colors.surface}`与 `{colors.ink}` 文本和 a `{colors.error}` 用于验证- 错误状态的边框。 半径保留 `{rounded.md}`.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`feature-card`** 内容/福利卡
 - 白色表面( 4)`{colors.surface}`), `{colors.hairline}` 边框, `{colors.ink}` 文本, 单词 `{typography.body}`半径 `{rounded.lg}`, 编译 `{spacing.lg}`。 奶油上的默认软橡皮内容容器。
@@ -226,7 +226,7 @@ Empty cream is a design element, not leftover space. Large silences between sect
 **`news-card`** - 暗带新闻剪辑
 - 奶油卡( 微量)`{colors.canvas}`浮在( 浮点) `{colors.ink-band}`, `{colors.ink}` 文本, 单词 `{typography.body}`, `{rounded.lg}`, 编译 `{spacing.lg}`。带出一个出版物引文加一个 circular 箭头链接。
 
-### 签名组件
+### 标志性组件
 
 **`stat-badge`** — Circular 读取数据
 - 完美的圆圈( E)`{rounded.full}`奶油上加大块 `{typography.title}`/`{typography.heading-3}` 数字在 `{colors.stone}` 和下面的小标题(例如) "99% / 95% / 90%" 产品页上的准确数字 " 。
@@ -240,45 +240,45 @@ Empty cream is a design element, not leftover space. Large silences between sect
 **`footer`** ——站点页脚
 - 近黑表面( 3)`{colors.ink-band-soft}`), `{colors.on-dark}` 文本和文本 `{colors.mute}` 次要文本, 以及 `{typography.body-sm}`中包含 OURA 文字标记, 通讯 `text-input`,支付方法图标,a 4- 柱状连结网格, 和一种语言胶囊形。
 
-### 实例(说明性)
+### 组合示例
 
 > 自动生成的工具包-模拟演示表面(`scripts/derive-examples-block.mjs`。每个 `ex-*` 条目参考: 下游消费者的品牌原始产品(`/preview-design`, `/generate-kit`) 重新皮肤相同 10 表面一致。
 
-**`ex-pricing-tier`** ——默认定价等级卡。 feature-card 带品牌的铬 canvas-soft 表面。
+**`ex-pricing-tier`**：默认套餐卡，沿用功能卡结构和品牌 canvas-soft 底色。
 - 属性 : `backgroundColor`, `textColor`, `borderColor`, `rounded`, `padding`
 
-**`ex-pricing-tier-featured`** ——地貌/高亮的层次——极性-浮点表面(暗色填充+光线文字在光线模式下,浅色填充+暗色文字在暗线模式下).
+**`ex-pricing-tier-featured`**：推荐套餐卡。浅色模式中用深底浅字，深色模式中用浅底深字。
 - 属性 : `backgroundColor`, `textColor`, `rounded`, `padding`
 
 **`ex-product-selector`** ——彩色/大小采摘者染色体——时尚/DTC变种选择器.
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-cart-drawer`** ——购物车抽屉 DTC/时尚品牌 实际车型为铬.
+**`ex-cart-drawer`** ——购物车抽屉 DTC/时尚品牌 实际车型为界面框架.
 - 属性 : `backgroundColor`, `rounded`, `padding`, `item-divider`
 
-**`ex-app-shell-row`** ——App Shell 实例中的侧边栏导航行. Active State 使用品牌主标.
+**`ex-app-shell-row`**：应用框架示例里的侧栏导航行，以品牌主色标识选中状态。
 - 属性 : `backgroundColor`, `activeIndicator`, `rounded`, `padding`
 
-**`ex-data-table-cell`** — Default data-table th + td chrome. Header uses mono-caps eyebrow typography; body uses body-sm.
+**`ex-data-table-cell`**：数据表格中 th 与 td 的默认样式。表头采用大写等宽字，正文采用 body-sm。
 - 属性 : `headerBackground`, `headerTypography`, `bodyTypography`, `cellPadding`, `rowBorder`
 
-**`ex-auth-form-card`** ——签入/签入卡. 复用. feature-card 铬 text-input 原始人在里面,他们都在里面
+**`ex-auth-form-card`**：登录与注册卡，复用功能卡和 text-input。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-modal-card`** ——模度对话框表面——与 feature-card 以高的阴影盟誓,
+**`ex-modal-card`**：对话框表面，沿用功能卡样式并加浮层投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-empty-state-card`** ——空状态插图框架.
+**`ex-empty-state-card`**：空状态插图容器。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `captionTypography`
 
-**`ex-toast`** ——通知表面. feature-card 形状 + 中阴影。
+**`ex-toast`**：轻提示，沿用功能卡圆角并使用中等投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `typography`
 
 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` 严格用于主转换的CTA——每个视图一个蓝色瞬间,最大.
 - 默认每个表面为 `{colors.canvas}` (温纸),不是白的。白色(`{colors.surface}`)是用于高卡和输入,而不是背景.
 - 使用 `{colors.stone}` 用于词签,辅药,轮廓,表状填充,以及链接——它是工作马队中性.
@@ -287,7 +287,7 @@ Empty cream is a design element, not leftover space. Large silences between sect
 - Let the earth-tone ramps (gold, clay, olive) live in bands, illustration, and data-viz — as color-blocked sections that pace the scroll.
 - 给部分宽大的垂直呼吸室;将空奶油作为结构处理.
 
-### Don't
+### 应避免的做法
 - Don't use `{colors.primary}` for links, accents, icons, or decorative fills — it must stay unique to the primary CTA.
 - Don't put the mustard/olive accent colors on buttons — they are surfaces and illustration, never actions.
 - Don't set body copy in `{typography.display}`; the thin serif is display-only and gets illegible at small sizes.

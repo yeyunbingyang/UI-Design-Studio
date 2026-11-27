@@ -7,50 +7,50 @@
 
 ## 概览
 
-Warp 是一个"代理开发环境"——一个包装AI代理的终端应用——其营销网站反映了产品的姿态:一个单一的暗带运行整个页面,比纯黑色更温暖(英语:`{colors.canvas}` `#2b2622` 上面有来自品牌的 oklch 定义的暖热值的棕色贝色的提示, 复制版几乎完全装在 Inter。页面阅读的更像是开发商的读模编辑器而不是营销表面。
+Warp 是集成 AI 代理的终端开发环境。营销页使用贯穿页面的暖深色背景，底色 `{colors.canvas}`（`#2b2622`）在 oklch 色彩体系中带轻微褐色倾向。文字主要采用 Inter，阅读体验接近开发者编辑器的阅读模式。
 
-The decoration is restrained. Two terminal screenshots open the hero (split between the two main product modes — agent + terminal). A partner-logo strip (Anthropic / OpenAI / Google / Stanford) sits below the hero on a slightly warmer tile surface. A single testimonial card with a portrait photograph. A press-coverage list. Then the page closes with download tiles for Mac / Linux / Windows. There is no gradient, no atmospheric backdrop, no illustration system.
+装饰保持克制。首屏用两张截图分别展示代理与终端模式，下方以偏暖的表面承载合作伙伴标识（Anthropic / OpenAI / Google / Stanford）。随后是带肖像的推荐语和媒体报道列表，页尾提供 Mac / Linux / Windows 下载卡片。页面主要依靠终端截图和产品信息呈现内容。
 
-Type is the second decisive voice. Hero display sits at 64 px Inter weight 400 with `-1.6px` tracking — restrained for a hero, deliberately quiet. The brand carries DM Mono as its monospace face for code blocks, and Instrument Serif italics occasionally appear for editorial moments. Body text is 16 px Inter at line-height 1.5, very readable.
+首屏采用 64 px 的 Inter，400 字重，字距为 `-1.6px`。代码块用等宽字体 DM Mono（monospace），部分编辑式文字使用 Instrument Serif 斜体。正文为 16 px 的 Inter，line-height 为 1.5。
 
 **关键特征 :**
-- 单一的原生"颜色"——真的是一个离白 `{colors.primary}` (`#f7f5f0`——作为页面底色上的文字和作为 button-primary 填充,没有色调的强调色
-- 暖暗页面底色( E)`{colors.canvas}` `#2b2622`)是唯一的页面表面,品牌的定型语气是棕色的暖气,而不是纯黑色.
-- Extremely tight button radii — 3 / 4 px (1 / 2× the brand's `{rounded.md}` 4 px base) — the brand never uses generous pill shapes for CTAs. Only icon containers use `{rounded.full}`.
-- Inter 桑斯+ 单曲 DM Mono 单体是犬科的配对。 Instrument Serif 以第三种文字形式出现,用于偶尔的斜体。
-- 终端-模拟图像是该品牌唯一一致的装饰系统——没有梯度,没有大气覆盖.
-- 微妙的温暖的锡条贯穿每一个中性;甚至身体文本和分裂者都带有温和而不是中性灰色的暗示.
+- 暖白主色 `{colors.primary}`（`#f7f5f0`）同时用于页面文字和 button-primary 底色，承担整套界面的强调角色。
+- 页面使用偏褐的暖深底 `{colors.canvas}`（`#2b2622`），形成统一的品牌基调。
+- 按钮使用小圆角 3 / 4 px。原文记载其比例为 1 / 2×，并列出 `{rounded.md}` 的基准值 4 px。全圆角 `{rounded.full}` 用于图标容器。
+- 无衬线 Inter 和等宽 DM Mono 是基础字体组合，Instrument Serif 偶尔以斜体用于编辑式排版。
+- 终端界面示意是贯穿页面的主要视觉素材。
+- 中性色统一略偏暖，正文和分隔线也保留这一色调。
 
 
 ## 配色
 
-### 品牌和 强调色
-- **关闭白话小学** (`{colors.primary}` — `#f7f5f0`:该品牌的"主"是一个暖和的淡白的. button-primary 填充,作为页面底色上的默认文字,作为文字标记颜色。没有色调品牌强调色——非白话是该品牌的区别语调。
+### 品牌色与强调色
+- **暖白主色**（`{colors.primary}`，`#f7f5f0`）用于 button-primary 底色、页面默认文字和品牌字标，承担品牌识别。
 
-### 表面
-- **页面底色** (`{colors.canvas}` — `#2b2622`:温暖的暗页背景。 `oklch(22.0% 0.004 84.6)`. 稍稍棕色比纯黑色,略微温暖比中性灰色——温暖是品牌的特征.
-- **软画帘** (`{colors.canvas-soft}` — `#383330`:一种较轻的暖暗填充,用于卡片,模具铬,以及伙伴-logo瓷砖.
-- **细边线** (`{colors.hairline}` — `#3f3a36`): 1 px 深层表面的固态分裂器。
+### 界面表面
+- **页面底色**（`{colors.canvas}`，`#2b2622`）由 `oklch(22.0% 0.004 84.6)` 换算，呈略偏褐的暖深色。
+- **柔和深底**（`{colors.canvas-soft}`，`#383330`）用于卡片、界面示意的外框及合作伙伴标识图块。
+- **细分隔线**（`{colors.hairline}`，`#3f3a36`）用于深色表面的 1 px 实线。
 
-### 文本
-- **墨水( 墨水 )** (`{colors.ink}` — `#f7f5f0`:页面底色上的默认文本——与主画相同的非白文字,是有意统一.
-- **强体** (`{colors.body-strong}` — `#dad2c1`:中强调体文字.
-- **体质** (`{colors.body}` — `#c9c0ad`: 副体文字——标题,辅助副本,新闻封面行.
-- **静音** (`{colors.mute}` — `#aea69c`:最优先的文本——时间戳、精细印刷、页脚的第二行。 `oklch(71.5% 0.008 84.6)`.
+### 文字颜色
+- **主文字色**（`{colors.ink}`，`#f7f5f0`）用于页面默认文字，与暖白主色一致。
+- **强调正文色**（`{colors.body-strong}`，`#dad2c1`）用于中等强调的正文。
+- **次级正文色**（`{colors.body}`，`#c9c0ad`）用于图注、辅助说明和媒体报道列表。
+- **弱文字色**（`{colors.mute}`，`#aea69c`）由 `oklch(71.5% 0.008 84.6)` 换算。用于时间戳、小字和页脚次要内容。
 
-### 语义
-The brand doesn't surface a separate error / warning / success palette in its marketing pages. Validation cues come from the unified off-white system; in-product semantic colors live in the terminal application proper.
+### 语义色
+营销页的校验提示沿用统一的暖白色。错误、警告和成功等语义色由终端应用内部定义。
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 Three faces ladder the system:
 1. **Inter** 用于每个显示、身体、按钮、链接和标签角色。重量 400 / 500 与品牌的"一起使用"Inter 倒背"自定义面作为比量兼容的系统倒背.
 2. **DM Mono** for terminal mockups, command snippets, and code blocks. Weight 400 only. Loaded as `--font-dm-mono`.
 3. **Instrument Serif** for occasional editorial italic moments — rare on the marketing surface, but documented as a third face for emphasised tagline-style phrases. **Abel** is also loaded as a fourth fallback for headline emphasis.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -74,7 +74,7 @@ Three faces ladder the system:
 - **负追踪是声音的一部分.** `-1.6 px` 时 间 64 px ,通过显示级别缩小。
 - **Inter 说明, DM Mono 技术方面。** 严格角色分离.
 
-### Note on Font Substitutes
+### 替代字体
 三个面孔都开着或者可以自由装入:
 - **Inter** 直接从 Google 字体装入或 Vercel- 主持CDN(英语:CDN).
 - **DM Mono** ——Google字体开源.
@@ -84,18 +84,18 @@ Three faces ladder the system:
 ## 布局
 
 ### 间距系统
-- **基地单位**: 4 px (偶尔有) 10 px 财务报告和已审计财务报表 6 px 按钮绑定值 。
+- **基地单位**: 4 px (偶尔有) 10 px 和 6 px 按钮绑定值 。
 - **脚本**: `{spacing.xxs}` 2 px · `{spacing.xs}` 4 px · `{spacing.sm}` 8 px · `{spacing.md}` 10 px · `{spacing.lg}` 16 px · `{spacing.xl}` 24 px · `{spacing.2xl}` 32 px · `{spacing.3xl}` 48 px · `{spacing.4xl}` 64 px · `{spacing.5xl}` 96 px.
 - **分区编栏**: 首屏/ 内容带使用 `{spacing.5xl}` 96 px 。在桌面上。
 - **纸牌内部**: 牌坐着 `{spacing.xl}` 24 px.
 
-### 网格容器( C)
+### 网格与容器
 - 营销内容中心,大约 1200 px 宽度。
 - Hero: 2-column at desktop (split between two terminal screenshots), stacks at mobile.
 - 合作伙伴标志 : 5- 收尾的弹性排。
 - 下载牌 : 3- 上桌面(Mac / Linux / Windows), 1- 移动。
 
-### 反应战略
+### 响应式布局
 
 #### 断点
 
@@ -108,18 +108,18 @@ Three faces ladder the system:
 #### 触控区域
 按钮渲染到 ~36 px 高( 高)8 px 垂直粘贴+ 20 px line-height)通过额外的垫板与WCAG相遇,移动充气区 44 × 44 px 楼层。
 
-#### 折叠战略
+#### 窄屏布局调整
 - Nav: full link row + Sign in / Download right cluster at desktop. Hamburger at mobile.
 - 首屏终端-模具拆分:在移动时垂直堆栈.
 - Press / job rows: full-width single column; stay legible at all widths.
 
-#### 图像行为
+#### 图片适配
 - **终端模型**: 以暗卡形式, 并使用内部实际的终端 UI( 暖页面底色 + 彩色语法) 。 光谱比 ~3:2.
 - **合伙人标志**: 暗片牌上的单色SVG.
 - **证词肖像**: 1:1 内侧正方形作物 `{rounded.md}` 硬币卡。
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -132,7 +132,7 @@ The brand uses surface-contrast and hairline borders for elevation; soft drop-sh
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -144,7 +144,7 @@ The brand uses surface-contrast and hairline borders for elevation; soft drop-sh
 | `{rounded.lg}` | 6px | 略大牌(一说). |
 | `{rounded.pill}` | 9999px | 图标容器,状态胶囊形。 |
 
-### 摄影几何
+### 图片形状
 - 终端模型 : ~3:2 内 `{rounded.md}` 硬币卡。
 - 合伙人标识: 一致的单色 SVG 24 px 高在瓷砖内卡。
 - 证相画像: 1:1 内置正方形 `{rounded.md}`.
@@ -163,33 +163,33 @@ The brand uses surface-contrast and hairline borders for elevation; soft drop-sh
 **`button-icon-circular`** - 电话 circular 图标容器。
 - Background `{colors.canvas}`, ink icon, shape `{rounded.full}`. Used for nav controls (search, theme).
 
-### 纸牌和集装箱
+### 卡片与容器
 
-**`card-content`** ——默认内容卡开 canvas-soft.
-- Background `{colors.canvas-soft}`, text `{colors.ink}`, 1 px solid `{colors.hairline}`, padding `{spacing.xl}`, shape `{rounded.md}`.
+**`card-content`**：默认内容卡，使用 canvas-soft 底色。
+- 底色为 `{colors.canvas-soft}`，文字为 `{colors.ink}`，使用 1 px 实线边框 `{colors.hairline}`、内边距 `{spacing.xl}` 和圆角 `{rounded.md}`。
 
-**`card-mockup`** ——终端-截图模拟卡.
-- Same chrome as `card-content` but body in `{typography.code}` (DM Mono) when text appears inside.
+**`card-mockup`**：终端截图示意卡。
+- 容器样式沿用 `card-content`。卡内文字使用 `{typography.code}`（DM Mono）。
 
-**`download-tile`** ——Mac / Linux / Windows下载瓦片.
-- Background `{colors.canvas-soft}`, text `{colors.ink}`, hairline border, padding `{spacing.xl}`, shape `{rounded.md}`. Hosts a platform icon + label + download CTA.
+**`download-tile`**：Mac / Linux / Windows 下载卡片。
+- 底色为 `{colors.canvas-soft}`，文字为 `{colors.ink}`，配细边框、内边距 `{spacing.xl}` 和圆角 `{rounded.md}`。卡内放置平台图标、标签及下载按钮。
 
-**`partner-logo-tile`** - 电话 canvas-soft 砖头主机为合作伙伴标志.
-- Background `{colors.canvas-soft}`, monochrome logo SVG inside, padding `{spacing.lg}`, shape `{rounded.md}`.
+**`partner-logo-tile`**：显示合作伙伴标识的 canvas-soft 图块。
+- 底色为 `{colors.canvas-soft}`，放置单色 SVG 标识，内边距为 `{spacing.lg}`，圆角为 `{rounded.md}`。
 
-**`testimonial-card`** ——单引文风格的卡片,带有肖像.
-- Background `{colors.canvas-soft}`, text `{colors.ink}`, padding `{spacing.xl}`, shape `{rounded.md}`. Portrait 1:1 + body in `{typography.body-md}`.
+**`testimonial-card`**：带人物肖像的单条推荐语卡。
+- 底色为 `{colors.canvas-soft}`，文字为 `{colors.ink}`，内边距为 `{spacing.xl}`，圆角为 `{rounded.md}`。肖像比例为 1:1，正文使用 `{typography.body-md}`。
 
-**`press-row`** ——新闻封面榜项目.
-- Background `{colors.canvas}` (no fill — sits on the canvas band), 1 px solid bottom border `{colors.hairline}`, body in `{typography.body-md}`, padding `{spacing.lg}` 0.
+**`press-row`**：媒体报道列表项。
+- 沿用所在区块的 `{colors.canvas}` 底色。底边使用 1 px 实线 `{colors.hairline}`，正文使用 `{typography.body-md}`，内边距为 `{spacing.lg}` 0。
 
-**`job-row`** ——"加入我们团队"项目列表(单行每张开场角色).
-- Background `{colors.canvas}`, 1 px solid bottom border, body in `{typography.body-md-strong}`, padding `{spacing.lg}` 0.
+**`job-row`**：「加入团队」列表项，每个职位独占一行。
+- 底色为 `{colors.canvas}`，底边使用 1 px 实线，正文使用 `{typography.body-md-strong}`，内边距为 `{spacing.lg}` 0。
 
-### 输入表单( F)
+### 输入框与表单
 
-**`text-input`** ——暗黑的canvas文本输入.
-- Background `{colors.canvas-soft}`, text `{colors.ink}`, 1 px solid `{colors.hairline}`, body in `{typography.body-sm}`, padding `{spacing.sm} {spacing.md}`, shape `{rounded.sm}`.
+**`text-input`**：暖深色页面上的输入框。
+- 底色为 `{colors.canvas-soft}`，文字为 `{colors.ink}`，使用 1 px 实线边框 `{colors.hairline}`。正文用 `{typography.body-sm}`，内边距为 `{spacing.sm} {spacing.md}`，圆角为 `{rounded.sm}`。
 
 ### 导航
 
@@ -202,60 +202,60 @@ The brand uses surface-contrast and hairline borders for elevation; soft drop-sh
 **`footer`** - 脚步乐队。
 - Background `{colors.canvas}`, text `{colors.body}`, padding `{spacing.3xl} {spacing.xl}`. Body in `{typography.body-sm}`.
 
-### 签名组件
+### 标志性组件
 
-**`hero-band`** —— 主持"黑首屏乐队"的黑首屏乐队. 64-px (英语). Inter 头条.
-- Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.5xl} {spacing.xl}`. Headline `{typography.display-xl}` (64 px / 400 / `-1.6 px`). Below: a 2-column terminal-mockup split.
+**`hero-band`**：深色首屏区块，放置 64-px 的 Inter 标题。
+- 底色为 `{colors.canvas}`，文字为 `{colors.ink}`，内边距为 `{spacing.5xl} {spacing.xl}`。标题用 `{typography.display-xl}`（64 px / 400 / `-1.6 px`），下方双列展示终端界面。
 
-**`content-band`** ——标准内容带.
-- Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.5xl} {spacing.xl}`. Section headline `{typography.display-md}`.
+**`content-band`**：标准内容区块。
+- 底色为 `{colors.canvas}`，文字为 `{colors.ink}`，内边距为 `{spacing.5xl} {spacing.xl}`。区块标题用 `{typography.display-md}`。
 
-### 实例(说明性)
+### 组合示例
 
-> 自动生成的工具包-模拟演示表面(`scripts/derive-examples-block.mjs`。每个 `ex-*` 条目参考: 下游消费者的品牌原始产品(`/preview-design`, `/generate-kit`) 重新皮肤相同 10 表面一致。 `TO_FILL` 标记表示缺失原始人——在LLM判断传中解析.
+> 以下组合场景由 `scripts/derive-examples-block.mjs` 生成。各 `ex-*` 条目复用品牌基础样式，供 `/preview-design` 和 `/generate-kit` 以统一风格呈现同一套 10 个示例。`TO_FILL` 提示有待核对的基础样式。
 
-**`ex-pricing-tier`** ——默认定价等级卡。 feature-card 带品牌的铬 canvas-soft 表面。
+**`ex-pricing-tier`**：默认套餐卡，沿用功能卡结构和品牌 canvas-soft 底色。
 - 属性 : `backgroundColor`, `textColor`, `borderColor`, `rounded`, `padding`
 
-**`ex-pricing-tier-featured`** ——地貌/高亮的层次——极性-浮点表面(暗色填充+光线文字在光线模式下,浅色填充+暗色文字在暗线模式下).
+**`ex-pricing-tier-featured`**：推荐套餐卡。浅色模式中用深底浅字，深色模式中用浅底深字。
 - 属性 : `backgroundColor`, `textColor`, `rounded`, `padding`
 
-**`ex-product-selector`** ——什么是包含的汇总卡——重新用于SaaS/B2B纵横(NOT为字形产品画廊).
+**`ex-product-selector`**：面向 SaaS / B2B 场景的套餐权益摘要卡。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-cart-drawer`** ——订阅摘要——重新用于SaaS/B2B(每件加件的行项目,而非字面车).
+**`ex-cart-drawer`**：SaaS / B2B 订阅摘要，每个附加项单独列出。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `item-divider`
 
-**`ex-app-shell-row`** ——App Shell 实例中的侧边栏导航行. Active State 使用品牌主标.
+**`ex-app-shell-row`**：应用框架示例里的侧栏导航行，以品牌主色标识选中状态。
 - 属性 : `backgroundColor`, `activeIndicator`, `rounded`, `padding`
 
-**`ex-data-table-cell`** — Default data-table th + td chrome. Header uses mono-caps eyebrow typography; body uses body-sm.
+**`ex-data-table-cell`**：数据表格中 th 与 td 的默认样式。表头采用大写等宽字，正文采用 body-sm。
 - 属性 : `headerBackground`, `headerTypography`, `bodyTypography`, `cellPadding`, `rowBorder`
 
-**`ex-auth-form-card`** ——签入/签入卡. 复用. feature-card 铬 text-input 原始人在里面,他们都在里面
+**`ex-auth-form-card`**：登录与注册卡，复用功能卡和 text-input。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-modal-card`** ——模度对话框表面——与 feature-card 以高的阴影盟誓,
+**`ex-modal-card`**：对话框表面，沿用功能卡样式并加浮层投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-empty-state-card`** ——空状态插图框架.
+**`ex-empty-state-card`**：空状态插图容器。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `captionTypography`
 
-**`ex-toast`** ——通知表面. feature-card 形状 + 中阴影。
+**`ex-toast`**：轻提示，沿用功能卡圆角并使用中等投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `typography`
 
 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - Reserve `{colors.primary}` off-white for primary CTA pills and default text. There is no chromatic accent.
-- 紧紧用 `{rounded.sm}` 3 px 或 减 减 `{rounded.md}` 4 px 品牌从来不会用大方的胶囊形来做CTA
-- 设置首屏头条 Inter 字重 400 与 `-1.6 px` 品牌读作很自信
+- 紧紧用 `{rounded.sm}` 3 px 或 `{rounded.md}` 4 px 品牌从来不会用大方的胶囊形来做CTA
+- 设置首屏头条 Inter 字重 400 配合 `-1.6 px` 品牌读作很自信
 - 平对 Inter (判决案件) DM Mono (代码块,终端模型).
 - 保持暖暗的页面底色语气——纯黑色打破品牌身份.
 
-### Don't
+### 应避免的做法
 - Don't introduce a chromatic brand accent. The off-white-on-warm-dark IS the brand's voice.
 - Don't render the hero headline in heavy weight (700+). The brand's display is intentionally light.
 - Don't use generous pill CTAs. The brand's button radius is 3-4 px, almost rectangular.

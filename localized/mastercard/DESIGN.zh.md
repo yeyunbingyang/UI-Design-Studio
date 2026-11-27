@@ -61,12 +61,12 @@ Mastercard 使用核心UI中不使用程序梯度。“渐变”的视觉印象�
 
 ## 3. 字法规则
 
-### 字体家族
+### 字体族
 - **主要**: `MarkForMC` — Mastercard专有几何语源。每页上的标题、段落、按钮、导航链接和页脚链接。
 - **次要**: `MarkOffcForMC` ——少数场合(法律文本,部分形式)使用的"官"切.
 - **倒数堆栈**: `SofiaSans, Arial, sans-serif` 索菲亚·桑斯是一个合理的开源站; Arial 是一个网络安全倒计时的最后一个。
 
-### 等级
+### 字号层级
 
 | Role | Size | Weight | Line Height | Letter Spacing | Notes |
 |------|------|--------|-------------|----------------|-------|
@@ -87,11 +87,11 @@ Mastercard 使用核心UI中不使用程序梯度。“渐变”的视觉印象�
 - **单峰系统**。 抵制为对比性添加第二个字型的冲动。对比性来自比例、字重和 letter-spacing,而不是从 serif 或显示强调色。
 - **Line-height ratio drops with size**. H1 is 1:1, H3 is 1.2, body is 1.4. Tight display, comfortable reading.
 
-### Note on Font Substitutes
+### 替代字体
 MarkForMC is proprietary and licensed. When rebuilding a matching aesthetic without access to the original:
 - **索菲亚·桑斯** (Google Fonts)是最接近的开源匹配——它已经进入了 Mastercard已经宣布为倒数堆。
 - **Inter** 重量 450/500/700 做为通用的立体;期望稍高的x高和松散的字母形状.
-- **诺伊 Haas 格罗特斯克** 或 减 减 **Geist** 能够大致显示商业项目中的几何感觉。
+- **诺伊 Haas 格罗特斯克** 或 **Geist** 能够大致显示商业项目中的几何感觉。
 - 不论使用哪一种替代品,都保留 **-2% letter-spacing 头条新闻** 编辑 **450 字重** (使用时 `font-weight: 450` 带有可变字体,或替换 `font-weight: 400` 紧紧地拉紧 letter-spacing 由 ~-0.5% —— 补偿。
 
 
@@ -149,7 +149,7 @@ MarkForMC is proprietary and licensed. When rebuilding a matching aesthetic with
 - 大小 : 40px 木马控制器的最小直径; 80px 首屏视频播放
 - 用于: 木马帕吉尼化/游戏暂停、首屏视频播放、搜索切换
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **首屏媒体框架( Stadium)**
 - Background: Dark video or full-bleed imagery (typically black `#000000` or `#2B2B2B` behind video)
@@ -182,7 +182,7 @@ MarkForMC is proprietary and licensed. When rebuilding a matching aesthetic with
 - 位置: 画像圈后面层, 取景器边缘流血
 - 目的:设定部分主题而不与前景副本竞争
 
-### 输入表单( F)
+### 输入框与表单
 最小形式在营销页面上表面。 导航头中的搜索输入是 :
 - Initial 状态: a 48px circular 按钮,带有放大镜图标
 - Expanded state: horizontal input field, border `1px solid` Ink Black at ~50% opacity, radius 999px, padding 12px 24px, white background
@@ -211,7 +211,7 @@ MarkForMC is proprietary and licensed. When rebuilding a matching aesthetic with
 
 ### 图像处理
 
-- **使用的光谱比率**: 1:1 (所有服务肖像——被剪成圆形), ~3:4 或 减 减 ~4:5 (木卫一胶囊形), 16:9 或更大(首屏录像机)
+- **使用的光谱比率**: 1:1 (所有服务肖像——被剪成圆形), ~3:4 或 ~4:5 (木卫一胶囊形), 16:9 或更大(首屏录像机)
 - **满血对加**:首屏在全景港有沟槽;服务肖像总是以柱子为中心,周围宽敞的白空间;页脚图像很少见.
 - **化妆**: 侵略性 circular 遮掩是定义处理法——方源图像被裁剪成完美的匹配直径圆圈. 永不使用矩形服务图像.
 - **懒惰装入**编号: 标准 `loading="lazy"` 与奶油色的占位符的柔软模糊过渡,在装载时保留暖色板
@@ -245,19 +245,19 @@ A signature motif: thin (~1–1.5px) single-weight curved lines in Light Signal 
 - **Card internal padding**: 32–40px on desktop, ~24px on mobile
 - **Nav top margin**: ~24px from viewport top (the pill floats, doesn't touch)
 
-### 网格容器( C)
+### 网格与容器
 - **最大内容宽度**: ~1200–1280px 以 ~48–100px 水平沟道
 - **列图案**: 12- 隐含的栏目,但实际的布局 2- 不对称(左大标题,右支持文本), 1- 上全血(首屏,视频),或错开的单相画(服务卡坐落在不同的网格位置,产生"星座"的感觉)
 - **Footer grid**: 4 equal columns on desktop, collapses to single column accordion on mobile
 
-### 白空间哲学
+### 留白规则
 Mastercard 将白空间作为结构,而不是缺空。典型的服务部分有:
 - 占据顶部的鬼头条 ~40% 部分(主要是空奶油)
 - 单人 circular 肖像画定位 ~60% 下, 左右不对称
 - ~300–500px 图片和下一节之间的空白页面底色
 This deliberate emptiness tells the eye "slow down, read one thing at a time" — the opposite of dense dashboard UIs.
 
-### 圆角刻度
+### 圆角层级
 
 | 半径 | 使用 |
 |--------|-----|
@@ -291,11 +291,11 @@ Mastercard 使用阴影作为 **大气衬垫**,而不是方向光。 2 阴影有
 
 ## 7。 。 。 。 。 。
 
-### 执行
+### 建议做法
 - Use Canvas Cream (`#F3F0EE`) as the default body background — never pure white
 - 遮罩服务/地形图象为完美的圆圈,而非矩形或圆形矩形
 - 将一颗白色卫星 CTA 附加在每颗卫星的右下角 circular 肖像画
-- 以 MarkForMC 字重设置头条 500 与 -2% letter-spacing
+- 以 MarkForMC 字重设置头条 500 配合 -2% letter-spacing
 - 使用重 450 (无) 400) 用于正文段落
 - 将初级CTA作为墨黑胶囊形(20px 半径),带有奶油文字
 - 仅在同意、法律或遵守行动时使用信号橙
@@ -303,7 +303,7 @@ Mastercard 使用阴影作为 **大气衬垫**,而不是方向光。 2 阴影有
 - Build page rhythm from three surface tones: canvas cream → lifted cream → ink footer
 - Use thin Light Signal Orange arcs between service cards to imply connection
 
-### Don't
+### 应避免的做法
 - Don't use pure white as a page background — it breaks the warm editorial tone
 - Don't round image frames at 8–16px — Mastercard either uses full-pill, 40px, or full-circle. In-between radii look generic
 - 使用信号橙来销售CTA ——它读作饼干同意的橙色,淡化了合法的颜色信号
@@ -329,14 +329,14 @@ Mastercard 使用阴影作为 **大气衬垫**,而不是方向光。 2 阴影有
 ### 触控区域
 全部交互要素均可以轻松超过 44×44px. CTA号卫星(圆形+箭头)是 ~50–60px。导航胶囊形按钮是 ~48px 高,移动汉堡包和搜索是 48×48px。下面没有链接或按钮 40px 任何断点
 
-### 折叠战略
+### 窄屏布局调整
 - **导航**:全丸 → 配汉堡的紧凑胶囊形 胶囊形形状保存在断点上——总是圆形,总是漂浮.
 - **Service grid**: asymmetric constellation → 2-up → 1-up stack. Orbital arcs are removed on mobile (they only work with asymmetric placement).
 - **间距**: 区域垂直粘贴压缩 128px 改为: 48px 手机上,我刚从电话里找到的
 - **内容**:两栏首屏(左头线/右支持文本)变为堆叠(上头线,下方支持文本).
 - **Footer**: 4 columns → 1 column accordion with chevron toggles per section.
 
-### 图像行为
+### 图片适配
 Circular portraits scale proportionally (maintaining the perfect circle at every size). Hero video frames maintain their 40px radius at every breakpoint, but the frame itself shrinks with the viewport. Lazy loading is standard with a cream-tinted blur-up placeholder, preserving the palette during load.
 
 
@@ -356,7 +356,7 @@ Circular portraits scale proportionally (maintaining the perfect circle at every
 
 ### 示例组件提示
 - "Create a circular portrait card 300px in diameter, with a square photograph cropped to a perfect circle. Attach a 56px white satellite button with a dark arrow icon at the bottom-right, so it protrudes ~40% outside the portrait. Below the portrait, add an eyebrow label with a Light Signal Orange dot and uppercase 'SERVICES' text in MarkForMC weight 700 at 14px. Below the eyebrow, set a 24px / weight 500 title in Ink Black."
-- "设计主CTA按钮:墨黑(`#141413`()背景, Canvas Cream (英语).`#F3F0EE`文本, 20px border-radius, 6px 垂直和 24px 水平粘贴, MarkForMC 字体在 16px 字重 500 与 -2% letter-spacing."
+- "设计主CTA按钮:墨黑(`#141413`()背景, Canvas Cream (英语).`#F3F0EE`文本, 20px border-radius, 6px 垂直和 24px 水平粘贴, MarkForMC 字体在 16px 字重 500 配合 -2% letter-spacing."
 - "制造了漂浮的导航胶囊形:白色背景与 `rgba(0, 0, 0, 0.04) 0px 4px 24px 0px` 阴影 999px border-radius, ~16px 垂直和 40px 水平内粘贴。 定位它 24px 位于风景港顶部,以中央为中心, Mastercard 左侧的标志, 以 48px 差额,a circular 48px 右侧的搜索按钮".
 - "创造首屏媒体框架: 40px border-radius 在所有角落,全视角宽度减 48px 沟槽, ~60% 观光港高度,视频内容的黑暗背景,直接放在奶油布上,没有阴影".
 - "Design a footer: Ink Black (`#141413`) background, white text, 4-column link grid with uppercase muted column headers at 14px weight 700 +4% tracking. Include a large conversational H2 above the grid, a 1px white-at-30%-opacity horizontal divider below, and a bottom row with copyright, legal small-print links, a pill-shaped country selector, and four social icons."
@@ -373,6 +373,6 @@ When refining existing screens generated with this design system:
 ### 已知缺口
 - The live page uses MarkForMC, a proprietary licensed typeface. Sofia Sans is the closest open-source substitute and is listed in Mastercard's own fallback stack.
 - 平板断点细节( Q)768–1023px中间布局可能因区而异。
-- 后面鬼水印头条用的"低声"奶油调 circular 肖像画的读取 `#E8E2DA` 财务报告和已审计财务报表 `#D1CDC7` ; 准确值各节不同。
+- 后面鬼水印头条用的"低声"奶油调 circular 肖像画的读取 `#E8E2DA` 和 `#D1CDC7` ; 准确值各节不同。
 - 第三方同意橙色(`#CF4500`)是(这是) Mastercard与任何营销CTA颜色不相混淆
 - 电话 Mastercard 标志( 红色) `#EB001B` + 黄色 `#F79E1B`)是品牌资产,而不是UI调色板条目.

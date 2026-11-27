@@ -16,7 +16,7 @@ Type carries the second decisive voice. The proprietary `WF Visual Sans Variable
 **关键特征 :**
 - A two-colour conversion hierarchy — `{colors.primary}` near-black for every primary CTA, white-on-hairline for every secondary. Chromatic accents are used as full surface fills on category cards, never as button backgrounds.
 - The brand's signature is its **five-stop chromatic category palette**: purple / pink / blue / orange / green, each tied to a product surface. Used at full saturation as card fills.
-- 首屏打字机在以下地点 80 px 字重 600 与 `-0.8 px` 追踪——有约束,自信,从来不会打广告牌.
+- 首屏打字机在以下地点 80 px 字重 600 配合 `-0.8 px` 追踪——有约束,自信,从来不会打广告牌.
 - WF Visual Sans Variable 是一个家族; 品牌没有单独使用 sans 来表示身体 / 显示。 WFVisualSans-Mono / Inconsolata 仅用于技术标题。
 - Tight `{rounded.sm}` 4 px button geometry; cards at `{rounded.md}` 8 px. The brand never uses pill CTAs.
 - 将多面面面的投影带分层在特色牌上——该品牌唯一的高架提示.
@@ -24,7 +24,7 @@ Type carries the second decisive voice. The proprietary `WF Visual Sans Variable
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Ink Black** (`{colors.primary}` — `#080808`): The brand's primary conversion colour. Every primary CTA, every heading, every wordmark. Deeper than pure black to read as branded.
 - **紫色铜色** (`{colors.accent-purple}` — `#7a3dff`:五色类强调色之一——用于设计/制造产品表面.
 - **粉红色** (`{colors.accent-pink}` — `#ed52cb`: 紫红强调色——用于动画/交互产品表面.
@@ -36,11 +36,11 @@ Type carries the second decisive voice. The proprietary `WF Visual Sans Variable
 - **黄褐色** (`{colors.accent-yellow}` — `#ffae13`:用于警告/协作产品表面.
 - **红调** (`{colors.accent-red}` — `#ee1d36`: 用于错误/ 破坏性状态。
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — `#ffffff`: 默认的页面背景.
 - **细边线** (`{colors.hairline}` — `#d8d8d8`): 1 px 固态边框——输入边框,卡色素,分界线.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — `#080808`: 默认文本和标题.
 - **墨水坚固** (`{colors.ink-strong}` — `#222222`:近黑强调.
 - **体质** (`{colors.body}` — `#363636`: 默认正文段落颜色.
@@ -48,7 +48,7 @@ Type carries the second decisive voice. The proprietary `WF Visual Sans Variable
 - **静音** (`{colors.mute}` — `#898989`: 低优先级文本.
 - **静音软音** (`{colors.mute-soft}` — `#ababab`:最轻的文本角色——占位符文本,精细印刷.
 
-### 语义
+### 语义色
 - **信息蓝** (`{colors.accent-blue-info}` — `#146ef5`:信息徽章/通知.
 - **成功绿色** (`{colors.accent-green}` — `#00d722`: 成功指标。
 - **警告黄色** (`{colors.accent-yellow}` — `#ffae13`: 警告状态.
@@ -57,10 +57,10 @@ Type carries the second decisive voice. The proprietary `WF Visual Sans Variable
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 A single proprietary family carries every typographic role: **WF Visual Sans Variable** (with `Arial` system fallback). Weights 400 / 500 / 550 / 600 are present; the brand never uses 700 / 800 / 900. A monospace variant — **WFVisualSans-Mono** with `Inconsolata` fallback — handles rare technical caption moments and code-style labels. OpenType features `"ss02"`, `"ss10"`, `"zero"` are enabled in the mono variant for the styled zero glyph.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -87,9 +87,9 @@ A single proprietary family carries every typographic role: **WF Visual Sans Var
 - **Uppercase eyebrows mark every section.** 15 px / weight 500 / `1.5 px` positive tracking is the brand's signature label style.
 - **Single family across the system.** No separate display vs body face. The variable axes do the work.
 
-### Note on Font Substitutes
+### 替代字体
 WF Visual Sans Variable 专有。开源替代品 :
-- **显示 + 体** — *Inter* 重量 400 / 500 / 600 与 `font-feature-settings: "ss01"` 启用是最接近的样式匹配 。
+- **显示 + 体** — *Inter* 重量 400 / 500 / 600 配合 `font-feature-settings: "ss01"` 启用是最接近的样式匹配 。
 - **单声道** — *Inconsolata* (文件记载的倒计时)或 *DM Mono*.
 
 
@@ -101,12 +101,12 @@ WF Visual Sans Variable 专有。开源替代品 :
 - **分区编栏**: 首屏/ 内容带使用 `{spacing.3xl}` 32 px 垂直间隔宽大的沟槽.
 - **纸牌内部贴纸**: 特性和定价卡 `{spacing.3xl}` 32 px.
 
-### 网格容器( C)
+### 网格与容器
 - 销售集装箱很宽(实际上与 `{spacing.3xl}` 沟渠).
 - 类别卡 grid: 2 / 3-up at desktop with mixed sizing (some larger feature cards span 2 columns).
 - 定价等级 grid: 3-up at desktop, 1-up at mobile.
 
-### 反应战略
+### 响应式布局
 
 #### 断点
 
@@ -120,23 +120,23 @@ WF Visual Sans Variable 专有。开源替代品 :
 #### 触控区域
 Buttons render at ~44 px (12 px vertical padding + 25.6 px line-height). WCAG AAA met.
 
-#### 折叠战略
+#### 窄屏布局调整
 - 导航: 桌面全链接行。 移动式汉堡 。
 - 类别卡 grid: 2 / 3 / 4-up at desktop, drops to 1-up at mobile.
 - Pricing tier: 3 / 4-up at desktop, 1-up at mobile.
 
-#### 图像行为
+#### 图片适配
 - 分类卡:全血固色填充(无摄影).
 - 产品截图 : 16:9 内 `{rounded.md}` 硬币卡。
 - 市场表面没有肖像画
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
 | Level 0 — Flat | No shadow, no border. | Default bands. |
-| 职等 1 —— 细边线 | 1 px 固态 `{colors.hairline}` 边框 `{colors.canvas}`. | 默认卡的铬和输入边框 。 |
+| 职等 1 —— 细边线 | 1 px 固态 `{colors.hairline}` 边框 `{colors.canvas}`. | 默认卡的界面框架和输入边框 。 |
 | 职等 2 - 层状投放 | 带有微妙的温暖抵消的多站式层阴影—— `0 84px 24px rgba(0,0,0,0), 0 54px 22px rgba(0,0,0,0.01), 0 30px 18px rgba(0,0,0,0.04), 0 13px 13px rgba(0,0,0,0.08), 0 3px 7px rgba(0,0,0,0.09)`. | 需要显式升降的特制卡片. |
 | Level 3 — Layered Drop Strong | Deeper version of Level 2 with `0.12` final offset opacity. | Pricing / modal-level emphasis. |
 | Level 4 — Heavy Modal | Extremely heavy multi-stop — `0 24px 24px rgba(0,0,0,0.26), 0 6px 13px rgba(0,0,0,0.29)` final stops. | Modal / dialog surfaces. |
@@ -148,7 +148,7 @@ Buttons render at ~44 px (12 px vertical padding + 25.6 px line-height). WCAG AA
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -175,7 +175,7 @@ Buttons render at ~44 px (12 px vertical padding + 25.6 px line-height). WCAG AA
 **`button-icon-circular`** - 电话 circular 图标按钮用于旋转木马控件。
 - Background `{colors.canvas}`, ink icon, shape `{rounded.full}`.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`card-feature`** ——页面底色上的犬科特征卡.
 - Background `{colors.canvas}`, text `{colors.ink}`, 1 px solid `{colors.hairline}`, padding `{spacing.3xl}`, shape `{rounded.md}`. Often elevated to Level 2 shadow when featured.
@@ -186,7 +186,7 @@ Buttons render at ~44 px (12 px vertical padding + 25.6 px line-height). WCAG AA
 **`card-pricing`** - 电话 pricing-tier 纸牌。
 - Background `{colors.canvas}`, text `{colors.ink}`, hairline border, padding `{spacing.3xl}`, shape `{rounded.md}`. Layered shadow on the featured tier.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——文体文字输入.
 - Background `{colors.canvas}`, text `{colors.ink}`, 1 px solid `{colors.hairline}`, body in `{typography.body-md}`, padding `{spacing.md} {spacing.lg}`, shape `{rounded.sm}`.
@@ -197,12 +197,12 @@ Buttons render at ~44 px (12 px vertical padding + 25.6 px line-height). WCAG AA
 - Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.lg} {spacing.3xl}`.
 
 **`nav-link`** ——内部链接项目 `nav-bar`.
-- 文本 `{colors.ink}`,设置在 `{typography.body-sm-strong}`.
+- 文字颜色 `{colors.ink}`,设置在 `{typography.body-sm-strong}`.
 
 **`footer`** - 脚步乐队。
 - Background `{colors.canvas}`, text `{colors.body-mid}`, padding `{spacing.3xl} {spacing.3xl}`. Body in `{typography.body-sm}`.
 
-### 签名组件
+### 标志性组件
 
 **`hero-band`** - 白色首屏乐队
 - Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.3xl} {spacing.3xl}`. Headline in `{typography.display-xxl}` (80 px weight 600).
@@ -231,53 +231,53 @@ Buttons render at ~44 px (12 px vertical padding + 25.6 px line-height). WCAG AA
 **`badge-info`** + **`badge-info-soft`** ——以固蓝或软轮廓为信息徽章.
 - 已填充: bg `{colors.accent-blue-info}` 文字白。软: bg 页面底色,文本 `{colors.accent-blue-info}`。在两个地点 `{typography.caption}` (12.8 px 字重 550)——品牌的签名. 550- 重度字幕 - 重度字幕 - 重度字幕 - 重度字幕
 
-### 实例(说明性)
+### 组合示例
 
-> 自动生成的工具包-模拟演示表面(`scripts/derive-examples-block.mjs`。每个 `ex-*` 条目参考: 下游消费者的品牌原始产品(`/preview-design`, `/generate-kit`) 重新皮肤相同 10 表面一致。 `TO_FILL` 标记表示缺失原始人——在LLM判断传中解析.
+> 以下组合场景由 `scripts/derive-examples-block.mjs` 生成。各 `ex-*` 条目复用品牌基础样式，供 `/preview-design` 和 `/generate-kit` 以统一风格呈现同一套 10 个示例。`TO_FILL` 提示有待核对的基础样式。
 
-**`ex-pricing-tier`** ——默认定价等级卡。 feature-card 带品牌的铬 canvas-soft 表面。
+**`ex-pricing-tier`**：默认套餐卡，沿用功能卡结构和品牌 canvas-soft 底色。
 - 属性 : `backgroundColor`, `textColor`, `borderColor`, `rounded`, `padding`
 
-**`ex-pricing-tier-featured`** ——地貌/高亮的层次——极性-浮点表面(暗色填充+光线文字在光线模式下,浅色填充+暗色文字在暗线模式下).
+**`ex-pricing-tier-featured`**：推荐套餐卡。浅色模式中用深底浅字，深色模式中用浅底深字。
 - 属性 : `backgroundColor`, `textColor`, `rounded`, `padding`
 
-**`ex-product-selector`** ——什么是包含的汇总卡——重新用于SaaS/B2B纵横(NOT为字形产品画廊).
+**`ex-product-selector`**：面向 SaaS / B2B 场景的套餐权益摘要卡。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-cart-drawer`** ——订阅摘要——重新用于SaaS/B2B(每件加件的行项目,而非字面车).
+**`ex-cart-drawer`**：SaaS / B2B 订阅摘要，每个附加项单独列出。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `item-divider`
 
-**`ex-app-shell-row`** ——App Shell 实例中的侧边栏导航行. Active State 使用品牌主标.
+**`ex-app-shell-row`**：应用框架示例里的侧栏导航行，以品牌主色标识选中状态。
 - 属性 : `backgroundColor`, `activeIndicator`, `rounded`, `padding`
 
-**`ex-data-table-cell`** — Default data-table th + td chrome. Header uses mono-caps eyebrow typography; body uses body-sm.
+**`ex-data-table-cell`**：数据表格中 th 与 td 的默认样式。表头采用大写等宽字，正文采用 body-sm。
 - 属性 : `headerBackground`, `headerTypography`, `bodyTypography`, `cellPadding`, `rowBorder`
 
-**`ex-auth-form-card`** ——签入/签入卡. 复用. feature-card 铬 text-input 原始人在里面,他们都在里面
+**`ex-auth-form-card`**：登录与注册卡，复用功能卡和 text-input。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-modal-card`** ——模度对话框表面——与 feature-card 以高的阴影盟誓,
+**`ex-modal-card`**：对话框表面，沿用功能卡样式并加浮层投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-empty-state-card`** ——空状态插图框架.
+**`ex-empty-state-card`**：空状态插图容器。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `captionTypography`
 
-**`ex-toast`** ——通知表面. feature-card 形状 + 中阴影。
+**`ex-toast`**：轻提示，沿用功能卡圆角并使用中等投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `typography`
 
 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` (`#080808`),每个主CTA,每个标题,每个词标,近黑是转换颜色.
 - 使用五色调的强调色(purple / p粉红 / 蓝色 / 橙色 / 绿色)作为满分类卡,不作为按钮背景.
-- 设置首屏头条 `{typography.display-xxl}` 字重 600 与 `-0.8 px` 追踪。
+- 设置首屏头条 `{typography.display-xxl}` 字重 600 配合 `-0.8 px` 追踪。
 - 给所有WF视觉圣人家族 分配每个印刷角色
 - 使用 `{rounded.sm}` 4 px 按钮, `{rounded.md}` 8 px 牌子上从不使用避孕药CTA
 - Use layered multi-stop drop-shadows on featured cards — the brand's distinctive elevation recipe.
 
-### Don't
+### 应避免的做法
 - Don't promote button-medium weight to 700+. The brand's weight ceiling is 600.
 - Don't use chromatic accents as button backgrounds. They're surface fills, not actions.
 - Don't render CTAs as pills. The brand's button geometry is tight 4 px rectangle.

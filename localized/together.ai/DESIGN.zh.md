@@ -7,7 +7,7 @@
 
 ## 概览
 
-Together AI 是一个AI云基础设施平台——模型推论,GPU集群,微调,所有使"AI本土云"交付给开发团队的管道,品牌的网络表面信号正是这种姿态:上方是近黑首屏,中间是白色技术内容的长丝带,中间是单一的重复片品牌铬——三色橙色的magenta-periwinkle梯度丝带——完成"我们不仅仅是另一个灰色企业SaaS"的全部工作. 没有任何其他的插图系统. 梯度是品牌.
+Together AI 是一个AI云基础设施平台——模型推论,GPU集群,微调,所有使"AI本土云"交付给开发团队的管道,品牌的网络表面信号正是这种姿态:上方是近黑首屏,中间是白色技术内容的长丝带,中间是单一的重复片品牌界面框架——三色橙色的magenta-periwinkle梯度丝带——完成"我们不仅仅是另一个灰色企业SaaS"的全部工作. 没有任何其他的插图系统. 梯度是品牌.
 
 Type is the second decisive voice. Two faces carry every page: a custom geometric display sans (extracted as `The Future`) for headlines and body, set at weight 500 with tight, slightly-negative letter-spacing so 64-pixel hero type feels poured rather than typed; and an uppercase monospace eyebrow (`PP Neue Montreal Mono`) that labels every section, every button, and every cell header. Headlines are sentence-case; everything technical is uppercase mono. That contrast is the brand's tonal joke — the platform is serious enough to use a monospace label, modern enough to not put the headline in it.
 
@@ -17,35 +17,35 @@ Type is the second decisive voice. Two faces carry every page: a custom geometri
 - 单黑色 `{colors.primary}` 反毒胶囊形携带每个转换目标, 跨越定价、页脚、登录。 `{colors.accent-mint}` 白胶囊形的变体只用于首屏环境
 - A three-color brand gradient (`{colors.accent-orange}` → `{colors.accent-magenta}` → `{colors.accent-periwinkle}`) is the entire decorative system — used as the hero ribbon graphic and never reduced to a swatch elsewhere.
 - All-caps mono eyebrows and button labels in `{typography.mono-caps-eyebrow}` / `{typography.mono-caps-button}` everywhere — section titles, model row headers, "ON-DEMAND" labels in pricing tables.
-- 轻圆的卡片铬在 `{rounded.sm}` 4 px; 关闭一个 `{rounded.xs}` 3.25 px 将定价-塔布胶囊形作为更严格的制度; `{rounded.full}` 仅用于浮式聊天发射器 Orb.
-- 双表面模式- 交替 `{colors.canvas-dark}` 财务报告和已审计财务报表 `{colors.canvas}` 带; 灰色之间没有内置。 单软表面 `{colors.hairline}` 仅用于标记表格头行。
+- 轻圆的卡片界面框架在 `{rounded.sm}` 4 px; 关闭一个 `{rounded.xs}` 3.25 px 将定价-塔布胶囊形作为更严格的制度; `{rounded.full}` 仅用于浮式聊天发射器 Orb.
+- 双表面模式- 交替 `{colors.canvas-dark}` 和 `{colors.canvas}` 带; 灰色之间没有内置。 单软表面 `{colors.hairline}` 仅用于标记表格头行。
 - 一大块 `together.ai` 每一页的底部的文字标记条,设置在 `{typography.display-xxl}` 和几乎在天花板上加了锡(`{colors.hairline}`),作为"我们在这里"的签注,双倍的作为脚步分隔符.
 
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **墨黑笔** (`{colors.primary}` — `#000000`:单色主CTA颜色 黑丸搭载"签名","接触销售","现在就开始",每页脚CTA.
 - **橙色品牌( Brand Orange) Name** (`{colors.accent-orange}` — `#fc4c02`:三色品牌梯度的一段,出现在首屏丝带图形中;从未单独作为UI填充.
 - **白红** (`{colors.accent-magenta}` — `#ef2cc1`:梯度的第二段.
 - **布兰德·佩里温克勒** (`{colors.accent-periwinkle}` — `#bdbbff`:梯度的第三段;也用作一些stat牌的软填充.
 - **品牌薄荷** (`{colors.accent-mint}` — `#c8f6f9`: 生活在梯度以外的糊状青铜片——用于首屏二级-CTA胶囊形和 `stats-card-tinted` 瓷砖。
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — `#ffffff`: 默认产品/定价/docs背景.
 - **细边线/ 软罐头** (`{colors.hairline}` — `#ebebeb`:该品牌的单一软表面基调——用于 data-table 头排, 切换-溢出轨迹, 以及 1 px 表格行之间的分隔符。
-- **暗色画** (`{colors.canvas-dark}` — `#010120`:品牌的暗黑首屏表面;出现在 `hero-band-dark` 财务报告和已审计财务报表 `research-band-dark`.
-- **细边线** (`{colors.hairline}` — `#ebebeb`): 1 px 光表面的分隔器——桌排、卡片铬、徽章边框。
+- **暗色画** (`{colors.canvas-dark}` — `#010120`:品牌的暗黑首屏表面;出现在 `hero-band-dark` 和 `research-band-dark`.
+- **细边线** (`{colors.hairline}` — `#ebebeb`): 1 px 光表面的分隔器——桌排、卡片界面框架、徽章边框。
 - **黑暗的细边线** (`{colors.surface-dark-soft}` — `#26263a`): 1 px 显示分隔符和徽章背景 `{colors.canvas-dark}` 表面;由品牌的半透明-白色-暗色细边线预混合而成.
 - **表面暗软** (`{colors.surface-dark-soft}` — `#313641`:暗带卡内使用稍轻的暗填.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — `#000000`:光表面的每一个标题和身体段落.
 - **Body** (`{colors.body}` — `#999999`): Secondary text — captions, table cell secondary values, footer link text. Pre-blended from the brand's translucent-black 40 % body color.
 - **已静音** (`{colors.body}` — `#999999`:全能的,总和 mono-eyebrow 光面上的文字颜色也在这个符号上骑着——没有单独的"mute"音调,品牌保持了副文字与标题文本一致.
 - **On Dark** (`{colors.on-dark}` — `#ffffff`): All text on `{colors.canvas-dark}` surfaces.
 
-### 语义
+### 语义色
 The brand does not maintain a separate error / success palette in its public surface; validation cues use the primary black or the brand gradient depending on context. No explicit error red, success green, or warning yellow is documented here — adopting framework defaults is appropriate.
 
 ### 品牌渐变
@@ -54,13 +54,13 @@ The brand's signature decoration is a three-stop gradient drawn from `{colors.ac
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 整个系统由两个家庭负责:
 
 1. **A custom geometric display sans** (extracted as `The Future`) for every headline, lead paragraph, body, button label that is not uppercase, and inline link. Weights 400 and 500 are the working pair; the face never appears in bold (700) or heavier. Tight negative letter-spacing (`-1.92 px` at 64 px display, `-0.16 px` at 16 px body) gives the face its slightly-condensed, poured-on-the-page feel.
 2. **An uppercase mono caption face** (extracted as `PP Neue Montreal Mono`) for every eyebrow, button label, table-header cell, and pricing-table tab. Weight 500 at 11–16 px; always uppercase; positive letter-spacing (`0.05 – 0.55 px`). The mono carries the brand's technical voice — every label that says "PRICING", "INFERENCE", "MODEL", "GPU", "GA-DEC '25" is set in this face.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -84,7 +84,7 @@ The brand's signature decoration is a three-stop gradient drawn from `{colors.ac
 - **负数 letter-spacing 只在展示的圣歌上。** 单面使用小正向跟踪;反转这个错误.
 - **Headlines stay sentence-case.** Every uppercase moment belongs to the mono face. Mixing all-caps display would muddy the contrast.
 
-### Note on Font Substitutes
+### 替代字体
 两种主要面孔是专有的。 开源替代:
 - **Display sans** — *Inter* (400 / 500) with `font-feature-settings: "ss01"` enabled comes closest; tighten letter-spacing by ~0.6 % at display sizes to land on the brand's compressed feel. *Geist* is the second-best option but reads slightly wider.
 - **Uppercase mono eyebrow** — *JetBrains Mono* or *Geist Mono* (weight 500) at 11 px with `text-transform: uppercase` matches the brand's voice once tracking is bumped to `0.04em`.
@@ -99,7 +99,7 @@ The brand's signature decoration is a three-stop gradient drawn from `{colors.ac
 - **纸牌内部贴纸**: 研究卡和证照卡坐在那里 `{spacing.2xl}` 24 px 内部; stat-card 使用瓷砖 `{spacing.3xl}` 32 px 给大数字呼吸空间。
 - **内含空档**: 按钮 + 导航行使用 `{spacing.md}` 12 px 兄弟姐妹之间; 使用芯片组 `{spacing.sm}` 8 px.
 
-### 网格容器( C)
+### 网格与容器
 - **最大宽度**: ~1280 px 桌面容器; 任何超此选项。 内容中心水平沟槽 `{spacing.3xl}` 32 px 桌面上, `{spacing.lg}` 16 px 手机上,我刚从电话里找到的
 - **列图案**:
   - Research / testimonial grids: 3-up at desktop, 1-up at mobile.
@@ -108,10 +108,10 @@ The brand's signature decoration is a three-stop gradient drawn from `{colors.ac
   - 定价数据表:全宽,移动式的模型行堆栈.
   - Hero: 50 / 50 split (headline left, ribbon graphic right) at desktop; stacked at mobile with graphic above.
 
-### 白空间哲学
+### 留白规则
 Surface contrast does most of the separation. A dark band ends → 80 px of breathing room → next light band begins. Inside a band, headline and lead paragraph hug close (`{spacing.lg}` 16 px between them), then a wider gap before the supporting visual or CTA cluster. Inside pricing data tables, the brand keeps rows tight (`{spacing.md}` 12 px vertical) — the table reads more like a sheet than a marketing component.
 
-### 反应战略
+### 响应式布局
 
 #### 断点
 
@@ -126,21 +126,21 @@ Surface contrast does most of the separation. A dark band ends → 80 px of brea
 #### 触控区域
 The mono-cap button label is set at 16 px; combined with `{spacing.xs}` 4 px top / bottom and a 24 px horizontal padding, the primary pill renders at roughly 32 px tall. On mobile viewports, button height is inflated to ≥ 44 px through extra vertical padding inside the touch row — meeting WCAG AAA. The circular icon button (`button-icon-circular`) renders at 44 × 44 px minimum at all viewports.
 
-#### 折叠战略
+#### 窄屏布局调整
 - **导航**:全链接行+黑色"签名"丸+桌面"开始"丸. 折叠到标志+移动时的汉堡;菜单作为全覆盖抽屉打开,垂直堆叠的链接列表相同.
 - **Hero**: at desktop, headline left + gradient ribbon right (50 / 50). At mobile, headline stacks above a smaller-scale ribbon — never below.
 - **Research band**: 4-up grid at desktop drops to 2-up at tablet, 1-up at mobile. Card chrome stays identical.
 - **Pricing data table**: at desktop, full-width with all columns visible. At tablet, sub-tab row enables horizontal scroll. At mobile, cell rows stack model-name above price block.
 - **Footer wordmark banner**: scales fluidly — the giant `together.ai` wordmark stays edge-to-edge regardless of viewport.
 
-#### 图像行为
+#### 图片适配
 - **首屏丝带图形**:作为SVG制成,与首屏容器一起流畅地缩放;从不收割,从不重新定位.
 - **证词肖像**平方或圆形 4:5 肖像画,硬画在顶部; 连续的方形框架横跨网格.
 - **文章缩略图**: 16:9 样式,将卡片顶部填充 `{rounded.sm}` 画面上只有角落
 - **标记栏**:客户标志在包装的弹性行中作为灰色比例的SVG渲染.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -157,7 +157,7 @@ The mono-cap button label is set at 16 px; combined with `{spacing.xs}` 4 px top
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -167,11 +167,11 @@ The mono-cap button label is set at 16 px; combined with `{spacing.xs}` 4 px top
 | `{rounded.md}` | 8px | "全高档云"部分内设特色塔布药,更大定价塔布容器. |
 | `{rounded.full}` | 9999px | 浮式聊天发射器或( )`button-icon-circular`),系统内唯一一个完全溢出形状. |
 
-### 摄影几何
+### 图片形状
 - **Hero ribbon**: SVG gradient, free-form; no aspect-ratio constraint.
 - **客户标志**: 矢量,在一致高度下制成灰度(~24 px)在包装的弹性行中.
 - **证词肖像**: 1:1 平方作物有硬角——无阿凡达药.
-- **文章缩略图**: 16:9 与 `{rounded.sm}` 4 px 仅图像上的顶角半径;卡片染色体保持正方形.
+- **文章缩略图**: 16:9 配合 `{rounded.sm}` 4 px 仅图像上的顶角半径;卡片染色体保持正方形.
 
 
 ## 组件
@@ -196,7 +196,7 @@ The mono-cap button label is set at 16 px; combined with `{spacing.xs}` 4 px top
 **`button-icon-circular`** ——每页右下方浮点滴的聊天发射器或圆形.
 - Background `{colors.primary}`, white icon, shape `{rounded.full}`. The only fully-pill shape in the system.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`research-card`** - 电话 4- 黑暗的"前沿研究"乐队的电网卡
 - Background `{colors.canvas-dark}`, text `{colors.on-dark}`, 1 px solid `{colors.surface-dark-soft}` border, padding `{spacing.2xl}`, shape `{rounded.sm}` 4 px. Inside: mono eyebrow tag + display headline + body paragraph.
@@ -213,7 +213,7 @@ The mono-cap button label is set at 16 px; combined with `{spacing.xs}` 4 px top
 **`stats-card-tinted`** ——白色中段乐队上贴的贴心式的stat瓷砖(薄荷,桃子,柏里温克勒).
 - Background `{colors.accent-mint}` (or sibling accent tints), text `{colors.ink}`, big number in `{typography.display-xl}` + label in `{typography.mono-caps-eyebrow}`, padding `{spacing.3xl}`, shape `{rounded.sm}` 4 px.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——启动加速器申请表上的表单输入.
 - Background `{colors.canvas}`, text `{colors.ink}`, 1 px solid `{colors.hairline}` border, body set in `{typography.body-md}`, shape `{rounded.sm}` 4 px.
@@ -224,12 +224,12 @@ The mono-cap button label is set at 16 px; combined with `{spacing.xs}` 4 px top
 - Background `{colors.canvas-dark}` on the hero band, switches to `{colors.canvas}` once the user scrolls past the hero. Text `{colors.on-dark}` on dark, `{colors.ink}` on white. Layout: logo left, link row centre, "Contact sales" + "Sign in" right.
 
 **`nav-link`** ——内侧中枢链接行 `nav-bar`.
-- 文本 `{colors.on-dark}` (或 减 减 ) `{colors.ink}` 滚动后),设置在 `{typography.body-md}` 400 重。链接与 `{spacing.2xl}` 24 px 兄弟姐妹之间。
+- 文字颜色 `{colors.on-dark}` (或 减 减 ) `{colors.ink}` 滚动后),设置在 `{typography.body-md}` 400 重。链接与 `{spacing.2xl}` 24 px 兄弟姐妹之间。
 
 **`footer`** ——底部( 下部) 4- 列队导航
 - Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.section} {spacing.3xl}`. Eyebrow labels in `{typography.mono-caps-eyebrow}`; link rows in `{typography.body-md}`.
 
-### 签名组件
+### 标志性组件
 
 **`hero-band-dark`** ——暗海军首屏开启每张产品/营销页面.
 - Background `{colors.canvas-dark}`, text `{colors.on-dark}`, padding `{spacing.section} {spacing.3xl}`. Headline in `{typography.display-xxl}` (sentence case, never all-caps). Eyebrow in `{typography.mono-caps-eyebrow}`. Two-column layout: headline + CTA cluster on left, gradient ribbon SVG on right.
@@ -261,53 +261,53 @@ The mono-cap button label is set at 16 px; combined with `{spacing.xs}` 4 px top
 **`footer-wordmark-banner`** — the massive `together.ai` wordmark at the bottom of every page.
 - Background `{colors.canvas}`, wordmark colour `{colors.hairline}` (faint stencil tint), set in `{typography.display-xxl}` scaled fluidly to the viewport width. Edge-to-edge, square corners. Acts as the final page sign-off.
 
-### 实例(说明性)
+### 组合示例
 
-> 自动生成的工具包-模拟演示表面(`scripts/derive-examples-block.mjs`。每个 `ex-*` 条目参考: 下游消费者的品牌原始产品(`/preview-design`, `/generate-kit`) 重新皮肤相同 10 表面一致。 `TO_FILL` 标记表示缺失原始人——在LLM判断传中解析.
+> 以下组合场景由 `scripts/derive-examples-block.mjs` 生成。各 `ex-*` 条目复用品牌基础样式，供 `/preview-design` 和 `/generate-kit` 以统一风格呈现同一套 10 个示例。`TO_FILL` 提示有待核对的基础样式。
 
-**`ex-pricing-tier`** ——默认定价等级卡。 feature-card 带品牌的铬 canvas-soft 表面。
+**`ex-pricing-tier`**：默认套餐卡，沿用功能卡结构和品牌 canvas-soft 底色。
 - 属性 : `backgroundColor`, `textColor`, `borderColor`, `rounded`, `padding`
 
-**`ex-pricing-tier-featured`** ——地貌/高亮的层次——极性-浮点表面(暗色填充+光线文字在光线模式下,浅色填充+暗色文字在暗线模式下).
+**`ex-pricing-tier-featured`**：推荐套餐卡。浅色模式中用深底浅字，深色模式中用浅底深字。
 - 属性 : `backgroundColor`, `textColor`, `rounded`, `padding`
 
-**`ex-product-selector`** ——什么是包含的汇总卡——重新用于SaaS/B2B纵横(NOT为字形产品画廊).
+**`ex-product-selector`**：面向 SaaS / B2B 场景的套餐权益摘要卡。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-cart-drawer`** ——订阅摘要——重新用于SaaS/B2B(每件加件的行项目,而非字面车).
+**`ex-cart-drawer`**：SaaS / B2B 订阅摘要，每个附加项单独列出。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `item-divider`
 
-**`ex-app-shell-row`** ——App Shell 实例中的侧边栏导航行. Active State 使用品牌主标.
+**`ex-app-shell-row`**：应用框架示例里的侧栏导航行，以品牌主色标识选中状态。
 - 属性 : `backgroundColor`, `activeIndicator`, `rounded`, `padding`
 
-**`ex-data-table-cell`** — Default data-table th + td chrome. Header uses mono-caps eyebrow typography; body uses body-sm.
+**`ex-data-table-cell`**：数据表格中 th 与 td 的默认样式。表头采用大写等宽字，正文采用 body-sm。
 - 属性 : `headerBackground`, `headerTypography`, `bodyTypography`, `cellPadding`, `rowBorder`
 
-**`ex-auth-form-card`** ——签入/签入卡. 复用. feature-card 铬 text-input 原始人在里面,他们都在里面
+**`ex-auth-form-card`**：登录与注册卡，复用功能卡和 text-input。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-modal-card`** ——模度对话框表面——与 feature-card 以高的阴影盟誓,
+**`ex-modal-card`**：对话框表面，沿用功能卡样式并加浮层投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-empty-state-card`** ——空状态插图框架.
+**`ex-empty-state-card`**：空状态插图容器。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `captionTypography`
 
-**`ex-toast`** ——通知表面. feature-card 形状 + 中阴影。
+**`ex-toast`**：轻提示，沿用功能卡圆角并使用中等投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `typography`
 
 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - Reserve `{colors.primary}` (`#000000`) for every primary CTA. One black pill per visible viewport — that consistency is the brand's whole conversion story.
 - 设置每个区域眉毛和按钮标签 `{typography.mono-caps-button}` / `{typography.mono-caps-eyebrow}` ——大写单数,正数跟踪.
-- 标牌梯度对齐(`{colors.accent-orange}` → `{colors.accent-magenta}` → `{colors.accent-periwinkle}`),仅以首屏尺度表示. 梯度是品牌铬; 绝不缩窄到图标大小.
+- 标牌梯度对齐(`{colors.accent-orange}` → `{colors.accent-magenta}` → `{colors.accent-periwinkle}`),仅以首屏尺度表示. 梯度是品牌界面框架; 绝不缩窄到图标大小.
 - 循环页面表面 `{colors.canvas-dark}` → `{colors.canvas}` → `{colors.canvas-dark}` 节奏;暗光对比比任何阴影都更能带高.
 - Use `{rounded.sm}` 4 px as the canonical card / button radius across the system; reserve `{rounded.full}` for the single floating chat-launcher orb.
 - Render the giant `together.ai` wordmark banner at the bottom of every long page in `{typography.display-xxl}`, tinted toward `{colors.hairline}` so it reads as a stencil — not as a heavy footer title.
 
-### Don't
+### 应避免的做法
 - Don't introduce a fifth accent colour. The three-stop gradient + mint pill is the entire decorative palette; new accents flatten the brand.
 - Don't set body paragraphs in the mono face. The mono is for labels only; long-form mono reads as a console log, not as marketing copy.
 - Don't centre-align body paragraphs under a left-aligned display headline. The brand keeps text-block alignment consistent within a copy stack.

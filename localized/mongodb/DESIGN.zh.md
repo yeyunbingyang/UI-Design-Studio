@@ -23,7 +23,7 @@ The system uses Euclid Circular A as its display face. The face is contemporary 
 
 > Source pages: mongodb.com/ (homepage), /products/platform/atlas-database (Atlas product), /products/self-managed/community-edition, learn.mongodb.com/ (MongoDB University), /solutions/use-cases/artificial-intelligence (AI), /pricing (3-tier comparison). Token coverage was identical across all six pages.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **MongoDB 绿色** ({colors.brand-green}:品牌最可识别的信号——亮胶囊形-CTA颜色
 - **Green Dark** ({colors.brand-green-dark}): Inline link color, secondary green
 - **绿色中间** ({colors.brand-green-mid}: 大气锡的中色谱绿色
@@ -38,10 +38,10 @@ The system uses Euclid Circular A as its display face. The face is contemporary 
 - **粉红色** ({colors.accent-pink}: 课程标签变体
 - **蓝天** ({colors.accent-blue}:地图集/云层专题的路线标记变体
 
-### 表面
+### 界面表面
 - **Canvas White** ({colors.canvas}): Page background and primary card surface
 - **暗色画** ({colors.canvas-dark}): Code-block 黑底模布,背景
-- **表面** ({colors.surface}: 细小的一节背景, search-pill 休息时间
+- **界面表面** ({colors.surface}: 细小的一节背景, search-pill 休息时间
 - **表面软** ({colors.surface-soft}: 静静分科
 - **表面特性** ({colors.surface-feature}: 显式定价等级的淡薄荷背景
 - **细边线** ({colors.hairline}): 1px 边界和主要分隔
@@ -49,7 +49,7 @@ The system uses Euclid Circular A as its display face. The face is contemporary 
 - **发条坚固** ({colors.hairline-strong}: 强壮 1px 输入边框
 - **细边线暗** ({colors.hairline-dark}: 暗面的边框
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** ({colors.ink}:主要头条和正文(深海军-舰队)
 - **木炭矿** ({colors.charcoal}:机构重点
 - **标 题** ({colors.slate}: 副文本
@@ -59,18 +59,18 @@ The system uses Euclid Circular A as its display face. The face is contemporary 
 - **黑暗时** ({colors.on-dark}: 暗面的白文本
 - **黑暗的静音** ({colors.on-dark-muted}: 减少不透明度的白色
 
-### 语义
+### 语义色
 - **3⁄4 ̄ ̧漯B** ({colors.semantic-warning-bg}: 淡黄色调用bg
 - **警告文本** ({colors.semantic-warning-text}: 警告状态副本颜色
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 **Euclid Circular A** (primary): MongoDB's geometric sans-serif. Fallbacks: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif.
 **Source Code Pro** (代码): Monospace 用于代码模型。退后: 'SF Mono', Menlo, Consolas, monospace.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -104,17 +104,17 @@ The system uses Euclid Circular A as its display face. The face is contemporary 
 - **脚本**: `{spacing.xxs}` (4px)通过 `{spacing.hero}` (120px)
 - **节奏**: 销售页面使用 `{spacing.section-lg}` (96px),定价收紧到 `{spacing.section}` (64px)
 
-### 网格容器( C)
-- 1280px max-width 与 32px 沟槽
+### 网格与容器
+- 1280px max-width 配合 32px 沟槽
 - 定价 : 3- 等级牌行, 密度特性比较表下方
 - 学习目录 : 3- 上层的砖块网格, 4- 上层认证网格
 - AI 使用案例 : 2- 柱式首屏,带有大气插图
 
-### 白空间哲学
+### 留白规则
 Marketing surfaces give content generous breathing room — `{spacing.hero}` (120px) hero padding for deep teal bands. Pricing/learn surfaces tighten dramatically.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -132,7 +132,7 @@ Marketing surfaces give content generous breathing room — `{spacing.hero}` (12
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -144,7 +144,7 @@ Marketing surfaces give content generous breathing room — `{spacing.hero}` (12
 | `{rounded.xxl}` | 24px | 特色产品展示 |
 | `{rounded.full}` | 9999px | All buttons, status badges |
 
-### 摄影几何
+### 图片形状
 - 首屏插画坐落在满腔血色的黑暗背景
 - 使用图案缩略图 `{rounded.lg}` 角点
 - 客户标识墙: 一致的字签 60–80px 高度( E)
@@ -176,7 +176,7 @@ Marketing surfaces give content generous breathing room — `{spacing.hero}` (12
 **`button-link`** ——内含绿色文本链接.
 - Background transparent, text `{colors.brand-green-dark}`, typography `{typography.body-sm-medium}`, padding `0`.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`card-base`** ——标准内容卡.
 - Background `{colors.canvas}`, rounded `{rounded.lg}`, padding `{spacing.xl}`, border `1px solid {colors.hairline}`.
@@ -203,7 +203,7 @@ Marketing surfaces give content generous breathing room — `{spacing.hero}` (12
 **`pricing-card-featured`** ——特色定价等级(Flex等级,薄荷背景+绿色边框).
 - Background `{colors.surface-feature}`, rounded `{rounded.lg}`, padding `{spacing.xxl}`, border `2px solid {colors.brand-green}`.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——标准文本字段.
 - Background `{colors.canvas}`, text `{colors.ink}`, border `1px solid {colors.hairline-strong}`, rounded `{rounded.md}`, padding `{spacing.sm} {spacing.md}`, height 44px.
@@ -286,7 +286,7 @@ Marketing surfaces give content generous breathing room — `{spacing.hero}` (12
 - 左边 : MongoDB 叶徽+"流经/资源/公司/定价"链接.
 - 右:"签入"链接+亮绿丸 "试自由"CTA.
 
-### 签名组件
+### 标志性组件
 
 **`hero-band-dark`** ——深塔首屏乐队,内嵌代码模拟.
 - Background `{colors.brand-teal-deep}`, text `{colors.on-dark}`, padding `{spacing.hero}`.
@@ -309,7 +309,7 @@ Marketing surfaces give content generous breathing room — `{spacing.hero}` (12
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 使用 `{colors.brand-green}` (轻声) MongoDB 绿色),用于各地初级CTA
 - 配上亮绿色的CTA胶囊形的深色首屏乐队
 - 应用 `{rounded.full}` 切换到每个按钮,每个状态徽章
@@ -318,7 +318,7 @@ Marketing surfaces give content generous breathing room — `{spacing.hero}` (12
 - 维护 Euclid Circular A 跨越每个UI表面
 - 产品展示使用带有终端美学内容的代码模拟卡
 
-### Don't
+### 应避免的做法
 - 身体文字或大表面不要用亮绿色
 - 品牌绿色和分类编码调色板之外,不要增加其他强调色颜色
 - Don't soften corners on buttons; the pill is a brand signature
@@ -327,7 +327,7 @@ Marketing surfaces give content generous breathing room — `{spacing.hero}` (12
 - Don't use Source Code Pro for prose
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 | 名称 | 宽度 | 密钥更改 |
@@ -344,7 +344,7 @@ Marketing surfaces give content generous breathing room — `{spacing.hero}` (12
 - Search pill (large) renders at 56px
 - 胶囊形标签 ~32px → 44px 移动
 
-### 折叠战略
+### 窄屏布局调整
 - **宣传旗** 保持全宽; 切换到 < 480px
 - **顶端导航** 下级 1024px 倒塌到汉堡
 - **首屏乐队**: 代码模拟卡移动到手机文本以下
@@ -353,7 +353,7 @@ Marketing surfaces give content generous breathing room — `{spacing.hero}` (12
 - **首屏打字技术**: 72px → 56px → 48px → 36px
 - **Footer**: 6-column desktop → 3-column tablet → accordion mobile
 
-### 图像行为
+### 图片适配
 - 大气AI图像用途 16:9 比例,含全血比例
 - 代码模拟卡内容仍可读取,可跨断点
 - 客户标识墙: 一致的字标记 60–80px 高度( E)

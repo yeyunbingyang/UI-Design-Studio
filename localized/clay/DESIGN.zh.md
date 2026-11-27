@@ -26,7 +26,7 @@ Clay.com is the most playful B2B SaaS interface in the GTM-data category. The ba
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Primary** (`{colors.primary}` — #0a0a0a): All primary CTAs, h1/h2 ink type. Near-black with slight warmth.
 - **品牌粉红** (`{colors.brand-pink}` — #ff4d8b:热平克特征卡表面. sequencer / 外传特征页.
 - **品牌提尔** (`{colors.brand-teal}` — #1a3a3a:深层绿色特征卡,常见的标价等级.
@@ -36,7 +36,7 @@ Clay.com is the most playful B2B SaaS interface in the GTM-data category. The ba
 - **品牌薄荷** (`{colors.brand-mint}` — #a4d4c5:插图上的薄荷强调色和小徽章.
 - **布兰德·珊瑚** (`{colors.brand-coral}` — #ff6b5a:珊瑚强调色用于突出.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — #fffaf0:默认的页层,奶油丁丁白.
 - **Surface Soft** (`{colors.surface-soft}` — #faf5e8): Footer and CTA-band background.
 - **表面卡片** (`{colors.surface-card}` — #f5f0e0:奶油特色卡,证照卡.
@@ -45,7 +45,7 @@ Clay.com is the most playful B2B SaaS interface in the GTM-data category. The ba
 - **表面暗线** (`{colors.surface-dark-elevated}` — #1a2a2a: 高阶暗卡.
 - **细边线** (`{colors.hairline}` — #e5e5e5): 1px 将卡片和输入值置入边框。
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — #0a0a0a:标题和主文.
 - **Body Strong** (`{colors.body-strong}` — #1a1a1a): Emphasized body, lead paragraphs.
 - **体质** (`{colors.body}` — #3a3a3a: 默认的运行文本.
@@ -53,7 +53,7 @@ Clay.com is the most playful B2B SaaS interface in the GTM-data category. The ba
 - **Muted Soft** (`{colors.muted-soft}` — #9a9a9a): Captions, fine-print.
 - **On Primary / On Dark** (`{colors.on-primary}` — #ffffff): Text on primary buttons + dark feature cards (teal).
 
-### 语义
+### 语义色
 - **成功** (`{colors.success}` — #22c55e:成功州.
 - **Warning** (`{colors.warning}` — #f59e0b): Warning callouts.
 - **错误** (`{colors.error}` — #ef4444:验证错误.
@@ -61,10 +61,10 @@ Clay.com is the most playful B2B SaaS interface in the GTM-data category. The ba
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 系统运行 **Plain Black** (一个自定义的四舍五入显示面)用于头条和 **Inter** 身体,导航,和UI。 Plain Black 字重 500 负数 letter-spacing 处理每个显示标题; Inter 处理其余的。倒叠堆放 `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif` 两者皆有
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -87,7 +87,7 @@ Plain Black 字重 500 +负 letter-spacing 声音很响,要重磅了 700 读作�
 
 身体-vs-显示分拆功能: Plain Black 资源 Plain Black 时刻(标题), Inter 用于其他所有(运行文本、用户界面、按钮)。混合它们是一种系统违规。
 
-### Note on Font Substitutes
+### 替代字体
 If Plain Black is unavailable, **Inter** at weight 500 with -0.05em letter-spacing is a usable approximation. **Söhne Breit** at weight Buch is an alternative if licensed. **Recoleta** at weight 500 carries similar rounded-display warmth.
 
 
@@ -99,17 +99,17 @@ If Plain Black is unavailable, **Inter** at weight 500 with -0.05em letter-spaci
 - **科 科 padding:** `{spacing.section}` (96px),主要编辑乐队之间.
 - **Card internal padding:** `{spacing.xl}` (32px) for feature cards and pricing tiers; `{spacing.lg}` (24px) for testimonial and product mockup cards.
 
-### 网格容器( C)
+### 网格与容器
 - **最大内容 width:** ~1280px centered.
 - **编辑机构:** 单身 12-列网格;首屏经常使用 7/5 拆分(h)1 左,插图右).
 - **Feature card grids:** 3-up at desktop, 2-up at tablet, 1-up at mobile.
 - **定价 grid:** 3-4 up at desktop, 1-up at mobile.
 
-### 白空间哲学
+### 留白规则
 Clay 使用宽大的白空间绕大圆形显示头条和饱和特征卡。 奶油页面底色+彩色卡+ 3D插图创造了一种游戏热度,竞争数据平台网站缺乏这种热度.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -128,7 +128,7 @@ Clay 使用宽大的白空间绕大圆形显示头条和饱和特征卡。 奶�
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -159,7 +159,7 @@ Clay 使用宽大的白空间绕大圆形显示头条和饱和特征卡。 奶�
 
 **`text-link`** ——内置体链接于 `{colors.ink}` 以下划线表示。
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`hero-band`** 奶油罐头首屏 7-5 grid: h1 + sub-headline + button row on the left, 3D claymation illustration on the right. Vertical padding `{spacing.section}` (96px).
 
@@ -179,7 +179,7 @@ Clay 使用宽大的白空间绕大圆形显示头条和饱和特征卡。 奶�
 
 **`expert-card`** ——在/专家网页上使用。 `{colors.canvas}` 带细边线,四舍五入 `{rounded.lg}`, 编译 `{spacing.lg}`. 载着一个顶级的阿凡达,专家名,专业,和一个"书会"链接.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** — Background `{colors.canvas}`, text `{colors.ink}`, type `{typography.body-md}`, rounded `{rounded.md}` (12px), padding 12px × 16px, height 44px. 1px hairline border.
 
@@ -200,7 +200,7 @@ Clay 使用宽大的白空间绕大圆形显示头条和饱和特征卡。 奶�
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 霜布上每一页都锁定`{colors.canvas}` — #fffaf0)温暖的锡矿区别于 Clay 数据站点的
 - 使用 3D粘土图案作为首屏文物. 3D人物和山是品牌。
 - 循环饱和特征卡横跨页面——粉红色 —— 茶叶 —— 紫色 —— 桃色 —— 黄绿色 —— 奶油 连续重复相同颜色读作脱节.
@@ -209,7 +209,7 @@ Clay 使用宽大的白空间绕大圆形显示头条和饱和特征卡。 奶�
 - 使用奶油页脚(NOT 暗色). Clay 故意用温暖的奶油关闭页面,而不是标准深足SaaS模板.
 - 锁定每个带 `{spacing.section}` (96px) 垂直节奏.
 
-### Don't
+### 应避免的做法
 - Don't use cool grays for canvas. The cream tint is non-negotiable.
 - Don't use a 7th brand-color card. The 6-color palette is saturated enough.
 - 胆子不要超重 500. Plain Black 时 间 700 读作爆炸性。
@@ -219,7 +219,7 @@ Clay 使用宽大的白空间绕大圆形显示头条和饱和特征卡。 奶�
 - Don't add hover state styling beyond what the system already encodes.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -234,7 +234,7 @@ Clay 使用宽大的白空间绕大圆形显示头条和饱和特征卡。 奶�
 - `{component.button-primary}` at minimum 44 × 44px (matches WCAG AAA).
 - `{component.text-input}` 高度为 44px.
 
-### 折叠战略
+### 窄屏布局调整
 - 顶级导航崩溃到汉堡 < 768px.
 - 首屏们 7-5 网格 → 移动上的单列.
 - 特色卡网格减少列而非缩放.

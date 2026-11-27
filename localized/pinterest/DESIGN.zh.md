@@ -6,7 +6,7 @@
 
 ## 概览
 
-Pinterest营销系统是围绕一个单一的教学原则构建的: 走出照片的路. 铬是一种静静的温和的乳汁中性调色板(英语:`{colors.surface-soft}`, `{colors.surface-card}`, `{colors.canvas}`) 携带印刷机 Pinterest专有 Pin Sans 脸,与 Pinterest 红色( R)`{colors.primary}` — `#e60023`) 专用于“签名”CTA、活动Tab指标和 sticky top-nav 锚。 图像后面的每一个表面都可以淡出, 即针片、 类片、 内容缩略图、 剖面图—— 构成实际产品。
+Pinterest营销系统是围绕一个单一的教学原则构建的: 走出照片的路. 界面框架是一种静静的温和的乳汁中性调色板(英语:`{colors.surface-soft}`, `{colors.surface-card}`, `{colors.canvas}`) 携带印刷机 Pinterest专有 Pin Sans 脸,与 Pinterest 红色( R)`{colors.primary}` — `#e60023`) 专用于“签名”CTA、活动Tab指标和 sticky top-nav 锚。 图像后面的每一个表面都可以淡出, 即针片、 类片、 内容缩略图、 剖面图—— 构成实际产品。
 
 The design system has two distinct surface modes that alternate down the home page: the **hero/CTA chrome** (cream surfaces, large 70px Pin Sans display headlines, alternating left/right photo-illustrated feature cards) and the **content masonry** (a column-based grid of 16px-radius pin cards on `{colors.surface-card}` with no internal padding — the pin is the card). The search results page is almost pure masonry: a tight column grid of pin imagery in mixed aspect ratios, with a small filter-chip strip at the top and the sticky red Sign-up CTA in the upper-right corner. The `create.pinterest.com` business surface inverts the grid back to a more traditional editorial layout but keeps every other rule of the system: Pin Sans, cream chrome, red CTA, 16px-radius pills.
 
@@ -17,7 +17,7 @@ The system's signature gesture is **shape geometry**: 16px radius (`{rounded.md}
 - Pin Sans proprietary typography across every text role from `{typography.display-xl}` (70px) down to `{typography.caption-sm}` (12px) — no serif, no monospace anywhere
 - Two-radius shape system: `{rounded.md}` (16px) for most components, `{rounded.lg}` (32px) for large cards and modals, `{rounded.full}` for circular elements
 - 共济会针网格作为负载视觉元素——以柱为主的布局,其中保留每个针的自然侧比
-- 暖乳中性铬(`{colors.surface-card}` — #f6f6f3)在图像后轻轻退却而不相竞
+- 暖乳中性界面框架(`{colors.surface-card}` — #f6f6f3)在图像后轻轻退却而不相竞
 - Sticky 上导航,每断点右上方都挂着总红的签名 CTA
 - 使用软缩的页面内容而不是导航跳跃的 Modal 覆盖( login/ signup)
 
@@ -26,11 +26,11 @@ The system's signature gesture is **shape geometry**: 16px radius (`{rounded.md}
 
 > **Source pages:** `/` (home), `/search/pins/?q=bold lip` (search results), `create.pinterest.com/` (creator marketing), `create.pinterest.com/product-features/how-to-create-boards/` (creator article). The chrome palette is identical across all four pages.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Pinterest 红色** (`{colors.primary}` — `#e60023`:该品牌是唯一高度饱和的颜色. 注册CTAs, sticky top-nav 锚,在标签条中活动状态,以及品牌字号.
 - **Pinterest 红色按下** (`{colors.primary-pressed}` — `#cc001f`:按下状态为主按钮——一个比品牌红色更深的单音节.
 
-### 表面
+### 界面表面
 - **Canvas** (`{colors.canvas}` — `#ffffff`): true white. The base surface for the primary nav, modals, feature cards, and content body.
 - **软表面** (`{colors.surface-soft}` — `#fbfbf9`:微弱的奶油丁丁脱白,用于主页首屏的页体洗涤.
 - **表面卡片** (`{colors.surface-card}` — `#f6f6f3`: 暖心卡和皮夹背景. Carrys 分类瓷砖, search-bar 默认填充, button-secondary 默认,以及 pin-card 背景。 。
@@ -40,9 +40,9 @@ The system's signature gesture is **shape geometry**: 16px radius (`{rounded.md}
 - **Hairline** (`{colors.hairline}` — `#dadad3`): 1px row dividers, footer column rules.
 - **柔软的细边线** (`{colors.hairline-soft}` — `#e5e5e0`:较轻的内线分解器;双倍作为二级按钮背景.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — `#000000`:主头条,按钮文本,主导航链接.
-- **墨水软** (`{colors.ink-soft}` — `#211922`: 内线链接的体质改编中的颜色,品牌仅"色彩"超越 Pinterest 红在铬中使用——一种带有微弱暖铸的近黑.
+- **墨水软** (`{colors.ink-soft}` — `#211922`: 内线链接的体质改编中的颜色,品牌仅"色彩"超越 Pinterest 红在界面框架中使用——一种带有微弱暖铸的近黑.
 - **体质** (`{colors.body}` — `#33332e`: 默认段落文本于 `{colors.canvas}`.
 - **木炭矿** (`{colors.charcoal}` — `#262622`: 纯墨太重的地方,潜柔软的体型.
 - **静音** (`{colors.mute}` — `#62625b`:元数据文本,页脚链接,副标题.
@@ -50,7 +50,7 @@ The system's signature gesture is **shape geometry**: 16px radius (`{rounded.md}
 - **石头** (`{colors.stone}` — `#c8c8c1`: 最小强调的公用文字, 禁用状态边框 。
 - **On Dark** (`{colors.on-dark}` — `#ffffff`): primary text on `{colors.surface-dark}`.
 
-### 语义
+### 语义色
 - **错误** (`{colors.error}` — `#9e0a0a`:验证消息,破坏性确认副本.
 - **Error Deep** (`{colors.error-deep}` — `#cc001f`): deepened error background where the regular error tone needs more contrast. Note: this matches the primary-pressed value but in error context represents semantic destructiveness.
 - **成功 深处** (`{colors.success-deep}` — `#103c25`:产品成功信息.
@@ -66,10 +66,10 @@ The system's signature gesture is **shape geometry**: 16px radius (`{rounded.md}
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 **Pin Sans** is Pinterest's proprietary geometric sans-serif used across every text role on every page. It carries weights 400 (regular), 500 (medium), 600 (semibold), and 700 (bold), and falls back through a long stack — `-apple-system` → `system-ui` → `Segoe UI` → `Roboto` → `Helvetica Neue` → `Arial` plus emoji fallbacks. The face's distinctive trait is its tight letter-spacing at display sizes (-1.2px on `{typography.display-xl}` and `{typography.heading-xl}`), which gives 70px headlines a confident, friendly density rather than the airy spread of more conventional display geometric sans faces.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -91,7 +91,7 @@ The system's signature gesture is **shape geometry**: 16px radius (`{rounded.md}
 ### 原则
 The system has an unusually steep size jump between display and body — `{typography.display-xl}` (70px) drops directly to `{typography.body-md}` (16px) on the home hero with no intermediate tier between. The negative tracking on the largest tiers (-1.2px / -0.8px) creates a tighter, more confident headline than a default geometric sans would deliver, and the body copy sits at a generous 1.4 line-height to keep multi-line descriptions breathing.
 
-### Note on Font Substitutes
+### 替代字体
 Pin Sans is proprietary. The closest open-source substitute is **Inter** (weights 400 / 500 / 600 / 700) — its geometry, x-height, and metric balance match Pin Sans within ~3% at body sizes. **Manrope** is a strong secondary substitute for the display tier where slightly tighter letterspacing helps the 70px headline feel weighted. Apply -1.2px tracking on the substitute at display sizes regardless of which substitute is chosen.
 
 
@@ -103,17 +103,17 @@ Pin Sans is proprietary. The closest open-source substitute is **Inter** (weight
 - **通用节奏 :** 设定中的每个页面 `{spacing.section}` (64px)作为主要内容块之间的垂直差距。 `{spacing.sm}` (8px)瓷砖之间的沟槽——系统最紧的网状沟槽,设计时的图像可以有效触碰横跨柱状.
 - **调制解调器 padding:** `{component.modal-card}` 使用情况 32px 内部粘贴( E)`{spacing.xxl}`)四面无边.
 
-### 网格容器( C)
+### 网格与容器
 - **最大 width:** ~1280px content area at desktop with 24px gutters (~48px at ultrawide).
 - **平板砖 grid:** auto-fitting column-based layout — 5–6 columns at ultrawide, 4 columns at desktop, 3 at tablet, 2 at mobile-landscape, 1 at mobile. Each tile preserves its natural aspect ratio (square / 2:3 / 3:4 / 4:5 portrait — never landscape because pins are vertically-oriented). Gutters are `{spacing.sm}` (8px) 水平和垂直。
 - **家首屏特征行 :** 不对称 2-柱子在文本和图像左/右对页的位置进行分割(文本左+图像右,然后图像左+文本右等).
 - **Footer:** 4-column link grid at desktop, collapsing to 2-up at tablet, 1-up at mobile.
 
-### 白空间哲学
+### 留白规则
 Whitespace is generous on the marketing surfaces and tight on the discovery surfaces. The home page sits sections 64px apart with photo-illustrated feature cards using 32px internal padding, while the search results page collapses to an 8px-gutter masonry grid that tiles imagery edge-to-edge. The system reads as two tools sharing the same chrome: a magazine (hero / feature / CTA / footer) and a search engine (top nav / filter row / pin grid / load more).
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -133,7 +133,7 @@ Pinterest's system has effectively no shadow elevation in its content surfaces. 
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -145,7 +145,7 @@ Pinterest's system has effectively no shadow elevation in its content surfaces. 
 
 The radius vocabulary is essentially three values: 16px for most things, 32px for big cards and modals, and pill for circular elements. There are no sharp-cornered buttons or sharp-cornered pin cards.
 
-### 摄影几何
+### 图片形状
 - **Pin imagery:** mixed aspect ratios — square (1:1), portrait (3:4, 2:3, 4:5), and rare landscape — preserved at their natural ratio inside `{rounded.md}` (16px) corners on small tiles and `{rounded.lg}` (32px) on large feature pins.
 - **分类平面缩略图 :** 平方( 5)1:1与 `{rounded.md}` 转角
 - **幻象圆:** 32–48px 时 间 `{rounded.full}` 用于内端属性和配置芯片。
@@ -190,7 +190,7 @@ The radius vocabulary is essentially three values: 16px for most things, 32px fo
 - 活动:背景 `{colors.ink}`文本中,请输入 `{colors.on-dark}` ——芯片翻转在选择上完全倒置.
 - 在整个搜索结果页面过滤条("Beauty coup","Lipstick","Editorial coup...")中使用.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** + **`text-input-focused`**
 - Default: background `{colors.canvas}`, text `{colors.ink}`, 1px solid `{colors.ash}`, type `{typography.body-md}`, padding `11px 15px`, height ~44px, rounded `{rounded.md}`.
@@ -202,7 +202,7 @@ The radius vocabulary is essentially three values: 16px for most things, 32px fo
 - 焦点: 相同的尺寸,背景翻转到 `{colors.canvas}` 含a 1px `{colors.ash}` 边框。
 - 悬浮在主导航中心 左边缘有放大镜 以及"寻找想法 时尚..."的占位符
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`pin-card`** ——标准石柱瓦片
 - 集装箱:背景 `{colors.surface-card}`,四舍五入 `{rounded.md}` (16px), 贴 0.
@@ -257,16 +257,16 @@ The radius vocabulary is essentially three values: 16px for most things, 32px fo
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` (Pinterest Red),用于初级CTA,活动-tab指标,以及仅用于品牌字签,从不装饰.
 - Use `{rounded.md}` (16px) on every interactive element and standard card; reserve `{rounded.lg}` (32px) for large pin cards and modals; reserve `{rounded.full}` for circular elements (search bar, chips, avatars).
 - 将每个针头图像插到 a 内 `{component.pin-card}` 里面没有内垫 照片就是卡片
 - Stack content sections at `{spacing.section}` (64px) rhythm; tighten pin grids to `{spacing.sm}` (8px) gutters so imagery effectively touches.
 - 使用 `{component.pin-overlay-pill}` 以锁定搜索时的标签 category-tile 针形照片——系统标志装饰手势.
 - Build hierarchy from font weight (400 → 600 → 700) and size, not from color tinting. Body stays `{colors.body}` regardless of section context.
-- 应用 -1.2px letter-spacing 打开 `{typography.display-xl}` 财务报告和已审计财务报表 `{typography.heading-xl}`. 负面追踪是品牌声音的一部分.
+- 应用 -1.2px letter-spacing 打开 `{typography.display-xl}` 和 `{typography.heading-xl}`. 负面追踪是品牌声音的一部分.
 
-### Don't
+### 应避免的做法
 - Don't use sharp-cornered buttons or cards. There are no `{rounded.none}` interactive elements in the system.
 - 系统里唯一的影子就是... 16px 环境 `{component.modal-card}`.
 - Don't pad `{component.pin-card}` internally. The image is full-bleed; metadata sits over the image as an overlay pill, not below it.
@@ -275,7 +275,7 @@ The radius vocabulary is essentially three values: 16px for most things, 32px fo
 - Don't introduce a third radius value between 16px and 32px. The system jumps directly from md to lg with nothing in between.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -292,7 +292,7 @@ The radius vocabulary is essentially three values: 16px for most things, 32px fo
 ### 触控区域
 All interactive elements meet WCAG AA (≥ 44×44px). `{component.button-primary}` and `{component.button-secondary}` sit at ~40px height with 14px horizontal padding (effective ~40×80px tappable). `{component.search-bar}` sits at 48px. `{component.text-input}` sits at 44px. `{component.filter-chip}` is ~36–40px height with 16px padding — extends to 44px tappable via inline padding. `{component.button-icon-circular}` is exactly 40×40 with extended hit-target padding to 48×48 inside the parent.
 
-### 折叠战略
+### 窄屏布局调整
 - **Primary nav:** desktop horizontal cluster → tablet hamburger drawer at 768px. The red Sign-up CTA stays visible at every breakpoint.
 - **Search bar:** desktop centered (~480px wide) → tablet compressed (~320px) → mobile collapses to a magnifier icon that expands to a full-width overlay on tap.
 - **平板砖 grid:** 5/6-up → 4-up → 3-up → 2-up → 1-up at 1920, 1024, 768, and 480px. Gutters drop from 8px to 6px on mobile.
@@ -302,7 +302,7 @@ All interactive elements meet WCAG AA (≥ 44×44px). `{component.button-primary
 - **Hero headline:** `{typography.display-xl}` (70px) at desktop, scaling 56px / 44px / 36px down the breakpoint stack.
 - **Footer:** 4-up link columns → 2-up at tablet → full accordion at mobile (each header becomes a tap-to-expand row).
 
-### 图像行为
+### 图片适配
 - 平图在每一个断点上都保留自然的纵宽比;柱数变化,而不是侧面.
 - 维护类片缩略图 1:1 跨越各种大小。
 - 首屏特色图像使用移动上的艺术引导作物(4:5 肖像 ~ 平方),所以当布局崩溃到单柱时,主题会保持中心.
@@ -325,8 +325,8 @@ All interactive elements meet WCAG AA (≥ 44×44px). `{component.button-primary
 - **Mobile screenshots not captured** — responsive behavior synthesizes Pinterest's known mobile pattern (hamburger drawer, single-column grid, hero downscale) from desktop evidence and the documented breakpoint stack.
 - **Hover states not documented** by system policy.
 - **平底特写( 单边针覆盖)** 不属于捕获的集中——产品中 Pin 细节视图(带有注释,相关标点,保存板拾)可能引入此处没有记载的组件.
-- **认证的铬** (登录的家用饲料,板页,剖面页)没有在被捕获的页面中——被捕获的表面是登录的外销和搜索体验.
-- **Pinterest 移动应用程序屏幕** 并非在此处所记载的系统中——这是只有网络的铬.
+- **认证的界面框架** (登录的家用饲料,板页,剖面页)没有在被捕获的页面中——被捕获的表面是登录的外销和搜索体验.
+- **Pinterest 移动应用程序屏幕** 并非在此处所记载的系统中——这是只有网络的界面框架.
 - **Form validation states** (success / error inline messages) not documented; only the focused-state field is captured.
 
 ## 设计词元原值

@@ -23,11 +23,11 @@ Type voice is Haas Grotesk at modest weights (400 for display, 500 for sub-title
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **主要** (`{colors.primary}` — #181d26: 主导品牌颜色. 用于主要CTA背景, h1/h2 显示类型,以及 `{component.surface-dark}` 黑色是整个营销系统的首要产品
 - **初等活动** (`{colors.primary-active}` — #0d1218:主按钮上的新闻状态.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — #ffffff:默认的页面表面;每个编辑机构的地板.
 - **表面软** (`{colors.surface-soft}` — #f8fafc:标签功能卡和特色定价等级.
 - **表面坚固** (`{colors.surface-strong}` — #e0e2e6: 浅灰色的"开始建筑与 Airtable" 脚步器附近的CTA旗.
@@ -35,7 +35,7 @@ Type voice is Haas Grotesk at modest weights (400 for display, 500 for sub-title
 - **表面暗线** (`{colors.surface-dark-elevated}` — #1d1f25:彩虹纹饰背后的文章页首屏基础.
 - **Hairline** (`{colors.hairline}` — #dddddd): The 1px border tone for input outlines, table dividers, secondary-button outlines.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — #181d26:最强文本——h1/h2 显示类型和主按钮文本。 `{colors.primary}` 因为它们在类型和按钮层上表达的作用相同。
 - **体质** (`{colors.body}` — #333840:默认的运行文本颜色.
 - **静音** (`{colors.muted}` — #41454d:页脚链接,面包屑,标题.
@@ -49,7 +49,7 @@ These are the colors that carry Airtable's brand voltage. They appear as full-bl
 - **奶油** (`{colors.signature-cream}` — #f5e9d4:奶油呼唤乐队("通往 10×你们组织中的每一个人")——软的蜂窝表面,握着暗型和产品UI碎片.
 - **桃子( 桃子)** (`{colors.signature-peach}` — #fcab79), **薄荷** (`{colors.signature-mint}` — #a8d8c4), **黄色** (`{colors.signature-yellow}` — #f4d35e), **芥末酱** (`{colors.signature-mustard}` — #d9a441: 降M卡表面,在多卡网块内承载小产品UI碎片.
 
-### 语义
+### 语义色
 - **Link** (`{colors.link}` — #1b61c9): Inline body links and anchor text. Darker on press to `{colors.link-active}` (#1a3866). Despite the `--theme_button-background-primary` CSS-variable name, this color is **not** the primary button color — it is the link color.
 - **Info** (`{colors.info}` — #254fad) and **Info Border** (`{colors.info-border}` — #458fff): Inline info badges and focused-input outline.
 - **Success** (`{colors.success}` — #006400) and **Success Border** (`{colors.success-border}` — #39bf45): Confirmation states.
@@ -57,12 +57,12 @@ These are the colors that carry Airtable's brand voltage. They appear as full-bl
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 系统运行 **Haas / Haas Groot Disp** (Airtable” 许可显示 + 文本类型 。 Haas Groot Disp 封面显示大小( h)1 / h2); Haas 格罗特斯克包办一切 24px 倒背堆栈走动 `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif`.
 
 定价表面是分开运行的 **Inter Display** 中量级堆栈( 中量级)475 / 575)——故意的子系统信号商业精度.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -86,7 +86,7 @@ The Haas system prefers weight 400 for display sizes — a 40px h1 is **not** bo
 
 定价页面子系统使用 Inter Display 时 间 `font-weight: 475` 常规(400)和中 (中文(简体) ).500),以可变字体运出。
 
-### Note on Font Substitutes
+### 替代字体
 若缺少 Haas Groot Disp 和 Haas Grotesk，可用开源可变字体 **Inter Display** 替代。将 line-height 下调 ~5%，使排版更接近 Haas 较紧凑的大写字母高度。定价区直接使用 Inter Display。macOS / iOS 可使用 **system-ui**。Windows 会回退到 Segoe UI，视觉风格略偏冷。
 
 
@@ -99,17 +99,17 @@ The Haas system prefers weight 400 for display sizes — a 40px h1 is **not** bo
 - **Card internal padding:** `{spacing.xl}` (32px) for tabbed feature cards and pricing tier cards; `{spacing.xxl}` (48px) inside signature coral / forest / dark cards; `{spacing.lg}` (24px) for cream callouts and demo-grid cards.
 - **Gutters:** `{spacing.lg}` (24px) between cards in 3-up grids; `{spacing.md}` (16px) inside denser logo strips and footer column gutters.
 
-### 网格容器( C)
+### 网格与容器
 - **Max content width:** ~1280px centered, with `{spacing.xxl}` (48px) horizontal breathing room.
 - **编辑机构:** 单身 8/12- 柱子在大断点, 崩溃为单柱移动。
 - **Demo-card grids:** 3 or 4 columns at desktop, 2 at tablet, 1 at mobile. Card sizes are deliberately uneven within the grid to dodge a uniform "spec sheet" feel.
 - **logo 条 :** 6 桌面上单行单色伙伴标志; 包到 3- 移动。
 
-### 白空间哲学
+### 留白规则
 Airtable 使用白空间作为大气工具。首屏区域坐落于 96px+ 头条上下纯白空间 + 副头条对, 白空间中没有装饰。 主角故意平静 —— 类型后面没有梯度、 极光、 大气网格。 系统只信任白空间来做框架 。
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -128,7 +128,7 @@ Airtable 使用白空间作为大气工具。首屏区域坐落于 96px+ 头条�
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -139,8 +139,8 @@ Airtable 使用白空间作为大气工具。首屏区域坐落于 96px+ 头条�
 | `{rounded.pill}` | 9999px | 定价页面 CTA 按钮( 仅次系统) |
 | `{rounded.full}` | 9999px / 50% | Circular 图标按钮, 浮雕表面 |
 
-### 摄影几何
-演示卡网格内的产品 UI 截图保留了本地的宽度比( 通常为 ) 4:3 或 减 减 16:10并收成为 `{rounded.md}` 首屏插图全线流血,没有圆形。 Article-card 缩略图使用 16:9 与 `{rounded.md}` 角 证物中的神通 `{rounded.full}` 定价的表格图像保持长方形,没有圆形。
+### 图片形状
+演示卡网格内的产品 UI 截图保留了本地的宽度比( 通常为 ) 4:3 或 16:10并收成为 `{rounded.md}` 首屏插图全线流血,没有圆形。 Article-card 缩略图使用 16:9 配合 `{rounded.md}` 角 证物中的神通 `{rounded.full}` 定价的表格图像保持长方形,没有圆形。
 
 
 ## 组件
@@ -166,7 +166,7 @@ Airtable 使用白空间作为大气工具。首屏区域坐落于 96px+ 头条�
 
 **`text-link`** ——内置体链接于 `{colors.link}` (#1b61c9。默认情况下没有下划线。类型继承 `{typography.body-md}`.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`hero-band`** — The full-page-width white-canvas hero. No surface card, no border, no shadow, no atmospheric gradient — just the headline, sub-headline, and primary + secondary button pair sitting in 96px of whitespace. Vertical padding `{spacing.section}` (96px).
 
@@ -176,7 +176,7 @@ Airtable 使用白空间作为大气工具。首屏区域坐落于 96px+ 头条�
 
 **`hero-card-dark`** — The dark navy mid-page CTA card (e.g. "The path to 10× every person in your organization"). Background `{colors.surface-dark}` (#181d26), text `{colors.on-dark}`, rounded `{rounded.lg}` (12px), internal padding `{spacing.xxl}` (48px). The same color as `{colors.primary}` because the system uses ink as both type color and signature dark surface.
 
-**`feature-card-tabbed`** ——轻乳卡(如主页上的"Coke / Pelosi / Conde Nast / Time Inc"),贴板特征卡. `{colors.surface-soft}`,四舍五入 `{rounded.lg}` (12px),内部粘贴 `{spacing.xl}` (32px。左侧的铁路带有垂直的标签标签。 `{typography.title-md}`;右面板显示活动标签的内容(ilustation + body copy + 小型 CTA).
+**`feature-card-tabbed`** ——轻乳卡(如主页上的"Coke / Pelosi / Conde Nast / Time Inc"),贴板特征卡. `{colors.surface-soft}`,四舍五入 `{rounded.lg}` (12px),内部粘贴 `{spacing.xl}` (32px。左侧的侧栏带有垂直的标签标签。 `{typography.title-md}`;右面板显示活动标签的内容(ilustation + body copy + 小型 CTA).
 
 **`cream-callout-card`** — Beige callout cards (`{colors.signature-cream}`). Rounded `{rounded.md}` (10px), internal padding `{spacing.lg}` (24px). Carry product UI fragments or stat callouts — softer than the dark/coral signature cards but still a deliberate brand surface.
 
@@ -188,7 +188,7 @@ Airtable 使用白空间作为大气工具。首屏区域坐落于 96px+ 头条�
 
 **`topic-filter-rail`** — The left rail on the articles page. 240px wide, `{colors.canvas}` background, `{typography.body-md}`, vertically grouped category headings ("Marketing", "Product", "Project management", "Operations") with sub-bullets. Active item carries a small numeric count badge.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——标准文本输入。背景 `{colors.canvas}`文本中,请输入 `{colors.ink}`类型 `{typography.body-md}`,四舍五入 `{rounded.sm}` (6px), 贴 12px × 16px高度( 高度) 44px. 1px 细边线边界在 `{colors.hairline}`.
 
@@ -208,14 +208,14 @@ Airtable 使用白空间作为大气工具。首屏区域坐落于 96px+ 头条�
 
 **`cta-band-light`** — The light gray "Start building with Airtable" CTA strip near the footer. Background `{colors.surface-strong}` (#e0e2e6), text `{colors.ink}`, rounded `{rounded.lg}` (12px), padding `{spacing.xxl}` (48px). Carries an h2 in `{typography.display-md}` and a `{component.button-primary}`.
 
-### 签名组件
+### 标志性组件
 
 **Articles Vertical Rainbow Stripe Hero** — The articles-page hero treatment. Multi-color vertical bands at varying widths sitting on `{colors.surface-dark-elevated}`. The h1 + sub-head + CTA cluster sits center-left on top of the stripes. This is a single-page hero treatment, not a system-wide signature — do not promote it to a multi-page pattern.
 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 保留 `{component.button-primary}` 几乎是黑色的,品牌的主要CTA是 `{colors.primary}`把它们混在一起会让自信的首屏变成一个困惑的首屏
 - 准备金 `{component.button-primary}` 系统的设计是为了在品牌操作层中稀缺。
 - Use `{component.button-secondary}` (white with hairline outline) as the natural pair with `{component.button-primary}`. The two together form Airtable's signature button row.
@@ -225,7 +225,7 @@ Airtable 使用白空间作为大气工具。首屏区域坐落于 96px+ 头条�
 - 将定价表面当作自己的方言: 保留 `{typography.pricing-display}`, `{typography.pricing-card-title}`,以及 `{component.button-pricing-pill}` 一起,把它们混在一起 Haas 格罗特斯克按钮类型打破子系统的声音.
 - 锁定每个编辑乐队 `{spacing.section}` (96px)垂直贴垫.
 
-### Don't
+### 应避免的做法
 - Don't make `{colors.link}` (#1b61c9) the primary button color. It is the link color. The primary button is `{colors.primary}` (#181d26, near-black). Treating link-blue as the brand action is the most common mistake when reading Airtable's CSS variables.
 - Don't add a gradient backdrop to the hero. Airtable's hero is white, full stop. Mesh, aurora, spotlight gradients all read as "another SaaS template" — not Airtable.
 - Don't bold display-weight type. `{typography.display-xl}` and `{typography.display-lg}` are intentionally weight 400 / 500 — going to 700 reads as marketing-page-template.
@@ -235,7 +235,7 @@ Airtable 使用白空间作为大气工具。首屏区域坐落于 96px+ 头条�
 - 系统电压已经使用珊瑚,森林,暗海军,奶油,桃子,薄荷,黄,芥子.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -251,13 +251,13 @@ Airtable 使用白空间作为大气工具。首屏区域坐落于 96px+ 头条�
 - `{component.button-icon-circular}` 完全就是这个意思 40 × 40px - 略低于世界妇女咨询组的建议 44,但中心图标和点射线可以视线补偿.
 - `{component.text-input}` 高度为 44px.
 
-### 折叠战略
+### 窄屏布局调整
 - 顶级导航崩溃到汉堡 < 768px;菜单作为全屏工作表而不是下拉打开.
 - Card grids reduce columns rather than scaling cards down.
 - 电话 `{component.feature-card-tabbed}` 将标签栏重新安装在移动中的内容窗格上方。
 - 定价比较表转换为水平可滚动刷卡, 时间为 < 1024px;四个计划头在身体卷轴时保持可见.
 
-### 图像行为
+### 图片适配
 - 解码卡UI截图可以切换到容器,而不是放大.
 - 首屏插图在移动上全线流血,失去水平边距.
 - 签名卡图像(内珊瑚/森林/暗卡)不裁剪地压缩到其卡宽.

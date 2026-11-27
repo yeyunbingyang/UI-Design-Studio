@@ -10,7 +10,7 @@ Expo's marketing site reads like a quietly-confident React-Native developer plat
 
 Type runs **Inter** as the single sans family at modest weights (display 600, body 400). JetBrains Mono carries every code surface. No custom typeface — the brand trusts Inter's editorial neutrality.
 
-品牌最强的视觉标志是 **设备模拟首屏** ——一个中心MacBook + iPhone 复合材料显示真实性 Expo 平面( 微米)Expo 工作室,EAS 构建仪表板, Expo Go simulator)——在天蓝色梯度大气洗涤上,复合材料是页的铬而不是插图.
+品牌最强的视觉标志是 **设备模拟首屏** ——一个中心MacBook + iPhone 复合材料显示真实性 Expo 平面( 微米)Expo 工作室,EAS 构建仪表板, Expo Go simulator)——在天蓝色梯度大气洗涤上,复合材料是页的界面框架而不是插图.
 
 **关键特征 :**
 - 纯白页面底色,只有首屏才有天空蓝色梯度大气背景.
@@ -18,21 +18,21 @@ Type runs **Inter** as the single sans family at modest weights (display 600, bo
 - Text-link 蓝色( B)`{colors.text-link}`)只用于内置链接——从未在CTA上.
 - Inter as the single sans family — no custom display typeface.
 - JetBrains Mono 每一个代码表面。
-- 设备模拟首屏与真实 Expo 产品表面是品牌铬.
+- 设备模拟首屏与真实 Expo 产品表面是品牌界面框架.
 - 细边线+软滴深度;首屏外无大气品牌装饰.
 - 96px 节奏。
 
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Black** (`{colors.primary}` — #000000): Primary CTA fill. Used scarcely.
 - **黑色活动** (`{colors.primary-active}` — #1a1a1a:新闻州.
 - **文字链接蓝色** (`{colors.text-link}` — #0d74ce: 内置体链接在长式复制中. 范围狭小——从不出现在CTAs上.
 - **法律链接蓝** (`{colors.text-link-secondary}` — #476cff: 法律副本页脚内置链接.
 - **亮色青色( 浅色青色)** (`{colors.accent-link-bright}` — #47c2ff: 曾经非常少用文件部件链接 。
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — #ffffff:纯白页楼.
 - **软画帘** (`{colors.canvas-soft}` — #fafafa: 转弯的带。
 - **表面卡片** (`{colors.surface-card}` — #ffffff:纯白牌.
@@ -48,7 +48,7 @@ Type runs **Inter** as the single sans family at modest weights (display 600, bo
 - **柔软的细边线** (`{colors.hairline-soft}` — #f5f5f7:轻分者.
 - **发条坚固** (`{colors.hairline-strong}` — #dcdee0: 更强的面板大纲.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — #171717:显示,身体强调.
 - **体质** (`{colors.body}` — #60646c: 默认的运行文本——略凉灰色.
 - **Body Strong** (`{colors.body-strong}` — #171717): Same as ink.
@@ -58,7 +58,7 @@ Type runs **Inter** as the single sans family at modest weights (display 600, bo
 - **黑暗时** (`{colors.on-dark}` — #ffffff:黑牌上白文本.
 - **暗软** (`{colors.on-dark-soft}` — #b0b4ba: 哑巴在黑暗中关闭白色。
 
-### 语义
+### 语义色
 - **警告** (`{colors.accent-warning}` — #ab6400: 文档提示内有警告文本 。
 - **预览** (`{colors.accent-preview}` — #8145b5:"预览"标签颜色.
 - **Success** (`{colors.semantic-success}` — #16a34a): Confirmation.
@@ -67,10 +67,10 @@ Type runs **Inter** as the single sans family at modest weights (display 600, bo
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 **Inter** 是一个单桑家族 跨越每个文本角色。 **JetBrains Mono** 携带每个代码表面。 退后 : `-apple-system, system-ui, sans-serif`.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -94,8 +94,8 @@ Type runs **Inter** as the single sans family at modest weights (display 600, bo
 - **负数 letter-spacing 显示** — -0.5px 改为: -1.92px 追踪。
 - **JetBrains Mono 每一个代码表面。**
 
-### Note on Font Substitutes
-Inter 财务报告和已审计财务报表 JetBrains Mono 两种方法都可以免费使用——系统直接使用。
+### 替代字体
+Inter 和 JetBrains Mono 两种方法都可以免费使用——系统直接使用。
 
 
 ## 布局
@@ -105,18 +105,18 @@ Inter 财务报告和已审计财务报表 JetBrains Mono 两种方法都可以�
 - **脚本 :** `{spacing.xxs}` 4px · `{spacing.xs}` 8px · `{spacing.sm}` 12px · `{spacing.base}` 16px · `{spacing.md}` 20px · `{spacing.lg}` 24px · `{spacing.xl}` 32px · `{spacing.xxl}` 48px · `{spacing.section}` 96px.
 - **科 科 padding:** 96px.
 
-### 网格容器( C)
+### 网格与容器
 - 最大内容 width: ~1200px.
 - 编辑机构: 12- 列网格 - 列网格 - Colind grade.
 - Feature card grids: 2-up at desktop for hero splits, 3-up for benefit grids.
 - 生态系统瓦 grid: 8-up at desktop.
 - Footer: 5-column at desktop.
 
-### 白空间哲学
+### 留白规则
 慷慨的编辑节奏。 白帆不会与首屏的梯度天洗相竞争; 密集工作流程部分内的卡片坐得近( )16-24px —— —— —— —— 。
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -134,7 +134,7 @@ Inter 财务报告和已审计财务报表 JetBrains Mono 两种方法都可以�
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -218,7 +218,7 @@ Inter 财务报告和已审计财务报表 JetBrains Mono 两种方法都可以�
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` (黑色) 初级CTA。
 - 使用 `{colors.text-link}` (蓝色)仅用于内置体链接——从不在CTA或按钮上.
 - 设定每一次 CTA 时间 `{rounded.md}` (8px) ——开发者方言.
@@ -226,16 +226,16 @@ Inter 财务报告和已审计财务报表 JetBrains Mono 两种方法都可以�
 - 将每个代码表面都显示在 JetBrains Mono.
 - 给首屏配上设备-模具复合材料——是页染色体.
 
-### Don't
+### 应避免的做法
 - Don't introduce a saturated brand action color. Black is the only CTA fill.
 - 少用蓝( 蓝)`{colors.text-link}`)在CTA上,仅内置链接.
 - Don't drop display below weight 600 or above 700.
 - 止痛药上不要用满药——丸只用徽章.
-- Don't replicate the sky-blue gradient backdrop outside the hero.
+- 应避免的做法 replicate 首屏外的天空蓝度背景。
 - Don't extract a CTA color from a third-party widget (cookie consent, OneTrust). The brand's CTA is what appears on actual page CTAs.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -250,7 +250,7 @@ Inter 财务报告和已审计财务报表 JetBrains Mono 两种方法都可以�
 - 初级CTA 时间 40px 高度——在WCAG AA,为AAA加注.
 - Search input 44px — at AAA.
 
-### 折叠战略
+### 窄屏布局调整
 - 顶端导航切换到下面的汉堡包 768px.
 - 设备模拟MacBook + iPhone在移动中崩溃为单个iPhone预览.
 - 特性 grid: 3-up → 2-up → 1-up.
@@ -270,7 +270,7 @@ Inter 财务报告和已审计财务报表 JetBrains Mono 两种方法都可以�
 
 ## 已知缺口
 
-- Inter 财务报告和已审计财务报表 JetBrains Mono 免费——不考虑许可证发放问题。
+- Inter 和 JetBrains Mono 免费——不考虑许可证发放问题。
 - 动画计时(device smoup pallax,首屏入口) 出镜.
 - 应用中的表面(EAS仪表板互动, Expo 模拟器)通过营销模型只捕获了部分.
 - 形式验证状态超出焦点,在捕获的表面看不到。

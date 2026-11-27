@@ -27,7 +27,7 @@ multi-line headlines pack into geometric blocks. The companion family,
 密码故事——"如何运作"的走过。曲线是故意的,而且
 软度:每个交互式表面(按钮、输入、标记、变形符)使用
 `{rounded.full}`,而内容卡和代码井则升级到 `{rounded.md}`
-或 减 减 `{rounded.lg}`上面没有尖角 Replicate;系统读取
+或 `{rounded.lg}`上面没有尖角 Replicate;系统读取
 以友好的精确度为标准。
 
 **关键特征 :**
@@ -42,14 +42,14 @@ multi-line headlines pack into geometric blocks. The companion family,
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Replicate 橙色** (`{colors.primary}` — `#ea2804`:品牌强调色,保留了主CTA,首屏乐队背景,以及内含链接色彩. 将邮票当作——每个景点最多一个橙色元素.
 - **橙色按键** (`{colors.primary-deep}` — `#c01f00`: 活动/压力状态 `{colors.primary}` —— 已经使用 `{component.button-primary-pressed}`.
 - **首屏的光辉** (`{colors.hero-glow}` — `#ff6a3d`:首屏副本后面的射线大气网中出现的较轻的橙色.
 - **粉红首屏** (`{colors.hero-pink}` — `#f4a8a0`: 一种温暖的粉红色洗涤,在首屏乐队向奶油过渡之前,可以软化其底部边缘.
 - **On-Primary** (`{colors.on-primary}` — `#ffffff`: 标签颜色, 上方 `{colors.primary}` 表面, 显示
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — `#f9f7f3`:默认的页背景. 温暖的奶油,永远不纯白色.
 - **表面骨头** (`{colors.surface-bone}` — `#f3f0e8`:半步深奶油,用于套卡组和特征带.
 - **表面卡片** (`{colors.surface-card}` — `#ffffff`:纯白用于单个的型号卡,搜索输入,和定价等级——唯一出现白色的地方.
@@ -58,7 +58,7 @@ multi-line headlines pack into geometric blocks. The companion family,
 - **细边线** (`{colors.hairline}` — `rgba(32,32,32,0.12)`: 低相位调 1px 奶油表面的分化器。
 - **发条坚固** (`{colors.hairline-strong}` — `#202020`:按钮大纲,焦点输入,以及结构分隔符.
 
-### 文本
+### 文字颜色
 - **Ink** (`{colors.ink}` — `#202020`): primary text colour. Notably warmer than `#000000`, matching the cream canvas.
 - **体质** (`{colors.body}` — `#3a3a3a`:长式体型复制品,墨水会觉得太重 18px+线长.
 - **木炭矿** (`{colors.charcoal}` — `#575757`: 标题,元数据,二级导航.
@@ -68,7 +68,7 @@ multi-line headlines pack into geometric blocks. The companion family,
 - **On-Dark** (`{colors.on-dark}` — `#fcfcfc`): primary text on `{colors.surface-dark}` and `{colors.surface-deep}`.
 - **On-Dark 静音** (`{colors.on-dark-mute}` — `rgba(252,252,252,0.72)`: 暗区中的二次文字;保留非白的感受,而不纯白的流行.
 
-### 语义
+### 语义色
 - **成功** (`{colors.badge-success}` — `#2b9a66`:在模片上内置成功徽章和"运行"状态胶囊形.
 - **链接** (`{colors.link}` — `#ea2804`:内置链接颜色——与主橙色相同,有意将链接拉入品牌强调色.
 - **焦点环** (`{colors.ring-focus}` — `rgba(59,130,246,0.5)`: 交互式元素上的默认焦点环.
@@ -77,7 +77,7 @@ multi-line headlines pack into geometric blocks. The companion family,
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 
 Replicate 故意三家一家人堆积起来:
 
@@ -87,7 +87,7 @@ Replicate 故意三家一家人堆积起来:
 
 When proprietary families cannot be licensed, **Bricolage Grotesque** or **Migra** are credible substitutes for rb-freigeist-neue, and **Geist** or **Inter** can stand in for basier-square. JetBrains Mono is open-source and should always be used directly.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -115,7 +115,7 @@ When proprietary families cannot be licensed, **Bricolage Grotesque** or **Migra
 - Body weight sits at 400 across `{typography.body-lg}` and `{typography.body-md}` — never bumped to 500 for emphasis. Emphasis comes from family change (basier-square → rb-freigeist-neue) rather than weight.
 - 代码从未设置在 basier-square,即使规模较小—— JetBrains Mono 携带每个字面命令,每个模型弹壳,每个API呼叫.
 
-### Note on Font Substitutes
+### 替代字体
 
 When the proprietary families are unavailable, clamp display `lineHeight` to 1.0 explicitly and apply a -3% letter-spacing on display-xxl / display-xl to match the original tightness. Substitutes typically render with looser tracking by default.
 
@@ -128,24 +128,24 @@ When the proprietary families are unavailable, clamp display `lineHeight` to 1.0
 - Section padding: `{spacing.section}` (96px) vertical between full-width bands; `{spacing.band}` (160px) when a band needs extra editorial breathing room (the hero, the closing "Imagine what you can build" stripe).
 - Card internal padding: `{spacing.lg}` (16px) on `{component.model-card}`, `{spacing.xxl}` (32px) on `{component.pricing-tier}`.
 
-### 网格容器( C)
+### 网格与容器
 - **最大内容宽度** ≈ 1280px 身体部分, 1440px 首屏乐队的血流满面
 - **Model grid** on collections: 4 columns at desktop, 3 at tablet large, 2 at tablet, 1 at mobile.
 - **定价**: 3- 以桌面为中心的水平网格,垂直地向下叠加 1024px; 中间的翻转到 `{component.pricing-tier-featured}` (暗反)作为建议选项。
 - **代码-故事部分**: a 2- 上拆分 - 叙事副本左,代码右,倒叠到堆叠 < 1024px.
 
-### 白空间哲学
+### 留白规则
 - Whitespace on cream is generous and editorial — sections breathe at 96px and key bands open at 160px so the typography can scale up without feeling cramped.
 - Inside cards, the system tightens to 16–32px so model thumbnails, statuses, and metadata sit in a compact list-of-cards rhythm.
 - 细边线 `{colors.hairline}` 隔层罩取代奶油表面的阴影;在暗表面, `{colors.divider-dark}` 承担着同等的角色。
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
 | 0 — flat | No shadow, no border | Default cream canvas, full-bleed bands. |
-| 1 ——纲要. | 1px 固态 `{colors.hairline}` 或 减 减 `{colors.hairline-strong}` | 模具牌,定价等级,收藏牌. |
+| 1 ——纲要. | 1px 固态 `{colors.hairline}` 或 `{colors.hairline-strong}` | 模具牌,定价等级,收藏牌. |
 | 2 ——骨质陷落. | 表面颜色变换为 `{colors.surface-bone}` 内置 a `{colors.canvas}` 带 | 特色组装箱,"如何工作"走过. |
 | 3 ——暗反转. | 换牌到 `{colors.surface-dark}` 抗奶油药 | 密码井,特色定价等级, " 等级表 Replicate" 首屏卡片,"首屏卡片","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡","首屏卡",",","首屏卡","首屏卡",",","贺卡","贺卡",",","贺卡","贺卡","贺卡",","贺卡",",",",",",""",",",""""""."."". |
 | 4 软滴水 | `0 8px 24px rgba(32,32,32,0.08)` | 漫游模式缩略图(仅可视化——不交互状态记录). |
@@ -160,7 +160,7 @@ Drop shadows exist in the extracted tokens but are restrained — used sparingly
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -171,9 +171,9 @@ Drop shadows exist in the extracted tokens but are restrained — used sparingly
 | `{rounded.lg}` | 16px | 定价等级,较大的特色卡. |
 | `{rounded.full}` | 9999px | 扣子 投入 徽章 假象 丸. |
 
-### 摄影几何
+### 图片形状
 - 模型缩略图:平方 (S)1:1与 `{rounded.md}` 角落,满血的图像到卡片边缘。
-- 首屏实例产出 : 4:3 或 减 减 16:9 与 `{rounded.md}` 转角
+- 首屏实例产出 : 4:3 或 16:9 配合 `{rounded.md}` 转角
 - 贡献者: circular (`{rounded.full}`), 40px 回家的时候 32px 中,在卡元数据中。
 - 首屏乐队使用一个有条理的黑-ink插图("工作台的铁匠")作为其摄影站——保存在橙色乐队内部而不是涂在奶油上.
 
@@ -203,7 +203,7 @@ Drop shadows exist in the extracted tokens but are restrained — used sparingly
 - Background `{colors.surface-card}`, label `{colors.ink}`, 1px solid `{colors.hairline}`, `rounded: {rounded.full}`, 36×36px circular.
 - 木马箭头,复制到剪贴板 GitHub 链接图标。
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`model-card`** ——型号上市卡.
 - Background `{colors.surface-card}`, text `{colors.ink}`, type `{typography.body-md}`, `rounded: {rounded.md}`, padding `{spacing.lg}` (16px).
@@ -233,7 +233,7 @@ Drop shadows exist in the extracted tokens but are restrained — used sparingly
 - Background `{colors.hero-warm}` with the atmospheric mesh detailed in Elevation, text `{colors.on-dark}`, type `{typography.display-xxl}` for the title.
 - 只在主页上使用;第二页开放,加奶油+ `{typography.display-xl}`.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——默认输入
 - Background `{colors.surface-card}`, text `{colors.ink}`, type `{typography.body-md}`, 1px solid `{colors.hairline}`, `rounded: {rounded.full}`, padding `12px 20px`, height 44px.
@@ -251,7 +251,7 @@ Drop shadows exist in the extracted tokens but are restrained — used sparingly
 **`sub-nav-pill`** — sub-nav 芯片
 - 胶囊形设置在内容上方的横向行(如"All","Featured","Image generation","Audio"), `{component.sub-nav-pill}` 造型风格.
 
-### 签名组件
+### 标志性组件
 
 **`badge-status`** ——模范状态徽章.
 - Background `{colors.badge-success}`, label `{colors.on-dark}`, type `{typography.caption}`, `rounded: {rounded.full}`, padding `4px 10px`.
@@ -272,7 +272,7 @@ Drop shadows exist in the extracted tokens but are restrained — used sparingly
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 使用 `{colors.canvas}` (尖叫)作为默认的页面背景. White () (S)`{colors.surface-card}`)只出现在个人卡片,输入,以及首屏插图背景.
 - 准备金 `{colors.primary}` 给主力CTA,家庭首屏乐队, 和内线链接—— 三个角色,没有别的。
 - 设定每个交互式元素为 `{rounded.full}` ——扣子,输入物,徽章,假象,丸.
@@ -282,7 +282,7 @@ Drop shadows exist in the extracted tokens but are restrained — used sparingly
 - Render code in `{component.code-block}` with a `{colors.surface-dark}` background — code is print, not an inline grey box.
 - 与平面摄影 `{rounded.md}` 角和满血的作物 内卡。
 
-### Don't
+### 应避免的做法
 - 页面级别上不要用纯白色来代替奶油,品牌温度来自 `{colors.canvas}`.
 - Don't introduce a secondary brand colour. Orange is the only accent; semantic green and focus blue are functional, not decorative.
 - Don't loosen display `lineHeight` past 1.0. Tight stacking is structural.
@@ -293,7 +293,7 @@ Drop shadows exist in the extracted tokens but are restrained — used sparingly
 - Don't add drop shadows on cream surfaces. Elevation is colour-blocking; shadows are reserved for floating thumbnails.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -311,14 +311,14 @@ Drop shadows exist in the extracted tokens but are restrained — used sparingly
 - `{component.button-icon}` (36px) 被撞到(或) 44px 移动通过增加的垫。
 - `{component.sub-nav-pill}` 留在原点 36px 并成长到 40px 移动时通过垂直加载调整。
 
-### 折叠战略
+### 窄屏布局调整
 - 顶级导航崩溃到汉堡 < 1024px; 字号和 `{component.button-primary}` 保持锚定。
 - 首屏们 `{typography.display-xxl}` 夹子 : 128px → 96px → 64px → 48px 穿过断点梯子
 - 定价 3- 垂直的上网格堆栈 < 1024px 与突出的层次 剩下的中心设置。
 - Code-story splits switch from side-by-side to stacked at < 1024px, code well always second.
 - Sub-nav 胶囊形从包装行转换为水平滚动扶轮, 位置为 < 768px.
 
-### 图像行为
+### 图片适配
 - Model thumbnails serve at 1.5× and 2× DPR; below 768px the system swaps to a 600×600 export instead of 1200×1200.
 - 首屏大气网是作为CSS梯度——没有资产成本,没有断点变化——而成的.
 - Code-block 内容软地包裹在 < 1024px (没有水平滚动);长线断开后加续行标记.

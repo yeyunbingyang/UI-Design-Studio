@@ -7,7 +7,7 @@
 
 ## 概览
 
-Wired 页面是编辑产品:白帆画,品牌专有的严格黑字印 `WiredDisplay` (高,窄,高的紧凑) serif 使用时间 64 px),以及堆叠的故事卡片,读作印刷杂志网格,移植到屏幕上. )没有大气梯度,没有装饰性铬,没有色调的强调色——该品牌除了黑白二重奏之外的唯一颜色是小的. `{colors.link}` (`#057dbc`)用于长式文章中的内含体链接.
+Wired 页面是编辑产品:白帆画,品牌专有的严格黑字印 `WiredDisplay` (高,窄,高的紧凑) serif 使用时间 64 px),以及堆叠的故事卡片,读作印刷杂志网格,移植到屏幕上. )没有大气梯度,没有装饰性界面框架,没有色调的强调色——该品牌除了黑白二重奏之外的唯一颜色是小的. `{colors.link}` (`#057dbc`)用于长式文章中的内含体链接.
 
 Type carries the entire identity. Three families ladder the system: `WiredDisplay` (the proprietary high-contrast serif) for hero / section headlines; `BreveText` (a humanist serif) for long-form body and bylines; and `Apercu` (a humanist sans) for metadata, captions, eyebrow tags, and buttons. The pairing is editorial-grade: serifs for narrative, sans for navigation and structural labels.
 
@@ -24,20 +24,20 @@ Type carries the entire identity. Three families ladder the system: `WiredDispla
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **墨黑笔** (`{colors.primary}` — `#000000`:品牌仅"accent",用于文字标记,头条,CTA,页脚填充,纯黑色,从未软化.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — `#ffffff`: 默认的页面背景.
 - **软画帘** (`{colors.canvas-soft}` — `#f5f5f5`: 用于评论区段背景和搜索结果行悬浮状态的稀有锡(不是主页节奏).
 - **细边线** (`{colors.hairline}` — `#e0e0e0`): 1 px 故事行之间的分词,品牌只有"线".
 
-### 文本
+### 文字颜色
 - **Ink** (`{colors.ink}` — `#000000`): Every headline, every body paragraph in BreveText.
 - **墨水软** (`{colors.ink-soft}` — `#1a1a1a`:一种近黑变体,用于 caption-strong /页脚链接强调.
 - **体质** (`{colors.body}` — `#757575`:二级元数据——旁线,时间戳,辅助体线.
 
-### 语义
+### 语义色
 The brand operates with one inline link colour and no separate error / success / warning palette in its marketing surface. Validation cues on form pages use the ink black + body grey hierarchy.
 
 - **链接** (`{colors.link}` — `#057dbc`:内置体链接蓝色. 仅使用在长形文章体副本内,从未在UI按钮或导航上使用.
@@ -45,7 +45,7 @@ The brand operates with one inline link colour and no separate error / success /
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 三个家庭在系统上排队:
 1. **WiredDisplay** ——专有高矮高低的高低相间 serif 专用于显示头条( Q)64 px 中,缩放为 26 px 子Display),该品牌最能识别的打字签名.
 2. **BreveText** ——专有的人文主义者. serif 用于长形体、副线和编辑标题。 16 – 19 px line-height 1.45 – 1.50 以适应阅读密度。
@@ -53,7 +53,7 @@ The brand operates with one inline link colour and no separate error / success /
 
 Inter 被装入为嵌入式工具表面(注释部分,账户页)的第四个倒置面,但不出现在主营销/文章表面。
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -77,11 +77,11 @@ Inter 被装入为嵌入式工具表面(注释部分,账户页)的第四个倒�
 - **Display weight 400** — the proprietary WiredDisplay reads as elegant by virtue of its thin-tall-narrow design at default weight, not via weight 700+.
 - **Bylines use BreveText weight 700 with relaxed line-height 2.2.** The vertical breathing is part of the editorial signature.
 
-### Note on Font Substitutes
+### 替代字体
 三个专有面孔没有确切的替代品。 最佳开源近似 :
 - **WiredDisplay** — *播放集显示* 字重 400 大型显示器大小能捕捉到高孔径的甜酮感,虽然比品牌的高窄比例要大.
-- **BreveText** — *洛拉,你好吗?* 或 减 减 *来源 Serif 专业版* 时 间 16 – 19 px.
-- **Apercu** — *Inter* 或 减 减 *曼罗普* 重量 400 / 700.
+- **BreveText** — *洛拉,你好吗?* 或 *来源 Serif 专业版* 时 间 16 – 19 px.
+- **Apercu** — *Inter* 或 *曼罗普* 重量 400 / 700.
 
 
 ## 布局
@@ -92,12 +92,12 @@ Inter 被装入为嵌入式工具表面(注释部分,账户页)的第四个倒�
 - **分区编栏**: 首屏/ 故事网格使用 `{spacing.4xl}` 48 px 桌面上上下下层。
 - **故事行编栏**: `{spacing.lg}` 16 px 垂直于旁线故事行之间。
 
-### 网格容器( C)
+### 网格与容器
 - 销售内容使用宽容器(~1400 px 最大(最大)数。
 - 封面故事 grid: 1 large hero + 2-up secondary stories + vertical stack.
 - Story-row 堆栈:带有细边线分隔器的全宽单列。
 
-### 反应战略
+### 响应式布局
 
 #### 断点
 
@@ -110,18 +110,18 @@ Inter 被装入为嵌入式工具表面(注释部分,账户页)的第四个倒�
 #### 触控区域
 Button-primary 使 ~44 px 高( 高)12 垂直粘贴+ 20 。) 。 WCAG AAA , 在所有宽度。
 
-#### 折叠战略
+#### 窄屏布局调整
 - 导航: 完全链接行 + 订阅 CDA 桌面 。 汉堡 移动 。
 - 杂志 grid: hero stays full-width; 2- 上二级滴水到 1- 移动。
 - 故事列:在所有的景点停留单列.
 
-#### 图像行为
+#### 图片适配
 - 封面图像: 已全血 16:9 首屏/ 爱人 4:3 二级
 - 文章体影像:文章栏内全线网.
 - Author avatars: small inline circular crops next to bylines.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -134,14 +134,14 @@ The brand uses no drop-shadows. Surface contrast and hairline borders carry all 
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
 | `{rounded.none}` | 0px | Every interactive shape — buttons, inputs, cards. The brand's signature square geometry. |
 | `{rounded.full}` | 9999px | Circular 图标容器(社会-共享,账户化)。 |
 
-### 摄影几何
+### 图片形状
 - 封面故事: 16:9 首屏,边缘对角。
 - 次要故事卡: 4:3 缩略语.
 - 文章体象:原生方面,全列宽.
@@ -161,7 +161,7 @@ The brand uses no drop-shadows. Surface contrast and hairline borders carry all 
 **`button-icon-circular`** - 电话 circular 共享相机按钮。
 - Background `{colors.canvas}`, ink icon, shape `{rounded.full}`.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`story-card-large`** - 封面故事卡与 `{typography.display-md}` 头条.
 - Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.lg}`. No border — the card lives on the canvas with the photo doing the work.
@@ -172,7 +172,7 @@ The brand uses no drop-shadows. Surface contrast and hairline borders carry all 
 **`story-row`** ——旁线故事列表排行.
 - Background `{colors.canvas}`, text `{colors.ink}`, 1 px solid `{colors.hairline}` bottom border, body in `{typography.body-md-strong}`, padding `{spacing.lg}` 0.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——标准文本输入.
 - Background `{colors.canvas}`, text `{colors.ink}`, 1 px solid `{colors.ink}` border, body in `{typography.body-md}`, padding `{spacing.md} {spacing.lg}`, shape `{rounded.none}`.
@@ -183,12 +183,12 @@ The brand uses no drop-shadows. Surface contrast and hairline borders carry all 
 - Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.md} {spacing.xl}`. Layout: hamburger left, masthead centre, Subscribe right.
 
 **`nav-link`** ——在导航内链接项目.
-- 文本 `{colors.ink}`,设置在 `{typography.body-sm-strong}` (Apercu 14 / 700).
+- 文字颜色 `{colors.ink}`,设置在 `{typography.body-sm-strong}` (Apercu 14 / 700).
 
 **`footer`** - 黑色脚步乐队。
 - Background `{colors.primary}`, text `{colors.on-primary}`, padding `{spacing.4xl} {spacing.xl}`. Body in `{typography.body-sm}` (Apercu 14 / 400). Footer column eyebrows in `{typography.body-sm-strong}`.
 
-### 签名组件
+### 标志性组件
 
 **`hero-band`** ——主持封面故事的白首屏乐队.
 - Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.4xl} {spacing.xl}`. Cover headline in `{typography.display-hero}` (WiredDisplay 64 px).
@@ -205,52 +205,52 @@ The brand uses no drop-shadows. Surface contrast and hairline borders carry all 
 **`hairline-divider`** - 电话 1 px 将线线条连接在故事行之间。
 - 1 px 固态 `{colors.hairline}`.
 
-### 实例(说明性)
+### 组合示例
 
-> 自动生成的工具包-模拟演示表面(`scripts/derive-examples-block.mjs`。每个 `ex-*` 条目参考: 下游消费者的品牌原始产品(`/preview-design`, `/generate-kit`) 重新皮肤相同 10 表面一致。 `TO_FILL` 标记表示缺失原始人——在LLM判断传中解析.
+> 以下组合场景由 `scripts/derive-examples-block.mjs` 生成。各 `ex-*` 条目复用品牌基础样式，供 `/preview-design` 和 `/generate-kit` 以统一风格呈现同一套 10 个示例。`TO_FILL` 提示有待核对的基础样式。
 
-**`ex-pricing-tier`** ——默认定价等级卡。 feature-card 带品牌的铬 canvas-soft 表面。
+**`ex-pricing-tier`**：默认套餐卡，沿用功能卡结构和品牌 canvas-soft 底色。
 - 属性 : `backgroundColor`, `textColor`, `borderColor`, `rounded`, `padding`
 
-**`ex-pricing-tier-featured`** ——地貌/高亮的层次——极性-浮点表面(暗色填充+光线文字在光线模式下,浅色填充+暗色文字在暗线模式下).
+**`ex-pricing-tier-featured`**：推荐套餐卡。浅色模式中用深底浅字，深色模式中用浅底深字。
 - 属性 : `backgroundColor`, `textColor`, `rounded`, `padding`
 
-**`ex-product-selector`** ——什么是包含的汇总卡——重新用于SaaS/B2B纵横(NOT为字形产品画廊).
+**`ex-product-selector`**：面向 SaaS / B2B 场景的套餐权益摘要卡。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-cart-drawer`** ——订阅摘要——重新用于SaaS/B2B(每件加件的行项目,而非字面车).
+**`ex-cart-drawer`**：SaaS / B2B 订阅摘要，每个附加项单独列出。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `item-divider`
 
-**`ex-app-shell-row`** ——App Shell 实例中的侧边栏导航行. Active State 使用品牌主标.
+**`ex-app-shell-row`**：应用框架示例里的侧栏导航行，以品牌主色标识选中状态。
 - 属性 : `backgroundColor`, `activeIndicator`, `rounded`, `padding`
 
-**`ex-data-table-cell`** — Default data-table th + td chrome. Header uses mono-caps eyebrow typography; body uses body-sm.
+**`ex-data-table-cell`**：数据表格中 th 与 td 的默认样式。表头采用大写等宽字，正文采用 body-sm。
 - 属性 : `headerBackground`, `headerTypography`, `bodyTypography`, `cellPadding`, `rowBorder`
 
-**`ex-auth-form-card`** ——签入/签入卡. 复用. feature-card 铬 text-input 原始人在里面,他们都在里面
+**`ex-auth-form-card`**：登录与注册卡，复用功能卡和 text-input。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-modal-card`** ——模度对话框表面——与 feature-card 以高的阴影盟誓,
+**`ex-modal-card`**：对话框表面，沿用功能卡样式并加浮层投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-empty-state-card`** ——空状态插图框架.
+**`ex-empty-state-card`**：空状态插图容器。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `captionTypography`
 
-**`ex-toast`** ——通知表面. feature-card 形状 + 中阴影。
+**`ex-toast`**：轻提示，沿用功能卡圆角并使用中等投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `typography`
 
 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` 黑色表示字签,每张CTA,和页脚填充,品牌是严格的黑白二重唱.
 - Set hero headlines in `{typography.display-hero}` (WiredDisplay 64 px weight 400). The proprietary serif IS the brand's typographic signature.
 - 使用 `{rounded.none}` 0 px 。每个按钮和窗体输入。品牌读作印刷杂志——方角是不可谈判的。
 - 平对 WiredDisplay (serif 显示)与 BreveText (serif 和(b) 组织事项 Apercu (三指标)三面相,三面相角色.
 - 编剧故事行 `{colors.hairline}` 1 px 分牌者——品牌唯一的高调提示.
 
-### Don't
+### 应避免的做法
 - Don't introduce a chromatic brand accent. The link blue is reserved for inline body links inside articles only.
 - Don't round button corners. The brand never softens its rectangular geometry.
 - Don't drop a soft drop-shadow on cards. Surface contrast and hairlines carry elevation.
@@ -259,7 +259,7 @@ The brand uses no drop-shadows. Surface contrast and hairline borders carry all 
 
 ## 设计词元原值
 
-启发人们理解 Wired设计语言——旗舰科技-杂志品牌,其表面是白帆上鲜明黑色文字标记的严格编辑二重唱,以高大的狭义风俗展示为主. serif 首屏头条,一个人文主义者 serif 身体面值用于长形读取,而干净的桑斯面值用于元数据;布局读取时就像一个印行的杂志,移植到网络上,几乎没有营销的铬.
+启发人们理解 Wired设计语言——旗舰科技-杂志品牌,其表面是白帆上鲜明黑色文字标记的严格编辑二重唱,以高大的狭义风俗展示为主. serif 首屏头条,一个人文主义者 serif 身体面值用于长形读取,而干净的桑斯面值用于元数据;布局读取时就像一个印行的杂志,移植到网络上,几乎没有营销的界面框架.
 
 ```yaml
 ---

@@ -26,44 +26,44 @@ Stripe设计语言以渐变网开口。 宽水平带的面霜、雪贝橙、薰�
 
 > **Source pages:** home (`/`), `/payments`, `/pricing`, `dashboard.stripe.com/register/payments`.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **英迪戈语Name** (`{colors.primary}` — `#533afd`:品牌的标志CTA颜色. 填充式溢出按钮,链接强调,梯度锚.
 - **深渊** (`{colors.primary-deep}` — `#4434d4`: 更深的indigo在梯度中停时使用,并作为新闻状态更温暖的替代品.
 - **印地哥出版社** (`{colors.primary-press}` — `#2e2b8c`:按下一级升降机.
 - **软软的Indigo** (`{colors.primary-soft}` — `#665efd`:一种产品-UI强调色和图表亮点中使用的轻度的indigo.
 - **内脏已制服** (`{colors.primary-bg-subdued-hover}` — `#b9b9f9`: pale indigo fill 用作软标签背景.
-- **浅色 900** (`{colors.brand-dark-900}` — `#1c1e54`: 专用定价等级和仪表板铬上使用的深海军.
+- **浅色 900** (`{colors.brand-dark-900}` — `#1c1e54`: 专用定价等级和仪表板界面框架上使用的深海军.
 - **鲁比** (`{colors.ruby}` — `#ea2261`:渐变的强调色和图表突出;从不扣.
 - **红** (`{colors.magenta}` — `#f96bee`: 渐变的粉色更亮点。
 - **柠檬** (`{colors.lemon}` — `#9b6829`:温暖的雪贝在梯度背景中停止.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — `#ffffff`: 默认页面背景.
 - **软画帘** (`{colors.canvas-soft}` — `#f6f9fc`: 渐变首屏下面的特征带上使用的冷淡的淡白.
 - **油菜酱** (`{colors.canvas-cream}` — `#f5e9d4`: 用作一种温暖的奶油 feature-band 填充——品牌的色调插曲.
 - **细边线** (`{colors.hairline}` — `#e3e8ee`): 1px 纸牌和桌子上的边框。
 - **细边线输入** (`{colors.hairline-input}` — `#a8c3de`:形式输入上使用的稍凉的细边线.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — `#0d253d`: 品牌上默认的车身文字颜色,深海军,从不纯黑色.
 - **墨水中学** (`{colors.ink-secondary}` — `#273951`: 白话的副文字.
 - **墨水哑声** (`{colors.ink-mute}` — `#64748d`:帮助者文字,标题,表格标签.
 - **墨水哑声 2** (`{colors.ink-mute-2}` — `#61718a`: 近似于 ink-mute 用于导航。
 - **小学** (`{colors.on-primary}` — `#ffffff`: 文本在indigo/上 : dark-navy 表面, 显示
 
-### 语义
+### 语义色
 The brand does not use a separate semantic color palette in the marketing system — error / success states live in dashboard-product UI specifically.
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 
 The display and UI tier is **Sohne** (proprietary, licensed from Klim Type Foundry) at weights 300 (thin) and 400 (regular). The variable font (`sohne-var`) is loaded with `font-feature-settings: "ss01"` enabled globally — the stylistic set substitutes a single-story `a` and other character variants that are part of the brand's typographic signature.
 
 When Sohne is unavailable, fall back to **SF Pro Display** at thin weights, then system-ui. For maximum brand fidelity, **Inter** (open-source) at weight 300 with `font-feature-settings: "ss01"` and `letter-spacing: -1.4px` on display sizes approximates the rhythm closely.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -89,8 +89,8 @@ When Sohne is unavailable, fall back to **SF Pro Display** at thin weights, then
 - **Tabular figures for money.** Any cell rendering currency, transaction amounts, or numeric counts uses `font-feature-settings: "tnum"` plus a tightening tracking. The brand quietly signals its financial DNA through this micro-detail.
 - **`ss01` 在全球范围。** 应用 `font-feature-settings: "ss01"` 以至身体元素,所以每个文本角色的样式化-设置替代都开始。
 
-### Note on Font Substitutes
-索恩是专有的,使用 **Inter** (通过 Google 字体打开源码) 字重 300 与 `letter-spacing: -1.4px` 财务报告和已审计财务报表 `font-feature-settings: "ss01"` 用于显示级别 - Inter 是最接近的开源模拟。 Inter 时 间 300 字重为 `font-feature-settings: "tnum"` (在适用的情况下)是犬科替代物。 Helvetica 或 减 减 system-ui 默认——比品牌需求重.
+### 替代字体
+索恩是专有的,使用 **Inter** (通过 Google 字体打开源码) 字重 300 配合 `letter-spacing: -1.4px` 和 `font-feature-settings: "ss01"` 用于显示级别 - Inter 是最接近的开源模拟。 Inter 时 间 300 字重为 `font-feature-settings: "tnum"` (在适用的情况下)是犬科替代物。 Helvetica 或 system-ui 默认——比品牌需求重.
 
 
 ## 布局
@@ -101,22 +101,22 @@ When Sohne is unavailable, fall back to **SF Pro Display** at thin weights, then
 - **分区编栏**: 64–96px 销售表面; 32–48px 显示在仪表板/产品表面。
 - **Card internal padding**: 32px on feature cards; 24px on dashboard mockups.
 
-### 网格容器( C)
+### 网格与容器
 - 销售页面中心a ~1200px 容器,其梯度网格延伸至上方的边缘至边缘。
 - Pricing collapses 4-up → 2-up → 1-up at 1024 / 768 breakpoints.
 - 板板产品模型使用自己的内部网格(12- 领带桌, 3- 科尔卡格)作为静态复合材料提供.
 
-### 白空间哲学
+### 留白规则
 梯度网格占据了页的上三分之一;下面的白帆是慷慨的加成。 96px,内容收紧到 32px 使用仪表板/定价页面,用户进行比较和采取行动。
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
 | 0 | 平面 | 默认表面 |
 | 1 | `box-shadow: rgba(0,55,112,0.08) 0 1px 3px` | 白色卡片升挂 |
-| 2 | `box-shadow: rgba(0,55,112,0.08) 0 8px 24px, rgba(0,55,112,0.04) 0 2px 6px` | 浮面板、仪表板模拟铬 |
+| 2 | `box-shadow: rgba(0,55,112,0.08) 0 8px 24px, rgba(0,55,112,0.04) 0 2px 6px` | 浮面板、仪表板模拟界面框架 |
 | 3 | 渐变网状背景 | 品牌的主要深度介质——大气颜色而非文字阴影 |
 
 ### 装饰性深度
@@ -125,19 +125,19 @@ When Sohne is unavailable, fall back to **SF Pro Display** at thin weights, then
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
-| `{rounded.xs}` | 4px | 发条标签,表铬 |
+| `{rounded.xs}` | 4px | 发条标签,表界面框架 |
 | `{rounded.sm}` | 6px | 格式输入 |
 | `{rounded.md}` | 8px | 压缩卡、 提示 |
 | `{rounded.lg}` | 12px | 定价卡、特征卡 |
-| `{rounded.xl}` | 16px | 板式产品模拟铬 |
+| `{rounded.xl}` | 16px | 板式产品模拟界面框架 |
 | `{rounded.pill}` | 9999px | All buttons, tag pills |
 
-### 摄影几何
-品牌使用 **产品 UI 模型** 盘状复合材料在内部制成 faux IDE/terminal/dashboard 铬 `{rounded.lg}` 12px 装有细微的容器 `box-shadow`。真实摄影出现在客户标识条和罕见的案例研究卡中;作为套件处理 4:3 以无影.
+### 图片形状
+品牌使用 **产品 UI 模型** 盘状复合材料在内部制成 faux IDE/terminal/dashboard 界面框架 `{rounded.lg}` 12px 装有细微的容器 `box-shadow`。真实摄影出现在客户标识条和罕见的案例研究卡中;作为套件处理 4:3 以无影.
 
 
 ## 组件
@@ -154,7 +154,7 @@ When Sohne is unavailable, fall back to **SF Pro Display** at thin weights, then
 **`button-on-dark`** ——用于仪表板/暗面.
 - Background `{colors.brand-dark-900}`, text `{colors.on-primary}`, same pill geometry.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`card-feature-light`** ——白色的特色解释卡.
 - Background `{colors.canvas}`, padding `{spacing.xxl}`, rounded `{rounded.lg}` 12px, 1px `{colors.hairline}` border, optional Level 1 shadow.
@@ -171,7 +171,7 @@ When Sohne is unavailable, fall back to **SF Pro Display** at thin weights, then
 **`card-dashboard-mockup`** ——复合仪表板/产品UI截图.
 - Background `{colors.canvas}`, type `{typography.body-tabular}` (with `tnum`), padding `{spacing.xl}` 24px, rounded `{rounded.lg}` 12px, Level 2 shadow. Often contains nested mini-mockups: code preview + dashboard table + chart card.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——标准表单字段.
 - Background `{colors.canvas}`, text `{colors.ink}`, type `{typography.body-md}`, padding `{spacing.sm} {spacing.md}` (8px 12px), rounded `{rounded.sm}` 6px, 1px `{colors.hairline-input}` border.
@@ -187,7 +187,7 @@ When Sohne is unavailable, fall back to **SF Pro Display** at thin weights, then
 **`pill-tag-soft`** 低调的Indigo标签。
 - Background `{colors.primary-bg-subdued-hover}`, text `{colors.primary-deep}`, type `{typography.micro-cap}`, padding `4px 8px`, rounded `{rounded.pill}`.
 
-### 签名组件
+### 标志性组件
 
 **渐变网格后投** 红宝石粉末在页面上三分之一横向模糊,作为SVG或大背景图像执行,不是平坦的CSS梯度(真正的网格有有机斑点形状).
 
@@ -196,7 +196,7 @@ When Sohne is unavailable, fall back to **SF Pro Display** at thin weights, then
 **Tabular-Figure Money Type** — every number rendering money, count, or transaction value uses `font-feature-settings: "tnum"`. The brand's quiet signal that it's a financial-infrastructure platform.
 
 **`link-on-light`** ——光表面的内含链接.
-- 文本 `{colors.primary}` 交付 `{typography.body-md}`,默认情况下不下划线。
+- 文字颜色 `{colors.primary}` 交付 `{typography.body-md}`,默认情况下不下划线。
 
 **`footer-light`** ——全站页脚.
 - Background `{colors.canvas}`, text `{colors.ink-mute}`, type `{typography.caption}`, padding `{spacing.huge} {spacing.xl}` (64px 24px). Holds 4–6 columns of link groups, social icons, and a small legal row.
@@ -204,7 +204,7 @@ When Sohne is unavailable, fall back to **SF Pro Display** at thin weights, then
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` 用于填充的CTA和内置链接的强调——它应该保持节制,每个带一个填充的按钮.
 - 将梯度网格应用到每个营销首屏身上;赤裸的canvas首屏感觉离谱.
 - 显示字重级 300 负数 letter-spacing ——细的跟踪是打印的特征.
@@ -212,7 +212,7 @@ When Sohne is unavailable, fall back to **SF Pro Display** at thin weights, then
 - 应用 `font-feature-settings: "ss01"` 举世瞩目的是
 - 将每个特性解释与复合产品UI模拟对等;品牌的论据是"看实际产品".
 
-### Don't
+### 应避免的做法
 - Don't bump display weight above 300 — at 400 the brand's editorial air collapses.
 - Don't add new accent colors outside the documented gradient stops (cream / orange / lavender / indigo / ruby / magenta).
 - Don't use the indigo `{colors.primary}` as a body-text color — it's a CTA and link color, not a type color at body size.
@@ -221,7 +221,7 @@ When Sohne is unavailable, fall back to **SF Pro Display** at thin weights, then
 - Don't replace the pill shape with rounded-rectangles for buttons.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -236,13 +236,13 @@ When Sohne is unavailable, fall back to **SF Pro Display** at thin weights, then
 - 胶囊形扣子被击中 ≥ 40×40px 。在较小的屏幕上,按钮大小最多 44×44px 维持WCAG AA.
 - 窗体字段不变 40px 最低身高。
 
-### 折叠战略
+### 窄屏布局调整
 - 显示阶梯级 56 → 48 → 32 → 26 → 22px 穿过断点
 - 移动式上渐变网状重排砖块,以保存洗涤而不会消失.
 - 变板复合材料简化为移动式的单板模型;多层的构件只在桌面+时制作.
 - Pricing tiers stair-step 4-up → 2-up → 1-up.
 
-### 图像行为
+### 图片适配
 产品UI复合材料使用 `srcset` 移动作物侧重于最可操作的内板;桌面作物显示完整的多层组成。
 
 

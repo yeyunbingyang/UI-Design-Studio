@@ -24,18 +24,18 @@ The page rhythm is monolithic: dark canvas top to bottom with subtle elevation s
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Composio 蓝色** (`{colors.primary}` — #0007cd:主CTAs,词标,聚光灯发光中心.
 - **Composio 蓝色活动** (`{colors.primary-active}` — #0005a3:新闻州.
 - **点光光光光光调色调** (`{colors.primary-glow}` — #1a26ff:光圈大气光圈内部使用的更亮蓝色.
 - **青色青色调** (`{colors.accent-cyan}` — #00d4ff:在数据流可视化上进行分解.
 - **紫色仙乐** (`{colors.accent-violet}` — #7b3aed: 仅存在于特定产品插图内.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — #0f0f0f:页楼——近黑.
 - **深层的页面底色** (`{colors.canvas-deep}` — #000000: 纯黑色,用于终端模拟网格和代码块.
 - **表面卡片** (`{colors.surface-card}` — #181818: 默认内容卡.
-- **地表卡升空** (`{colors.surface-card-elevated}` — #222222:终端窗帘,二级按钮.
+- **地表卡升空** (`{colors.surface-card-elevated}` — #222222:终端面板,二级按钮.
 - **表面坚固** (`{colors.surface-strong}` — #2a2a2a: 下拉菜单.
 
 ### Hairlines
@@ -43,7 +43,7 @@ The page rhythm is monolithic: dark canvas top to bottom with subtle elevation s
 - **柔软的细边线** (`{colors.hairline-soft}` — #1a1a1a:轻分者.
 - **发条坚固** (`{colors.hairline-strong}` — #333333: 更强的面板大纲.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — #ffffff: 显示头条.
 - **体质** (`{colors.body}` — #a8a8a8: 默认的运行文本——软灰色.
 - **Body Strong** (`{colors.body-strong}` — #ffffff): Same as ink.
@@ -51,17 +51,17 @@ The page rhythm is monolithic: dark canvas top to bottom with subtle elevation s
 - **静音软体** (`{colors.muted-soft}` — #666666: 已禁用文本。
 - **小学** (`{colors.on-primary}` — #ffffff:蓝色CTAs上的白文本.
 
-### 语义
+### 语义色
 - **成功** (`{colors.semantic-success}` — #33d17a:"在线","主动"指标.
 - **错误** (`{colors.semantic-error}` — #ff4d4d:验证错误.
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 系统运行 **abcDiatype** 各个文本角色的代码块切换到 **JetBrains Mono**。后退时 : `ui-sans-serif, system-ui, sans-serif`.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -85,7 +85,7 @@ The page rhythm is monolithic: dark canvas top to bottom with subtle elevation s
 - **abcDiatype 每一个角色。** 无法显示/ 身体家庭分裂 。
 - **JetBrains Mono 每一个代码表面。**
 
-### Note on Font Substitutes
+### 替代字体
 abcDiatype is a Lineto licensed typeface. Open-source substitute: **Inter** at weight 500 with letter-spacing -1.5%.
 
 
@@ -96,18 +96,18 @@ abcDiatype is a Lineto licensed typeface. Open-source substitute: **Inter** at w
 - **脚本 :** `{spacing.xxs}` 4px · `{spacing.xs}` 8px · `{spacing.sm}` 12px · `{spacing.base}` 16px · `{spacing.md}` 20px · `{spacing.lg}` 24px · `{spacing.xl}` 32px · `{spacing.xxl}` 48px · `{spacing.section}` 96px.
 - **科 科 padding:** `{spacing.section}` (96px),主要乐队.
 
-### 网格容器( C)
+### 网格与容器
 - 最大内容 width: ~1200px.
 - 编辑机构: 12- 列网格 - 列网格 - Colind grade.
 - 终端模型 grid: 2×2 equal-size panes.
 - 工具包 grid: 4-up at desktop, 2-up tablet, 1-up mobile.
 - Footer: 5-column at desktop.
 
-### 白空间哲学
+### 留白规则
 暗色页面底色创造了自己的深度——白空间可以保持紧凑而不感到拥挤. 96px 带间; 24px 在一个乐队内的牌之间。
 
 
-## 层次与阴影
+## 层次与深度
 
 系统使用 **亮度阶梯高地**:表面在亮度中上升,而不是投放阴影。结合细微的光圈蓝色光线,这形成了一个聚焦的暗模式大气。
 
@@ -121,12 +121,12 @@ abcDiatype is a Lineto licensed typeface. Open-source substitute: **Inter** at w
 
 ### 装饰性深度
 - **闪光闪耀的背景** ——以首屏内容为核心的射线蓝色梯度.
-- **Terminal-pane 亮度梯级** — 2×2 模拟用途 canvas-deep 外侧+ surface-card-elevated 窗帘,你应该看看
+- **Terminal-pane 亮度梯级** — 2×2 模拟用途 canvas-deep 外侧+ surface-card-elevated 面板,你应该看看
 
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -156,7 +156,7 @@ abcDiatype is a Lineto licensed typeface. Open-source substitute: **Inter** at w
 
 **`button-secondary-dark`** — Surface-elevated secondary. Background `{colors.surface-card-elevated}`, text `{colors.body-strong}`.
 
-**`button-outline`** — Transparent 与 1px hairline-strong 边框。
+**`button-outline`** — Transparent 配合 1px hairline-strong 边框。
 
 **`button-tertiary-text`** ——内含文本链接.
 
@@ -205,7 +205,7 @@ abcDiatype is a Lineto licensed typeface. Open-source substitute: **Inter** at w
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` 用于初级CTA, 字签,和聚光灯光。
 - Use `{rounded.md}` (8px) for every CTA — not full pills.
 - 使用亮度阶梯进行高程;避免投影.
@@ -213,7 +213,7 @@ abcDiatype is a Lineto licensed typeface. Open-source substitute: **Inter** at w
 - 渲染码、 CMI 命令 JetBrains Mono 途经 `{typography.code}`.
 - 使用 2×2 终端-模拟网格作为主页首屏主播.
 
-### Don't
+### 应避免的做法
 - Don't introduce a secondary brand color. Cyan and violet are illustrative-only.
 - Don't use full pills on CTAs.
 - Don't drop display weight to 400.
@@ -222,7 +222,7 @@ abcDiatype is a Lineto licensed typeface. Open-source substitute: **Inter** at w
 - Don't extract a CTA color from a third-party widget (cookie consent, OneTrust). The brand's CTA color is what appears on actual page CTAs.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -237,7 +237,7 @@ abcDiatype is a Lineto licensed typeface. Open-source substitute: **Inter** at w
 - 初级CTA 时间 40px 高度——在WCAG AA,为AAA加注.
 - 搜索输入 : 40px.
 
-### 折叠战略
+### 窄屏布局调整
 - 顶端导航切换到下面的汉堡包 768px.
 - 终端模型 2×2 网格崩溃为移动上的单个窗格。
 - 工具包 grid: 4-up → 2-up → 1-up.
@@ -247,7 +247,7 @@ abcDiatype is a Lineto licensed typeface. Open-source substitute: **Inter** at w
 ## 迭代指南
 
 1. 一次集中关注单个组件.
-2. 默认 CTAs 至 `{rounded.md}` (8px。卡片使用( ) `{rounded.lg}` 或 减 减 `{rounded.xl}`.
+2. 默认 CTAs 至 `{rounded.md}` (8px。卡片使用( ) `{rounded.lg}` 或 `{rounded.xl}`.
 3. 变式作为单独的条目在内部存在 `components:`.
 4. 使用 `{token.refs}` 到处都是,从不内含六分法。
 5. 霍弗州从未有文献记载.

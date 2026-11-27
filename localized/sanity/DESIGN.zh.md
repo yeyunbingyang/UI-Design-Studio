@@ -24,30 +24,30 @@ Two type families do all the work: `waldenburgNormal` for every running text rol
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Coral-Red** (`{colors.brand}` — `#f36458`): The single signature accent. Reserved for the highest-priority CTA per page (one occurrence per viewport on most pages), the brand dot beside the wordmark, and brand-card surface fills on content-agent and select feature panels. Used sparingly enough that a viewer can predict where it will appear.
 - **深白( Brand Deep) 语句** (`{colors.brand-deep}` — `#dd0000`:错误/破坏性变体——从未作为首屏或节强调色使用.
 - **黑色** (`{colors.primary}` — `#0b0b0b`: 暗片中的默认页面底色; 光片上的主要动作填充; 光表面的默认文字颜色。 系统中使用最多的颜色在之后 `{colors.on-primary}`.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — `#0b0b0b`: 默认暗剖背景,无暖气的近黑.
-- **软画帘** (`{colors.canvas-soft}` — `#212121`: 暗片和面板表面。 feature-card-dark 财务报告和已审计财务报表 Studio-window 模型,提供单步高架提示
+- **软画帘** (`{colors.canvas-soft}` — `#212121`: 暗片和面板表面。 feature-card-dark 和 Studio-window 模型,提供单步高架提示
 - **Canvas Light** (`{colors.canvas-light}` — `#ffffff`): Primary light-mode background. Used for the entire pricing page, marketing-section-light bands, and pricing-card surface.
 - **页面底色纸** (`{colors.canvas-paper}` — `#ededed`: 用于某些物体的暖灰替代光表面 hero-card 工作室页面上的瓷砖;选择在纯白之上举牌半圆,而不失去清净的阅读感觉.
 - **柔软的细边线** (`{colors.hairline-soft}` — `#353535`): 1- 暗卡和对话框面板上的像素边框颜色。
 - **细边线** (`{colors.hairline}` — `#ededed`): 1-轻卡上的像素边框 comparison-table 分词,和特征网规则。
 - **表面蓝色 Bg** (`{colors.surface-blue-bg}` — `#afe3ff`:软蓝色的警报/info表面——系统中唯一一个色表面填充.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — `#0b0b0b`:头条和身体在光线表面.
 - **墨水软** (`{colors.ink-soft}` — `#212121`: 轻质表面的次要文字;暗卡的容器背景颜色.
 - **Graphite** (`{colors.graphite}` — `#353535`): Tertiary text and dividers in dark sections.
 - **标 题** (`{colors.slate}` — `#3c4758`) / **软板** (`{colors.slate-soft}` — `#505b6c`: 酷蓝灰色中性,用于二次链接文本,并在暗色上去强调规则线.
 - **静音** (`{colors.mute}` — `#797979`:中灰单色字幕颜色,脚眉.
 - **灰尘** (`{colors.ash}` — `#b9b9b9`: 暗面上默认的体文字.
-- **小学** (`{colors.on-primary}` — `#ffffff`: 暗面头条颜色;墨水颜色 `{colors.brand}` 财务报告和已审计财务报表 `{colors.ink}` 满载按钮。
+- **小学** (`{colors.on-primary}` — `#ffffff`: 暗面头条颜色;墨水颜色 `{colors.brand}` 和 `{colors.ink}` 满载按钮。
 
-### 语义
+### 语义色
 - **链接蓝色** (`{colors.link-blue}` — `#0052ef`: 光表面的内置链接颜色;标准超链接 hue.
 - **链接蓝色软体** (`{colors.link-blue-soft}` — `#55beff`: 连接颜色在暗色表面.
 - **成功** (`{colors.success}` — `#37cd84`:验证成功——在工作室状态胶囊形和定价比较表中的"可用"标记中使用.
@@ -56,10 +56,10 @@ Two type families do all the work: `waldenburgNormal` for every running text rol
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 市场营销系统在运行 **waldenburgNormal**,ABC Walden Burn家族中一个专有的人文主义的圣人——统一中风对比,单层 `a` 可通过下列途径获取: `cv01`,略压缩的计数器,以及结构替代(`ss07`, `cv11`–`cv13`圆形终端,并软化 `g`/`y` 降世者。结果是编辑学——它比典型的SaaS sans更像当代贸易杂志。 **ibmPlexMono** 仅用于两个角色的配对:技术眉毛和小头饰。 Helvetica 出现在提取的代号数据中,但是一种倒置的动脉,而不是品牌标本。
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -89,7 +89,7 @@ Two type families do all the work: `waldenburgNormal` for every running text rol
 - **Mono是一个完全的标签系统。** IBM Plex Mono 保留用于眉毛、小盖标签和技术- feel 标题。 绝不使用单机复制身体。
 - **OpenType 特性将始终启用 waldenburgNormal 显示。** `cv01`, `cv11`, `cv12`, `cv13`, `ss07` 提供单层 `a`,四舍五入 `t`软 `g` ——这些是品牌声音的核心. 身体大小 放弃OpenType变体,让默认形式渲染.
 
-### Note on Font Substitutes
+### 替代字体
 If `waldenburgNormal` is unavailable, **ABC Walden** (commercial) is the closest substitute. **Inter** at the same sizes works as a fallback if the OpenType-feature richness is dropped — pull `letter-spacing` 0.5px tighter at display sizes (-5.0px at 112px) to compensate for Inter's looser default tracking. Keep IBM Plex Mono unchanged — it is open-source and ships with the desired feel.
 
 
@@ -100,17 +100,17 @@ If `waldenburgNormal` is unavailable, **ABC Walden** (commercial) is the closest
 - **托肯斯(前题)**: `{spacing.xxs}` 4px · `{spacing.xs}` 8px · `{spacing.sm}` 12px · `{spacing.md}` 16px · `{spacing.lg}` 24px · `{spacing.xl}` 32px · `{spacing.xxl}` 48px · `{spacing.section}` 64px · `{spacing.section-lg}` 96px.
 - Card internal padding sits at `{spacing.xl}` (32px) on marketing cards and `{spacing.md}` (16px) on Studio-window mockups. Section vertical rhythm uses `{spacing.section-lg}` (96px) between major modules — this is the constant that holds across home, studio, content-agent, and pricing pages.
 
-### 网格容器( C)
+### 网格与容器
 - 销售页在一个中央容器内制作,封顶接近 1640px 宽屏幕上显示。首屏打字法使用整个容器宽度——显示头条时往往横跨整个内容区域,没有附带卡片。
 - 定价使用 a 4- 宽屏上的一级列网格(按典型布局模式显示的自由/增长/企业/自定义),其中显示的级翻转为 `{pricing-card-featured}` 极性。在电网下方,比较表是一个横跨整个容器的非常宽的表格;单元格是 16px- 添加特性标签和每一级检查/值之间可互换。
 - 内容代理使用不规则的不对称 grid: a left-side text column at ~50% width, right-side feature cards in a 2-up grid below. This breaks the otherwise-symmetric system rhythm to flag the page as a campaign rather than a product page.
 - 工作室使用紧凑的砖瓦 code-window 模型,每个都装进 `{studio-window}` 样式为锐利 `{rounded.app-lg}` 转角
 
-### 白空间哲学
+### 留白规则
 The dark canvas does most of the visual work — generous negative space lets the editorial display headlines breathe. Sections are separated by `{spacing.section-lg}` (96px) verticals; cards inside a section use `{spacing.lg}` (24px) gaps. Padding inside marketing cards is `{spacing.xl}` (32px) — slightly more generous than the `{spacing.lg}` typical in B2B SaaS systems, giving cards an editorial-spread feel. The pricing comparison table is the deliberate exception: row padding tightens to `{spacing.md}` (16px) to fit a 30+ row matrix without overwhelming the page.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -130,7 +130,7 @@ The dark canvas does most of the visual work — generous negative space lets th
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -142,7 +142,7 @@ The dark canvas does most of the visual work — generous negative space lets th
 | `{rounded.marketing}` | 12px | 特色卡、定价卡、内容代理面板 |
 | `{rounded.full}` | 99999px | 销售CTA、徽章、品牌点、标签芯片 |
 
-### 摄影几何
+### 图片形状
 - **工作室截图** 被内置 `{rounded.app-lg}` (6px)窗口——被选作模仿本土macOS/Windows应用程序的chrome而不是卡圆,因此截图读作"真实产品".
 - **内容代理插图** 已经满载, `{rounded.marketing}` 带有抽象梯度表面的面板。
 - **假象/logo 锁** 伙伴乐队中是平坦的黑白字印,没有圆形,平匀的间隔跨一行.
@@ -180,7 +180,7 @@ The dark canvas does most of the visual work — generous negative space lets th
 **`nav-link`** ——主菜单项目.
 - Background `{colors.canvas}`, text `{colors.on-primary}`, type `{typography.button-lg}`, padding `{spacing.xs}` vertical.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`hero-display`** ——主页显示锁
 - Background `{colors.canvas}`, text `{colors.on-primary}`, type `{typography.display-mega}`. The hero is type-only on the home page; supplementary subtitle, lead paragraph, and primary CTA stack directly below in `{spacing.lg}` increments.
@@ -203,7 +203,7 @@ The dark canvas does most of the visual work — generous negative space lets th
 - Background `{colors.ink}` (full inversion), text `{colors.on-primary}`, otherwise identical layout. The black fill is the badge — no ribbon, no border treatment.
 
 **`pricing-amount`** 美元/期间显示
-- 继承的背景,文本 `{colors.ink}` 或 减 减 `{colors.on-primary}`类型 `{typography.display-md}`.
+- 继承的背景,文本 `{colors.ink}` 或 `{colors.on-primary}`类型 `{typography.display-md}`.
 
 **`comparison-table-row`** ——长篇特征比较表关于定价的行
 - Background `{colors.canvas-light}`, text `{colors.ink}`, type `{typography.body-sm}`, padding `{spacing.md}`, rule `{colors.hairline}` between rows. Cells alternate: feature label (left) + per-tier value (centre, repeating).
@@ -214,7 +214,7 @@ The dark canvas does most of the visual work — generous negative space lets th
 **`brand-dot`** — the small `{colors.brand}` filled circle paired with the `Sanity` wordmark
 - Background `{colors.brand}`, size 12px, rounded `{rounded.full}`. Always sits 8px to the left of the wordmark.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——轻模式文本输入(定价形式,联系形式).
 - Background `{colors.canvas-light}`, text `{colors.ink}`, type `{typography.body}`, rounded `{rounded.app-xs}` (3px), padding `{spacing.sm}` × `{spacing.md}`, height 44px, 1px `{colors.hairline}` border.
@@ -260,18 +260,18 @@ The dark canvas does most of the visual work — generous negative space lets th
 **`marketing-section-paper`** ——暖灰色替代灯带.
 - Background `{colors.canvas-paper}`, text `{colors.ink}`, padding `{spacing.section-lg}` vertical.
 
-### 签名组件
+### 标志性组件
 
-**极度- 滑动部分** ——最突出的部分. Sanity市场布局。 `{marketing-section-dark}` 财务报告和已审计财务报表 `{marketing-section-light}` (或 减 减 ) `{marketing-section-paper}`硬切是系统最常用的深度提示 以及它们所推出的 电影、卷轴驱动的长篇营销
+**极度- 滑动部分** ——最突出的部分. Sanity市场布局。 `{marketing-section-dark}` 和 `{marketing-section-light}` (或 减 减 ) `{marketing-section-paper}`硬切是系统最常用的深度提示 以及它们所推出的 电影、卷轴驱动的长篇营销
 
 **Editorial Display + Mono Eyebrow** — the canonical headline lockup. `{typography.mono-eyebrow}` (IBM Plex Mono, 13px) sits above a 48–112px `{typography.display-md}` to `{typography.display-mega}` headline. The mono caption is what marks the system as developer-platform-aware rather than generic-marketing.
 
-**工作室窗口模拟** - 每一个工作室的截图都刻在 `{studio-window}` 铬。这是系统的主要经常性视觉资产, 并带有“这是一个真正的产品,而不是一个营销图”信号。
+**工作室窗口模拟** - 每一个工作室的截图都刻在 `{studio-window}` 界面框架。这是系统的主要经常性视觉资产, 并带有“这是一个真正的产品,而不是一个营销图”信号。
 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 运行暗模式营销区( R)`{marketing-section-dark}`)作为品牌的默认声音; `{marketing-section-light}` 用于商业/比较表面(定价、集成矩阵)。
 - 将每条编辑显示标题对齐 `{typography.mono-eyebrow}` 上面的标签——锁是签名.
 - 准备金 `{colors.brand}` 用于每个视点一个CTA或强调色表面。颜色的功率来自稀缺。
@@ -280,7 +280,7 @@ The dark canvas does most of the visual work — generous negative space lets th
 - 使用极性翻转(Dark → 光)作为分区分隔符,而不是横向规则或背景梯度.
 - 平对 brand-dot 与 `Sanity` 单词标记出现时的文字标记 >24px 大小。
 
-### Don't
+### 应避免的做法
 - Don't use `{colors.brand}` as a background for dark-mode body sections — it must remain a quiet accent, not a section colour.
 - Don't introduce additional accent hues (purple, teal, magenta gradients). Sanity's chromatic story is monochrome plus coral-red.
 - Don't apply OpenType variants to body running text — keep them on display sizes only. Mixing modes makes the page feel typographically loud.
@@ -290,7 +290,7 @@ The dark canvas does most of the visual work — generous negative space lets th
 - Don't replace the `brand-dot` with a logo glyph in the navigation. The dot + wordmark pairing is the system's primary identification mark.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -310,14 +310,14 @@ The dark canvas does most of the visual work — generous negative space lets th
 - `{button-secondary-dark}` 谓 36px 桌面上; 扩展至 44px 移动以保持目标合规。
 - `{nav-link}` 收到的项目 `{spacing.sm}` 移动菜单内垂直粘贴,在不调整类型大小的情况下扩展水龙头目标.
 
-### 折叠战略
+### 窄屏布局调整
 - **纳芙.** 居中桌面菜单崩溃为汉堡,打开一个覆盖表 < 960px; 右边 `{button-primary}` "开始自由"在汉堡上方保持可见.
 - **首屏 谢天谢地** 电话 112px `{typography.display-mega}` 步骤下至 64px xxs; 按比例跟踪放松(-1.92px 改为 -4.48px) 保持较小的可读性 absolute 大小,请检查url=值 (帮助).
 - **Pricing tier grid.** 4-up → 2-up → 1-up. The featured-tier inversion is preserved across all breakpoints.
 - **Comparison table.** At xxs, the wide matrix transforms into a per-tier accordion: tap a tier name, expand its full feature list. The polarity rules (alternating row fills) carry over.
 - **节极性翻转.** 在每个断点上都保留着——暗/光的卡登斯是结构化的到品牌声音,并且永远不会崩溃.
 
-### 图像行为
+### 图片适配
 - `{studio-window}` mockups preserve their `{rounded.app-lg}` framing at every breakpoint. On xxs, they switch to a single-column stack and may horizontal-scroll inside the window if the embedded UI doesn't compress.
 - 首屏大气背景(当内容代理和选择特征页面上出现时)使用更紧凑的移动裁剪,因此焦点主题保持中心.
 - 伙伴行文字标记重流到一个 3- 升格在sm和 2- 上到xxs,你觉得呢?
@@ -329,7 +329,7 @@ The dark canvas does most of the visual work — generous negative space lets th
 2. 直接引用组件名称和符号( Q)`{colors.brand}`, `{button-primary-on-light}`, `{rounded.full}`()——不解释或替代六重值。
 3. 运行 `npx @google/design.md lint DESIGN.md` 编辑后。
 4. 添加新的变体作为单独的 `components:` 条目( 4)`-dark`, `-on-light`, `-featured`永远不要埋在传言里
-5. 默认复制到 `{typography.body}`准备金 `{typography.mono-eyebrow}` 财务报告和已审计财务报表 `{typography.mono-caps}` 资源 IBM 仅标有Plex Mono标签; 绝对不要使用单曲头条 。
+5. 默认复制到 `{typography.body}`准备金 `{typography.mono-eyebrow}` 和 `{typography.mono-caps}` 资源 IBM 仅标有Plex Mono标签; 绝对不要使用单曲头条 。
 6. 保留 `{colors.brand}` 稀缺的——最多一个品牌的CTA或每个视点的表面。如果一个区域已经有一个 `{button-brand}` 行动,次要行动 `{button-secondary-dark}`.
 7. When introducing a new section, start by deciding its polarity (`{marketing-section-dark}` vs light vs paper). The polarity choice drives every other token decision in the section.
 

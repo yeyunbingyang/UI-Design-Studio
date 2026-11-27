@@ -15,7 +15,7 @@ DM Sans anchors every surface from oversized 80px hero displays down to 12px mic
 - Distinct product-color encoding: each model line has its own vibrant brand color (coral M2.7, magenta Music 2.6, blue Hailuo, orange Speech 2.8)
 - DM Sans 在整个系统; Inter 倒计时
 - 胶囊形形状的按钮( ${rounded.full})和处处的避孕药形标签;矩形只存在于数据表和密集的文档中
-- 首屏打字法使用紧凑 1.10 line-height 与 -2px letter-spacing 影响
+- 首屏打字法使用紧凑 1.10 line-height 配合 -2px letter-spacing 影响
 - 文档表面使用 a 3-栏形布局:左侧栏形导航,中心传言体,右侧内容表
 - 黑色宣传旗( Name{colors.primary})在导航之上,为有时间限制的品牌时刻
 
@@ -24,7 +24,7 @@ DM Sans anchors every surface from oversized 80px hero displays down to 12px mic
 
 > Source pages: minimax.io/ (homepage), /models/text/m27 (product showcase), platform.minimax.io/docs/guides/models-intro (documentation), /subscribe/token-plan (pricing). Token coverage was identical across all four pages.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Brand Coral** ({colors.brand-coral}): Signature high-impact accent. Used on M2.7 product card, "Token Plan" hero band, promo CTA strips, and "NEW" badges. Carries the brand's most attention-grabbing energy.
 - **白红** ({colors.brand-magenta}中学 product-card 身份( 音乐) 2.6;用于音乐/音频产品编码.
 - **蓝蓝** ({colors.brand-blue}:海路子视频产品身份;全系统主要蓝调.
@@ -34,14 +34,14 @@ DM Sans anchors every surface from oversized 80px hero displays down to 12px mic
 - **蓝蓝 200** ({colors.brand-blue-200}:代码徽章,信息塔格背景.
 - **紫色品牌( B)** ({colors.brand-purple}: 发言 2.8 和小紫色产品身份; 紫色卡的梯度配方。
 
-### 表面
+### 界面表面
 - **白色页面底色** ({colors.canvas}:主页背景和卡片表面.
-- **表面** ({colors.surface}: 细小的一节背景, search-pill 休息,侧边导航活动状态。
+- **界面表面** ({colors.surface}: 细小的一节背景, search-pill 休息,侧边导航活动状态。
 - **表面软** ({colors.surface-soft}:静脉分部.
 - **细边线** ({colors.hairline}): 1px 输入边框和主分隔符。
 - **柔软的细边线** ({colors.hairline-soft}:静坐桌排位分机和次节断档.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** ({colors.ink}:主头条和CTA文本——品牌近黑主播.
 - **墨水坚固** ({colors.ink-strong}:纯黑色用于宣传旗和首屏显示,以达到最大对比.
 - **木炭矿** ({colors.charcoal}: 光表面的体文字.
@@ -50,7 +50,7 @@ DM Sans anchors every surface from oversized 80px hero displays down to 12px mic
 - **石头** ({colors.stone}: 已调用字幕和标签不活动标签。
 - **静音** ({colors.muted}:页脚链接文本和去强调的标签.
 
-### 语义
+### 语义色
 - **成功的背景** ({colors.success-bg}): Pale-green 洗洗,以成功徽章和确认。
 - **成功文本** ({colors.success-text}): Deep-green 墨水表示成功徽章标签.
 - 错误音调来自 a `#d45656` 输入边框错误状态中使用的红色(不提取为顶级系统符).
@@ -58,12 +58,12 @@ DM Sans anchors every surface from oversized 80px hero displays down to 12px mic
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 **DM Sans** (primary): Geometric variable sans-serif. Used across every surface, every role. Fallbacks: Inter, Helvetica Neue, Helvetica, Arial.
 
 DM Sans was chosen for its dual fluency: it scales cleanly from 80px hero displays (where -2px letter-spacing creates magazine-grade tightness) down to 12px micro labels (where the slightly humanist counters maintain legibility). The face has no italic variant in the brand's deployment — emphasis comes from weight (500/600/700) instead.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -98,18 +98,18 @@ DM Sans was chosen for its dual fluency: it scales cleanly from 80px hero displa
 - **节奏**: 销售页面分开 `{spacing.hero}` (96px)以上,则 `{spacing.section-lg}` (80px)下面;文件收紧到 `{spacing.section}` (64px);表格行压缩到 `{spacing.md}` (16px).
 - **Card internal padding**: Vibrant product cards use `{spacing.xxl}` (32px); documentation cards use `{spacing.lg}–{spacing.xl}` (20–24px); promo strips expand to `{spacing.section}` (64px).
 
-### 网格容器( C)
-- 营销页面使用a 1280px max-width 与 32px 沟渠.
+### 网格与容器
+- 营销页面使用a 1280px max-width 配合 32px 沟渠.
 - Homepage product matrix renders as a 4-column row of 32px-rounded gradient cards, each ~280–320px wide.
 - AI 产品矩阵下方使用a 4- 列网带 16px- 圆形白牌。
 - 文档表面使用 a 3-列布局:左侧栏导航(~220px),中心传教体(英语:~720px max-width),右TOC(英语:~180px。侧边栏持续在桌面上;下面的抽屉会倒塌 1024px.
 - Token 计划/ 定价页面使用量 2- 上方的栏标签 3- 列级卡网
 
-### 白空间哲学
+### 留白规则
 Marketing pages give product photography and color cards generous breathing room — `{spacing.hero}` (96px) above-the-fold creates visual oxygen for the 80px hero display. Inside documentation, whitespace tightens dramatically: section gaps drop to `{spacing.xxl}` (32px), table rows pack down to `{spacing.md}` (16px), and the sidebar nav uses `{spacing.xs}` (8px) vertical rhythm.
 
 
-## 层次与阴影
+## 层次与深度
 
 该系统主要运行平坦,为高架预留了 sticky 面板,滴水, 和罕见的浮式CTA。
 
@@ -129,7 +129,7 @@ Marketing pages give product photography and color cards generous breathing room
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -143,7 +143,7 @@ Marketing pages give product photography and color cards generous breathing room
 | `{rounded.hero}` | 32px | 振动梯度产品卡,促销CTA条 |
 | `{rounded.full}` | 9999px | 全部按钮,所有胶囊形,徽章 |
 
-### 摄影几何
+### 图片形状
 - 使用振动产品卡 32px 角软化——与 16px 双倍半径是视觉上的标志,“这是一个突出的产品时刻”。
 - 产品图象卡片内部的图像作为图片内容(shilhouettes,暗影室照明)处理,没有圆形内部帧.
 - 幻觉圆圈(稀有,在证物中)是 `{rounded.full}` - 完美的圆圈。
@@ -190,7 +190,7 @@ Marketing pages give product photography and color cards generous breathing room
 **`product-card-photo`** ——暗肖像产品卡(主页S).2 放置,视频-情绪产品).
 - Background `{colors.primary}` (black with overlaid product photo), text `{colors.on-dark}`, rounded `{rounded.hero}`, padding `{spacing.xxl}`.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`card-base`** 标准文件/地物卡。
 - Background `{colors.canvas}`, rounded `{rounded.xl}`, padding `{spacing.xl}`, border `1px solid {colors.hairline}`.
@@ -207,7 +207,7 @@ Marketing pages give product photography and color cards generous breathing room
 **`ai-product-tile`** ——AI产品矩阵网格中的白卡(代理,海路影视, MiniMax 音频。
 - Background `{colors.canvas}`, rounded `{rounded.xxxl}`, padding `{spacing.xl}`, border `1px solid {colors.hairline}`. Carries an icon/illustration top, title `{typography.card-title}`, description `{typography.body-sm}`.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——标准文本字段.
 - Background `{colors.canvas}`, text `{colors.ink}`, border `1px solid {colors.hairline}`, rounded `{rounded.md}`, padding `{spacing.sm} {spacing.md}`, height 40px.
@@ -268,14 +268,14 @@ Marketing pages give product photography and color cards generous breathing room
 **顶端导航(文档/格式)** ——中线压缩导航. search-pill 和右侧账户/升级的CTA。
 - Background `{colors.canvas}`, height ~56px, with search-pill at center and "Documentation / Account / Subscribe" links + black-pill "Sign Up" right.
 
-**`sidebar-nav-item`** + **`sidebar-nav-item-active`** ——文献左铁路链接条目.
+**`sidebar-nav-item`** + **`sidebar-nav-item-active`** ——文献左侧栏链接条目.
 - Inactive: background transparent, text `{colors.charcoal}`, typography `{typography.body-sm}`, rounded `{rounded.sm}`, padding `{spacing.xs} {spacing.md}`.
 - 活动:背景 `{colors.surface}`文本中,请输入 `{colors.ink}`,打印 `{typography.body-sm-medium}`.
 
 **`doc-toc-item`** ——右排目录链接.
 - Background transparent, text `{colors.steel}`, typography `{typography.body-sm}`, padding `{spacing.xs} 0`. Active item color shifts to `{colors.ink}`.
 
-### 签名组件
+### 标志性组件
 
 **`hero-band-marketing`** — Centered hero with massive 80px display + dual-CTA pair.
 - Layout: centered headline in `{typography.hero-display}` ({colors.ink}), centered subtitle in `{typography.subtitle}` ({colors.steel}), centered button row (`button-primary` + `button-secondary`).
@@ -297,7 +297,7 @@ Marketing pages give product photography and color cards generous breathing room
 - 内置代码在 `{typography.body-md}` monospace 倒置为 `{colors.surface}` 和背景 `{rounded.xs}` 转角
 
 **`models-comparison-table`** ——文档表比较模型大小和特征.
-- 用途 `data-table` 铬。每行都带有一个模型名称(链接, in `{colors.ink}` body-sm-medium),一个描述栏(`{colors.charcoal}`),并设有特征弹出列表栏。
+- 用途 `data-table` 界面框架。每行都带有一个模型名称(链接, in `{colors.ink}` body-sm-medium),一个描述栏(`{colors.charcoal}`),并设有特征弹出列表栏。
 
 **`testimonial-stat-row`** —— Stats 条状物 (").214,000+企业客户端和开发者”,“0+ 国家服务)。
 - 水平行数 4 统计单元格,每个单元格中有大量数字 `{typography.heading-lg}` `{colors.ink}` 和下面的标签 `{typography.body-sm}` `{colors.steel}`.
@@ -314,7 +314,7 @@ Marketing pages give product photography and color cards generous breathing room
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 使用 `{colors.primary}` (black)作为主导CTA——它是该品牌最可识别的互动元素.
 - 储备产品品牌颜色(`{colors.brand-coral}`, `{colors.brand-magenta}`, `{colors.brand-blue}`, `{colors.brand-purple}`仅供产品识别时刻使用——绝不供一般按钮或文本使用。
 - Pair `{rounded.hero}` (32px) gradient cards with `{rounded.xl}` (16px) white cards in the same viewport — the radius contrast is the visual signature.
@@ -322,7 +322,7 @@ Marketing pages give product photography and color cards generous breathing room
 - Use `{typography.hero-display}` (80px) with -2px letter-spacing for hero displays — never compromise the leading or letter-spacing.
 - Treat each model/product line as a distinct color identity. M2.7 is coral, Music is magenta, Hailuo is blue. These are brand assignments, not free choices.
 
-### Don't
+### 应避免的做法
 - Don't use brand-coral or brand-magenta on body text or large surfaces — they lose meaning when overused.
 - Don't soften corners on buttons (anything less than `{rounded.full}`); the pill is a brand signature.
 - Don't introduce a second display typeface; DM Sans handles every role.
@@ -331,7 +331,7 @@ Marketing pages give product photography and color cards generous breathing room
 - Don't put gradient backgrounds on standard buttons; gradients are reserved for product-card identity moments.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 | 名称 | 宽度 | 密钥更改 |
@@ -348,7 +348,7 @@ Marketing pages give product photography and color cards generous breathing room
 - 格式输入提供时间 40px 高度; 凸起到 44px 手机上,我刚从电话里找到的
 - 侧边栏导航项渲染于 ~32px 高的, 颠倒到 44px 移动抽屉里
 
-### 折叠战略
+### 窄屏布局调整
 - **宣传旗** 保持全宽; 崩溃为单行 。 < 480px 与短调。
 - **顶端导航** 下级 1024px 崩溃到汉堡; 水平链接移动到抽屉中。
 - **Documentation grid**: 3-column desktop → sidebar-drawer at < 1024px → single-column with collapsible sidebar at < 768px.
@@ -357,7 +357,7 @@ Marketing pages give product photography and color cards generous breathing room
 - **首屏打字技术**: `{typography.hero-display}` (80px) → 56px 时 间 < 1024px → 40px 时 间 < 768px → 32px 时 间 < 480px.
 - **点条**: 4-栏目 – 2×2 时 间 < 768px → 1- 栏目在 < 480px.
 
-### 图像行为
+### 图片适配
 - 产品卡图像使用带有内部梯度叠加的图片内容;懒惰的负载在折叠下方.
 - AI产品瓦片插图基于SVG;在所有断点上保持简洁.
 - Avatar imagery in testimonials uses 1:1 aspect ratio with `{rounded.full}` masking.

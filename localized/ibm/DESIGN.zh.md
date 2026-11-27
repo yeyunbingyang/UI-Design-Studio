@@ -15,7 +15,7 @@ The defining choice is **flat geometry**: every CTA, every card, every input, ev
 系统很少达到颜色—— IBM 蓝印链接,初级CTA,以及罕见的全血CTA旗. 炭炭携带着其他不白的表面,结果就是企业没有僵硬性:严格,轻量级,有意约束.
 
 **关键特征 :**
-- **碳设计系统** — IBM开销铬 碳。按钮是方的,输入是方的, 与下方规则一致,角留在 0px.
+- **碳设计系统** — IBM开销界面框架 碳。按钮是方的,输入是方的, 与下方规则一致,角留在 0px.
 - **轻量级显示类型**: 重磅Plex Sans 键 300 资源 42–76px 头条是品牌的打印签名。
 - **One accent color**: `{colors.primary}` IBM Blue carries every link, primary CTA, and CTA banner. There is no second brand color.
 - 白色页面底色+浅灰色( 3)`{colors.surface-1}`+ 木炭( )`{colors.ink}`( 覆盖 95% 表面的光线。
@@ -29,29 +29,29 @@ The defining choice is **flat geometry**: every CTA, every card, every input, ev
 
 > Source pages: ibm.com (home), /software/ai-productivity, /consulting, /products/cloud-pak-for-aiops, /products/bare-metal-servers, community.ibm.com.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **IBM 蓝色** ({colors.primary}:单品牌强调色 链接 初级CTA CTA旗下背景 焦点环.
 - **蓝色 60** ({colors.blue-60}: 内侧链接状态.
 - **蓝色 80** ({colors.blue-80}:按下主按钮.
 - **Blue Hover** ({colors.blue-hover}): Hover state for primary buttons.
 
-### 表面
+### 界面表面
 - **页面底色** ({colors.canvas}: 默认页面背景.
-- **表面 1** ({colors.surface-1}: 浅灰色( 3)#f4f4f4)——输入字段,交替排列条纹,细细的节带.
-- **表面 2** ({colors.surface-2}: 稍暗的灰色( )#e0e0e0)——残田,隔离人员补发.
+- **界面表面 1** ({colors.surface-1}: 浅灰色( 3)#f4f4f4)——输入字段,交替排列条纹,细细的节带.
+- **界面表面 2** ({colors.surface-2}: 稍暗的灰色( )#e0e0e0)——残田,隔离人员补发.
 - **细边线** ({colors.hairline}): 1px 边框上,在卡片,输入,分割符上。
 - **发条坚固** ({colors.hairline-strong}): 1px 木炭强调重点投入(Carbon的特征重点处理)。
 - **反向画廊** ({colors.inverse-canvas}: 炭类 #161616 -脚踏实地
 - **反面表面 1** ({colors.inverse-surface-1}: 一步比反向页面底色轻——页脚柱分机,盘旋页脚项目.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** ({colors.ink}:所有头条和强调的体型——木炭 #161616.
 - **墨水静音** ({colors.ink-muted}: 二级类型 #525252 — meta,小标题,脚部。
 - **Ink Subtle** ({colors.ink-subtle}): Tertiary type at #8c8c8c — disabled, helper text, captions.
 - **反向墨水** ({colors.inverse-ink}:木炭上为白色——页脚标题.
 - **反向墨水静音** ({colors.inverse-ink-muted}: 木炭上浅灰色——脚部身体.
 
-### 语义
+### 语义色
 - **Success Green** ({colors.semantic-success}): Carbon green-50 — success states.
 - **警告黄色** ({colors.semantic-warning}:碳黄-30 - 警告状态。
 - **Error Red** ({colors.semantic-error}): Carbon red-60 — error states; danger button background.
@@ -60,13 +60,13 @@ The defining choice is **flat geometry**: every CTA, every card, every input, ev
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 
 - **IBM Plex Sans** — IBM开源专有型面( 任何用途都可以免费) 。 几何, 略为人文主义, 专门为企业 UI 设计 。 Fallback : `Helvetica Neue, Arial, sans-serif`.
 
 同一家族携带显示器、身体和字幕——没有显示器+身体对称。 **大小 + 字重** 而不是通过家庭改变. Plex Sans 也是在SIL Open Font License下的自由/开源——使其成为本列表中最简单的自定义面,以替代执行.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -92,7 +92,7 @@ The defining choice is **flat geometry**: every CTA, every card, every input, ev
 - **眉毛打字法使用句子大小写 14px** ——碳抵制其他企业品牌常见的全头履带眉毛.
 - **线高紧的显示,放松的身体**: 1.17 时 间 display-xl, 1.50 体型——与体积成正比。
 
-### Note on Font Substitutes
+### 替代字体
 
 IBM Plex Sans is **free and open-source** (SIL OFL license) and available on Google Fonts. It is the recommended implementation. The Plex family also includes Plex Mono and Plex Serif if expanded typographic needs arise.
 
@@ -107,19 +107,19 @@ IBM Plex Sans is **free and open-source** (SIL OFL license) and available on Goo
 - 按钮 padding: 12px vertical · 16px horizontal — Carbon spec.
 - 格式输入 padding: 11px vertical · 16px horizontal.
 
-### 网格容器( C)
+### 网格与容器
 
 - 碳的吗? 16- 桌面上的列网格,缩放到 8 / 4 平板电脑/移动式的列。
 - 最大内容宽度左右 1584px (Carbon的最大网格断点).
 - Card grids are 4-up at desktop, 2-up at tablet, 1-up at mobile.
 - 顾客标志marquee在弹性行中采用固定的宽瓦,在较小的视门上横向滚动.
 
-### 白空间哲学
+### 留白规则
 
 碳使用精确对齐a 4-像素网格作为其白空间系统。`{colors.surface-1}`内容因设计而密集—— IBM顾客期望看到很多页面,而不是很多的空气.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -138,7 +138,7 @@ Carbon resists drop shadows on marketing — depth is carried by surface change 
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -178,7 +178,7 @@ The brand commits to flat 0px corners. The other tokens exist for product / mobi
 **`button-danger`** ——碳的破坏性变体.
 - Background `{colors.semantic-error}`, text `{colors.on-primary}`, type `{typography.button}`, rounded `{rounded.none}`, padding 12px 16px.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`feature-card`** ——默认功能突出显示在主页和产品页上的瓷砖.
 - Background `{colors.canvas}`, text `{colors.ink}`, type `{typography.body}`, rounded `{rounded.none}`, padding 24px. Stroked with 1px `{colors.hairline}`.
@@ -201,9 +201,9 @@ The brand commits to flat 0px corners. The other tokens exist for product / mobi
 **`customer-logo-tile`** ——主页上客户马奎的单瓦(Ferrari,辉瑞等).
 - Background `{colors.canvas}`, text `{colors.ink-muted}`, type `{typography.caption}`, rounded `{rounded.none}`, padding 24px. 1px hairline border.
 
-### 输入表单( F)
+### 输入框与表单
 
-**`text-input`** + **`text-input-focused`** + **`text-input-error`** ——碳的输入铬.
+**`text-input`** + **`text-input-focused`** + **`text-input-error`** ——碳的输入界面框架.
 - Background `{colors.surface-1}`, text `{colors.ink}`, type `{typography.body}`, rounded `{rounded.none}`, padding 11px 16px.
 - 焦点状态替换底部 1px 细边线带a 2px `{colors.primary}` 下划线(Carbon的签名焦点处理)。
 - 错误状态添加 2px `{colors.semantic-error}` 下划线 。
@@ -233,7 +233,7 @@ The brand commits to flat 0px corners. The other tokens exist for product / mobi
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 
 - 使用 `{rounded.none}` 0px 每一个CTA,卡片,输入和容器,平方美学就是品牌.
 - 平面棱镜重 300 显示大小( 4)42px+) 字重 400 抵制冲动,把头条大放出来
@@ -243,7 +243,7 @@ The brand commits to flat 0px corners. The other tokens exist for product / mobi
 - 坚持眉毛和部分标签的判案——碳电阻全头盖跟踪.
 - 倒转到 `{colors.inverse-canvas}` 仅位于页脚;其余页面保持淡化.
 
-### Don't
+### 应避免的做法
 
 - Don't round corners on buttons, cards, or inputs. Even 4px rounded corners break the Carbon look.
 - Don't bold display headlines. Plex Sans at weight 300 is the brand voice; weight 700 makes it look generic.
@@ -254,7 +254,7 @@ The brand commits to flat 0px corners. The other tokens exist for product / mobi
 - Don't write all-caps tracked eyebrows. Carbon's eyebrows are sentence case at 14px.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -272,7 +272,7 @@ The brand commits to flat 0px corners. The other tokens exist for product / mobi
 - Top-nav links grow from 36px to 48px tap height on touch.
 - 标签条列 48px 高音调音高。
 
-### 折叠战略
+### 窄屏布局调整
 
 - **顶端导航**: 连接到下面的汉堡包覆盖 672px。日志和搜索图标留在栏上。
 - **工具栏**: 隐藏在下面 672px 以回收垂直空间。
@@ -280,7 +280,7 @@ The brand commits to flat 0px corners. The other tokens exist for product / mobi
 - **显示类型**: `{typography.display-xl}` 76px 比额表走向 42px 移动时,同时保留字重...300 治疗。
 - **Footer**: 6-column link grid → 3-column at tablet → 1-column at mobile.
 
-### 图像行为
+### 图片适配
 
 - marquee中的客户标识保持宽度比,并可能崩溃到 2- 下方滚动 672px.
 - 首屏插图比例; 下 672px 可能堆在头条上方 而不是坐在头条旁边
@@ -302,7 +302,7 @@ The brand commits to flat 0px corners. The other tokens exist for product / mobi
 - IBM产品表面(云板,瓦森,数据封面)具有丰富的碳元件使用量(数据表,图细胞,面包屑,背景菜单),这些内容没有出现在被检查的营销页面上——这些组件生活在碳的文档中,而不是在营销提取中.
 - Form-field 错误和验证样式在Carbon docs中记录;被检查的页面没有使错误状态发生.
 - 暗模式在Carbon中被记录为灰色-100 主题,但并没有在这些营销页面上曝光——只有页脚反转。整个黑暗主题是一个单独的碳调色板,没有在这里提取。
-- 社区.ibm.com子域使用不同的铬(社区-平台白-标签),大致为Carbon,但并不严格——文献系统适用于 ibm.com 正常的. . 互联网档案馆的存档,存档日期2013-09-02..
+- 社区.ibm.com子域使用不同的界面框架(社区-平台白-标签),大致为Carbon,但并不严格——文献系统适用于 ibm.com 正常的. . 互联网档案馆的存档,存档日期2013-09-02..
 
 ## 设计词元原值
 

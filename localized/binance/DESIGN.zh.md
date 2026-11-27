@@ -25,13 +25,13 @@ The product is **multi-theme**: marketing surfaces (homepage, smart-money, futur
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Binance 黄色** (`{colors.primary}` — #FCD535:单色品牌 用于主CTA背景,词标,品牌诉求头条("FUNDS ARE SAFU"),信任徽章("No.1 交易量),大号统计数字 `{component.stat-callout-card}`,并内置链接。
 - **Binance 黄色活动** (`{colors.primary-active}` — #f0b90b:按压/悬浮-达克变种,略多饱和黄色.
 - **Binance 黄色已禁用** (`{colors.primary-disabled}` — #3a3a1f: 一种在暗布上对残疾的CTA使用不饱和的暗黄色。
 - **Accent Turquoise** (`{colors.accent-turquoise}` — #2dbdb6): A small secondary accent used very sparingly on Smart Money's "Check Now" CTA over dark surfaces. Treat as a single-product accent, not a system color.
 
-### 表面
+### 界面表面
 
 该系统有两个绘制图,用于绘制产品上下文:
 
@@ -50,7 +50,7 @@ The product is **multi-theme**: marketing surfaces (homepage, smart-money, futur
 - **Hairline on Dark** (`{colors.hairline-on-dark}` — #2b3139): The 1px border tone on dark surfaces. Same hex as `{colors.surface-elevated-dark}` — borders feel like surface steps, not ink lines.
 - **边界强势** (`{colors.border-strong}` — #cdd1d6:在残缺的二级按钮上使用较重的边音.
 
-### 文本
+### 文字颜色
 - **Ink** (`{colors.ink}` — #181a20): The strongest text on light surfaces. Display headlines on transactional pages.
 - **黑暗中的身体** (`{colors.body}` — #eaecef:暗布上的默认运行文本——故意不纯白,略凉.
 - **光线正体** (`{colors.body-on-light}` — #181a20:与墨水相同——轻模体文字再利用墨水符.
@@ -69,7 +69,7 @@ The product is **multi-theme**: marketing surfaces (homepage, smart-money, futur
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 The system runs **BinanceNova** for display and body, and **BinancePlex** for numerical / financial data. Both are licensed Binance custom typefaces. The fallback stack walks `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`.
 
 拆分是功能性的,不是装饰性的:
@@ -78,7 +78,7 @@ The system runs **BinanceNova** for display and body, and **BinancePlex** for nu
 
 混合不是可选的。 BinanceNova 价格计时器将失去交易平台的特性; BinancePlex 一段会觉得冷酷无比
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -99,11 +99,11 @@ The system runs **BinanceNova** for display and body, and **BinancePlex** for nu
 | `{typography.nav-link}` | 14px | 500 | 1.4 | 0 | 顶端导航菜单项 |
 
 ### 原则
-显示大小使用字重 700 ——比大多数营销系统更重。这对交易平台来说是有意义的:数字需要一目了然地阅读,头条需要与图表可视化和密集的数据表竞争。系统不会对图表显示字重有所软化。 400 路边 Airtable 或 减 减 Stripe 已经
+显示大小使用字重 700 ——比大多数营销系统更重。这对交易平台来说是有意义的:数字需要一目了然地阅读,头条需要与图表可视化和密集的数据表竞争。系统不会对图表显示字重有所软化。 400 路边 Airtable 或 Stripe 已经
 
 `{typography.number-display}` and the smaller number variants always use **BinancePlex**, even when surrounding body type uses BinanceNova. Prices, volumes, and stat counters render in BinancePlex regardless of context — it is the system's "trustworthy number" voice.
 
-### Note on Font Substitutes
+### 替代字体
 If BinanceNova and BinancePlex are unavailable, **Inter** is the closest open-source substitute for BinanceNova and **JetBrains Mono** or **IBM Plex Sans** is the closest substitute for BinancePlex (depending on whether tabular monospace fidelity matters more than humanist proportions). Adjust display headlines down by ~3% in line-height to match BinanceNova's tighter cap height.
 
 
@@ -116,17 +116,17 @@ If BinanceNova and BinancePlex are unavailable, **Inter** is the closest open-so
 - **Card internal padding:** `{spacing.lg}` (24px) for content cards and markets tables; `{spacing.xl}` (32px) for QR-promo cards and CTA bands; `{spacing.md}` (16px) for trust badges and table rows.
 - **Gutters:** `{spacing.lg}` (24px) between cards in 3-up grids; `{spacing.md}` (16px) inside footer column gutters and dense FAQ lists.
 
-### 网格容器( C)
+### 网格与容器
 - **最大内容 width:** ~1280px centered on marketing pages; ~1440px 以产品表面(市场、智能货币表)为主,其水平密度很重要。
-- **编辑机构:** 单身 12-栏网格;产品页经常使用 8/4 分割(主板+侧式铁路).
+- **编辑式正文：**采用 12-column（十二列）网格。产品页通常按 8/4 划分主面板和侧栏。
 - **市场表:** 5-列头(对称/最后价格) 24h 变化/ 24h Volume / Action),首列携带硬币图标+符号对.
 - **Footer:** 6-column link list at desktop, wrapping to 2-up at tablet and 1-up on mobile.
 
-### 白空间哲学
+### 留白规则
 Binance is denser than typical marketing sites — long-scroll pages mix hero bands with markets tables, FAQ accordions, and feature grids without much breathing room between them. The system trusts contrast (yellow vs. dark canvas, green vs. red price cells) to do the visual separation work, not whitespace. Where whitespace appears, it's always uniform — `{spacing.section}` between every major band.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -136,7 +136,7 @@ Binance is denser than typical marketing sites — long-scroll pages mix hero ba
 | 暗影的暗影 暗影的暗影的暗影 | 只有在卡片坐在图像上时才显示外观阴影 | 偶尔在用在 buy-crypto-amount-card 交易页面 |
 | 焦点环 | `0 0 0 2px {colors.info-ring}` 时 间 50% α | 输入 + 按钮键盘焦点状态 |
 
-高地哲学是 **平面,有颜色块分隔**. Binance 深度来自与“低”的对比。 `{colors.canvas-dark}` 财务报告和已审计财务报表 `{colors.surface-card-dark}` (a 12- 步态光度跳跃,读作清晰的海拔界限).
+高地哲学是 **平面,有颜色块分隔**. Binance 深度来自与“低”的对比。 `{colors.canvas-dark}` 和 `{colors.surface-card-dark}` (a 12- 步态光度跳跃,读作清晰的海拔界限).
 
 ### 装饰性深度
 - **黄色 → 黑色垂直梯度背景** 未来竞技场首屏: `{colors.primary}` 逐渐消失 `{colors.canvas-dark}`。这是用于产品发射/事件首屏表面的单页处理,而不是全系统的签名。
@@ -145,7 +145,7 @@ Binance is denser than typical marketing sites — long-scroll pages mix hero ba
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -160,7 +160,7 @@ Binance is denser than typical marketing sites — long-scroll pages mix hero ba
 Binance半径等级比典型的营销系统更严格——大多数表面坐落于 6-12px. 胶囊形半径是故意的例外,用来表示"这是一页前动作".
 
 ### 摄影和图标
-- 硬币图标渲染为 24×24 或 减 减 32×32 圆形格言( 通常) 50% 半径在 circular 大纲+硬币内部的品牌颜色).
+- 硬币图标渲染为 24×24 或 32×32 圆形格言( 通常) 50% 半径在 circular 大纲+硬币内部的品牌颜色).
 - 3D制造了硬币堆栈,奖杯插图是带有略微地板阴影的全彩插图——而不是平面图标.
 - 照片内容(人用应用部分) `{rounded.xl}` (12px)角,在移动上充血.
 
@@ -181,7 +181,7 @@ Binance半径等级比典型的营销系统更严格——大多数表面坐落�
 
 **`button-secondary-on-dark`** 旧的 `{colors.canvas-dark}` 用于强调较少的行动。 `{colors.surface-card-dark}`文本中,请输入 `{colors.on-dark}`,四舍五入 `{rounded.md}`.
 
-**`button-secondary-on-light`** ——光彩画等效。背景 `{colors.canvas-light}` 与 `{colors.hairline-on-light}` 1px 边框,文本 `{colors.ink}`.
+**`button-secondary-on-light`** ——光彩画等效。背景 `{colors.canvas-light}` 配合 `{colors.hairline-on-light}` 1px 边框,文本 `{colors.ink}`.
 
 **`button-tertiary-text`** ——无背景的内置文本按钮,用于顶端导航和内置的"读更多"链接中的"Log In".
 
@@ -193,7 +193,7 @@ Binance半径等级比典型的营销系统更严格——大多数表面坐落�
 
 **`text-link`** ——内置体链接于 `{colors.primary}` (黄在暗,黄在光上)。默认情况下没有下划线。类型继承 `{typography.body-md}`.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`hero-band-dark`** — Full-width dark band carrying the homepage h1 + sub-headline + dual CTA pair. Background `{colors.canvas-dark}`, padding `{spacing.section}` (80px). The h1 ("316,258,026 USERS TRUST US") uses `{typography.hero-display}` at 64px / 700 — the system's largest type role.
 
@@ -205,7 +205,7 @@ Binance半径等级比典型的营销系统更严格——大多数表面坐落�
 
 **`markets-row`** — A single row inside the markets table. Transparent background, 12px vertical padding, hairline divider between rows. Coin icon (32×32) + symbol on left; last price in `{typography.number-md}` (BinancePlex); 24h change cell colored by direction (`{component.price-up-cell}` or `{component.price-down-cell}`); right-aligned chevron icon for "view detail."
 
-**`price-up-cell`** / **`price-down-cell`** ——价格变化的彩色文本单元格。 Transparent 文本, 文本 `{colors.trading-up}` 或 减 减 `{colors.trading-down}`类型 `{typography.number-md}` 输入 BinancePlex。总是用一个指示方向的三角形小箭头对齐。
+**`price-up-cell`** / **`price-down-cell`** ——价格变化的彩色文本单元格。 Transparent 文本, 文本 `{colors.trading-up}` 或 `{colors.trading-down}`类型 `{typography.number-md}` 输入 BinancePlex。总是用一个指示方向的三角形小箭头对齐。
 
 **`feature-photo-card`** — The "Trade on the go" section's photo strip — 3 lifestyle photos showing people using the Binance app. Background `{colors.surface-card-dark}`, rounded `{rounded.xl}`. Photos crop edge-to-edge, no internal padding around the image.
 
@@ -227,7 +227,7 @@ Binance半径等级比典型的营销系统更严格——大多数表面坐落�
 
 **`conversion-cell`** ——BTC $ 换算表单行. Transparent 文本, 文本 `{colors.body-on-light}`类型 `{typography.body-md}`左边的对等标签(BTC、USDT等);右边的等值美元。
 
-### 输入表单( F)
+### 输入框与表单
 
 **`search-input-on-dark`** — The "Search currencies" input on the homepage hero. Background `{colors.surface-card-dark}`, text `{colors.on-dark}`, rounded `{rounded.lg}` (8px), padding 10px × 16px, height 40px. Carries a yellow `{component.button-primary-pill}` on the right side ("Sign Up").
 
@@ -239,7 +239,7 @@ Binance半径等级比典型的营销系统更严格——大多数表面坐落�
 
 **`trader-row`** — A single row in the top-traders table on /smart-money. Transparent background, padding 12px vertical, hairline divider between rows. Avatar + trader name + private/public badge on left; ROI %, AUM, mint date columns; yellow `{component.button-subscribe}` on right.
 
-### 签名组件
+### 标志性组件
 
 **`arena-hero-gradient`** ——未来竞技场产品发射首屏. 垂直梯度来自 `{colors.primary}` 顶端为 `{colors.canvas-dark}` 底部,有奖金库头条(4,000,000 美元) 单位 `{typography.display-lg}` 居中,A级 `{component.button-primary-pill}` ("Join Now")坐落在标题下方,只用于产品发射事件表面——不向其他首屏概括.
 
@@ -250,15 +250,15 @@ Binance半径等级比典型的营销系统更严格——大多数表面坐落�
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` (Binance 黄),用于主行动,品牌诉求头条,以及词标. 永不用于次要或装饰目的——黄的稀缺是它的力量所在.
-- 保留 `{component.button-primary}` (黄色,带有黑色文字)作为通用的 暗光 模式的初级 CTA。同样的按钮在同样情况下出现 `{colors.canvas-dark}` 财务报告和已审计财务报表 `{colors.canvas-light}`.
+- 保留 `{component.button-primary}` (黄色,带有黑色文字)作为通用的 暗光 模式的初级 CTA。同样的按钮在同样情况下出现 `{colors.canvas-dark}` 和 `{colors.canvas-light}`.
 - 使用 `{component.button-trading-up}` (绿色)和 `{component.button-trading-down}` (red)只用于明确的买卖或长/短动作,绝不使用它们来做一般的"确认"或"取消",因为它们带有语义性的价格方向意义.
 - 使用 BinancePlex 价格、数量、百分比、统计台数——全部 BinancePlex. 混合 BinanceNova 键入一个数字勾选符,打破交易平台字符。
 - Choose canvas mode by surface intent: dark for marketing / product showcase / trading dashboards; light for transactional dialogs (buy / deposit / withdraw / form submission).
 - 锁定每个编辑乐队 `{spacing.section}` (80px). Binance 密度比空中营销站点要大 80px 节奏很对
 
-### Don't
+### 应避免的做法
 - Don't introduce a second brand color. The system has exactly one accent (`{colors.primary}`) and any expansion dilutes the brand identity. The turquoise on Smart Money is a single-product experiment, not a system token.
 - 身体文字或大表面填充不要用黄色,只用于焦点CTA和头条.
 - Don't use `{colors.trading-up}` / `{colors.trading-down}` as background fills on cards. They are price-direction signals, expressed as text color or small badge fill — never as a card surface.
@@ -267,7 +267,7 @@ Binance半径等级比典型的营销系统更严格——大多数表面坐落�
 - Don't invert `{component.button-primary}`'s text color. Black on yellow is the system's signature — white text on yellow loses contrast and brand recognition.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -275,7 +275,7 @@ Binance半径等级比典型的营销系统更严格——大多数表面坐落�
 |---|---|---|
 | Mobile | < 768px | Top nav collapses to hamburger; hero h1 drops from 64px to ~36px; markets table converts to a horizontally-scrollable card list; demo grids drop to 1-up; footer 6 columns wrap to 2 |
 | Tablet | 768–1024px | Top nav stays horizontal but tightens, secondary menu items hide behind a "More" dropdown; markets table 2-up; pricing/feature grids 2-up |
-| 桌面 | 1024–1440px | 满 top-nav 包含所有主菜单项; 5-柱状市场表;交易仪表板 8/4 拆分(图+侧式铁路) |
+| 桌面 | 1024–1440px | 满 top-nav 包含所有主菜单项; 5-柱状市场表;交易仪表板 8/4 拆分(图+侧式侧栏) |
 | 宽 | > 1440px | 与桌面相同, 室外呼吸室较多; 最大内容宽度盖度为 1280-1440px 视表面而定 |
 
 ### 触控区域
@@ -283,14 +283,14 @@ Binance半径等级比典型的营销系统更严格——大多数表面坐落�
 - 订阅/ 内置动作按钮为 28 × 28 ——密度大于理想,但符合行业交易平台规范.
 - 市场表格中的硬币图标是 32 × 32px,整个行可切换 44px+ 有效目标。
 
-### 折叠战略
+### 窄屏布局调整
 - 顶级导航崩溃到汉堡 < 768px;菜单作为全屏工作表打开,并用同样黄色的强调色CTA固定在工作表底部.
 - 市场表在移动上每对硬币回流到横向可滚动的单张卡片.
 - 首屏统计数字(")316)) 缩小比例而不是包装——. Binance最大的要求必须永远读成一个街区。
-- 交易仪表板从图+侧式铁路切换为仅图式,移动式上另设"Trade"标签.
+- 交易仪表板在手机上改为单独展示图表，侧栏功能放入「交易」标签页。
 - 轻脚在每一个断点上都保持满血状态——不会倒塌为单独的暗变体.
 
-### 图像行为
+### 图片适配
 - 铜像图标留在原地 fixed 24/32px 大小,不论断点。
 - "Trade on the go"部分中的生命风格照片反应灵敏——在桌面上更宽,在移动上更高(垂直).
 - 3D硬币-铸币局的插图是固定的-标注-ratio资产,其规模统一,不作裁剪.
@@ -310,7 +310,7 @@ Binance半径等级比典型的营销系统更严格——大多数表面坐落�
 ## 已知缺口
 
 - 被捕获的底片频率分析器 `#eaecef` (轻细边线,计数) 1022)作为最高频率的标志。品牌定义 `{colors.primary}` (#FCD535))的出现频率要低得多,因为它很少作为强调色使用——它的系统角色必须从截图中确认.
-- BinanceNova 财务报告和已审计财务报表 BinancePlex 字重轴值没有正式化为可变的font符——只有截图中观察到的静态字重被记录下来.
+- BinanceNova 和 BinancePlex 字重轴值没有正式化为可变的font符——只有截图中观察到的静态字重被记录下来.
 - 动画和过渡时间(图重划,价格变动闪存)不在范围.
 - 表格验证状态超出 `{component.text-input-on-light}` 默认不提取——错误/成功输入变体需要一个注册或订单确认流来确认.
 - 交易仪表板表面(Spot / Futures / Margin)没有在分析过的URL集中;其订单簿,烛台图表配置,以及位置管理卡在此没有记录.

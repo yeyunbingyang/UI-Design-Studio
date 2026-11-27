@@ -38,12 +38,12 @@ Renault举手展示家庭, 强烈的偏重字重 700 时 间
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **阳光黄色** (`{colors.primary}` — `#ffed00`:品牌强调色 预留了初级CTA,"NEW"/"yeni"徽章,配置点指标,以及全血宣传瓦片,从未装饰过.
 - **日光黄色按下** (`{colors.primary-deep}` — `#e6d200`: 活动/压力状态 `{colors.primary}` 按钮和瓷砖。
 - **On-Primary** (`{colors.on-primary}` — `#000000`: 标签颜色, 上方 `{colors.primary}` 表面。黄色总是与黑色文字成对,从不白色。
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — `#ffffff`:默认的页面背景和卡片表面.
 - **表面软** (`{colors.surface-soft}` — `#f7f7f7`: 组合配置行和不活动形式字段的微妙高程步骤。
 - **表面暗色( T)** (`{colors.surface-dark}` — `#000000`:另作页面底色,用于首屏乐队,脚步,和全能的故事讲述部分.
@@ -52,7 +52,7 @@ Renault举手展示家庭, 强烈的偏重字重 700 时 间
 - **发条坚固** (`{colors.hairline-strong}` — `#000000`: 白色上满分音符,加上所有卡/按钮大纲.
 - **暗号** (`{colors.divider-dark}` — `rgba(255,255,255,0.16)`: 内部使用的相应低相位分隔器 `{colors.surface-dark}` 区域。
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — `#000000`: 白色表面的首字母颜色,同样值也驱动着标志,图标,和边框的大纲——黑色是结构的,而不是装饰的.
 - **体质** (`{colors.body}` — `#222222`: 次级正文,纯黑色在长段落中会感到太重.
 - **木炭矿** (`{colors.charcoal}` — `#333333`: 标题,元数据,以及小标签.
@@ -62,7 +62,7 @@ Renault举手展示家庭, 强烈的偏重字重 700 时 间
 - **On-Dark** (`{colors.on-dark}` — `#ffffff`): primary text on `{colors.surface-dark}` surfaces.
 - **On-Dark 静音** (`{colors.on-dark-mute}` — `rgba(255,255,255,0.72)`:暗区二级文字;保留品牌高调的感官,而不诉诸中灰色.
 
-### 语义
+### 语义色
 - **错误** (`{colors.error}` — `#be6464`: 用于内含形式错误的变形脱饱和红色。 显著的比典型的纯红色错误状态更温暖 。
 - **警告** (`{colors.warning}` — `#f0ad4e`琥珀警报。
 - **成功** (`{colors.success}` — `#8dc572`: 哑绿色确认.
@@ -72,7 +72,7 @@ Renault举手展示家庭, 强烈的偏重字重 700 时 间
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 
 整个系统都设置在 **NouvelR**, Renault专有显示
 家族,跨越导航、头条、身体、标题和按钮使用
@@ -86,7 +86,7 @@ Renault举手展示家庭, 强烈的偏重字重 700 时 间
 Tighten `lineHeight` on display sizes to ~0.95 to match the original; do not
 放松点
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -112,7 +112,7 @@ Tighten `lineHeight` on display sizes to ~0.95 to match the original; do not
 - 按钮标签带有微小的正数 letter-spacing (`0.144px` 打开 `{typography.button-md}`)——几乎无法理解,但它增加了品牌在CTAs上想要的微小的机械精度.
 - No italics, no script, no decorative ligatures.
 
-### Note on Font Substitutes
+### 替代字体
 
 NouvelR 已获得许可证; 替代品(Inter 紧身/曼罗佩/香港格罗特斯克半身
 凝固)保留几何字符,但一般渲染为
@@ -123,30 +123,30 @@ NouvelR 已获得许可证; 替代品(Inter 紧身/曼罗佩/香港格罗特斯�
 ## 布局
 
 ### 间距系统
-- **基地单位**: 4px,工作规模建立在多种工作基础上, 4 财务报告和已审计财务报表 8.
+- **基地单位**: 4px,工作规模建立在多种工作基础上, 4 和 8.
 - **脚本**: `{spacing.xxs}` 4px · `{spacing.xs}` 8px · `{spacing.sm}` 12px · `{spacing.md}` 16px · `{spacing.lg}` 20px · `{spacing.xl}` 24px · `{spacing.xxl}` 32px · `{spacing.xxxl}` 40px · `{spacing.section}` 80px.
 - 节垫( 满额带 ) : `{spacing.section}` (80px)桌面上,崩溃为 `{spacing.xxxl}` (40px)在移动中.
 - 内部宣传 padding: `{spacing.xxl}` (32px)桌面上所有侧面。
 - 垂直配置行 padding: `{spacing.xl}` (24px)上/下,各行间有细边线分隔符.
 
-### 网格容器( C)
+### 网格与容器
 - **最大内容宽度** ≈ 1440px。除此之外,内容仍以中心为中心,暗/淡波段则延伸为全血。
 - **宣传网格** 页面上:a 2- 桌面上的柱形瓦网格, 降为 1- 移动上,每块砖块都是方角(`{rounded.none}`),以摄影或固体颜色为背景.
 - **Vehicle range grids**: 3 to 4 cars per row at desktop, collapsing 2-up at tablet and 1-up at small mobile.
 - **配置符** 使用a fixed 左视窗格( 右视窗格) (~60% 宽度),带有右手滚动选项列表(~40% 宽度),位于桌面上.
 
-### 白空间哲学
+### 留白规则
 - 白空间是结构的,不是装饰性的. 部分通过颜色阻隔(白 → 黑色) 而不是软垫坡道来分隔.
 - 内置牌和配置列,贴板慷慨但从来不是空洞——品牌是大众市场,因此密度是可以接受的.
 - Hairline `{colors.hairline}` dividers on white surfaces create the sense of catalogue precision; on dark surfaces, `{colors.divider-dark}` carries the same role.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
 | 0 — flat | No shadow, no border | Default page surface, full-bleed bands. |
-| 1 ——纲要. | 1px 固态 `{colors.hairline-strong}` 或 减 减 `{colors.hairline}` | 轻便上宣传瓦片,车辆卡片,配置板. |
+| 1 ——纲要. | 1px 固态 `{colors.hairline-strong}` 或 `{colors.hairline}` | 轻便上宣传瓦片,车辆卡片,配置板. |
 | 2 ——色封高地 | 表面颜色变换(例如. `{colors.canvas}` 坐在一个卡片内 `{colors.surface-soft}` 带) | 配置细节卡,相关内容行. |
 | 3 — dark inversion | Card swaps to `{colors.surface-dark}` against a `{colors.canvas}` band | "Ticari araç" hero promo tiles, lifestyle storytelling cards. |
 
@@ -161,7 +161,7 @@ Drop shadows are extracted from the system but rarely visible on the marketing
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -172,7 +172,7 @@ Drop shadows are extracted from the system but rarely visible on the marketing
 | `{rounded.pill}` | 46px | Sub-nav 丸,"yeni"/"NEW"徽章,装饰性木马片. |
 | `{rounded.full}` | 9999px | 配置色表, 浮雕点数. |
 
-### 摄影几何
+### 图片形状
 - 车辆摄影是 **总是方角** (`{rounded.none}`),没有圆形的车辆首屏镜头,没有软套车卡.
 - 相邻的光谱比组 **16:9** (首屏乐队), **1:1** (平面宣传瓦),和 **4:3** (车辆行距卡) **2:1 宽** 给满血的乐队。
 - 虚构和小剖面提示(如果有的话) `{rounded.full}` 圆形,以与平方几何相对。
@@ -207,7 +207,7 @@ Drop shadows are extracted from the system but rarely visible on the marketing
 - Background `{colors.canvas}`, 1px solid `{colors.hairline-strong}`, `rounded: {rounded.xs}`, 40×40px square.
 - 木马箭,合用,语言切换器.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`promo-tile-light`** ——白宣传瓦
 - Background `{colors.canvas}`, text `{colors.ink}`, type `{typography.heading-lg}`, padding `{spacing.xxl}`, `rounded: {rounded.none}`.
@@ -229,7 +229,7 @@ Drop shadows are extracted from the system but rarely visible on the marketing
 - Background `{colors.surface-dark}` with full-bleed photo or atmospheric gradient, content stacked left, type `{typography.display-xl}` for the title.
 - "SCENIC E-TECH ELEKTRİKLİ" hero on the homepage.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——默认输入
 - Background `{colors.canvas}`, text `{colors.ink}`, type `{typography.body-md}`, 1px bottom border `{colors.hairline-strong}`, `rounded: {rounded.none}`, padding `{spacing.sm} {spacing.md}`, height 48px.
@@ -257,7 +257,7 @@ Drop shadows are extracted from the system but rarely visible on the marketing
 **`sub-nav-pill`** 避孕药型 sub-nav
 - Pill chips set in a horizontal scroll bar between hero and content body (e.g. "Servis & randevu", "Sahiplik dönemi geçişi", "Kampanyalar"), `{component.button-pill}` styling.
 
-### 签名组件
+### 标志性组件
 
 **`badge-new`** -"yeni"徽章 - 亚尼徽章
 - Background `{colors.primary}`, label `{colors.on-primary}`, type `{typography.button-md}`, `rounded: {rounded.full}`, padding `6px 14px`.
@@ -270,17 +270,17 @@ Drop shadows are extracted from the system but rarely visible on the marketing
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` 仅限初级CTA,"yeni"/"NEW"徽章,每个乐队最多一个强调色促动瓦片—— `{component.promo-tile-yellow}` 故意难得的
 - 平对 `{colors.primary}` 仅使用 `{colors.on-primary}` 文本。黄+白是被禁止的。
 - Set everything in **NouvelR** — no secondary serif, no script, no decorative italic.
 - Hold display headlines at `{typography.display-xl}` weight 700 with `lineHeight: 0.95` so they stack tightly on multi-line wraps.
 - 使用 `{rounded.xs}` (2px)在每个标准按钮上——近平角是品牌的一部分.
-- 切换到间距的完整带 `{colors.canvas}` 财务报告和已审计财务报表 `{colors.surface-dark}` 避免中灰作为节拍的背景
+- 切换到间距的完整带 `{colors.canvas}` 和 `{colors.surface-dark}` 避免中灰作为节拍的背景
 - 显示车内全血摄影 `{component.vehicle-card}` 上面有上层的书本, 上面没有上层的
 - 使用 `{component.sub-nav-pill}` (`{rounded.pill}`仅用于 sub-nav 和小滤波行——从不为主 CTA 。
 
-### Don't
+### 应避免的做法
 - Don't introduce a secondary accent colour. Yellow is the only brand accent; semantic colours (`{colors.error}`, `{colors.success}`, `{colors.warning}`) are functional, not decorative.
 - Don't round vehicle cards or promo tiles. Square-cornered photography is core to the brand expression.
 - Don't soften body weights to 500 or 600 — the system relies on the 400 / 700 contrast.
@@ -290,7 +290,7 @@ Drop shadows are extracted from the system but rarely visible on the marketing
 - 车辆卡或宣传牌上不要加入投影——系统在目录级别上是无阴影的.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -308,14 +308,14 @@ Drop shadows are extracted from the system but rarely visible on the marketing
 - `{component.sub-nav-pill}` (36px) 被撞到(或) 40px 高的移动通过增加的垂直垫。
 - `{component.button-icon-square}` (40px) 处于WCAG AA的最低水平,并且仍然可以开采,但应当成长为 44px 用作主要导航控制。
 
-### 折叠战略
+### 窄屏布局调整
 - 顶级导航崩溃到汉堡 < 1024px; 标志和登录图标仍固定在上。
 - 2- 上推网格崩溃 1- 上边 < 768px; 砖块垫片缩进 `{spacing.xxl}` 改为: `{spacing.lg}`.
 - 配置器从侧面切换到堆叠 < 1024px,可视化 钉在卷轴上的视门顶端。
 - 显示头条夹 : `{typography.display-xl}` 56px → 40px → 32px 穿过断点梯子
 - Sub-nav 胶囊形从包装行转换为水平滚动扶轮, 位置为 < 768px.
 
-### 图像行为
+### 图片适配
 - Vehicle photography is served at 1.5× and 2× DPR; below 768px, the system swaps to a portrait-oriented composition where art direction allows.
 - 首屏大气梯度(R)5, E-TECH)在主内容后懒散地加载;它们没有阻塞.
 - 生命风格/商业摄影 `{component.promo-tile-dark}` 保持不变 16:9 横跨断点架设,切入而非信箱.
@@ -328,7 +328,7 @@ Drop shadows are extracted from the system but rarely visible on the marketing
 3. 运行 `npx @google/design.md lint DESIGN.md` ; 孤箱警告会在未使用条目上船前捕获。
 4. 添加新的变体作为单独的条目( Q) :`-pressed`, `-disabled`, `-outline`)——不要用散文埋没.
 5. 默认体型为 `{typography.body-md}`; 联系范围 `{typography.subtitle}` 只在首屏字幕和领头段落上
-6. 保留 `{colors.primary}` 稀有——如果每个视图中出现一个以上的黄色元素,询问其中之一是否应降为 `{colors.surface-dark}` 或 减 减 `{colors.canvas}` 换成是的
+6. 保留 `{colors.primary}` 稀有——如果每个视图中出现一个以上的黄色元素,询问其中之一是否应降为 `{colors.surface-dark}` 或 `{colors.canvas}` 换成是的
 
 
 ## 已知缺口
@@ -340,7 +340,7 @@ Drop shadows are extracted from the system but rarely visible on the marketing
 
 ## 设计词元原值
 
-Renault网络存在对齐了新现代 Renault 钻石(钻石) 2021 平线的rhombus mark),带有鲜明的黑白页面底色,标志的太阳光黄色强调色,以及专有的 NouvelR 显示类型面。 系统读作自信,摄影-第一汽车——在中性或大气背景上装有大型首屏汽车,平面或圆形的容器,以及一个小型的纪律调色板,每个有色元素都是故意的. 铺设网格,满腔横幅,并反复出现"配置"的表面(白牌,黄牌强调色点,中性产品铬),搭载大众市场经销商的语气,不进入奢侈品.
+Renault网络存在对齐了新现代 Renault 钻石(钻石) 2021 平线的rhombus mark),带有鲜明的黑白页面底色,标志的太阳光黄色强调色,以及专有的 NouvelR 显示类型面。 系统读作自信,摄影-第一汽车——在中性或大气背景上装有大型首屏汽车,平面或圆形的容器,以及一个小型的纪律调色板,每个有色元素都是故意的. 铺设网格,满腔横幅,并反复出现"配置"的表面(白牌,黄牌强调色点,中性产品界面框架),搭载大众市场经销商的语气,不进入奢侈品.
 
 ```yaml
 ---

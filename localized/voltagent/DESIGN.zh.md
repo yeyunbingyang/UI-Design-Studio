@@ -7,7 +7,7 @@
 
 ## 概览
 
-Voltagent 是一个为开发者建造的AI代理工程平台,品牌穿戴观众骄傲:一个近乎黑色的 `{colors.canvas}` (`#101010`页面背景为运行边对边,没有光模对等,单电绿强调色(英语:`{colors.primary}` `#00d992`),为CTA,状态胶囊形,品牌闪电胶片,以及一个对句子的排字系统预留. Inter 与 SF Mono 用于内置代码和命令片段。整个页面读取像被擦磨过的文档,决定也出售一些东西。
+Voltagent 是一个为开发者建造的AI代理工程平台,品牌穿戴观众骄傲:一个近乎黑色的 `{colors.canvas}` (`#101010`页面背景为运行边对边,没有光模对等,单电绿强调色(英语:`{colors.primary}` `#00d992`),为CTA,状态胶囊形,品牌闪电胶片,以及一个对句子的排字系统预留. Inter 配合 SF Mono 用于内置代码和命令片段。整个页面读取像被擦磨过的文档,决定也出售一些东西。
 
 装饰系统是受约束的,没有梯度网格,没有大气背景,没有插图套件,相反,该品牌使用小的打印瞬间——绿色代码芯片(英语:Green Code cop (film)).`npx voltagent ...`), a 3-px 简介的特征卡坐落在同一个近黑色页面底色上,一个绿色的细边线划分符,在区段段间进行标记——以此来标记其身份。结果是一个页面,它感觉被设计:每张卡都有细边线边框,每张片段都有复制到剪贴板按钮,每个度量器都是用数字渲染的 monospace.
 
@@ -24,36 +24,36 @@ Voltagent 是一个为开发者建造的AI代理工程平台,品牌穿戴观众�
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Electric Green** (`{colors.primary}` — `#00d992`): The single brand accent. Every primary CTA, every status pill, every "live" indicator, the brand's lightning glyph itself. Reserved.
 - **初等软体** (`{colors.primary-soft}` — `#2fd6a1`: 内部使用稍稍稍微变哑的绿色 button-ghost 变体和工具提示/焦点指标。
 - **初等深处** (`{colors.primary-deep}` — `#10b981`:身体副本中用于内含链接颜色的较深绿色.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — `#101010`:默认的近黑页背景,是品牌营销系统中唯一的表面模式.
 - **软画帘** (`{colors.canvas-soft}` — `#1a1a1a`:一个在代码块内使用的略轻的暗填充,并形成输入,以在视觉上与页面底色区分。
 - **细边线** (`{colors.hairline}` — `#3d3a39`): 1 px 固态边框——特色卡,按钮,行间划分器,品牌通用"尖端"色彩.
 - **柔软的细边线** (`{colors.hairline-soft}` — `#b8b3b0`:稀有地区使用的较轻的分块锡 on-light 二级环境。
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — `#f2f2f2`: 暗布上的默认文本颜色——略为脱白,以减少对比强度.
 - **墨水坚固** (`{colors.ink-strong}` — `#ffffff`:纯白文字,用于首屏头条和高强调的拷贝.
 - **体质** (`{colors.body}` — `#bdbdbd`: 副文本——支持副本,正文段落为长式部分.
 - **静音** (`{colors.mute}` — `#8b949e`: 低优先级 on-dark 文本 – 标题、精细打印、页脚第二行。
 - **屏幕文字软** (`{colors.canvas-text-soft}` — `#f5f6f7`: 内部代码模型用来保持代码颜色,仅比周围的车体文本略凉.
 
-### 语义
+### 语义色
 The brand doesn't surface a separate error / warning palette in its public marketing pages — the underlying Docusaurus default semantic palette exists in the design system but is reserved for in-product / docs contexts. Validation cues on the marketing surface use the primary green for success and a muted body grey for missing states.
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 有两个面孔 携带系统:
-1. **Inter** 用于每个显示、身体、按钮和链接角色。重量 400 / 500 / 600 / 700 工作集。带有 OpenType 特性的用户 `"calt"` 财务报告和已审计财务报表 `"rlig"` 启用横跨页面,所以是几何 Inter 结扎和背景替代的转换正确。
-2. **SF Mono** (`SFMono-Regular` 与 Menlo / Monaco / Consolas / Liberation Mono 倒置)),用于内置代码,命令片段,终端模型,以及品牌的数位计数器. 400 / 549 / 550 / 700 —— 不寻常的 549 / 550 子粗重使单体具有"比普通的稍重"的强调声音.
+1. **Inter** 用于每个显示、身体、按钮和链接角色。重量 400 / 500 / 600 / 700 工作集。带有 OpenType 特性的用户 `"calt"` 和 `"rlig"` 启用横跨页面,所以是几何 Inter 结扎和背景替代的转换正确。
+2. **SF Mono** (`SFMono-Regular` 配合 Menlo / Monaco / Consolas / Liberation Mono 倒置)),用于内置代码,命令片段,终端模型,以及品牌的数位计数器. 400 / 549 / 550 / 700 —— 不寻常的 549 / 550 子粗重使单体具有"比普通的稍重"的强调声音.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -79,9 +79,9 @@ The brand doesn't surface a separate error / warning palette in its public marke
 - **双面对比带技术语音.** Inter 说明; SF Mono 任何可以在终端输入的
 - **Uppercase eyebrow with tracking is the brand's signature label style.** `2.52 px` at 14 px is the documented value.
 
-### Note on Font Substitutes
+### 替代字体
 - **Sans** — *Inter* is the brand's actual face; substitute is the brand itself when self-hosting is not available.
-- **单声道** — *SF Mono* 谓 Apple- 系统; *JetBrains Mono* 或 减 减 *Geist Mono* 是最好的免费替代品。
+- **单声道** — *SF Mono* 谓 Apple- 系统; *JetBrains Mono* 或 *Geist Mono* 是最好的免费替代品。
 
 
 ## 布局
@@ -92,11 +92,11 @@ The brand doesn't surface a separate error / warning palette in its public marke
 - **分区编栏**: 首屏+ 使用内容带 `{spacing.5xl}` 48 px 上下两层
 - **纸牌内部贴纸**: 特征卡坐落于 `{spacing.2xl}` 24 px.
 
-### 网格容器( C)
+### 网格与容器
 - 大约在销售集装箱中心 1200 – 1400 px; 内容保持颜色的边缘对边缘, 与水平沟槽的颜色相交 `{spacing.3xl}` 。在桌面上。
 - Feature-card grids: 2-up to 3-up at desktop, 1-up at mobile.
 
-### 反应战略
+### 响应式布局
 
 #### 断点
 
@@ -109,14 +109,14 @@ The brand doesn't surface a separate error / warning palette in its public marke
 #### 触控区域
 Buttons render at ~44 px tall (12 px vertical padding + 24 px line-height). Meet WCAG AAA at all breakpoints.
 
-#### 折叠战略
+#### 窄屏布局调整
 移动时的 Nav 崩溃到汉堡; 菜单覆盖保持相同的绿色 CTA 固定在底部 。 Feature-card 网格降为 1-上;首屏打字机平流
 
-#### 图像行为
+#### 图片适配
 代码编辑模型制作成具有复制到剪贴板的平价的图像卡片,品牌营销表面没有摄影.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -133,14 +133,14 @@ Buttons render at ~44 px tall (12 px vertical padding + 24 px line-height). Meet
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
 | `{rounded.none}` | 0px | 满血乐队. |
 | `{rounded.xs}` | 4px | 内线胶囊形 密码内线芯片 |
 | `{rounded.sm}` | 6px | 默认按钮和输入半径 。 |
-| `{rounded.md}` | 8px | 红外线 code-block 铬。 |
+| `{rounded.md}` | 8px | 红外线 code-block 界面框架。 |
 | `{rounded.pill}` | 9999px | 内置状态标记("Live","Beta"). |
 | `{rounded.full}` | 9999px | Circular 图标容器。 |
 
@@ -161,13 +161,13 @@ Buttons render at ~44 px tall (12 px vertical padding + 24 px line-height). Meet
 **`button-pill-tag`** ——分类标签/状态标签的内置胶囊形.
 - Background `{colors.canvas}`, text `{colors.ink}`, hairline border, body in `{typography.body-sm}`, padding `{spacing.xs} {spacing.md}`, shape `{rounded.pill}` 9999 px.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`card-feature`** ——默认特征卡.
 - Background `{colors.canvas}`, text `{colors.ink}`, 1 px solid `{colors.hairline}` border, padding `{spacing.2xl}`, shape `{rounded.md}` 8 px. The brand's most-repeated card chrome.
 
 **`card-feature-emphasized`** - 一张牌是同一张 3 px 细边线边界以强调.
-- 与 `card-feature` 与 3 px 固态 `{colors.hairline}`.
+- 与 `card-feature` 配合 3 px 固态 `{colors.hairline}`.
 
 **`code-mockup`** ——暗码编辑卡,带有复制到剪贴板的付息能力.
 - Background `{colors.canvas}`, text `{colors.ink}`, 1 px solid `{colors.hairline}`, body in `{typography.code}` (SF Mono 13 px), padding `{spacing.xl}`, shape `{rounded.md}`.
@@ -175,7 +175,7 @@ Buttons render at ~44 px tall (12 px vertical padding + 24 px line-height). Meet
 **`code-inline-chip`** ——内置指令片段药.
 - Background `{colors.canvas-soft}`, text `{colors.canvas-text-soft}`, body in `{typography.code}`, padding `{spacing.xxs} {spacing.sm}`, shape `{rounded.sm}`.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——暗面的标准文本输入.
 - Background `{colors.canvas-soft}`, text `{colors.ink}`, 1 px solid `{colors.hairline}`, body in `{typography.body-sm}`, padding `{spacing.md} {spacing.lg}`, shape `{rounded.sm}` 6 px.
@@ -186,12 +186,12 @@ Buttons render at ~44 px tall (12 px vertical padding + 24 px line-height). Meet
 - Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.md} {spacing.3xl}`.
 
 **`nav-link`** ——在nav中链接项目.
-- 文本 `{colors.body}`,设置在 `{typography.body-sm}`.
+- 文字颜色 `{colors.body}`,设置在 `{typography.body-sm}`.
 
 **`footer`** 黑暗脚步乐队。
 - Background `{colors.canvas}`, text `{colors.body}`, padding `{spacing.4xl} {spacing.3xl}`. Body in `{typography.body-sm}`.
 
-### 签名组件
+### 标志性组件
 
 **`hero-band`** 黑暗首屏乐队与 60-px (英语). Inter 头条.
 - Background `{colors.canvas}`, text `{colors.ink}` (with the headline at `{colors.ink-strong}` white), padding `{spacing.5xl} {spacing.3xl}`. Headline in `{typography.display-xl}` (60 px / weight 400 / `-0.65 px` tracking). Eyebrow above headline in `{typography.eyebrow-mono}` (uppercase, tracked).
@@ -202,52 +202,52 @@ Buttons render at ~44 px tall (12 px vertical padding + 24 px line-height). Meet
 **`green-divider-band`** ——一个薄绿色的光线带,偶尔会分离主要部分.
 - Background `{colors.canvas}`, 2 px solid `{colors.primary}` top/bottom border. The brand's only chromatic divider.
 
-### 实例(说明性)
+### 组合示例
 
-> 自动生成的工具包-模拟演示表面(`scripts/derive-examples-block.mjs`。每个 `ex-*` 条目参考: 下游消费者的品牌原始产品(`/preview-design`, `/generate-kit`) 重新皮肤相同 10 表面一致。 `TO_FILL` 标记表示缺失原始人——在LLM判断传中解析.
+> 以下组合场景由 `scripts/derive-examples-block.mjs` 生成。各 `ex-*` 条目复用品牌基础样式，供 `/preview-design` 和 `/generate-kit` 以统一风格呈现同一套 10 个示例。`TO_FILL` 提示有待核对的基础样式。
 
-**`ex-pricing-tier`** ——默认定价等级卡。 feature-card 带品牌的铬 canvas-soft 表面。
+**`ex-pricing-tier`**：默认套餐卡，沿用功能卡结构和品牌 canvas-soft 底色。
 - 属性 : `backgroundColor`, `textColor`, `borderColor`, `rounded`, `padding`
 
-**`ex-pricing-tier-featured`** ——地貌/高亮的层次——极性-浮点表面(暗色填充+光线文字在光线模式下,浅色填充+暗色文字在暗线模式下).
+**`ex-pricing-tier-featured`**：推荐套餐卡。浅色模式中用深底浅字，深色模式中用浅底深字。
 - 属性 : `backgroundColor`, `textColor`, `rounded`, `padding`
 
-**`ex-product-selector`** ——什么是包含的汇总卡——重新用于SaaS/B2B纵横(NOT为字形产品画廊).
+**`ex-product-selector`**：面向 SaaS / B2B 场景的套餐权益摘要卡。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-cart-drawer`** ——订阅摘要——重新用于SaaS/B2B(每件加件的行项目,而非字面车).
+**`ex-cart-drawer`**：SaaS / B2B 订阅摘要，每个附加项单独列出。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `item-divider`
 
-**`ex-app-shell-row`** ——App Shell 实例中的侧边栏导航行. Active State 使用品牌主标.
+**`ex-app-shell-row`**：应用框架示例里的侧栏导航行，以品牌主色标识选中状态。
 - 属性 : `backgroundColor`, `activeIndicator`, `rounded`, `padding`
 
-**`ex-data-table-cell`** — Default data-table th + td chrome. Header uses mono-caps eyebrow typography; body uses body-sm.
+**`ex-data-table-cell`**：数据表格中 th 与 td 的默认样式。表头采用大写等宽字，正文采用 body-sm。
 - 属性 : `headerBackground`, `headerTypography`, `bodyTypography`, `cellPadding`, `rowBorder`
 
-**`ex-auth-form-card`** ——签入/签入卡. 复用. feature-card 铬 text-input 原始人在里面,他们都在里面
+**`ex-auth-form-card`**：登录与注册卡，复用功能卡和 text-input。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-modal-card`** ——模度对话框表面——与 feature-card 以高的阴影盟誓,
+**`ex-modal-card`**：对话框表面，沿用功能卡样式并加浮层投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-empty-state-card`** ——空状态插图框架.
+**`ex-empty-state-card`**：空状态插图容器。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `captionTypography`
 
-**`ex-toast`** ——通知表面. feature-card 形状 + 中阴影。
+**`ex-toast`**：轻提示，沿用功能卡圆角并使用中等投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `typography`
 
 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` (`#00d992`),每一次主CTA,闪电标志glyph,以及活状态指标,绿色是品牌的重力中心.
 - 使用黑暗 `{colors.canvas}` (`#101010`)作为唯一的页面表面。没有光度-模式节奏。
 - 以纸牌构建牌 1 px `{colors.hairline}` 暗处的毛线是品牌的升空系统
 - Pair Inter (sentence-case) with SF Mono (inline code, command snippets). Every uppercase moment uses Inter at weight 600 with `2.52 px` tracking — not a separate mono.
 - 使用 `{rounded.sm}` 6 px 按钮, `{rounded.md}` 8 px 给卡片, `{rounded.pill}` 9999 px 仅用于内置状态标记。
 
-### Don't
+### 应避免的做法
 - Don't introduce a light-mode counterpart. The brand is dark-canvas only.
 - Don't use the primary green as a body-text fill. It's CTA-only.
 - Don't drop a soft drop-shadow on cards. The brand uses hairlines + occasional glow, never material shadows.

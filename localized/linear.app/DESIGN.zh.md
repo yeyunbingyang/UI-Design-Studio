@@ -20,7 +20,7 @@ The page rhythm is **dense product screenshots** — Linear's marketing leads wi
 - Four-step surface ladder (canvas → surface-1 → surface-2 → surface-3 → surface-4) carries hierarchy without shadow.
 - 显示跟踪牵引力强烈负( N)-3.0px 时 间 80px) 身体坚守 -0.05px.
 - 使用卡片 `{rounded.lg}` 12px 角与( ) 1px 细边线边界——不吃药,很少 16px.
-- **产品 UI 截图** 销售铬是应用软件的暗框。
+- **产品 UI 截图** 销售界面框架是应用软件的暗框。
 - No second chromatic color. No atmospheric gradients. No spotlight cards.
 
 
@@ -28,17 +28,17 @@ The page rhythm is **dense product screenshots** — Linear's marketing leads wi
 
 > Source pages: linear.app (home), /intake, /pricing, /contact/sales, /build.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **紫色蓝色** ({colors.primary}: 签名 Linear 强调色——主要CTA,品牌标记,链接强调.
 - **熏烟者霍弗** ({colors.primary-hover}: 轻便薰衣草(#828fff)——主要CTA的徘徊状态.
 - **淡色焦点** ({colors.primary-focus}): Focus-ring 锡( 锡)#5e69d1)——重点输入,重点按钮.
 - **品牌安全** ({colors.brand-secure}: 哑紫草(原变种).#7a7fad——用于 "Linear 安全层的表面
 
-### 表面
+### 界面表面
 - **Canvas** ({colors.canvas}): Default page background — #010102, near-pure black with a faint blue tint.
-- **表面 1** ({colors.surface-1}:页面底色之上的一步——特色卡,定价卡,产品截图面板.
-- **表面 2** ({colors.surface-2}:以上两步——特色定价卡,盘点卡.
-- **表面 3** ({colors.surface-3}:以上三步——线-三边背景, sub-nav.
+- **界面表面 1** ({colors.surface-1}:页面底色之上的一步——特色卡,定价卡,产品截图面板.
+- **界面表面 2** ({colors.surface-2}:以上两步——特色定价卡,盘点卡.
+- **界面表面 3** ({colors.surface-3}:以上三步——线-三边背景, sub-nav.
 - **Surface 4** ({colors.surface-4}): Four steps above — bg-level-3, deepest lifted surface.
 - **细边线** ({colors.hairline}): 1px 以牌和分牌为边框。
 - **发条坚固** ({colors.hairline-strong}: 强壮 1px 边框 —— 输入焦点环 。
@@ -47,20 +47,20 @@ The page rhythm is **dense product screenshots** — Linear's marketing leads wi
 - **反面表面 1** ({colors.inverse-surface-1}: 反面页面底色上面的一步.
 - **反面表面 2** ({colors.inverse-surface-2}:上两步反向页面底色.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** ({colors.ink}:所有头条和强调的体型——浅灰色 #f7f8f8.
 - **墨水静音** ({colors.ink-muted}: 二级类型 #d0d6e0 — meta 首屏面板的信息。
 - **Ink Subtle** ({colors.ink-subtle}): Tertiary type at #8a8f98 — deselected pricing tabs, footer columns.
 - **墨水第三层** ({colors.ink-tertiary}: Quarnernary at (中文(简体) ). #62666d ——已停用,脚注.
 
-### 语义
+### 语义色
 - **成功绿色** ({colors.semantic-success}:状态胶囊形,成功指标,营销上唯一的语义色彩.
 - **重叠** ({colors.semantic-overlay}:纯黑色覆钵,用于模式.
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 
 - **Linear Display** — Linear'scast 显示 sans; 倒置 `SF Pro Display, -apple-system, system-ui, Segoe UI, Roboto`. 承运人 display-xl 穿过小标题。
 - **Linear Text** — Linear定制文本 sans( 切度稍有不同, 用于体积); 相同的倒置堆栈。 carry 车身大小、 按钮标签、 标题 。
@@ -68,7 +68,7 @@ The page rhythm is **dense product screenshots** — Linear's marketing leads wi
 
 营销表面将"显示"和"文本"视为一个连续的声音;家族变化是沉默的.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -91,9 +91,9 @@ The page rhythm is **dense product screenshots** — Linear's marketing leads wi
 - **显示时主动负跟踪** (-3.0px 时 间 80px ≈ 4% )),以"小号"表示.
 - **单声从展转至体.** Display-xl 时 间 600 身体在吗? 400 同一个家庭, 更窄的重量。
 - **眉毛使用正跟踪** (+0.4px)——与负轨显示的对比,将眉毛标记为分类学.
-- **单曲只出现在代码背景中.** Linear Mono 生活在产品屏幕上,而不是在销售铬上。
+- **单曲只出现在代码背景中.** Linear Mono 生活在产品屏幕上,而不是在销售界面框架上。
 
-### Note on Font Substitutes
+### 替代字体
 
 Linear's custom typeface isn't publicly distributed; the documented fallback `SF Pro Display, -apple-system, system-ui` is the recommended substitute on macOS. For cross-platform implementation, **Inter** at weight 500 / 600 / 700 is the closest free substitute. **Geist Sans** is also viable. For mono, **JetBrains Mono** or **Geist Mono** at weight 400 closely approximates Linear Mono.
 
@@ -108,19 +108,19 @@ Linear's custom typeface isn't publicly distributed; the documented fallback `SF
 - 胶囊形按钮 padding: 8px vertical · 14px horizontal — Linear's compact button spec.
 - 格式输入 padding: 8px vertical · 12px horizontal.
 
-### 网格容器( C)
+### 网格与容器
 
 - 最大内容宽度左右 1280px.
 - Card grids are 3-up at desktop, 2-up at tablet, 1-up at mobile.
 - 定价等级网格为 3-上;下面的比较条显示每层的检查标记。
 - 产品截图面板横跨全内容宽度——它们都是主角.
 
-### 白空间哲学
+### 留白规则
 
 The dark canvas IS the whitespace. Sections separate by lift onto surface-1 panels, not by gaps in white. Within a panel, generous `{spacing.lg}` 24px gaps between content blocks; `{spacing.section}` 96px between sections.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -141,7 +141,7 @@ Linear'深度由表面梯子+细边线边框承载,品牌几乎完全能抵御�
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -185,7 +185,7 @@ Linear'深度由表面梯子+细边线边框承载,品牌几乎完全能抵御�
 - Default: `{colors.canvas}` background, `{colors.ink-subtle}` text, rounded `{rounded.pill}`, padding 6px 14px.
 - Selected: `{colors.surface-2}` background, `{colors.ink}` text — selected = surface lift.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`pricing-card`** - 每一级 `/pricing`.
 - Background `{colors.surface-1}`, text `{colors.ink}`, type `{typography.body}`, rounded `{rounded.lg}`, padding 24px. 1px `{colors.hairline}` border.
@@ -208,7 +208,7 @@ Linear'深度由表面梯子+细边线边框承载,品牌几乎完全能抵御�
 **`cta-banner`** 关闭接近页面底部的 CTA 面板 。
 - Background `{colors.surface-1}`, text `{colors.ink}`, type `{typography.headline}`, rounded `{rounded.lg}`, padding 48px.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** + **`text-input-focused`** - 表格字段在 `/contact/sales` 并注册覆盖。
 - Background `{colors.surface-1}`, text `{colors.ink}`, type `{typography.body}`, rounded `{rounded.md}`, padding 8px 12px.
@@ -235,7 +235,7 @@ Linear'深度由表面梯子+细边线边框承载,品牌几乎完全能抵御�
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 
 - 准备金 `{colors.canvas}` (#010102)作为系统的锚面——昏暗的蓝色锡是故意的.
 - 使用 `{colors.primary}` 紫衣只用于:品牌标记,主CTA,焦点环,链接强调.
@@ -245,7 +245,7 @@ Linear'深度由表面梯子+细边线边框承载,品牌几乎完全能抵御�
 - 使用产品UI截图作为每个部分的主角.
 - 将 CTA 组成为 `{rounded.md}` 8px 转角
 
-### Don't
+### 应避免的做法
 
 - Don't ship a light-mode marketing page.
 - Don't use lavender as a section background or card fill.
@@ -256,7 +256,7 @@ Linear'深度由表面梯子+细边线边框承载,品牌几乎完全能抵御�
 - 产品截图模型中不要结合多种亮强调色.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -274,14 +274,14 @@ Linear'深度由表面梯子+细边线边框承载,品牌几乎完全能抵御�
 - 定价的胶囊形 ≥36px 音响高度; 触摸视图端口增长到 ≥44px.
 - 格式输入持有量 ≥44px 触控目标
 
-### 折叠战略
+### 窄屏布局调整
 
 - **顶端导航**: 链接崩溃到下面的汉堡 768px.
 - **Card grids**: 3-up → 2-up at 1024px → 1-up below 768px.
 - **定价比较**: 下方每一级手风琴 768px.
 - **显示类型**: `{typography.display-xl}` 80px 比额表走向 `{typography.display-md}` 40px 手机上,我刚从电话里找到的
 
-### 图像行为
+### 图片适配
 
 - 产品UI截图保持了宽度比,永远不裁剪.
 - 门厅的客户标志可能会从 6- 最多为 3- 上层 768px.

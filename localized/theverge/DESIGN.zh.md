@@ -59,14 +59,14 @@ The Verge uses **zero decorative gradients**. The only gradient-like treatment i
 
 ## 3. 字法规则
 
-### 字体家族
+### 字体族
 - **Manuka** (Klim Type Foundry) — fallback: Impact, Helvetica. The signature display face for The Verge wordmark and feature headlines. A heavy-weight (900) industrial sans-serif with a condensed, almost-athletic stance. Runs at 60–107px on the homepage, never smaller.
 - **聚三联体** (潘格拉姆·潘格拉姆 / 尼古拉斯·弗罗贝尔)——倒计时: Helvetica, Arial。UI和二级头条工作马。覆盖加权数 300 / 500 / 700 整个系统从踢球手的字幕到甲板
 - **单体保利桑斯** ——倒置:Courier New,Courier. 单间兄弟,专用于ALL-CAPS标签:踢球手,时间戳,分类标签,按钮标签,这种单间上架的使用是继Manuka之后第二可识别的Verge细节.
 - **FK 罗马标准** (弗洛里安·卡斯腾)——倒计时: Georgia. A serif 用于特定的身体/封装处理(文章节选,某些检讨拉动)。在 PolySans 堆栈中添加“打印-磁场”反点。
 - **Roboto** ——倒计时: `-apple-system`, `system-ui`。用于部件和遗留模块的用户界面字体。
 
-### 等级
+### 字号层级
 
 | Role | Font | Size | Weight | Line Height | Letter Spacing | Notes |
 |---|---|---|---|---|---|---|
@@ -100,7 +100,7 @@ The Verge uses **zero decorative gradients**. The only gradient-like treatment i
 - **FK罗马标准是编辑上的例外**保留它用于长式的印刷音效瞬间——评论、评论、头部散文。
 - **Line heights are tight** (0.80–1.30) for every display and label, relaxed (1.60–2.00) only for reading body and mono button labels. The leading jump is intentional — it gives the page a "telegraph ticker" rhythm.
 
-### Note on Font Substitutes
+### 替代字体
 The 0.80 line-height on Manuka display (107px, 90px, 60px) assumes the **proprietary Manuka face from Klim Type Foundry**, which has aggressively tight vertical metrics designed for athletic stance at large sizes. If you substitute with wide-metric open-source condensed displays like **Anton**, **Oswald**, **Bebas Neue**, or **Archivo Black**, loosen display line-heights by approximately **+0.10 to +0.15** to prevent ascender/descender collisions (e.g., 0.80 → 0.95). PolySans substitutes (Space Grotesk, DM Sans, Hanken Grotesk) work at the token values without adjustment — their metrics are close enough. PolySans Mono substitutes (Space Mono, JetBrains Mono) and FK Roman substitutes (Newsreader, Literata) also work without adjustment.
 
 
@@ -141,7 +141,7 @@ The 0.80 line-height on Manuka display (107px, 90px, 60px) assumes the **proprie
 
 **紫外线(促进)**
 - Background: transparent
-- 文本 : `#5200ff` 或 减 减 `#ffffff`
+- 文本 : `#5200ff` 或 `#ffffff`
 - 边框 : `1px solid #5200ff`
 - 边框半径 : `30px`
 - 用于“订阅”或“加入流派”风格的宣传招牌
@@ -153,7 +153,7 @@ The 0.80 line-height on Manuka display (107px, 90px, 60px) assumes the **proprie
 - 字体: PolySans Mono 单词 11px / 600 上层楼, 1.8px 跟踪
 - 铺垫:~`4px 10px`
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **故事结构图**
 - Background: either `#131313` + 1px white border, OR a saturated accent fill (mint, purple, yellow, pink, orange, white)
@@ -167,15 +167,15 @@ The 0.80 line-height on Manuka display (107px, 90px, 60px) assumes the **proprie
 - Background: `#131313` with 1px hairline border, OR full-bleed color accent
 - 边框半径 : `24px`
 - 铺垫: 32px+
-- 内部图像: 剪切以匹配外部半径( N)`3px` 或 减 减 `4px` 巢穴内半径).
+- 内部图像: 剪切以匹配外部半径( N)`3px` 或 `4px` 巢穴内半径).
 - Hover: text color shift only; the image remains static
 
 **故事串列( 时线)**
-- 垂直破折或固态规则(1px `#3d00bf` 或 减 减 `#ffffff`)沿着每个物品的左边缘运行,标记时间线脊柱
-- 时间戳坐在摩诺的左侧铁路上 11px / 500 / 更新的密码 / 1.1px 跟踪
+- 垂直破折或固态规则(1px `#3d00bf` 或 `#ffffff`)沿着每个物品的左边缘运行,标记时间线脊柱
+- 时间戳坐在摩诺的左侧栏上 11px / 500 / 更新的密码 / 1.1px 跟踪
 - Each entry is a pill-cornered rectangle separated from its neighbors by 12–16px vertical gap
 
-### 输入表单( F)
+### 输入框与表单
 - **Default**: `#131313` background, 1px solid `#ffffff` or `#949494` border, `2px` border radius (tight, newspaper-form feel), PolySans 15px text in `#ffffff`, placeholder in `#949494`.
 - **Focus**: border transitions to `#3cffd0` (jelly mint) with optional `1px solid #5200ff` inner ring on deep focus. No glow.
 - **错误**: 边界转弯 `#5200ff` (紫色——这里用作错误/警戒强调色,而不是通常的红色).
@@ -193,17 +193,17 @@ The 0.80 line-height on Manuka display (107px, 90px, 60px) assumes the **proprie
 
 - **光谱比率**: 16:9 主宰首屏和特写形象, 4:3 以给养中的人, 1:1 用于缩略图和作者的缩略图。
 - **Corners**: always rounded to match the parent card — `3px`, `4px`, or inherit `20px` / `24px` from the tile.
-- **框架**: 1px `#313131` 或 减 减 `#ffffff` 发条围绕摄影,给出"自足的极光"感觉.
+- **框架**: 1px `#313131` 或 `#ffffff` 发条围绕摄影,给出"自足的极光"感觉.
 - **满血**:仅位于颜色块瓦片内,图像运行到强调色填充的插边.
 - **悬停**:静态——没有缩放,没有尺度,没有不透明移,下面的头条是唯一的交互式响应.
 - **懒惰装入**: `loading="lazy"` 头顶的顶部,只爱好于头顶的首屏。
 
 ### 故事史诗 时间线项目( 分析)
 
-- 纵向铁路线(1px `#3d00bf` 或 减 减 `#ffffff` 打开 `#131313`)
+- 纵向栏目色条线(1px `#3d00bf` 或 `#ffffff` 打开 `#131313`)
 - 单倍制图章在 PolySans Mono 左边 11px / 更新
 - 摇篮式车牌(20px 半径),带有踢球手,头条,和可选甲板
-- 垂直堆叠与 12–16px 差距,它们之间的铁路继续
+- Stacked vertically with 12–16px gap, the rail continuing between them
 - 经常与满腔强调色瓦片交织,"打破"时间节奏,以强调
 
 
@@ -217,16 +217,16 @@ The 0.80 line-height on Manuka display (107px, 90px, 60px) assumes the **proprie
 - **内置间隔**: 踢球手们坐着 ~6–10px 头条之上;头条坐 ~10–14px 甲板上方; 时间戳坐 ~6–8px 甲板下方的车
 - **微型**: 数据 2/4/5/6/9/10px 数值在按钮、胶囊形和紧贴标签的集群内使用,而不是在编辑网格内使用。
 
-### 网格容器( C)
+### 网格与容器
 - **最大宽度**: ~1280–1300px (当值检测到断点时, 1200/1280/1300).
-- **列图案**: a 12- 柱状的网格, 溶解成 3- 柱子首屏+ - 高尔夫球队的首屏+ 1- 栏目 StoryStream 铁路+ 功能面板。主页感觉自由形式,因为颜色块的瓦片经常横跨 2–3 专栏在一时兴起。
+- **Column patterns**: a 12-column underlying grid that resolves into 3-column hero + 1-column StoryStream rail + feature panels. The homepage feels freeform because color-block tiles frequently span 2–3 columns on a whim.
 - **集装箱贴板**: 24px 移动/ 48px 桌面位于外缘。
 - **盖特斯**: 16–24px 列之间,紧凑(8–12px) 故事史诗条目中.
 
-### 白空间哲学
-The Verge 将白空间视为一个俱乐部DJ将沉默——作为响亮时刻之间的戏剧性重置。页面底色是如此的暗,强调色如此饱和,甚至连 32px 空的缩放 `#131313` 介于两块牌之间的调色板净化器。页面不是像 Apple 或 减 减 Stripe就是这样,这是 **节奏**白色空间带有节奏,而不是优雅。
+### 留白规则
+The Verge 将白空间视为一个俱乐部DJ将沉默——作为响亮时刻之间的戏剧性重置。页面底色是如此的暗,强调色如此饱和,甚至连 32px 空的缩放 `#131313` 介于两块牌之间的调色板净化器。页面不是像 Apple 或 Stripe就是这样,这是 **节奏**白色空间带有节奏,而不是优雅。
 
-### 圆角刻度
+### 圆角层级
 - **2px** ——输入,小徽章(脚像打字机标签).
 - **3px** ——内置图像(足够软化页面底色)
 - **4px** ——嵌入式卡片图像和小按钮变体
@@ -245,7 +245,7 @@ Eight discrete radius values — a **lot** for a single site. This is deliberate
 |---|---|---|
 | 0 | No border, no shadow | Default `#131313` canvas text |
 | 1 | `rgba(0,0,0,0) 0px 0px 0px 0px inset` (占位符) | 重置交互式元素状态 |
-| 2 | `1px solid #ffffff` 或 减 减 `#313131` 细边线 | 图像框架和静态卡片轮廓 |
+| 2 | `1px solid #ffffff` 或 `#313131` 细边线 | 图像框架和静态卡片轮廓 |
 | 3 | `1px solid #3cffd0` 细边线 | 活动按钮大纲, 突出故事牌 |
 | 4 | `1px solid #5200ff` 细边线 | 晋升/候补国家大纲 |
 | 5 | `rgba(0, 0, 0, 0.33) 0px 0px 0px 1px` | 单“大气”环——适用于层卡 |
@@ -262,29 +262,29 @@ The Verge's depth philosophy is **color-as-elevation**. When something needs to 
 
 ## 7。 。 。 。 。 。
 
-### 执行
-- **执行** 使用情况 `#131313` 。没有光线模式。
-- **执行** 使用 Jelly Mint (请检查url=值 (帮助)`#3cffd0`)和韦尔吉紫罗兰(Verge Ultraviolet)("紫罗兰").`#5200ff`)作为危险强调色——按钮,边框,活动状态,以及饱和的色块瓦片.
+### 建议做法
+- **建议做法** 使用情况 `#131313` 。没有光线模式。
+- **建议做法** 使用 Jelly Mint (请检查url=值 (帮助)`#3cffd0`)和韦尔吉紫罗兰(Verge Ultraviolet)("紫罗兰").`#5200ff`)作为危险强调色——按钮,边框,活动状态,以及饱和的色块瓦片.
 - **Do** use Manuka exclusively at 60px+ for hero headlines. Treat anything smaller as a bug.
-- **执行** 环绕一切: 20px 给卡片, 24px 用于特征卡, 30–40px 胶囊形扣子。
+- **建议做法** 环绕一切: 20px 给卡片, 24px 用于特征卡, 30–40px 胶囊形扣子。
 - **Do** use PolySans Mono for UPPERCASE labels, timestamps, kickers, and button text. Lowercase mono doesn't exist here.
-- **执行** 应用 1.5–1.9px letter-spacing 给每个全卡通标签,这是Verge的签名。
-- **执行** 使用饱和的色块瓦片(薄荷,紫色,黄色,粉色,橙色,白色)提升一个故事——永远不放出阴影.
-- **执行** 使用情况 `#3860be` (深链接蓝色)作为每个链接上的悬浮颜色,无论底色如何.
-- **执行** 应用 StoryStream 时间线条( Q)1px 破损/固态 `#3d00bf` 或白色),在种子视图上。
-- **执行** 使用稀重(300(多配偶协会) 19–20px 与 1.9px 追踪“时尚-低音”资本化眉毛的——与“时尚-低音”的对比 107px 玛努卡的呼喊是整个声音。
+- **建议做法** 应用 1.5–1.9px letter-spacing 给每个全卡通标签,这是Verge的签名。
+- **建议做法** 使用饱和的色块瓦片(薄荷,紫色,黄色,粉色,橙色,白色)提升一个故事——永远不放出阴影.
+- **建议做法** 使用情况 `#3860be` (深链接蓝色)作为每个链接上的悬浮颜色,无论底色如何.
+- **建议做法** 应用 StoryStream 时间线条( Q)1px 破损/固态 `#3d00bf` 或白色),在种子视图上。
+- **建议做法** 使用稀重(300(多配偶协会) 19–20px 配合 1.9px 追踪“时尚-低音”资本化眉毛的——与“时尚-低音”的对比 107px 玛努卡的呼喊是整个声音。
 
-### Don't
-- **Don't** use a light background. The dark canvas is the product.
-- **Don't** add `box-shadow` for elevation. Use 1px borders or saturated accent fills instead.
-- **Don't** use square corners. Every interactive and content container is rounded.
-- **Don't** use Manuka for UI, buttons, or body copy. It's strictly display.
+### 应避免的做法
+- **应避免的做法** 使用浅色背景。暗色页面底色是产品。
+- **应避免的做法** 添加( E) `box-shadow` 。使用时 1px 边框或饱和强调色代替。
+- **应避免的做法** 。每个交互和内容容器均四舍五入。
+- **应避免的做法** 使用马努卡进行UI,按钮,或身体复制,严格显示.
 - **Don't** use lowercase mono. PolySans Mono is always UPPERCASE.
 - **Don't** let mint and ultraviolet appear as background washes — they're hazard accents, not canvas tints.
-- **Don't** use gradients anywhere. The system is solid color blocks only.
+- **应避免的做法** 任意使用渐变。系统仅是坚实的颜色块。
 - **Don't** introduce new accent colors outside the declared mint / purple / yellow / pink / orange tile palette.
-- **Don't** pair Manuka with FK Roman Standard in the same headline cluster — Manuka is the only display shout, serif pulls are reserved for body moments.
-- **Don't** use `#3cffd0` text on a `#131313` background at under 16px — the contrast vibrates at small sizes.
+- **应避免的做法** Manuka配对 FK罗马标准在同一标题组中——Manuka是唯一的显示呼喊, serif 拖拉机是留给身体的
+- **应避免的做法** 使用情况 `#3cffd0` 文本在 a 上显示 `#131313` 下层背景 16px ——对比度小的震动.
 
 
 ## 8. Responsive Behavior
@@ -293,7 +293,7 @@ The Verge's depth philosophy is **color-as-elevation**. When something needs to 
 
 | 名称 | 宽度 | 密钥更改 |
 |---|---|---|
-| 小型移动 | <400px | 单列,马努卡首屏的鳞片下至 ~48–54px, 故事结构的铁路崩溃到内含时间戳 |
+| 小型移动 | <400px | 单列,马努卡首屏的鳞片下至 ~48–54px, 故事结构的侧栏崩溃到内含时间戳 |
 | 手机 | 400–549px | 单柱,彩块砖堆满的网,导航是汉堡抽屉 |
 | 大型移动 | 550–767px | 仍然单列但垫开,瓦片的光度停留在 20px |
 | 平板 | 768–1023px | 2- 列 故事史特朗 带有特征卡 横跨 字签缩写 ~50% |
@@ -308,18 +308,18 @@ The Verge's depth philosophy is **color-as-elevation**. When something needs to 
 - Mono uppercase nav links are smaller (~28–32px tall) — for derivative work, pad to 44px on mobile.
 - 圆形图标按钮是 40–44px 圆圈, 触摸友好。
 
-### 折叠战略
+### 窄屏布局调整
 - **Nav**: wordmark scales from hero (Manuka 60–107px) to ~24–32px on mobile. Category links collapse to a hamburger drawer below 900px.
 - **网格**: 4- 科尔 - 3- 科尔 - 2- 科尔 - 1- 校对: 周深的特色卡 2 桌面上的列向移动的全宽单列重排。
 - **间距**: 节贴紧从 64px → 32px → 20px砖块内部垫板收紧 32px → 20px.
 - **Type**: Manuka hero scales from 107px to ~48–54px on mobile. PolySans headlines scale from 34px → 24px. Mono labels stay pinned at 11–12px (they don't shrink further or they become unreadable).
 - **颜色牌**: 强调色故事块在移动上永远不会失去饱和度——它们只是重回全宽.
 
-### 图像行为
+### 图片适配
 - 电源光栅 `srcset`,保留了侧面比。
 - No art-direction swaps — same crop scales across all viewports.
 - `loading="lazy"` 以一切事物为依归, `eager` 头盔首屏。
-- 颜色块牌内的图像 inherit 砖块的内半径( 3) :4px 或 减 减 20px 窝窝).
+- 颜色块牌内的图像 inherit 砖块的内半径( 3) :4px 或 20px 窝窝).
 
 
 ## 9. Agent Prompt Guide

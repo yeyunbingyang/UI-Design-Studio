@@ -28,20 +28,20 @@ Every page closes with a **deep-teal CTA band** (`{colors.surface-teal-deep}` �
 
 > **Source pages:** home (`/`), `/products/go-ai-assistant`, `/contact-sales`, `/plans`.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **初级Indigo海军** (`{colors.primary}` — `#1b1938`:品牌主表面和CTA颜色. 首屏页面底色,填充圆角-矩形按钮,特色定价等级.
 - **深渊** (`{colors.primary-deep}` — `#0e0c1f`:按级升降/更深的海军在首屏梯度停止时使用.
 - **表面紫色软** (`{colors.surface-violet-soft}` — `#c9b4fa`:首屏丸扣填充——苍白紫色涂在indigo页面底色上,同样出现在大气背景中.
 - **表面深层** (`{colors.surface-teal-deep}` — `#0e3030`:签名关闭-CTA乐队颜色,富绿色蓝色,几乎黑色.
 - **Surface Teal Mid** (`{colors.surface-teal-mid}` — `#155555`): Slightly lifted teal for nested chrome inside the band.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — `#ffffff`: 默认身体背景.
 - **软画帘** (`{colors.canvas-soft}` — `#fafaf8`: 旋转时短温不白 feature-row 乐队。
 - **细边线** (`{colors.hairline}` — `#e8e4dd`): 1px 边框,略微温暖的灰色。
 - **细边线暗** (`{colors.hairline-dark}` — `#3f3a52`): 1px 暗面的边框。
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — `#292827`:默认的体文字,温暖的深灰色,永远不纯黑色.
 - **墨水哑声** (`{colors.ink-mute}` — `#73706d`: 副文本,标题.
 - **Ink Faint** (`{colors.ink-faint}` — `#9a9794`): Tertiary / disabled text.
@@ -52,13 +52,13 @@ Every page closes with a **deep-teal CTA band** (`{colors.surface-teal-deep}` �
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 
 显示和UI级是 **Super Sans VF** ——专有可变色色色(可变轴表示字重,品牌使用子默认). 460 / 540 / 600 重。倒转链是系统字体堆栈。
 
 For substitution use **Inter Variable** (open-source) at weight 460 / 540 / 600 — Inter's variable axes match Super Sans VF's behavior closely. Avoid fixed-weight Inter at 400 / 500 / 600 — the brand specifically picks the in-between weights.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -80,7 +80,7 @@ For substitution use **Inter Variable** (open-source) at weight 460 / 540 / 600 
 - **紧紧显示领先.** 0.96 打开 48–64px 显示 —— 类型堆栈异常紧凑。
 - **显示大小的负跟踪 。** -1.32px 时 间 48px 按比例缩放——将可变字母格式收紧到编辑密度.
 
-### Note on Font Substitutes
+### 替代字体
 **Inter Variable** (open-source via Google Fonts) is the recommended substitute. Set `font-variation-settings: "wght" 540` for display, 460 for body — Inter's variable axes match. Avoid fixed-weight Inter; the in-between weights are the brand's signature.
 
 
@@ -92,16 +92,16 @@ For substitution use **Inter Variable** (open-source) at weight 460 / 540 / 600 
 - **分区编栏**: 64–96px ; 关闭带使用 96–128px 编辑字重。
 - **Card internal padding**: 32px on pricing cards; 24px on alternating feature rows.
 
-### 网格容器( C)
+### 网格与容器
 - 首屏横跨全景点宽度, 以紫外线- 天空背景边缘对接; 内容中心在一个 ~960px 栏中。
 - 机构内容中心 ~960–1100px.
 - Pricing collapses 3-up → 2-up → 1-up at 1024 / 768 breakpoints.
 
-### 白空间哲学
+### 留白规则
 The brand uses generous editorial whitespace on both polarities — dark hero and white body. Section gaps tend toward 96px; the teal closing band gets up to 128px of vertical air. The whitespace itself is part of the brand's "considered, slow-tempo" feel.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -116,7 +116,7 @@ The brand uses generous editorial whitespace on both polarities — dark hero an
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -127,7 +127,7 @@ The brand uses generous editorial whitespace on both polarities — dark hero an
 | `{rounded.xl}` | 16px | Modal dialogs, large feature cards |
 | `{rounded.full}` | 9999px | 功能列中的 Pill 标签, 首屏 CTA |
 
-### 摄影几何
+### 图片形状
 The hero uses **half-bleed portrait subjects** — a person photographed at twilight, looking off-frame, occupying the right half of the hero. The portrait extends edge-to-edge vertically and stops mid-canvas horizontally; type sits on the left side. Other photography is rare; product UI mockups handle most other illustrative needs.
 
 
@@ -148,7 +148,7 @@ The hero uses **half-bleed portrait subjects** — a person photographed at twil
 **`button-on-teal`** 关闭的电话带里有CTA
 - Background `{colors.canvas}`, text `{colors.surface-teal-deep}`, rounded-rectangle, same typography.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`card-feature-light`** ——特色卡白色.
 - Background `{colors.canvas}`, padding `{spacing.xxl}`, rounded `{rounded.lg}`, 1px `{colors.hairline}` border.
@@ -165,7 +165,7 @@ The hero uses **half-bleed portrait subjects** — a person photographed at twil
 **`card-feature-row`** — alternating feature-row card on the body.
 - Background `{colors.canvas-soft}`, text `{colors.ink}`, padding `{spacing.xl}` 24px, rounded `{rounded.md}` 8px. Used in pairs/triplets to explain features below the hero.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——标准表单输入.
 - Background `{colors.canvas}`, text `{colors.ink}`, type `{typography.body-md}`, padding `{spacing.sm}+ {spacing.md}` (10px 12px), rounded `{rounded.sm}` 6px, 1px `{colors.hairline}` border.
@@ -183,14 +183,14 @@ The hero uses **half-bleed portrait subjects** — a person photographed at twil
 **`pill-tab-light`** — feature-row 选项卡选择器。
 - Background `{colors.canvas}`, text `{colors.ink}`, type `{typography.button-cap}`, padding `{spacing.sm} {spacing.lg}`, rounded `{rounded.full}`. Used in the feature category picker (Mail / Channels / Code / AI / Calendar etc.) below the hero.
 
-### 签名组件
+### 标志性组件
 
 **半黑肖像首屏( 半黑肖像首屏)** ——有人在暮光照下,占据了印地哥首屏的右半部,背后是紫罗兰-天空大气背景,Type和CTA坐落在左侧,肖像是品牌反复出现的视觉标志.
 
 **Closing Teal Band** — every page closes with a `card-teal-band` containing a `{typography.display-lg}` closing headline and a single `button-on-teal`. The teal is the page's resolving chord.
 
 **`link-on-light`** 身体上连线
-- 文本 `{colors.ink}` 交付 `{typography.body-md}` 以坚固的划线盟誓,
+- 文字颜色 `{colors.ink}` 交付 `{typography.body-md}` 以坚固的划线盟誓,
 
 **`footer-light`** ——全站页脚.
 - Background `{colors.canvas}`, text `{colors.ink-mute}`, type `{typography.caption}`, padding `{spacing.huge} {spacing.xl}` (64px 24px). Holds 4 columns of link groups, social icons, and a small legal/copyright row.
@@ -198,7 +198,7 @@ The hero uses **half-bleed portrait subjects** — a person photographed at twil
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 给每个首屏配上紫罗兰天空的大气背景 和半血肖像题材
 - 子默认重下显示分级( R)460 / 540)——温是排字符号.
 - 使用圆角矩形 CTAs 时 8px 半径除了首屏之外(其中丸形是规则),其他任何地方都行.
@@ -206,7 +206,7 @@ The hero uses **half-bleed portrait subjects** — a person photographed at twil
 - Use warm dark grey `{colors.ink}` for body text — never pure black.
 - 紧紧应用 0.96 line-height 显示大小;编辑压缩是品牌。
 
-### Don't
+### 应避免的做法
 - 页面身体中不要使用丸形按钮;丸形只使用首屏.
 - Don't bump display weight above 540 unless using `body-strong` (700) for emphasized inline body.
 - Don't render body text in pure black — the warm grey `#292827` is part of the brand.
@@ -214,7 +214,7 @@ The hero uses **half-bleed portrait subjects** — a person photographed at twil
 - Don't introduce additional accent colors beyond indigo, violet-soft, teal, and the off-warm-greys.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -229,14 +229,14 @@ The hero uses **half-bleed portrait subjects** — a person photographed at twil
 - Buttons hit ≥ 44×44px on mobile via 12px vertical padding × 16px line-height. WCAG AAA.
 - 窗体字段停留在 44px 最低身高。
 
-### 折叠战略
+### 窄屏布局调整
 - 显示阶梯级 64 → 48 → 36 → 28 → 22px.
 - 半血肖像作物在移动上对头和肩进行;大气背景简化.
 - Pricing tiers stair-step 3-up → 2-up → 1-up.
 - 顶端导航崩溃到下面的汉堡 768px.
 - 关闭带减少垂直粘贴从 128 → 64px 手机上,我刚从电话里找到的
 
-### 图像行为
+### 图片适配
 首屏肖像画的使用 `srcset` 具有桌面/移动作物——桌面偏爱完全的半流成分;移动作物为头肩.
 
 

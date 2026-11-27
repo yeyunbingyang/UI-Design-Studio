@@ -33,7 +33,7 @@ Kraken's website is a clean, trustworthy crypto exchange that uses purple as its
 - **白色** (`#ffffff`: 初级表面
 - **边框灰色** (`#dedee5`: 分隔线
 
-### 语义
+### 语义色
 - **绿色** (`#149e61`: 成功/成绩 16% 徽章不透明
 - **绿色暗色** (`#026b3f`: 徽章文本
 
@@ -44,7 +44,7 @@ Kraken's website is a clean, trustworthy crypto exchange that uses purple as its
 - **显示**: `Kraken-Brand`,倒计时: `IBM Plex Sans, Helvetica, Arial`
 - **用户界面/ 机体**: `Kraken-Product`,倒计时: `Helvetica Neue, Helvetica, Arial`
 
-### 等级
+### 字号层级
 
 | 作用 | 字体 | 大小 | 字重 | 线条高度 | 字母间距 |
 |------|------|------|--------|-------------|----------------|
@@ -111,12 +111,12 @@ Kraken's website is a clean, trustworthy crypto exchange that uses purple as its
 
 ## 7。 。 。 。 。 。
 
-### 执行
+### 建议做法
 - 使用 Kraken 紫色( 紫色)#7132f5)用于CTAs和链接
 - 应用 12px 在所有按钮上半径
 - 使用 Kraken- 带过来 Kraken- 生产尸体
 
-### Don't
+### 应避免的做法
 - Don't use pill buttons — 12px is the max radius for buttons
 - 千万别在定号外用其他紫色
 

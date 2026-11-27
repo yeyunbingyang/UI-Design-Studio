@@ -27,7 +27,7 @@ DJI's site works like a brightly lit product showroom. The page is a white canva
 
 Source pages: dji.com home, the camera-drones category page, and a store product page.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **DJI 蓝色** (`{colors.primary}` — #0070d5:品牌现场动作颜色:Nav Store胶囊形,"买现在"胶囊形,主动型号选择器,"买哪里"胶囊形和"买哪里"胶囊形. announcement-bar 链接。
 - **存储蓝色** (`{colors.store-blue}` — #0060ef:商店的动作颜色: 购买, 添加到墨盒标签, 选中的选项环, 以及 DJI 护理标签和内置商店链接。
 - **存储蓝丁** (`{colors.store-blue-tint}` — #deeafd: 给Cart添加的苍白填充.
@@ -36,7 +36,7 @@ Source pages: dji.com home, the camera-drones category page, and a store product
 - **橙色水平** (`{colors.tier-orange}` — #be4e04:小眉纹,标出产品等级.
 - **徽章橙色** (`{colors.badge-orange}` — #fa8c16: 突出显示的商店选项上的角徽章.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}`:页背景,导航,卡片,购买栏.
 - **软画帘** (`{colors.canvas-soft}` — #f7f9fa: 特性链接带,存储面板,在Box牌片中,脚注面板和存储页脚.
 - **小组讨论会** (`{colors.panel}` — #f6f8f9:产品收益面板.
@@ -46,7 +46,7 @@ Source pages: dji.com home, the camera-drones category page, and a store product
 - **Footer** (`{colors.footer}` — #272727), with **Footer Pill** (`{colors.footer-pill}` — #383838) and **Footer Divider** (`{colors.footer-divider}` — #414141).
 - **Lines**: `{colors.hairline}` (#f0f0f0) tab track, `{colors.divider}` (#e8e8e8) FAQ and purchase-bar rules, `{colors.card-border}` (#d9d9d9) option cards, `{colors.dashed-border}` (#dddddd) unavailable option, `{colors.input-border}` (#d4d7d9) store email field, `{colors.control-border}` (#cccccc) steppers and checkboxes.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — #262626:标题和身体在白色上.
 - **墨水中学** (`{colors.ink-secondary}` — #595959: 二级副本,不活动标签.
 - **墨水第三层** (`{colors.ink-tertiary}` — #8c8c8c): product-tile 眉间.
@@ -57,16 +57,16 @@ Source pages: dji.com home, the camera-drones category page, and a store product
 - **钢** (`{colors.steel}` — #9fa3a6: 比较表中的 spec 标题。
 - **Footer Link** (`{colors.footer-link}` — #b3b3b3): links on the charcoal footer.
 
-### 语义
+### 语义色
 - **错误** (`{colors.error}` — #f5222d):"Out of Stock"在无法使用的商店选项上.
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 **Open Sans** 分级来自大小和狭小的字重范围(400 用于身体、链接和按钮; 500 特征标题; 600 标题和存储标题)。 Letter-spacing 持续为负数: −0.02em 体型和体型 −0.03em ,在标题大小上,它使类型具有紧凑的技术感觉。照片牌上较大的产品名称作为标志型的艺术品出现,而不是类型尺度的一部分。
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -97,7 +97,7 @@ Source pages: dji.com home, the camera-drones category page, and a store product
 - Weight is used sparingly: headings at 600, everything functional at 400, so blue pills and photography carry the emphasis.
 - Spec values use the display size at regular weight, letting numbers like "1063 g" read as large, calm data rather than shouting headlines.
 
-### Note on Font Substitutes
+### 替代字体
 Open Sans is open source on Google Fonts. Keep the negative tracking (−0.02em to −0.03em); without it the type looks noticeably looser than the brand.
 
 
@@ -108,15 +108,15 @@ Open Sans is open source on Google Fonts. Keep the negative tracking (−0.02em 
 - **托肯斯(前题)**: `{spacing.xxs}` 4px · `{spacing.xs}` 8px · `{spacing.sm}` 12px · `{spacing.md}` 16px · `{spacing.lg}` 20px · `{spacing.xl}` 24px · `{spacing.xxl}` 32px · `{spacing.xxxl}` 40px · `{spacing.huge}` 48px · `{spacing.section}` 64px.
 - Product tiles are separated by `{spacing.md}` white gutters; option cards pad `{spacing.xl}`; the feature-link band pads `{spacing.section}` vertically; the footer pads `{spacing.xxl}` by `{spacing.md}`.
 
-### 网格容器( C)
+### 网格与容器
 - 家牌和类牌均全宽减去一个小的外沟,在首屏下面两高;编辑和场牌则跑两高三高.
 - 比较表为四栏;探索和辅助卡为一栏内双升 1200px 容器。
 - 商店产品页分成一个左侧的大图片廊和一个 500px 右侧的购买栏。
 
-### 白空间哲学
+### 留白规则
 Photography fills the tiles; whitespace appears as consistent gutters and generous gaps above centred section headings. Inside the store, whitespace groups options into cards and panels rather than separating long sections.
 
-### 反应战略
+### 响应式布局
 
 #### 断点
 | 名称 | 宽度 | 密钥更改 |
@@ -130,16 +130,16 @@ Photography fills the tiles; whitespace appears as consistent gutters and genero
 #### 触控区域
 Store CTAs (`button-store-buy`, `button-store-cart`) and `button-outline-lg` are 48px tall; `button-primary` and `button-outline` are 40px; nav pills are 32px and rely on generous horizontal padding. FAQ rows are about 49px tall.
 
-#### 折叠战略
+#### 窄屏布局调整
 - 导航崩溃到菜单; Store 胶囊形保持可见.
 - 双升产品瓦片和场卡堆叠为一列;比较表变为水平可滚动列.
 - 商店展廊堆放在购买栏上方; sticky `purchase-bar` 保持价格和CTA都能达到。
 
-#### 图像行为
+#### 图片适配
 首屏图像是全血木马,左下方有幻灯片标题;瓷砖制作是以软灰色为中心的工作室剪辑;编辑卡使用裁剪的景观摄影。图像将懒散地装入砖块卷轴中。
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -156,7 +156,7 @@ Store CTAs (`button-store-buy`, `button-store-cart`) and `button-outline-lg` are
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -170,7 +170,7 @@ Store CTAs (`button-store-buy`, `button-store-cart`) and `button-outline-lg` are
 
 Floating support and back-to-top buttons are perfect circles. The orange option badge rounds only its bottom-left corner (8px), and email fields round only their left corners (4px) where they meet a square submit button.
 
-### 摄影几何
+### 图片形状
 Product tiles are square-cornered and close to 1:1 on the home page; category cards are similar large squares on a grey backdrop. Field and editorial cards use landscape crops. Store galleries use a large landscape frame with thumbnail strips; In the Box tiles are square.
 
 
@@ -233,7 +233,7 @@ Product tiles are square-cornered and close to 1:1 on the home page; category ca
 **`text-link`**, **`text-link-store`**, **`card-text-link`** ——内置链接
 - `{colors.primary}` on the brand site, `{colors.store-blue}` in the store, and `{colors.link-blue}` "Learn More ›" on product and explore cards; all followed by a small chevron.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`product-tile`** 家庭及类别照片瓦
 - `{colors.fog}`- 录音室的制作 `{rounded.none}`,由 `{spacing.md}` 白色的沟槽, 以中心为中心 `tile-eyebrow`,标志型产品名称,短标签线和两个文本链接或胶囊形坐落在渲染物之上。
@@ -303,12 +303,12 @@ Product tiles are square-cornered and close to 1:1 on the home page; category ca
 **`faq-row`** ——FAQ问题行.
 - 问题 `{typography.faq}` `{colors.ink}`切夫龙右转 1px `{colors.divider}` 规则在下面。
 
-### 输入表单( F)
+### 输入框与表单
 
 **`newsletter-input`** – 深页脚上的页脚电子邮件字段
 - Transparent, white `{typography.ui}` text, 1px `{colors.slate}` border rounded only on the left (4px), padding 4px 0 4px `{spacing.sm}`, 32px tall, joined to a square grey submit button.
 
-### 签名组件
+### 标志性组件
 
 **`floating-circle-button`** ——浮动支持和后向上按钮
 - 40px 圆圈 `{colors.canvas}` 以墨水图标和软浮影,固定在右边缘.
@@ -321,45 +321,45 @@ Product tiles are square-cornered and close to 1:1 on the home page; category ca
 **`footer-store`** ——仓库页脚
 - Background `{colors.canvas-soft}`, headings in `{colors.graphite}`, links in `{colors.slate}` `{typography.caption}`, a subscribe field outlined in `{colors.input-border}` and a legal row.
 
-### 实例(说明性)
+### 组合示例
 
 > 说明性演示表面。 `ex-*` 条目仅由上面的品牌原始人组成(商店) `option-card` 形状, `button-primary` / `button-store-buy` 胶囊形, `canvas` / `canvas-soft` 表面和地表 Open Sans ,所以,同一个十例 不断的出现皮肤 DJI颜色,光度和间隔。
 
-**`ex-pricing-tier`** ——默认定价等级卡。 feature-card 带品牌的铬 canvas-soft 表面。
+**`ex-pricing-tier`**：默认套餐卡，沿用功能卡结构和品牌 canvas-soft 底色。
 - 属性 : `backgroundColor`, `textColor`, `borderColor`, `rounded`, `padding`
 
-**`ex-pricing-tier-featured`** ——地貌/高亮的层次——极性-浮点表面(暗色填充+光线文字在光线模式下,浅色填充+暗色文字在暗线模式下).
+**`ex-pricing-tier-featured`**：推荐套餐卡。浅色模式中用深底浅字，深色模式中用浅底深字。
 - 属性 : `backgroundColor`, `textColor`, `rounded`, `padding`
 
 **`ex-product-selector`** ——彩色/大小采摘者染色体——时尚/DTC变种选择器.
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-cart-drawer`** ——购物车抽屉 DTC/时尚品牌 实际车型为铬.
+**`ex-cart-drawer`** ——购物车抽屉 DTC/时尚品牌 实际车型为界面框架.
 - 属性 : `backgroundColor`, `rounded`, `padding`, `item-divider`
 
-**`ex-app-shell-row`** ——App Shell 实例中的侧边栏导航行. Active State 使用品牌主标.
+**`ex-app-shell-row`**：应用框架示例里的侧栏导航行，以品牌主色标识选中状态。
 - 属性 : `backgroundColor`, `activeIndicator`, `rounded`, `padding`
 
-**`ex-data-table-cell`** — Default data-table th + td chrome. Header uses mono-caps eyebrow typography; body uses body-sm.
+**`ex-data-table-cell`**：数据表格中 th 与 td 的默认样式。表头采用大写等宽字，正文采用 body-sm。
 - 属性 : `headerBackground`, `headerTypography`, `bodyTypography`, `cellPadding`, `rowBorder`
 
-**`ex-auth-form-card`** ——签入/签入卡. 复用. feature-card 铬 text-input 原始人在里面,他们都在里面
+**`ex-auth-form-card`**：登录与注册卡，复用功能卡和 text-input。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-modal-card`** ——模度对话框表面——与 feature-card 以高的阴影盟誓,
+**`ex-modal-card`**：对话框表面，沿用功能卡样式并加浮层投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-empty-state-card`** ——空状态插图框架.
+**`ex-empty-state-card`**：空状态插图容器。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `captionTypography`
 
-**`ex-toast`** ——通知表面. feature-card 形状 + 中阴影。
+**`ex-toast`**：轻提示，沿用功能卡圆角并使用中等投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `typography`
 
 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - Let product photography fill square, gutter-separated tiles; keep text centred above the render.
 - Use `{colors.primary}` (brand site) or `{colors.store-blue}` (store) for every primary action, always as a pill.
 - 给一个装满的蓝色胶囊形加一个 1px `{colors.ink}` 二级手术的避孕药
@@ -369,7 +369,7 @@ Product tiles are square-cornered and close to 1:1 on the home page; category ca
 - In the store, group choices into `{rounded.sm}` option cards and show selection with a 2px `{colors.store-blue}` ring.
 - Close pages with the `{colors.footer}` footer on the brand site and `{colors.canvas-soft}` in the store.
 
-### Don't
+### 应避免的做法
 - Don't round photo tiles, cards or media tiles; only pills, option cards and small tags are rounded.
 - Don't use more than one blue on the same surface; the brand site and the store each have their own.
 - 切勿用橙色来扣扣或大填充;它保留给小排位标签和选项徽章.

@@ -6,7 +6,7 @@
 
 ## 概览
 
-PostHog其营销系统建立在品牌核心的视觉矛盾之上:一个严肃的开源产品分析平台,提供时仿佛是友好的工程素描本. 铬在暖奶油页面底色上运行(英语:`{colors.canvas}` — `#eeefe9`)——不是白的——每一页都用手画的刺绣吉祥物在实验室的外套,休息室椅,终端,和阅读眼镜中都用点缀,像教科书中的边际分布一样,散落在布局上. Types sit in the explants. IBM Plex Sans Variable 橄榄树(在橄榄树上),`{colors.body}` — `#4d4f46`用于身体和深橄榄焦(含:`{colors.ink}` — `#23251d`头条新闻, 权重紧紧地拉在 400, 600, 700,以及 800 生成无色的层次。单饱和黄橙丸(`{colors.primary}` — `#f7a501`)是该品牌唯一响亮的色调瞬间;其他一切都是奶油,橄榄,白卡,偶尔的糕点呼号乐队.
+PostHog其营销系统建立在品牌核心的视觉矛盾之上:一个严肃的开源产品分析平台,提供时仿佛是友好的工程素描本. 界面框架在暖奶油页面底色上运行(英语:`{colors.canvas}` — `#eeefe9`)——不是白的——每一页都用手画的刺绣吉祥物在实验室的外套,休息室椅,终端,和阅读眼镜中都用点缀,像教科书中的边际分布一样,散落在布局上. Types sit in the explants. IBM Plex Sans Variable 橄榄树(在橄榄树上),`{colors.body}` — `#4d4f46`用于身体和深橄榄焦(含:`{colors.ink}` — `#23251d`头条新闻, 权重紧紧地拉在 400, 600, 700,以及 800 生成无色的层次。单饱和黄橙丸(`{colors.primary}` — `#f7a501`)是该品牌唯一响亮的色调瞬间;其他一切都是奶油,橄榄,白卡,偶尔的糕点呼号乐队.
 
 The system has a distinctive **two-mode body layout**: marketing pages (home, workflows, pricing) lean on alternating-pastel callout bands and feature tiles in white cards on cream, while documentation pages add a sticky 240px left sidebar with a rounded outline-icon section list. Code samples are full-width dark blocks on `{colors.surface-dark}` (the same olive-charcoal that carries body ink, used inverted) inside white doc cards, creating the system's most distinctive visual moment: a dark-on-dark code island floating inside a white card on a cream canvas, with a hedgehog mascot doodled in the margin.
 
@@ -26,12 +26,12 @@ Sections stack at `{spacing.section}` (80px) rhythm with cream canvas continuing
 
 > **Source pages:** `/` (home), `/pricing` (pricing detail), `/docs/product-analytics` (docs article), `/workflows` (product feature page). The chrome palette is identical across all four pages — only doc-specific accents (callout-banner pastels, code-block dark surface) appear exclusively inside the docs experience.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **PostHog 黄色** (`{colors.primary}` — `#f7a501`: 通用初级CTA. Sticky 每一个导航的右上角 都有免费的胶囊形 首屏CTA pricing-tier 订阅按钮,页脚注册胶囊形,系统只有饱和色调瞬间.
 - **黄色按下** (`{colors.primary-pressed}` — `#dd9001`:按胶囊形主服.
 - **黄色活动** (`{colors.primary-active}` — `#b17816`:深压黄色+系统金强调色的边音(rare) : 1px 内在形式元素上的金规则).
 
-### 表面
+### 界面表面
 - **Canvas** (`{colors.canvas}` — `#eeefe9`): the warm cream page background. End-to-end on every page; the brand's most distinctive surface choice.
 - **软表面** (`{colors.surface-soft}` — `#e5e7e0`): button-secondary 满, sub-nav 脱衣舞背景, inline-code 芯片背景 。
 - **表面卡片** (`{colors.surface-card}` — `#ffffff`:真白牌和瓦片背景坐落在奶油页面底色上方,主牌表面.
@@ -41,7 +41,7 @@ Sections stack at `{spacing.section}` (80px) rhythm with cream canvas continuing
 - **柔软的细边线** (`{colors.hairline-soft}` — `#dcdfd2`:卡式排位分隔器,软套规则.
 - **On Dark** (`{colors.on-dark}` — `#ffffff`): primary text on `{colors.surface-dark}` code blocks.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — `#23251d`:头条,灯光上的按钮文字,主导航链接——深橄榄-焦炭,读取近黑抗奶油.
 - **Body** (`{colors.body}` — `#4d4f46`): default paragraph text, doc article body, inline link color before hover. The brand's most-used text color.
 - **木炭矿** (`{colors.charcoal}` — `#33342d`: 身体太软的地方,强调体文.
@@ -49,7 +49,7 @@ Sections stack at `{spacing.section}` (80px) rhythm with cream canvas continuing
 - **灰尘** (`{colors.ash}` — `#9b9c92`: 禁用状态文本和最小强调的效用。
 - **石头** (`{colors.stone}` — `#b6b7af`: 最小强调标题文本和禁用的图标颜色。
 
-### 语义
+### 语义色
 - **链接蓝色** (`{colors.link-blue}` — `#1d4ed8`:内置主播链路在体介词内,系统主信息链路颜色.
 - **链接Teal** (`{colors.link-teal}` — `#1078a3`: doc-article inline 链接变体,与体文本对齐.
 - **蓝天** (`{colors.accent-blue}` — `#2c84e0`) + **蓝调柔软** (`{colors.accent-blue-soft}` — `#dceaf6`:"QQ Tip / Info"在Docs内部的点名标语.
@@ -61,14 +61,14 @@ Sections stack at `{spacing.section}` (80px) rhythm with cream canvas continuing
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 **IBM Plex Sans Variable** 系统的主要面孔——在每页的每个文字角色中按重量使用 400 (经常), 500 (中 间) 600 (半保龄球), 700 (bold),以及 800 (外锋) 倒下通过 `IBM Plex Sans` → `-apple-system` → `system-ui` 宽跨平台的桑斯堆栈。
 
 **ui-monospace** + **Source Code Pro** 携带代码样本, inline-code 芯片在 14px / 1.43 line-height. Source Code Pro 显示 monospace; ui-monospace 内置控件 `<code>` 筹码.
 
-品牌的区别选择是 **混合字重梯级** (400 / 500 / 600 / 700 / 800)——大多数铬生活在 400–700 带重的波段 800 仅限在家庭和定价上显示更大的头条。这让系统有了“工程博客”的感觉:等级结构的构建与字重对比远大于大小。
+品牌的区别选择是 **混合字重梯级** (400 / 500 / 600 / 700 / 800)——大多数界面框架生活在 400–700 带重的波段 800 仅限在家庭和定价上显示更大的头条。这让系统有了“工程博客”的感觉:等级结构的构建与字重对比远大于大小。
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -94,9 +94,9 @@ Sections stack at `{spacing.section}` (80px) rhythm with cream canvas continuing
 | `{typography.code-xs}` | 14px | 500 | 1.43 | 0 | 内置代码芯片 |
 
 ### 原则
-等级结构是从字重+大小+偶发的大写变换中明确构建的——没有斜体样式,没有装饰性显示变体,没有专有面孔. 最大的显示瞬间使用字重 800 与 -0.6px 追踪,尸体就安顿在 400 与 1.5 line-height;其他所有东西都填满了间距。`{typography.heading-sm}` 财务报告和已审计财务报表 `{typography.utility-xs}`) 不断使大写,这让医生有其教科书章节的感觉。
+等级结构是从字重+大小+偶发的大写变换中明确构建的——没有斜体样式,没有装饰性显示变体,没有专有面孔. 最大的显示瞬间使用字重 800 配合 -0.6px 追踪,尸体就安顿在 400 配合 1.5 line-height;其他所有东西都填满了间距。`{typography.heading-sm}` 和 `{typography.utility-xs}`) 不断使大写,这让医生有其教科书章节的感觉。
 
-### Note on Font Substitutes
+### 替代字体
 IBM Plex Sans Variable 由开源和Google-Fonts托管。不需要替代设备,直接装入。如果真的需要替代设备, **Inter** 在所有五个重量上是最接近的几何匹配; 配对 Inter's letter-spacing -0.5 改为: -0.6px 显示大小以大致显示 Plex 的显示跟踪。 monospace, **JetBrains Mono** 是一个近乎完美的替代品,用于 Source Code Pro 身体大小, 和身体大小一样。
 
 
@@ -107,18 +107,18 @@ IBM Plex Sans Variable 由开源和Google-Fonts托管。不需要替代设备,�
 - **托肯斯(前题):** `{spacing.xxs}` (2px) · `{spacing.xs}` (4px) · `{spacing.sm}` (8px) · `{spacing.md}` (12px) · `{spacing.lg}` (16px) · `{spacing.xl}` (24px) · `{spacing.xxl}` (32px) · `{spacing.section}` (80px).
 - **Universal section rhythm:** every page in the set uses `{spacing.section}` (80px) as the vertical gap between major content blocks. Card grids use `{spacing.lg}` (16px) gutters; card internal padding sits at `{spacing.xl}` (24px) for product cards and `{spacing.xxl}` (32px) for pricing tier cards.
 
-### 网格容器( C)
+### 网格与容器
 - **最大 width:** ~1280px content area at desktop with 24px gutters (~48px at ultrawide). Doc article body sits at ~720px max width with the 240px sidebar pushing the article column right of center.
 - **营销卡 grid:** 4-up at desktop, 3-up at 1024px, 2-up at 768px, 1-up at 480px. Cards preserve a fixed 1:1 or 4:3 ratio.
 - **定价等级 grid:** 3-up at desktop with a left rail of plan info, collapsing to 2-up + 1 at tablet and 1-up at mobile.
-- **Doc 版式 :** 桌面 240px sticky 左侧边栏+ ~720px 条款正文+(可选) 200px 右TOC 铁路= ~1160px 内容宽度。
+- **Doc 版式 :** 桌面 240px sticky 左侧边栏+ ~720px 条款正文+(可选) 200px 右TOC 侧栏= ~1160px 内容宽度。
 - **Footer:** 6-column horizontal link grid at desktop, 3-up at tablet, 2-up at mobile.
 
-### 白空间哲学
+### 留白规则
 白空间对营销页面很慷慨,对Doc页面很紧。主页和工作流程页面的叠加功能瓦片 `{spacing.lg}` (16px(沟渠和) 24px 内部粘贴,而医生的内饰则将内部间隔收紧到 `{spacing.md}` (12px) ,在段落之间实现信息密度最大化。 1px 区间眉毛下的细边线和页脚栏规定单独的内容块.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -127,7 +127,7 @@ IBM Plex Sans Variable 由开源和Google-Fonts托管。不需要替代设备,�
 | 2 - 柔软的细边线 | 1px 固态 `{colors.hairline-soft}` | 相邻行之间的卡片行分隔符 |
 | 3 ——倒转暗码块 | `{colors.surface-dark}` 填充( E) | 医生卡内部的代码样本——系统唯一的"外延"表面使用颜色,而不是阴影. |
 
-该系统在营销或产品铬方面没有滴影高。卡片平坐于奶油上,橄榄边框薄。单反转瞬间是黑暗。 code-block 医生文章体卡内使用的表面。
+该系统在营销或产品界面框架方面没有滴影高。卡片平坐于奶油上,橄榄边框薄。单反转瞬间是黑暗。 code-block 医生文章体卡内使用的表面。
 
 ### 装饰性深度
 深度完全来自插图和pastel callout频段系统,而不是来自CSS效果:
@@ -139,7 +139,7 @@ IBM Plex Sans Variable 由开源和Google-Fonts托管。不需要替代设备,�
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -152,7 +152,7 @@ IBM Plex Sans Variable 由开源和Google-Fonts托管。不需要替代设备,�
 
 围绕半径词汇群 4–6px 几乎每件事物都一样,只有圆形的元素是避孕药 sticky 导航CTA和内线胶囊形
 
-### 摄影几何
+### 图片形状
 There is no photography. Visual elements are limited to:
 - **黑奇霍格字符插图** 平面彩色的刺绣 ~80px (卡式吉祥物)改为 ~240px 总是在原生方面, 从未被剪切到一个框架 。
 - **Outline product icons** in the doc sidebar — 20–24px rounded-square illustrations.
@@ -199,7 +199,7 @@ There is no photography. Visual elements are limited to:
 - Background `{colors.accent-blue-soft}`, text `{colors.link-blue}`, type `{typography.caption-xs}`, padding `2px 8px`, rounded `{rounded.full}`.
 - "新","贝塔","快来了"的胶囊形标签上贴满了牌子.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** + **`text-input-focused`**
 - Default: background `{colors.surface-card}`, text `{colors.ink}`, 1px solid `{colors.hairline}`, type `{typography.body-md}`, padding `8px 12px`, height `36px`, rounded `{rounded.md}`.
@@ -208,7 +208,7 @@ There is no photography. Visual elements are limited to:
 **`search-input`** — utility search field (doc sidebar, "Ask PostHog AI")
 - 与 `text-input` 左边缘有放大镜 `{colors.mute}`.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`product-card`** ——销售牌/特色卡
 - 集装箱:背景 `{colors.surface-card}` (白话), 1px 固态 `{colors.hairline}`, 编译 `{spacing.xl}` (24px),四舍五入 `{rounded.md}`.
@@ -278,17 +278,17 @@ There is no photography. Visual elements are limited to:
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 使用 `{colors.canvas}` (尖叫声) `#eeefe9`)作为页体。绝不用纯白色代替页面底色。
 - 准备金 `{colors.primary}` (黄橙)只用于初级CTA胶囊形,"开始——免费"治疗是品牌的主播.
 - 将品牌字签与刺绣插图并列,而不是作为独立的字签。刺绣是品牌身份。
 - Use IBM Plex Sans Variable across every text role — body 400, emphasis 600/700, display 800.
 - Stack content sections at `{spacing.section}` (80px) rhythm with no decorative dividers between them; let the cream canvas continue uninterrupted.
-- 使用 `{component.banner-tip-blue}` / `-green` / `-red` / `-purple` 仅用于提示/警告/注板的医生文章体内——保持销售四色呼喊家族中的铬.
+- 使用 `{component.banner-tip-blue}` / `-green` / `-red` / `-purple` 仅用于提示/警告/注板的医生文章体内——保持销售四色呼喊家族中的界面框架.
 - Pair every code sample with the dark `{component.code-block}` surface; inline `<code>` chips use `{component.inline-code}` (cream surface-soft chip).
 - 家庭版面和工作流程页的特色瓦片边框中安插了刺绣吉祥物插图——系统的签名装饰.
 
-### Don't
+### 应避免的做法
 - Don't introduce drop shadows on cards. Cards sit flat on cream with thin olive borders only.
 - Don't add a second saturated chromatic CTA. Yellow-orange is the only loud color in the system.
 - Don't replace the cream canvas with pure white or full-bleed dark hero bands. The cream is the brand.
@@ -298,7 +298,7 @@ There is no photography. Visual elements are limited to:
 - Don't pad cards with 32px+ on all sides except for `{component.pricing-tier-card}`. Standard cards sit at 24px internal padding.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -315,7 +315,7 @@ There is no photography. Visual elements are limited to:
 ### 触控区域
 All interactive elements meet WCAG AA (≥ 40×40px). `{component.button-primary}` and `{component.button-secondary}` sit at 40px height with 16px padding. `{component.text-input}` sits at 36px (just under AAA but above AA at this size). `{component.pill-tab}` is ~32–36px height with 14px padding extending to ~44px tappable via inline padding. Doc-sidebar items use 14px text with ~32px line-height + 6px vertical padding for ~44px tap rows.
 
-### 折叠战略
+### 窄屏布局调整
 - **初等导航 :** 桌面水平组 – 平板汉堡抽屉 768px. 黄色的"开始——免费"CTA在每一个断点都保持可见.
 - **Sub-nav 条形:** 桌面水平锚行 →平板电脑水平卷轴 → 移动选择下拉。
 - **营销卡 grid:** 4-up → 3-up → 2-up → 1-up at 1024, 768, and 480px; 沟槽从 16px 改为: 12px 手机上,我刚从电话里找到的
@@ -325,7 +325,7 @@ All interactive elements meet WCAG AA (≥ 40×40px). `{component.button-primary
 - **科 科 padding:** `{spacing.section}` (80px(台式计算机) – 64px 平板电脑 48px 移动。
 - **Hero headline:** `{typography.display-xl}` (36px) at desktop, scaling to ~28px at mobile, line-height holding at 1.5.
 
-### 图像行为
+### 图片适配
 The only "imagery" in the system is hand-drawn hedgehog illustrations rendered as inline SVG. They preserve their natural aspect at every breakpoint and scale via CSS `width: auto; max-width: 100%`. There is no responsive art-direction needed because there is no photography.
 
 
@@ -344,8 +344,8 @@ The only "imagery" in the system is hand-drawn hedgehog illustrations rendered a
 
 - **Mobile screenshots not captured** — responsive behavior synthesizes PostHog's mobile pattern (hamburger drawer, single-column grid, doc sidebar accordion) from desktop evidence and the breakpoint stack.
 - **Hover states not documented** by system policy.
-- **产品中的应用铬** (PostHog 仪表板,图表,会话重播播放器)没有在捕获的集中——此营销网站在此有文献记载,而不是产品内分析界面.
-- **认证的铬** (记录模式、帐号仪表板、帐单设置)没有在捕获的页面中。
+- **产品中的应用界面框架** (PostHog 仪表板,图表,会话重播播放器)没有在捕获的集中——此营销网站在此有文献记载,而不是产品内分析界面.
+- **认证的界面框架** (记录模式、帐号仪表板、帐单设置)没有在捕获的页面中。
 - **表格验证状态** 超过捕获表面中不存在的焦态输入。
 - **营销插图集** ——此处不列举刺绣虎特征姿势的完整库;具体姿势(手帕大衣刺绣虎,终端刺绣虎,吊床刺绣虎)在截图中可见,但完整的资产库是针对页面的.
 

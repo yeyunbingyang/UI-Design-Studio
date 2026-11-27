@@ -26,12 +26,12 @@ This is a system built on contrast: the monochrome chrome makes the color blocks
 
 > Source pages: figma.com (home), /design/, /figjam/brainstorming-tool/, /pricing/, /contact/.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **黑色** ({colors.primary}:系统主线,每条主线CTA,每条头条,每条身体线,马奎条,暗段的反面页面底色.
 - **白色** ({colors.on-primary}:黑色表面反文本;还有作为次级胶囊形按钮前缘的页面底色颜色(`{components.button-secondary}`).
 - **红衣倡议** ({colors.accent-magenta}: 单饱和的CTA粉红色预留用于宣传内线按钮——例如出现在丁香"拯救你的位点"的"释放笔记"横幅上,很少使用;它不是一节颜色.
 
-### 表面
+### 界面表面
 - **页面底色** ({colors.canvas}:默认页面背景和每张白卡的正文.
 - **反向画廊** ({colors.inverse-canvas}:页脚,马奎条,以及"船产品"风格的故事部分的子集.
 - **表面软** ({colors.surface-soft}: 用于图标按钮,模板卡片,以及坐在白页面底色上时的特征插图牌的off-white 砖块背景.
@@ -45,26 +45,26 @@ This is a system built on contrast: the monochrome chrome makes the color blocks
 - **块珊瑚** ({colors.block-coral}:"船产品"珊瑚故事封面 家.
 - **海军** ({colors.block-navy}:深Indigo故事块——只在脚上方出现暗色表面.
 
-### 文本
+### 文字颜色
 - **Ink** ({colors.ink}): All headline, body, and caption type on light surfaces. There is no softer mid-gray text role on marketing — body copy is always black at weight 320–340, and weight (not opacity) carries the hierarchy.
 - **反向墨水** ({colors.inverse-ink}: 打开 inverse-canvas 表面(脚步、马奎条、海军颜色块)。
 - **反向软** ({colors.on-inverse-soft}: 白色, 使用时间为 ~16% 透明度 circular 图标按钮表面对暗段(按键捕获底色;在渲染时应用透明)。
 
-### 语义
+### 语义色
 - **成功绿色** ({colors.semantic-success}): Comparison-table 价格上的检查标记。 用作格言填充, 而不是表面 。
 - **重叠 Scrim** ({colors.overlay-scrim}: 黑色, 使用于 ~60% 模式/视频覆盖表面后面的不透明(按键捕获底物;在渲染时应用不透明).
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 
 - **figmaSans** — Figma专有变量类型面; 倒叠 `figmaSans Fallback, SF Pro Display, system-ui, helvetica`. 变式权重轴在异常细小的增量下进行(320, 330, 340, 450, 480, 540, 700)——设计系统读作单一语音调制而非步重家族.
 - **figmaMono** ——专有 monospace; 倒计时 `figmaMono Fallback, SF Mono, menlo`。只用于眉毛标签和标题,总是大写为正 letter-spacing.
 
 打开类型 `kern` 每一个角色都启用。
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -88,7 +88,7 @@ This is a system built on contrast: the monochrome chrome makes the color blocks
 - **Mono is taxonomy, not body.** figmaMono is reserved for eyebrows and captions — never used to set a paragraph.
 - **紧线高架展示,宽度高体.** 显示运行的大小 1.00–1.10; 运行 1.40–1.45。对比表明,头条是图形,体型是供阅读的。
 
-### Note on Font Substitutes
+### 替代字体
 
 If implementing without access to figmaSans / figmaMono, suitable open-source substitutes are **Inter** (or **Geist**) for the sans, and **JetBrains Mono** (or **Geist Mono**) for the mono. Inter at variable weights closely matches the fine-grained weight axis figmaSans uses; expect to manually adjust line-heights down by ~0.02 to compensate for Inter's slightly taller x-height.
 
@@ -105,18 +105,18 @@ If implementing without access to figmaSans / figmaMono, suitable open-source su
 - 按钮 padding: `{spacing.xs}` 8px 垂直 ・ `{spacing.lg}` 24px 水平的胶囊形按钮(不对称) `8px 18px 10px` 提取于 `button-secondary` 将这种类型的胶囊形光学地压在胶囊形里。
 - 通用节奏常数 : `{spacing.section}` (96px——主要内容部分之间纵向差距贯穿全家,定价,以及FigJam页面.
 
-### 网格容器( C)
+### 网格与容器
 
 - 最大内容宽度左右 1280px (一个明显的断点),有侧沟,其规模来自 `{spacing.xxl}` 桌面上下至 `{spacing.lg}` 手机上,我刚从电话里找到的
 - 桌面定价比较和FigJam模板画廊上的三列和四列网格.
 - 颜色块块断柱网格——它们横跨内容宽度,四舍五入内满血 `{rounded.lg}` 角,然后在内部放置一个标题+体的单一编辑栏.
 
-### 白空间哲学
+### 留白规则
 
 White space is used to make the color blocks feel deliberate. Between every colored panel and the next, the page returns to white canvas with `{spacing.section}` of breathing room. Inside a color block, the type itself is given generous side margins (often more than 1/4 of the block's width on each side) so the panel reads as a poster, not a wall of copy.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -136,7 +136,7 @@ Figma营销系统通过设计是影子灯光——颜色块代替了传统的高
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -185,13 +185,13 @@ Figma营销系统通过设计是影子灯光——颜色块代替了传统的高
 - Default: `{colors.canvas}` background, `{colors.ink}` text, rounded `{rounded.pill}`.
 - Selected: `{colors.primary}` background, `{colors.on-primary}` text — exactly the same surface as `button-primary`, which makes the selected tab feel like an active CTA, not a passive state.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** + **`text-input-focused`** - 表格字段在 `/contact/` 并定价座席计数梯。
 - Background `{colors.canvas}`, text `{colors.ink}`, type `{typography.body}`, rounded `{rounded.md}`, padding 12px 14px.
 - 焦态保留了相同的表面——焦态通过环来传递,而不是通过填充变化来传递.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`pricing-card`** - 每一级 `/pricing/`.
 - Background `{colors.canvas}`, text `{colors.ink}`, type `{typography.body}`, rounded `{rounded.lg}`, padding `{spacing.lg}`. Stroked with `{colors.hairline}` rather than shadowed.
@@ -247,7 +247,7 @@ Figma营销系统通过设计是影子灯光——颜色块代替了传统的高
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 
 - Reserve `{colors.primary}` for genuine primary CTAs and selected states (e.g., `pricing-tab-selected`). Don't use it as a decorative accent.
 - 介绍故事部分时,请选择 **单曲** 颜色块从 `{colors.block-*}` 并让其覆盖全内容宽度 `{rounded.lg}` 转角和 `{spacing.xxl}` 内部铺设.
@@ -257,7 +257,7 @@ Figma营销系统通过设计是影子灯光——颜色块代替了传统的高
 - Allow the page to **return to white canvas** between every two color blocks so each block reads as deliberate.
 - Pair `button-primary` and `button-secondary` whenever a section needs both a primary action and a sales / secondary action — the black-and-white pair is the brand signature.
 
-### Don't
+### 应避免的做法
 
 - Don't introduce mid-gray text. Body hierarchy comes from `figmaSans` weight, not from opacity.
 - Don't add drop shadows to color-block sections — the color is the depth device.
@@ -268,7 +268,7 @@ Figma营销系统通过设计是影子灯光——颜色块代替了传统的高
 - Don't replace the `pricing-tab-selected` black fill with a colored tab; the brand pattern is "selected = primary surface".
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -289,14 +289,14 @@ Figma营销系统通过设计是影子灯光——颜色块代替了传统的高
 - Circular 图标按钮(`button-icon-circular`)是(或)是(或)是(或)是(或)是(或)是(或)是(或)是(或)是(或)是(或)是(或)是(或)是(或)是(或)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是)是(或是(或是)是(或是)是)是(或是)是(或是)是(或是(或是)是(或是)是(或是( 40px 并成长为 44px 触摸视点
 - 格式输入最小水龙头目标 `/contact/` 谓 48px 高点
 
-### 折叠战略
+### 窄屏布局调整
 
 - **导航**: 桌面水平导航, 右侧两片胶囊形会倒塌到下面的汉堡包上方 960px. 两种胶囊形(`Contact sales`, `Get started for free`上方栏保持可见 560px 并堆放在下面的覆盖处。
 - **Pricing tier grid**: 4-up → 2-up at 960px → 1-up below 768px. The pill toggle stays horizontal and scrolls horizontally if needed below 560px.
 - **颜色块**: 以上(单位:千美元) 768px 区域保存 `{spacing.xxl}` 以圆形圆圆圆的圆圆的圆圆为显示, 768px 角被移除 街区流血到 观光港边缘 以达到海报效果。
 - **比较表**: 下图 960px 矩阵会倒塌成每层手风琴 以避免水平卷轴。
 
-### 图像行为
+### 图片适配
 
 - Product UI mocks inside color blocks scale proportionally and never crop. Below 768px they shrink rather than reflow.
 - 家网格中的模板缩略图使用懒惰加载和动画在滚动上.
@@ -307,7 +307,7 @@ Figma营销系统通过设计是影子灯光——颜色块代替了传统的高
 
 1. Focus on ONE component at a time and reference it by its `components:` token name (e.g., `{components.button-primary}`, `{components.color-block-section}`).
 2. When introducing a new section, decide **first** which `{colors.block-*}` token it sits on; the surface choice is the most consequential decision.
-3. 默认体型为 `{typography.body}`; 联系范围 `{typography.subhead}` 或 减 减 `{typography.headline}` 只在颜色块内。
+3. 默认体型为 `{typography.body}`; 联系范围 `{typography.subhead}` 或 `{typography.headline}` 只在颜色块内。
 4. 运行 `npx @google/design.md lint DESIGN.md` 编辑后 - `broken-ref`, `contrast-ratio`,以及 `orphaned-tokens` 自动发出警告。
 5. 添加新的变体作为单独的组件条目( Q)`-pressed`, `-selected`)——不要用散文埋没.
 6. Keep `{colors.primary}` scarce. If two `button-primary` instances appear in the same viewport, the section is doing too much — neutralize one to `button-secondary`.

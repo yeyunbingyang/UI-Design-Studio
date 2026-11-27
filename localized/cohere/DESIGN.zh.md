@@ -8,7 +8,7 @@
 
 Cohere's current web presence feels like a sober enterprise AI command center with editorial restraint. The home page opens on a huge typographic declaration over a white canvas, then uses photography, dark product mockups, trust logos, and generous empty space to make AI infrastructure feel controlled rather than speculative. Product pages invert the tone into deep green-black or dark navy bands, while blog and research pages move toward publishing-system clarity: large filters, thin rules, dense lists, and pale technical backgrounds.
 
-使得系统具有独特性的是将严酷的黑白UI与触觉品牌图像的连发混合. 该网站避免了普通界面中的装饰性铬;颜色通过摄影,抽象到达. 3手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机等。 手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机
+使得系统具有独特性的是将严酷的黑白UI与触觉品牌图像的连发混合. 该网站避免了普通界面中的装饰性界面框架;颜色通过摄影,抽象到达. 3手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机等。 手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机、手机
 
 **关键特征 :**
 - 单曲显示头条,线高极紧,跟踪不良.
@@ -22,7 +22,7 @@ Cohere's current web presence feels like a sober enterprise AI command center wi
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 
 - **Cohere 黑色** (`#000000`:公告栏,最高的连续文本,以及全球品牌主播.
 - **近黑小学** (`#17171c`:主CTA按钮,暗脚,和深UI卡.
@@ -48,7 +48,7 @@ Cohere's current web presence feels like a sober enterprise AI command center wi
 - **细边线** (`#d9d9dd`:标准列表规则和分区划分符.
 - **边框光** (`#e5e7eb`:二级分法和效用规则.
 
-### 语义
+### 语义色
 
 - **聚焦蓝** (`#4c6ee6`:键盘焦点和环色.
 - **窗体焦点紫色** (`#9b60aa`:文本输入的焦点边框。
@@ -61,14 +61,14 @@ Cohere does not use gradients as a generic UI fill. Gradients and color fields a
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 
 - **显示**: `CohereText`,倒转到 `Space Grotesk`, `Inter`, `ui-sans-serif`,以及 `system-ui`.
 - **机构/UI**: `Unica77 Cohere Web`,倒转到 `Inter`, `Arial`, `ui-sans-serif`,以及 `system-ui`.
 - **技术标签**: `CohereMono`,倒转到 `Arial`, `ui-sans-serif`,以及 `system-ui`.
 - **图标**: Cohere 使用自定义图标字体和细线几何插图。
 
-### 等级
+### 字号层级
 
 | Role | Font | Size | Weight | Line Height | Letter Spacing | Notes |
 |---|---|---:|---:|---:|---:|---|
@@ -102,7 +102,7 @@ Cohere does not use gradients as a generic UI fill. Gradients and color fields a
 
 Large sections rely on dramatic vertical breathing room. The home page places a trust-logo strip far below the hero media. Product pages often hold dark panels inside fields of empty white space, then transition to dense forms or footers only near the end.
 
-### 网格容器( C)
+### 网格与容器
 
 - Global nav uses a three-zone layout: logo left, menu centered, sign-in/CTA right.
 - 家首屏以双卡媒体构成之上的文字为中心:在较窄的摄影卡旁边,有一个宽的产品模拟卡.
@@ -111,12 +111,12 @@ Large sections rely on dramatic vertical breathing room. The home page places a 
 - 研究页面使用带有日期和芯片列的全宽列表,而不是装饰卡.
 - 表格使用两栏输入行,在深色或石块部分背景上,在圆形白色卡片内.
 
-### 白空间哲学
+### 留白规则
 
 Cohere 使用白空空间作为信任信号。 巨大的空间隔将品牌要求、客户证明、产品证明和CTA分开。 Dense内容只出现在服务于信息架构的地方:研究纸行、博客卡网格和联系形式字段。
 
 
-## 层次与阴影
+## 层次与深度
 
 Cohere 深度来自表面交替、介质对比、圆角、边框细小而不是投影。
 
@@ -208,7 +208,7 @@ Rule-separated publication list with title left, topic pills centered, and date 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 
 - 使用白色页面底色作为默认的表面;引入深绿色或海军作为全宽的产品带.
 - 保持初级CTA的胶囊形形状和光面近黑.
@@ -218,7 +218,7 @@ Rule-separated publication list with title left, topic pills centered, and date 
 - 使用薄线几何插图来进行研究和能力图标.
 - Let photography and product mockups carry color, while the UI shell stays restrained.
 
-### Don't
+### 应避免的做法
 
 - Do not turn coral or blue into broad decorative surface colors.
 - Do not add heavy drop shadows to cards.
@@ -229,7 +229,7 @@ Rule-separated publication list with title left, topic pills centered, and date 
 - Do not use saturated gradients as normal UI backgrounds; keep gradients media-led.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -246,7 +246,7 @@ Rule-separated publication list with title left, topic pills centered, and date 
 
 初级CTA和胶囊形会满足舒适的触摸 伸展通过 12px-24px 添加和pill radi。研究过滤芯片和博客类芯片比标准标签大,使密集的分类表可用于触摸设备。
 
-### 折叠战略
+### 窄屏布局调整
 
 - Nav collapses from full horizontal links to a compact mobile menu.
 - 首屏媒体从分牌到堆牌.

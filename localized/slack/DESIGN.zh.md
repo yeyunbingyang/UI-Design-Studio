@@ -6,7 +6,7 @@
 
 ## 概览
 
-Slack设计语言中心在深层的aubergine初级(`{colors.primary}`)——该品牌最持久的视觉资产——作为主控按钮颜色,脚步带,特色定价等级,品牌字号应用. 围绕这个系统,一个异常微妙的生态系统:奶油-薰衣草首屏画布,上面有软的贴面-梅斯梯度(油橙、薰衣草、灰绿色),浮产品UI模型后面的脉冲,实际界面的铬在以下几处得到详细制作: 3:2 。 。 。
+Slack设计语言中心在深层的aubergine初级(`{colors.primary}`)——该品牌最持久的视觉资产——作为主控按钮颜色,脚步带,特色定价等级,品牌字号应用. 围绕这个系统,一个异常微妙的生态系统:奶油-薰衣草首屏画布,上面有软的贴面-梅斯梯度(油橙、薰衣草、灰绿色),浮产品UI模型后面的脉冲,实际界面框架在以下几处得到详细制作: 3:2 。 。 。
 
 两种专有的人文主义家庭的字型划分。 700 字重,大小 32–64px 负数 letter-spacing 用于在首屏头条上进行紧凑的光学密度。UI级使用第二家族,位于 400–700 稍松的领先地位(1.55)——品牌体型副本在读时不与aubergine 瞬间竞争时静悄悄地读.
 
@@ -26,7 +26,7 @@ Slack设计语言中心在深层的aubergine初级(`{colors.primary}`)——该�
 
 > **Source pages:** home (`/`), `/features/channels`, `/pricing`, `/contact-sales`.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Aubergine** (`{colors.primary}` — `#4a154b`): The brand's primary surface and CTA color. Deep, warm purple with a hint of ruby — used on filled buttons, the featured pricing tier, the footer band, and the brand wordmark.
 - **Aubergine Deep** (`{colors.primary-deep}` — `#481a54`): A near-identical sibling of `{colors.primary}` extracted from a different surface; treat as functionally equivalent.
 - **Aubergine Press** (`{colors.primary-press}` — `#611f69`): Pressed-state lift of the primary, slightly lighter and warmer.
@@ -34,27 +34,27 @@ Slack设计语言中心在深层的aubergine初级(`{colors.primary}`)——该�
 - **链接蓝色** (`{colors.link-blue}` — `#1264a3`:内含链接颜色——饱和,略微温暖的蓝色,是体型中唯一一种取代aubergine的色素替代品.
 - **连接** (`{colors.link-hover}` — `#3860be`: 连接悬浮状态上使用的更饱和的蓝色.
 
-### 表面
+### 界面表面
 - **白色页面底色** (`{colors.canvas}` — `#ffffff`: 默认内容表面.
 - **油菜酱** (`{colors.canvas-cream}` — `#f4ede4`: 首屏梯度和特征带上使用的温暖淡白, 添加编辑温暖.
 - **彩虹薰衣草** (`{colors.canvas-lavender}` — `#f9f0ff`: 淡紫色锡作为副扣表面和软节带使用.
 - **地表奥贝里** (`{colors.surface-aubergine}` — `#4a154b`: 原生的aubergine作为表面再利用——以定价等级,脚步,暗色特征带为特色.
 - **细边线** (`{colors.hairline}` — `#e6e6e6`): 1px 牌和桌牌分隔符上的边框。
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — `#1d1d1d`: 轻表面的主体体文字,只是害羞纯黑色.
 - **墨水哑声** (`{colors.ink-mute}` — `#696969`: 副文本,标题,帮助者副本.
 - **小学** (`{colors.on-primary}` — `#ffffff`: aubergine表面和填充的CTA上文本.
 - **On Aubergine Mute** (`{colors.on-aubergine-mute}` — `#d9bdde`): Secondary text on aubergine surfaces — a desaturated mauve that reads as muted-light.
 
-### 语义
+### 语义色
 - **错误** (`{colors.semantic-error}` — `#cc4117`: 形式错误和破坏性动作颜色.
 - **成功** (`{colors.semantic-success}` — `#007a5a`: 内含成功指标.
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 
 The display tier is **Salesforce Avant Garde** — a proprietary humanist sans with broad apertures and a slightly geometric character. When unavailable, fall back to the system font stack (`system-ui, -apple-system, BlinkMacSystemFont`).
 
@@ -62,7 +62,7 @@ The display tier is **Salesforce Avant Garde** — a proprietary humanist sans w
 
 两者面孔都是专有的,不能免费取用。 **Inter** (通过Google字体开源) 显示和身体的重量匹配—— Inter 是对两层最接近的开放模拟。
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -87,7 +87,7 @@ The display tier is **Salesforce Avant Garde** — a proprietary humanist sans w
 - **身体在 1.55 领先。** 稍稍放松,以方便销售,而不进入空气状态。 1.7+ 领土。
 - **Caps for eyebrows.** All eyebrows render uppercase with positive 0.96–0.144px tracking depending on size.
 
-### Note on Font Substitutes
+### 替代字体
 Use **Inter** (open-source Google Fonts) for both display and UI tiers — Inter at 700 weight with `-0.768px` letter-spacing closely approximates the brand's display behavior. For maximum brand fidelity, **Lato** is a softer humanist alternative that pairs well at body sizes. Avoid System UI fonts on the body — the brand's subtle warmth disappears at default weights.
 
 
@@ -99,24 +99,24 @@ Use **Inter** (open-source Google Fonts) for both display and UI tiers — Inter
 - **分区编栏**: 64–96px ; 紧紧地 48px 交易页面。
 - **Card internal padding**: 32px on pricing cards; 48px on aubergine band cards.
 
-### 网格容器( C)
+### 网格与容器
 - 销售页面中心a ~1240px 容器中含有脱落的粘贴层梯度。
 - Pricing collapses 4-up → 2-up → 1-up at 992 / 768 breakpoints.
 - 统计行 : 3- 柱状网格,巨大的 50px aubergine 显示数字 。
 
-### 白空间哲学
+### 留白规则
 贴面-mesh梯度填补了营销页面上的大部分负空格——各节感觉宽阔而不字面是空的。在交易页面上,梯度下降,白空格恢复到传统 48px- 剖腹呼吸室 - 切腹呼吸室 - 切腹呼吸室
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
 | 0 | 平面 | 默认表面 |
 | 1 | `box-shadow: rgba(0,0,0,0.1) 0 5px 20px 0` | 浮动首屏按钮 |
 | 2 | `box-shadow: rgba(0,0,0,0.1) 0 0 32px 0` | 产品 UI 模拟复合材料 |
-| 3 | `box-shadow: rgba(0,0,0,0.2) 0 1px 10px 0` | 土司/通知铬 |
-| 4 | `box-shadow: rgb(97,31,105) 0 0 0 1px inset` | 欧贝金嵌入边框(按钮聚焦,特殊铬) |
+| 3 | `box-shadow: rgba(0,0,0,0.2) 0 1px 10px 0` | 土司/通知界面框架 |
+| 4 | `box-shadow: rgb(97,31,105) 0 0 0 1px inset` | 欧贝金嵌入边框(按钮聚焦,特殊界面框架) |
 
 ### 装饰性深度
 品牌的深度语言是 **贴面梅斯梯度** ——桃,薰衣草,灰绿色在大圆形的圆形上一起停止模糊,在产品UI截图后产生柔软的大气背景,梯度是品牌的口味"深无阴影":眼觉产品模拟浮在无任何升力的光滑背景之上.
@@ -124,7 +124,7 @@ Use **Inter** (open-source Google Fonts) for both display and UI tiers — Inter
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -136,7 +136,7 @@ Use **Inter** (open-source Google Fonts) for both display and UI tiers — Inter
 | `{rounded.xxl}` | 48px | 标志背景 |
 | `{rounded.pill}` | 90px | All buttons |
 
-### 摄影几何
+### 图片形状
 品牌使用 **产品 UI 截图** 模拟器在贴面上方的梯度上方 4:3 角度,没有阴影,但带有提供眼所期望的“升”的梯度。真实摄影出现在客户-日志条条和偶尔的案例研究卡中,被视为内部的全血 `{rounded.xl}` 集装箱。
 
 
@@ -157,7 +157,7 @@ Use **Inter** (open-source Google Fonts) for both display and UI tiers — Inter
 **`button-outline-on-aubergine`** 欧贝金页面底色上的轮廓
 - Background `{colors.surface-aubergine}` (transparent over the surface), text `{colors.on-primary}`, 2px solid `{colors.on-primary}` border, same pill shape.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`card-pricing`** ——标准定价等级卡.
 - Background `{colors.canvas}`, padding `{spacing.xxl}+` (32px), rounded `{rounded.xl}` 16px, 1px `{colors.hairline}` border. Title in `{typography.heading-lg}`, price in `{typography.display-md}`, body in `{typography.body-md}`, CTA pinned to bottom as `button-primary-pill`.
@@ -174,7 +174,7 @@ Use **Inter** (open-source Google Fonts) for both display and UI tiers — Inter
 **`card-stat`** ——统计挂牌.
 - Background `{colors.canvas}`, text `{colors.primary}` rendered in `{typography.display-lg}` (50px aubergine numeral). Holds a single percentage/number with a small caption underneath.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——标准表单字段.
 - Background `{colors.canvas}`, text `{colors.ink}`, type `{typography.body-md}`, padding `10px 12px`, rounded `{rounded.sm}` 4px, 1px `{colors.hairline}` border.
@@ -189,7 +189,7 @@ Use **Inter** (open-source Google Fonts) for both display and UI tiers — Inter
 **`pill-cap-shade`** ——小全头丸作为上方眉毛使用. pricing-tier 标题。
 - Background `{colors.canvas-cream}`, text `{colors.ink}`, type `{typography.micro-cap}`, padding `4px 12px`, rounded `{rounded.pill}`.
 
-### 签名组件
+### 标志性组件
 
 **贴贴- 列斯梯度后投** ——桃( 桃子 )`#fff0e6`-ish)+薰衣草(英语:`#e9d8ff`)+ 灰尘绿色停止在首屏乐队后方模糊在一起. 执行为CSS光圈级堆栈,而非单一图像. 提供品牌的深度/光度,而不带有文字阴影.
 
@@ -198,10 +198,10 @@ Use **Inter** (open-source Google Fonts) for both display and UI tiers — Inter
 **Aubergine Footer Band** — every marketing page closes with a full-bleed `card-aubergine-band` containing a closing CTA in white type. The band height is generous (~480–600px on desktop) and reads as the page's signature.
 
 **`link-on-light`** ——在光面上进行体型复制的内置链接.
-- 文本 `{colors.link-blue}` 交付 `{typography.body-md}`。默认情况下没有下划线;下划线出现在通过 link-hover 行为
+- 文字颜色 `{colors.link-blue}` 交付 `{typography.body-md}`。默认情况下没有下划线;下划线出现在通过 link-hover 行为
 
 **`link-on-aubergine`** 连接在欧贝里海面上
-- 文本 `{colors.on-primary}` 以坚固的划线盟誓,
+- 文字颜色 `{colors.on-primary}` 以坚固的划线盟誓,
 
 **`footer-aubergine`** ——全站页脚.
 - Background `{colors.surface-aubergine}`, text `{colors.on-primary}` rendered in `{typography.caption}`, padding `{spacing.huge}+ {spacing.xxl}` (32px 24px). Holds 4–5 columns of `{colors.on-aubergine-mute}` link groups, social icons, and a small legal/copyright row at the bottom.
@@ -209,14 +209,14 @@ Use **Inter** (open-source Google Fonts) for both display and UI tiers — Inter
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` aubergine代表填充式CTA,特色定价等级,以及关闭式aubergine乐队——这是品牌的色调单神主义.
 - 使用 `{rounded.pill}` (90px),对于整个系统的每一个按钮——从没有圆形的矩形按钮.
 - 平面显示等级为负数 letter-spacing (`-0.768px` 时 间 64px);专有面部需要跟踪拉力.
 - 编译首屏乐队,带有pastel-mesh梯度背景+浮动产品UI模拟;梯度是深度.
 - Use `{colors.link-blue}` for inline links — it's the only chromatic departure from aubergine and is part of the brand voice.
 
-### Don't
+### 应避免的做法
 - Don't add a third accent color to the system — the aubergine + blue link combination is exhaustive.
 - 下方别收缩按钮 `14px 28px` ——加片过量的胶囊形是品牌感受的一部分.
 - Don't render display tiers at default tracking (0) — without negative letter-spacing the headlines read loose and unedited.
@@ -225,7 +225,7 @@ Use **Inter** (open-source Google Fonts) for both display and UI tiers — Inter
 - Don't replace the pill shape with a square button anywhere.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -240,14 +240,14 @@ Use **Inter** (open-source Google Fonts) for both display and UI tiers — Inter
 - Pill buttons hit ≥ 48×48px due to the over-padded geometry. WCAG AAA compliant.
 - 窗体字段停留在 44px 最低身高。
 
-### 折叠战略
+### 窄屏布局调整
 - 显示阶梯级 64 → 50 → 32 → 28 → 24 跨越断点。
 - 帕斯特尔-梅什梯度在移动上重置瓦片,以防止洗涤完全消失.
 - 将产品UI模型化为移动上最可操作的内板。
 - 定价等级 4 → 2 → 1; aubergine 的特色 等级保持区分。
 - 顶端导航崩溃到下面的汉堡 768px;菜单继承页面底色颜色。
 
-### 图像行为
+### 图片适配
 产品 UI 模型使用 `srcset` 用于桌面/平板/移动作物;移动作物中心位于最可操作的内部面板上,而不是缩小整个复合材料。
 
 

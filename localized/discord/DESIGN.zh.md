@@ -26,19 +26,19 @@ Geometry is soft and generous. Everyday controls round at `{rounded.sm}` (12px) 
 
 > 源页分析:家,广告/遗书,硝基,趋势游戏. 模糊,绿色,红宝石,白色显示类型,每个页面的深印哥页面底色重复;硝基添加定价表,趋势游戏添加排名游戏列表.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **模糊** (`{colors.primary}` — #5865f2:标志性品牌颜色 初级CTA填充,marquee和CTA乐队,STAT卡,品牌标记 单曲使用最多的动作颜色.
 - **电绿** (`{colors.green}` — #35ed7e: 预留最高的CTA("开始"/"下载"),总是配对 `{colors.ink-dark}` 文本中选择的文本。
 - **振动的紫红色** (`{colors.magenta}` — #ec48bd:饱和粉色,可以填充梯度特征面板,步牌,以及徽章——玩法反衡酷的indigo.
 - **链接青色** (`{colors.link}` — #00b0f4: 内置 text-link 颜色在暗色表面。
 
-### 表面
+### 界面表面
 - **印迪戈坎瓦斯语Name** (`{colors.canvas}` — #0a0d3a:深仁迪戈页面基,被动画品牌升级网格洗刷.
 - **升为Indigo** (`{colors.surface-indigo}` — #1e2353:从页面底色上往上走一步——暗色特征卡,定价表,游戏排名排行,鬼按钮.
 - **欧尼克斯语Name** (`{colors.surface-onyx}` — #23272a): Discord经典的暗UI表面;产品色卡和分割器.
 - **黑色** (`{colors.surface-black}` — #000000:全黑显示带设定产品媒体.
 
-### 文本
+### 文字颜色
 - **白色** (`{colors.ink}` — #ffffff: 暗页面底色上的所有显示和体文本。 主流文本颜色 。
 - **墨水( 墨水 )** (`{colors.ink-dark}` — #000000: 光线上的文字填充——白色按钮和绿色的CTA.
 - **静音墨水** (`{colors.muted}` — #333333:偶尔光面的副文本(白色) product-mockup ),卡片(卡片).
@@ -49,14 +49,14 @@ The hero and feature panels ride an animated mesh that sweeps from `{colors.prim
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 - **ABC Ginto Nord** ——重的显示面孔,所有营销头条,设置在 700–800 字重,经常是全头。宽,自信,略微缩合的字符,读作“加明”。
 - **ABC Ginto** – 铅段落、链接和按钮的较轻的伴奏(字重) 500).
 - **ggsans** — Discord用于稠密体复制的UI sans(16px / 400).
 
 **Note on font substitutes:** ABC Ginto Nord and ggsans are proprietary. For an open-source rebuild, pair a heavy geometric grotesque — **Hanken Grotesk** or **Space Grotesk** at 700–800 — for display, with **Inter** or **Plus Jakarta Sans** for body and UI. Keep headlines bold and tracked tight; the loud, confident display weight is the brand's voice.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -84,15 +84,15 @@ The hero and feature panels ride an animated mesh that sweeps from `{colors.prim
 - **脚本**: `{spacing.xxs}` 4px · `{spacing.xs}` 8px · `{spacing.sm}` 12px · `{spacing.md}` 16px · `{spacing.lg}` 20px · `{spacing.xl}` 24px · `{spacing.xxl}` 32px · `{spacing.section}` 40px.
 - 运行卡片内置 `{spacing.xl}`–`{spacing.section}`; 按钮垫 `{spacing.sm}`–`{spacing.lg}` 垂直为 `{spacing.xl}` 水平。
 
-### 网格容器( C)
+### 网格与容器
 - Centered max-width content column (~1200px) on the full-bleed indigo canvas.
 - 特性段以叠叠的全宽梯度/暗卡轮流进行双柱分(文本+介质).
 - Marquee, CTA, and showcase bands are full-bleed colour fields with their own rounded inner containers.
 
-### 白空间哲学
+### 留白规则
 部分通过Indigo的垂直大缺口呼吸,然后与饱和的彩带碰撞以达到节奏。在卡片内部,慷慨的垫片让超大小的尺寸。 3D艺术和产品模型随空气飘扬.
 
-### 反应战略
+### 响应式布局
 
 #### 断点
 | 名称 | 宽度 | 密钥更改 |
@@ -102,19 +102,19 @@ The hero and feature panels ride an animated mesh that sweeps from `{colors.prim
 | 笔记本 | 1024–1279px | 集装箱窄;保留多柱网格 |
 | 桌面 | ≥ 1280px | 完整的多列网格; 居中 ~1200px 栏 |
 
-(Discord 船体高度异常密集的断点梯级——在 240px 财务报告和已审计财务报表 ~2000px ——保持超大小显示类型, 3D艺术在每一个宽度上均匀. )
+(Discord 船体高度异常密集的断点梯级——在 240px 和 ~2000px ——保持超大小显示类型, 3D艺术在每一个宽度上均匀. )
 
 #### 触控区域
-`{components.button-primary}` 财务报告和已审计财务报表 `{components.button-green}` 清除 ≥44px 自动调试高度通过垂直的垫装。导航链接和游戏排名的行在移动中满足相同的最低要求。
+`{components.button-primary}` 和 `{components.button-green}` 清除 ≥44px 自动调试高度通过垂直的垫装。导航链接和游戏排名的行在移动中满足相同的最低要求。
 
-#### 折叠战略
+#### 窄屏布局调整
 暗顶导航(logo \链接 \ 登录 \ 下载 CTA ) 崩溃到下面的标志 + 汉堡 768px。双列特征列堆叠媒体上复文本;梯度和暗卡跨度全宽。硝基定价表可横向滚动;趋势游戏排名列表保持其行布局,但会减少次要列。
 
-#### 图像行为
+#### 图片适配
 产品模型和 3D 字符艺术坐落在圆形媒体框内(`{rounded.lg}`–`{rounded.xl}`)或血流过卡片边缘作为装饰道具. 介质鳞片在容器内流畅,并保持其角半径每宽.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -131,7 +131,7 @@ Discord 倾斜 **颜色、梯度和半径** 深比深的阴影要深得多。 �
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -144,7 +144,7 @@ Discord 倾斜 **颜色、梯度和半径** 深比深的阴影要深得多。 �
 | `{rounded.jumbo}` | 120px | 签名超大小的四舍五入形状卡 |
 | `{rounded.full}` | 9999px | Circular 图像和图标按钮 |
 
-### 摄影几何
+### 图片形状
 媒体在软角矩形上展示(`{rounded.lg}`–`{rounded.xl}`),从不硬化. 首屏媒体块使用方向性只底半径(英语:88px 下角),为冲动的基座. 幻象和 circular 图标控件是完全圆的。
 
 
@@ -169,7 +169,7 @@ Discord 倾斜 **颜色、梯度和半径** 深比深的阴影要深得多。 �
 **`button-ghost-sm`** – 紧凑的鬼按钮( quests CTA 列)
 - Background `{colors.surface-indigo}`, text `{colors.ink}`, type `{typography.link-sm}`, rounded `{rounded.xs}`, padding `{spacing.sm} {spacing.xxl}`.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`hero`** - 黑暗的印度首屏 - 黑暗的印度首屏 - 黑暗的印度首屏
 - Indigo `{colors.canvas}` field with the animated gradient mesh, white `{colors.ink}` all-caps headline at `{typography.display-xl}`, lead paragraph, and a CTA pair. The hero media block carries a swooping bottom-only radius.
@@ -198,7 +198,7 @@ Discord 倾斜 **颜色、梯度和半径** 深比深的阴影要深得多。 �
 **`faq-accordion`** ——可折叠的FAQ行(硝基)
 - Background `{colors.surface-indigo}`, white text, question at `{typography.link-lg}`, `{rounded.lg}`, padding `{spacing.xl}`.
 
-### 输入表单( F)
+### 输入框与表单
 
 > Discord's marketing pages surface no standalone text inputs; forms route to the app. The kit-mirror `ex-*` form surfaces below model inputs against the brand's `{rounded.lg}` surfaces and `{colors.surface-indigo}` fills.
 
@@ -210,7 +210,7 @@ Discord 倾斜 **颜色、梯度和半径** 深比深的阴影要深得多。 �
 **`footer`** – 暗链接页脚
 - 英迪戈语Name `{colors.canvas}`,白色链接,在 `{typography.link}`, 编译 `{spacing.section}`,组织成巨型之上的多列连线组 "Discord" 字标。
 
-### 签名组件
+### 标志性组件
 
 **`pricing-table`** ——硝基计划比较表.
 - Raised-indigo `{colors.surface-indigo}` surface, body text at `{typography.body}`, `{rounded.lg}`, padding `{spacing.xl}`. Two plan columns (Nitro Basic / Nitro) with the popular tier carrying a `{colors.magenta}` badge, each row ending in a `button-primary` "Subscribe".
@@ -224,45 +224,45 @@ Discord 倾斜 **颜色、梯度和半径** 深比深的阴影要深得多。 �
 **`badge`** ——小圆形标签/类别芯片
 - Background `{colors.magenta}`, white text at `{typography.link-sm}`, `{rounded.lg}`, padding `{spacing.xxs} {spacing.sm}`.
 
-### 实例(说明性)
+### 组合示例
 
-> 自动生成的工具包-模拟演示表面(`scripts/derive-examples-block.mjs`。每个 `ex-*` 条目参考: 下游消费者的品牌原始产品(`/preview-design`, `/generate-kit`) 重新皮肤相同 10 表面一致。 `TO_FILL` 标记表示缺失原始人——在LLM判断传中解析.
+> 以下组合场景由 `scripts/derive-examples-block.mjs` 生成。各 `ex-*` 条目复用品牌基础样式，供 `/preview-design` 和 `/generate-kit` 以统一风格呈现同一套 10 个示例。`TO_FILL` 提示有待核对的基础样式。
 
-**`ex-pricing-tier`** ——默认定价等级卡。 feature-card 带品牌的铬 canvas-soft 表面。
+**`ex-pricing-tier`**：默认套餐卡，沿用功能卡结构和品牌 canvas-soft 底色。
 - 属性 : `backgroundColor`, `textColor`, `borderColor`, `rounded`, `padding`
 
-**`ex-pricing-tier-featured`** ——地貌/高亮的层次——极性-浮点表面(暗色填充+光线文字在光线模式下,浅色填充+暗色文字在暗线模式下).
+**`ex-pricing-tier-featured`**：推荐套餐卡。浅色模式中用深底浅字，深色模式中用浅底深字。
 - 属性 : `backgroundColor`, `textColor`, `rounded`, `padding`
 
-**`ex-product-selector`** ——什么是包含的汇总卡——重新用于SaaS/B2B纵横(NOT为字形产品画廊).
+**`ex-product-selector`**：面向 SaaS / B2B 场景的套餐权益摘要卡。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-cart-drawer`** ——订阅摘要——重新用于SaaS/B2B(每件加件的行项目,而非字面车).
+**`ex-cart-drawer`**：SaaS / B2B 订阅摘要，每个附加项单独列出。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `item-divider`
 
-**`ex-app-shell-row`** ——App Shell 实例中的侧边栏导航行. Active State 使用品牌主标.
+**`ex-app-shell-row`**：应用框架示例里的侧栏导航行，以品牌主色标识选中状态。
 - 属性 : `backgroundColor`, `activeIndicator`, `rounded`, `padding`
 
-**`ex-data-table-cell`** — Default data-table th + td chrome. Header uses mono-caps eyebrow typography; body uses body-sm.
+**`ex-data-table-cell`**：数据表格中 th 与 td 的默认样式。表头采用大写等宽字，正文采用 body-sm。
 - 属性 : `headerBackground`, `headerTypography`, `bodyTypography`, `cellPadding`, `rowBorder`
 
-**`ex-auth-form-card`** ——签入/签入卡. 复用. feature-card 铬 text-input 原始人在里面,他们都在里面
+**`ex-auth-form-card`**：登录与注册卡，复用功能卡和 text-input。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-modal-card`** ——模度对话框表面——与 feature-card 以高的阴影盟誓,
+**`ex-modal-card`**：对话框表面，沿用功能卡样式并加浮层投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-empty-state-card`** ——空状态插图框架.
+**`ex-empty-state-card`**：空状态插图容器。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `captionTypography`
 
-**`ex-toast`** ——通知表面. feature-card 形状 + 中阴影。
+**`ex-toast`**：轻提示，沿用功能卡圆角并使用中等投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `typography`
 
 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 带我们去深印度页面底色`{colors.canvas}`),并让动画中的模糊到magenta梯度带大气.
 - 准备金 `{colors.green}` 用于页面上单张最高的 CMA; 使用 `{colors.primary}` 其它动作都模糊不清
 - 大声喊叫 `{typography.display-xl}` ABC Ginto Nord 首页中, 首页中; 下至 `{typography.body}` 供复制。
@@ -270,7 +270,7 @@ Discord 倾斜 **颜色、梯度和半径** 深比深的阴影要深得多。 �
 - Frame product mockups inside `{colors.magenta}` gradient panels or `{colors.surface-indigo}` dark cards.
 - 来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,来,,来,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, 3D字符艺术和道具重叠卡边,以构建游戏深度.
 
-### Don't
+### 应避免的做法
 - Don't flatten the canvas to a neutral grey or pure black — the indigo + gradient mesh is the brand.
 - Don't use `{colors.green}` as a general accent; it is the high-intent CTA only.
 - Don't set headlines in a timid mid-weight — display type is 700–800 ABC Ginto Nord or it loses the brand voice.

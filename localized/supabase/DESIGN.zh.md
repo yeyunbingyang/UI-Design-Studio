@@ -10,7 +10,7 @@ Supabase设计语言的设计要清晰得多 营销表面就坐着 `{colors.canv
 
 字型运行 **Circular** 字重 500 用于显示和 400 显示层使用紧的负数 letter-spacing (-1.92px 时 间 64px),将圆形的人文主义字母表拉入编辑密度中,没有大气梯度,没有全血摄影,没有暗黑的canvas营销轨迹——品牌承诺白化.
 
-产品本身作为复合UI截图出现在每一页:仪表板表,SQL编辑器,查询构建器,日志流。这些截图是品牌的论据。它们坐在里面 `{rounded.lg}` 12px 装有细微的容器 1px 发条,经常安排 2- 上或放在首屏乐队上面的浮游"被打的窗帘"的构成中
+产品本身作为复合UI截图出现在每一页:仪表板表,SQL编辑器,查询构建器,日志流。这些截图是品牌的论据。它们坐在里面 `{rounded.lg}` 12px 装有细微的容器 1px 发条,经常安排 2- 上或放在首屏乐队上面的浮游"被打的面板"的构成中
 
 **关键特征 :**
 - 单翡翠初等( 4)`{colors.primary}` `#3ecf8e`)作为唯一染色体事件;其他一切都是单色的.
@@ -26,7 +26,7 @@ Supabase设计语言的设计要清晰得多 营销表面就坐着 `{colors.canv
 
 > **Source pages:** home (`/`), `/database`, `/partners/integrations`, `/partners/integrations/powersync`, `/solutions/ai-builders`, `/pricing`.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **翡翠** (`{colors.primary}` — `#3ecf8e`:签名的CTA颜色. 填充按钮背景,品牌字号强调色,点指标.
 - **翡翠深处** (`{colors.primary-deep}` — `#24b47e`:按下一级升降机.
 - **翡翠软** (`{colors.primary-soft}` — `#4ade80`:图音和产品UI中使用的轻度翡翠.
@@ -35,16 +35,16 @@ Supabase设计语言的设计要清晰得多 营销表面就坐着 `{colors.canv
 - **黄褐色** (`{colors.accent-yellow}` — `#ffdb13`:仅图强调色/状态指标.
 - **粉红/ 红褐色/ 印地哥/ 番茄**: 保留用于集成标志和稀有图表亮点,绝不作为系统颜色.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — `#ffffff`: 默认页面背景.
 - **软画帘** (`{colors.canvas-soft}` — `#fafafa`: 用于交替的节带的短线线条。
 - **风景之夜** (`{colors.canvas-night}` — `#1c1c1c`:深近黑色,用于代码块,仪表板模型,特色定价等级.
-- **夜幕轻柔** (`{colors.canvas-night-soft}` — `#202020`:为巢状铬而略升黑.
+- **夜幕轻柔** (`{colors.canvas-night-soft}` — `#202020`:为巢状界面框架而略升黑.
 - **细边线** (`{colors.hairline}` — `#dfdfdf`): 1px 纸牌和桌子上的边框。
 - **发条坚固** (`{colors.hairline-strong}` — `#c7c7c7`: 稍暗的边框用于强调.
-- **发条酷** (`{colors.hairline-cool}` — `#ededed`) / **发条酷 2** (`#efefef`) / **发条酷 3** (`#d4d4d4`:品牌灰色梯形用于精细的铬工作.
+- **发条酷** (`{colors.hairline-cool}` — `#ededed`) / **发条酷 2** (`#efefef`) / **发条酷 3** (`#d4d4d4`:品牌灰色梯形用于精细的界面框架工作.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — `#171717`:默认的体文字,近黑,从不纯.
 - **墨水中学** (`{colors.ink-secondary}` — `#212121`: 稍凉近黑,以体力为重.
 - **墨水哑声** (`{colors.ink-mute}` — `#707070`: 副文本和助手副本.
@@ -56,7 +56,7 @@ Supabase设计语言的设计要清晰得多 营销表面就坐着 `{colors.canv
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 
 显示和UI级是 **Circular** 由Lineto制作的专有几何人文主义的圣歌。 `'Helvetica Neue', Helvetica, Arial`.
 
@@ -64,7 +64,7 @@ For maximum brand fidelity when Circular isn't licensed, use **Inter** (open-sou
 
 代码块使用 **系统单体** (`ui-monospace`,与 Menlo / Monaco / Consolas 倒计时).
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -86,7 +86,7 @@ For maximum brand fidelity when Circular isn't licensed, use **Inter** (open-sou
 - **显示中负追踪 。** -1.92px 时 间 64px 按比例缩小——将圆形的人文主义字母格式收紧成编辑密度.
 - **单曲为代码.** 系统单家庭(Menlo / Monaco)——无专有单网福特.
 
-### Note on Font Substitutes
+### 替代字体
 Circular is proprietary. Use **Inter** at weight 500 with `letter-spacing: -1.92px` for display tiers. **Geist Sans** (open-source from Vercel) is another close alternative for both display and body. Avoid Helvetica defaults — they're heavier and lack the geometric warmth.
 
 
@@ -98,16 +98,16 @@ Circular is proprietary. Use **Inter** at weight 500 with `letter-spacing: -1.92
 - **分区编栏**: 64–96px 市场营销表面。
 - **Card internal padding**: 32px on feature/pricing cards.
 
-### 网格容器( C)
+### 网格与容器
 - 销售页面中心a ~1280px 容器没有边缘血浆;该品牌将内容保留在盒子内。
 - Pricing collapses 4-up → 2-up → 1-up at 1024 / 768 breakpoints.
 - 产品 UI 模拟堆栈 2- 在同一容器内作为重叠的窗体上方或制成。
 
-### 白空间哲学
+### 留白规则
 品牌用大方的 64–96px 部分加固,不带大气梯度填充空间——白色页面底色是设计。复合产品UI模型将部分拆解,而不需要装饰。
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -122,7 +122,7 @@ The brand's depth is **product UI mockups** rather than gradients. Stacked dashb
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -130,10 +130,10 @@ The brand's depth is **product UI mockups** rather than gradients. Stacked dashb
 | `{rounded.sm}` | 6px | 按钮(品牌的签名按钮半径),代码块 |
 | `{rounded.md}` | 8px | 压缩卡、 提示 |
 | `{rounded.lg}` | 12px | 定价卡、特征卡、产品模型 |
-| `{rounded.xl}` | 16px | 大型容器铬模块对话框 |
+| `{rounded.xl}` | 16px | 大型容器界面框架模块对话框 |
 | `{rounded.full}` | 9999px | 药牌、假人 |
 
-### 摄影几何
+### 图片形状
 The brand uses minimal photography. Customer logo strips display wordmarks at uniform height (~24–32px) in greyscale; case-study cards (rare) use 4:3 photos inset in `{rounded.lg}` containers.
 
 
@@ -154,7 +154,7 @@ The brand uses minimal photography. Customer logo strips display wordmarks at un
 **`button-link`** ——只使用文本的内置按钮.
 - Transparent 文本, 文本 `{colors.ink}` 交付 `{typography.button-md}`不准贴垫,在悬浮上贴上细微的下划线
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`card-feature-light`** ——特色卡白色.
 - Background `{colors.canvas}`, padding `{spacing.xxl}`, rounded `{rounded.lg}` 12px, 1px `{colors.hairline}` border.
@@ -171,7 +171,7 @@ The brand uses minimal photography. Customer logo strips display wordmarks at un
 **`code-block`** - 密码片段容器
 - Background `{colors.canvas-night}`, text `{colors.on-dark}` rendered in `{typography.code}`. Padding `{spacing.lg}` 16px, rounded `{rounded.sm}` 6px.
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** ——标准表单输入.
 - Background `{colors.canvas}`, text `{colors.ink}`, type `{typography.body-md}`, padding `{spacing.sm} {spacing.md}` (8px 12px), rounded `{rounded.sm}` 6px, 1px `{colors.hairline}` border.
@@ -189,12 +189,12 @@ The brand uses minimal photography. Customer logo strips display wordmarks at un
 **`pill-tag-soft`** ——中性胶囊形在光面上.
 - Background `{colors.canvas-soft}`, text `{colors.ink}`, otherwise same shape.
 
-### 签名组件
+### 标志性组件
 
 **复合产品UI 杂包** ——多层仪表板/SQL编辑器/日志窗格复合材料,含微妙的等级 2 阴影。产品是品牌的论据;模型总是坐在白色的页面底色上,没有周围的装饰。
 
 **`link-on-light`** ——内置机身副本链接.
-- 文本 `{colors.ink}` 交付 `{typography.body-md}` 以一根横线为柱子。
+- 文字颜色 `{colors.ink}` 交付 `{typography.body-md}` 以一根横线为柱子。
 
 **`footer-light`** ——全站页脚.
 - Background `{colors.canvas}`, text `{colors.ink-mute}`, type `{typography.caption}`, padding `{spacing.huge} {spacing.xl}` (64px 24px). Holds 4–5 columns of link groups, social icons, and a small legal row.
@@ -202,7 +202,7 @@ The brand uses minimal photography. Customer logo strips display wordmarks at un
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` 填充的CTA和单词标记强调色的翡翠——它应该看起来比较节制。
 - 显示字重级 500 负数 letter-spacing ——工程紧凑是品牌的一部分.
 - 使用 `{rounded.sm}` 6px 扣子的形状是平方的萝卜 从来不是胶囊形
@@ -210,7 +210,7 @@ The brand uses minimal photography. Customer logo strips display wordmarks at un
 - Use near-black `{colors.ink}` on the emerald button (not white) — the green reads as "lit" with dark type, which is the brand's idiosyncratic choice.
 - Apply system mono for every code block.
 
-### Don't
+### 应避免的做法
 - Don't introduce additional accent colors as system colors — purples, yellows, and pinks belong inside chart points and integration logos only.
 - Don't bump display weight above 500 — the brand's calibrated mid-weight breaks at 600+.
 - Don't use pill-shaped buttons; the brand's button radius is square-ish 6px.
@@ -218,7 +218,7 @@ The brand uses minimal photography. Customer logo strips display wordmarks at un
 - Don't add atmospheric gradients to hero bands — the white canvas is the design.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -233,12 +233,12 @@ The brand uses minimal photography. Customer logo strips display wordmarks at un
 - 按钮被击中 ≥ 36×36px 移动; 垂直加载天平,以保持WCAG AA的最小值。
 - 窗体字段不变 36px 最低身高。
 
-### 折叠战略
+### 窄屏布局调整
 - 显示阶梯级 64 → 48 → 36 → 28 → 22px.
 - 产品UI模型简化为移动上单一的主面板.
 - Pricing tiers stair-step 4-up → 2-up → 1-up; dark featured tier always distinguished.
 
-### 图像行为
+### 图片适配
 产品 UI 模型使用 `srcset` 与桌面/移动作物;移动作物侧重于最可操作的内部面板.
 
 

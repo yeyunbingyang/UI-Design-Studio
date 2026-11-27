@@ -26,7 +26,7 @@ What gives the system its character is the type. Two display registers run side 
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **Oracle Red** (`{colors.brand-mark}` — #c74634): the wordmark, and only the wordmark. It appears in the masthead at the top of every page and is not used for any button, link, border, band or highlight. Elsewhere on the page red shows up only inside photography and inside logos printed on product hardware.
 - **动作木炭** (`{colors.primary}` — #312d2a: 站点上每个主要行动背后的填充,温暖而非中立,清晰的步骤轻于 `{colors.ink}` 以文字块的形式读取。
 - **Action Charcoal Pressed** (`{colors.primary-pressed}` — #47423e): the active state of that button.
@@ -34,7 +34,7 @@ What gives the system its character is the type. Two display registers run side 
 - **黄金规则** (`{colors.accent-gold}` — #f0cc71): a 40 × 4px 栏杆坐在每页产品标题下的首屏头条下,系统是一块装饰品。
 - **Gold Tab** (`{colors.accent-gold-soft}` — #f7e0a1): a paler gold, 5px tall, marking the selected item in the dark product sub-navigation.
 
-### 表面
+### 界面表面
 表面设定是编号的阶梯,其径距足够接近,一个波段变化读作光线的变换,而不是新的面板.
 
 - **页面底色** (`{colors.canvas}` — #ffffff: 桅头,页脚,内容卡,以及最亮的节段乐队.
@@ -46,12 +46,12 @@ What gives the system its character is the type. Two display registers run side 
 - **Field Border** (`{colors.field-border}` — #d4cfca): the 1px border around the masthead search field, one clear step darker than `{colors.hairline}` so an input reads as interactive against a card that merely reads as a container.
 - **墨水深处** (`{colors.ink-deep}` — #211e1c: 梯形的暗端,用作产品子导航后的全宽带.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — #161513:每一条方向和每一行身体复制品,一个温暖的近黑,永远不纯黑,它保持了非常的光芒. 300- 字重级的显示尺寸 由看起来严酷。
 - **链接** (`{colors.link}` — #006b8f: 将链接内置在体型复制和信道列中。一个深色的蓝色,没有下划线,大小和字重与周围的文字相同——只有颜色才具有承受力。
 - On dark bands, text inverts to `{colors.on-primary}` and there is no intermediate tone; the system has one text colour per polarity.
 
-### 语义
+### 语义色
 - **焦点** (`{colors.focus}` — #227e9e:焦点指示器,一次声明,并同样应用于光和暗表面,因此键盘用户在任何地方都能看到相同的环.
 - **错误** (`{colors.error}` — #d63b25: 验证消息和错误字段文本.
 - **已禁用墨水** (`{colors.disabled-ink}` — #aea8a2: 禁用控件上的标签,与 `{colors.canvas-soft}` 填充和补充 `{colors.hairline}` 边框。
@@ -64,16 +64,16 @@ What gives the system its character is the type. Two display registers run side 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 Three families, with a clear division of labour.
 
 **Oracle Sans** is the workhorse — a variable humanist sans with open apertures and a slightly squared construction. Its variable axis is exercised hard: the declared base weight is 350, running copy sits at 350 or 400, and section headings jump all the way to 800. It also supplies the corporate index's display sizes at weight 300.
 
 **Georgia** is the display serif on the product pages. It carries h1, h2 and h3 at 36 to 56px in regular weight, with its bracketed serifs and ball terminals reading as distinctly bookish next to the sans beneath it. It is declared as an explicit stack led by Georgia, so it renders as Georgia on virtually every machine rather than falling back.
 
-**Consolas** 宣布为 monospace 并且从未出现在页的铬。
+**Consolas** 宣布为 monospace 并且从未出现在页的界面框架。
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -102,7 +102,7 @@ Line-height moves in two registers. Display and heading roles run at a tight 1.2
 
 The weight range is the most distinctive thing about the system. Running copy sits at 350 or 400 and section headings sit at 800, with almost nothing in between, so hierarchy is carried by weight far more than by size. A 24px 800-weight heading over 16px 400-weight body is a much sharper break than the 1.5× size ratio alone would suggest. The 300-weight display sizes on the corporate index run in the opposite direction, being lighter than the body text they sit above.
 
-### Note on Font Substitutes
+### 替代字体
 **Oracle Sans** is a proprietary variable face. The closest open substitute is **Inter**, which shares the humanist skeleton and open apertures and offers a full variable weight axis including the 350 and 800 stops this system depends on; **Source Sans 3** is a warmer alternative but tops out lower and needs the 800 roles dropped to 700. **Georgia** ships with virtually every operating system and needs no substitution; if a webfont is required, **Gelasio** is metric-compatible with it. **Consolas** substitutes cleanly with **JetBrains Mono**. Keep the 1.2 heading line-height, the 1.4 body line-height, and zero tracking on any substitute.
 
 
@@ -115,7 +115,7 @@ The weight range is the most distinctive thing about the system. Running copy si
 - `{spacing.xxxl}` is the grid gutter and the corporate index card interior; `{spacing.xxl}` is the product card interior.
 - 按钮绑定是一个 fixed `10px 16px` 标题中包含 18px 底边 。
 
-### 网格容器( C)
+### 网格与容器
 - **外部集装箱**: 1744px 最大值,带有 72px 侧沟。
 - **上下文容器**: 1600px 最多可以使用一个带内的内容。
 - **最小容器**: 272px,这是地板 排版崩溃 向最窄的手机。
@@ -123,10 +123,10 @@ The weight range is the most distinctive thing about the system. Running copy si
 - **Masthead**: 85px tall, full width, white. **Product sub-navigation**: 64px, full width, sticky. **Footer**: 105px, full width, white.
 - 部分是满血和方角的;容器只限制其中的内容,从来不是乐队本身.
 
-### 白空间哲学
+### 留白规则
 空间是用来使直径梯子可以辨认的。由于相邻的波段可以小到四到五个点的光度不同,因此每个波段都需要足够的垂直空间,以便眼睛能够把它登记为单独的区域——因此,统一 48px 和愿意提供 160px Teal 将整段带剥离给自己。在一个带内,反之亦然:内容被装入一个带内。 1600px 列为 32px 沟槽和相对紧凑的卡片贴垫,因此宽大的外侧节奏读作结构而非空虚.
 
-### 反应战略
+### 响应式布局
 
 #### 断点
 | 名称 | 宽度 | 密钥更改 |
@@ -140,16 +140,16 @@ The weight range is the most distinctive thing about the system. Running copy si
 | 超全天范围 | ≥ 1744px | 外容器盖;剩余宽度由两边填充的波段吸收 |
 
 #### 触控区域
-`{components.button-primary}` 站点 37px 高高的,在它的顶端 10px 垂直粘贴和 14px 标签,该标签位于 44×44 WCAG AAA最低,依靠周边的边距来进行舒适的敲击. `{components.text-input}` 财务报告和已审计财务报表 `{components.product-subnav}` 都清楚了, 舒适的,大约 46px 财务报告和已审计财务报表 64px 分别是, `{components.nav-tile}`。对于重建,将按钮的垂直粘贴提升到 14px 把它带到 45px 而不改变系统中的任何其他值。
+`{components.button-primary}` 站点 37px 高高的,在它的顶端 10px 垂直粘贴和 14px 标签,该标签位于 44×44 WCAG AAA最低,依靠周边的边距来进行舒适的敲击. `{components.text-input}` 和 `{components.product-subnav}` 都清楚了, 舒适的,大约 46px 和 64px 分别是, `{components.nav-tile}`。对于重建,将按钮的垂直粘贴提升到 14px 把它带到 45px 而不改变系统中的任何其他值。
 
-#### 折叠战略
+#### 窄屏布局调整
 桅头是变化最多的元素:在桌面上它携带一个汉堡,词签,宽搜索字段和三个工具图标,下面的平板将搜索字段倒塌为图标,而其余则保持位置. 产品子导航将全血带保持在每一个宽度,并变成横向滚动条而不是包,所以活动 `{components.subnav-active-bar}` 保持可见。卡片网格步骤 4- 最多为 3- 最多为 2- 最多为 1- 穿过梯子,接触页上的频道栏放下了它们 `{colors.divider}` 垂直规则,因为堆叠的块之间的垂直规则读作错误。 `{spacing.section}` 远比大多数系统都长,只在移动断点进行压缩。
 
-#### 图像行为
+#### 图片适配
 Photography is full-bleed inside its container and square-cornered when it fills a band, but takes `{rounded.md}` when it sits inside a product card and `{rounded.xl}` when it fills half of a corporate index content card. Video thumbnails carry a circular `{components.play-button-circular}` overlay. The contact hero uses a cut-out photographic strip with a soft feathered lower edge rather than a hard crop. Decorative pattern overlays — fine topographic contour lines, large open swirls — sit behind hero content at very low contrast and are treated as part of the band fill rather than as images.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -167,7 +167,7 @@ Photography is full-bleed inside its container and square-cornered when it fills
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -179,9 +179,9 @@ Photography is full-bleed inside its container and square-cornered when it fills
 | `{rounded.xl}` | 15px | 公司指数内容卡及其内部统计表面板 |
 | `{rounded.full}` | 9999px | 电话 circular 视频播放控制 |
 
-尺寸在小端处的细微度是异常的 4, 6 财务报告和已审计财务报表 8 全部在使用中,并且每个被分配到不同的控制家族——按钮,字段,卡片。两个大步骤是模板专用的,而不是可互换的:公司索引使用 15px 整个产品页使用时 8px,所以卡片的半径可以告诉你您在哪个模板上。 15px 价值值得注意,因为它是一种故意的奇怪现象,因为 16px 这将是传统的选择,系统一贯使用 15.
+尺寸在小端处的细微度是异常的 4, 6 和 8 全部在使用中,并且每个被分配到不同的控制家族——按钮,字段,卡片。两个大步骤是模板专用的,而不是可互换的:公司索引使用 15px 整个产品页使用时 8px,所以卡片的半径可以告诉你您在哪个模板上。 15px 价值值得注意,因为它是一种故意的奇怪现象,因为 16px 这将是传统的选择,系统一贯使用 15.
 
-### 摄影几何
+### 图片形状
 Images inside product cards take `{rounded.md}`; images filling half a corporate index card take `{rounded.xl}`. Full-band photography is square-cornered. Aspect ratios are not fixed — video thumbnails run roughly 16:9, hero photography is a wide strip, and card imagery fills whatever the card gives it. The system never crops to a circle except for the play control.
 
 
@@ -196,7 +196,7 @@ Images inside product cards take `{rounded.md}`; images filling half a corporate
 - Full width and identical on every page. Carries a hamburger, the wordmark, a wide search field and three utility icons
 
 **`logo-wordmark`**
-- 文本 `{colors.brand-mark}`类型 `{typography.heading-lg}`,四舍五入 `{rounded.none}`
+- 文字颜色 `{colors.brand-mark}`类型 `{typography.heading-lg}`,四舍五入 `{rounded.none}`
 - 界面中唯一的红色外观
 
 **`text-input`**
@@ -217,7 +217,7 @@ Images inside product cards take `{rounded.md}`; images filling half a corporate
 
 ### 按钮
 
-系统每个按钮都是 `{rounded.xs}` 与 `10px 16px` 垫子和 a `{typography.label}` 标签。只有变体之间的填充和边框变化。
+系统每个按钮都是 `{rounded.xs}` 配合 `10px 16px` 垫子和 a `{typography.label}` 标签。只有变体之间的填充和边框变化。
 
 **`button-primary`**
 - Background `{colors.primary}`, text `{colors.on-primary}`, type `{typography.label}`, rounded `{rounded.xs}`, padding `10px 16px`
@@ -234,7 +234,7 @@ Images inside product cards take `{rounded.md}`; images filling half a corporate
 - 被描述的同伴,总是与初级的右配角
 
 **`button-tertiary`**
-- 文本 `{colors.ink}`,四舍五入 `{rounded.xs}`, 编译 `10px 16px`
+- 文字颜色 `{colors.ink}`,四舍五入 `{rounded.xs}`, 编译 `10px 16px`
 - 填充为 8% 洗过 `{colors.ink}` 以任何表面为表率,而以软块而非定边为表率。
 
 **`button-primary-inverse`**
@@ -279,7 +279,7 @@ Images inside product cards take `{rounded.md}`; images filling half a corporate
 - Background `{colors.canvas-warm}`, text `{colors.ink}`, type `{typography.body-loose}`, rounded `{rounded.xl}`, padding `{spacing.xl}`
 - 一张有锡的卡片 里面嵌着一张内容卡片 里面有一张短的子弹形的图表
 
-**`product-card`** 财务报告和已审计财务报表 **`product-card-warm`**
+**`product-card`** 和 **`product-card-warm`**
 - Backgrounds `{colors.canvas}` and `{colors.canvas-warm}`, text `{colors.ink}`, type `{typography.body}`, rounded `{rounded.md}`, padding `{spacing.xxl}`
 - 产品页等值,位于较小的半径. 牌坐白带时使用暖变体.
 
@@ -302,7 +302,7 @@ Images inside product cards take `{rounded.md}`; images filling half a corporate
 - 联系页面上一个三重组合。每个列都有一个细长的大纲图标,一个 800- 字重级,短段和一段 `{components.link-inline}`,用全高垂直规则分隔
 
 **`link-inline`**
-- 文本 `{colors.link}`类型 `{typography.body}`,四舍五入 `{rounded.none}`
+- 文字颜色 `{colors.link}`类型 `{typography.body}`,四舍五入 `{rounded.none}`
 - 设定时无下划线,大小和字重与周围副本相同
 
 ### Footer
@@ -312,10 +312,10 @@ Images inside product cards take `{rounded.md}`; images filling half a corporate
 - 单水平行 fine-print 链接在一行社会图标上方。没有规则、没有填充变化、没有列结构
 
 **`footer-link`**
-- 文本 `{colors.ink}`类型 `{typography.caption}`,四舍五入 `{rounded.none}`
+- 文字颜色 `{colors.ink}`类型 `{typography.caption}`,四舍五入 `{rounded.none}`
 - 墨水而不是墨水, 装入墨水里 `{colors.link}`,这就是保持脚的安静
 
-### 实例(说明性)
+### 组合示例
 
 > These ten surfaces are kit-mirror demonstrations, not components found on the brand's own pages. Each is composed from the primitives above so downstream consumers re-skin the shapes this system actually uses — the square `{rounded.none}` band, the `{rounded.xs}` button, the `{rounded.md}` card, and a neutral ladder that separates surfaces by tone and a hairline rule instead of by shadow.
 
@@ -329,7 +329,7 @@ Images inside product cards take `{rounded.md}`; images filling half a corporate
 
 **`ex-product-selector`** 包括的简卡
 - Background `{colors.canvas-soft}`, text `{colors.ink}`, rounded `{rounded.md}`, padding `{spacing.xxl}`
-- 梯子上方有一条排行借款 `{components.nav-tile}` 铬
+- 梯子上方有一条排行借款 `{components.nav-tile}` 界面框架
 
 **`ex-cart-drawer`** ——订阅摘要.
 - Background `{colors.canvas}`, text `{colors.ink}`, rounded `{rounded.md}`, padding `{spacing.xxl}`, line items separated by `{colors.divider}`
@@ -338,7 +338,7 @@ Images inside product cards take `{rounded.md}`; images filling half a corporate
 **`ex-app-shell-row`** 侧边栏导航列
 - Background `{colors.canvas}`, text `{colors.ink}`, type `{typography.body}`, rounded `{rounded.md}`, padding `{spacing.sm} {spacing.md}`, active indicator `{colors.primary}`
 
-**`ex-data-table-cell`** 桌头和身体铬
+**`ex-data-table-cell`** 桌头和身体界面框架
 - 标题背景 `{colors.canvas-tint}` 输入 `{typography.caption}`,体细胞 `{typography.body}`单元格粘贴 `{spacing.sm} {spacing.md}`边框 `{colors.hairline}`
 
 **`ex-auth-form-card`** ——签入卡
@@ -358,17 +358,17 @@ Images inside product cards take `{rounded.md}`; images filling half a corporate
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - Build page structure from the neutral ladder. Moving a section one rung is the system's way of saying "new region".
 - 保留 `{colors.brand-mark}` 缺乏它能赋予它力量的就是它
-- 运行每个动作通过 `{colors.primary}` 时 间 `{rounded.xs}` 与 `10px 16px` 贴吧,不管背景如何
+- 运行每个动作通过 `{colors.primary}` 时 间 `{rounded.xs}` 配合 `10px 16px` 贴吧,不管背景如何
 - Flip polarity rather than changing colour when an action lands on a dark band — use `{components.button-primary-inverse}`.
 - 坚持住 `{spacing.section}` 时 间 48px 每一个全宽的带子上; 统一的节奏是小的直径步子可以辨别出来的原因。
 - 重心随身携带 400- 给...800 跳跃在身体和方向之间是系统的主要结构信号.
 - 保留 letter-spacing 在每个角色上,每个大小都保持零
 - Deploy chromatic colour only at whole-band scale, as `{components.section-band-teal}` or `{components.section-band-forest}`.
 
-### Don't
+### 应避免的做法
 - Don't add shadows. The system has none, and elevation is expressed by position on the neutral ladder.
 - Don't use pure black. `{colors.ink}` is warm and deliberately a few points off it.
 - Don't round a band, a section, a masthead or a footer — `{rounded.none}` on full-width chrome is the rule.
@@ -380,7 +380,7 @@ Images inside product cards take `{rounded.md}`; images filling half a corporate
 
 ## 设计词元原值
 
-分析 Oracle设计语言——一种建立在温和中性梯子而不是彩色调色板上的企业系统。六种编号的灰色几乎每个表面都携带,一种黑色的木炭携带每个动作,而著名的红色则被单为单词标记而保留。两个显示的登记册共存,是公司指数上非常轻的圣物和一种 Georgia serif 唯一一个色调的瞬间 是一个头条下的薄金规则 以及偶尔出现的全宽带 带状或森林绿色
+分析 Oracle设计语言——一种建立在温和中性梯子而不是配色上的企业系统。六种编号的灰色几乎每个表面都携带,一种黑色的木炭携带每个动作,而著名的红色则被单为单词标记而保留。两个显示的登记册共存,是公司指数上非常轻的圣物和一种 Georgia serif 唯一一个色调的瞬间 是一个头条下的薄金规则 以及偶尔出现的全宽带 带状或森林绿色
 
 ```yaml
 ---

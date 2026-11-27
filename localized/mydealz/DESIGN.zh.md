@@ -25,7 +25,7 @@ Geometrically the system is defined by the **fully-round 540px pill** — button
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **发牌绿色** (`{colors.primary}` — #30a83c:品牌的核心. 填充每颗初级CTA丸,每份交易价格,提交动作,主动链接,以及突出显示的STAT. On-color内容是: `{colors.on-primary}`.
 - **强绿色** (`{colors.green-strong}`: 亮表面绿色文本的深绿色( )discount-badge 标签, 轮廓- 按钮格言) 里面的填充绿色会太轻。
 - **热红** (`{colors.hot}`:温度"热"信号——交易的学位读数和高票箭头,品牌的兴奋色.
@@ -34,27 +34,27 @@ Geometrically the system is defined by the **fully-round 540px pill** — button
 - **紫色精华** (`{colors.premium}`:突出标注溢价/特色内容标语.
 - **贴现薄荷** (`{colors.discount-surface}`: 储蓄百分比后面的软绿色胶囊形.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}`: 堆放白牌的凉爽的光灰色页面上方坐着.
-- **表面** (`{colors.surface}`:纯白——每张牌,导航,页脚,按钮.
+- **界面表面** (`{colors.surface}`:纯白——每张牌,导航,页脚,按钮.
 - **Hairline** (`{colors.hairline}`): The 1px border on cards, buttons, and dividers.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}`: 交易标题、标题和主文本的真黑。
 - **体质** (`{colors.body}`:中灰色表示二级副本,元数据,哑音按钮标签.
 - **静音** (`{colors.muted}`: 浅灰色,用于最安静的字幕和占位符文本.
 
-### 语义
+### 语义色
 - **表面/ 文本警告** (`{colors.warning-surface}` / `{colors.warning-text}`:软黄丸和琥珀棕色文本用于过期/警告交易。
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 
 **Averta CY** — a humanist geometric sans — carries the entire system at two weights: medium (500) for body and lead copy, bold (700) for headings, UI labels, prices, and micro-labels. A **monospace** face appears in rare technical contexts (voucher codes). There is no light or black weight; the two-weight discipline keeps the dense feed consistent.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -73,7 +73,7 @@ Geometrically the system is defined by the **fully-round 540px pill** — button
 - 价格和温度总是大胆的;它们都是卡片上最重要的两个数字.
 - 密集的饲料依靠大小和字重,从不以颜色为主,为文字等级(颜色保留地位).
 
-### Note on Font Substitutes
+### 替代字体
 Averta CY is a commercial face. For open-source builds, **Mulish** or **Nunito Sans** (500/700) reproduce the humanist-geometric warmth with near-identical metrics; keep the two-weight split. Any system monospace substitutes for the voucher-code face.
 
 
@@ -84,13 +84,13 @@ Averta CY is a commercial face. For open-source builds, **Mulish** or **Nunito S
 - **托肯斯(前题)**: `{spacing.xxs}` 2px · `{spacing.xs}` 4px · `{spacing.sm}` 8px · `{spacing.md}` 12px · `{spacing.lg}` 16px · `{spacing.xl}` 24px · `{spacing.xxl}` 40px
 - 纸牌垫 `{spacing.lg}`; 纸牌行堆栈 `{spacing.sm}`–`{spacing.md}` 最大密度的空白。
 
-### 网格容器( C)
+### 网格与容器
 上面有两柱壳 ~768px:主交易种子(单叠列全宽卡)加上右侧边栏的券,新闻,讨论卡. 断点下方的侧栏滴放,种子全宽. 容器宽度和内容强度,而不是狭义的读列.
 
-### 白空间哲学
+### 留白规则
 白空间是配给的——这是信息产品,而不是营销页。卡片与紧凑的内部垫板紧紧地坐在一起;白卡之间凉爽的页面底色沟则做分离工作,而细边线边界则保持每张卡片对邻居的脆性。
 
-### 反应战略
+### 响应式布局
 
 #### 断点
 | 名称 | 宽度 | 密钥更改 |
@@ -101,14 +101,14 @@ Averta CY is a commercial face. For open-source builds, **Mulish** or **Nunito S
 #### 触控区域
 胶囊形按钮( Name`{components.button-primary}`)和温度控制清除了舒适的水龙头高度;投票箭头,评论,分享,以及书签图标在卡脚上搭载了慷慨的命中区.
 
-#### 折叠战略
+#### 窄屏布局调整
 分类条和右侧栏首先崩溃; 导航缩合为"Menü"丸+搜索+提交; 交易卡从媒体左行重流到窄屏幕上堆叠的缩略图上.
 
-#### 图像行为
+#### 图片适配
 交易缩略图包含在 `{rounded.md}` 纸牌的媒体边框,从未充血;假人就是完美的圆圈(`{rounded.circle}`) 商贸标志和app-shore徽章在 fixed 高处.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -125,7 +125,7 @@ The brand's playfulness lives in illustration, not gradients — a green cartoon
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -135,7 +135,7 @@ The brand's playfulness lives in illustration, not gradients — a green cartoon
 | `{rounded.full}` | 540px | Buttons, search pill, temperature control, filter chips — the pill signature |
 | `{rounded.circle}` | 9999px | 幻象,图标按钮 |
 
-### 摄影几何
+### 图片形状
 处理缩略图 `{rounded.md}` 纸卡媒体栏上的帧; 作者和社区的造型为圆( Q)`{rounded.circle}`),没有首屏摄影——产品是卡片网格.
 
 
@@ -149,7 +149,7 @@ The brand's playfulness lives in illustration, not gradients — a green cartoon
 **`button-outline-green`** ——品牌丁字二级(“+贝特拉格”).
 - `{colors.surface}` 满, `{colors.primary}` 标签+边框, `{rounded.full}`, 编译 `0px 14px`
 
-**`button-outline-neutral`** ——静静的铬("Menü").
+**`button-outline-neutral`** ——静静的界面框架("Menü").
 - `{colors.surface}` 满, `{colors.ink}` 标签, `{colors.hairline}` 边框, `{rounded.full}`, 编译 `0px 12px`
 
 **`button-muted`** ——不强调动作("Ohne Zustimmung weiter").
@@ -158,18 +158,18 @@ The brand's playfulness lives in illustration, not gradients — a green cartoon
 **`button-tag`** ——紧凑型公用事业控制.
 - `{colors.surface}` 满, `{colors.ink}` 标签, `{rounded.md}`紧紧的 `0px 4px` 粘贴
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`deal-card`** - 种子的原子 - 种子的原子
 - `{colors.surface}` 打开 `{colors.hairline}`, `{rounded.md}`, `{spacing.lg}` 页; 媒体左缩略图, 粗体黑色标题, a `price-lockup`, a `temperature-control`,商家+作者行,以及 a `button-primary` 带有注释/ 共享/ 书签图标的脚
 
 **`sidebar-card`** ——券/新闻/讨论牌
-- 同样的白色对接线 `{rounded.md}` 铬为 `deal-card`右侧的铁轨上
+- 同样的白色对接线 `{rounded.md}` 界面框架为 `deal-card`右侧的铁轨上
 
 **`timestamp-pill`** - "Geposet vor..." 标记
 - `{colors.canvas}` 满, `{colors.body}` `{typography.caption}`, `{rounded.md}`贴在卡片上
 
-### 输入表单( F)
+### 输入框与表单
 
 **`search-pill`** ——头部搜索
 - `{colors.surface}` 胶囊形 `{rounded.full}`, `{colors.hairline}` 边框, `{colors.body}` 占位符在 `{typography.body}`,左侧放大格
@@ -191,7 +191,7 @@ The brand's playfulness lives in illustration, not gradients — a green cartoon
 **`country-selector`**
 - `{colors.surface}` `{rounded.md}` 降下带有旗帜+标签的 `{colors.hairline}` 边框
 
-### 签名组件
+### 标志性组件
 
 **`temperature-control`** ——品牌的界定成分.
 - 全面展开 `{rounded.full}` 胶囊形: `temperature-down` 冷蓝( 冷蓝) (`{colors.cold}`) 下行,交易的温度读取热红(`{colors.hot}`),以及a 数据 `temperature-up` 热红的上行者——群众的票价显露出来.
@@ -217,45 +217,45 @@ The brand's playfulness lives in illustration, not gradients — a green cartoon
 **`avatar`** 作者/社区
 - 圆( 圆)`{rounded.circle}`继续 `{colors.canvas}` 白环
 
-### 实例(说明性)
+### 组合示例
 
 > Kit-miror演示表面,这些不是品牌内涵,每个都 `ex-*` 条目引用上面的品牌原始语,所以每个实例表面都是由这个光谱而不是模板默认而成的.
 
-**`ex-pricing-tier`** ——默认定价等级卡。 feature-card 带品牌的铬 canvas-soft 表面。
+**`ex-pricing-tier`**：默认套餐卡，沿用功能卡结构和品牌 canvas-soft 底色。
 - 属性 : `backgroundColor`, `textColor`, `borderColor`, `rounded`, `padding`
 
-**`ex-pricing-tier-featured`** ——地貌/高亮的层次——极性-浮点表面(暗色填充+光线文字在光线模式下,浅色填充+暗色文字在暗线模式下).
+**`ex-pricing-tier-featured`**：推荐套餐卡。浅色模式中用深底浅字，深色模式中用浅底深字。
 - 属性 : `backgroundColor`, `textColor`, `rounded`, `padding`
 
-**`ex-product-selector`** ——什么是包含的汇总卡——重新用于SaaS/B2B纵横(NOT为字形产品画廊).
+**`ex-product-selector`**：面向 SaaS / B2B 场景的套餐权益摘要卡。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-cart-drawer`** ——订阅摘要——重新用于SaaS/B2B(每件加件的行项目,而非字面车).
+**`ex-cart-drawer`**：SaaS / B2B 订阅摘要，每个附加项单独列出。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `item-divider`
 
-**`ex-app-shell-row`** ——App Shell 实例中的侧边栏导航行. Active State 使用品牌主标.
+**`ex-app-shell-row`**：应用框架示例里的侧栏导航行，以品牌主色标识选中状态。
 - 属性 : `backgroundColor`, `activeIndicator`, `rounded`, `padding`
 
-**`ex-data-table-cell`** — Default data-table th + td chrome. Header uses mono-caps eyebrow typography; body uses body-sm.
+**`ex-data-table-cell`**：数据表格中 th 与 td 的默认样式。表头采用大写等宽字，正文采用 body-sm。
 - 属性 : `headerBackground`, `headerTypography`, `bodyTypography`, `cellPadding`, `rowBorder`
 
-**`ex-auth-form-card`** ——签入/签入卡. 复用. feature-card 铬 text-input 原始人在里面,他们都在里面
+**`ex-auth-form-card`**：登录与注册卡，复用功能卡和 text-input。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-modal-card`** ——模度对话框表面——与 feature-card 以高的阴影盟誓,
+**`ex-modal-card`**：对话框表面，沿用功能卡样式并加浮层投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-empty-state-card`** ——空状态插图框架.
+**`ex-empty-state-card`**：空状态插图容器。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `captionTypography`
 
-**`ex-toast`** ——通知表面. feature-card 形状 + 中阴影。
+**`ex-toast`**：轻提示，沿用功能卡圆角并使用中等投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `typography`
 
 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` 绿色的,用于行动和价格——它是将饲料连在一起的单一线条。
 - 留着 `temperature-control` 组合完好无损 : `{colors.cold}` 下来, `{colors.hot}` 升温——是品牌的标志.
 - 将每个按钮、芯片、搜索和温度控制都注射到 `{rounded.full}`; 保留内容卡 `{rounded.md}`.
@@ -263,7 +263,7 @@ The brand's playfulness lives in illustration, not gradients — a green cartoon
 - 将打字机保存到 Averta CY 500 / 700; 大胆的每个价格和温度。
 - 使用单独的牌 `{colors.hairline}` 边界和边界 `{colors.canvas}` 沟壑,不重阴.
 
-### Don't
+### 应避免的做法
 - Don't recolor prices or primary actions away from `{colors.primary}` green.
 - Don't split the temperature pairing or recolor the vote arrows — cold is blue, hot is red, always.
 - Don't introduce shadows on resting feed cards; the soft 4–12px shadow is for elements that lift.

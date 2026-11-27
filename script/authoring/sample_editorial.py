@@ -88,42 +88,218 @@ ONE_WIN_COPY = {
     "Search games": "搜索游戏",
 }
 
-LEADS = {
-    "bmw": "浅色页面用 BMW 蓝（#1c69d4）标记主要操作。深海军蓝区块衬托车型照片，700 字重的标题与 300 字重的正文拉开阅读层级。",
-    "1win": "近黑底和深灰卡片为内容留出空间。鲜绿用于注册和主要确认操作，电光蓝用于登录、链接和次要操作。粗字重 Inter 与紧凑的卡片排列适合信息密集的界面。",
-    "claude": "暖米白底和珊瑚色主按钮让页面保持温和。Copernicus 衬线标题与 StyreneB 无衬线正文区分阅读层级，深海军蓝的代码样机突出产品内容。",
-    "airtable": "白底与近黑文字构成编辑式版面。解释产品功能时，珊瑚色、深绿和深海军蓝卡片以通栏色块划分段落。",
-    "dell-1996": "黑色外框、粗体标题和紧密的目录网格构成九十年代网页风格。不同产品线用条带式卡片区分，贴纸和奖章把促销信息放在醒目位置。",
-    "starbucks": "暖米白页面配多阶品牌绿，用深绿承载重点区块。胶囊按钮和圆角内容卡统一零售界面，金色用于奖励场景。",
-    "stripe": "深海军蓝正文、电光靛蓝主按钮和首屏渐变网格构成页面基调。轻字重展示标题与规整的表格数字分担阅读与信息对照。",
-    "tesla": "大幅汽车摄影占据首屏，导航和按钮保持简洁。画面保留足够空间，让车型与主要操作同时可见。",
-    "cal": "白色底面、黑色主按钮和 Cal Sans 标题构成简洁的预约界面。留白区分段落，浅灰圆角卡片承载次要内容。",
-    "notion": "纸白底和近黑色 Inter 字体便于长时间阅读。蓝色标记主要操作，多彩贴纸用于局部点缀，深靛蓝区块形成主题对比。",
-}
-
-DARK_LEADS = {
-    "discord": "深靛蓝底上叠加品牌蓝紫至洋红渐变，电光绿突出主要操作。ABC Ginto Nord 粗体大写标题与圆角媒体构成活泼的游戏社区界面。",
-    "dji": "中性近黑色替代浅色展台。方形设备卡片与影棚照片仍是视觉重点，较浅文字便于阅读参数。",
-    "figma": "画布和文字改用反色关系。浅彩色块保持品牌辨识度，深色界面仍能用色块区分功能。",
-    "mastercard": "深底和浅字形成反色层级，沿用品牌强调色与环形构图。彩色环形元素在深色表面上更容易辨认。",
-    "mercury": "墨紫色深底贯穿页面。面板略亮于页面，淡紫文字和操作色提供层次，整体延续金融产品的静谧质感。",
-    "mydealz": "近黑底承载深灰卡片。绿标记品牌操作，红与蓝区分热度变化，让密集列表中的状态依然容易扫描。",
-    "nerdwallet": "带森林绿倾向的近黑色保留品牌色调。较亮的薄荷文字和强调色用来区分金融信息与操作。",
-    "nike": "对比鲜明的黑白框架衬托通栏运动摄影。Futura 粗体大写标题与紧凑的正文形成清楚的大小层级。",
-    "nintendo-2001": "午夜海军蓝取代浅色金属底。斜面边缘、琥珀色导航与像素图形延续千禧年游戏主机的质感。",
-    "nvidia": "黑色首屏与页脚突出产品影像，白色内容区用于阅读技术说明。品牌绿标记操作与重点。",
-    "ollama": "中性深色替换白底，保留 Markdown 文档式的布局和等宽文字。内容结构仍由标题、分隔线与代码区块说明。",
-    "opencode.ai": "暖黑页面沿用终端式等宽排版。文字靠字号与空白区分层次，控件颜色与背景保持清楚对比。",
-    "oura": "深咖啡色画布替换浅纸色，暖白文字保留柔和的阅读质感。衬线标题与产品影像仍是页面重点。",
-    "pinterest": "暖调近黑底衬托图片瀑布流，品牌红仍用于主要操作。界面颜色保持克制，为不同色彩的图片留出空间。",
-    "playstation": "纯黑（#000000）作为主背景，较浅的 #121314 表面承载内容。冷色点缀用来区分操作和内容入口。",
-    "posthog": "带橄榄色倾向的近黑背景衬托手绘插图。黄橙色胶囊按钮继续标记主要操作。",
-    "starbucks": "页面底色加深至近黑的森林绿，House Green 与 Uplift 绿依次用于更亮的表面。品牌绿继续用于主要识别元素。",
-    "together.ai": "近黑首屏色扩展为深色背景。橙、洋红和蓝紫渐变用于强调关键区域，普通内容留在稳定的深色表面。",
-    "voltagent": "近黑背景延续终端风格。翠绿用于重点、状态与可操作内容，等宽字体保持代码和说明的统一。",
+REVIEWED_DOCUMENT_COPY = {
+    "**`card-content`** — the default content card on canvas-soft.": "**`card-content`**：默认内容卡，使用 canvas-soft 底色。",
+    "Background `{colors.canvas-soft}`, text `{colors.ink}`, 1 px solid `{colors.hairline}`, padding `{spacing.xl}`, shape `{rounded.md}`.":
+        "底色为 `{colors.canvas-soft}`，文字为 `{colors.ink}`，使用 1 px 实线边框 `{colors.hairline}`、内边距 `{spacing.xl}` 和圆角 `{rounded.md}`。",
+    "**`card-mockup`** — the terminal-screenshot mockup card.": "**`card-mockup`**：终端截图示意卡。",
+    "Same chrome as `card-content` but body in `{typography.code}` (DM Mono) when text appears inside.":
+        "容器样式沿用 `card-content`。卡内文字使用 `{typography.code}`（DM Mono）。",
+    "**`download-tile`** — the Mac / Linux / Windows download tile.": "**`download-tile`**：Mac / Linux / Windows 下载卡片。",
+    "Background `{colors.canvas-soft}`, text `{colors.ink}`, hairline border, padding `{spacing.xl}`, shape `{rounded.md}`. Hosts a platform icon + label + download CTA.":
+        "底色为 `{colors.canvas-soft}`，文字为 `{colors.ink}`，配细边框、内边距 `{spacing.xl}` 和圆角 `{rounded.md}`。卡内放置平台图标、标签及下载按钮。",
+    "**`partner-logo-tile`** — the canvas-soft tile hosting a partner logo.": "**`partner-logo-tile`**：显示合作伙伴标识的 canvas-soft 图块。",
+    "Background `{colors.canvas-soft}`, monochrome logo SVG inside, padding `{spacing.lg}`, shape `{rounded.md}`.":
+        "底色为 `{colors.canvas-soft}`，放置单色 SVG 标识，内边距为 `{spacing.lg}`，圆角为 `{rounded.md}`。",
+    "**`testimonial-card`** — the single quote-style card with a portrait.": "**`testimonial-card`**：带人物肖像的单条推荐语卡。",
+    "Background `{colors.canvas-soft}`, text `{colors.ink}`, padding `{spacing.xl}`, shape `{rounded.md}`. Portrait 1:1 + body in `{typography.body-md}`.":
+        "底色为 `{colors.canvas-soft}`，文字为 `{colors.ink}`，内边距为 `{spacing.xl}`，圆角为 `{rounded.md}`。肖像比例为 1:1，正文使用 `{typography.body-md}`。",
+    "**`press-row`** — the press-coverage list item.": "**`press-row`**：媒体报道列表项。",
+    "Background `{colors.canvas}` (no fill — sits on the canvas band), 1 px solid bottom border `{colors.hairline}`, body in `{typography.body-md}`, padding `{spacing.lg}` 0.":
+        "沿用所在区块的 `{colors.canvas}` 底色。底边使用 1 px 实线 `{colors.hairline}`，正文使用 `{typography.body-md}`，内边距为 `{spacing.lg}` 0。",
+    "**`job-row`** — the \"Join our team\" list item (single row per open role).": "**`job-row`**：「加入团队」列表项，每个职位独占一行。",
+    "Background `{colors.canvas}`, 1 px solid bottom border, body in `{typography.body-md-strong}`, padding `{spacing.lg}` 0.":
+        "底色为 `{colors.canvas}`，底边使用 1 px 实线，正文使用 `{typography.body-md-strong}`，内边距为 `{spacing.lg}` 0。",
+    "**`text-input`** — the dark-canvas text input.": "**`text-input`**：暖深色页面上的输入框。",
+    "Background `{colors.canvas-soft}`, text `{colors.ink}`, 1 px solid `{colors.hairline}`, body in `{typography.body-sm}`, padding `{spacing.sm} {spacing.md}`, shape `{rounded.sm}`.":
+        "底色为 `{colors.canvas-soft}`，文字为 `{colors.ink}`，使用 1 px 实线边框 `{colors.hairline}`。正文用 `{typography.body-sm}`，内边距为 `{spacing.sm} {spacing.md}`，圆角为 `{rounded.sm}`。",
+    "**`hero-band`** — the dark hero band hosting the 64-px Inter headline.": "**`hero-band`**：深色首屏区块，放置 64-px 的 Inter 标题。",
+    "Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.5xl} {spacing.xl}`. Headline `{typography.display-xl}` (64 px / 400 / `-1.6 px`). Below: a 2-column terminal-mockup split.":
+        "底色为 `{colors.canvas}`，文字为 `{colors.ink}`，内边距为 `{spacing.5xl} {spacing.xl}`。标题用 `{typography.display-xl}`（64 px / 400 / `-1.6 px`），下方双列展示终端界面。",
+    "**`content-band`** — the standard content band.": "**`content-band`**：标准内容区块。",
+    "Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.5xl} {spacing.xl}`. Section headline `{typography.display-md}`.":
+        "底色为 `{colors.canvas}`，文字为 `{colors.ink}`，内边距为 `{spacing.5xl} {spacing.xl}`。区块标题用 `{typography.display-md}`。",
+    "Auto-derived kit-mirror demonstration surfaces (`scripts/derive-examples-block.mjs`). Each `ex-*` entry references brand-native primitives so downstream consumers (`/preview-design`, `/generate-kit`) re-skin the same 10 surfaces consistently. `TO_FILL` markers indicate missing primitives — resolve in the LLM judgment pass.":
+        "以下组合场景由 `scripts/derive-examples-block.mjs` 生成。各 `ex-*` 条目复用品牌基础样式，供 `/preview-design` 和 `/generate-kit` 以统一风格呈现同一套 10 个示例。`TO_FILL` 提示有待核对的基础样式。",
+    "**`ex-pricing-tier`** — Default Pricing tier card. Re-uses feature-card chrome with brand canvas-soft surface.": "**`ex-pricing-tier`**：默认套餐卡，沿用功能卡结构和品牌 canvas-soft 底色。",
+    "**`ex-pricing-tier-featured`** — Featured/highlighted tier — polarity-flipped surface (dark fill + light text in light mode, light fill + dark text in dark mode).":
+        "**`ex-pricing-tier-featured`**：推荐套餐卡。浅色模式中用深底浅字，深色模式中用浅底深字。",
+    "**`ex-product-selector`** — What's Included summary card — re-purposed for SaaS / B2B verticals (NOT a literal product gallery).":
+        "**`ex-product-selector`**：面向 SaaS / B2B 场景的套餐权益摘要卡。",
+    "**`ex-cart-drawer`** — Subscription summary — re-purposed for SaaS / B2B (line items per add-on, not literal cart).": "**`ex-cart-drawer`**：SaaS / B2B 订阅摘要，每个附加项单独列出。",
+    "**`ex-app-shell-row`** — Sidebar nav row inside the App Shell example. Active state uses brand primary as the indicator.": "**`ex-app-shell-row`**：应用框架示例里的侧栏导航行，以品牌主色标识选中状态。",
+    "**`ex-data-table-cell`** — Default data-table th + td chrome. Header uses mono-caps eyebrow typography; body uses body-sm.":
+        "**`ex-data-table-cell`**：数据表格中 th 与 td 的默认样式。表头采用大写等宽字，正文采用 body-sm。",
+    "**`ex-auth-form-card`** — Sign-in / sign-up card. Re-uses feature-card chrome with text-input primitives inside.": "**`ex-auth-form-card`**：登录与注册卡，复用功能卡和 text-input。",
+    "**`ex-modal-card`** — Modal dialog surface — same chrome as feature-card with elevated shadow.": "**`ex-modal-card`**：对话框表面，沿用功能卡样式并加浮层投影。",
+    "**`ex-empty-state-card`** — Empty-state illustration frame.": "**`ex-empty-state-card`**：空状态插图容器。",
+    "**`ex-toast`** — Toast notification surface — feature-card shape + medium shadow.": "**`ex-toast`**：轻提示，沿用功能卡圆角并使用中等投影。",
+    "The only semantic signal is `{colors.live-red}` for live/breaking state. There are no success or warning colors — news chrome stays neutral.":
+        "`{colors.live-red}` 是直播与突发状态使用的语义色。新闻界面框架维持中性色，归档无专用成功色或警告色。",
+    "Article grids: square-cornered 16:9 and 4:3 crops, packed edge to edge.": "文章网格使用直角、贴边排列的配图，裁切比例为 16:9 和 4:3。",
+    "A dedicated live-news color system — `{colors.live-red}` badges, bands, and timeline dots connected by a `{colors.silver}` rail":
+        "直播报道用 `{colors.live-red}` 标记徽标、横幅和时间轴圆点。圆点以 `{colors.silver}` 连线串联。",
+    "Network section rails: full-height vertical bars in `{colors.rail-teal}` and `{colors.rail-red}` carrying rotated white uppercase labels beside portrait grids.":
+        "人物肖像网格旁用 `{colors.rail-teal}` 和 `{colors.rail-red}` 绘制贯穿栏目全高的竖色条，条上用旋转的白色大写字显示栏目名。",
+    "The live apparatus: a `{typography.label-black}` LIVE UPDATES label in `{colors.live-red}` (badged at `{rounded.xs}`); a full-width `{colors.live-red}` breaking band with `{colors.on-primary}` headline text; and the minute-by-minute strip — `{colors.live-red}` dots on a `{colors.silver}` rail beside timestamped `{typography.body-sm}` items.":
+        "直播状态标签 LIVE UPDATES 用 `{typography.label-black}`、`{colors.live-red}` 和 `{rounded.xs}`。通栏突发新闻横幅用 `{colors.live-red}`，标题文字用 `{colors.on-primary}`。逐分钟时间轴用 `{colors.live-red}` 圆点与 `{colors.silver}` 连线，旁列采用 `{typography.body-sm}` 的带时间戳更新。",
+    "Live blogs run a single reading column with a right rail; updates stack as timestamped blocks.":
+        "直播博客使用单列正文与右侧栏，每条更新带时间戳并按顺序堆叠。",
+    "**Hairline** (`{colors.hairline}` — #d8d8d8) and **Silver** (`{colors.silver}` — #bebebe): rule tones — list dividers, card edges, and the live-timeline rail.":
+        "**细线色**（`{colors.hairline}`，#d8d8d8）与**银灰色**（`{colors.silver}`，#bebebe）用于列表分隔线、卡片边缘及直播时间轴连线。",
+    "The nav collapses into a hamburger while the LIVE pill and logo block persist. News grids collapse column-by-column toward the single-column mobile feed; the live timeline keeps its dot rail at every width; network portrait grids step 4 → 2 → 1 with the section rails moving above the grid.":
+        "导航收起为菜单，LIVE 胶囊标签和品牌标识区保持可见。新闻网格随视口收窄逐列减为手机单栏。直播时间轴在各宽度均保留圆点和连线。人物肖像网格按 4 → 2 → 1 列变化，栏目色条移到网格上方。",
+    "**Editorial body:** Single 12-column grid; product pages often use 8/4 split (main panel + side rail).":
+        "**编辑式正文：**采用 12-column（十二列）网格。产品页通常按 8/4 划分主面板和侧栏。",
+    "Trading dashboards switch from chart + side-rail to chart-only with a separate \"Trade\" tab on mobile.":
+        "交易仪表板在手机上改为单独展示图表，侧栏功能放入「交易」标签页。",
+    "Sticky rail uses `card-checkout-summary`.": "吸附侧栏使用 `card-checkout-summary`。",
+    "**`footer-light`** — Closing white-canvas footer. Background `{colors.canvas}`, text `{colors.body}`. 6-column link list.":
+        "**`footer-light`**：白底页脚。底色为 `{colors.canvas}`，文字为 `{colors.body}`，链接列表为 6-column（六列）。",
 }
 
 EXACT = {
+    "Key Changes": "布局变化",
+    "Mobile-Large": "大屏手机",
+    "Desktop-Large": "宽屏桌面",
+    "Single-column stack, hamburger nav, hero scales to ~36px, section padding ~48px, chevrons hidden": "单列排列，导航收起为菜单。首屏字号约 ~36px，区块内边距约 ~48px，隐藏折线装饰。",
+    "Same column count, hero scales to ~44px, pricing tiers stack vertically": "维持单列，首屏字号约 ~44px，套餐卡纵向排列。",
+    "2-column product grid, 2x2 pricing, full text nav, chevrons shrink to ~60%": "产品网格为 2-column（双列），套餐卡排成 2x2，显示完整文字导航，折线装饰缩至 ~60%。",
+    "3-column product grid, 4-column pricing, full nav": "产品网格为 3-column（三列），套餐卡为 4-column（四列），显示完整导航。",
+    "4-column product grid, 1366px content max-width with full-bleed bands": "产品网格为 4-column（四列），内容 max-width 为 1366px，背景区块通栏显示。",
+    "level 0 · flat": "0 · 平面",
+    "level 1 · hairline": "1 · 细边框",
+    "level 2 · soft lift": "2 · 轻投影",
+    "level 3 · floating": "3 · 浮层",
+    "Section band": "平面区块",
+    "Hairline frame": "细边框容器",
+    "Soft Lift": "轻投影卡片",
+    "Floating Modal": "浮层",
+    "Full-bleed color block. No shadow, no border. Cloud + fog alternating bands rely on this.": "通栏色块省去边框和投影，用 Cloud 与 Fog 底色交替区分区块。",
+    "1px hairline border. FAQ accordions, outlined buttons, comparison-table cells.": "使用 1px 细边框，适用于 FAQ 折叠区、描边按钮和对比表格单元格。",
+    "0 2px 8px rgba(26,26,26,0.08). The catalog workhorse — every product card gets it.": "目录中的产品卡片统一使用轻投影。0 2px 8px rgba(26,26,26,0.08)",
+    "0 8px 24px rgba(26,26,26,0.12). Reserved for transient overlays — add-to-cart drawer, image zoom.": "用于购物车抽屉和图片放大等临时浮层。0 8px 24px rgba(26,26,26,0.12)",
+    "Dark inversion of the brand's black-and-white duet. The polarity flips — ink (originally pure black) now reads as the lightest surface, and the primary CTA pill renders as white-on-dark. Every other relationship preserved. The system has no second accent.": "深色版本将黑白关系反转。原本纯黑的 ink 成为最浅色，主要胶囊按钮以白色显示在深色背景上。其余配色关系沿用常规版。",
+    "Six button roles, all pill-shaped except the larger ride-request CTA (16 px) and the translucent tab-toggle (36 px). In dark mode the primary CTA polarity-flips from black-on-white to white-on-dark.": "六种按钮角色以胶囊形为主。叫车主按钮圆角为 16 px，半透明 tab-toggle 圆角为 36 px。深色版的主按钮以白色显示在深色背景上。",
+    "Cards round to 16 px. Promo cards come in light and dark polarity-flipped variants. In dark mode the \"promo-card-on-dark\" surface flips to white — the same alternating-band rhythm just played in inverse.": "卡片使用 16 px 圆角，推广卡采用明暗两种表面。深色版的 promo-card-on-dark 改用白底，保留明暗交替的节奏。",
+    "Two input variants — a canvas-softer default and a slightly-darker nested variant for use inside dark cards. Inputs sit on canvas-softer surface with flat corners; only the ride-request-form-input-row rounds to 8 px.": "默认输入框用 canvas-softer 底色，深色卡片内嵌入的输入框底色略深。输入框通常为直角，ride-request-form-input-row 使用 8 px 圆角。",
+    "Four levels. Level 0 (flat) is the default — the brand leans on the hairline-of-canvas contrast and the polarity-flipped white bands (now white in dark mode) for depth, not shadow. Shadow is reserved for the floating pill and the ride-request form card.": "界面有四级视觉层次，默认使用平面的第 0 级。细分隔线与反转为白色的区块用于区分层次，阴影留给悬浮胶囊按钮和叫车表单卡。",
+    "The ride-request form card, the category chip row, the FAQ accordion, the app-download pill, the alternating hero bands (light + dark), and the showcase image card — rendered in dark inversion. The polarity bands swap which surface carries which polarity.": "深色版沿用叫车表单卡、分类标签、FAQ 折叠区、应用下载胶囊按钮和图片展示卡。首屏各区块的明暗关系对调。",
+    "A pure-white canvas with deep ink ladder, HP Electric Blue as the lone signal, and supporting bloom + storm accent families for sale tags and lifestyle imagery.": "纯白背景搭配深色文字层级。HP Electric Blue 用于主要操作，Bloom 和 Storm 色系用于促销标签与生活方式图片。",
+    "Forma DJR Micro across every surface — display, body, button, caption — at weights 400 / 500 / 600 / 700. Inter is the closest open-source substitute.": "展示标题、正文、按钮和图注均使用 Forma DJR Micro，字重为 400 / 500 / 600 / 700。Inter 是最接近的开源替代字体。",
+    "Sharp 4px-rounded rectangles with uppercase 600 labels. The blue primary appears at most twice per viewport.": "按钮为 4px 圆角矩形，标签使用 600 字重的大写文字。每个视口最多出现两处蓝色主按钮。",
+    "Cards round at 16px with Soft Lift shadow. Pricing tiers, product tiles, and category icons all share the same chrome vocabulary.": "卡片使用 16px 圆角与 Soft Lift 阴影。套餐卡、产品卡和分类图标沿用同一套表面样式。",
+    "Inputs sit on white with steel-gray hairline borders, 4px corners, 44px height. Focused state thickens the stroke to 2px ink.": "输入框为白底、钢灰细边框，圆角 4px、高 44px。聚焦时描边改为 2px 深色实线。",
+    "8px base unit. The 80px section gap is the universal rhythm constant — every full-bleed band is separated by it.": "基础间距为 8px。各通栏区块之间采用一致的 80px 间距。",
+    "Two-tier philosophy: buttons stay sharp at 4px while cards and photo frames soften at 16px.": "按钮使用 4px 圆角，卡片和照片框使用 16px 圆角。",
+    "Mostly flat. Soft Lift shadow is the workhorse for product cards and pricing tiers. Floating Modal is rare and reserved for transient overlays.": "页面主要采用平面层次。产品卡和套餐卡使用 Soft Lift 投影。Floating Modal 用于临时浮层。",
+    "Five breakpoints. The blue chevron decorations vanish on mobile so the photo card centers cleanly.": "布局设有五个断点。手机端隐藏蓝色折线装饰，照片卡片居中。",
+    "Stark black + white duet, grayscale only. Every primary CTA pill, every dark band, every footer fill is one shade of ink. The system has no second accent — validation cues lean on the editorial illustrations instead of a semantic palette.": "页面使用黑、白和灰度色。主要胶囊按钮、深色区块和页脚共用同一深色。验证提示通过编辑式插图表达。",
+    "Two faces carry the entire system. The display face (substituting Inter 700 for the proprietary geometric display sans) at 32–52 px display sizes with tight 1.22–1.25 line-heights; the text face (Inter 400 / 500) for body, button, link, and small headings. Sentence-case only — never letter-spaced.": "展示标题用 Inter 700 替代原定制几何无衬线体，字号 32–52 px，行高 1.22–1.25。正文、按钮、链接和小标题使用 Inter 400 / 500。英文使用句首大写，字距沿用默认值。",
+    "Six button roles, all pill-shaped except the larger ride-request CTA (16 px) and the translucent tab-toggle (36 px). One black pill per visible viewport is the brand's whole conversion story.": "六种按钮角色以胶囊形为主。叫车主按钮圆角为 16 px，半透明标签切换控件圆角为 36 px。每个视口用一个黑色胶囊按钮突出主要操作。",
+    "Cards round to 16 px. Promo cards come in light and dark polarity-flipped variants. The signature alternating-band rhythm — white card, black card, white card, black footer — is the brand's whole depth system.": "卡片使用 16 px 圆角，推广卡采用深浅两种表面。白卡、黑卡、白卡与黑色页脚依次排列，通过底色变化区分层次。",
+    "Two input variants — a canvas-soft default and a slightly-lighter nested variant for use inside white cards. Inputs sit on canvas-soft surface with flat corners; only the ride-request-form-input-row rounds to 8 px.": "默认输入框用 canvas-soft 底色，白色卡片内嵌入的输入框底色略浅。输入框通常为直角，ride-request-form-input-row 使用 8 px 圆角。",
+    "Base unit 4 px. Sections sit at 32 px gutters; promo-card insets at 24 px; the ride-request form keeps a compact 16 px interior so the form-input rows breathe.": "间距基准为 4 px，区块两侧留白 32 px，promo-card 内边距 24 px。叫车表单内边距 16 px，便于区分各行输入框。",
+    "The pill is the brand's signature interactive shape — 999 px on every interactive element. Cards sit at 16 px. The tab-toggle is the only off-shape exception at 36 px.": "交互控件以 999 px 胶囊圆角为特征。卡片使用 16 px 圆角，tab-toggle 使用 36 px 圆角。",
+    "Four levels. Level 0 (flat) is the default — the brand leans on the hairline-of-canvas contrast and the polarity-flipped black bands for depth, not shadow. Shadow is reserved for the floating pill and the ride-request form card.": "视觉层次分为四级，默认使用平面的第 0 级。细分隔线与黑白反转区块区分层次，悬浮胶囊按钮和叫车表单卡使用阴影。",
+    "The ride-request form card, the category chip row, the FAQ accordion, the app-download pill, the alternating hero bands (light + dark), and the showcase image card — the components that, taken together, carry the brand even without illustrations.": "标志性组件包括叫车表单卡、分类标签、FAQ 折叠区、应用下载胶囊按钮、深浅交替的首屏区块和图片展示卡。",
+    "Mobile-first breakpoints. Nav stays horizontal until ~1120 px; promo cards collapse from 2-up to 1-up at the mobile boundary; ride-request form scales from a 490-px max-width card to full-bleed edge-to-edge.": "采用移动优先的断点设计。导航在 ~1120 px 左右切换，进入手机断点后推广卡从 2-up 改为 1-up。叫车表单由 max-width 为 490-px 的卡片改为通栏显示。",
+    "Terminal panes, secondary buttons.": "用于终端面板和次按钮。",
+    "Side-rail filter group": "侧栏筛选控件组",
+    "Listing detail: 2-column with sticky reservation rail": "房源详情使用 2-column（双列）布局，预订侧栏采用 sticky 定位。",
+    "Same chrome plus Level 1 subtle drop shadow.": "沿用界面框架，并加第 1 级浅投影。",
+    "No drop shadows in retail chrome. The only depth cues are the 1px Hairline divider on rows and the 1px Hairline-Soft inset on sticky strips.":
+        "零售界面依靠 1px 的 Hairline 行分隔线和 sticky 条带的 1px Hairline-Soft 内边线表达层次。",
+    "Most chrome lives at 4–6px. Pill (9999px) is reserved for the sticky nav CTA and pill chips.":
+        "界面控件通常使用 4–6px 圆角。9999px 全圆角用于 sticky 导航主按钮和胶囊标签。",
+    "Identical to light mode: 4–6px for chrome, pill for the sticky CTA.":
+        "与浅色模式一致，界面控件采用 4–6px 圆角，sticky 主按钮采用胶囊形。",
+    "The live-timeline rail and card edges.": "用于直播时间轴连线与卡片边缘。",
+    "Rail Teal": "栏目色条蓝绿",
+    "Rail Crimson": "栏目色条深红",
+    "The leadership section rail.": "用于管理团队栏目的竖色条。",
+    "The companion section rail.": "用于相邻栏目的竖色条。",
+    "Timestamped update item with dot-and-rail chrome": "带时间戳、圆点和连线的直播更新条目",
+    "Each entry sits on the Silver rail between Live Red dots": "每条更新位于 Silver 时间轴上，由 Live Red 圆点标记。",
+    "network sampler · Night Canvas, rails, gold rule, amber active link": "企业网络示例 · 深夜色底、栏目色条、金色分隔线和琥珀色选中链接",
+    "Rail folds under; grids step to 2-up": "侧栏移到正文下方，网格减为双列（2-up）。",
+    "Full news grid with right rail": "完整的新闻网格，右侧保留侧栏。",
+    "the nav collapses to hamburger while the logo block and LIVE pill persist; news grids collapse column-by-column to the mobile feed; the live timeline keeps its dot rail at every width; network portrait grids step 4 → 2 → 1 with rails moving above the grid.":
+        "窄屏导航收起为菜单按钮，品牌标识区和 LIVE 胶囊标签保持可见。新闻网格逐步减列为手机单栏。各宽度均保留直播时间轴的圆点和连线。人物肖像网格按 4 → 2 → 1 列变化，栏目色条移到网格上方。",
+    "Agentic Development Environment": "智能代理开发环境",
+    "A near-monochrome warm-dark system built around a single off-white accent. The brand's \"primary\" is really an off-white that doubles as text on canvas and as button-primary fill. There is no chromatic brand accent — the warm-dark tone is the brand's distinguishing voice.":
+        "界面采用近单色的暖调深底。暖白色同时用于页面正文和主按钮底色（button-primary），与暖深色背景一起构成品牌的视觉识别。",
+    "Off White Primary": "暖白主色",
+    "On-Primary Warm Dark": "暖深色主按钮文字",
+    "Canvas Soft": "柔和深底",
+    "Body Strong": "强调正文色",
+    "The brand's single \"primary\" — used as button fill, default text on canvas, and the wordmark color. The off-white IS the brand's distinguishing tone.":
+        "暖白色用于按钮底色、页面默认文字和品牌字标，是这套界面的主要识别色。",
+    "The warm dark used as text on the off-white primary CTA. Mirrors the canvas tone.": "暖白主按钮上的深色文字，色值与页面底色一致。",
+    "The warm dark page background — slightly browner than pure black. The warmth IS the brand's identity.": "暖调的近黑色页面底，带轻微褐色倾向。",
+    "Lighter warm-dark fill used for cards, mockup chrome, and partner-logo tiles.": "比页面略亮的暖深色，用于卡片、界面示意及合作伙伴标识图块。",
+    "1px solid divider on dark surfaces. The brand's universal edge color.": "用于深色表面的 1px 实线分隔线和通用边框。",
+    "Default text on canvas — same off-white as the primary, intentionally unified.": "页面默认文字色，与暖白主色一致。",
+    "Mid-emphasis body text — slightly cooler than ink.": "中等强调的正文色，比主文字色（ink）略冷。",
+    "Secondary body text — captions, supporting copy, press-coverage rows.": "用于图注、辅助说明和媒体报道列表等次要文字。",
+    "Lowest-priority text — timestamps, fine print, footer secondary lines.": "用于时间戳、小字说明和页脚次要文字。",
+    "Three faces ladder the system: Inter for narrative and display, DM Mono for terminal mockups and command snippets, Instrument Serif for occasional editorial italics. The hero sits at 64 px Inter weight 400 with -1.6 px tracking — restrained, deliberately quiet.":
+        "Inter 用于叙述和展示标题，DM Mono 用于终端示意和命令片段，Instrument Serif 用于少量编辑式斜体。首屏标题为 64 px 的 Inter，字重 400，字距 -1.6 px。",
+    "Section headlines stay quiet": "章节标题保持克制",
+    "Sub-section heading at thirty-two": "子章节标题",
+    "Card titles and lead emphasis": "卡片标题与导语强调",
+    "An editorial italic moment.": "编辑式斜体样例。",
+    "A lead paragraph — the calm, slightly larger body size used under hero headlines and section openers.": "导语字号略大于正文，用于首屏标题下方及章节开头。",
+    "Default body paragraph copy at sixteen pixels Inter regular. Long-form legibility is the priority.": "默认段落使用常规字重的 Inter，字号为 16px，适合阅读长文。",
+    "Bolded inline body emphasis at sixteen pixels.": "字号为 16px 的行内正文强调。",
+    "Secondary body text — table cells, supporting descriptions, fine print.": "次要正文，用于表格单元格、辅助说明和小字。",
+    "Nav link and button label weight at fourteen pixels.": "导航链接和按钮标签的 14px 文字示例。",
+    "Fine print at twelve pixels — footnotes and footer secondary lines.": "12px 小字，用于脚注及页脚次要内容。",
+    "Button label set in Inter medium": "按钮标签采用中等字重的 Inter",
+    "Extremely tight 3 px corners across the primary and ghost variants — almost rectangular. The brand never uses generous pill shapes for CTAs. Only icon containers use 9999 px full rounding.":
+        "主按钮和幽灵按钮采用 3 px 小圆角，外形接近矩形。9999 px 全圆角仅用于图标容器。",
+    "Off-white fill · warm-dark ink · 3px radius": "暖白底 · 暖深色文字 · 3px 圆角",
+    "Transparent · 1px hairline · 3px radius": "透明底（Transparent）· 1px 细边框 · 3px 圆角",
+    "9999px round — icon container only": "9999px 全圆角，仅用于图标容器。",
+    "Hairline-bordered cards on canvas-soft fill — the brand's primary chrome. No shadows. No gradients. Just precise 4 px rectangles, the occasional terminal mockup, partner-logo tile, testimonial card, and platform download tile.":
+        "卡片使用 canvas-soft 底色、细边框和 4 px 圆角。层次依靠表面与描边。常用内容包括终端界面示意、合作伙伴标识、推荐语和平台下载卡。",
+    "Default content card chrome. Canvas-soft background, 1 px hairline border, 4 px radius, 24 px padding. Used for feature copy, callouts, and inline information.":
+        "默认内容卡使用 Canvas-soft 背景、1 px 细边框、4 px 圆角及 24 px 内边距，用于功能说明、重点提示和行内信息。",
+    "Inputs sit on the canvas-soft fill so they read as recessed against the warm-dark page. 1 px hairline border, 3 px radius, 36 px tall — tight, near-rectangular.":
+        "输入框以 canvas-soft 背景与暖深色页面区分。边框 1 px、圆角 3 px、高 36 px，外形紧凑且接近矩形。",
+    "A 4 px base unit, with occasional 10 px and 6 px values for button padding. Section bands sit at 5xl (96 px) top and bottom; card interiors at xl (24 px). The whole layout breathes in even multiples.":
+        "间距基准为 4 px，部分按钮内边距使用 10 px 和 6 px。各区块上下间距为 5xl（96 px），卡片内边距为 xl（24 px）。",
+    "Hairline-thin inline gaps.": "细线级的行内间隙。",
+    "Vertical button padding; tight stack.": "按钮上下内边距，适用于紧凑堆叠。",
+    "Horizontal button padding; medium gap.": "按钮左右内边距及中等间距。",
+    "Container horizontal gutter.": "容器左右留白。",
+    "Footer band vertical padding.": "页脚区块上下内边距。",
+    "Hero / content band top & bottom.": "首屏与内容区块的上下留白。",
+    "Extremely tight corners across the board. 3 px buttons, 4 px cards, 9999 px reserved only for icon containers and inline status pills.":
+        "按钮圆角为 3 px，卡片圆角为 4 px。9999 px 全圆角用于图标容器和行内状态标签。",
+    "0px · full-bleed": "0px · 通栏贴边",
+    "1px · tightest": "1px · 最小圆角",
+    "2px · chips": "2px · 标签",
+    "3px · buttons": "3px · 按钮",
+    "4px · cards": "4px · 卡片",
+    "6px · larger": "6px · 较大圆角",
+    "9999px · status": "9999px · 状态标签",
+    "9999px · icons": "9999px · 图标容器",
+    "Surface contrast and hairline borders carry elevation. The brand never uses soft drop-shadows in its marketing surface — depth is implied through canvas-vs-canvas-soft tone difference and a single 1 px hairline.":
+        "营销页面靠 canvas 与 canvas-soft 的明度差和 1 px 细边框表现层次，整套界面省去柔边投影。",
+    "The brand-native composite surfaces — the warm-dark hero band, the standard content band, the 5-up partner-logo strip, the testimonial card, and the 3-up Mac/Linux/Windows download row. Together these define every page on the marketing site.":
+        "品牌组合场景包括暖深色首屏、标准内容区、5 列合作伙伴标识、推荐语卡和 Mac/Linux/Windows 三列下载区。",
+    "Warp is the agentic development environment": "Warp 智能代理开发环境",
+    "The terminal you actually wanted": "符合开发习惯的终端",
+    "The standard content band hosts feature grids on the warm-dark canvas. Section headlines sit at 32 px Inter medium with -0.8 px tracking.":
+        "标准内容区采用暖深色背景和功能网格。小节标题用 32 px 的 Inter 中等字重，字距为 -0.8 px。",
+    "partner-logo-tile · 5-up strip": "partner-logo-tile · 5 列标识",
+    "download-tile · 3-up Mac/Linux/Windows": "download-tile · 3 列 Mac/Linux/Windows",
+    "Three breakpoints. The hero terminal-mockup split stacks at mobile; the partner-logo strip drops from 5-up to 3-up to 2-up; download tiles drop from 3-up to 1-up. Hero type scales fluidly from 64 px to 36 px.":
+        "按 3 档视口调整布局。窄屏首屏的终端示意纵向排列，合作伙伴标识从 5 列减到 3 列、再减到 2 列，下载卡从 3 列减到 1 列。首屏字号从 64 px 平滑缩至 36 px。",
+    "Hero 64→36 px; partner strip 2-up; download tiles 1-up; nav hamburger.": "首屏标题从 64→36 px，合作伙伴标识为 2 列，下载卡为 1 列，导航收起为菜单。",
+    "Partner strip 3-up; download tiles 1-up; nav links collapse.": "合作伙伴标识为 3 列，下载卡为 1 列，导航链接收起。",
+    "Full 5-up partner strip; 3-up download tiles; nav full row.": "合作伙伴标识为 5 列，下载卡为 3 列，导航完整横排。",
     "BMW Blue + light canvas + dark navy": "BMW 蓝、浅色底面与深海军蓝",
     "BMW Type Next Latin · 700/300 contrast": "BMW Type Next Latin：700 与 300 字重对比",
     "Blue primary, white outline secondary": "蓝色主按钮与白色描边次按钮",
@@ -216,6 +392,7 @@ EXACT = {
 }
 
 SAMPLE_FIT_CSS = {
+    "hp": ".device-cell, .device-block { max-width:100%; }",
     "bmw": "@media (max-width: 480px) { :is(.hero-band-dark,.cta-band-photo)[style] { margin-inline:-20px !important; } }",
     "starbucks": "@media (max-width: 640px) { .type-row { grid-template-columns:minmax(0,1fr); gap:8px; } }",
 }

@@ -9,7 +9,7 @@
 
 Tesla's website is an exercise in radical subtraction — a digital showroom where the product is everything and the interface is almost nothing. The page opens with a full-viewport hero that fills the entire screen with cinematic car photography: three vehicles arranged on polished concrete against a hazy cityscape sky, with a single model name floating above in translucent white type. There are no decorative borders, no gradients, no patterns, no shadows. The UI exists only to provide just enough navigational structure to get out of the way. Every pixel that isn't product imagery is white space, and that restraint is the design system's most powerful statement.
 
-颜色哲学几乎是 灰白:一个蓝色(`#3E6AE1`),对于主要的行动呼吁,对于文本等级来说,三阴暗灰色,对于其他一切来说,则白. 整个情感字重由摄影——漫展的景观镜头,工作室的光线车辆简介,以及大气环境组成,这些元素跨越每个景点-高通段,向边缘延伸至边缘. 紫外线铬溶解成图像 导航栏在首屏上方浮出水面,没有明显的背景,边框,或者阴影——即: TESLA 字标记和五个导航标签在空间中就存在,信任它们下面的内容来提供足够的对比.
+颜色哲学几乎是 灰白:一个蓝色(`#3E6AE1`),对于主要的行动呼吁,对于文本等级来说,三阴暗灰色,对于其他一切来说,则白. 整个情感字重由摄影——漫展的景观镜头,工作室的光线车辆简介,以及大气环境组成,这些元素跨越每个景点-高通段,向边缘延伸至边缘. 紫外线界面框架溶解成图像 导航栏在首屏上方浮出水面,没有明显的背景,边框,或者阴影——即: TESLA 字标记和五个导航标签在空间中就存在,信任它们下面的内容来提供足够的对比.
 
 Typography recently transitioned from Gotham to Universal Sans — a custom family split into "Display" for headlines and "Text" for body/UI elements — unifying the website, mobile app, and in-car software into a single typographic voice. The Display variant renders hero titles at 40px weight 500, while the Text variant handles everything from navigation (14px/500) to body copy (14px/400). The font carries a geometric precision with slightly humanist terminals that feels engineered rather than designed — exactly matching Tesla's brand identity of technology that doesn't need to announce itself. There are no text shadows, no text gradients, no decorative type treatments. Every letterform earns its place through clarity alone.
 
@@ -61,13 +61,13 @@ Typography recently transitioned from Gotham to Universal Sans — a custom fami
 
 ## 3. 字法规则
 
-### 字体家族
+### 字体族
 - **显示**: `Universal Sans Display`, -apple-system, Arial, sans-serif 用于首屏头衔和大型模型名称。 sans-serif 精确的工程比例,最近替换 Gotham 统一 Tesla数字生态系统(网站、移动应用程序、车辆界面)
 - **文本/UI 数据**: `Universal Sans Text`, -apple-system, Arial, sans-serif 用于导航、机身复制、按钮和所有UI文本。优化可视性,尺寸较小,比例略大于“显示”变体
 - **No OpenType features** detected — typography is completely unembellished
 - **No italic variants** observed on the marketing site
 
-### 等级
+### 字号层级
 
 | Role | Size | Weight | Line Height | Letter Spacing | Notes |
 |------|------|--------|-------------|----------------|-------|
@@ -118,7 +118,7 @@ All buttons use barely-rounded rectangles (4px border-radius) — creating a sha
 - 过渡 : `box-shadow 0.33s cubic-bezier(0.5, 0, 0, 0.75), color 0.33s`
 - 用于: 滴水面板中的"Learn","Order","Experience","New","Pre-own"链接
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **车辆卡** (导航仪):
 - Background: transparent (inherits panel white)
@@ -136,9 +136,9 @@ All buttons use barely-rounded rectangles (4px border-radius) — creating a sha
 - Size: large format, approximately 2:1 aspect ratio
 - No shadow, no border, no overlay gradient — text relies on image darkness for contrast
 
-### 输入表单( F)
+### 输入框与表单
 - Background: transparent
-- 文本 color: `#171A20` (卡本黑暗)
+- 文字颜色 color: `#171A20` (卡本黑暗)
 - 占位符 color: `#8E8E8E` (银雾)
 - 边框:最小, 继承浏览器默认的
 - 字体: 通用三色文字, 14px
@@ -175,16 +175,16 @@ All buttons use barely-rounded rectangles (4px border-radius) — creating a sha
 - **分区编栏**: 内容垂直居中的全部视图端口部分
 - **纸牌间隙**大约 16px 类别卡之间的间距
 
-### 网格容器( C)
+### 网格与容器
 - **最大宽度**大约 1383px (大多数内容使用的全视图宽度)
 - **首屏们**:满血,边缘对尖, 100vh 节次
 - **导航面板**: 3- 右配文本边栏的车辆卡的列网格(~70/30 拆分)
 - **类别卡**: 2- 上水平布局(大左卡+小右卡)
 
-### 白空间哲学
+### 留白规则
 Tesla uses whitespace as a luxury signal. The generous vertical spacing between sections (each section is a full viewport height) means you can only see one "message" at a time — one car, one model name, one CTA pair. This creates a gallery-like browsing experience where each scroll is a deliberate transition, not a continuous feed. White space is not empty — it's the frame that elevates each vehicle to the status of art piece.
 
-### 圆角刻度
+### 圆角层级
 | Value | Context |
 |-------|---------|
 | 0px | 多数元素——锐边是默认值 |
@@ -216,7 +216,7 @@ Tesla其高程方法本质上是"无"的,网站避免了完全在主界面中的
 
 ## 7。 。 。 。 。 。
 
-### 执行
+### 建议做法
 - Let photography dominate every screen — the product IS the design
 - 使用电色蓝色( U)`#3E6AE1`专门用于初级协定——绝不用于装饰目的
 - 维护主要内容块的视图高强度区域——每个屏幕一个消息
@@ -228,7 +228,7 @@ Tesla其高程方法本质上是"无"的,网站避免了完全在主界面中的
 - 横向居于模型名称下的CTA中心——垂直节奏为模型 +字幕 → 按钮
 - Maintain the Display/Text font split — Display for hero-scale text only, Text for everything else
 
-### Don't
+### 应避免的做法
 - 将阴影添加到任何元素中——通过阴影的升华与平面,画廊美学相矛盾
 - Use more than one chromatic color besides the blue CTA — the palette is intentionally monochrome-plus-one
 - 将梯度,图案,或装饰背景应用到表面——白色和摄影是唯一的背景
@@ -257,18 +257,18 @@ Tesla其高程方法本质上是"无"的,网站避免了完全在主界面中的
 - 木马箭: ~44px 视点边缘的平方白色半透明按钮
 - 文本链接("Learn","命令"): 14px 文本中应包含充分的内容 line-height 触摸间隔
 
-### 折叠战略
+### 窄屏布局调整
 - **导航**: 水平分类按钮( 车、 能源、 充电、 发现、 商店) 崩溃为移动上的汉堡/ 绘画菜单
 - **Hero CTA pair**: Side-by-side buttons on desktop stack vertically on mobile
 - **类别卡**: 2- 水平布局向单柱全宽移动倒塌
 - **车辆网**: 3-桌面导航面板中的列网格变为 2- 单柱在平板上,单柱在移动
 - **间距**: 节垂直贴补仍然慷慨( Viewport-hight 段),但水平贴补减少
 
-### 图像行为
+### 图片适配
 - 首屏的画面反应充分,在每个断点上填满整个视门
 - 使用车辆木马图像 `object-fit: cover` 保持电影的跨宽度构成
 - Transparent PNG vehicle images in the nav panel scale proportionally within their grid cells
-- 分类卡图像保持其景观比和剪辑通过 `overflow: hidden` 与 border-radius
+- 分类卡图像保持其景观比和剪辑通过 `overflow: hidden` 配合 border-radius
 
 
 ## 9. Agent Prompt Guide

@@ -24,11 +24,11 @@ Display sizes use weight 400 (regular) — never bold. Visual emphasis comes fro
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **主要** (`{colors.primary}` — #ffffff:单色品牌 白色类型和白色CTA在黑色页面底色上的轮廓.
 - **链接** (`{colors.link}` — #c3d9f3:系统中唯一的非单色色——一种在内置锚链上使用的脱饱和冰蓝色,很少在焦态上使用. Bugatti'品牌纪律如此严谨,以至于这个单一的符文本质上是黑白之外的全部色谱词汇.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — #000000: 默认的页面层横跨每个表面。纯黑色。
 - **表面软** (`{colors.surface-soft}` — #0d0d0d:一个几乎不区分的与黑色的基调,用于光谱表行和密集的数据部分.
 - **表面卡片** (`{colors.surface-card}` — #141414:卡(职业呼唤,新闻室文章容器,偶尔内容卡),甚至卡片表面都保持近黑——没有对比跳.
@@ -36,21 +36,21 @@ Display sizes use weight 400 (regular) — never bold. Visual emphasis comes fro
 - **Hairline** (`{colors.hairline}` — #262626): The 1px divider tone. Visible but quiet. Used on table rows, between body sections, around card outlines.
 - **发条坚固** (`{colors.hairline-strong}` — #3a3a3a:输入字段下方使用的更重的分线(输入字段没有边框——只有下划线细边线).
 
-### 文本
+### 文字颜色
 - **墨水/ 暗色时** (`{colors.on-dark}` — #ffffff: 暗页面底色上所有头条和主文本.
 - **Body** (`{colors.body}` — #cccccc): Default running-text color (slightly cooler than pure white). Used in body paragraphs.
 - **Body Strong** (`{colors.body-strong}` — #e6e6e6): Emphasized body / lead paragraph.
 - **静音** (`{colors.muted}` — #999999:页脚链接,日期,标题,二级元数据. Dembrandt的频率分析证实这是调色板-2 (数) 6,中度自信).
 - **静音软体** (`{colors.muted-soft}` — #666666: 二级哑音,用于非常二级文本(法律上不可声明,版权线).
 
-### 语义
+### 语义色
 - **警告** (`{colors.warning}` — #d4a017: 技术预警点名(规格、召回通知),几乎从未出现在市场表面。
 - **成功** (`{colors.success}` — #5fa657: 订单确认状态(在营销页面上只见).
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 系统运行 **3 个定制 Bugatti 类型面** 作为一种刚性三重性:
 1. **Bugatti Display** ——所有显示头条(h)1, h2, h3),该词 "BUGATTI" 字签,模型名牌。大写,宽轨。任何视觉强调的默认值。
 2. **Bugatti Text Regular** — A serif 文本面额完全用于运行的正文副本、引文段落、模型描述。 letter-spacing.
@@ -60,7 +60,7 @@ Display sizes use weight 400 (regular) — never bold. Visual emphasis comes fro
 
 倒背堆栈走 `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif` 资源 Bugatti Display, `Garamond, "Times New Roman", serif` 资源 Bugatti Text Regular,以及 `ui-monospace, "SF Mono", "Cascadia Mono", monospace` 资源 Bugatti Monospace.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -88,11 +88,11 @@ Display sizes use weight 400 (regular) — never bold. Visual emphasis comes fro
 
 The serif Bugatti Text Regular sets the brand apart from the all-sans luxury crowd (BMW, Aston Martin, Lamborghini all use sans-serif body type). Bugatti's serif body voice signals literary, considered, slow-reading prose — which is the brand's editorial philosophy.
 
-### Note on Font Substitutes
+### 替代字体
 If Bugatti Display, Bugatti Text Regular, and Bugatti Monospace are unavailable, the closest open-source substitutes are:
 - **Bugatti Display** → **Saira Condensed** (variable, weight 400) at +0.05em letter-spacing
 - **Bugatti Text Regular** → **Cormorant Garamond** (regular) or **EB Garamond**
-- **Bugatti Monospace** → **JetBrains Mono** 或 减 减 **IBM 普莱克斯·莫诺** (正常字重)
+- **Bugatti Monospace** → **JetBrains Mono** 或 **IBM 普莱克斯·莫诺** (正常字重)
 
 替代保留了三家分家,这比准确的型面匹配更重要.
 
@@ -106,24 +106,24 @@ If Bugatti Display, Bugatti Text Regular, and Bugatti Monospace are unavailable,
 - **Card internal padding:** `{spacing.lg}` (24px) for newsroom and content cards; `{spacing.md}` (16px) for the career callout card; `{spacing.xxl}` (64px) inside hero photo bands.
 - **Gutters:** `{spacing.xl}` (40px) between cards in 2-up grids — wider than typical because Bugatti's grids are sparse.
 
-### 网格容器( C)
+### 网格与容器
 - **最大内容 width:** ~1280px centered. Hero photo bands bleed full-width with no max.
 - **编辑机构:** 单身 12-柱状网格; 图片带是全血。
 - **Newsroom layout:** 2-up article grid at desktop, 1-up at tablet+mobile.
 - **职业名单:** 单列为 80px 排行间距。
 
-### 白空间哲学
+### 留白规则
 Bugatti uses whitespace more aggressively than any luxury-auto competitor. The homepage hero is mostly photography + huge whitespace + a single sentence + a single button. The empty black space below the photograph is intentional — it lets the car breathe. Compressing the whitespace to "fit more content" breaks the brand's fundamental contract: that less is more.
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
 | Flat | No shadow, no border | Body, top nav, footer, photo bands |
 | 软细边线 | 1px `{colors.hairline}` 边框 | 区域分隔符,表格行 |
 | Card surface | `{colors.surface-card}` background — no shadow | Career callout, newsroom article container |
-| 摄影深度 | 具有边缘到边缘作物的全血摄影 | 首屏乐队,模型展示——通过主题+镜头进行深度,而不是铬 |
+| 摄影深度 | 具有边缘到边缘作物的全血摄影 | 首屏乐队,模型展示——通过主题+镜头进行深度,而不是界面框架 |
 
 系统使用无阴影,无玻璃形态,无梯度. 深度完全来自摄影(照明,镜头,主题框架),以及黑色页面底色和最小线的对比. `{colors.surface-card}`.
 
@@ -133,7 +133,7 @@ Bugatti uses whitespace more aggressively than any luxury-auto competitor. The h
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -143,7 +143,7 @@ Bugatti uses whitespace more aggressively than any luxury-auto competitor. The h
 
 半径等级是二进制:除按键外,其他所有东西都是长方形的,都是胶囊形。没有 4px,没有 8px,没有 12px 两者之间,它们会感觉"设计"而不是"工程".
 
-### 摄影几何
+### 图片形状
 Hero photography fills full-width with no rounding. Photo cards inside grids retain `{rounded.none}` (0px) corners, edge-to-edge images. Model detail shots use 16:9 or wider cinema-aspect ratios. Newsroom thumbnails use 16:9 with 0px corners. There are no avatars or rounded photo crops anywhere on the marketing site.
 
 
@@ -151,7 +151,7 @@ Hero photography fills full-width with no rounding. Photo cards inside grids ret
 
 ### 顶端导航
 
-**`top-nav`** — A 56px- 全部都说 transparent 导航栏覆盖在每个页面顶端的首屏照片上。没有填充,没有边框。卡莉丝“MENU”位于左侧,中间是 **wordmark-display** ("BUGATTI" , 以 14px Bugatti Display 与 6px ),然后用一个小袋图标右侧“STORE”。 `{typography.nav-link}` (Bugatti Monospace, 12px, 2px 跟踪,大写。
+**`top-nav`** — A 56px- 全部都说 transparent 导航栏覆盖在每个页面顶端的首屏照片上。没有填充,没有边框。卡莉丝“MENU”位于左侧,中间是 **wordmark-display** ("BUGATTI" , 以 14px Bugatti Display 配合 6px ),然后用一个小袋图标右侧“STORE”。 `{typography.nav-link}` (Bugatti Monospace, 12px, 2px 跟踪,大写。
 
 **`wordmark-display`** — The "BUGATTI" wordmark itself. Bugatti Display at 14px, weight 400, 6px letter-spacing. The widest tracking in the system. Centered in the nav bar at every breakpoint.
 
@@ -163,7 +163,7 @@ Hero photography fills full-width with no rounding. Photo cards inside grids ret
 
 **`text-link`** ——内置体链接于 `{colors.link}` (#c3d9f3,系统唯一的非色素颜色。默认下划线。类型继承 `{typography.body-md}` (Bugatti Text Regular, serif).
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`hero-photo-band`** ——全宽黑色带带全流汽车摄影. the h.1 输入 `{typography.display-xl}` 坐在顶部的照片上 中间对齐 经常用小的 Bugatti Monospace 标题( 4)`{typography.caption-uppercase}`) 标题下方和单曲 `{component.button-primary}` 垂直粘贴 96px-200px 视照片高度而定。
 
@@ -177,7 +177,7 @@ Hero photography fills full-width with no rounding. Photo cards inside grids ret
 
 **`spec-cell`** ——车辆技术谱显示在模型细节页(Tourbilon engine specs)上. Transparent 带有带细边线的单元格间分隔符的背景(不是卡片内的单元格间)。 `{typography.title-md}` 顶部和标签 `{typography.caption-uppercase}` 铺垫 24px 垂直键。
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** — Standard text input on dark canvas. Background **transparent**, text `{colors.on-dark}`, 1px hairline-strong bottom border only (no top, left, right border), padding 12px × 0px, height 44px. Type `{typography.body-md}` (Bugatti Text Regular). Placeholder in `{colors.muted}`. Focus thickens the bottom border to white.
 
@@ -196,17 +196,17 @@ Hero photography fills full-width with no rounding. Photo cards inside grids ret
 
 ## 设计建议与禁忌
 
-### 执行
-- 锁定每个页,并配有全血的汽车摄影。汽车是品牌辨识度;铬完全脱落。
-- 保留 UPPERCASE 中显示的所有标题 Bugatti Display 与 2-4px letter-spacing。字签会得到 6px.
+### 建议做法
+- 锁定每个页,并配有全血的汽车摄影。汽车是品牌辨识度;界面框架完全脱落。
+- 保留 UPPERCASE 中显示的所有标题 Bugatti Display 配合 2-4px letter-spacing。字签会得到 6px.
 - Use Bugatti Display for headlines, Bugatti Text Regular (serif!) for body, Bugatti Monospace for buttons + captions + nav. The trinity is unbreakable.
 - 保留 `{component.button-primary}` transparent 含a 1px 白色轮廓。 transparent 药是品牌按钮。
 - 使用重 400 到处都是,粗体打破了品牌声音——系统没有大胆的字重角色.
 - 使用 `{spacing.section}` (120px)主要编辑乐队之间,白空间是品牌的一部分.
 - 准备金 `{colors.link}` (#c3d9f3),仅用于内置锚链路,是系统唯一的非单色颜色.
 
-### Don't
-- 外面别带强调色颜色 `{colors.link}`. Bugatti品牌学科是全单色+摄影。 brand-blue 或 减 减 brand-red 解除合同。
+### 应避免的做法
+- 外面别带强调色颜色 `{colors.link}`. Bugatti品牌学科是全单色+摄影。 brand-blue 或 brand-red 解除合同。
 - Don't bold any type. The system has no bold weight — every typeface stays at 400.
 - Don't fill primary buttons. Transparent + outline only. A solid white button reads as off-brand.
 - 区间间不要压缩白空间 120px 节奏是编辑节奏的一部分.
@@ -215,7 +215,7 @@ Hero photography fills full-width with no rounding. Photo cards inside grids ret
 - Don't use Bugatti Display in a button (use Bugatti Monospace) or Bugatti Monospace in a paragraph (use Bugatti Text Regular). The trinity split is the brand voice.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -232,14 +232,14 @@ Hero photography fills full-width with no rounding. Photo cards inside grids ret
 - `{component.text-input}` 高度为 44px.
 - 职业上市行 24px 垂直粘贴; 有效的水龙头区域会合 44px+ 与周围间隔。
 
-### 折叠战略
+### 窄屏布局调整
 - Top nav stays minimal at all breakpoints (MENU label + wordmark + STORE label). On mobile the labels hide behind a hamburger but the wordmark stays centered.
 - 首屏摄影在每个断点都保持全血,照片作物调整——桌面上更宽的作物,移动上垂直的作物.
 - The career callout card on the homepage hides at < 768px (it's a desktop-only floating element).
 - 2- 新闻室的网格崩溃到 1- 上边 < 768px.
 - 光谱单元格从 4- 最多为 2- 最多为 1-up;无论列数多少,数值都保持相同的显示大小。
 
-### 图像行为
+### 图片适配
 - 首屏摄影作物反应敏捷——桌面上更宽的作物,移动上垂直的作物. Bugatti 汽车总是以运动或角显示(从未显示过平面图)。
 - 保留新闻室缩略图 16:9 比率和 0px 转角
 

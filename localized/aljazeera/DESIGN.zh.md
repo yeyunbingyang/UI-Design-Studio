@@ -16,7 +16,7 @@ The corporate network pages flip the polarity while keeping the family jewelry. 
 **关键特征 :**
 - 平面白纸,零高- `{colors.hairline}` 规则和空白空间 做所有在新闻表面的分隔
 - One-color signature: `{colors.primary}` appears only as the logo block and the 8px eyebrow bar before `{typography.section-eyebrow}` labels
-- 专用的现场新闻配色系统—— `{colors.live-red}` 符号、带和时序点 `{colors.silver}` 铁路
+- 直播报道用 `{colors.live-red}` 标记徽标、横幅和时间轴圆点。圆点以 `{colors.silver}` 连线串联。
 - 紧凑的黑药控制器( 3)`{rounded.lg}`)和a 数据 `{rounded.xl}` 胶囊输入; 媒体缩略图圆形 。 `{rounded.md}` 文章图像保持平方
 - Roboto- 仅跨越等级 300- 重置大写眉毛到 900- 字重级生活车和趋势标签
 - The network sub-surface: `{colors.network-canvas}` dark canvas, `{colors.indigo}` hero panels, `{colors.gold}`/`{colors.amber}` gilding, and teal/crimson section rails
@@ -27,31 +27,31 @@ The corporate network pages flip the polarity while keeping the family jewelry. 
 
 来源页面——新闻首屏,一个现场博客,以及网络的领导和奖项页面——共享一个身份跨越两个极点.
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **半岛橙色** (`{colors.primary}` — #fa9000: 桅头标志块和 section-eyebrow 栏,身份, 绝不互动。
 - **红色直播** (`{colors.live-red}` — #c31833: 打破乐队,LIVE徽章,时间点,直播标签,"现在发生"的颜色,没有别的.
 - **Gold** (`{colors.gold}` — #dba200): the network's rule and control-border gilding.
 - **琥珀( 琥珀)** (`{colors.amber}` — #ffa000: 网络页面上活跃的导航链接.
 - **选择黄金** (`{colors.select-gold}` — #ffc500: 网络很重 3px 控制过滤器上的边框。
-- **铁路提尔** (`{colors.rail-teal}`和 (中文(简体) ). **铁路灰暗** (`{colors.rail-red}`: 领导网格旁的垂直段标签栏杆——广播在页面边距上显示的下三分之一颜色.
+- **时间轴连线提尔** (`{colors.rail-teal}`和 (中文(简体) ). **时间轴连线灰暗** (`{colors.rail-red}`: 领导网格旁的垂直段标签栏杆——广播在页面边距上显示的下三分之一颜色.
 
-### 表面
+### 界面表面
 - **纸张** (`{colors.canvas}` — #ffffff:新闻页面底色,导航,页脚.
 - **软** (`{colors.soft}` — #f0f0f0:通讯卡填充和最微弱的分音.
 - **夜幕画** (`{colors.network-canvas}` — #181818:网络页面的暗色片场用于肖像卡.
 - **皇家印地哥** (`{colors.indigo}` — #272967: 网络首屏面板在页标题后面.
 - **夜间海军** (`{colors.night-navy}` — #100e2f:网络的微弱的公用条.
-- **Hairline** (`{colors.hairline}` — #d8d8d8) and **Silver** (`{colors.silver}` — #bebebe): rule tones — list dividers, card edges, and the live-timeline rail.
+- **细线色**（`{colors.hairline}`，#d8d8d8）与**银灰色**（`{colors.silver}`，#bebebe）用于列表分隔线、卡片边缘及直播时间轴连线。
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}`:头条,立牌,黑丸充之.
 - **木炭矿** (`{colors.charcoal}` — #333333: 文章正文.
 - **标 题** (`{colors.slate}` — #595959:次文本,眉毛标签,超大小的最受欢迎数字,输入边框,以及单色标志渲染.
 - **雾** (`{colors.mist}` — #dddddd:网络暗面上的轻文本.
 - **Graphite** (`{colors.graphite}` — #323232): network body text and rules on light bands.
 
-### 语义
-- 唯一的语义信号是 `{colors.live-red}` 没有任何成功或警告的颜色——新闻的铬保持中立。
+### 语义色
+- `{colors.live-red}` 是直播与突发状态使用的语义色。新闻界面框架维持中性色，归档无专用成功色或警告色。
 
 ### 品牌渐变
 - None. Every brand surface is a flat fill; even the network's indigo panels and gold rules are solid.
@@ -59,10 +59,10 @@ The corporate network pages flip the polarity while keeping the family jewelry. 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 Roboto carries the entire system — news and corporate alike — from 300-weight uppercase eyebrows to 900-weight status labels. The only other face is the network's custom Al-Jazeera wordmark lettering, used solely as logo art. Body text on article pages sits on Roboto's neutral 400.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -83,26 +83,26 @@ Roboto carries the entire system — news and corporate alike — from 300-weigh
 - 头条被设定紧凑,密集;系统容忍——并拥抱——拥挤的新闻网格.
 - 时间戳和线状元数据 `{typography.caption}` `{colors.slate}`总是从属于头条块。
 
-### Note on Font Substitutes
+### 替代字体
 Roboto 是一个开源的,直接使用。半岛地区文字标记字母是专有标志艺术;不要将其与文本面相近。
 
 
 ## 布局
 
 ### 间距系统
-- **基地单位**: 8px 紧紧的 2/4px 用于铬和元数据的步骤。
+- **基地单位**: 8px 紧紧的 2/4px 用于界面框架和元数据的步骤。
 - **托肯斯(前题)**: `{spacing.xxs}` 2px · `{spacing.xs}` 4px · `{spacing.sm}` 8px · `{spacing.md}` 12px · `{spacing.lg}` 16px · `{spacing.xl}` 20px · `{spacing.xxl}` 24px · `{spacing.huge}` 30px
 - 新闻密度使差距很小—— `{spacing.sm}`-`{spacing.lg}` 介于牌之间; 通讯卡片 `{spacing.xl}`; 网络段落呼吸 `{spacing.xxl}`+.
 
-### 网格容器( C)
+### 网格与容器
 - The front page runs a packed 1100px multi-column news grid: lead story + secondary column + rail, then full-width bands (video carousel, features, galleries).
-- 现场博客运行一个带有右栏的单行读列;将堆栈更新为时间戳块.
-- 网络页面运行全血乐队:首屏面板,然后 4- 上面的肖像网, 垂直的铁路占据左侧边距。
+- 直播博客使用单列正文与右侧栏，每条更新带时间戳并按顺序堆叠。
+- 网络页面运行全血乐队:首屏面板,然后 4- 上面的肖像网, 垂直的栏目色条占据左侧边距。
 
-### 白空间哲学
+### 留白规则
 白空间像柱英寸一样配角。设计中有意运行密集的——分离来自细边线规则,时间戳,以及字重对比而不是空气。只有网络页面允许在肖像画周围出现宽大的黑暗空隙。
 
-### 反应战略
+### 响应式布局
 
 #### 断点
 | 名称 | 宽度 | 密钥更改 |
@@ -116,14 +116,14 @@ Roboto 是一个开源的,直接使用。半岛地区文字标记字母是专有
 #### 触控区域
 黑药垫 6px 17px 环绕 16px 标签——保持其周围行距,因此目标清晰 44×44。 时间线项目和最受欢迎的行是全宽的自来水区。
 
-#### 折叠战略
-导航崩溃成汉堡,而LIVE胶囊形和标志块则持续存在。新闻网格倒塌了柱子,向单柱移动信号;直播时间表使其点栏杆保持每宽;网络肖像网格步 4 → 2 → 1 区域铁路在电网上方移动
+#### 窄屏布局调整
+导航收起为菜单，LIVE 胶囊标签和品牌标识区保持可见。新闻网格随视口收窄逐列减为手机单栏。直播时间轴在各宽度均保留圆点和连线。人物肖像网格按 4 → 2 → 1 列变化，栏目色条移到网格上方。
 
-#### 图像行为
-新闻摄影被大肆收割 16:9 财务报告和已审计财务报表 4:3以物为单位, `{rounded.md}` 网络领导肖像是一贯的灰色工作室,以高卡片显示,上面有姓名上盖。
+#### 图片适配
+新闻摄影被大肆收割 16:9 和 4:3以物为单位, `{rounded.md}` 网络领导肖像是一贯的灰色工作室,以高卡片显示,上面有姓名上盖。
 
 
-## 层次与阴影
+## 层次与深度
 
 | 职等 | 治疗 | 使用 |
 |---|---|---|
@@ -135,13 +135,13 @@ Roboto 是一个开源的,直接使用。半岛地区文字标记字母是专有
 
 ### 装饰性深度
 - **照片剪辑**:领导肖像卡在基地逐渐淡出,所以白色的名字具有对比性.
-- **区段铁路**: 切片和折片垂直条读作像广播侧索,给平面页一个舞台设定深度.
+- **区段栏目色条**: 切片和折片垂直条读作像广播侧索,给平面页一个舞台设定深度.
 - **Polarity shift**: the jump from white news paper to `{colors.network-canvas}` corporate darkness is itself the system's depth move.
 
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -154,8 +154,8 @@ Roboto 是一个开源的,直接使用。半岛地区文字标记字母是专有
 
 比例尺为双倍制:编辑图像和徽章保持接近平方(2-10px)而每个控制器都是一个胶囊(18-22px,图标的圆圆形)——按钮在平面页上单独以形状宣布自己.
 
-### 摄影几何
-- 物品网格:方块 16:9 财务报告和已审计财务报表 4:3 庄稼, 包装的边缘到边缘。
+### 图片形状
+- 文章网格使用直角、贴边排列的配图，裁切比例为 16:9 和 4:3。
 - 视频旋转木马:肖像卡 `{rounded.md}`.
 - Thumb rows: small 130×87 stills at `{rounded.md}` beside `{typography.headline-sm}` links.
 - 意见: circular `{rounded.full}` 作者阿凡达.
@@ -172,7 +172,7 @@ Roboto 是一个开源的,直接使用。半岛地区文字标记字母是专有
 **`button-pill-mini`**
 - 细小的 `{colors.ink}` 胶囊形 `{rounded.full}`, 编译 1px 6px ——照片计数叠加和紧凑的切换.
 
-### 纸牌和集装箱
+### 卡片与容器
 
 **`news-card`**
 - Square photography above or beside an `{typography.headline-md}`/`{typography.headline-sm}` ink headline with `{typography.caption}` metadata; no fill, no border — position and weight define it.
@@ -192,7 +192,7 @@ Roboto 是一个开源的,直接使用。半岛地区文字标记字母是专有
 **`leader-card`** + **`leader-band`**
 - 上映肖像卡片 `{colors.network-canvas}` 和基底斜纹和 `{colors.on-primary}` 名称/作用文本;高级领导获得全宽灰色工作室乐队 `{typography.network-display}` 名称通过一个短白规则。
 
-### 输入表单( F)
+### 输入框与表单
 
 **`text-input`** - 电子邮件胶囊
 - `{colors.canvas}` 满, 1px `{colors.slate}` 边框,四舍五入 `{rounded.xl}`, 编译 0px 15px, `{typography.body}` 文本中选择的文本。
@@ -214,16 +214,16 @@ Roboto 是一个开源的,直接使用。半岛地区文字标记字母是专有
 **`footer`** / **`network-footer`**
 - 新闻页脚:白色,细边线上连接的栏目与鹰印. 网路页脚: `{colors.ink}` 黑色为 `{colors.mist}` 链接和金质网络锁。
 
-### 签名组件
+### 标志性组件
 
 **`section-eyebrow-lockup`**
 - The system's signature: an 8px-wide `{colors.primary}` bar flush against an uppercase `{typography.section-eyebrow}` label in `{colors.slate}`. Every editorial section opens with it.
 
 **`live-badge`** + **`breaking-band`** + **`live-strip-item`**
-- 活体装置:a `{typography.label-black}` 使用更新标签 `{colors.live-red}` (在 `{rounded.xs}`); 完全宽 `{colors.live-red}` 断开带 `{colors.on-primary}` 头条文字;和分秒秒的条条条—— `{colors.live-red}` 点在一 `{colors.silver}` 铁栏杆旁加加时标 `{typography.body-sm}` 项目。
+- 直播状态标签 LIVE UPDATES 用 `{typography.label-black}`、`{colors.live-red}` 和 `{rounded.xs}`。通栏突发新闻横幅用 `{colors.live-red}`，标题文字用 `{colors.on-primary}`。逐分钟时间轴用 `{colors.live-red}` 圆点与 `{colors.silver}` 连线，旁列采用 `{typography.body-sm}` 的带时间戳更新。
 
 **`section-rail-teal`** / **`section-rail-red`**
-- 网络段铁路:全高垂直栏杆 `{colors.rail-teal}` 财务报告和已审计财务报表 `{colors.rail-red}` 将白色大写标签旋转在肖像网格旁。
+- 人物肖像网格旁用 `{colors.rail-teal}` 和 `{colors.rail-red}` 绘制贯穿栏目全高的竖色条，条上用旋转的白色大写字显示栏目名。
 
 **`network-hero-panel`**
 - 电话 `{colors.indigo}` 标题面板打开网络页面 : `{typography.network-display}` 白头 `{typography.body-sm}` 复制,在全血摄影旁边
@@ -234,45 +234,45 @@ Roboto 是一个开源的,直接使用。半岛地区文字标记字母是专有
 **`avatar-circle`**
 - Circular `{rounded.full}` 意见书列表中的作者肖像.
 
-### 实例(说明性)
+### 组合示例
 
 > Kit-mirror demonstration surfaces. Each `ex-*` entry references brand-native primitives via token syntax so downstream consumers re-skin the same 10 surfaces consistently — these are illustrative compositions stamped with this brand's tokens, not components extracted from the site.
 
-**`ex-pricing-tier`** ——默认定价等级卡。 feature-card 带品牌的铬 canvas-soft 表面。
+**`ex-pricing-tier`**：默认套餐卡，沿用功能卡结构和品牌 canvas-soft 底色。
 - 属性 : `backgroundColor`, `textColor`, `borderColor`, `rounded`, `padding`
 
-**`ex-pricing-tier-featured`** ——地貌/高亮的层次——极性-浮点表面(暗色填充+光线文字在光线模式下,浅色填充+暗色文字在暗线模式下).
+**`ex-pricing-tier-featured`**：推荐套餐卡。浅色模式中用深底浅字，深色模式中用浅底深字。
 - 属性 : `backgroundColor`, `textColor`, `rounded`, `padding`
 
-**`ex-product-selector`** ——什么是包含的汇总卡——重新用于SaaS/B2B纵横(NOT为字形产品画廊).
+**`ex-product-selector`**：面向 SaaS / B2B 场景的套餐权益摘要卡。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-cart-drawer`** ——订阅摘要——重新用于SaaS/B2B(每件加件的行项目,而非字面车).
+**`ex-cart-drawer`**：SaaS / B2B 订阅摘要，每个附加项单独列出。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `item-divider`
 
-**`ex-app-shell-row`** ——App Shell 实例中的侧边栏导航行. Active State 使用品牌主标.
+**`ex-app-shell-row`**：应用框架示例里的侧栏导航行，以品牌主色标识选中状态。
 - 属性 : `backgroundColor`, `activeIndicator`, `rounded`, `padding`
 
-**`ex-data-table-cell`** — Default data-table th + td chrome. Header uses mono-caps eyebrow typography; body uses body-sm.
+**`ex-data-table-cell`**：数据表格中 th 与 td 的默认样式。表头采用大写等宽字，正文采用 body-sm。
 - 属性 : `headerBackground`, `headerTypography`, `bodyTypography`, `cellPadding`, `rowBorder`
 
-**`ex-auth-form-card`** ——签入/签入卡. 复用. feature-card 铬 text-input 原始人在里面,他们都在里面
+**`ex-auth-form-card`**：登录与注册卡，复用功能卡和 text-input。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-modal-card`** ——模度对话框表面——与 feature-card 以高的阴影盟誓,
+**`ex-modal-card`**：对话框表面，沿用功能卡样式并加浮层投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`
 
-**`ex-empty-state-card`** ——空状态插图框架.
+**`ex-empty-state-card`**：空状态插图容器。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `captionTypography`
 
-**`ex-toast`** ——通知表面. feature-card 形状 + 中阴影。
+**`ex-toast`**：轻提示，沿用功能卡圆角并使用中等投影。
 - 属性 : `backgroundColor`, `rounded`, `padding`, `typography`
 
 
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 保留 `{colors.primary}` 给身份责任——标志块和眉条——让黑胶囊形携带每一个动作.
 - 准备金 `{colors.live-red}` 严格针对活/破状态:徽章,乐队,时间线点.
 - 打开每节编辑 `section-eyebrow-lockup` (橙条+ 300- 字重大写标签).
@@ -281,7 +281,7 @@ Roboto 是一个开源的,直接使用。半岛地区文字标记字母是专有
 - On network pages, keep the gilded family — `{colors.gold}` rules, `{colors.amber}` active links — over the dark `{colors.network-canvas}`.
 - 宽度 Roboto 特意分散字重 : 300 眉毛, 头发, 700 头条, 900 紧急标签。
 
-### Don't
+### 应避免的做法
 - Don't fill buttons or links with `{colors.primary}` — orange interaction chrome breaks the marker-pen rule.
 - Don't use `{colors.live-red}` decoratively; if it isn't live coverage, it isn't red.
 - Don't add shadows, gradients, or card fills to news grids — density and rules are the aesthetic.

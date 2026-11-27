@@ -24,11 +24,11 @@ Type pairs **Waldenburg Light** (custom serif at weight 300) for display with **
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **墨水小学** (`{colors.primary}` — #292524:主要动作颜色——温暖的近黑胶囊形,很少使用.
 - **墨水初活跃** (`{colors.primary-active}` — #0c0a09:新闻州.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — #f5f5f5: 脱白页楼.
 - **软画帘** (`{colors.canvas-soft}` — #fafafa: 更轻的带用于微妙的交替部分.
 - **深层的页面底色** (`{colors.canvas-deep}` — #0c0a09:与墨水相同——用于罕见的暗模首屏(Agents page).
@@ -42,7 +42,7 @@ Type pairs **Waldenburg Light** (custom serif at weight 300) for display with **
 - **柔软的细边线** (`{colors.hairline-soft}` — #f0efed:轻分者.
 - **发条坚固** (`{colors.hairline-strong}` — #d6d3d1: 更强的面板大纲.
 
-### 文本
+### 文字颜色
 - **墨水( 墨水 )** (`{colors.ink}` — #0c0a09: 显示,主文本.
 - **体质** (`{colors.body}` — #4e4e4e: 默认的运行文本.
 - **强体** (`{colors.body-strong}` — #292524:与初级相同——强调。
@@ -61,17 +61,17 @@ Type pairs **Waldenburg Light** (custom serif at weight 300) for display with **
 
 These appear ONLY as soft radial-gradient atmospheric orbs inside `{component.gradient-orb-card}` and as background atmospheric blooms behind hero copy. Never as button fills, never as text colors.
 
-### 语义
+### 语义色
 - **Success** (`{colors.semantic-success}` — #16a34a): Confirmation.
 - **错误** (`{colors.semantic-error}` — #dc2626:验证错误.
 
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 **Waldenburg 光线** 属于特许显示 serif 字重 300. **Inter** 携带身体、导航、标题和按钮。 `'Times New Roman', serif` 资源 Waldenburg, `sans-serif` 资源 Inter.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -95,7 +95,7 @@ These appear ONLY as soft radial-gradient atmospheric orbs inside `{component.gr
 - **浅 letter-spacing 身体上,我们有** Inter 时 间 +0.15-0.18px 跟踪——比默认松一点 Inter 更能表达编辑的感受
 - **负数 letter-spacing 显示中。** Waldenburg 牵引 -0.32px 改为: -1.92px 更紧的显示大小 。
 
-### Note on Font Substitutes
+### 替代字体
 Waldenburg 已获得许可。开源替换 : **贾蒙德** 字重 300 (略多一点的人文主义)或 **区级** (关闭到 Waldenburg's immerity. 使用 Inter 直接为了身体,是同一个家庭 ElevenLabs 使用时。
 
 
@@ -106,17 +106,17 @@ Waldenburg 已获得许可。开源替换 : **贾蒙德** 字重 300 (略多一�
 - **脚本 :** `{spacing.xxs}` 4px · `{spacing.xs}` 8px · `{spacing.sm}` 12px · `{spacing.base}` 16px · `{spacing.md}` 20px · `{spacing.lg}` 24px · `{spacing.xl}` 32px · `{spacing.xxl}` 48px · `{spacing.section}` 96px.
 - **科 科 padding:** 96px.
 
-### 网格容器( C)
+### 网格与容器
 - 最大内容 width: ~1200px.
 - 编辑机构: 12- 列网格 - 列网格 - Colind grade.
 - Feature card grids: 2-up at desktop for hero splits, 3-up for benefit grids.
 - Footer: 5-column at desktop.
 
-### 白空间哲学
+### 留白规则
 慷慨的社论节奏——印刷-杂志的感觉. 96px 带间; 带内卡片坐近( Name16-24px 空隙)。大气梯度球体占用了宽大的呼吸空间,而不与复制物竞争。
 
 
-## 层次与阴影
+## 层次与深度
 
 系统使用 **细边线+软滴**。卡片通过非白页面底色上方浮动 1px 细边线和单一的细微的阴影层,大气深度来自梯度圆形.
 
@@ -134,7 +134,7 @@ Waldenburg 已获得许可。开源替换 : **贾蒙德** 字重 300 (略多一�
 
 ## 形状
 
-### 圆角刻度
+### 圆角层级
 
 | 调试 | 数值 | 使用 |
 |---|---|---|
@@ -210,14 +210,14 @@ Waldenburg 已获得许可。开源替换 : **贾蒙德** 字重 300 (略多一�
 
 ## 设计建议与禁忌
 
-### 执行
+### 建议做法
 - 准备金 `{colors.primary}` 初级CTA(胶囊形)
 - 使用 Waldenburg 字重轻 300 每一个显示标题, 绝不是粗体。
 - 使用 Inter 时 间 +0.15-0.18px 跟踪身体——编辑方言.
 - 仅使用大气梯度圆柱(mint/peach/lavender/sky/rose)作为装饰.
 - Use the pill shape for every CTA and badge.
 
-### Don't
+### 应避免的做法
 - Don't introduce a saturated brand action color. Ink pill is the only CTA color.
 - Don't bold display copy. Display sits at weight 300 — bolding shifts the brand voice from editorial to consumer-marketing.
 - Don't use gradient orbs as button fills, text colors, or component backgrounds. They are pure atmosphere.
@@ -226,7 +226,7 @@ Waldenburg 已获得许可。开源替换 : **贾蒙德** 字重 300 (略多一�
 - Don't extract a CTA color from a third-party widget (cookie consent, OneTrust). The brand's CTA color is what appears on actual product CTAs.
 
 
-## 响应式规则
+## 响应式布局
 
 ### 断点
 
@@ -241,7 +241,7 @@ Waldenburg 已获得许可。开源替换 : **贾蒙德** 字重 300 (略多一�
 - 初药 40px 高度——在WCAG AA,为AAA加注.
 - 语音图标圆圈 32px ——加字行创建有效 48px 电磁带
 
-### 折叠战略
+### 窄屏布局调整
 - 顶端导航切换到下面的汉堡包 768px.
 - 特性 grid: 3-up → 2-up → 1-up.
 - 渐变圆形在每一个断点上都降低直径,但永不消失.

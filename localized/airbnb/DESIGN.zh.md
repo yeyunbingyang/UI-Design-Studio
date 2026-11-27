@@ -25,14 +25,14 @@ The shape language is **soft**. Buttons are 8px radius (`{rounded.sm}`), propert
 
 ## 配色
 
-### 品牌和 强调色
+### 品牌色与强调色
 - **劳施** (`{colors.primary}` — #ff385c:单品牌颜色 用于初级CTA背景(Reserve,Continent),搜索 Ob,地产卡上心脏保存状态,以及内置品牌链接,消费者旅行中最可识别的颜色.
 - **活跃的劳施** (`{colors.primary-active}` — #e00b41: 压/指向下变体——略多饱和. 使用于 `{component.button-primary-active}`.
 - **劳施已禁用** (`{colors.primary-disabled}` — #ffd1da:一种在残废的CTA上使用的苍白的锡.
 - **Luxe Purple** (`{colors.luxe}` — #460479): Sub-brand accent for Airbnb Luxe. Only appears inside Luxe-branded surfaces — never in mainline marketing.
 - **Plus Magenta** (`{colors.plus}` — #92174d): Sub-brand accent for Airbnb Plus. Same scoping as Luxe — sub-product only.
 
-### 表面
+### 界面表面
 - **页面底色** (`{colors.canvas}` — #ffffff:每个公共页面的默认页面层. Airbnb 公共网络上没有暗模式。
 - **表面软** (`{colors.surface-soft}` — #f7f7f7:最轻的填充器——用于残基, sub-nav 悬浮背景, 和内置搜索过滤带。
 - **表面坚固** (`{colors.surface-strong}` — #f2f2f2: 稍重的填充量 -- circular 图标按钮表面(例如面包屑背面-窄边和列出工具栏按钮)。
@@ -42,7 +42,7 @@ The shape language is **soft**. Buttons are 8px radius (`{rounded.sm}`), propert
 - **柔软的细边线** (`{colors.hairline-soft}` — #ebebeb:长卷编辑机分离器上使用的较轻的分隔器.
 - **边界强势** (`{colors.border-strong}` — #c1c1c1:在已停用的大纲按钮上使用的重中风,在焦点后形成输入大纲.
 
-### 文本
+### 文字颜色
 - **Ink** (`{colors.ink}` — #222222): The dominant text color on light surfaces. Display headlines, body paragraphs, primary nav links, and most inline link text. Never pure black.
 - **体质** (`{colors.body}` — #3f3f3f: 长式复检和体贴副本中墨水会觉得太重的二次运行文字颜色.
 - **静音** (`{colors.muted}` — #6a6a6a: 城市链接区块内的字幕("Cottage lears","Villa lears"),不活动 product-tab 标签,页脚类子标签,"查看所有"链接.
@@ -50,7 +50,7 @@ The shape language is **soft**. Buttons are 8px radius (`{rounded.sm}`), propert
 - **星级评分** (`{colors.star-rating}` — #222222: 同样的墨迹—— Airbnb'星号图标和'4.81" 评级数字都用墨水而不是黄/金色表示,这是有意的品牌选择(黄星在旅行背景中感觉便宜)。
 - **小学** (`{colors.on-primary}` — #ffffff: Rausch CTAs上的白文本.
 
-### 语义
+### 语义色
 - **错误** (`{colors.primary-error-text}` — #c13515: 内置错误文本用于形式验证. 区别于劳施——略暗,饱和度较高的红色.
 - **错误** (`{colors.primary-error-text-hover}` — #b32505: 链接上的黑暗悬浮。
 - **法律链接蓝** (`{colors.legal-link}` — #428bff: 法律副本(Privacy, Terms)内置链接,仅用于法律子带内.
@@ -61,12 +61,12 @@ The shape language is **soft**. Buttons are 8px radius (`{rounded.sm}`), propert
 
 ## 字体排版
 
-### 字体家族
+### 字体族
 系统运行 **Airbnb Cereal VF** 显示、身体、导航、标题、缩微复制。 `Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif`. **Circular** 是一个历史的内置排版, 仍作为第一个不可变的倒置; 系统堆叠备份它。
 
 There is no separate display family. The variable font carries the entire scale.
 
-### 等级
+### 字号层级
 
 | 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
 |---|---|---|---|---|---|
@@ -94,7 +94,7 @@ Display weights stay modest. The homepage h1 at 28px / 700 is deliberately small
 
 The single typographically loud moment in the entire system is the **rating display** (`{typography.rating-display}` — 64px / 700) on listing pages. That is the only place the system trusts type alone to carry hierarchy — rating numbers are a peak trust signal, so they get the loudest treatment.
 
-### Note on Font Substitutes
+### 替代字体
 If Airbnb Cereal VF and Circular are unavailable, **Inter** is the closest open-source substitute. Adjust display headlines down by ~2% in line-height to match Cereal's slightly tighter cap height; otherwise the proportions transfer cleanly.
 
 
@@ -107,13 +107,13 @@ If Airbnb Cereal VF and Circular are unavailable, **Inter** is the closest open-
 - **Card internal padding:** `{spacing.lg}` (24px) for `{component.host-card}` and `{component.reservation-card}`; `{spacing.base}` (16px) for property-card meta block; `{spacing.sm}` (8px) for caption / date-row gutters.
 - **Gutters:** `{spacing.base}` (16px) between cards in the homepage city grid; `{spacing.lg}` (24px) inside footer column gutters; `{spacing.xs}` (4px) on dense category-strip dividers.
 
-### 网格容器( C)
+### 网格与容器
 - **最大内容 width:** ~1280px centered on the homepage and editorial pages. Listing detail pages cap closer to 1080px to keep the photo banner and reservation rail readable.
 - **城市链接网格(homepage foper):** 6- 桌面上各栏的网格,每个单元格内都有一个城市名称 `{typography.title-md}` 和分类子标签 `{typography.body-sm}` 哑哑.
 - **列出细节 :** 2- 左边有照片/体型的柱子(~64% 宽度)和 a sticky 预订卡( $ 1)`{component.reservation-card}`右边( 右侧)~32%).
 - **Footer:** 3-column link list (Support / Hosting / Airbnb) at desktop, collapsing to 1-column on mobile.
 
-### 白空间哲学
+### 留白规则
 系统给编辑带 64px 垂直呼吸室但压缩卡网——财产和城市连接卡坐只是 16px 对比是有意的:页面读作“开放的首屏,密集的市场下面”,强化市场的性质,而不给观众打倒。
 
 
@@ -158,7 +158,7 @@ There are no progressive elevation tiers — the system either has the one shado
 
 **`product-tab-inactive`** — Muted label, illustrated icon, no underline. Becomes active on click.
 
-**`new-tag`** 微小圆形的溢出徽章(`{rounded.full}`) 锁定图标的右上角,带有大写“NEW”标签 `{typography.uppercase-tag}` (8px / 700 与 0.32px 用于显示恢复性的经验和服务。
+**`new-tag`** 微小圆形的溢出徽章(`{rounded.full}`) 锁定图标的右上角,带有大写“NEW”标签 `{typography.uppercase-tag}` (8px / 700 配合 0.32px 用于显示恢复性的经验和服务。
 
 ### 挂牌游戏
 
@@ -199,13 +199,13 @@ There are no progressive elevation tiers — the system either has the one shado
 **`legal-band`** — A bottom strip beneath the footer columns carrying the copyright line, language picker (globe icon + "English (US)" link), currency picker, and social icons (Facebook, X, Instagram). All text in muted `{colors.muted}` at `{typography.caption-sm}`.
 
 
-## 响应式规则
+## 响应式布局
 
 | 名称 | 宽度 | 密钥更改 |
 |---|---|---|
 | 手机 | < 744px | 顶端导航崩溃为标志+汉堡; 产品标签隐藏在工作表后面; 搜索栏崩溃为单个可调试的胶囊形; 属性卡堆 1- 上;城市网格 1-栏;列出细节后,保留卡会倒塌到一个 sticky 底边栏. |
 | Tablet | 744–1128px | Top nav keeps product tabs but search bar narrows; property cards 2-up; city grid 2–3 column; reservation card stays sticky right-rail at narrower width. |
-| 桌面 | 1128–1440px | 以三个产品标签为中心, 完全顶端导航; 以全胶囊形宽度搜索栏, 全部 3 可见的段; 属性卡 4- 上;城市网格 6-栏; 列表细节 2- 和预留铁路的栏杆 |
+| 桌面 | 1128–1440px | 以三个产品标签为中心, 完全顶端导航; 以全胶囊形宽度搜索栏, 全部 3 可见的段; 属性卡 4- 上;城市网格 6-栏; 列表细节 2- 和预留侧栏的栏杆 |
 | 宽 | > 1440px | 内容宽度上限, 以 1440px 清单/搜索网页和 ~1280px 编辑部;排水沟吸收其余部分。 |
 
 ### 触控区域
@@ -214,7 +214,7 @@ There are no progressive elevation tiers — the system either has the one shado
 - 保存心脏按钮是 32×32px circular ——AAA的边界线,但由慷慨的补偿. 12px 贴在照片卡里
 - 日期选择日单元格为 40×40px circular.
 
-### 折叠战略
+### 窄屏布局调整
 - 顶级产品标签会倒塌到下面的汉堡单上 744px.
 - 搜索栏 3 片段崩溃为单塔条目,打开移动上的全屏搜索覆盖。
 - 属性和城市链接网格在每一个断点都清晰地计算出列数——永远不回流行;总是减少列数.
