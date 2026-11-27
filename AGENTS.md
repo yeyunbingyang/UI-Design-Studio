@@ -13,7 +13,7 @@
 ## 目录职责
 
 - content：经过整理、可正式浏览和复用的设计资产。
-- sources：外部来源、原始采集、研究证据和许可证信息。
+- docs/sources：外部来源、原始采集、研究证据和许可证信息。
 - apps/frontend：页面、业务 Feature、共享组件、API Client 和样式。
 - apps/backend：API、业务模块、服务层、Repository、数据库和集成。
 - tools：通用采集、转换、迁移和校验脚本。
@@ -48,7 +48,7 @@
 ## 资源与来源
 
 - content 只存已整理或明确标注状态的资源。
-- sources 保存来源原件和研究证据。
+- docs/sources 保存来源原件和研究证据。
 - 每项外部资源记录 URL、作者/组织、许可证、采集时间和最后核验时间。
 - 原始英文 DESIGN.md 不得被中文稿覆盖。
 - 迁移时优先复用原 Git blob，确保内容不变。
@@ -56,15 +56,15 @@
 
 ## 现有系统兼容
 
-仓库仍保留旧版静态 HTML、Python WebUI、script/ 和 ToolOrbit Manifest。没有完成新旧功能等价验收前，不得删除或改坏旧入口。迁移脚本必须扫描相对路径、导入、批处理入口和 Manifest 引用。
+仓库仍保留docs/prototypes/ 下的旧版静态 HTML、Python WebUI、script/ 和 ToolOrbit Manifest。没有完成新旧功能等价验收前，不得删除或改坏旧入口。迁移脚本必须扫描相对路径、导入、批处理入口和 Manifest 引用。
 
 ## 文档同步
 
-- 产品功能或验收范围变化：更新根目录 PRD.md。
+- 产品功能或验收范围变化：更新[PRD.md](docs/product/PRD.md)。
 - 架构、依赖或目录变化：更新 docs/architecture/。
-- 页面视觉与交互变化：更新根目录 DESIGN.md 和 COMPONENTS.md。
+- 页面视觉与交互变化：更新[DESIGN.md](docs/design/DESIGN.md) 和 [COMPONENTS.md](docs/design/COMPONENTS.md)。
 - Skill 工作流程变化：更新对应 SKILL.md。
-- 安装、运行和部署变化：更新 README.md。
+- 安装、运行和部署变化：更新 [README.md](README.md)。
 
 ## 验收要求
 

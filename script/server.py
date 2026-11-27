@@ -6,12 +6,17 @@ from pathlib import Path
 import sys
 from threading import Thread
 from time import perf_counter
-from urllib.parse import unquote, urlsplit
+from urllib.parse import quote, unquote, urlsplit
 
 
 ROOT = Path(__file__).resolve().parent.parent
-PUBLIC_FILES = {"preview.html", "local-preview.html", "exit-service.js"}
-PUBLIC_DIRS = {"design-md", "localized", "research"}
+PROTOTYPES = {
+    "": "docs/prototypes/preview.html",
+    "preview.html": "docs/prototypes/preview.html",
+    "local-preview.html": "docs/prototypes/local-preview.html",
+}
+PUBLIC_FILES = set(PROTOTYPES.values())
+PUBLIC_PREFIXES = ("localized/", "content/design-systems/", "docs/sources/research/getdesign-home/")
 
 
 class DesignHandler(SimpleHTTPRequestHandler):
@@ -37,12 +42,10 @@ class DesignHandler(SimpleHTTPRequestHandler):
             self.send_response(204)
             self.end_headers()
             return None
-        if path == "/":
-            self.path = "/preview.html"
-            path = self.path
         relative = path.lstrip("/")
+        relative = PROTOTYPES.get(relative, relative)
         parts = relative.split("/")
-        if (relative not in PUBLIC_FILES and parts[0] not in PUBLIC_DIRS
+        if (relative not in PUBLIC_FILES and not relative.startswith(PUBLIC_PREFIXES)
                 or any(not part or part.startswith(".") or "\\" in part for part in parts)):
             self.send_error(404)
             return None
@@ -50,6 +53,7 @@ class DesignHandler(SimpleHTTPRequestHandler):
         if ROOT not in target.parents or not target.is_file():
             self.send_error(404)
             return None
+        self.path = quote("/" + relative)
         return super().send_head()
 
     def do_POST(self):

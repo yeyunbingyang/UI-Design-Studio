@@ -13,16 +13,18 @@
     │   ├── page-patterns/
     │   ├── component-patterns/
     │   └── motion/
-    ├── sources/
-    │   ├── websites/
-    │   ├── github/
-    │   └── research/
-    ├── tools/
     ├── docs/
-    ├── tests/
+    │   ├── README.md
+    │   ├── architecture/
+    │   ├── design/
+    │   ├── product/
+    │   ├── prototypes/
+    │   └── sources/
+    ├── localized/
+    ├── script/
+    ├── tools/
     ├── .agents/skills/
-    ├── README.md
-    ├── PRD.md
+    ├── design-yeyunby-designforge.bat
     ├── AGENTS.md
     └── manifest.json
 
@@ -110,7 +112,7 @@ pages 只负责路由组合；features 承载业务界面和状态；components 
 
 ## 5. 来源目录
 
-    sources/
+    docs/sources/
     ├── websites/<source-slug>/
     ├── github/<owner-repo>/
     └── research/<research-project>/
@@ -122,7 +124,7 @@ pages 只负责路由组合；features 承载业务界面和状态；components 
 - Agent Skills 以 .agents/skills/<skill-name>/SKILL.md 为规范入口。
 - Skill 模板、示例和静态资源放在其自身 assets/ 或 references/。
 - tools/ 放通用采集、迁移、转换、校验和维护脚本。
-- 现有根目录脚本和 script/ 暂作为兼容入口保留；迁移前检查相对路径、导入、批处理入口、Manifest 和 ToolOrbit 调用。
+- 本地化与样张维护脚本位于 .agents/skills/designforge-authoring/scripts/。script/ 存放 ToolOrbit 兼容入口。
 
 ## 7. 文件归属
 
@@ -133,7 +135,7 @@ pages 只负责路由组合；features 承载业务界面和状态；components 
 | SQLite 数据库 | apps/backend/data，运行时生成 |
 | 上传与生成文件 | apps/backend/storage，运行时生成 |
 | 正式设计资产 | content |
-| 外部原始资料与研究证据 | sources |
+| 外部原始资料与研究证据 | docs/sources |
 | Agent Skill | .agents/skills |
 | 通用脚本 | tools |
 | PRD、架构和开发文档 | docs |
@@ -141,4 +143,4 @@ pages 只负责路由组合；features 承载业务界面和状态；components 
 
 ## 8. 迁移约束
 
-先复制并校验，再切换读取路径，最后才考虑删除旧路径。英文原件不得被译文覆盖。迁移记录 old_path、new_path 和 blob SHA 或内容哈希。验收文件数量、哈希、HTML 相对链接、脚本引用和 ToolOrbit Manifest。旧版 preview.html、local-preview.html 和插件入口在替代功能验收前继续保留。
+先复制并校验，再切换读取路径，最后才考虑删除旧路径。英文原件不得被译文覆盖。迁移记录 old_path、new_path 和 blob SHA 或内容哈希。验收文件数量、哈希、HTML 相对链接、脚本引用和 ToolOrbit Manifest。docs/prototypes/ 下的旧版原型和插件入口在替代功能验收前继续保留。

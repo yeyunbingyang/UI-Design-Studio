@@ -6,15 +6,15 @@
 
 ## 2. 当前基线
 
-dev 当前包含 design-md（品牌规范）、localized（中文规范和 HTML 样张）、research（官网归档和原始研究材料）、.agents/skills、script 与根目录维护脚本、preview.html、local-preview.html 以及 manifest.json。
+迁移前的 dev 包含 design-md（品牌规范）、localized（中文规范和 HTML 样张）、research（官网归档和原始研究材料）、.agents/skills、script 与根目录维护脚本、preview.html、local-preview.html 以及 manifest.json。
 
 ## 3. 迁移策略
 
 1. 建立架构文档和 frontend/backend 可运行骨架。
-2. 将现有规范、中文样张和研究归档以 Git blob 原样映射到 content 与 sources。
+2. 将现有规范、中文样张和研究归档以 Git blob 原样映射到 content 与 docs/sources。
 3. 生成资源目录索引，核对源与目标 blob SHA。
 4. 前端先读取静态目录索引与资源文件，后端逐步接管数据库索引和管理操作。
-5. 旧脚本迁入 tools 前扫描相对路径、导入、批处理入口、端口配置和 Manifest。
+5. 旧脚本迁入编写技能前扫描相对路径、导入、批处理入口、端口配置和 Manifest。
 6. 新平台完成等价验收后再切换旧入口。
 7. 旧目录仅在路径引用、文件哈希、数量和运行测试通过后另行清理。
 
@@ -24,11 +24,11 @@ dev 当前包含 design-md（品牌规范）、localized（中文规范和 HTML 
 | --- | --- | --- |
 | design-md/<brand>/* | content/design-systems/<brand>/specification/* | 原 blob 复制 |
 | localized/<brand>/* | content/design-systems/<brand>/localized/* | 原 blob 复制 |
-| research/* | sources/research/* | 原 blob 复制 |
+| research/* | docs/sources/research/* | 原 blob 复制 |
 | .agents/skills/* | .agents/skills/* | 保留 |
 | script/* | 暂留 script/* | 下一阶段检查后迁移 |
-| 根目录 Python 脚本 | 暂留根目录 | 下一阶段检查后迁移 |
-| preview.html / local-preview.html | 暂留根目录 | 新站点验收后再调整 |
+| 根目录 Python 脚本 | .agents/skills/designforge-authoring/scripts/ | 更新相对路径和技能说明 |
+| preview.html / local-preview.html | docs/prototypes/ | 保留旧 WebUI 路由 |
 | manifest.json | 暂不改动 | 保护 ToolOrbit 兼容性 |
 
 ## 5. 内容完整性验收

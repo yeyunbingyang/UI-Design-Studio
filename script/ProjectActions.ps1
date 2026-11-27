@@ -7,7 +7,7 @@ function Test-ProjectEnvironment {
     }
     & python.exe -c 'import http.server, sys; print(sys.version.split()[0]); sys.exit(sys.version_info < (3, 8))' | Out-Host
     if ($LASTEXITCODE -ne 0) { return 1 }
-    foreach ($file in @('preview.html', 'localized', 'research/getdesign-home/index.json', 'script/server.py')) {
+    foreach ($file in @('docs/prototypes/preview.html', 'docs/prototypes/local-preview.html', 'localized', 'docs/sources/research/getdesign-home/index.json', 'script/server.py')) {
         if (-not (Test-Path -LiteralPath (Join-Path $projectRoot $file))) {
             Write-Host "[检查] 缺少 $file"
             return 1

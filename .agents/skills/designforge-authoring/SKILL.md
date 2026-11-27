@@ -23,7 +23,7 @@ description: 编写、校订或本地化全站共用的 DESIGN.md，并从规范
 
 ## 制作 HTML 样张
 
-编写和审查预览时，使用 [预览 HTML 编写与审查标准](../../../预览HTML编写与审查标准.md) 的逐格、逐卡、逐场景验收规则。
+编写和审查预览时，使用 [预览 HTML 编写与审查标准](../../../docs/design/预览HTML编写与审查标准.md) 的逐格、逐卡、逐场景验收规则。
 
 - 本插件的目录、详情和实时样张使用同一个风格名。已有样张的系统说明按归档翻译，原始标题可从资料来源查阅。原创样张可按「整页风格、基础词元、组件状态、组合场景」组织内容，导航链接到实际存在的章节。
 - 将词元映射为 CSS 自定义属性。色块同时展示色值和用途，字号用真实文字呈现，间距、圆角和阴影应有可直接比较的试样。给组件提供实际状态或明确标注的静态状态。
@@ -36,3 +36,11 @@ description: 编写、校订或本地化全站共用的 DESIGN.md，并从规范
 - 对照 Markdown、页面和下载文件，核对颜色、字体名、CSS 属性、状态、断点、词元、原始代码和链接目标。批量归档时校验英文原件哈希。
 - 在桌面和 `375px` 宽度检查标题、章节导航、试样和表格。验证键盘焦点及演示操作。声明支持离线时断网打开，检查字体回退和资源加载。
 - 明确验证范围。区分全量自动检查、逐句校订和浏览器实测。
+
+## 批量维护
+
+从项目根目录运行下面两个入口。基础依赖为 beautifulsoup4、bleach 和 markdown。运行本地模型翻译还需要 transformers、torch 和本地模型目录。缩略图使用 Playwright、Pillow 和 Chrome。
+
+- 本地化：`python .agents/skills/designforge-authoring/scripts/localize_archive.py --model <模型目录> --cache <缓存数据库> --brand 1win`
+- 导航和缩略图：`python .agents/skills/designforge-authoring/scripts/refresh_sample_navigation.py --chrome <Chrome可执行文件>`
+- 输入归档在 `docs/sources/research/getdesign-home/`。生成后核对 `localized/` 中的样张与 `docs/prototypes/preview.html` 中的总览数据，并验证原件哈希。

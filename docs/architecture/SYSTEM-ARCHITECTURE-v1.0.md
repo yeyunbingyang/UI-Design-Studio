@@ -30,7 +30,7 @@ Yeyunby DesignForge 是面向人和 AI 的 UI 设计研究、设计知识管理�
 - apps/backend：所有 API、业务规则、资源索引、研究任务、采集任务、文件处理、AI 调用协调和数据库访问。
 - SQLite：结构化元数据、关系、任务状态、索引、设置和操作记录。
 - content：经过整理、可供平台浏览和复用的正式设计资产。
-- sources：外部来源记录、原始归档、研究证据和许可证信息。
+- docs/sources：外部来源记录、原始归档、研究证据和许可证信息。
 - .agents/skills：Agent 可调用的技能说明与配套资源。
 - tools：采集、转换、校验、构建和维护脚本。
 
@@ -102,7 +102,7 @@ API 统一前缀 /api/v1，健康检查为 /health。长时间采集、导入和
 
 - 默认本地服务绑定 127.0.0.1。
 - 密钥、Cookie、Token 不进入前端包或 Git。
-- 文件操作限制在配置的 content、sources、storage 根目录。
+- 文件操作限制在配置的 content、docs/sources、storage 根目录。
 - 外部 HTML 在隔离 iframe 或安全上下文中预览。
 - 上传文件校验类型和大小。
 - SQLite 开启外键约束；数据库结构变化通过 Alembic 管理。

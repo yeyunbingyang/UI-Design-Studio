@@ -41,7 +41,7 @@ inbox -> researching -> draft -> review -> published -> archived。rejected 为�
 - 文件更新先写临时文件、校验后原子替换。
 - 文件 checksum 使用 SHA-256。
 - 删除资源默认软删除或归档；物理删除需明确操作。
-- 路径必须限制在配置的 content、sources 或 storage 根目录内。
+- 路径必须限制在配置的 content、docs/sources 或 storage 根目录内。
 - Alembic 管理表结构版本。
 - SQLite 开启外键约束；并发写入任务需队列化或控制事务时长。
 
