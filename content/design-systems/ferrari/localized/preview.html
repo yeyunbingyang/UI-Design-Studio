@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>高反差摄影与赛车红</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--primary:#da291c;--primary-active:#b01e0a;--primary-hover:#9d2211;--ink:#fff;--body:#969696;--body-strong:#fff;--body-on-light:#181818;--muted:#666;--muted-soft:#8f8f8f;--hairline:#303030;--hairline-on-light:#d2d2d2;--hairline-soft:#ebebeb;--canvas:#181818;--canvas-elevated:#303030;--canvas-light:#fff;--surface-card:#303030;--surface-soft-light:#f7f7f7;--surface-strong-light:#ebebeb;--on-primary:#fff;--on-dark:#fff;--on-light:#181818;--accent-yellow-hypersail:#fff200;--accent-yellow:#f6e500;--semantic-info:#4c98b9;--semantic-success:#03904a;--semantic-warning:#f13a2c;--display:'Inter','FerrariSans',-apple-system,system-ui,sans-serif;--text:'Inter','FerrariSans',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--canvas);color:var(--body);font-family:var(--text);font-size:14px;line-height:1.5}
+.nav{position:sticky;top:0;z-index:100;background:var(--canvas);border-bottom:1px solid var(--hairline);padding: 0 48px;height:64px}
+.nav-links{list-style:none;display:flex;gap:24px;align-items:center}
+.nav-links a{color:var(--ink);text-decoration:none;font-size:13px;font-weight:600;letter-spacing:0.65px;text-transform:uppercase}
+.nav-cta{background:var(--primary);color:var(--on-primary);border:none;padding:14px 32px;font-weight:700;font-size:14px;cursor:pointer;font-family:inherit;border-radius:0;height:48px;letter-spacing:1.4px;text-transform:uppercase}
+.hero{padding:96px 48px;background:var(--canvas);max-width:1440px;margin:0 auto}
+.hero-content{max-width:1200px}
+.hero h1{font-family:var(--display);font-size:80px;font-weight:500;line-height:1.2;color:var(--ink);margin:0 0 40px;letter-spacing:-1.6px}
+.hero p{font-size:14px;color:var(--body);max-width:900px;margin:0 0 32px;line-height:1.5}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn-hero-primary{background:var(--primary);color:var(--on-primary);border:none;padding:14px 32px;height:48px;font-weight:700;font-size:14px;cursor:pointer;font-family:inherit;border-radius:0;letter-spacing:1.4px;text-transform:uppercase}
+.btn-hero-secondary{background:transparent;color:var(--ink);border:1px solid var(--ink);padding:13px 31px;height:48px;font-weight:700;font-size:14px;cursor:pointer;font-family:inherit;border-radius:0;letter-spacing:1.4px;text-transform:uppercase}
+section{max-width:1280px;margin:0 auto;padding:96px 48px;border-top:1px solid var(--hairline)}
+.section-label{font-size:11px;text-transform:uppercase;letter-spacing:1.1px;color:var(--muted);font-weight:600;margin-bottom:12px}
+.section-heading{font-family:var(--display);font-size:36px;font-weight:500;color:var(--ink);margin-bottom:16px;line-height:1.2;letter-spacing:-0.36px}
+.section-intro{font-size:14px;color:var(--body);max-width:720px;margin-bottom:48px;line-height:1.5}
+.palette-group{margin-bottom:48px}
+.palette-group h3{font-size:11px;font-weight:600;color:var(--ink);margin-bottom:16px;text-transform:uppercase;letter-spacing:1.1px}
+.palette-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.swatch{border:1px solid var(--hairline);background:var(--canvas-elevated);overflow:hidden}
+.swatch-color{height:90px}
+.swatch-meta{padding:12px 14px}
+.swatch-name{font-weight:600;font-size:13px;color:var(--ink);margin-bottom:4px}
+.swatch-hex{font-family:ui-monospace,monospace;font-size:12px;color:var(--muted);margin-bottom:6px}
+.swatch-role{font-size:13px;color:var(--body);line-height:1.5}
+.type-row{display:grid;grid-template-columns:320px 1fr;gap:32px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--hairline)}
+.type-row:last-child{border-bottom:none}
+.type-meta{font-size:12px;color:var(--muted);line-height:1.5}
+.type-meta strong{display:block;color:var(--ink);font-weight:600;font-size:12px;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.5px}
+.type-sample{color:var(--ink)}
+.button-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.button-cell{border:1px solid var(--hairline);padding:28px;background:var(--canvas-elevated);min-width:0}
+.button-cell.on-light{background:var(--canvas-light);border-color:var(--hairline-on-light)}
+.button-cell.on-light .button-label{color:var(--on-light)}
+.button-cell.on-light .button-meta{color:var(--muted)}
+.button-label{font-size:11px;color:var(--ink);font-weight:600;margin-bottom:14px;text-transform:uppercase;letter-spacing:1.1px}
+.button-meta{font-size:12px;color:var(--muted);margin-top:14px;line-height:1.5}
+.btn{display:inline-block;padding:14px 32px;height:48px;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:inherit;line-height:1;border-radius:0;letter-spacing:1.4px;text-transform:uppercase}
+.btn-primary{background:var(--primary);color:var(--on-primary)}
+.btn-primary-active{background:var(--primary-active);color:var(--on-primary)}
+.btn-outline-on-dark{background:transparent;color:var(--ink);border:1px solid var(--ink);padding:13px 31px}
+.btn-outline-on-light{background:transparent;color:var(--on-light);border:1px solid var(--on-light);padding:13px 31px}
+.btn-tertiary-text{background:transparent;color:var(--ink);padding:0;height:auto;letter-spacing:1.4px;text-transform:uppercase}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
+.card-grid>*{min-width:0}
+.feature-card-photo{background:var(--canvas);border:1px solid var(--hairline);overflow:hidden}
+.feature-card-photo .photo{aspect-ratio:16/10;background:linear-gradient(135deg,#222 0%,#3c3c3c 50%,#a00c01 100%)}
+.feature-card-photo .meta{padding:24px}
+.feature-card-photo h4{font-size:18px;font-weight:700;color:var(--ink);margin-bottom:8px}
+.feature-card-photo p{font-size:13px;color:var(--body);line-height:1.5;margin-bottom:16px}
+.feature-card-light{background:var(--canvas-light);border:1px solid var(--hairline-on-light);padding:32px}
+.feature-card-light h4{font-size:18px;font-weight:700;color:var(--on-light);margin-bottom:8px}
+.feature-card-light p{font-size:13px;color:#666;line-height:1.5;margin-bottom:16px}
+.driver-card{background:var(--canvas-elevated);padding:24px;text-align:center}
+.driver-card .portrait{width:100%;aspect-ratio:1;background:linear-gradient(180deg,#3c3c3c 0%,#181818 100%);margin-bottom:16px;display:flex;align-items:flex-end;justify-content:center;font-size:80px;color:var(--primary);font-weight:700}
+.driver-card h4{font-size:18px;font-weight:700;color:var(--ink);margin-bottom:4px}
+.driver-card .num{font-family:var(--display);font-size:32px;font-weight:700;color:var(--primary);margin-bottom:4px;letter-spacing:-0.5px}
+.driver-card .team{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1.1px}
+.livery-band{background:var(--primary);color:var(--ink);padding:96px 48px;text-align:center;margin:0 -48px}
+.livery-band h2{font-family:var(--display);font-size:36px;font-weight:500;color:var(--ink);margin:0 0 24px;letter-spacing:-0.36px}
+.livery-band .number-display{font-family:var(--display);font-size:80px;font-weight:700;color:var(--ink);line-height:1;letter-spacing:-1.6px;margin-bottom:24px}
+.spec-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline)}
+.spec-cell{padding:32px 16px;text-align:center;border-right:1px solid var(--hairline)}
+.spec-cell:last-child{border-right:none}
+.spec-cell .value{font-family:var(--display);font-size:64px;font-weight:700;color:var(--ink);line-height:1.0;letter-spacing:-1.28px;margin-bottom:8px}
+.spec-cell .label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1.1px;font-weight:600}
+.race-row{display:grid;grid-template-columns:80px 1fr 100px;gap:24px;align-items:center;padding:16px 0;border-bottom:1px solid var(--hairline)}
+.race-row:last-child{border-bottom:none}
+.race-row .date{font-family:var(--display);font-size:14px;font-weight:500;color:var(--ink);text-transform:uppercase;letter-spacing:0.7px}
+.race-row .name{font-size:14px;color:var(--ink);font-weight:500}
+.race-row .circuit{font-size:12px;color:var(--muted);margin-top:2px}
+.race-row .position{font-family:var(--display);font-size:32px;font-weight:700;color:var(--primary);text-align:right;letter-spacing:-0.5px}
+.preowned-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--hairline-on-light)}
+.preowned-listing-card{background:var(--canvas-light);padding:24px}
+.preowned-listing-card .photo{aspect-ratio:4/3;background:linear-gradient(135deg,#a00c01 0%,#5a0500 60%,#222 100%);margin-bottom:16px}
+.preowned-listing-card .model{font-size:14px;font-weight:700;color:var(--on-light);margin-bottom:4px}
+.preowned-listing-card .meta{font-size:12px;color:#666;margin-bottom:8px}
+.preowned-listing-card .price{font-family:var(--display);font-size:18px;font-weight:700;color:var(--on-light);letter-spacing:0}
+.form-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.form-cell{min-width:0}
+.form-label{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;display:block}
+.text-input{width:100%;background:var(--canvas);color:var(--ink);border:1px solid var(--hairline);padding:14px 16px;height:48px;font-size:14px;font-family:inherit;border-radius:4px;outline:none}
+.text-input.focused{border:1px solid var(--ink)}
+.badge-pill{display:inline-block;background:var(--canvas-elevated);color:var(--ink);border-radius:9999px;padding:4px 12px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1.1px}
+.badge-pill.red{background:var(--primary)}
+.spacing-row{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.spacing-block{display:flex;flex-direction:column;align-items:center;gap:8px}
+.spacing-bar{background:var(--ink);height:28px}
+.spacing-label{font-size:11px;color:var(--muted);font-family:ui-monospace,monospace}
+.radius-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.radius-block{width:96px;height:96px;background:var(--canvas-elevated);border:1px solid var(--hairline);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--ink);font-weight:600;font-family:ui-monospace,monospace}
+.elevation-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:24px}
+.elevation-card{padding:24px;font-size:13px;color:var(--body);border:1px solid var(--hairline);background:var(--canvas-elevated)}
+.elevation-card.canvas{background:var(--canvas)}
+.elevation-card.light{background:var(--canvas-light);color:#666;border-color:var(--hairline-on-light)}
+.elevation-card.with-shadow{box-shadow:0 4px 8px rgba(0,0,0,0.4)}
+.elevation-card h5{font-weight:600;color:var(--ink);margin-bottom:8px;font-size:13px}
+.elevation-card.light h5{color:var(--on-light)}
+.responsive-table{width:100%;border-collapse:collapse;margin-bottom:32px;font-size:13px}
+.responsive-table th,.responsive-table td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--hairline)}
+.responsive-table th{font-weight:600;color:var(--ink);font-size:11px;text-transform:uppercase;letter-spacing:1.1px}
+.responsive-table td{color:var(--body)}
+.device-ladder{display:flex;align-items:flex-end;gap:16px;margin-bottom:32px;flex-wrap:wrap}
+.device-bar{background:var(--canvas-elevated);border:1px solid var(--hairline);color:var(--muted);text-align:center;padding:8px;font-size:11px;font-family:ui-monospace,monospace}
+.responsive-sub{margin-top:32px}
+.responsive-sub h4{font-size:18px;font-weight:700;color:var(--ink);margin-bottom:12px}
+.responsive-sub ul{padding-left:20px;color:var(--body);font-size:13px;line-height:1.5}
+.footer{background:var(--canvas);color:var(--body);padding:32px 48px;font-size:13px;text-align:center;border-top:1px solid var(--hairline)}
+.footer a{color:var(--ink)}
+.cell,.cell>*,.demo,.button-cell,.component-cell{min-width:0}
+.cell.wide,.button-cell.wide,.component-cell.wide{grid-column:span 2}
+@media (max-width:1024px){section{padding:64px 32px}.section-heading{font-size:28px}.nav>:last-child{display:none}.hero{min-height:400px}.hero-content{max-width:1200px}.hero h1{font-size:48px;letter-spacing:-1px}.type-row{grid-template-columns:1fr;gap:8px}.preowned-grid{grid-template-columns:repeat(2,1fr)}.spec-row{grid-template-columns:repeat(2,1fr);border:none}.spec-cell{border-right:none;border-bottom:1px solid var(--hairline)}.race-row{grid-template-columns:80px 1fr}.race-row .position{display:none}}
+@media (max-width:720px){.cell.wide,.button-cell.wide,.component-cell.wide{grid-column:span 1}.nav{padding: 0 48px;height:auto;min-height:56px}.nav-links{display:none}.hero-content{max-width:1200px}.hero h1{font-size:36px;letter-spacing:-0.5px}.hero p{font-size:13px}section{padding:48px 20px}.section-heading{font-size:24px}.palette-grid,.button-grid,.card-grid,.form-grid,.elevation-grid{grid-template-columns:1fr!important;gap:16px}.preowned-grid{grid-template-columns:1fr}.spacing-row,.radius-row{gap:12px}.responsive-table{font-size:12px}.responsive-table th,.responsive-table td{padding:10px 8px}.device-ladder{gap:8px}.footer{padding:24px 16px;font-size:12px}.livery-band{padding:48px 20px}.livery-band h2{font-size:28px}.livery-band .number-display{font-size:56px}}
+.nav-left{display:flex;align-items:center;gap:20px}
+.nav-brand-link,.nav-brand-link:link,.nav-brand-link:visited,.nav-brand-link:hover,.nav-brand-link:active{text-decoration:none;color:inherit}
+.nav-brand{font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)}
+.nav-github,.nav-github:link,.nav-github:visited,.nav-github:hover,.nav-github:active{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:inherit;text-decoration:none;padding:5px 10px;border:1px solid rgba(128,128,128,0.3);border-radius:6px;opacity:0.75;transition:opacity 200ms ease,border-color 200ms ease;font-family:inherit;line-height:1;white-space:nowrap}
+.nav-github:hover{opacity:1;border-color:rgba(128,128,128,0.55)}
+.nav-github svg{display:block;flex-shrink:0}
+.nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+.nav>.nav-left{justify-self:start}
+.nav>.nav-links{justify-self:center}
+.nav>:last-child{justify-self:end}
+.nav .nav-github{color:#fff;border-color:rgba(255,255,255,0.25)}
+.nav .nav-github:hover{border-color:rgba(255,255,255,0.5)}
+
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style><style data-design-nav="true">
+.design-preview-nav { min-height:48px; }
+.design-preview-nav .nav-brand { white-space:normal; overflow-wrap:anywhere; }
+.design-preview-nav .nav-links { display:flex; flex-wrap:wrap; gap:8px clamp(10px,2vw,26px); padding-block:5px; }
+.design-preview-nav a { text-decoration:none; }
+.design-preview-nav .nav-links a { color:inherit; }
+.design-preview-nav .nav-links a:hover { text-decoration:underline; text-underline-offset:3px; }
+.design-preview-nav a:focus-visible { outline:2px solid currentColor; outline-offset:4px; }
+:is([id^=design-section-],[id=design-overview]) { scroll-margin-top:94px; }
+@media (max-width:760px) {
+  .design-preview-nav { position:static; display:flex; flex-wrap:wrap; gap:3px 12px; padding:8px 12px; height:auto; }
+  .design-preview-nav .nav-left { min-width:0; }
+  .design-preview-nav > .nav-links { flex:1 1 100%; display:flex; padding-inline:0; }
+  .design-preview-nav .nav-cta { display:none; }
+  :is([id^=design-section-],[id=design-overview]) { scroll-margin-top:14px; }
+}
+</style></head>
+<body data-platform-type="汽车与航天"><nav aria-label="样张章节" class="nav design-preview-nav" data-design-nav="true"><div class="nav-left"><span class="nav-brand">Ferrari</span></div><ul class="nav-links"><li><a href="#design-section-1">配色</a></li><li><a href="#design-section-6">字体</a></li></ul><a class="nav-cta" href="#design-overview">概览</a></nav>
+<div class="hero">
+<div class="hero-content">
+<h1 id="design-overview">高反差摄影与赛车红</h1>
+<p>这是具有电影感的豪华汽车品牌编辑式界面。近黑底配 Rosso Corsa 强调色和适中字重的 FerrariSans，主按钮标签采用宽字距大写，转角为 0px。</p>
+<div class="hero-actions">
+<button class="btn-hero-primary">发现</button>
+<button class="btn-hero-secondary">F1 日历</button>
+</div>
+</div>
+</div>
+<section id="colors">
+<div class="section-label">01 · 配色</div>
+<h2 class="section-heading" id="design-section-1">罗索·科萨+近黑色+轻编辑.</h2>
+<p class="section-intro">近黑色页面底色上单品牌辨识度. 特定背景(前身,定价)内的白话编辑段.</p>
+<div class="palette-group"><h3>品牌色</h3><div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#da291c"></div><div class="swatch-meta"><div class="swatch-name">primary (Rosso Corsa)</div><div class="swatch-hex">#da291c</div><div class="swatch-role">偶像Ferrari赛车红. 初级CTAs,卡瓦利诺,F1赛车场位.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#b01e0a"></div><div class="swatch-meta"><div class="swatch-name">primary-active</div><div class="swatch-hex">#b01e0a</div><div class="swatch-role">新闻报.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#fff200"></div><div class="swatch-meta"><div class="swatch-name">accent-yellow-hypersail</div><div class="swatch-hex">#fff200</div><div class="swatch-role">仅限超帆程序。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#f6e500"></div><div class="swatch-meta"><div class="swatch-name">accent-yellow (focus)</div><div class="swatch-hex">#f6e500</div><div class="swatch-role">全球focus-ring颜色.</div></div></div>
+</div></div>
+<div class="palette-group"><h3>界面表面</h3><div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#181818"></div><div class="swatch-meta"><div class="swatch-name">canvas</div><div class="swatch-hex">#181818</div><div class="swatch-role">近黑色的页面层.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#303030"></div><div class="swatch-meta"><div class="swatch-name">canvas-elevated</div><div class="swatch-hex">#303030</div><div class="swatch-role">卡片上暗的页面底色. 星洲网.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#fff;border-bottom:1px solid #303030"></div><div class="swatch-meta"><div class="swatch-name">canvas-light</div><div class="swatch-hex">#ffffff</div><div class="swatch-role">白语编辑乐队.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#f7f7f7;border-bottom:1px solid #303030"></div><div class="swatch-meta"><div class="swatch-name">surface-soft-light</div><div class="swatch-hex">#f7f7f7</div><div class="swatch-role">轻交替带。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#ebebeb;border-bottom:1px solid #303030"></div><div class="swatch-meta"><div class="swatch-name">surface-strong-light</div><div class="swatch-hex">#ebebeb</div><div class="swatch-role">轻分者.</div></div></div>
+</div></div>
+<div class="palette-group"><h3>文本和细边线</h3><div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#fff;border-bottom:1px solid #303030"></div><div class="swatch-meta"><div class="swatch-name">ink</div><div class="swatch-hex">#ffffff</div><div class="swatch-role">显示,身体强调黑暗。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#969696"></div><div class="swatch-meta"><div class="swatch-name">body</div><div class="swatch-hex">#969696</div><div class="swatch-role">默认在黑暗中的运行文本。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#666"></div><div class="swatch-meta"><div class="swatch-name">muted</div><div class="swatch-hex">#666666</div><div class="swatch-role">字幕,字幕,请讲</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#8f8f8f"></div><div class="swatch-meta"><div class="swatch-name">muted-soft</div><div class="swatch-hex">#8f8f8f</div><div class="swatch-role">禁用链接文本。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#303030"></div><div class="swatch-meta"><div class="swatch-name">hairline</div><div class="swatch-hex">#303030</div><div class="swatch-role">1px分机在黑暗中。（原文参数：1px）</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#d2d2d2"></div><div class="swatch-meta"><div class="swatch-name">hairline-on-light</div><div class="swatch-hex">#d2d2d2</div><div class="swatch-role">1px分机在光线上。（原文参数：1px）</div></div></div>
+</div></div>
+<div class="palette-group"><h3>语义色</h3><div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#03904a"></div><div class="swatch-meta"><div class="swatch-name">success</div><div class="swatch-hex">#03904a</div><div class="swatch-role">证实</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#4c98b9"></div><div class="swatch-meta"><div class="swatch-name">info</div><div class="swatch-hex">#4c98b9</div><div class="swatch-role">信息徽章.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#f13a2c"></div><div class="swatch-meta"><div class="swatch-name">warning</div><div class="swatch-hex">#f13a2c</div><div class="swatch-role">验证警告.</div></div></div>
+</div></div>
+</section>
+<section id="typography">
+<div class="section-label">02 · 字体排版</div>
+<h2 class="section-heading" id="design-section-6">FerrariSans 500 + uppercase CTAs</h2>
+<p class="section-intro">单桑家族. 显示为重量 500。 行动按钮标签大写带有1.4px跟踪——奢侈精度.（原文参数：1.4px）</p>
+<div class="type-row"><div class="type-meta"><strong>display-mega</strong>80px / 500 / 1.05 / -1.6px</div><div class="type-sample" style="font-family:var(--display);font-size:64px;font-weight:500;letter-spacing:-1.6px">Ferrari 超帆</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-xl</strong>56px / 500 / 1.1 / -1.12px</div><div class="type-sample" style="font-family:var(--display);font-size:48px;font-weight:500;letter-spacing:-1.12px">向尼基·劳达致敬</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-lg</strong>36px / 500 / 1.2 / -0.36px</div><div class="type-sample" style="font-family:var(--display);font-size:32px;font-weight:500;letter-spacing:-0.36px">节目标题</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-md</strong>26px / 500 / 1.5 / 0.195px</div><div class="type-sample" style="font-family:var(--display);font-size:26px;font-weight:500;letter-spacing:0.195px">分节标题</div></div>
+<div class="type-row"><div class="type-meta"><strong>title-md</strong>18px / 700 / 1.2</div><div class="type-sample" style="font-size:18px;font-weight:700">构成部分标题</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-md</strong>14px / 400 / 1.5</div><div class="type-sample" style="font-size:14px">近黑色 页面底色上的默认正文. 编辑节奏.</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-sm</strong>13px / 400 / 1.5</div><div class="type-sample" style="font-size:13px">脚足体,精细印.</div></div>
+<div class="type-row"><div class="type-meta"><strong>caption-uppercase</strong>11px / 600 / 1.4 / 1.1px</div><div class="type-sample" style="font-size:11px;font-weight:600;letter-spacing:1.1px;text-transform:uppercase">区域标签</div></div>
+<div class="type-row"><div class="type-meta"><strong>button</strong>14px / 700 / 1.0 / 1.4px (uppercase)</div><div class="type-sample" style="font-size:14px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase">发现</div></div>
+<div class="type-row"><div class="type-meta"><strong>nav-link</strong>13px / 600 / 1.4 / 0.65px (uppercase)</div><div class="type-sample" style="font-size:13px;font-weight:600;letter-spacing:0.65px;text-transform:uppercase">型号 1 生活方式 所有人</div></div>
+<div class="type-row"><div class="type-meta"><strong>number-display</strong>80px / 700 / 1.0 / -1.6px</div><div class="type-sample" style="font-family:var(--display);font-size:64px;font-weight:700;color:var(--primary);letter-spacing:-1.28px">P1</div></div>
+</section>
+<section id="components">
+<div class="section-label">03 · 按钮</div>
+<h2 class="section-heading">尖锐的0px角,大写履带标签（原文参数：0px）</h2>
+<p class="section-intro">每个行动按钮都是尖锐的角质. 该品牌从未使用圆形胶囊控件.</p>
+<div class="button-grid">
+<div class="button-cell"><div class="button-label">button-primary</div><button class="btn btn-primary">发现</button><div class="button-meta">罗索·科萨 / 0px / 48px / 大写 1.4px</div></div>
+<div class="button-cell"><div class="button-label">button-primary-active</div><button class="btn btn-primary-active">按下</button><div class="button-meta">深红色报业州.</div></div>
+<div class="button-cell"><div class="button-label">button-outline-on-dark</div><button class="btn btn-outline-on-dark">F1 日历</button><div class="button-meta">Transparent + 1px white border.</div></div>
+<div class="button-cell on-light"><div class="button-label">button-outline-on-light</div><button class="btn btn-outline-on-light">查看列表</button><div class="button-meta">Transparent + 1px ink border on light.</div></div>
+<div class="button-cell"><div class="button-label">button-tertiary-text</div><button class="btn btn-tertiary-text">更多信息:→</button><div class="button-meta">内置文字色大写跟踪文本.</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">04 ——特色卡</div>
+<h2 class="section-heading">图片第一电影卡片</h2>
+<p class="section-intro">图像填充顶端边缘对端;meta坐落于下方. 尖锐的0px角.（原文参数：0px）</p>
+<div class="card-grid">
+<div class="feature-card-photo"><div class="photo"></div><div class="meta"><h4>最佳点击数</h4><p>Ferrari赛车史上的标志性时刻.</p><button class="btn btn-tertiary-text">更多信息:→</button></div></div>
+<div class="feature-card-photo"><div class="photo" style="background:linear-gradient(135deg,#222,#3c3c3c 50%,#181818)"></div><div class="meta"><h4>恢复了,就像Niki赛车一样</h4><p>The 312T2 from the 1976 season returns to the track.</p><button class="btn btn-tertiary-text">更多信息:→</button></div></div>
+<div class="feature-card-photo"><div class="photo" style="background:linear-gradient(135deg,#a00c01,#5a0500 60%,#181818)"></div><div class="meta"><h4>Replica 2026</h4><p>新的路法大旅游者透露.</p><button class="btn btn-tertiary-text">更多信息:→</button></div></div>
+</div>
+</section>
+<section>
+<div class="section-label">05——利维乐队(罗索科萨)</div>
+<h2 class="section-heading">Brand-red 大气呼喊</h2>
+<p class="section-intro">黑编辑部分之间使用的全宽的Rosso Corsa 强调色乐队.</p>
+<div class="livery-band">
+<div class="number-display">75</div>
+<h2>赛跑的年头</h2>
+<button class="btn btn-outline-on-dark">发现遗产</button>
+</div>
+</section>
+<section>
+<div class="section-label">06 —— 技术光谱</div>
+<h2 class="section-heading">细边线分裂细胞上的Number-display值</h2>
+<p class="section-intro">光谱值在number-display 80px / 700 白;在caption-uppercase 1.1px跟踪中标签.（原文参数：1.1px）</p>
+<div class="spec-row">
+<div class="spec-cell"><div class="value">340</div><div class="label">公里/小时 最高速度</div></div>
+<div class="spec-cell"><div class="value">2.5</div><div class="label">秒数 0-100 公里/小时</div></div>
+<div class="spec-cell"><div class="value">1000</div><div class="label">cv 电源</div></div>
+<div class="spec-cell"><div class="value">V12</div><div class="label">引擎布局</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">07 - F1 司机</div>
+<h2 class="section-heading">司机肖像画 卡片</h2>
+<div class="card-grid">
+<div class="driver-card"><div class="portrait">中线</div><div class="num">P1</div><h4>查尔斯·勒克莱尔</h4><div class="team">Ferrari · #16</div></div>
+<div class="driver-card"><div class="portrait">简历</div><div class="num">P3</div><h4>卡洛斯·桑兹</h4><div class="team">Ferrari · #55</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">08 - F1 赛车日程</div>
+<h2 class="section-heading">种族位置突出</h2>
+<p class="section-intro">细边线分行. 赛车定位细胞在罗索科萨使用`number-display`排版——品牌赛车身份进行渲染.</p>
+<div>
+<div class="race-row"><div class="date">14 马尔</div><div><div class="name">巴林大奖赛</div><div class="circuit">巴林国际巡回会议</div></div><div class="position">P1</div></div>
+<div class="race-row"><div class="date">21 马尔</div><div><div class="name">沙特阿拉伯政府采购</div><div class="circuit">吉达·科尼切巡回赛</div></div><div class="position">P3</div></div>
+<div class="race-row"><div class="date">04 4月(中文(简体) ).</div><div><div class="name">澳大利亚GP</div><div class="circuit">阿尔伯特公园电路</div></div><div class="position">P2</div></div>
+<div class="race-row"><div class="date">18 4月(中文(简体) ).</div><div><div class="name">中国GP</div><div class="circuit">上海国际电路</div></div><div class="position">P1</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">09——预先列名</div>
+<h2 class="section-heading">白色编辑乐队</h2>
+<p class="section-intro">预先的Ferrari上市坐落在一个白色的页面底色乐队上——纯白色表面占据了主导地位的唯一地方.</p>
+<div class="preowned-grid">
+<div class="preowned-listing-card"><div class="photo"></div><div class="model">Ferrari 罗姆人</div><div class="meta">2022 · 12,400 km</div><div class="price">€189,000</div></div>
+<div class="preowned-listing-card"><div class="photo" style="background:linear-gradient(135deg,#3c3c3c 0%,#181818 60%,#a00c01 100%)"></div><div class="model">F8 三角洲</div><div class="meta">2021 · 8,200 km</div><div class="price">€259,000</div></div>
+<div class="preowned-listing-card"><div class="photo" style="background:linear-gradient(135deg,#5a0500 0%,#a00c01 60%,#181818 100%)"></div><div class="model">波特菲诺 M</div><div class="meta">2023 · 4,600 km</div><div class="price">€212,000</div></div>
+<div class="preowned-listing-card"><div class="photo" style="background:linear-gradient(135deg,#222 0%,#3c3c3c 60%,#5a0500 100%)"></div><div class="model">812 常规</div><div class="meta">2022 · 9,800 km</div><div class="price">€349,000</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">10 · 表单</div>
+<h2 class="section-heading">投入</h2>
+<div class="form-grid">
+<div class="form-cell"><label class="form-label">电子邮箱</label><input class="text-input" placeholder="you@example.com" type="email"/></div>
+<div class="form-cell"><label class="form-label">国家</label><input class="text-input focused" type="text" value="Italy"/></div>
+<div class="form-cell"><label class="form-label">利息模型</label><input class="text-input" placeholder="罗姆人 罗姆人 罗姆人8 · 296 GTB 常规" type="text"/></div>
+</div>
+</section>
+<section>
+<div class="section-label">11 · 徽标</div>
+<p class="section-intro">胶囊形几何只在这里——其他每个组件都是尖角形的.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap"><span class="badge-pill">新设</span><span class="badge-pill red">F1</span><span class="badge-pill">有限</span><span class="badge-pill">超帆子</span></div>
+</section>
+<section>
+<div class="section-label">12 · 间距层级</div>
+<p class="section-intro">明确 8px 梯度: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+<div class="spacing-row">
+<div class="spacing-block"><div class="spacing-bar" style="width:4px"></div><div class="spacing-label">· 4</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:8px"></div><div class="spacing-label">xxx 8 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:16px"></div><div class="spacing-label">xs 16 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:24px"></div><div class="spacing-label">sm 24 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:32px"></div><div class="spacing-label">md 32 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:48px"></div><div class="spacing-label">48 高压压压轴</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:64px"></div><div class="spacing-label">□ 64</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:96px"></div><div class="spacing-label">xxl 96 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:128px"></div><div class="spacing-label">超级 128</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">13 · 圆角</div>
+<p class="section-intro">尖锐的0px角是品牌按钮. 胶囊形只保留给徽章.（原文参数：0px）</p>
+<div class="radius-row">
+<div class="radius-block" style="border-radius:0">0 − 无</div>
+<div class="radius-block" style="border-radius:2px">2 − xs 组合键</div>
+<div class="radius-block" style="border-radius:4px">4 零点</div>
+<div class="radius-block" style="border-radius:6px">6 数据</div>
+<div class="radius-block" style="border-radius:8px">8 − lg</div>
+<div class="radius-block" style="border-radius:12px">12 − xl 数据</div>
+<div class="radius-block" style="border-radius:9999px">满</div>
+</div>
+</section>
+<section>
+<div class="section-label">14 · 层次与深度</div>
+<p class="section-intro">摄影深度+亮度-步高. 单软小影层.</p>
+<div class="elevation-grid">
+<div class="elevation-card canvas"><h5>平面 / 页面底色</h5><p>身体带,脚步.</p></div>
+<div class="elevation-card"><h5>卡片</h5><p>canvas-elevated #303030——司机卡片,活盘.</p></div>
+<div class="elevation-card light"><h5>轻波段</h5><p>白社论——预有,定价.</p></div>
+<div class="elevation-card with-shadow"><h5>软滴</h5><p>0 4px 8px rgba(0,0,0,0.1). 单影层.</p></div>
+</div>
+</section>
+<section id="responsive">
+<div class="section-label">15 · 响应式布局</div>
+<table class="responsive-table">
+<thead><tr><th>名称</th><th>宽度</th><th>布局变化</th></tr></thead>
+<tbody>
+<tr><td>手机端</td><td>&lt; 640px</td><td>首屏作物垂直;首屏h1 80→32px; 特性网格 1 列; 导航汉堡; 预有 1 列</td></tr>
+<tr><td>平板</td><td>640–1024px</td><td>首屏h1 56px; 特征网格 2-up; 预拥有的2-up.</td></tr>
+<tr><td>桌面端</td><td>1024–1280px</td><td>全首屏h1 80px; 特性网格3-up; 预拥有的4-up.</td></tr>
+<tr><td>宽</td><td>&gt; 1280px 单倍径</td><td>1280px编辑机身盖;首屏摄影通栏.（原文参数：1280px）</td></tr>
+</tbody>
+</table>
+<div class="device-ladder">
+<div class="device-bar" style="width:60px;height:120px">375<br/>手机端</div>
+<div class="device-bar" style="width:90px;height:140px">640<br/>小型</div>
+<div class="device-bar" style="width:140px;height:160px">768<br/>平板电脑</div>
+<div class="device-bar" style="width:200px;height:180px">1024<br/>膝上型计算机</div>
+<div class="device-bar" style="width:260px;height:200px">1280<br/>桌面端</div>
+</div>
+<div class="responsive-sub"><h4>触控区域</h4><ul><li>48px高度的初级行动按钮——WCAG AA.（原文参数：48px）</li><li>导航项目跟踪, 48px 水龙头区域加载。</li></ul></div>
+<div class="responsive-sub"><h4>窄屏布局调整</h4><ul><li>顶端导航开关到768px以下的汉堡包.（原文参数：768px）</li><li>首屏照片通过艺术方向每响应式断点重塑.</li><li>Feature grid: 4-up → 3-up → 2-up → 1-up.</li><li>预购上市牌:4-up → 2-up → 1-up.</li></ul></div>
+</section>
+<footer class="footer" data-platform-example="footer">
+<div class="footer-shell">
+<p class="design-demo-note">栏目演示 · 汽车与航天</p><div class="footer-grid">
+<div class="footer-col">
+<h6>车型</h6>
+<span>车型总览</span>
+<span>车型对比</span>
+<span>技术规格</span>
+</div>
+<div class="footer-col">
+<h6>配置</h6>
+<span>配置选项</span>
+<span>体验预约</span>
+<span>交付说明</span>
+</div>
+<div class="footer-col">
+<h6>车主服务</h6>
+<span>保养</span>
+<span>充电</span>
+<span>配件</span>
+</div>
+<div class="footer-col">
+<h6>支持</h6>
+<span>使用手册</span>
+<span>服务网点</span>
+<span>联系支持</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

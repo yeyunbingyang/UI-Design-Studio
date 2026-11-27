@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>蓝白棱角设备目录</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+    --primary: #024ad8;
+    --primary-bright: #4d8bff;
+    --primary-deep: #0e3191;
+    --primary-soft: #1a2a52;
+    --on-primary: #ffffff;
+    --ink: #ffffff;
+    --ink-deep: #ffffff;
+    --ink-soft: #d8d9e6;
+    --on-ink: #0a0d18;
+    --canvas: #0a0d18;
+    --paper: #141826;
+    --cloud: #141826;
+    --fog: #1f2333;
+    --steel: #2a2f44;
+    --graphite: #a0a3b8;
+    --charcoal: #d8d9e6;
+    --hairline: rgba(255, 255, 255, 0.10);
+    --hairline-strong: rgba(255, 255, 255, 0.18);
+    --bloom-coral: #ff5050;
+    --bloom-rose: #f9d4d2;
+    --bloom-deep: #ff8a8a;
+    --storm-mist: #8ebdce;
+    --storm-deep: #356373;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.45);
+    --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.55);
+    --font-sans: 'Inter', 'Forma DJR Micro', system-ui, -apple-system, Arial, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-sans);
+    background: var(--canvas);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.4;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  a { color: inherit; }
+
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    height: 64px; padding: 0 48px;
+    background: rgba(10,13,24,0.85);
+    backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .nav-brand { font-weight: 600; font-size: 18px; color: var(--ink); letter-spacing: -0.36px; }
+  .nav-links { list-style: none; margin: 0; padding: 0; display: flex; gap: 28px; font-size: 14px; font-weight: 500; color: var(--ink); }
+  .nav-links a { text-decoration: none; color: var(--ink); }
+  .nav-cta {
+    display: inline-flex; align-items: center; justify-content: center;
+    height: 40px; padding: 0 18px;
+    background: var(--primary); color: var(--on-primary);
+    font: 600 13px/1 var(--font-sans);
+    letter-spacing: 0.5px; text-transform: uppercase;
+    border: none; border-radius: 4px; cursor: pointer;
+  }
+
+  .hero {
+    padding: 96px 48px;
+    background: var(--canvas);
+    display: block;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    left: -32px; top: 96px;
+    width: 96px; height: 280px;
+    background: var(--primary);
+    transform: skewX(-18deg);
+    z-index: 0;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    right: -32px; bottom: 64px;
+    width: 96px; height: 200px;
+    background: var(--primary);
+    transform: skewX(-18deg);
+    z-index: 0;
+  }
+  .hero-content { max-width: 1100px; position: relative; z-index: 1; }
+  .hero h1 {
+    font-family: var(--font-sans);
+    font-size: clamp(40px, 7vw, 72px);
+    font-weight: 500; line-height: 1.0;
+    letter-spacing: -1.5px;
+    color: var(--ink);
+    margin: 0 0 32px;
+    text-align: left;
+  }
+  .hero p {
+    font-size: 18px;
+    color: var(--ink);
+    max-width: 760px;
+    margin: 0 0 40px;
+    line-height: 1.4;
+    font-weight: 400;
+    text-align: left;
+  }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-start; align-items: center; }
+
+  .btn-primary, .btn-ink, .btn-outline, .btn-outline-ink, .btn-disabled {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 12px 24px;
+    height: 44px;
+    font: 600 14px/1.4 var(--font-sans);
+    letter-spacing: 0.7px; text-transform: uppercase;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    cursor: pointer; text-decoration: none;
+  }
+  .btn-primary { background: var(--primary); color: var(--on-primary); border-color: var(--primary); }
+  .btn-pressed { background: var(--primary-deep); color: var(--on-primary); border-color: var(--primary-deep); }
+  .btn-ink { background: var(--ink); color: var(--on-primary); border-color: var(--ink); }
+  .btn-outline { background: var(--canvas); color: var(--primary); border-color: var(--primary); }
+  .btn-outline-ink { background: var(--canvas); color: var(--ink); border-color: var(--ink); }
+  .btn-disabled { background: var(--steel); color: var(--on-primary); cursor: not-allowed; border-color: var(--steel); }
+
+  section {
+    padding: 80px 48px;
+    max-width: 1440px;
+    margin: 0 auto;
+    border-top: 1px solid var(--hairline);
+  }
+  .section-eyebrow {
+    font-family: var(--font-sans);
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 1.3px; text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 12px;
+  }
+  .section-heading {
+    font-family: var(--font-sans);
+    font-size: clamp(36px, 4.5vw, 56px); font-weight: 500;
+    line-height: 1.0; letter-spacing: -1px;
+    margin: 0 0 16px; color: var(--ink);
+  }
+  .section-sub {
+    font-size: 18px; color: var(--ink);
+    max-width: 760px; margin: 0 0 48px;
+    line-height: 1.4; font-weight: 400;
+  }
+
+  .palette-group { margin-bottom: 40px; }
+  .palette-group h3 {
+    font-family: var(--font-sans);
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+    color: var(--graphite);
+    margin: 0 0 16px;
+  }
+  .palette-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+  .swatch { border-radius: 16px; overflow: hidden; border: 1px solid var(--hairline); background: var(--paper); box-shadow: var(--shadow-sm); }
+  .swatch-color { height: 96px; }
+  .swatch-meta { padding: 16px; }
+  .swatch-name { font-weight: 500; font-size: 16px; color: var(--ink); margin: 0 0 4px; }
+  .swatch-hex { font-family: var(--font-mono); font-size: 12px; color: var(--graphite); margin: 0 0 8px; }
+  .swatch-role { font-size: 13px; line-height: 1.4; color: var(--charcoal); margin: 0; }
+
+  .type-row {
+    display: grid; grid-template-columns: 280px 1fr;
+    gap: 32px; padding: 24px 0;
+    border-bottom: 1px solid var(--hairline);
+    align-items: baseline;
+  }
+  .type-row:last-child { border-bottom: none; }
+  .type-meta { font-family: var(--font-mono); font-size: 12px; color: var(--graphite); line-height: 1.5; }
+  .type-meta strong { color: var(--ink); display: block; margin-bottom: 4px; font-family: var(--font-sans); font-weight: 600; font-size: 13px; }
+  .ts-display-xxl { font-size: 72px; font-weight: 500; line-height: 1.0; }
+  .ts-display-xl { font-size: 56px; font-weight: 500; line-height: 1.0; }
+  .ts-display-lg { font-size: 44px; font-weight: 500; line-height: 1.0; }
+  .ts-display-md { font-size: 32px; font-weight: 500; line-height: 1.0; }
+  .ts-display-sm { font-size: 24px; font-weight: 500; line-height: 1.17; }
+  .ts-display-xs { font-size: 20px; font-weight: 500; line-height: 1.0; }
+  .ts-body-lg { font-size: 18px; font-weight: 400; line-height: 1.33; }
+  .ts-body-md { font-size: 16px; font-weight: 400; line-height: 1.38; }
+  .ts-body-em { font-size: 16px; font-weight: 500; line-height: 1.38; }
+  .ts-caption-md { font-size: 14px; font-weight: 400; line-height: 1.5; }
+  .ts-caption-bold { font-size: 14px; font-weight: 700; line-height: 1.3; }
+  .ts-caption-sm { font-size: 12px; font-weight: 400; line-height: 1.33; }
+  .ts-button-md { font-size: 14px; font-weight: 600; line-height: 1.4; letter-spacing: 0.7px; text-transform: uppercase; }
+  .ts-link-md { font-size: 16px; font-weight: 500; line-height: 1.38; color: var(--primary); text-decoration: underline; }
+  .ts-mono { font-family: var(--font-mono); font-size: 14px; font-weight: 400; }
+
+  .button-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+  .button-cell { border: 1px solid var(--hairline); border-radius: 16px; padding: 32px 24px; background: var(--paper); display: flex; flex-direction: column; align-items: flex-start; gap: 16px; box-shadow: var(--shadow-sm); }
+  .button-cell-label { font-family: var(--font-mono); font-size: 11px; color: var(--graphite); text-transform: uppercase; letter-spacing: 0.5px; }
+
+  .pill-tab-row { display: inline-flex; gap: 8px; flex-wrap: wrap; }
+  .pill-tab { padding: 8px 20px; font: 500 14px/1 var(--font-sans); color: var(--ink); border-radius: 9999px; background: var(--canvas); border: 1px solid var(--hairline-strong); }
+  .pill-tab.active { background: var(--ink); color: var(--on-primary); border-color: var(--ink); }
+
+  .badge-row { display: inline-flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .badge-ink, .badge-outline, .badge-coral { font-family: var(--font-sans); font-weight: 500; font-size: 14px; line-height: 1.38; }
+  .badge-ink { background: var(--ink); color: var(--on-primary); padding: 6px 12px; border-radius: 8px; }
+  .badge-outline { background: var(--canvas); color: var(--ink); padding: 6px 12px; border-radius: 8px; border: 1px solid var(--ink); }
+  .badge-coral { background: var(--bloom-coral); color: var(--on-primary); padding: 4px 8px; border-radius: 3px; font-weight: 700; font-size: 13px; letter-spacing: 0.3px; text-transform: uppercase; }
+
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+  .card-product { background: var(--canvas); border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); display: flex; flex-direction: column; gap: 12px; }
+  .card-product .photo { aspect-ratio: 4 / 3; background: linear-gradient(135deg, var(--cloud), var(--steel)); border-radius: 16px; }
+  .card-product h4 { font-size: 20px; font-weight: 500; line-height: 1.0; margin: 4px 0 0; color: var(--ink); }
+  .card-product .meta { font-size: 14px; color: var(--charcoal); line-height: 1.5; margin: 0; }
+  .card-product .price { font-size: 24px; font-weight: 500; line-height: 1.17; color: var(--ink); margin: 4px 0; }
+  .card-product .cta { margin-top: auto; }
+
+  .card-pricing { background: var(--canvas); border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); display: flex; flex-direction: column; gap: 16px; border-top: 1px solid var(--hairline); }
+  .card-pricing.featured { border-top: 4px solid var(--primary); }
+  .card-pricing .tier-name { font-size: 24px; font-weight: 500; line-height: 1.17; color: var(--ink); margin: 0; }
+  .card-pricing .tier-price { font-size: 32px; font-weight: 500; line-height: 1.0; color: var(--ink); margin: 0; }
+  .card-pricing.featured .tier-price { color: var(--primary); }
+  .card-pricing .tier-cadence { font-size: 14px; color: var(--graphite); margin-left: 4px; }
+  .card-pricing ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 1.5; color: var(--ink); }
+  .card-pricing ul li::before { content: "✓ "; color: var(--primary); margin-right: 4px; }
+
+  .category-icon-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
+  .category-icon { background: var(--canvas); border-radius: 8px; padding: 20px 16px; display: flex; flex-direction: column; align-items: center; gap: 12px; border: 1px solid var(--hairline); }
+  .category-icon .glyph { width: 48px; height: 48px; background: var(--cloud); border-radius: 8px; }
+  .category-icon .label { font-size: 16px; font-weight: 500; color: var(--ink); }
+
+  .promo-strip-dark { background: var(--ink); color: var(--on-ink); border-radius: 16px; padding: 48px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: center; }
+  .promo-strip-dark h3 { font-size: clamp(28px, 4vw, 44px); font-weight: 500; line-height: 1.0; margin: 0 0 16px; color: var(--on-ink); }
+  .promo-strip-dark p { font-size: 16px; line-height: 1.4; color: var(--on-ink); opacity: 0.85; margin: 0; }
+  .promo-strip-dark .photo { aspect-ratio: 16 / 10; background: linear-gradient(135deg, var(--storm-deep), var(--storm-mist)); border-radius: 16px; }
+
+  .form-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+  .form-cell { display: flex; flex-direction: column; gap: 8px; }
+  .form-cell label { font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: var(--ink); }
+  .form-input { padding: 12px 16px; height: 44px; background: var(--canvas); border: 1px solid var(--steel); border-radius: 4px; font: 400 16px/1.38 var(--font-sans); color: var(--ink); }
+  .form-input.focused { border: 2px solid var(--ink); padding: 11px 15px; }
+  .form-input.error { border-color: var(--bloom-deep); }
+  .form-input.search { padding: 10px 16px; height: 40px; }
+  .form-input::placeholder { color: var(--graphite); }
+  .form-help { font-size: 12px; line-height: 1.33; color: var(--graphite); margin: 0; }
+  .form-help.error { color: var(--bloom-deep); }
+  textarea.form-input { height: auto; resize: vertical; }
+
+  .spacing-row { display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap; }
+  .spacing-cell { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+  .spacing-block { background: var(--ink); height: 32px; border-radius: 4px; }
+  .spacing-cell .label { font-family: var(--font-mono); font-size: 12px; color: var(--ink); }
+
+  .radius-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; }
+  .radius-cell { background: var(--canvas); border: 1px solid var(--hairline); padding: 24px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start; border-radius: 16px; }
+  .radius-block { width: 64px; height: 64px; background: var(--ink); }
+  .radius-cell .label { font-family: var(--font-mono); font-size: 12px; color: var(--ink); }
+  .radius-cell .role { font-size: 13px; color: var(--charcoal); }
+
+  .elevation-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; }
+  .elevation-cell { background: var(--canvas); padding: 32px; min-height: 140px; border-radius: 16px; display: flex; flex-direction: column; gap: 8px; }
+  .elev-flat { background: var(--cloud); }
+  .elev-hairline { background: var(--canvas); border: 1px solid var(--hairline); }
+  .elev-soft { background: var(--canvas); box-shadow: var(--shadow-md); }
+  .elev-floating { background: var(--canvas); box-shadow: var(--shadow-lg); }
+  .elevation-cell .label { font-family: var(--font-mono); font-size: 12px; color: var(--graphite); }
+  .elevation-cell h4 { font-size: 20px; font-weight: 500; margin: 4px 0 4px; color: var(--ink); }
+  .elevation-cell p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--charcoal); }
+
+  .responsive-table { width: 100%; border-collapse: collapse; margin-bottom: 32px; font-size: 14px; }
+  .responsive-table th, .responsive-table td { text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--hairline); }
+  .responsive-table th { font-family: var(--font-sans); font-size: 12px; font-weight: 700; letter-spacing: 0.7px; text-transform: uppercase; color: var(--graphite); }
+  .responsive-table td { color: var(--ink); }
+  .device-ladder { display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap; margin-bottom: 32px; }
+  .device-cell { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .device-block { background: var(--canvas); border: 1px solid var(--hairline); border-radius: 8px; }
+  .device-cell .label { font-family: var(--font-mono); font-size: 12px; color: var(--ink); }
+  .responsive-sub { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .responsive-sub h4 { font-family: var(--font-sans); font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--graphite); margin: 0 0 12px; }
+  .responsive-sub p, .responsive-sub li { font-size: 14px; line-height: 1.5; color: var(--ink); margin: 0 0 8px; }
+  .responsive-sub ul { padding-left: 18px; }
+
+  .footer { padding: 32px 48px; text-align: center; color: var(--graphite); font-size: 13px; }
+  .footer a { color: inherit; }
+
+  .cell, .cell > *, .demo, .button-cell, .component-cell, .form-cell { min-width: 0; }
+  .cell.wide, .button-cell.wide, .component-cell.wide { grid-column: span 2; }
+
+  @media (max-width: 1024px) {
+    section, .hero { padding: 64px 32px; }
+    .hero h1 { font-size: 48px; letter-spacing: -1px; }
+    .section-heading { font-size: 40px; letter-spacing: -0.8px; }
+    .nav { padding: 0 32px; }
+    .nav > :last-child { display: none; }
+    .type-row { grid-template-columns: 1fr; gap: 8px; }
+    .responsive-sub { grid-template-columns: 1fr; gap: 24px; }
+    .promo-strip-dark { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 720px) {
+    .cell.wide, .button-cell.wide, .component-cell.wide { grid-column: span 1; }
+    .nav { padding: 12px 20px; height: auto; min-height: 56px; }
+    .nav-links { display: none; }
+    .hero { padding: 48px 20px; }
+    .hero::before, .hero::after { display: none; }
+    .hero h1 { font-size: 36px; letter-spacing: -0.8px; }
+    .hero p { font-size: 16px; }
+    section { padding: 48px 20px; }
+    .section-heading { font-size: 28px; letter-spacing: -0.6px; }
+    .palette-grid, .button-grid, .card-grid, .form-grid, .elevation-grid, .category-icon-row { grid-template-columns: 1fr !important; gap: 16px; }
+    .radius-row { grid-template-columns: repeat(2, 1fr) !important; }
+    .responsive-table { font-size: 12px; }
+    .responsive-table th, .responsive-table td { padding: 10px 8px; }
+    .footer { padding: 24px 16px; font-size: 12px; }
+  }
+
+  /* getdesign.md nav additions */
+  .nav-left { display: flex; align-items: center; gap: 20px; }
+  .nav-brand-link,
+  .nav-brand-link:link,
+  .nav-brand-link:visited,
+  .nav-brand-link:hover,
+  .nav-brand-link:active { text-decoration: none; color: inherit; }
+  .nav-github,
+  .nav-github:link,
+  .nav-github:visited,
+  .nav-github:hover,
+  .nav-github:active {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 12px; font-weight: 600; color: inherit;
+    text-decoration: none; padding: 5px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.3); border-radius: 6px;
+    opacity: 0.75; transition: opacity 200ms ease, border-color 200ms ease;
+    font-family: inherit; line-height: 1; white-space: nowrap;
+  }
+  .nav-github:hover { opacity: 1; border-color: rgba(128, 128, 128, 0.55); }
+  .nav-github svg { display: block; flex-shrink: 0; }
+
+  /* getdesign.md nav centering */
+  .nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+  .nav > .nav-left { justify-self: start; }
+  .nav > .nav-links { justify-self: center; }
+  .nav > :last-child { justify-self: end; }
+</style>
+<style data-design-fit="true">.device-cell, .device-block { max-width:100%; }</style></head>
+<body data-platform-type="消费硬件与通信">
+
+<section class="hero">
+<div class="hero-content">
+<h1>蓝白棱角设备目录</h1>
+<p>这套面向企业及消费者的界面以纸白为底。HP Electric Blue（#024ad8）用于主按钮，标题用近黑色，整站使用几何字体 Forma DJR Micro。蓝色尖角装饰呼应 HP 标识的斜线。卡片使用 16px 圆角，照片框也使用 16px 圆角，深海军蓝区块用于收尾的客户故事和帮助入口。</p>
+<div class="hero-actions">
+<button class="btn-primary">现在就去商店</button>
+<button class="btn-outline-ink">了解更多</button>
+</div>
+</div>
+</section>
+<section id="colors">
+<div class="section-eyebrow">设计基础</div>
+<h2 class="section-heading">配色</h2>
+<p class="section-sub">纯白背景搭配深色文字层级。HP Electric Blue 用于主要操作，Bloom 和 Storm 色系用于促销标签与生活方式图片。</p>
+<div class="palette-group">
+<h3>品牌色与强调色</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background: #024ad8;"></div><div class="swatch-meta"><div class="swatch-name">HP Electric Blue</div><div class="swatch-hex">#024ad8</div><p class="swatch-role">主信号——孤信行动按钮,链接颜色,chevron-decoration填充</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: #296ef9;"></div><div class="swatch-meta"><div class="swatch-name">Bright Blue</div><div class="swatch-hex">#296ef9</div><p class="swatch-role">primary-bright — 深蓝色泥巴所在的暗板上的行动按钮</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: #0e3191;"></div><div class="swatch-meta"><div class="swatch-name">Deep Navy</div><div class="swatch-hex">#0e3191</div><p class="swatch-role">primary-deep — 按下状态, 访问的链接颜色</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: #c9e0fc;"></div><div class="swatch-meta"><div class="swatch-name">Soft Blue</div><div class="swatch-hex">#c9e0fc</div><p class="swatch-role">primary-soft — 选择芯片,客户-故事 卡片背景</p></div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>界面表面</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background: #ffffff; border-bottom: 1px solid var(--hairline);"></div><div class="swatch-meta"><div class="swatch-name">Canvas</div><div class="swatch-hex">#ffffff</div><p class="swatch-role">页面底色——通用页面背景</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: #f7f7f7;"></div><div class="swatch-meta"><div class="swatch-name">Cloud</div><div class="swatch-hex">#f7f7f7</div><p class="swatch-role">云——交替段带,feature-card组表面</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: #e8e8e8;"></div><div class="swatch-meta"><div class="swatch-name">Fog</div><div class="swatch-hex">#e8e8e8</div><p class="swatch-role">雾——表面带稍暗,FAQ外面板</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: #c2c2c2;"></div><div class="swatch-meta"><div class="swatch-name">Steel</div><div class="swatch-hex">#c2c2c2</div><p class="swatch-role">钢——概述元素边框,焦点环</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: #ff5050;"></div><div class="swatch-meta"><div class="swatch-name">Bloom Coral</div><div class="swatch-hex">#ff5050</div><p class="swatch-role">bloom-coral — 销售标签芯片, “ 25% 关闭” 覆盖</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: #f9d4d2;"></div><div class="swatch-meta"><div class="swatch-name">Bloom Rose</div><div class="swatch-hex">#f9d4d2</div><p class="swatch-role">bloom-rose——柔软的粉红色生活方式 强调色</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: #8ebdce;"></div><div class="swatch-meta"><div class="swatch-name">Storm Mist</div><div class="swatch-hex">#8ebdce</div><p class="swatch-role">storm-mist——打印机计划插图背景</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: #356373;"></div><div class="swatch-meta"><div class="swatch-name">Storm Deep</div><div class="swatch-hex">#356373</div><p class="swatch-role">storm-deep ——中立地位 强调色</p></div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>文字色</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background: #1a1a1a;"></div><div class="swatch-meta"><div class="swatch-name">Ink</div><div class="swatch-hex">#1a1a1a</div><p class="swatch-role">文字色 — 白面通用文本</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: #000000;"></div><div class="swatch-meta"><div class="swatch-name">Ink Deep</div><div class="swatch-hex">#000000</div><p class="swatch-role">ink-deep — 字号, 细边框 中风</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: #3d3d3d;"></div><div class="swatch-meta"><div class="swatch-name">Charcoal</div><div class="swatch-hex">#3d3d3d</div><p class="swatch-role">炭灰色——次要说明,fine-print</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: #636363;"></div><div class="swatch-meta"><div class="swatch-name">Graphite</div><div class="swatch-hex">#636363</div><p class="swatch-role">石墨——小印,法律线,时间戳meta</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: #ffffff; border: 1px solid var(--hairline);"></div><div class="swatch-meta"><div class="swatch-name">On Ink</div><div class="swatch-hex">#ffffff</div><p class="swatch-role">on-ink — dark-navy 板块和页脚上的文本</p></div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>语义色</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background: #b3262b;"></div><div class="swatch-meta"><div class="swatch-name">Bloom Deep</div><div class="swatch-hex">#b3262b</div><p class="swatch-role">错误/ 折现突出显示</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: #5a1313;"></div><div class="swatch-meta"><div class="swatch-name">Bloom Wine</div><div class="swatch-hex">#5a1313</div><p class="swatch-role">深度破坏性强调色</p></div></div>
+</div>
+</div>
+</section>
+<section id="type">
+<div class="section-eyebrow">语音</div>
+<h2 class="section-heading">字号层级</h2>
+<p class="section-sub">展示标题、正文、按钮和图注均使用 Forma DJR Micro，字重为 400 / 500 / 600 / 700。Inter 是最接近的开源替代字体。</p>
+<div class="type-row"><div class="type-meta"><strong>display-xxl</strong>Forma DJR Micro · 72/1.0 · 500</div><div class="ts-display-xxl">有限报价</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-xl</strong>Forma DJR Micro · 56/1.0 · 500</div><div class="ts-display-xl">买目录</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-lg</strong>Forma DJR Micro · 44/1.0 · 500</div><div class="ts-display-lg">每个工作流程的设备</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-md</strong>Forma DJR Micro · 32/1.0 · 500</div><div class="ts-display-md">为什么队伍选择我们</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-sm</strong>Forma DJR Micro · 24/1.17 · 500</div><div class="ts-display-sm">特性目录更新</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-xs</strong>Forma DJR Micro · 20/1.0 · 500</div><div class="ts-display-xs">选择打印机</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-lg</strong>Forma DJR Micro · 18/1.33 · 400</div><div class="ts-body-lg">提供硬件、保险费支助和用品的全程订阅。</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-md</strong>Forma DJR Micro · 16/1.38 · 400</div><div class="ts-body-md">Default body color. Most paragraph runs and table cells use this style with a 1.38 line-height that keeps catalog spec rows tight without crowding.</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-emphasis</strong>Forma DJR Micro · 16/1.38 · 500</div><div class="ts-body-em">粗体的run-in字型——在段落中使用.</div></div>
+<div class="type-row"><div class="type-meta"><strong>caption-md</strong>Forma DJR Micro · 14/1.5 · 400</div><div class="ts-caption-md">Specs row · 16GB RAM · 512GB SSD · 13.3-inch display</div></div>
+<div class="type-row"><div class="type-meta"><strong>caption-bold</strong>Forma DJR Micro · 14/1.3 · 700</div><div class="ts-caption-bold">拯救$200 ——有限财富</div></div>
+<div class="type-row"><div class="type-meta"><strong>caption-sm</strong>Forma DJR Micro · 12/1.33 · 400</div><div class="ts-caption-sm">脚注:定价反映出厂前的货箱内调整.</div></div>
+<div class="type-row"><div class="type-meta"><strong>link-md</strong>Forma DJR Micro · 16/1.38 · 500 · #024ad8</div><div class="ts-link-md">查看产品细节</div></div>
+<div class="type-row"><div class="type-meta"><strong>button-md</strong>Forma DJR Micro · 14/1.4 · 600 · 0.7px · UPPER</div><div class="ts-button-md">现在</div></div>
+</section>
+<section id="buttons">
+<div class="section-eyebrow">行动</div>
+<h2 class="section-heading">按钮样式</h2>
+<p class="section-sub">按钮为 4px 圆角矩形，标签使用 600 字重的大写文字。每个视口最多出现两处蓝色主按钮。</p>
+<div class="button-grid">
+<div class="button-cell"><span class="button-cell-label">button-primary</span><button class="btn-primary">现在就去商店</button></div>
+<div class="button-cell"><span class="button-cell-label">button-primary-pressed</span><button class="btn-primary btn-pressed">现在就去商店</button></div>
+<div class="button-cell"><span class="button-cell-label">button-primary-disabled</span><button class="btn-disabled">现在就去商店</button></div>
+<div class="button-cell"><span class="button-cell-label">button-ink</span><button class="btn-ink">现在买</button></div>
+<div class="button-cell"><span class="button-cell-label">button-outline(蓝色)</span><button class="btn-outline">比较</button></div>
+<div class="button-cell"><span class="button-cell-label">button-outline-ink</span><button class="btn-outline-ink">视图</button></div>
+<div class="button-cell wide"><span class="button-cell-label">category-tab / 活动</span>
+<div class="pill-tab-row">
+<button class="pill-tab active">家用电话</button>
+<button class="pill-tab">商务</button>
+<button class="pill-tab">教育</button>
+</div>
+</div>
+<div class="button-cell"><span class="button-cell-label">badge-pill-ink</span>
+<div class="badge-row">
+<span class="badge-ink">新设</span>
+<span class="badge-ink">特性</span>
+</div>
+</div>
+<div class="button-cell"><span class="button-cell-label">badge-pill-outline</span>
+<div class="badge-row">
+<span class="badge-outline">库存</span>
+<span class="badge-outline">可用</span>
+</div>
+</div>
+<div class="button-cell"><span class="button-cell-label">badge-sale-coral</span>
+<div class="badge-row">
+<span class="badge-coral">保存 $200 数据</span>
+<span class="badge-coral">25% Off</span>
+</div>
+</div>
+</div>
+</section>
+<section id="cards">
+<div class="section-eyebrow">容器</div>
+<h2 class="section-heading">卡片示例</h2>
+<p class="section-sub">卡片使用 16px 圆角与 Soft Lift 阴影。套餐卡、产品卡和分类图标沿用同一套表面样式。</p>
+<div class="card-grid" style="margin-bottom: 32px;">
+<div class="card-product">
+<div class="photo"></div>
+<span class="ts-caption-md" style="color: var(--graphite);">· 13.3”</span>
+<h4>Studio Laptop 13"</h4>
+<p class="meta">轻型电池 12小时电池 紧凑式电池</p>
+<p class="price">$1,299</p>
+<button class="btn-primary cta">现在买</button>
+</div>
+<div class="card-product">
+<div class="photo"></div>
+<span class="ts-caption-md" style="color: var(--graphite);">· 14”</span>
+<h4>Studio Laptop 14"</h4>
+<p class="meta">32GB RAM 1TB SSD 电池长</p>
+<p class="price">$1,599</p>
+<button class="btn-outline-ink cta">视图</button>
+</div>
+<div class="card-product">
+<div class="photo"></div>
+<span class="ts-caption-md" style="color: var(--graphite);">· 17.3”</span>
+<h4>Studio Laptop 17"</h4>
+<p class="meta">16GB RAM → 1TB SSD → 压缩成份系数</p>
+<p class="price">$1,799</p>
+<button class="btn-outline-ink cta">视图</button>
+</div>
+</div>
+<div class="card-grid" style="margin-bottom: 32px;">
+<div class="card-pricing">
+<span class="section-eyebrow" style="margin: 0; color: var(--graphite);">基础</span>
+<h4 class="tier-name">基本内容</h4>
+<div class="tier-price">$8.99<span class="tier-cadence">月数</span></div>
+<ul>
+<li>Up to 100 pages/month</li>
+<li>原交付的用品</li>
+<li>免费航运</li>
+</ul>
+<button class="btn-outline">选择计划</button>
+</div>
+<div class="card-pricing featured">
+<span class="section-eyebrow" style="margin: 0;">最受欢迎的</span>
+<h4 class="tier-name">体质</h4>
+<div class="tier-price">$15.99<span class="tier-cadence">月数</span></div>
+<ul>
+<li>Up to 500 pages/month</li>
+<li>运送优质用品</li>
+<li>Free shipping + 24/7 support</li>
+<li>翻转未使用的页面</li>
+</ul>
+<button class="btn-primary">选择计划</button>
+</div>
+<div class="card-pricing">
+<span class="section-eyebrow" style="margin: 0; color: var(--graphite);">高音量 :</span>
+<h4 class="tier-name">频繁</h4>
+<div class="tier-price">$24.99<span class="tier-cadence">月数</span></div>
+<ul>
+<li>Up to 1,500 pages/month</li>
+<li>重点 文字色 航运</li>
+<li>24/7 电话支持</li>
+</ul>
+<button class="btn-outline">选择计划</button>
+</div>
+</div>
+<div class="category-icon-row" style="margin-bottom: 32px;">
+<div class="category-icon"><div class="glyph"></div><span class="label">膝上型计算机</span></div>
+<div class="category-icon"><div class="glyph"></div><span class="label">桌面</span></div>
+<div class="category-icon"><div class="glyph"></div><span class="label">打印机</span></div>
+<div class="category-icon"><div class="glyph"></div><span class="label">计算机工具</span></div>
+<div class="category-icon"><div class="glyph"></div><span class="label">附属设备</span></div>
+<div class="category-icon"><div class="glyph"></div><span class="label">企业版</span></div>
+</div>
+<div class="promo-strip-dark">
+<div>
+<h3>工作方式与团队实际工作方式相符.</h3>
+<p>一种生产力第一的设计语言,具有深层的企业集成,AI驱动的自动化,在每个设备上安全地交付.</p>
+<div style="margin-top: 24px;"><button class="btn-primary">了解更多</button></div>
+</div>
+<div class="photo"></div>
+</div>
+</section>
+<section id="forms">
+<div class="section-eyebrow">投入</div>
+<h2 class="section-heading">表单控件</h2>
+<p class="section-sub">输入框为白底、钢灰细边框，圆角 4px、高 44px。聚焦时描边改为 2px 深色实线。</p>
+<div class="form-grid">
+<div class="form-cell">
+<label>电子邮箱</label>
+<input class="form-input" placeholder="you@company.com" type="email"/>
+<p class="form-help">我们永远不会分享你的邮件。</p>
+</div>
+<div class="form-cell">
+<label>工作空间名称( 聚焦)</label>
+<input class="form-input focused" type="text" value="Acme Marketing"/>
+<p class="form-help">焦点状态会增加文字色中风;没有光环.</p>
+</div>
+<div class="form-cell">
+<label>数量(错误)</label>
+<input class="form-input error" type="number" value="0"/>
+<p class="form-help error">Workspace requires at least 1 seat.</p>
+</div>
+<div class="form-cell">
+<label>搜索目录</label>
+<input class="form-input search" placeholder="搜索产品..." type="search"/>
+<p class="form-help">压缩搜索输入——在顶部导航内部使用.</p>
+</div>
+<div class="form-cell" style="grid-column: 1 / -1;">
+<label>页:1</label>
+<textarea class="form-input" placeholder="告诉我们你的工作流程..." rows="4"></textarea>
+</div>
+</div>
+</section>
+<section id="spacing">
+<div class="section-eyebrow">韵律</div>
+<h2 class="section-heading">间距层级</h2>
+<p class="section-sub">基础间距为 8px。各通栏区块之间采用一致的 80px 间距。</p>
+<div class="spacing-row">
+<div class="spacing-cell"><div class="spacing-block" style="width: 4px;"></div><span class="label">xxx 4 数据</span></div>
+<div class="spacing-cell"><div class="spacing-block" style="width: 8px;"></div><span class="label">xs 8 数据</span></div>
+<div class="spacing-cell"><div class="spacing-block" style="width: 12px;"></div><span class="label">sm 12 数据</span></div>
+<div class="spacing-cell"><div class="spacing-block" style="width: 16px;"></div><span class="label">md 16 数据</span></div>
+<div class="spacing-cell"><div class="spacing-block" style="width: 20px;"></div><span class="label">20 高压压压轴</span></div>
+<div class="spacing-cell"><div class="spacing-block" style="width: 24px;"></div><span class="label">□ 24</span></div>
+<div class="spacing-cell"><div class="spacing-block" style="width: 32px;"></div><span class="label">xxl 32 数据</span></div>
+<div class="spacing-cell"><div class="spacing-block" style="width: 80px;"></div><span class="label">80 · 章节</span></div>
+</div>
+</section>
+<section id="radius">
+<div class="section-eyebrow">几何</div>
+<h2 class="section-heading">圆角层级</h2>
+<p class="section-sub">按钮使用 4px 圆角，卡片和照片框使用 16px 圆角。</p>
+<div class="radius-row">
+<div class="radius-cell"><div class="radius-block" style="border-radius: 0;"></div><span class="label">无 0px</span><span class="role">切夫龙装饰,首屏照片</span></div>
+<div class="radius-cell"><div class="radius-block" style="border-radius: 2px;"></div><span class="label">xs 2px 数据</span><span class="role">销售标签胶囊控件</span></div>
+<div class="radius-cell"><div class="radius-block" style="border-radius: 3px;"></div><span class="label">sm 3px 数据</span><span class="role">小行动按钮半径</span></div>
+<div class="radius-cell"><div class="radius-block" style="border-radius: 4px;"></div><span class="label">md 4px 数据</span><span class="role">按钮,输入(默认)</span></div>
+<div class="radius-cell"><div class="radius-block" style="border-radius: 8px;"></div><span class="label">8px 高压压压轴</span><span class="role">徽章, FAQ 列</span></div>
+<div class="radius-cell"><div class="radius-block" style="border-radius: 16px;"></div><span class="label">□ 16px</span><span class="role">卡片, 相框</span></div>
+<div class="radius-cell"><div class="radius-block" style="border-radius: 9999px;"></div><span class="label">胶囊形 9999px</span><span class="role">过滤芯片, 搜索</span></div>
+</div>
+</section>
+<section id="elevation">
+<div class="section-eyebrow">视觉深度</div>
+<h2 class="section-heading">层次与深度</h2>
+<p class="section-sub">页面主要采用平面层次。产品卡和套餐卡使用 Soft Lift 投影。Floating Modal 用于临时浮层。</p>
+<div class="elevation-grid">
+<div class="elevation-cell elev-flat">
+<span class="label">0 · 平面</span>
+<h4>平面区块</h4>
+<p>通栏色块省去边框和投影，用 Cloud 与 Fog 底色交替区分区块。</p>
+</div>
+<div class="elevation-cell elev-hairline">
+<span class="label">1 · 细边框</span>
+<h4>细边框容器</h4>
+<p>使用 1px 细边框，适用于 FAQ 折叠区、描边按钮和对比表格单元格。</p>
+</div>
+<div class="elevation-cell elev-soft">
+<span class="label">2 · 轻投影</span>
+<h4>轻投影卡片</h4>
+<p>目录中的产品卡片统一使用轻投影。0 2px 8px rgba(26,26,26,0.08)</p>
+</div>
+<div class="elevation-cell elev-floating">
+<span class="label">3 · 浮层</span>
+<h4>浮层</h4>
+<p>用于购物车抽屉和图片放大等临时浮层。0 8px 24px rgba(26,26,26,0.12)</p>
+</div>
+</div>
+</section>
+<section id="responsive">
+<div class="section-eyebrow">适应</div>
+<h2 class="section-heading">响应式布局</h2>
+<p class="section-sub">布局设有五个断点。手机端隐藏蓝色折线装饰，照片卡片居中。</p>
+<div aria-label="响应式布局表" role="region" style="max-width:100%;overflow-x:auto" tabindex="0"><table class="responsive-table">
+<thead><tr><th>设备</th><th>宽度</th><th>布局变化</th></tr></thead>
+<tbody>
+<tr><td>手机端</td><td>&lt; 480px</td><td>单列排列，导航收起为菜单。首屏字号约 ~36px，区块内边距约 ~48px，隐藏折线装饰。</td></tr>
+<tr><td>大屏手机</td><td>480–767px</td><td>维持单列，首屏字号约 ~44px，套餐卡纵向排列。</td></tr>
+<tr><td>平板</td><td>768–1023px</td><td>产品网格为 2-column（双列），套餐卡排成 2x2，显示完整文字导航，折线装饰缩至 ~60%。</td></tr>
+<tr><td>桌面端</td><td>1024–1279px</td><td>产品网格为 3-column（三列），套餐卡为 4-column（四列），显示完整导航。</td></tr>
+<tr><td>宽屏桌面</td><td>≥ 1280px</td><td>产品网格为 4-column（四列），内容 max-width 为 1366px，背景区块通栏显示。</td></tr>
+</tbody>
+</table></div>
+<div class="device-ladder">
+<div class="device-cell"><div class="device-block" style="width: 56px; height: 96px;"></div><span class="label">320</span></div>
+<div class="device-cell"><div class="device-block" style="width: 80px; height: 120px;"></div><span class="label">480</span></div>
+<div class="device-cell"><div class="device-block" style="width: 140px; height: 160px;"></div><span class="label">768</span></div>
+<div class="device-cell"><div class="device-block" style="width: 200px; height: 180px;"></div><span class="label">1024</span></div>
+<div class="device-cell"><div class="device-block" style="width: 280px; height: 200px;"></div><span class="label">1280</span></div>
+<div class="device-cell"><div class="device-block" style="width: 340px; height: 220px;"></div><span class="label">1366+</span></div>
+</div>
+<div class="responsive-sub">
+<div>
+<h4>触控区域</h4>
+<p>button-primary 时 间 44px 高度 + 调试 24px 水平垫面清除器 WCAG-AAA 44×44 触控区域。</p>
+<p>category-tab 时 间 8px 20px 贴补凸起 12px 24px 触摸屏上显示的</p>
+<p>Top-nav 图标使用 44×44 周围的隐形击打盒 24×24 甘露 .</p>
+</div>
+<div>
+<h4>窄屏布局调整</h4>
+<ul>
+<li>功能条条在每响应式断点上保持可见;账户滴落倒数低于768px（原文参数：768px）</li>
+<li>顶端导航中层列表崩溃为1024px以下的汉堡抽屉（原文参数：1024px）</li>
+<li>首屏切夫龙斯在平板电脑上收缩,在移动中消失——图片卡片中心在视点</li>
+<li>Product family grid: 4 → 3 → 2 → 1 column as breakpoints shrink</li>
+<li>定价比较表 4- 科尔 - 2x2 □ 移动式单柱手风琴</li>
+<li>脚印5-col 链接网格 → 2-col 平板电脑 → 单柱手风琴在移动上</li>
+</ul>
+</div>
+</div>
+</section>
+
+</body>
+</html>

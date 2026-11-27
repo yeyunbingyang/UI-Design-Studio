@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>冷色层叠主机界面</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --primary: #0070d1;
+    --primary-pressed: #0064b7;
+    --primary-active: #004d8d;
+    --on-primary: #ffffff;
+    --link-dark: #53b1ff;
+    --commerce: #d53b00;
+    --commerce-pressed: #aa2f00;
+    --on-commerce: #ffffff;
+    --canvas: #000000;
+    --surface: #121314;
+    --surface-elevated: #181818;
+    --surface-card: #1f2024;
+    --hairline: rgba(229,229,229,0.2);
+    --hairline-strong: rgba(229,229,229,0.35);
+    --ink: #ffffff;
+    --body: rgba(255,255,255,0.85);
+    --mute: rgba(255,255,255,0.6);
+    --ash: rgba(229,229,229,0.45);
+    --on-dark: #ffffff;
+    --on-dark-mute: #cccccc;
+    --warning: #c81b3a;
+    --ps-plus-gold-start: #ffce21;
+    --ps-plus-gold-mid: #f5a623;
+    --ps-plus-gold-end: #ee8e00;
+
+    --font-ui: 'Inter', 'PlayStation SST', sst, Arial, Helvetica, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-ui);
+    background: var(--canvas);
+    color: var(--body);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    font-size: 18px;
+  }
+
+  /* NAV */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--canvas);
+    color: var(--ink);
+    padding: 0 48px;
+    height: 56px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .nav-brand { font-family: var(--font-ui); font-weight: 500; font-size: 16px; color: var(--ink); letter-spacing: 0.4px; }
+  .nav-links { list-style: none; display: flex; gap: 24px; padding: 0; margin: 0; }
+  .nav-links a { font-family: var(--font-ui); font-size: 14px; font-weight: 500; color: var(--ink); text-decoration: none; letter-spacing: 0.324px; }
+  .nav-cta {
+    background: var(--primary);
+    color: var(--on-primary);
+    border: none;
+    border-radius: 9999px;
+    padding: 0 24px;
+    height: 40px;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.324px;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 96px 48px;
+    background: var(--canvas);
+    display: block;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .hero-content { max-width: 1200px; }
+  .hero h1 {
+    font-family: var(--font-ui);
+    font-size: 54px;
+    font-weight: 300;
+    line-height: 1.25;
+    color: var(--ink);
+    margin: 0 0 32px;
+    letter-spacing: -0.1px;
+    text-align: left;
+  }
+  .hero p {
+    font-size: 18px;
+    color: var(--body);
+    max-width: 900px;
+    margin: 0 0 40px;
+    line-height: 1.5;
+    text-align: left;
+    letter-spacing: 0.1px;
+  }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-start; }
+  .btn {
+    font-family: var(--font-ui);
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 9999px;
+    padding: 12px 28px;
+    height: 48px;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.25;
+    letter-spacing: 0.45px;
+  }
+  .btn-primary { background: var(--primary); color: var(--on-primary); }
+  .btn-commerce { background: var(--commerce); color: var(--on-commerce); }
+  .btn-secondary-light { background: transparent; color: var(--ink); border: 1px solid var(--hairline-strong); padding: 11px 27px; }
+  .btn-secondary-dark { background: transparent; color: var(--ink); border: 1px solid var(--hairline-strong); padding: 11px 27px; }
+  .btn-disabled { background: var(--surface); color: var(--ash); cursor: not-allowed; }
+
+  /* SECTIONS */
+  section {
+    padding: 96px 48px;
+    max-width: 1440px;
+    margin: 0 auto;
+    border-top: 1px solid var(--hairline);
+  }
+  .section-eyebrow {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--mute);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 12px;
+  }
+  .section-heading {
+    font-family: var(--font-ui);
+    font-size: 35px;
+    font-weight: 300;
+    line-height: 1.25;
+    color: var(--ink);
+    margin: 0 0 16px;
+  }
+  .section-desc { font-size: 18px; color: var(--body); max-width: 820px; margin: 0 0 48px; line-height: 1.5; letter-spacing: 0.1px; }
+
+  /* PALETTE */
+  .palette-block { margin-bottom: 48px; }
+  .palette-block-label {
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin: 0 0 16px;
+  }
+  .palette-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .swatch {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .swatch-color { height: 100px; }
+  .swatch-meta { padding: 14px 16px 16px; }
+  .swatch-name { font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--ink); margin: 0 0 2px; }
+  .swatch-hex { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 12px; color: var(--mute); margin: 0 0 6px; }
+  .swatch-role { font-family: var(--font-ui); font-size: 13px; color: var(--body); margin: 0; line-height: 1.4; }
+
+  /* TYPOGRAPHY */
+  .type-row {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 32px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--hairline);
+    align-items: baseline;
+  }
+  .type-meta { font-family: var(--font-ui); font-size: 12px; color: var(--mute); line-height: 1.6; }
+  .type-meta strong { display: block; color: var(--ink); font-weight: 600; font-size: 13px; margin-bottom: 4px; }
+  .type-sample { color: var(--ink); font-family: var(--font-ui); }
+
+  /* BUTTONS GRID */
+  .button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .button-cell {
+    border: 1px solid var(--hairline);
+    border-radius: 8px;
+    padding: 28px 24px 22px;
+    background: var(--surface);
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .button-cell-label { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--ink); margin: 0; text-transform: uppercase; letter-spacing: 0.3px; }
+  .button-cell-spec { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 11px; color: var(--mute); margin: 0; line-height: 1.5; }
+
+  /* FILTER PILLS */
+  .filter-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+  .filter-pill {
+    background: rgba(255,255,255,0.06);
+    color: var(--ink);
+    padding: 8px 16px;
+    border-radius: 9999px;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid var(--hairline);
+    letter-spacing: 0.324px;
+  }
+  .filter-pill.active { background: var(--surface); border: 1px solid var(--primary); }
+
+  /* BADGE */
+  .badge-info {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--on-primary);
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  /* CARDS */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .product-card {
+    background: var(--surface-card);
+    border-radius: 8px;
+    padding: 24px;
+    color: var(--ink);
+  }
+  .product-card-dark {
+    background: var(--surface-elevated);
+    border-radius: 8px;
+    padding: 24px;
+    color: var(--ink);
+  }
+  .feature-card {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 8px;
+    padding: 32px;
+    color: var(--ink);
+  }
+
+  /* GAME TILE */
+  .game-tile {
+    background: var(--surface);
+    border-radius: 8px;
+    overflow: hidden;
+    color: var(--ink);
+  }
+  .game-tile-art {
+    aspect-ratio: 16/9;
+    background: linear-gradient(135deg, #1a3a5d 0%, #0a1a2d 100%);
+  }
+  .game-tile-art.a { background: linear-gradient(135deg, #2a1a4d, #0a0a1a); }
+  .game-tile-art.b { background: linear-gradient(135deg, #4d2a1a, #1a0a0a); }
+  .game-tile-art.c { background: linear-gradient(135deg, #1a4d2a, #0a1a0a); }
+  .game-tile-meta { padding: 12px 16px; }
+  .game-tile-title { font-family: var(--font-ui); font-size: 16px; font-weight: 700; margin: 0 0 4px; }
+  .game-tile-platform { font-family: var(--font-ui); font-size: 12px; color: var(--on-dark-mute); margin: 0; }
+
+  /* HERO BANDS */
+  .hero-band-blue {
+    background: var(--primary);
+    color: var(--on-primary);
+    padding: 96px 48px;
+    border-radius: 0;
+    text-align: left;
+  }
+  .hero-band-blue h3 { font-family: var(--font-ui); font-size: 35px; font-weight: 300; margin: 0 0 24px; }
+  .hero-band-dark {
+    background: linear-gradient(180deg, var(--surface) 0%, var(--canvas) 100%);
+    color: var(--ink);
+    padding: 96px 48px;
+    border-radius: 0;
+    border: 1px solid var(--hairline);
+  }
+  .hero-band-dark h3 { font-family: var(--font-ui); font-size: 54px; font-weight: 300; margin: 0 0 24px; line-height: 1.25; letter-spacing: -0.1px; }
+  .hero-band-light {
+    background: #ffffff;
+    color: #000000;
+    padding: 96px 48px;
+    border-radius: 0;
+  }
+  .hero-band-light h3 { font-family: var(--font-ui); font-size: 54px; font-weight: 300; margin: 0 0 24px; line-height: 1.25; letter-spacing: -0.1px; }
+  .hero-band-light .btn-primary { background: var(--primary); color: var(--on-primary); }
+
+  /* PS PLUS BANNER */
+  .ps-plus-banner {
+    background: var(--surface);
+    color: var(--ink);
+    padding: 48px 32px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--hairline);
+  }
+  .ps-plus-banner::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--ps-plus-gold-start) 0%, var(--ps-plus-gold-mid) 50%, var(--ps-plus-gold-end) 100%);
+  }
+  .ps-plus-banner h3 { font-family: var(--font-ui); font-size: 28px; font-weight: 300; margin: 0 0 16px; letter-spacing: 0.1px; }
+
+  /* CAROUSEL */
+  .carousel-paddle {
+    background: rgba(255,255,255,0.16);
+    color: var(--ink);
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 9999px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pagination { display: flex; gap: 8px; }
+  .pagination-dot { width: 8px; height: 8px; border-radius: 9999px; background: var(--hairline); }
+  .pagination-dot.active { background: var(--ink); }
+
+  /* SUPPORT */
+  .support-search-bar {
+    display: inline-flex;
+    align-items: center;
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 9999px;
+    padding: 12px 24px;
+    height: 56px;
+    width: 100%;
+    max-width: 560px;
+    gap: 12px;
+    color: var(--mute);
+    font-family: var(--font-ui);
+    font-size: 18px;
+  }
+  .support-row {
+    background: var(--canvas);
+    color: var(--ink);
+    padding: 16px 0;
+    border-bottom: 1px solid var(--hairline);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-ui);
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+  }
+
+  /* FORMS */
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 800px;
+  }
+  .form-cell { display: flex; flex-direction: column; gap: 6px; }
+  .form-label { font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--ink); text-transform: uppercase; letter-spacing: 0.324px; }
+  .form-spec { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 11px; color: var(--mute); margin-top: 4px; }
+  input.text-input {
+    height: 48px;
+    border: 1px solid var(--hairline);
+    background: var(--surface);
+    color: var(--ink);
+    border-radius: 4px;
+    padding: 0 16px;
+    font-family: var(--font-ui);
+    font-size: 18px;
+  }
+  input.text-input.focused { border: 2px solid var(--primary); padding: 0 15px; outline: none; }
+
+  /* SPACING + RADIUS */
+  .spacing-row, .radius-row { display: flex; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+  .spacing-cell { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .spacing-bar { background: var(--ink); height: 32px; }
+  .spacing-label { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 11px; color: var(--mute); }
+  .radius-cell { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .radius-box { width: 100px; height: 100px; background: var(--surface-card); border: 1px solid var(--hairline); }
+  .radius-label { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 11px; color: var(--mute); }
+  .radius-context { font-family: var(--font-ui); font-size: 12px; color: var(--body); text-align: center; max-width: 110px; }
+
+  /* ELEVATION */
+  .elevation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+    background: var(--surface);
+    padding: 32px;
+    border-radius: 8px;
+  }
+  .elevation-card {
+    background: var(--surface-elevated);
+    height: 140px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+  }
+  .elevation-card.level-1 { border: 1px solid var(--hairline); }
+  .elevation-card.level-2 { box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
+  .elevation-card.level-3 { background: linear-gradient(180deg, var(--surface) 0%, var(--canvas) 100%); border: 1px solid var(--hairline); }
+  .elevation-name { font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--ink); }
+  .elevation-spec { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 11px; color: var(--mute); }
+
+  /* RESPONSIVE TABLE */
+  .responsive-table { width: 100%; border-collapse: collapse; font-family: var(--font-ui); font-size: 14px; }
+  .responsive-table th, .responsive-table td {
+    text-align: left;
+    padding: 14px 12px;
+    border-bottom: 1px solid var(--hairline);
+    vertical-align: top;
+  }
+  .responsive-table th { font-weight: 600; color: var(--ink); background: var(--surface); font-size: 13px; text-transform: uppercase; letter-spacing: 0.4px; }
+  .responsive-table td { color: var(--body); }
+
+  .device-ladder { display: flex; align-items: flex-end; gap: 16px; margin-top: 32px; flex-wrap: wrap; }
+  .device { background: var(--surface); border: 1px solid var(--hairline); display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding: 12px; border-radius: 8px; }
+  .device .label { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 11px; color: var(--mute); margin-top: 8px; }
+  .device .name { font-family: var(--font-ui); font-size: 11px; color: var(--ink); font-weight: 600; }
+  .device.phone { width: 48px; height: 96px; }
+  .device.phone-large { width: 64px; height: 120px; }
+  .device.tablet { width: 100px; height: 150px; }
+  .device.desktop-small { width: 160px; height: 130px; }
+  .device.desktop { width: 220px; height: 150px; }
+
+  .responsive-sub-block { margin-top: 40px; }
+  .responsive-sub-block h3 { font-family: var(--font-ui); font-size: 22px; font-weight: 300; margin: 0 0 12px; color: var(--ink); letter-spacing: 0.1px; }
+  .responsive-sub-block ul { padding-left: 18px; line-height: 1.7; color: var(--body); }
+
+  /* FOOTER */
+  .footer {
+    padding: 48px 48px;
+    text-align: center;
+    background: var(--primary);
+    color: var(--on-primary);
+    font-family: var(--font-ui);
+    font-size: 14px;
+  }
+  .footer a { color: var(--on-primary); font-weight: 500; }
+
+  /* Overflow guards */
+  .cell, .cell > *, .demo, .button-cell, .component-cell { min-width: 0; }
+  .cell.wide,
+  .button-cell.wide,
+  .component-cell.wide { grid-column: span 2; }
+
+  @media (max-width: 1024px) {
+    section { padding: 64px 32px; }
+    .section-heading { font-size: 28px; }
+    .nav { padding: 0 32px; }
+    .nav > :last-child { display: none; }
+    .type-row { grid-template-columns: 1fr; gap: 8px; }
+    .type-row .type-meta { padding-bottom: 4px; }
+    .form-grid { gap: 16px; }
+    .hero { padding: 64px 32px; }
+    .hero h1 { font-size: 44px; }
+    .hero-band-dark h3, .hero-band-light h3 { font-size: 36px; }
+  }
+
+  @media (max-width: 720px) {
+    .cell.wide, .button-cell.wide, .component-cell.wide { grid-column: span 1; }
+    .nav { padding: 12px 20px; height: auto; min-height: 56px; }
+    .nav-links { display: none; }
+    .hero { padding: 48px 20px; }
+    .hero h1 { font-size: 32px; letter-spacing: -0.5px; }
+    .hero p { font-size: 16px; }
+    section { padding: 48px 20px; }
+    .section-heading { font-size: 24px; }
+    .palette-grid, .button-grid, .card-grid, .form-grid, .demo-grid, .elevation-grid { grid-template-columns: 1fr !important; gap: 16px; }
+    .hero-band-blue, .hero-band-dark, .hero-band-light, .ps-plus-banner { padding: 48px 24px; }
+    .hero-band-dark h3, .hero-band-light h3 { font-size: 30px; }
+    .spacing-row, .radius-row { gap: 12px; }
+    .responsive-table { font-size: 12px; }
+    .responsive-table th, .responsive-table td { padding: 10px 8px; }
+    .device-ladder { gap: 8px; }
+    .footer { padding: 24px 16px; font-size: 12px; }
+  }
+
+  /* getdesign.md nav additions */
+  .nav-left { display: flex; align-items: center; gap: 20px; }
+  .nav-brand-link,
+  .nav-brand-link:link,
+  .nav-brand-link:visited,
+  .nav-brand-link:hover,
+  .nav-brand-link:active { text-decoration: none; color: inherit; }
+  .nav-github,
+  .nav-github:link,
+  .nav-github:visited,
+  .nav-github:hover,
+  .nav-github:active {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: inherit;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 6px;
+    opacity: 0.75;
+    transition: opacity 200ms ease, border-color 200ms ease;
+    font-family: inherit;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .nav-github:hover { opacity: 1; border-color: rgba(128, 128, 128, 0.55); }
+  .nav-github svg { display: block; flex-shrink: 0; }
+
+  /* getdesign.md nav centering */
+  .nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+  .nav > .nav-left { justify-self: start; }
+  .nav > .nav-links { justify-self: center; }
+  .nav > :last-child { justify-self: end; }
+
+  /* Dark-nav GitHub override */
+  .nav .nav-github { color: #ffffff; border-color: rgba(255, 255, 255, 0.25); }
+  .nav .nav-github:hover { border-color: rgba(255, 255, 255, 0.5); }
+
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+</head>
+<body data-platform-type="消费硬件与通信">
+
+<header class="hero">
+<div class="hero-content">
+<h1>冷色层叠主机界面</h1>
+<p>深色版本以纯黑（#000000）为主，抬升卡片使用 #121314 → #181818 → #1f2024 的表面层次。PlayStation Blue 与商城橙色继续作为原有操作色。</p>
+<div class="hero-actions">
+<button class="btn btn-primary">了解更多</button>
+<button class="btn btn-commerce">现在买</button>
+</div>
+</div>
+</header>
+<!-- COLOR PALETTE -->
+<section id="colors">
+<p class="section-eyebrow">01 · 配色</p>
+<h2 class="section-heading">配色</h2>
+<p class="section-desc">纯黑页面底色带有4步法的表面层级,半透明-白色文本和边框层,PlayStation蓝和商业橙色保存得非常准确.</p>
+<div class="palette-block">
+<p class="palette-block-label">品牌色与强调色(保留)</p>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#0070d1"></div><div class="swatch-meta"><p class="swatch-name">PlayStation Blue (primary)</p><p class="swatch-hex">#0070d1</p><p class="swatch-role">一级行动按钮 胶囊形,页脚表面——保存准确</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#0064b7"></div><div class="swatch-meta"><p class="swatch-name">Blue Pressed</p><p class="swatch-hex">#0064b7</p><p class="swatch-role">受压初级状态——保留</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#d53b00"></div><div class="swatch-meta"><p class="swatch-name">Commerce Orange</p><p class="swatch-hex">#d53b00</p><p class="swatch-role">仅存储 CTA —— 保存</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#aa2f00"></div><div class="swatch-meta"><p class="swatch-name">Commerce Pressed</p><p class="swatch-hex">#aa2f00</p><p class="swatch-role">受压商业——保存</p></div></div>
+</div>
+</div>
+<div class="palette-block">
+<p class="palette-block-label">页面底色 和 表面层级 组合键</p>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#000000"></div><div class="swatch-meta"><p class="swatch-name">Canvas</p><p class="swatch-hex">#000000</p><p class="swatch-role">纯黑色 页面背景</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#121314"></div><div class="swatch-meta"><p class="swatch-name">Surface</p><p class="swatch-hex">#121314</p><p class="swatch-role">卡片, sub-nav, 调色板表</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#181818"></div><div class="swatch-meta"><p class="swatch-name">Surface Elevated</p><p class="swatch-hex">#181818</p><p class="swatch-role">游戏牌, 暗产品 卡片</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#1f2024"></div><div class="swatch-meta"><p class="swatch-name">Surface Card</p><p class="swatch-hex">#1f2024</p><p class="swatch-role">产品点火最轻表面</p></div></div>
+</div>
+</div>
+<div class="palette-block">
+<p class="palette-block-label">半透明边框</p>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:rgba(229,229,229,0.2)"></div><div class="swatch-meta"><p class="swatch-name">Hairline</p><p class="swatch-hex">rgba(229,229,229,0.2)</p><p class="swatch-role">1px 行分隔符, 卡片 边框</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:rgba(229,229,229,0.35)"></div><div class="swatch-meta"><p class="swatch-name">Hairline Strong</p><p class="swatch-hex">rgba(229,229,229,0.35)</p><p class="swatch-role">次按钮 边界, 内线分隔器</p></div></div>
+</div>
+</div>
+<div class="palette-block">
+<p class="palette-block-label">文本等级</p>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#ffffff"></div><div class="swatch-meta"><p class="swatch-name">Ink</p><p class="swatch-hex">#ffffff</p><p class="swatch-role">标题、 按钮文本、 主导航链接</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:rgba(255,255,255,0.85)"></div><div class="swatch-meta"><p class="swatch-name">Body</p><p class="swatch-hex">rgba(255,255,255,0.85)</p><p class="swatch-role">默认段落文本</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:rgba(255,255,255,0.6)"></div><div class="swatch-meta"><p class="swatch-name">Mute</p><p class="swatch-hex">rgba(255,255,255,0.6)</p><p class="swatch-role">元数据、 页脚链接文本</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:rgba(229,229,229,0.45)"></div><div class="swatch-meta"><p class="swatch-name">Ash</p><p class="swatch-hex">rgba(229,229,229,0.45)</p><p class="swatch-role">禁用文本, 最小重写工具</p></div></div>
+</div>
+</div>
+<div class="palette-block">
+<p class="palette-block-label">语义学和品牌渐变</p>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#c81b3a"></div><div class="swatch-meta"><p class="swatch-name">Warning</p><p class="swatch-hex">#c81b3a</p><p class="swatch-role">校验错误</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#53b1ff"></div><div class="swatch-meta"><p class="swatch-name">Link Dark</p><p class="swatch-hex">#53b1ff</p><p class="swatch-role">暗的页面底色 上线性链接</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:linear-gradient(90deg, #ffce21 0%, #f5a623 50%, #ee8e00 100%)"></div><div class="swatch-meta"><p class="swatch-name">PS Plus Gold Gradient</p><p class="swatch-hex">#ffce21 → #ee8e00</p><p class="swatch-role">PS Plus 一级横幅——保留</p></div></div>
+</div>
+</div>
+</section>
+<!-- TYPOGRAPHY -->
+<section id="typography">
+<p class="section-eyebrow">02 · 字体排版</p>
+<h2 class="section-heading">字号层级</h2>
+<p class="section-desc">Identical hierarchy to light mode. Display tier renders at weight 300 (light) — the brand's signature airy editorial voice.</p>
+<div class="type-row"><div class="type-meta"><strong>display-xl</strong>PlayStation SST<br/>54px / 300 / lh 1.25 / -0.1px</div><div class="type-sample" style="font-size:54px;font-weight:300;line-height:1.25;letter-spacing:-0.1px">发现所有 PS5 控制台</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-lg</strong>PlayStation SST<br/>44px / 300 / lh 1.25 / 0.1px</div><div class="type-sample" style="font-size:44px;font-weight:300;line-height:1.25;letter-spacing:0.1px">伟大的 PS4 和 PS5 游戏现在出局</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-md</strong>PlayStation SST<br/>35px / 300 / lh 1.25</div><div class="type-sample" style="font-size:35px;font-weight:300;line-height:1.25">中节标题</div></div>
+<div class="type-row"><div class="type-meta"><strong>heading-xl</strong>PlayStation SST<br/>28px / 300 / lh 1.25 / 0.1px</div><div class="type-sample" style="font-size:28px;font-weight:300;line-height:1.25;letter-spacing:0.1px">30 年份 PlayStation</div></div>
+<div class="type-row"><div class="type-meta"><strong>heading-lg</strong>PlayStation SST<br/>22px / 300 / lh 1.25 / 0.1px</div><div class="type-sample" style="font-size:22px;font-weight:300;line-height:1.25;letter-spacing:0.1px">新闻 卡片 标题</div></div>
+<div class="type-row"><div class="type-meta"><strong>heading-md</strong>PlayStation SST<br/>18px / 600 / lh 1</div><div class="type-sample" style="font-size:18px;font-weight:600;line-height:1">卡片 标签或强标题</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-md</strong>PlayStation SST<br/>18px / 400 / lh 1.5 / 0.1px</div><div class="type-sample" style="font-size:18px;font-weight:400;line-height:1.5;letter-spacing:0.1px">默认复制体位 18px 常重在暗布上, 黑布。</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-strong</strong>PlayStation SST<br/>18px / 500 / lh 1.25 / 0.4px</div><div class="type-sample" style="font-size:18px;font-weight:500;line-height:1.25;letter-spacing:0.4px">内含式强调或主导航链接</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-sm</strong>PlayStation SST<br/>16px / 400 / lh 1.5</div><div class="type-sample" style="font-size:16px;font-weight:400;line-height:1.5">卡片 描述和二级体</div></div>
+<div class="type-row"><div class="type-meta"><strong>caption-md</strong>PlayStation SST<br/>14px / 400 / lh 1.5</div><div class="type-sample" style="font-size:14px;font-weight:400;line-height:1.5">页脚链接,元数据,sub-nav文本</div></div>
+<div class="type-row"><div class="type-meta"><strong>caption-sm</strong>PlayStation SST<br/>12px / 500 / lh 1.5</div><div class="type-sample" style="font-size:12px;font-weight:500;line-height:1.5">最小的公用文字、 徽章标签</div></div>
+<div class="type-row"><div class="type-meta"><strong>link-md</strong>PlayStation SST<br/>18px / 400 / lh 1.5</div><div class="type-sample" style="font-size:18px;font-weight:400;line-height:1.5;color:var(--link-dark)">内置主机链接</div></div>
+<div class="type-row"><div class="type-meta"><strong>button-lg</strong>PlayStation SST<br/>18px / 700 / lh 1.25 / 0.45px</div><div class="type-sample" style="font-size:18px;font-weight:700;line-height:1.25;letter-spacing:0.45px">添加到包中</div></div>
+<div class="type-row"><div class="type-meta"><strong>button-md</strong>PlayStation SST<br/>14px / 700 / lh 1.25 / 0.324px</div><div class="type-sample" style="font-size:14px;font-weight:700;line-height:1.25;letter-spacing:0.324px">压缩 行动按钮 标签</div></div>
+</section>
+<!-- BUTTONS -->
+<section id="components">
+<p class="section-eyebrow">03 · 组件</p>
+<h2 class="section-heading">按钮样式</h2>
+<p class="section-desc">与浅色模式相同的词汇——初级蓝和商务橙保持相同;二级边界翻转为半透明-白色的细边线.</p>
+<div class="button-grid">
+<div class="button-cell">
+<button class="btn btn-primary">添加到包中</button>
+<p class="button-cell-label">button-primary</p>
+<p class="button-cell-spec">bg 主文本 on-primary 整数 48px 高度</p>
+</div>
+<div class="button-cell">
+<button class="btn btn-primary" style="background:var(--primary-pressed)">按下</button>
+<p class="button-cell-label">button-primary-pressed</p>
+<p class="button-cell-spec">bg primary-pressed 文本 on-primary</p>
+</div>
+<div class="button-cell">
+<button class="btn btn-commerce">现在买</button>
+<p class="button-cell-label">button-commerce</p>
+<p class="button-cell-spec">bg 商业 on-commerce 文本 整数</p>
+</div>
+<div class="button-cell">
+<button class="btn btn-commerce" style="background:var(--commerce-pressed)">按下</button>
+<p class="button-cell-label">button-commerce-pressed</p>
+<p class="button-cell-spec">bg commerce-pressed 文本 on-commerce</p>
+</div>
+<div class="button-cell">
+<button class="btn btn-secondary-dark">监视拖车</button>
+<p class="button-cell-label">button-secondary-dark</p>
+<p class="button-cell-spec">transparent · text ink · 1px hairline-strong · rounded full</p>
+</div>
+<div class="button-cell">
+<button class="btn btn-disabled">禁用</button>
+<p class="button-cell-label">button-disabled</p>
+<p class="button-cell-spec">bg 表面 ・ 文本灰</p>
+</div>
+<div class="button-cell wide">
+<div class="filter-pills">
+<button class="filter-pill active">全部</button>
+<button class="filter-pill">马上就来了</button>
+<button class="filter-pill">PlayStation VR2 维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维德.</button>
+<button class="filter-pill">最近获释</button>
+</div>
+<p class="button-cell-label">filter-pill + filter-pill-active</p>
+<p class="button-cell-spec">默认: 半透明 → 活动: 表面 + 1px 主边框</p>
+</div>
+<div class="button-cell">
+<span class="badge-info">新设</span>
+<p class="button-cell-label">badge-info</p>
+<p class="button-cell-spec">bg 主文本 on-primary 整数</p>
+</div>
+<div class="button-cell">
+<div style="display:flex;gap:8px;align-items:center">
+<button class="carousel-paddle">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M15 18l-6-6 6-6"></path></svg>
+</button>
+<button class="carousel-paddle">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M9 6l6 6-6 6"></path></svg>
+</button>
+<div class="pagination">
+<span class="pagination-dot active"></span>
+<span class="pagination-dot"></span>
+<span class="pagination-dot"></span>
+<span class="pagination-dot"></span>
+</div>
+</div>
+<p class="button-cell-label">carousel-paddle + 标记</p>
+<p class="button-cell-spec">48px 圆 rgba(255,255,255,0.16) 8px 点指标</p>
+</div>
+</div>
+</section>
+<!-- HERO BANDS -->
+<section>
+<p class="section-eyebrow">04 – 地面波段</p>
+<h2 class="section-heading">三冠分会系统</h2>
+<p class="section-desc">每个部分都是通栏的波段——黑色,白色,或PlayStation蓝. 光带作为深色目录内的有意光岛保存下来,因为它是品牌三模章系统的一部分.</p>
+<div style="display:flex;flex-direction:column;gap:24px">
+<div class="hero-band-dark">
+<h3>发现所有 PS5 控制台和附件</h3>
+<button class="btn btn-secondary-dark">了解更多</button>
+</div>
+<div class="hero-band-light">
+<h3>伟大的 PS4 和 PS5 游戏现在或即将到来</h3>
+<button class="btn btn-primary">浏览游戏</button>
+</div>
+<div class="hero-band-blue">
+<h3>今年四月,在PlayStation上,</h3>
+<button class="btn btn-secondary-dark" style="border-color:rgba(255,255,255,0.5)">查看发布</button>
+</div>
+</div>
+<div style="margin-top:48px">
+<p class="palette-block-label">PS + 标语</p>
+<div class="ps-plus-banner">
+<h3>发现 PlayStation 附加</h3>
+<p style="color:var(--body);margin:0 0 24px;font-size:18px;line-height:1.5">获得游戏馆馆,网络多人,独家折扣等服务.</p>
+<button class="btn btn-primary">了解更多</button>
+</div>
+</div>
+</section>
+<!-- CARDS -->
+<section>
+<p class="section-eyebrow">05 · 卡片</p>
+<h2 class="section-heading">卡片示例</h2>
+<p class="section-desc">游戏瓷砖,暗产品卡片,以及暗版页面底色上的功能卡片. 全部在8px半径,没有休眠的阴影.（原文参数：8px）</p>
+<p class="palette-block-label">游戏图纸卡路塞尔</p>
+<div class="card-grid" style="margin-bottom:48px">
+<div class="game-tile">
+<div class="game-tile-art a"></div>
+<div class="game-tile-meta">
+<p class="game-tile-title">游戏标题一</p>
+<p class="game-tile-platform">PS5 —— 即将来临</p>
+</div>
+</div>
+<div class="game-tile">
+<div class="game-tile-art b"></div>
+<div class="game-tile-meta">
+<p class="game-tile-title">游戏标题二</p>
+<p class="game-tile-platform">PS5 —— 现时可用</p>
+</div>
+</div>
+<div class="game-tile">
+<div class="game-tile-art c"></div>
+<div class="game-tile-meta">
+<p class="game-tile-title">游戏标题三</p>
+<p class="game-tile-platform">PS4 − PS5 − 预订单</p>
+</div>
+</div>
+<div class="game-tile">
+<div class="game-tile-art"></div>
+<div class="game-tile-meta">
+<p class="game-tile-title">游戏标题四</p>
+<p class="game-tile-platform">PlayStation VR2 维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维基月球在线解说-维德.</p>
+</div>
+</div>
+</div>
+<p class="palette-block-label">产品和功能卡片</p>
+<div class="card-grid">
+<div class="product-card">
+<p style="font-family:var(--font-ui);font-size:22px;font-weight:300;line-height:1.25;margin:0 0 12px;letter-spacing:0.1px">PlayStation 存储</p>
+<p style="font-family:var(--font-ui);font-size:16px;line-height:1.5;color:var(--body);margin:0 0 24px">Surface-card变种,具有凉爽的锡色背景.</p>
+<button class="btn btn-primary">访问存储</button>
+</div>
+<div class="product-card-dark">
+<p style="font-family:var(--font-ui);font-size:22px;font-weight:300;line-height:1.25;margin:0 0 12px;letter-spacing:0.1px">游戏细节</p>
+<p style="font-family:var(--font-ui);font-size:16px;line-height:1.5;color:var(--body);margin:0 0 24px">Surface-elevated 卡片用于产品细节面板.</p>
+<button class="btn btn-primary">阅读更多</button>
+</div>
+<div class="feature-card">
+<p style="font-family:var(--font-ui);font-size:22px;font-weight:300;line-height:1.25;margin:0 0 12px;letter-spacing:0.1px">PlayStation  加号</p>
+<p style="font-family:var(--font-ui);font-size:16px;line-height:1.5;color:var(--body);margin:0 0 24px">与细边框,32px编程一起营销卡片.（原文参数：32px）</p>
+<button class="btn btn-commerce">订阅</button>
+</div>
+</div>
+</section>
+<!-- SUPPORT -->
+<section>
+<p class="section-eyebrow">06 — 支持页</p>
+<h2 class="section-heading">支持搜索和文章行</h2>
+<p class="section-desc">暗坎瓦斯改编支持页的界面框架,使用相同的56px-tall全圆搜索栏.（原文参数：56px）</p>
+<div style="margin-bottom:48px">
+<span class="support-search-bar">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
+      搜索支持中心
+    </span>
+</div>
+<div>
+<div class="support-row"><span>如何创建或更改您的账户电子邮件</span><span style="color:var(--mute)">›</span></div>
+<div class="support-row"><span>如何关闭你的账户</span><span style="color:var(--mute)">›</span></div>
+<div class="support-row"><span>如何更新您的登录身份</span><span style="color:var(--mute)">›</span></div>
+<div class="support-row"><span>重置密码</span><span style="color:var(--mute)">›</span></div>
+<div class="support-row"><span>添加或更改双步校验</span><span style="color:var(--mute)">›</span></div>
+</div>
+</section>
+<!-- FORMS -->
+<section>
+<p class="section-eyebrow">07 · 表单</p>
+<h2 class="section-heading">表单控件</h2>
+<p class="section-desc">4px-radius 矩形输入在48px高度. 焦点依赖于a 2px 固态 PlayStation 替换蓝边 1px 细边线默认.（原文参数：48px）</p>
+<div class="form-grid">
+<div class="form-cell">
+<label class="form-label">默认输入</label>
+<input class="text-input" placeholder="电子邮箱"/>
+<span class="form-spec">1px 细边框 4px 48px 高度</span>
+</div>
+<div class="form-cell">
+<label class="form-label">重点输入</label>
+<input class="text-input focused" value="user@example.com"/>
+<span class="form-spec">2px 主要边界</span>
+</div>
+<div class="form-cell">
+<label class="form-label">密码</label>
+<input class="text-input" placeholder="••••••••" type="password"/>
+<span class="form-spec">标准text-input</span>
+</div>
+<div class="form-cell">
+<label class="form-label">提交</label>
+<button class="btn btn-primary" style="width:100%">登录</button>
+<span class="form-spec">button-primary 总是全宽</span>
+</div>
+</div>
+</section>
+<!-- SPACING -->
+<section>
+<p class="section-eyebrow">08 · 布局</p>
+<h2 class="section-heading">间距层级</h2>
+<p class="section-desc">8px基地. 96px的节奏在模式上保存.（原文参数：8px、96px）</p>
+<div class="spacing-row">
+<div class="spacing-cell"><div class="spacing-bar" style="width:4px"></div><span class="spacing-label">xxx 4 数据</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:8px"></div><span class="spacing-label">xs 8 数据</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:12px"></div><span class="spacing-label">sm 12 数据</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:16px"></div><span class="spacing-label">md 16 数据</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:24px"></div><span class="spacing-label">24 高压压压轴</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:32px"></div><span class="spacing-label">□ 32</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:48px"></div><span class="spacing-label">xxl 48 数据</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:96px"></div><span class="spacing-label">96 · 章节</span></div>
+</div>
+</section>
+<!-- RADIUS -->
+<section>
+<p class="section-eyebrow">09 · 形状</p>
+<h2 class="section-heading">圆角层级</h2>
+<p class="section-desc">与灯光模式相同: 4px 投入, 8px 牌,胶囊形CTA。</p>
+<div class="radius-row">
+<div class="radius-cell"><div class="radius-box" style="border-radius:0"></div><span class="radius-label">无 0</span><p class="radius-context">首屏区块,主导航,脚步</p></div>
+<div class="radius-cell"><div class="radius-box" style="border-radius:4px"></div><span class="radius-label">sm 4 数据</span><p class="radius-context">文本输入</p></div>
+<div class="radius-cell"><div class="radius-box" style="border-radius:8px"></div><span class="radius-label">md 8 数据</span><p class="radius-context">游戏牌, 产品 卡片</p></div>
+<div class="radius-cell"><div class="radius-box" style="border-radius:16px"></div><span class="radius-label">16 高压压压轴</span><p class="radius-context">稀有大型集装箱</p></div>
+<div class="radius-cell"><div class="radius-box" style="border-radius:9999px"></div><span class="radius-label">9999 数据</span><p class="radius-context">每个行动按钮 胶囊形</p></div>
+</div>
+</section>
+<!-- ELEVATION -->
+<section>
+<p class="section-eyebrow">10 · 视觉深度</p>
+<h2 class="section-heading">层次与深度</h2>
+<p class="section-desc">不休阴. 卡片电梯只供记者使用. 深度来自表面层级.</p>
+<div class="elevation-grid">
+<div class="elevation-card level-0"><div class="elevation-name">Level 0 — Flat</div><div class="elevation-spec">无边框/ 无阴影</div></div>
+<div class="elevation-card level-1"><div class="elevation-name">Level 1 — Hairline</div><div class="elevation-spec">1px 固体 rgba(229,229,229,0.2)</div></div>
+<div class="elevation-card level-2"><div class="elevation-name">Level 2 — Soft Active</div><div class="elevation-spec">0 4px 12px rgba(0,0,0,0.5)</div></div>
+<div class="elevation-card level-3"><div class="elevation-name">职等 3 ——节级</div><div class="elevation-spec">#121314 → #000000 垂直</div></div>
+</div>
+</section>
+<!-- RESPONSIVE -->
+<section id="layout">
+<p class="section-eyebrow">11 · 响应式</p>
+<h2 class="section-heading">响应式布局</h2>
+<p class="section-desc">响应式断点堆栈同为浅色模式.</p>
+<table class="responsive-table">
+<thead><tr><th>名称</th><th>宽度</th><th>布局变化</th></tr></thead>
+<tbody>
+<tr><td>超广</td><td>1920px+</td><td>Content max-width 1280px</td></tr>
+<tr><td>宽屏桌面</td><td>1440px</td><td>默认 — 4 上游戏的牌子旋转</td></tr>
+<tr><td>桌面端</td><td>1280px</td><td>窄的沟沟也是一样</td></tr>
+<tr><td>桌面小块</td><td>1024px</td><td>游戏牌 → 3-up</td></tr>
+<tr><td>平板电脑</td><td>768px</td><td>游戏牌牌→ 2-up; 导航成为汉堡</td></tr>
+<tr><td>手机端</td><td>480px</td><td>单栏;首屏 54px → ~32px</td></tr>
+</tbody>
+</table>
+<div class="device-ladder">
+<div class="device phone"><span class="name">320</span><span class="label">缩窄</span></div>
+<div class="device phone-large"><span class="name">480</span><span class="label">手机端</span></div>
+<div class="device tablet"><span class="name">768</span><span class="label">平板电脑</span></div>
+<div class="device desktop-small"><span class="name">1024</span><span class="label">桌面图像</span></div>
+<div class="device desktop"><span class="name">1280</span><span class="label">桌面升( L)</span></div>
+</div>
+<div class="responsive-sub-block">
+<h3>触控区域</h3>
+<ul>
+<li><strong>华达州议会:</strong> button-primary和button-commerce在48px高度上配有28px的垫板.（原文参数：48px、28px）</li>
+<li><strong>文本输入 :</strong> 48px高处.（原文参数：48px） <strong>支持搜索 :</strong> 56px高处.（原文参数：56px）</li>
+<li><strong>木马桨:</strong> 48×48 circular.</li>
+<li><strong>过滤 胶囊形 :</strong> ~36–40px 延伸至 44px 可以通过垫子来抓</li>
+</ul>
+</div>
+<div class="responsive-sub-block">
+<h3>窄屏布局调整</h3>
+<ul>
+<li><strong>初等导航 :</strong> 桌面水平 → 平板汉堡抽屉。</li>
+<li><strong>游戏旋转木马 :</strong> 4-up → 3-up → 2-up at 1024 and 768px.</li>
+<li><strong>首屏区块:</strong> 保持通栏; 内列回流。</li>
+<li><strong>区域编目 :</strong> 96px → 64px → 48px.</li>
+<li><strong>首屏标题: 高尔夫球队:</strong> 54px → 44px → 32px → 28px.</li>
+</ul>
+</div>
+</section>
+<footer class="footer" data-platform-example="footer">
+<div class="footer-shell">
+<p class="design-demo-note">栏目演示 · 消费硬件与通信</p><div class="footer-grid">
+<div class="footer-col">
+<h6>产品</h6>
+<span>产品系列</span>
+<span>配件</span>
+<span>规格对比</span>
+</div>
+<div class="footer-col">
+<h6>购买</h6>
+<span>配置选项</span>
+<span>配送</span>
+<span>订单</span>
+</div>
+<div class="footer-col">
+<h6>服务</h6>
+<span>设备设置</span>
+<span>保修</span>
+<span>更新</span>
+</div>
+<div class="footer-col">
+<h6>支持</h6>
+<span>设备文档</span>
+<span>维修</span>
+<span>问题反馈</span>
+</div>
+</div>
+
+</div>
+</footer>
+</body>
+</html>

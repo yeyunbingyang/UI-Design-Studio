@@ -1,0 +1,3295 @@
+{
+  "schemaVersion": 1,
+  "generatedFrom": "dev legacy resource archive",
+  "resourceType": "design_system",
+  "count": 84,
+  "note": "This index maps the original archived files into the canonical content directory. Source files are copied by Git blob SHA without content modification.",
+  "items": [
+    {
+      "id": "design-system:1win",
+      "slug": "1win",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/1win/DESIGN.md",
+          "path": "content/design-systems/1win/specification/DESIGN.md",
+          "blobSha": "ba28da8ae0f39c358befc9d4d91f077c2672466d"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/1win/DESIGN.zh-en.md",
+          "path": "content/design-systems/1win/localized/DESIGN.zh-en.md",
+          "blobSha": "e1ad7fa308d0472951f086a3b6b75d08c21101c8"
+        },
+        {
+          "sourcePath": "localized/1win/DESIGN.zh.md",
+          "path": "content/design-systems/1win/localized/DESIGN.zh.md",
+          "blobSha": "ef70a00136ca53cb378c8452826941f0321a70c5"
+        },
+        {
+          "sourcePath": "localized/1win/directory-hero.webp",
+          "path": "content/design-systems/1win/localized/directory-hero.webp",
+          "blobSha": "76ff922893b881ba3963708be752faf5f2f9e212"
+        },
+        {
+          "sourcePath": "localized/1win/preview-dark.html",
+          "path": "content/design-systems/1win/localized/preview-dark.html",
+          "blobSha": "87cdd8e50db15d4ad69150ba547f830bd6dc8610"
+        },
+        {
+          "sourcePath": "localized/1win/preview.html",
+          "path": "content/design-systems/1win/localized/preview.html",
+          "blobSha": "042f9d0f20135d394224fdf915e003cff410a66c"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/1win/"
+    },
+    {
+      "id": "design-system:airbnb",
+      "slug": "airbnb",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/airbnb/DESIGN.md",
+          "path": "content/design-systems/airbnb/specification/DESIGN.md",
+          "blobSha": "088254920b745ed12c9ad14429f3cd96128ab9b2"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/airbnb/DESIGN.zh-en.md",
+          "path": "content/design-systems/airbnb/localized/DESIGN.zh-en.md",
+          "blobSha": "f0b53ff70ce07e2e18fa0ffaa57e2ff685f34f81"
+        },
+        {
+          "sourcePath": "localized/airbnb/DESIGN.zh.md",
+          "path": "content/design-systems/airbnb/localized/DESIGN.zh.md",
+          "blobSha": "d27c83037f262a0fa2ab405e9fd9017c862c22ce"
+        },
+        {
+          "sourcePath": "localized/airbnb/directory-hero.webp",
+          "path": "content/design-systems/airbnb/localized/directory-hero.webp",
+          "blobSha": "33d6922b0c39580915f7c867a08ba0456ae83e11"
+        },
+        {
+          "sourcePath": "localized/airbnb/preview-dark.html",
+          "path": "content/design-systems/airbnb/localized/preview-dark.html",
+          "blobSha": "9acfbc0ab074878e7058ae1cae8faeea6437ff1e"
+        },
+        {
+          "sourcePath": "localized/airbnb/preview.html",
+          "path": "content/design-systems/airbnb/localized/preview.html",
+          "blobSha": "9cab2dd8361193733df7ec328ca8b527f7d7fa16"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/airbnb/"
+    },
+    {
+      "id": "design-system:airtable",
+      "slug": "airtable",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/airtable/DESIGN.md",
+          "path": "content/design-systems/airtable/specification/DESIGN.md",
+          "blobSha": "d885f4984c2ca5c2840a62e2d828167957c02385"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/airtable/DESIGN.zh-en.md",
+          "path": "content/design-systems/airtable/localized/DESIGN.zh-en.md",
+          "blobSha": "c300ba80ec3d9556b019749a8f5e85b1c739c756"
+        },
+        {
+          "sourcePath": "localized/airtable/DESIGN.zh.md",
+          "path": "content/design-systems/airtable/localized/DESIGN.zh.md",
+          "blobSha": "25e4e7f10ff75e3951f603232bd189778f1aea21"
+        },
+        {
+          "sourcePath": "localized/airtable/directory-hero.webp",
+          "path": "content/design-systems/airtable/localized/directory-hero.webp",
+          "blobSha": "4348821b6881e8da54b917b7e34f58df20ca1912"
+        },
+        {
+          "sourcePath": "localized/airtable/preview-dark.html",
+          "path": "content/design-systems/airtable/localized/preview-dark.html",
+          "blobSha": "13dc09fc6020acb570651716366d53b5a0caa746"
+        },
+        {
+          "sourcePath": "localized/airtable/preview.html",
+          "path": "content/design-systems/airtable/localized/preview.html",
+          "blobSha": "31ad589c5f7aa7bdae827807389b28720e2aa3a7"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/airtable/"
+    },
+    {
+      "id": "design-system:aljazeera",
+      "slug": "aljazeera",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/aljazeera/DESIGN.md",
+          "path": "content/design-systems/aljazeera/specification/DESIGN.md",
+          "blobSha": "339e75bd715247700180cc6636c3f97027036ca1"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/aljazeera/DESIGN.zh-en.md",
+          "path": "content/design-systems/aljazeera/localized/DESIGN.zh-en.md",
+          "blobSha": "529d44d6e20f969bdfee00aa9a37b17868ae9d3a"
+        },
+        {
+          "sourcePath": "localized/aljazeera/DESIGN.zh.md",
+          "path": "content/design-systems/aljazeera/localized/DESIGN.zh.md",
+          "blobSha": "43f8356682e988c6b3d420b2022e85a629e0c993"
+        },
+        {
+          "sourcePath": "localized/aljazeera/directory-hero.webp",
+          "path": "content/design-systems/aljazeera/localized/directory-hero.webp",
+          "blobSha": "9264e07f7f9db2d325bc8d2e799b33aaaa38f2bb"
+        },
+        {
+          "sourcePath": "localized/aljazeera/preview-dark.html",
+          "path": "content/design-systems/aljazeera/localized/preview-dark.html",
+          "blobSha": "b404fc36d14d81b864328845a90e62cdbe0b2af4"
+        },
+        {
+          "sourcePath": "localized/aljazeera/preview.html",
+          "path": "content/design-systems/aljazeera/localized/preview.html",
+          "blobSha": "4f09622590f87d5bf6ebf216ece067b46d803cc9"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/aljazeera/"
+    },
+    {
+      "id": "design-system:apple",
+      "slug": "apple",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/apple/DESIGN.md",
+          "path": "content/design-systems/apple/specification/DESIGN.md",
+          "blobSha": "0d37e1e5f6b621ccbdc666f6d9c82f2ada26208b"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/apple/DESIGN.zh-en.md",
+          "path": "content/design-systems/apple/localized/DESIGN.zh-en.md",
+          "blobSha": "35cb803c1734e42dab9c41024c87fe19721e2bd7"
+        },
+        {
+          "sourcePath": "localized/apple/DESIGN.zh.md",
+          "path": "content/design-systems/apple/localized/DESIGN.zh.md",
+          "blobSha": "0f412f5082cedfd08a9f45ab7571bce9094d62c5"
+        },
+        {
+          "sourcePath": "localized/apple/directory-hero.webp",
+          "path": "content/design-systems/apple/localized/directory-hero.webp",
+          "blobSha": "451534b7fd83135885cfdf3bdf9f22b42e43c91f"
+        },
+        {
+          "sourcePath": "localized/apple/preview-dark.html",
+          "path": "content/design-systems/apple/localized/preview-dark.html",
+          "blobSha": "d6038dcb8e02e955db7ee139f26ac8024f8f352c"
+        },
+        {
+          "sourcePath": "localized/apple/preview.html",
+          "path": "content/design-systems/apple/localized/preview.html",
+          "blobSha": "3ba55617552675c33944b944925aee252d40769b"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/apple/"
+    },
+    {
+      "id": "design-system:binance",
+      "slug": "binance",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/binance/DESIGN.md",
+          "path": "content/design-systems/binance/specification/DESIGN.md",
+          "blobSha": "27ec482198f450621b747a007e3135656b95f70e"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/binance/DESIGN.zh-en.md",
+          "path": "content/design-systems/binance/localized/DESIGN.zh-en.md",
+          "blobSha": "3939f0599b1ecaa574a8353fe342ce5f3f58bfa5"
+        },
+        {
+          "sourcePath": "localized/binance/DESIGN.zh.md",
+          "path": "content/design-systems/binance/localized/DESIGN.zh.md",
+          "blobSha": "46f11e1e3d097557cae0a12eb8985ead1e999c8b"
+        },
+        {
+          "sourcePath": "localized/binance/directory-hero.webp",
+          "path": "content/design-systems/binance/localized/directory-hero.webp",
+          "blobSha": "dc1af9e32b4aa292c59c7a0ca18fb6dec0f9343b"
+        },
+        {
+          "sourcePath": "localized/binance/preview-dark.html",
+          "path": "content/design-systems/binance/localized/preview-dark.html",
+          "blobSha": "d826654242b98ec7b6c1cfff5b5753734b7a5793"
+        },
+        {
+          "sourcePath": "localized/binance/preview.html",
+          "path": "content/design-systems/binance/localized/preview.html",
+          "blobSha": "c087bb7b8f25d246c4794797ac614edd890ea09b"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/binance/"
+    },
+    {
+      "id": "design-system:bmw",
+      "slug": "bmw",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/bmw/DESIGN.md",
+          "path": "content/design-systems/bmw/specification/DESIGN.md",
+          "blobSha": "8cb0be59fa1d2e839d5eddec3a4876f326f176bc"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/bmw/DESIGN.zh-en.md",
+          "path": "content/design-systems/bmw/localized/DESIGN.zh-en.md",
+          "blobSha": "3b60cc4ee758a9451f9eb3572af5a4f56d72c9de"
+        },
+        {
+          "sourcePath": "localized/bmw/DESIGN.zh.md",
+          "path": "content/design-systems/bmw/localized/DESIGN.zh.md",
+          "blobSha": "6e493b12bbaad7a7a863050f6c77f04309b1c2d9"
+        },
+        {
+          "sourcePath": "localized/bmw/directory-hero.webp",
+          "path": "content/design-systems/bmw/localized/directory-hero.webp",
+          "blobSha": "ba1542be143866cf0f0b31b0fbfb53bd0fab6c07"
+        },
+        {
+          "sourcePath": "localized/bmw/preview-dark.html",
+          "path": "content/design-systems/bmw/localized/preview-dark.html",
+          "blobSha": "2f3a91e59cf2b44d1e07b95ed75590cb91e6a8f4"
+        },
+        {
+          "sourcePath": "localized/bmw/preview.html",
+          "path": "content/design-systems/bmw/localized/preview.html",
+          "blobSha": "9d21a5ffa361556f0efe847aa3af81b98c8f715a"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/bmw/"
+    },
+    {
+      "id": "design-system:bmw-m",
+      "slug": "bmw-m",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/bmw-m/DESIGN.md",
+          "path": "content/design-systems/bmw-m/specification/DESIGN.md",
+          "blobSha": "fb1cd84a66900406038017902fb42a0e3e67122d"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/bmw-m/DESIGN.zh-en.md",
+          "path": "content/design-systems/bmw-m/localized/DESIGN.zh-en.md",
+          "blobSha": "eb2acc894a048b7f2c536fb1989bd4766ad5b29e"
+        },
+        {
+          "sourcePath": "localized/bmw-m/DESIGN.zh.md",
+          "path": "content/design-systems/bmw-m/localized/DESIGN.zh.md",
+          "blobSha": "031fa853a793e359e4ddc2f11b51982d87d7f6fc"
+        },
+        {
+          "sourcePath": "localized/bmw-m/directory-hero.webp",
+          "path": "content/design-systems/bmw-m/localized/directory-hero.webp",
+          "blobSha": "12a4c75568aea99781a2706291234090046af17d"
+        },
+        {
+          "sourcePath": "localized/bmw-m/preview-dark.html",
+          "path": "content/design-systems/bmw-m/localized/preview-dark.html",
+          "blobSha": "bcb7931092d75f17d738b3afa68fe57137848568"
+        },
+        {
+          "sourcePath": "localized/bmw-m/preview.html",
+          "path": "content/design-systems/bmw-m/localized/preview.html",
+          "blobSha": "9f4c80cca573890250c6fafeb30cc5e11d95fd97"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/bmw-m/"
+    },
+    {
+      "id": "design-system:bugatti",
+      "slug": "bugatti",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/bugatti/DESIGN.md",
+          "path": "content/design-systems/bugatti/specification/DESIGN.md",
+          "blobSha": "c6067fed091f2edfc787fe52aa8f61bd7c2a672f"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/bugatti/DESIGN.zh-en.md",
+          "path": "content/design-systems/bugatti/localized/DESIGN.zh-en.md",
+          "blobSha": "5fc51272de48e5b0f1b483a563e16470f3c82055"
+        },
+        {
+          "sourcePath": "localized/bugatti/DESIGN.zh.md",
+          "path": "content/design-systems/bugatti/localized/DESIGN.zh.md",
+          "blobSha": "be221c352a70ebc6095a3fa43e98374e8b112f6a"
+        },
+        {
+          "sourcePath": "localized/bugatti/directory-hero.webp",
+          "path": "content/design-systems/bugatti/localized/directory-hero.webp",
+          "blobSha": "1a36ea037d4882c7086c886e4d608900c0dd9bae"
+        },
+        {
+          "sourcePath": "localized/bugatti/preview-dark.html",
+          "path": "content/design-systems/bugatti/localized/preview-dark.html",
+          "blobSha": "67aca36cb3152eab683c9ad1b47cd5251bb2443d"
+        },
+        {
+          "sourcePath": "localized/bugatti/preview.html",
+          "path": "content/design-systems/bugatti/localized/preview.html",
+          "blobSha": "531c567bef7c556fb8b8a786a5ec60f81e917366"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/bugatti/"
+    },
+    {
+      "id": "design-system:cal",
+      "slug": "cal",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/cal/DESIGN.md",
+          "path": "content/design-systems/cal/specification/DESIGN.md",
+          "blobSha": "1f8525c5bb7510000a1a986ae7be4c413054adb3"
+        },
+        {
+          "sourcePath": "design-md/cal/DESIGN.zh-en.md",
+          "path": "content/design-systems/cal/specification/DESIGN.zh-en.md",
+          "blobSha": "30de5906f534237311c7a1b82e29a8e7f404c902"
+        },
+        {
+          "sourcePath": "design-md/cal/preview.html",
+          "path": "content/design-systems/cal/specification/preview.html",
+          "blobSha": "e0808f12434ac0eeb5b171f8a0fc0c249f4db9aa"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/cal/DESIGN.zh-en.md",
+          "path": "content/design-systems/cal/localized/DESIGN.zh-en.md",
+          "blobSha": "44e3e4bca105991aaaaa8d2a309e2a5b6f59938d"
+        },
+        {
+          "sourcePath": "localized/cal/DESIGN.zh.md",
+          "path": "content/design-systems/cal/localized/DESIGN.zh.md",
+          "blobSha": "912f335e885eee43276923be748b0cbc52962efb"
+        },
+        {
+          "sourcePath": "localized/cal/directory-hero.webp",
+          "path": "content/design-systems/cal/localized/directory-hero.webp",
+          "blobSha": "c991e7b2d57005e781272fc2bdc34a177e16f9d4"
+        },
+        {
+          "sourcePath": "localized/cal/preview-dark.html",
+          "path": "content/design-systems/cal/localized/preview-dark.html",
+          "blobSha": "95047d810ed17ce6c24b03276a5a4cb320949644"
+        },
+        {
+          "sourcePath": "localized/cal/preview.html",
+          "path": "content/design-systems/cal/localized/preview.html",
+          "blobSha": "884e22d3943431eb4c9cd5c4bd2f07046e2b4d4a"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/cal/"
+    },
+    {
+      "id": "design-system:claude",
+      "slug": "claude",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/claude/DESIGN.md",
+          "path": "content/design-systems/claude/specification/DESIGN.md",
+          "blobSha": "f92dc464d9bfdb6c6306f45a9ce406c6fca17432"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/claude/DESIGN.zh-en.md",
+          "path": "content/design-systems/claude/localized/DESIGN.zh-en.md",
+          "blobSha": "0db7d76db6aea098fa6d2e1482d2e368f5542d4f"
+        },
+        {
+          "sourcePath": "localized/claude/DESIGN.zh.md",
+          "path": "content/design-systems/claude/localized/DESIGN.zh.md",
+          "blobSha": "bd0cdae25047d17f562d54a76502c49a0fc7f512"
+        },
+        {
+          "sourcePath": "localized/claude/directory-hero.webp",
+          "path": "content/design-systems/claude/localized/directory-hero.webp",
+          "blobSha": "fabdb1c59c04c51aa74641c379227f329f6efef6"
+        },
+        {
+          "sourcePath": "localized/claude/preview-dark.html",
+          "path": "content/design-systems/claude/localized/preview-dark.html",
+          "blobSha": "2d7718d48e481df585dd73293080edb737213dc4"
+        },
+        {
+          "sourcePath": "localized/claude/preview.html",
+          "path": "content/design-systems/claude/localized/preview.html",
+          "blobSha": "637e27c0d5a3942f9adb5ccd202c4747c5efa261"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/claude/"
+    },
+    {
+      "id": "design-system:clay",
+      "slug": "clay",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/clay/DESIGN.md",
+          "path": "content/design-systems/clay/specification/DESIGN.md",
+          "blobSha": "4934340cffe12633bc7dd7800fb19237c8768c3f"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/clay/DESIGN.zh-en.md",
+          "path": "content/design-systems/clay/localized/DESIGN.zh-en.md",
+          "blobSha": "f88d029ceaa30f428686c7cb34613abf5726ef60"
+        },
+        {
+          "sourcePath": "localized/clay/DESIGN.zh.md",
+          "path": "content/design-systems/clay/localized/DESIGN.zh.md",
+          "blobSha": "1d85f1ab08b316d3dc257dd27f4679c56634cf6b"
+        },
+        {
+          "sourcePath": "localized/clay/directory-hero.webp",
+          "path": "content/design-systems/clay/localized/directory-hero.webp",
+          "blobSha": "3500e8d94d5679b7dd56d84cd3af023d95776259"
+        },
+        {
+          "sourcePath": "localized/clay/preview-dark.html",
+          "path": "content/design-systems/clay/localized/preview-dark.html",
+          "blobSha": "a60078442642c0b88198550ddac65067452a9b74"
+        },
+        {
+          "sourcePath": "localized/clay/preview.html",
+          "path": "content/design-systems/clay/localized/preview.html",
+          "blobSha": "7bfc7e083292745a766a3f9b41c39cd9f9c8dc8c"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/clay/"
+    },
+    {
+      "id": "design-system:clickhouse",
+      "slug": "clickhouse",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/clickhouse/DESIGN.md",
+          "path": "content/design-systems/clickhouse/specification/DESIGN.md",
+          "blobSha": "f9b61f0a2be93c3e0b396a9a1b4ae1df02791cf9"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/clickhouse/DESIGN.zh-en.md",
+          "path": "content/design-systems/clickhouse/localized/DESIGN.zh-en.md",
+          "blobSha": "d020618be6a43c52567ce80755da5cefd503c6f2"
+        },
+        {
+          "sourcePath": "localized/clickhouse/DESIGN.zh.md",
+          "path": "content/design-systems/clickhouse/localized/DESIGN.zh.md",
+          "blobSha": "a1c210655219d8a14c9416d673d5e023c7a86836"
+        },
+        {
+          "sourcePath": "localized/clickhouse/directory-hero.webp",
+          "path": "content/design-systems/clickhouse/localized/directory-hero.webp",
+          "blobSha": "072ded398b5a184efee829a52bd9a8f2a0dc6cc4"
+        },
+        {
+          "sourcePath": "localized/clickhouse/preview-dark.html",
+          "path": "content/design-systems/clickhouse/localized/preview-dark.html",
+          "blobSha": "2c40071af4662f33c34484b744942931174106d6"
+        },
+        {
+          "sourcePath": "localized/clickhouse/preview.html",
+          "path": "content/design-systems/clickhouse/localized/preview.html",
+          "blobSha": "a71c0e9705ae3d412690e115ef2dd5d2560e0303"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/clickhouse/"
+    },
+    {
+      "id": "design-system:cohere",
+      "slug": "cohere",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/cohere/DESIGN.md",
+          "path": "content/design-systems/cohere/specification/DESIGN.md",
+          "blobSha": "cc8bdf0482e7609c93a35d9b4526293d575dde8d"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/cohere/DESIGN.zh-en.md",
+          "path": "content/design-systems/cohere/localized/DESIGN.zh-en.md",
+          "blobSha": "ac6e2093dbe34ef20fa9f17f5ad359a616b3501c"
+        },
+        {
+          "sourcePath": "localized/cohere/DESIGN.zh.md",
+          "path": "content/design-systems/cohere/localized/DESIGN.zh.md",
+          "blobSha": "9ca6f94bd621b2a790f1b2aa244a51bdbe25362a"
+        },
+        {
+          "sourcePath": "localized/cohere/directory-hero.webp",
+          "path": "content/design-systems/cohere/localized/directory-hero.webp",
+          "blobSha": "bfb9bb54541f3e8eb4cfd870999aaa9611aa90e6"
+        },
+        {
+          "sourcePath": "localized/cohere/preview-dark.html",
+          "path": "content/design-systems/cohere/localized/preview-dark.html",
+          "blobSha": "a44f9fa8064af928027b5ba1ea3cc14f533b414f"
+        },
+        {
+          "sourcePath": "localized/cohere/preview.html",
+          "path": "content/design-systems/cohere/localized/preview.html",
+          "blobSha": "fc6ccbb18aeb5ecc50f0ee39cea522e658a82d64"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/cohere/"
+    },
+    {
+      "id": "design-system:coinbase",
+      "slug": "coinbase",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/coinbase/DESIGN.md",
+          "path": "content/design-systems/coinbase/specification/DESIGN.md",
+          "blobSha": "02bd7262fcca3db250d109a69a641ce677a7d784"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/coinbase/DESIGN.zh-en.md",
+          "path": "content/design-systems/coinbase/localized/DESIGN.zh-en.md",
+          "blobSha": "d9682101de86fc4b006c0f755dbdd52b49329ff3"
+        },
+        {
+          "sourcePath": "localized/coinbase/DESIGN.zh.md",
+          "path": "content/design-systems/coinbase/localized/DESIGN.zh.md",
+          "blobSha": "1b0b349adca7835dc71dd76dff60bf28f9111fef"
+        },
+        {
+          "sourcePath": "localized/coinbase/directory-hero.webp",
+          "path": "content/design-systems/coinbase/localized/directory-hero.webp",
+          "blobSha": "cd5e465ab763872a6ccb0046cf94285278120cf8"
+        },
+        {
+          "sourcePath": "localized/coinbase/preview-dark.html",
+          "path": "content/design-systems/coinbase/localized/preview-dark.html",
+          "blobSha": "4b4349af5d29ecba46c000d8c191af31c8836027"
+        },
+        {
+          "sourcePath": "localized/coinbase/preview.html",
+          "path": "content/design-systems/coinbase/localized/preview.html",
+          "blobSha": "8d58e86784cccf69ac472c0bf34c4029dccc211e"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/coinbase/"
+    },
+    {
+      "id": "design-system:composio",
+      "slug": "composio",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/composio/DESIGN.md",
+          "path": "content/design-systems/composio/specification/DESIGN.md",
+          "blobSha": "fe8d23a93af8c927b49c2bf7e4c05e9378c33a4c"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/composio/DESIGN.zh-en.md",
+          "path": "content/design-systems/composio/localized/DESIGN.zh-en.md",
+          "blobSha": "7fad69da43beb7cb3339893029d6effecd2a86a8"
+        },
+        {
+          "sourcePath": "localized/composio/DESIGN.zh.md",
+          "path": "content/design-systems/composio/localized/DESIGN.zh.md",
+          "blobSha": "0c9b209214ef4949e34fcc60c7c1766d0ff73c68"
+        },
+        {
+          "sourcePath": "localized/composio/directory-hero.webp",
+          "path": "content/design-systems/composio/localized/directory-hero.webp",
+          "blobSha": "c72e62c3c05e4d7c12a11614f68360737636111e"
+        },
+        {
+          "sourcePath": "localized/composio/preview-dark.html",
+          "path": "content/design-systems/composio/localized/preview-dark.html",
+          "blobSha": "3c8addce1366387dcc6d09a359c03e0b6278730c"
+        },
+        {
+          "sourcePath": "localized/composio/preview.html",
+          "path": "content/design-systems/composio/localized/preview.html",
+          "blobSha": "9aa270c312a2295b9f624a79f6bf26e97392817b"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/composio/"
+    },
+    {
+      "id": "design-system:cursor",
+      "slug": "cursor",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/cursor/DESIGN.md",
+          "path": "content/design-systems/cursor/specification/DESIGN.md",
+          "blobSha": "f457973ed6dfb504a2b42a02845734f52bc399a8"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/cursor/DESIGN.zh-en.md",
+          "path": "content/design-systems/cursor/localized/DESIGN.zh-en.md",
+          "blobSha": "2725464c3df135947a0b20ab00738230750bad16"
+        },
+        {
+          "sourcePath": "localized/cursor/DESIGN.zh.md",
+          "path": "content/design-systems/cursor/localized/DESIGN.zh.md",
+          "blobSha": "b3feaa5a32ac756b35a4217f43dc9ecebe764056"
+        },
+        {
+          "sourcePath": "localized/cursor/directory-hero.webp",
+          "path": "content/design-systems/cursor/localized/directory-hero.webp",
+          "blobSha": "ca28ea9dd0df0c87f6e502a07204a58841df23dd"
+        },
+        {
+          "sourcePath": "localized/cursor/preview-dark.html",
+          "path": "content/design-systems/cursor/localized/preview-dark.html",
+          "blobSha": "6ef222d1ae57d155ae1bceb5852f0d36b92273d9"
+        },
+        {
+          "sourcePath": "localized/cursor/preview.html",
+          "path": "content/design-systems/cursor/localized/preview.html",
+          "blobSha": "41ba1911a029a45965b6f18775e44433ef7a2d9d"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/cursor/"
+    },
+    {
+      "id": "design-system:dell-1996",
+      "slug": "dell-1996",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/dell-1996/DESIGN.md",
+          "path": "content/design-systems/dell-1996/specification/DESIGN.md",
+          "blobSha": "09285a8a2fcb13c2e452a01164682e84f6fafcba"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/dell-1996/DESIGN.zh-en.md",
+          "path": "content/design-systems/dell-1996/localized/DESIGN.zh-en.md",
+          "blobSha": "a1cc08e90bb9c1aca495b406c8f19c50dd1b2b4b"
+        },
+        {
+          "sourcePath": "localized/dell-1996/DESIGN.zh.md",
+          "path": "content/design-systems/dell-1996/localized/DESIGN.zh.md",
+          "blobSha": "b97038c7b6d7404677095b2e7742e6772f93db0b"
+        },
+        {
+          "sourcePath": "localized/dell-1996/directory-hero.webp",
+          "path": "content/design-systems/dell-1996/localized/directory-hero.webp",
+          "blobSha": "2b00dd91bf9041d5475e3b9e4f41fd8777f9e004"
+        },
+        {
+          "sourcePath": "localized/dell-1996/preview-dark.html",
+          "path": "content/design-systems/dell-1996/localized/preview-dark.html",
+          "blobSha": "0392eddae7a0660a5be398e6711cb80a84d710bd"
+        },
+        {
+          "sourcePath": "localized/dell-1996/preview.html",
+          "path": "content/design-systems/dell-1996/localized/preview.html",
+          "blobSha": "644a65dcb5a7f47ccdf26e18e1f01cbd92717791"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/dell-1996/"
+    },
+    {
+      "id": "design-system:dji",
+      "slug": "dji",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/dji/DESIGN.md",
+          "path": "content/design-systems/dji/specification/DESIGN.md",
+          "blobSha": "8d0826603e57570579d0d95a367999667171dbc2"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/dji/DESIGN.zh-en.md",
+          "path": "content/design-systems/dji/localized/DESIGN.zh-en.md",
+          "blobSha": "41d9815341c5352252e2a72f335b41071001e845"
+        },
+        {
+          "sourcePath": "localized/dji/DESIGN.zh.md",
+          "path": "content/design-systems/dji/localized/DESIGN.zh.md",
+          "blobSha": "7ca66fede1aa6380d81b7523fe1754798c0f0447"
+        },
+        {
+          "sourcePath": "localized/dji/directory-hero.webp",
+          "path": "content/design-systems/dji/localized/directory-hero.webp",
+          "blobSha": "89010bcc8c628efb469f30cbb10b2131b763aaf6"
+        },
+        {
+          "sourcePath": "localized/dji/preview-dark.html",
+          "path": "content/design-systems/dji/localized/preview-dark.html",
+          "blobSha": "af9c273d57433425924e1f5003a0e06e2aea4521"
+        },
+        {
+          "sourcePath": "localized/dji/preview.html",
+          "path": "content/design-systems/dji/localized/preview.html",
+          "blobSha": "3ba1eaeebac70cc145ec81750eadf60ea349a714"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/dji/"
+    },
+    {
+      "id": "design-system:elevenlabs",
+      "slug": "elevenlabs",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/elevenlabs/DESIGN.md",
+          "path": "content/design-systems/elevenlabs/specification/DESIGN.md",
+          "blobSha": "4d13eb977b5fb8f596b69a1ecc8f6de42c1a54a9"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/elevenlabs/DESIGN.zh-en.md",
+          "path": "content/design-systems/elevenlabs/localized/DESIGN.zh-en.md",
+          "blobSha": "39aa0ed2296541d89d55fa3e1d0083efd5d999ea"
+        },
+        {
+          "sourcePath": "localized/elevenlabs/DESIGN.zh.md",
+          "path": "content/design-systems/elevenlabs/localized/DESIGN.zh.md",
+          "blobSha": "f983fa5850f787c4934c9a0a13b17f08bd933836"
+        },
+        {
+          "sourcePath": "localized/elevenlabs/directory-hero.webp",
+          "path": "content/design-systems/elevenlabs/localized/directory-hero.webp",
+          "blobSha": "27e6e4c6f70a37ab015300b8aab19a511e33eb36"
+        },
+        {
+          "sourcePath": "localized/elevenlabs/preview-dark.html",
+          "path": "content/design-systems/elevenlabs/localized/preview-dark.html",
+          "blobSha": "d71502659b6891d91a5dd019640cf81e5021b702"
+        },
+        {
+          "sourcePath": "localized/elevenlabs/preview.html",
+          "path": "content/design-systems/elevenlabs/localized/preview.html",
+          "blobSha": "396893507ab2a35795134881f40d67c96f56b5eb"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/elevenlabs/"
+    },
+    {
+      "id": "design-system:expo",
+      "slug": "expo",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/expo/DESIGN.md",
+          "path": "content/design-systems/expo/specification/DESIGN.md",
+          "blobSha": "7d25b5dc1d502f008e7f61f55dbd644082c07b6d"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/expo/DESIGN.zh-en.md",
+          "path": "content/design-systems/expo/localized/DESIGN.zh-en.md",
+          "blobSha": "54bd3c9beca596e148e7341ce1a8d90904ed2c6f"
+        },
+        {
+          "sourcePath": "localized/expo/DESIGN.zh.md",
+          "path": "content/design-systems/expo/localized/DESIGN.zh.md",
+          "blobSha": "7d7585308fe391fb3e9c2560be295b125bce555c"
+        },
+        {
+          "sourcePath": "localized/expo/directory-hero.webp",
+          "path": "content/design-systems/expo/localized/directory-hero.webp",
+          "blobSha": "94510c7e8615b66bb238d0a37ff20bed529adbe5"
+        },
+        {
+          "sourcePath": "localized/expo/preview-dark.html",
+          "path": "content/design-systems/expo/localized/preview-dark.html",
+          "blobSha": "f82b51596a724b68ea441334f6b0bf275dc4ff3f"
+        },
+        {
+          "sourcePath": "localized/expo/preview.html",
+          "path": "content/design-systems/expo/localized/preview.html",
+          "blobSha": "ed0c5369c37ef0154bffbd61535ac2b5a5ba6b2c"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/expo/"
+    },
+    {
+      "id": "design-system:ferrari",
+      "slug": "ferrari",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/ferrari/DESIGN.md",
+          "path": "content/design-systems/ferrari/specification/DESIGN.md",
+          "blobSha": "3c6b43ab529cbddae51f09a2a659d123baf4a1f0"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/ferrari/DESIGN.zh-en.md",
+          "path": "content/design-systems/ferrari/localized/DESIGN.zh-en.md",
+          "blobSha": "0ae7c1f93192917a518e4d15c87ff1293eab191d"
+        },
+        {
+          "sourcePath": "localized/ferrari/DESIGN.zh.md",
+          "path": "content/design-systems/ferrari/localized/DESIGN.zh.md",
+          "blobSha": "2dafa27b70e0c3c68d48a07728575747603e3bf1"
+        },
+        {
+          "sourcePath": "localized/ferrari/directory-hero.webp",
+          "path": "content/design-systems/ferrari/localized/directory-hero.webp",
+          "blobSha": "bad503c25cfdfcf64544ac906146a1c3e8442737"
+        },
+        {
+          "sourcePath": "localized/ferrari/preview-dark.html",
+          "path": "content/design-systems/ferrari/localized/preview-dark.html",
+          "blobSha": "bc65eef7c86e441c4889227674df9df62810d2ad"
+        },
+        {
+          "sourcePath": "localized/ferrari/preview.html",
+          "path": "content/design-systems/ferrari/localized/preview.html",
+          "blobSha": "4ad74d3d6931ba8dfa5d45ce1c198b22eab08c6f"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/ferrari/"
+    },
+    {
+      "id": "design-system:figma",
+      "slug": "figma",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/figma/DESIGN.md",
+          "path": "content/design-systems/figma/specification/DESIGN.md",
+          "blobSha": "75e79fea9aadc35d4c9a0c75db631be927525f08"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/figma/DESIGN.zh-en.md",
+          "path": "content/design-systems/figma/localized/DESIGN.zh-en.md",
+          "blobSha": "980af69f7ff5fadd9d19b1d03b4bb7436d4efaf6"
+        },
+        {
+          "sourcePath": "localized/figma/DESIGN.zh.md",
+          "path": "content/design-systems/figma/localized/DESIGN.zh.md",
+          "blobSha": "ad8accfd73f4baa6a73b0ed8b23846e72a74e23b"
+        },
+        {
+          "sourcePath": "localized/figma/directory-hero.webp",
+          "path": "content/design-systems/figma/localized/directory-hero.webp",
+          "blobSha": "66d361c3a5717779487507e292e530e66b0cec0e"
+        },
+        {
+          "sourcePath": "localized/figma/preview-dark.html",
+          "path": "content/design-systems/figma/localized/preview-dark.html",
+          "blobSha": "00b5d23bf25a1697537d2172dae6899a00f3be77"
+        },
+        {
+          "sourcePath": "localized/figma/preview.html",
+          "path": "content/design-systems/figma/localized/preview.html",
+          "blobSha": "b9367a595a9d64056016a02cb76ea239b2b7fc5d"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/figma/"
+    },
+    {
+      "id": "design-system:framer",
+      "slug": "framer",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/framer/DESIGN.md",
+          "path": "content/design-systems/framer/specification/DESIGN.md",
+          "blobSha": "8351555233ee9379c47bfb57c557e64f0b6c7488"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/framer/DESIGN.zh-en.md",
+          "path": "content/design-systems/framer/localized/DESIGN.zh-en.md",
+          "blobSha": "0b1078a3e954b37d63859b1944192458e4e04a5d"
+        },
+        {
+          "sourcePath": "localized/framer/DESIGN.zh.md",
+          "path": "content/design-systems/framer/localized/DESIGN.zh.md",
+          "blobSha": "c8656563700a2cd44a1f04528d4cecc8031283a3"
+        },
+        {
+          "sourcePath": "localized/framer/directory-hero.webp",
+          "path": "content/design-systems/framer/localized/directory-hero.webp",
+          "blobSha": "16b25847a7c710e3d028b4cda9fb779840ae7c78"
+        },
+        {
+          "sourcePath": "localized/framer/preview-dark.html",
+          "path": "content/design-systems/framer/localized/preview-dark.html",
+          "blobSha": "4bafa66e631a56a0a0ca0ac12c35e69fb1283571"
+        },
+        {
+          "sourcePath": "localized/framer/preview.html",
+          "path": "content/design-systems/framer/localized/preview.html",
+          "blobSha": "4a64d3c8e64057a15bdc21b955692d23eeae4a2e"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/framer/"
+    },
+    {
+      "id": "design-system:hashicorp",
+      "slug": "hashicorp",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/hashicorp/DESIGN.md",
+          "path": "content/design-systems/hashicorp/specification/DESIGN.md",
+          "blobSha": "4c27877aad49803d04596d90fd7e42a9e05030cd"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/hashicorp/DESIGN.zh-en.md",
+          "path": "content/design-systems/hashicorp/localized/DESIGN.zh-en.md",
+          "blobSha": "e3dcfd0f95de8ef5618b8c3b021351c0744405d4"
+        },
+        {
+          "sourcePath": "localized/hashicorp/DESIGN.zh.md",
+          "path": "content/design-systems/hashicorp/localized/DESIGN.zh.md",
+          "blobSha": "34a6e58fb21445301dfe45acde76d6f2f193e0d7"
+        },
+        {
+          "sourcePath": "localized/hashicorp/directory-hero.webp",
+          "path": "content/design-systems/hashicorp/localized/directory-hero.webp",
+          "blobSha": "ea7fed35e06538d0a0a78bb07b32505fe1fb4245"
+        },
+        {
+          "sourcePath": "localized/hashicorp/preview-dark.html",
+          "path": "content/design-systems/hashicorp/localized/preview-dark.html",
+          "blobSha": "702364d7a3e376818021d85cdffefa7df258190b"
+        },
+        {
+          "sourcePath": "localized/hashicorp/preview.html",
+          "path": "content/design-systems/hashicorp/localized/preview.html",
+          "blobSha": "d5e463ce723585b6f2a6437f112d0dd329d64179"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/hashicorp/"
+    },
+    {
+      "id": "design-system:hp",
+      "slug": "hp",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/hp/DESIGN.md",
+          "path": "content/design-systems/hp/specification/DESIGN.md",
+          "blobSha": "fa0167583bb3df459128257a26c1794827196de6"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/hp/DESIGN.zh-en.md",
+          "path": "content/design-systems/hp/localized/DESIGN.zh-en.md",
+          "blobSha": "05c10d606c86a9b3451258a1e5dd9d043bcd4674"
+        },
+        {
+          "sourcePath": "localized/hp/DESIGN.zh.md",
+          "path": "content/design-systems/hp/localized/DESIGN.zh.md",
+          "blobSha": "2b98d85803a65a81bc9716710476d7bedb8c2790"
+        },
+        {
+          "sourcePath": "localized/hp/directory-hero.webp",
+          "path": "content/design-systems/hp/localized/directory-hero.webp",
+          "blobSha": "2c33f0017876d731ebce3e264cbc678064e38dcd"
+        },
+        {
+          "sourcePath": "localized/hp/preview-dark.html",
+          "path": "content/design-systems/hp/localized/preview-dark.html",
+          "blobSha": "7db50a027b7a870193abd136a071ddeb2230d965"
+        },
+        {
+          "sourcePath": "localized/hp/preview.html",
+          "path": "content/design-systems/hp/localized/preview.html",
+          "blobSha": "6575c983b8c07048676f153a0a21413f24178f32"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/hp/"
+    },
+    {
+      "id": "design-system:ibm",
+      "slug": "ibm",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/ibm/DESIGN.md",
+          "path": "content/design-systems/ibm/specification/DESIGN.md",
+          "blobSha": "dbef1c5b20357a8953e6832e5d383a866a66f11a"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/ibm/DESIGN.zh-en.md",
+          "path": "content/design-systems/ibm/localized/DESIGN.zh-en.md",
+          "blobSha": "434252c0382734928d4993f25a7c02c0d050c80d"
+        },
+        {
+          "sourcePath": "localized/ibm/DESIGN.zh.md",
+          "path": "content/design-systems/ibm/localized/DESIGN.zh.md",
+          "blobSha": "900db32dae58a8cca90864c46c3f5de16e912de7"
+        },
+        {
+          "sourcePath": "localized/ibm/directory-hero.webp",
+          "path": "content/design-systems/ibm/localized/directory-hero.webp",
+          "blobSha": "8c4f2570719bd6087b182e4218bac6871d4ad0f4"
+        },
+        {
+          "sourcePath": "localized/ibm/preview-dark.html",
+          "path": "content/design-systems/ibm/localized/preview-dark.html",
+          "blobSha": "6038881237dc20456415814ac21b3d6a8c223bb5"
+        },
+        {
+          "sourcePath": "localized/ibm/preview.html",
+          "path": "content/design-systems/ibm/localized/preview.html",
+          "blobSha": "ec7f3893ae15b8b927e8b5856052c6ae03cdb7c9"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/ibm/"
+    },
+    {
+      "id": "design-system:intercom",
+      "slug": "intercom",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/intercom/DESIGN.md",
+          "path": "content/design-systems/intercom/specification/DESIGN.md",
+          "blobSha": "dd01090d095d79cfec81100e3040678e2047531b"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/intercom/DESIGN.zh-en.md",
+          "path": "content/design-systems/intercom/localized/DESIGN.zh-en.md",
+          "blobSha": "ba6d25631b7290da7eafc507eb9212ef0114b416"
+        },
+        {
+          "sourcePath": "localized/intercom/DESIGN.zh.md",
+          "path": "content/design-systems/intercom/localized/DESIGN.zh.md",
+          "blobSha": "7d903806b61a0c518c4e9fd52a3036b0557e9001"
+        },
+        {
+          "sourcePath": "localized/intercom/directory-hero.webp",
+          "path": "content/design-systems/intercom/localized/directory-hero.webp",
+          "blobSha": "285549ed5837c0c04905e0a71abc30bd314c2ae8"
+        },
+        {
+          "sourcePath": "localized/intercom/preview-dark.html",
+          "path": "content/design-systems/intercom/localized/preview-dark.html",
+          "blobSha": "5d86e306456bea490258b4d9d1b8399cc00cd2e5"
+        },
+        {
+          "sourcePath": "localized/intercom/preview.html",
+          "path": "content/design-systems/intercom/localized/preview.html",
+          "blobSha": "37970a10c5157fc0455e93ad3ddb74b51522c278"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/intercom/"
+    },
+    {
+      "id": "design-system:jobright",
+      "slug": "jobright",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/jobright/DESIGN.md",
+          "path": "content/design-systems/jobright/specification/DESIGN.md",
+          "blobSha": "5fe28eb5e68e717071c26502b7fd1fd9490c3899"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/jobright/DESIGN.zh-en.md",
+          "path": "content/design-systems/jobright/localized/DESIGN.zh-en.md",
+          "blobSha": "3eb189c396a978ac7ec05aa3419006e72260ba22"
+        },
+        {
+          "sourcePath": "localized/jobright/DESIGN.zh.md",
+          "path": "content/design-systems/jobright/localized/DESIGN.zh.md",
+          "blobSha": "b6a8ab117290a22c06bc5d400ce64ffb5e413cb1"
+        },
+        {
+          "sourcePath": "localized/jobright/directory-hero.webp",
+          "path": "content/design-systems/jobright/localized/directory-hero.webp",
+          "blobSha": "26ef1f6f707420a05f74bffe4c84a337bbf60290"
+        },
+        {
+          "sourcePath": "localized/jobright/preview-dark.html",
+          "path": "content/design-systems/jobright/localized/preview-dark.html",
+          "blobSha": "7b3671e169a8ab9edeb4852064214724e59bc9ef"
+        },
+        {
+          "sourcePath": "localized/jobright/preview.html",
+          "path": "content/design-systems/jobright/localized/preview.html",
+          "blobSha": "9fe26e12081a49993bb584ec6fe1dcedcc1446a0"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/jobright/"
+    },
+    {
+      "id": "design-system:kraken",
+      "slug": "kraken",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/kraken/DESIGN.md",
+          "path": "content/design-systems/kraken/specification/DESIGN.md",
+          "blobSha": "972e541fcc56784ce6a69558652a47338adfafb7"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/kraken/DESIGN.zh-en.md",
+          "path": "content/design-systems/kraken/localized/DESIGN.zh-en.md",
+          "blobSha": "3fce1a7aa875ec0e58895ea9b3c63f107eb73e70"
+        },
+        {
+          "sourcePath": "localized/kraken/DESIGN.zh.md",
+          "path": "content/design-systems/kraken/localized/DESIGN.zh.md",
+          "blobSha": "547dc0f4b39640932a11fe002fd2c34005a5dd59"
+        },
+        {
+          "sourcePath": "localized/kraken/directory-hero.webp",
+          "path": "content/design-systems/kraken/localized/directory-hero.webp",
+          "blobSha": "e9b3adbbd5d54fb50c98031929a13830ca2b7f72"
+        },
+        {
+          "sourcePath": "localized/kraken/preview-dark.html",
+          "path": "content/design-systems/kraken/localized/preview-dark.html",
+          "blobSha": "2549a86f7677d8d0a7d800a5d5e725726242b063"
+        },
+        {
+          "sourcePath": "localized/kraken/preview.html",
+          "path": "content/design-systems/kraken/localized/preview.html",
+          "blobSha": "23d36e025ee5cd06247238a1309e8d39f3836603"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/kraken/"
+    },
+    {
+      "id": "design-system:lamborghini",
+      "slug": "lamborghini",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/lamborghini/DESIGN.md",
+          "path": "content/design-systems/lamborghini/specification/DESIGN.md",
+          "blobSha": "aa9b12f1bac4c041525d704d00e5abb059cdd8dd"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/lamborghini/DESIGN.zh-en.md",
+          "path": "content/design-systems/lamborghini/localized/DESIGN.zh-en.md",
+          "blobSha": "039d47077697bec87f51448aceb7a4c4d67683ca"
+        },
+        {
+          "sourcePath": "localized/lamborghini/DESIGN.zh.md",
+          "path": "content/design-systems/lamborghini/localized/DESIGN.zh.md",
+          "blobSha": "a7b95f222e4e0ef08ff34f56b637c39dc8d2614e"
+        },
+        {
+          "sourcePath": "localized/lamborghini/directory-hero.webp",
+          "path": "content/design-systems/lamborghini/localized/directory-hero.webp",
+          "blobSha": "17a979f2b0d11896c4ea341fcb8c3875e0e71c27"
+        },
+        {
+          "sourcePath": "localized/lamborghini/preview-dark.html",
+          "path": "content/design-systems/lamborghini/localized/preview-dark.html",
+          "blobSha": "569aaccff9999232520e4fa7d64d3e3c6f1cc944"
+        },
+        {
+          "sourcePath": "localized/lamborghini/preview.html",
+          "path": "content/design-systems/lamborghini/localized/preview.html",
+          "blobSha": "f1d71bbe9f5ff2fed59fbae0b2a0b597b5a00d67"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/lamborghini/"
+    },
+    {
+      "id": "design-system:linear.app",
+      "slug": "linear.app",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/linear.app/DESIGN.md",
+          "path": "content/design-systems/linear.app/specification/DESIGN.md",
+          "blobSha": "88bcd11faa4f050982c7e84ca70bdf43d660ed6a"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/linear.app/DESIGN.zh-en.md",
+          "path": "content/design-systems/linear.app/localized/DESIGN.zh-en.md",
+          "blobSha": "9400dc5ac32e77c1fa5c7d62293730cfd9947fe6"
+        },
+        {
+          "sourcePath": "localized/linear.app/DESIGN.zh.md",
+          "path": "content/design-systems/linear.app/localized/DESIGN.zh.md",
+          "blobSha": "fe9fb7dd4a622a2585ab48a8fac019d22b782a75"
+        },
+        {
+          "sourcePath": "localized/linear.app/directory-hero.webp",
+          "path": "content/design-systems/linear.app/localized/directory-hero.webp",
+          "blobSha": "9f9ee63da9e0514bfdcaec453eaf07d3a4b298ab"
+        },
+        {
+          "sourcePath": "localized/linear.app/preview-dark.html",
+          "path": "content/design-systems/linear.app/localized/preview-dark.html",
+          "blobSha": "ce94c61fd6418f17f00ec4dcf3c61e8159939528"
+        },
+        {
+          "sourcePath": "localized/linear.app/preview.html",
+          "path": "content/design-systems/linear.app/localized/preview.html",
+          "blobSha": "80e6ddffe47958942b5b8b183962ad4b6dd9c4a6"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/linear.app/"
+    },
+    {
+      "id": "design-system:lovable",
+      "slug": "lovable",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/lovable/DESIGN.md",
+          "path": "content/design-systems/lovable/specification/DESIGN.md",
+          "blobSha": "5a2821c9c503e8e78c99609a44da7cb41b5bba53"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/lovable/DESIGN.zh-en.md",
+          "path": "content/design-systems/lovable/localized/DESIGN.zh-en.md",
+          "blobSha": "7938d711c05c7f9afd02c2ee942aea9119a36aff"
+        },
+        {
+          "sourcePath": "localized/lovable/DESIGN.zh.md",
+          "path": "content/design-systems/lovable/localized/DESIGN.zh.md",
+          "blobSha": "dc2f557fe3ce9d44b2be71ea56ec47e1ff78504d"
+        },
+        {
+          "sourcePath": "localized/lovable/directory-hero.webp",
+          "path": "content/design-systems/lovable/localized/directory-hero.webp",
+          "blobSha": "d90f07b7717421422a821ef887cfafd261f745b7"
+        },
+        {
+          "sourcePath": "localized/lovable/preview-dark.html",
+          "path": "content/design-systems/lovable/localized/preview-dark.html",
+          "blobSha": "cbeba3cd1dbc0605d20027cacae46da9d1b7d46c"
+        },
+        {
+          "sourcePath": "localized/lovable/preview.html",
+          "path": "content/design-systems/lovable/localized/preview.html",
+          "blobSha": "6737c9fbcc8abb8acb2c2ba133464472a2cdf365"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/lovable/"
+    },
+    {
+      "id": "design-system:mastercard",
+      "slug": "mastercard",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/mastercard/DESIGN.md",
+          "path": "content/design-systems/mastercard/specification/DESIGN.md",
+          "blobSha": "8087e66a902ea478f73cf9902a258a639b3311a2"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/mastercard/DESIGN.zh-en.md",
+          "path": "content/design-systems/mastercard/localized/DESIGN.zh-en.md",
+          "blobSha": "886f492d114be1fbe945bc0b3cc3ab12a18b73d6"
+        },
+        {
+          "sourcePath": "localized/mastercard/DESIGN.zh.md",
+          "path": "content/design-systems/mastercard/localized/DESIGN.zh.md",
+          "blobSha": "94c72f44cea20719721848e18765641b1b285984"
+        },
+        {
+          "sourcePath": "localized/mastercard/directory-hero.webp",
+          "path": "content/design-systems/mastercard/localized/directory-hero.webp",
+          "blobSha": "b419c104630e60ef5865982b60b38c2d5d655e01"
+        },
+        {
+          "sourcePath": "localized/mastercard/preview-dark.html",
+          "path": "content/design-systems/mastercard/localized/preview-dark.html",
+          "blobSha": "1e340391d5e2f278fd2fad2a7a43ed577b52a55f"
+        },
+        {
+          "sourcePath": "localized/mastercard/preview.html",
+          "path": "content/design-systems/mastercard/localized/preview.html",
+          "blobSha": "44b3b8625452dd4fae797febff46b6ed06fe5f65"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/mastercard/"
+    },
+    {
+      "id": "design-system:mercury",
+      "slug": "mercury",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/mercury/DESIGN.md",
+          "path": "content/design-systems/mercury/specification/DESIGN.md",
+          "blobSha": "4e0c448f6594ab7a68dbff82ab360b66dfba96c9"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/mercury/DESIGN.zh-en.md",
+          "path": "content/design-systems/mercury/localized/DESIGN.zh-en.md",
+          "blobSha": "362108dd9bb1d100ad1e83da0be8bbbbd8530811"
+        },
+        {
+          "sourcePath": "localized/mercury/DESIGN.zh.md",
+          "path": "content/design-systems/mercury/localized/DESIGN.zh.md",
+          "blobSha": "b6d04a2df60ea4b3aeeeff94d000d1687eb619ac"
+        },
+        {
+          "sourcePath": "localized/mercury/directory-hero.webp",
+          "path": "content/design-systems/mercury/localized/directory-hero.webp",
+          "blobSha": "d4da464e301ab3667d6a30829bb97e3f521901ce"
+        },
+        {
+          "sourcePath": "localized/mercury/preview-dark.html",
+          "path": "content/design-systems/mercury/localized/preview-dark.html",
+          "blobSha": "5d51b3b22c26768d595d4ec02b99ddd010506109"
+        },
+        {
+          "sourcePath": "localized/mercury/preview.html",
+          "path": "content/design-systems/mercury/localized/preview.html",
+          "blobSha": "d360cfb9c9c06b874f0a0e39999932aa40d17bc3"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/mercury/"
+    },
+    {
+      "id": "design-system:meta",
+      "slug": "meta",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/meta/DESIGN.md",
+          "path": "content/design-systems/meta/specification/DESIGN.md",
+          "blobSha": "61be6ca195040b5dab098c4aefaae6adedbee7e4"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/meta/DESIGN.zh-en.md",
+          "path": "content/design-systems/meta/localized/DESIGN.zh-en.md",
+          "blobSha": "2e19530fb041002778120d64c8f04cd26b53a360"
+        },
+        {
+          "sourcePath": "localized/meta/DESIGN.zh.md",
+          "path": "content/design-systems/meta/localized/DESIGN.zh.md",
+          "blobSha": "26ddafe7815e4c055ac7fd6e16dd687fcccba9f7"
+        },
+        {
+          "sourcePath": "localized/meta/directory-hero.webp",
+          "path": "content/design-systems/meta/localized/directory-hero.webp",
+          "blobSha": "6260bbfce5cf6c1f310b9973d840f3de119b08f7"
+        },
+        {
+          "sourcePath": "localized/meta/preview-dark.html",
+          "path": "content/design-systems/meta/localized/preview-dark.html",
+          "blobSha": "13ba1a8adbc826c86434d8d0b3577013b99980d8"
+        },
+        {
+          "sourcePath": "localized/meta/preview.html",
+          "path": "content/design-systems/meta/localized/preview.html",
+          "blobSha": "4ca27f9dd7d1ef0b36dab39f206e68c625a0cf40"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/meta/"
+    },
+    {
+      "id": "design-system:minimax",
+      "slug": "minimax",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/minimax/DESIGN.md",
+          "path": "content/design-systems/minimax/specification/DESIGN.md",
+          "blobSha": "6f5a190cdcad424975a60944743e9a0f5f3adf2f"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/minimax/DESIGN.zh-en.md",
+          "path": "content/design-systems/minimax/localized/DESIGN.zh-en.md",
+          "blobSha": "49b1c72d2a3bebfaf32d51f90ee22897f574c0d9"
+        },
+        {
+          "sourcePath": "localized/minimax/DESIGN.zh.md",
+          "path": "content/design-systems/minimax/localized/DESIGN.zh.md",
+          "blobSha": "0ff71bf4cec5f7a9cda8187287c4b060c24db3f4"
+        },
+        {
+          "sourcePath": "localized/minimax/directory-hero.webp",
+          "path": "content/design-systems/minimax/localized/directory-hero.webp",
+          "blobSha": "bfc24661562fca214a1090a18ad8af5c63f88c8c"
+        },
+        {
+          "sourcePath": "localized/minimax/preview-dark.html",
+          "path": "content/design-systems/minimax/localized/preview-dark.html",
+          "blobSha": "492567eb1f480370e90c1b75d203cb0f66665ca7"
+        },
+        {
+          "sourcePath": "localized/minimax/preview.html",
+          "path": "content/design-systems/minimax/localized/preview.html",
+          "blobSha": "0d12dcb8a52e25783ab4530399948750007a3067"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/minimax/"
+    },
+    {
+      "id": "design-system:mintlify",
+      "slug": "mintlify",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/mintlify/DESIGN.md",
+          "path": "content/design-systems/mintlify/specification/DESIGN.md",
+          "blobSha": "dbe946bcb53adba92dbc75b995497c18189b6f41"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/mintlify/DESIGN.zh-en.md",
+          "path": "content/design-systems/mintlify/localized/DESIGN.zh-en.md",
+          "blobSha": "83625832683b11fa655e9bfe54d6a08e5754651a"
+        },
+        {
+          "sourcePath": "localized/mintlify/DESIGN.zh.md",
+          "path": "content/design-systems/mintlify/localized/DESIGN.zh.md",
+          "blobSha": "b090285339272058f8f67cc30545a4fbf9ba81e3"
+        },
+        {
+          "sourcePath": "localized/mintlify/directory-hero.webp",
+          "path": "content/design-systems/mintlify/localized/directory-hero.webp",
+          "blobSha": "cc4ef321e4c9127479b7baf62172adcf06a18587"
+        },
+        {
+          "sourcePath": "localized/mintlify/preview-dark.html",
+          "path": "content/design-systems/mintlify/localized/preview-dark.html",
+          "blobSha": "0e56da8228993d0e1ee45b93baee6643600315dd"
+        },
+        {
+          "sourcePath": "localized/mintlify/preview.html",
+          "path": "content/design-systems/mintlify/localized/preview.html",
+          "blobSha": "8a3d7f6e093f6e63c7c2d531fe1f10b4db5af471"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/mintlify/"
+    },
+    {
+      "id": "design-system:miro",
+      "slug": "miro",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/miro/DESIGN.md",
+          "path": "content/design-systems/miro/specification/DESIGN.md",
+          "blobSha": "98fd9a4423e4d58de0d4395f897c059d10e52740"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/miro/DESIGN.zh-en.md",
+          "path": "content/design-systems/miro/localized/DESIGN.zh-en.md",
+          "blobSha": "da0e86ee97a2625b8ef0f312f848d2918a46859c"
+        },
+        {
+          "sourcePath": "localized/miro/DESIGN.zh.md",
+          "path": "content/design-systems/miro/localized/DESIGN.zh.md",
+          "blobSha": "4f3b47f16bd631ecac963474974537af07b6f40c"
+        },
+        {
+          "sourcePath": "localized/miro/directory-hero.webp",
+          "path": "content/design-systems/miro/localized/directory-hero.webp",
+          "blobSha": "99c87ff7092970e6706189bc6811d5ae368849d7"
+        },
+        {
+          "sourcePath": "localized/miro/preview-dark.html",
+          "path": "content/design-systems/miro/localized/preview-dark.html",
+          "blobSha": "5da4225f61438600c386dd8496df9323ed8768d6"
+        },
+        {
+          "sourcePath": "localized/miro/preview.html",
+          "path": "content/design-systems/miro/localized/preview.html",
+          "blobSha": "1dff180a445a5711835b3fb87c69f956688d55a3"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/miro/"
+    },
+    {
+      "id": "design-system:mistral.ai",
+      "slug": "mistral.ai",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/mistral.ai/DESIGN.md",
+          "path": "content/design-systems/mistral.ai/specification/DESIGN.md",
+          "blobSha": "76a451b97a263d1061f97f84d52a2c99ff6dc9b4"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/mistral.ai/DESIGN.zh-en.md",
+          "path": "content/design-systems/mistral.ai/localized/DESIGN.zh-en.md",
+          "blobSha": "e66f26a7cf344b06540d563a1cc60753e5a63a36"
+        },
+        {
+          "sourcePath": "localized/mistral.ai/DESIGN.zh.md",
+          "path": "content/design-systems/mistral.ai/localized/DESIGN.zh.md",
+          "blobSha": "b6ab48ae667abf0495451c35051ec6400ebc6ca8"
+        },
+        {
+          "sourcePath": "localized/mistral.ai/directory-hero.webp",
+          "path": "content/design-systems/mistral.ai/localized/directory-hero.webp",
+          "blobSha": "f96416ce7bb0737d17945b93c79902c44577edb6"
+        },
+        {
+          "sourcePath": "localized/mistral.ai/preview-dark.html",
+          "path": "content/design-systems/mistral.ai/localized/preview-dark.html",
+          "blobSha": "c7669d09c7899c659f562c1b59db5099932b2f68"
+        },
+        {
+          "sourcePath": "localized/mistral.ai/preview.html",
+          "path": "content/design-systems/mistral.ai/localized/preview.html",
+          "blobSha": "82cf2af48b0ddcc4c099bf43ecf0bf1101d90a9a"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/mistral.ai/"
+    },
+    {
+      "id": "design-system:mongodb",
+      "slug": "mongodb",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/mongodb/DESIGN.md",
+          "path": "content/design-systems/mongodb/specification/DESIGN.md",
+          "blobSha": "609b0478a8f5dc05ee012bf8118179c63661816a"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/mongodb/DESIGN.zh-en.md",
+          "path": "content/design-systems/mongodb/localized/DESIGN.zh-en.md",
+          "blobSha": "637d437996d4b498c441b4a7d9575f09b390536e"
+        },
+        {
+          "sourcePath": "localized/mongodb/DESIGN.zh.md",
+          "path": "content/design-systems/mongodb/localized/DESIGN.zh.md",
+          "blobSha": "5bd2e5ded396a41f5b62cf662af6dae07ba6bb04"
+        },
+        {
+          "sourcePath": "localized/mongodb/directory-hero.webp",
+          "path": "content/design-systems/mongodb/localized/directory-hero.webp",
+          "blobSha": "ac3b7b35cd00e2290dac6b491dd5331537b30b49"
+        },
+        {
+          "sourcePath": "localized/mongodb/preview-dark.html",
+          "path": "content/design-systems/mongodb/localized/preview-dark.html",
+          "blobSha": "f36498996af16c1d09c9cd871af4ce550b149409"
+        },
+        {
+          "sourcePath": "localized/mongodb/preview.html",
+          "path": "content/design-systems/mongodb/localized/preview.html",
+          "blobSha": "02a182a1cee3e18a3feec21bf6e5b998db4926ea"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/mongodb/"
+    },
+    {
+      "id": "design-system:mydealz",
+      "slug": "mydealz",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/mydealz/DESIGN.md",
+          "path": "content/design-systems/mydealz/specification/DESIGN.md",
+          "blobSha": "7bb89de157560f80081e50435f58c295bfe56418"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/mydealz/DESIGN.zh-en.md",
+          "path": "content/design-systems/mydealz/localized/DESIGN.zh-en.md",
+          "blobSha": "1a3dcdb38cbdbbbaa20b43568a04df220f9c6d0b"
+        },
+        {
+          "sourcePath": "localized/mydealz/DESIGN.zh.md",
+          "path": "content/design-systems/mydealz/localized/DESIGN.zh.md",
+          "blobSha": "11d756c9d26e790c3c2f1045f9ddaff84cf9aa6a"
+        },
+        {
+          "sourcePath": "localized/mydealz/directory-hero.webp",
+          "path": "content/design-systems/mydealz/localized/directory-hero.webp",
+          "blobSha": "fa57bcab5b221688994b1025b4931f1f741d50c7"
+        },
+        {
+          "sourcePath": "localized/mydealz/preview-dark.html",
+          "path": "content/design-systems/mydealz/localized/preview-dark.html",
+          "blobSha": "41190fef38b4a891a339e4b170c850b95527b6ee"
+        },
+        {
+          "sourcePath": "localized/mydealz/preview.html",
+          "path": "content/design-systems/mydealz/localized/preview.html",
+          "blobSha": "cc0097becc9ba83f3368335fb67ee399aa77af53"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/mydealz/"
+    },
+    {
+      "id": "design-system:nerdwallet",
+      "slug": "nerdwallet",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/nerdwallet/DESIGN.md",
+          "path": "content/design-systems/nerdwallet/specification/DESIGN.md",
+          "blobSha": "7378bc70b880786f83104606cd6ddaf673bb8c91"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/nerdwallet/DESIGN.zh-en.md",
+          "path": "content/design-systems/nerdwallet/localized/DESIGN.zh-en.md",
+          "blobSha": "e38169190541cad316f1da48dcebc2f73641cebe"
+        },
+        {
+          "sourcePath": "localized/nerdwallet/DESIGN.zh.md",
+          "path": "content/design-systems/nerdwallet/localized/DESIGN.zh.md",
+          "blobSha": "0e8f0ce8c9197d92604c27937380e7cabbe213cb"
+        },
+        {
+          "sourcePath": "localized/nerdwallet/directory-hero.webp",
+          "path": "content/design-systems/nerdwallet/localized/directory-hero.webp",
+          "blobSha": "141dffb168f2226c17fd94e05c181e60bd8863db"
+        },
+        {
+          "sourcePath": "localized/nerdwallet/preview-dark.html",
+          "path": "content/design-systems/nerdwallet/localized/preview-dark.html",
+          "blobSha": "eede51afd0fd3023f7348019199ba809b56c6de4"
+        },
+        {
+          "sourcePath": "localized/nerdwallet/preview.html",
+          "path": "content/design-systems/nerdwallet/localized/preview.html",
+          "blobSha": "9dd82079dad179eb54480ab7a9339a026eb99990"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/nerdwallet/"
+    },
+    {
+      "id": "design-system:nike",
+      "slug": "nike",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/nike/DESIGN.md",
+          "path": "content/design-systems/nike/specification/DESIGN.md",
+          "blobSha": "c82517b67c20b9f1b8b189615c934899f28cd1f8"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/nike/DESIGN.zh-en.md",
+          "path": "content/design-systems/nike/localized/DESIGN.zh-en.md",
+          "blobSha": "545d66ef6e4a6e45f3fe99d6e54bcda3b61db31c"
+        },
+        {
+          "sourcePath": "localized/nike/DESIGN.zh.md",
+          "path": "content/design-systems/nike/localized/DESIGN.zh.md",
+          "blobSha": "ed6ff4352947d7a9e1449688a50a83ab03631066"
+        },
+        {
+          "sourcePath": "localized/nike/directory-hero.webp",
+          "path": "content/design-systems/nike/localized/directory-hero.webp",
+          "blobSha": "b3fc0bd4851eeca663033f0367df5ba19fe3a028"
+        },
+        {
+          "sourcePath": "localized/nike/preview-dark.html",
+          "path": "content/design-systems/nike/localized/preview-dark.html",
+          "blobSha": "2979fc87a6f774ddd97dd8983158be2ae04f4d15"
+        },
+        {
+          "sourcePath": "localized/nike/preview.html",
+          "path": "content/design-systems/nike/localized/preview.html",
+          "blobSha": "ff053aa4b81fb2b8e8b51644afe717d941526f00"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/nike/"
+    },
+    {
+      "id": "design-system:nintendo-2001",
+      "slug": "nintendo-2001",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/nintendo-2001/DESIGN.md",
+          "path": "content/design-systems/nintendo-2001/specification/DESIGN.md",
+          "blobSha": "3dbe9e8707e3c36b6643e0e23e16fa2c5b309cc3"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/nintendo-2001/DESIGN.zh-en.md",
+          "path": "content/design-systems/nintendo-2001/localized/DESIGN.zh-en.md",
+          "blobSha": "8b239070f85ff2f3aa59bc43bf60331417d909dc"
+        },
+        {
+          "sourcePath": "localized/nintendo-2001/DESIGN.zh.md",
+          "path": "content/design-systems/nintendo-2001/localized/DESIGN.zh.md",
+          "blobSha": "5c56db4238b767141b0cda7744f546d126bbfa81"
+        },
+        {
+          "sourcePath": "localized/nintendo-2001/directory-hero.webp",
+          "path": "content/design-systems/nintendo-2001/localized/directory-hero.webp",
+          "blobSha": "d425a8d50c3d8e336cef1dd31e556a8c10619f57"
+        },
+        {
+          "sourcePath": "localized/nintendo-2001/preview-dark.html",
+          "path": "content/design-systems/nintendo-2001/localized/preview-dark.html",
+          "blobSha": "001aa563d5b3cc37896220415c611b0fd7f2ab84"
+        },
+        {
+          "sourcePath": "localized/nintendo-2001/preview.html",
+          "path": "content/design-systems/nintendo-2001/localized/preview.html",
+          "blobSha": "0c01ed2343bf91e75aedc036608bf4acd03d7962"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/nintendo-2001/"
+    },
+    {
+      "id": "design-system:notion",
+      "slug": "notion",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/notion/DESIGN.md",
+          "path": "content/design-systems/notion/specification/DESIGN.md",
+          "blobSha": "7d306bd2713d24a35967310102d43e3585f0536a"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/notion/DESIGN.zh-en.md",
+          "path": "content/design-systems/notion/localized/DESIGN.zh-en.md",
+          "blobSha": "a1555fc297d12fb820d8b19832b2036783ae6ba6"
+        },
+        {
+          "sourcePath": "localized/notion/DESIGN.zh.md",
+          "path": "content/design-systems/notion/localized/DESIGN.zh.md",
+          "blobSha": "e76b412fc35438b939769f72044b46a6a7feca0b"
+        },
+        {
+          "sourcePath": "localized/notion/directory-hero.webp",
+          "path": "content/design-systems/notion/localized/directory-hero.webp",
+          "blobSha": "f117d471f723c04e91cb245dd2f5c6ab571cb6e5"
+        },
+        {
+          "sourcePath": "localized/notion/preview-dark.html",
+          "path": "content/design-systems/notion/localized/preview-dark.html",
+          "blobSha": "003d2762dbf05d491f7c4c0d621dcdb1c94924a1"
+        },
+        {
+          "sourcePath": "localized/notion/preview.html",
+          "path": "content/design-systems/notion/localized/preview.html",
+          "blobSha": "28b115f62bd3b8435e9c88a0cb4426e46ab79df6"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/notion/"
+    },
+    {
+      "id": "design-system:nvidia",
+      "slug": "nvidia",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/nvidia/DESIGN.md",
+          "path": "content/design-systems/nvidia/specification/DESIGN.md",
+          "blobSha": "318bbc3a204e2ea88b4c46d0791319f37f55d74a"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/nvidia/DESIGN.zh-en.md",
+          "path": "content/design-systems/nvidia/localized/DESIGN.zh-en.md",
+          "blobSha": "651c514cae7a1d6d046f12761ebb5b3e0611f539"
+        },
+        {
+          "sourcePath": "localized/nvidia/DESIGN.zh.md",
+          "path": "content/design-systems/nvidia/localized/DESIGN.zh.md",
+          "blobSha": "42a248a011c1e35dacdc2f89faf3d22836aa32be"
+        },
+        {
+          "sourcePath": "localized/nvidia/directory-hero.webp",
+          "path": "content/design-systems/nvidia/localized/directory-hero.webp",
+          "blobSha": "65cdb0e934b407700a0e2b60f1b1776e419661b0"
+        },
+        {
+          "sourcePath": "localized/nvidia/preview-dark.html",
+          "path": "content/design-systems/nvidia/localized/preview-dark.html",
+          "blobSha": "8cb929b19fbbd41393941a770eea460f592a6132"
+        },
+        {
+          "sourcePath": "localized/nvidia/preview.html",
+          "path": "content/design-systems/nvidia/localized/preview.html",
+          "blobSha": "963073b8194f89d9845f75eb1243d64cc541ba17"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/nvidia/"
+    },
+    {
+      "id": "design-system:ollama",
+      "slug": "ollama",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/ollama/DESIGN.md",
+          "path": "content/design-systems/ollama/specification/DESIGN.md",
+          "blobSha": "c913335d19f76d53e26a46fccb8eb998517b60ed"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/ollama/DESIGN.zh-en.md",
+          "path": "content/design-systems/ollama/localized/DESIGN.zh-en.md",
+          "blobSha": "99511cd3f36fe4f8179fe32ee5b41d4c453f5809"
+        },
+        {
+          "sourcePath": "localized/ollama/DESIGN.zh.md",
+          "path": "content/design-systems/ollama/localized/DESIGN.zh.md",
+          "blobSha": "2b2adfce1501a32981438a825ff90cd8dbe628b6"
+        },
+        {
+          "sourcePath": "localized/ollama/directory-hero.webp",
+          "path": "content/design-systems/ollama/localized/directory-hero.webp",
+          "blobSha": "799b1a297ca60b73d8a992d120b6074abca89584"
+        },
+        {
+          "sourcePath": "localized/ollama/preview-dark.html",
+          "path": "content/design-systems/ollama/localized/preview-dark.html",
+          "blobSha": "9af29a95d55f83542299b5bf3a8b8501b767f8fb"
+        },
+        {
+          "sourcePath": "localized/ollama/preview.html",
+          "path": "content/design-systems/ollama/localized/preview.html",
+          "blobSha": "8bf7495ce4e1554b376091b9df763d11af645bae"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/ollama/"
+    },
+    {
+      "id": "design-system:opencode.ai",
+      "slug": "opencode.ai",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/opencode.ai/DESIGN.md",
+          "path": "content/design-systems/opencode.ai/specification/DESIGN.md",
+          "blobSha": "47c1c5443f3c61c682c1908334047a4c8c2a3de2"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/opencode.ai/DESIGN.zh-en.md",
+          "path": "content/design-systems/opencode.ai/localized/DESIGN.zh-en.md",
+          "blobSha": "5ce7ececfb2fa0cf6e3680031a3ceff9bfde8122"
+        },
+        {
+          "sourcePath": "localized/opencode.ai/DESIGN.zh.md",
+          "path": "content/design-systems/opencode.ai/localized/DESIGN.zh.md",
+          "blobSha": "5f369c9bfc0209cde94e87c02b75c3453acbe735"
+        },
+        {
+          "sourcePath": "localized/opencode.ai/directory-hero.webp",
+          "path": "content/design-systems/opencode.ai/localized/directory-hero.webp",
+          "blobSha": "a508ab2f6cc5eafa2dd4003b0e74c57032580aef"
+        },
+        {
+          "sourcePath": "localized/opencode.ai/preview-dark.html",
+          "path": "content/design-systems/opencode.ai/localized/preview-dark.html",
+          "blobSha": "96eec4c4c1989b1e548bd291fe09c193d3d320ef"
+        },
+        {
+          "sourcePath": "localized/opencode.ai/preview.html",
+          "path": "content/design-systems/opencode.ai/localized/preview.html",
+          "blobSha": "b0bf34d6427b4057d8d9eb438e147153948829ac"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/opencode.ai/"
+    },
+    {
+      "id": "design-system:oracle",
+      "slug": "oracle",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/oracle/DESIGN.md",
+          "path": "content/design-systems/oracle/specification/DESIGN.md",
+          "blobSha": "33a8808f8a11b89f32115dee18b224b55bf510b2"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/oracle/DESIGN.zh-en.md",
+          "path": "content/design-systems/oracle/localized/DESIGN.zh-en.md",
+          "blobSha": "3742649d5917f128bb73c245d948cab10870850a"
+        },
+        {
+          "sourcePath": "localized/oracle/DESIGN.zh.md",
+          "path": "content/design-systems/oracle/localized/DESIGN.zh.md",
+          "blobSha": "763e63f1757285dae724479f910b9248c5bfdb92"
+        },
+        {
+          "sourcePath": "localized/oracle/directory-hero.webp",
+          "path": "content/design-systems/oracle/localized/directory-hero.webp",
+          "blobSha": "ea09338594787877153707b8aa2c396a402aebc8"
+        },
+        {
+          "sourcePath": "localized/oracle/preview-dark.html",
+          "path": "content/design-systems/oracle/localized/preview-dark.html",
+          "blobSha": "2615bb40950f193a98261dcb14d4fda2f2fd7d13"
+        },
+        {
+          "sourcePath": "localized/oracle/preview.html",
+          "path": "content/design-systems/oracle/localized/preview.html",
+          "blobSha": "fa9348112b0844fd0290fc0a62e6d0882917570b"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/oracle/"
+    },
+    {
+      "id": "design-system:oura",
+      "slug": "oura",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/oura/DESIGN.md",
+          "path": "content/design-systems/oura/specification/DESIGN.md",
+          "blobSha": "73fddfabb4fe87d6d180a24f6a794b1fc743b568"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/oura/DESIGN.zh-en.md",
+          "path": "content/design-systems/oura/localized/DESIGN.zh-en.md",
+          "blobSha": "d182e5cc902572b221b766218f59d0ef8028e52f"
+        },
+        {
+          "sourcePath": "localized/oura/DESIGN.zh.md",
+          "path": "content/design-systems/oura/localized/DESIGN.zh.md",
+          "blobSha": "c293fedca8b9401021742ee8af59486eb7ad32de"
+        },
+        {
+          "sourcePath": "localized/oura/directory-hero.webp",
+          "path": "content/design-systems/oura/localized/directory-hero.webp",
+          "blobSha": "edd76ef72fbb7389991b1cae98b9b6e4a21ca1b7"
+        },
+        {
+          "sourcePath": "localized/oura/preview-dark.html",
+          "path": "content/design-systems/oura/localized/preview-dark.html",
+          "blobSha": "ad2d3e822c162f6d9d2fe0c6ea52d8bbaa37ecd5"
+        },
+        {
+          "sourcePath": "localized/oura/preview.html",
+          "path": "content/design-systems/oura/localized/preview.html",
+          "blobSha": "b0cd950bda1512e1133d6f05c91dca4042cebdc2"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/oura/"
+    },
+    {
+      "id": "design-system:pinterest",
+      "slug": "pinterest",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/pinterest/DESIGN.md",
+          "path": "content/design-systems/pinterest/specification/DESIGN.md",
+          "blobSha": "0c8e3f1f300381182340d757dc74f6466ce9f581"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/pinterest/DESIGN.zh-en.md",
+          "path": "content/design-systems/pinterest/localized/DESIGN.zh-en.md",
+          "blobSha": "b0dfd187379eeedc3c3a6df9562b38d27da94f85"
+        },
+        {
+          "sourcePath": "localized/pinterest/DESIGN.zh.md",
+          "path": "content/design-systems/pinterest/localized/DESIGN.zh.md",
+          "blobSha": "e47a804540e68d422a18c70cddb16c4a4e0aeda1"
+        },
+        {
+          "sourcePath": "localized/pinterest/directory-hero.webp",
+          "path": "content/design-systems/pinterest/localized/directory-hero.webp",
+          "blobSha": "75beb5bf0aa0737e88c50cfac8053c2c186a4559"
+        },
+        {
+          "sourcePath": "localized/pinterest/preview-dark.html",
+          "path": "content/design-systems/pinterest/localized/preview-dark.html",
+          "blobSha": "f686aa817401275eef25e0452a0aa31b0b868689"
+        },
+        {
+          "sourcePath": "localized/pinterest/preview.html",
+          "path": "content/design-systems/pinterest/localized/preview.html",
+          "blobSha": "e09df33cbe05591d4de85a38a07aac885c69873c"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/pinterest/"
+    },
+    {
+      "id": "design-system:playstation",
+      "slug": "playstation",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/playstation/DESIGN.md",
+          "path": "content/design-systems/playstation/specification/DESIGN.md",
+          "blobSha": "247ec9c13a37f137cfe606496211094a6b37f1ae"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/playstation/DESIGN.zh-en.md",
+          "path": "content/design-systems/playstation/localized/DESIGN.zh-en.md",
+          "blobSha": "f3d1a625b20d5d5af74384751086e7256d5522e4"
+        },
+        {
+          "sourcePath": "localized/playstation/DESIGN.zh.md",
+          "path": "content/design-systems/playstation/localized/DESIGN.zh.md",
+          "blobSha": "8a33b882c1e2f70117633918d7e9c630373da8da"
+        },
+        {
+          "sourcePath": "localized/playstation/directory-hero.webp",
+          "path": "content/design-systems/playstation/localized/directory-hero.webp",
+          "blobSha": "0601e6403d33a35d978338fdf9b0fa3342b0985f"
+        },
+        {
+          "sourcePath": "localized/playstation/preview-dark.html",
+          "path": "content/design-systems/playstation/localized/preview-dark.html",
+          "blobSha": "36f4057a78988a38dd152ce312b27173a141ac7e"
+        },
+        {
+          "sourcePath": "localized/playstation/preview.html",
+          "path": "content/design-systems/playstation/localized/preview.html",
+          "blobSha": "dfe04c86b54e185f0c8cc88bdd96d51d99940a72"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/playstation/"
+    },
+    {
+      "id": "design-system:posthog",
+      "slug": "posthog",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/posthog/DESIGN.md",
+          "path": "content/design-systems/posthog/specification/DESIGN.md",
+          "blobSha": "4aac00897402ce1a79bfd209b79c9a0de078e485"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/posthog/DESIGN.zh-en.md",
+          "path": "content/design-systems/posthog/localized/DESIGN.zh-en.md",
+          "blobSha": "de54ba99d43701971291593fa71cabf80962f927"
+        },
+        {
+          "sourcePath": "localized/posthog/DESIGN.zh.md",
+          "path": "content/design-systems/posthog/localized/DESIGN.zh.md",
+          "blobSha": "dad68ba388ac3bf25d6bcf4e282ec611b025826c"
+        },
+        {
+          "sourcePath": "localized/posthog/directory-hero.webp",
+          "path": "content/design-systems/posthog/localized/directory-hero.webp",
+          "blobSha": "588f95d9f8d2bd74e687e5b569f5dbac0ae56024"
+        },
+        {
+          "sourcePath": "localized/posthog/preview-dark.html",
+          "path": "content/design-systems/posthog/localized/preview-dark.html",
+          "blobSha": "b02fd3b53913167729f4a10d9fbfa2c7f3767aca"
+        },
+        {
+          "sourcePath": "localized/posthog/preview.html",
+          "path": "content/design-systems/posthog/localized/preview.html",
+          "blobSha": "c75cca9046a45fc97fd6e5a7b36841ed62232e63"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/posthog/"
+    },
+    {
+      "id": "design-system:raycast",
+      "slug": "raycast",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/raycast/DESIGN.md",
+          "path": "content/design-systems/raycast/specification/DESIGN.md",
+          "blobSha": "fa7a74cf19918d7acfada8282a02619c8ff80829"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/raycast/DESIGN.zh-en.md",
+          "path": "content/design-systems/raycast/localized/DESIGN.zh-en.md",
+          "blobSha": "6ccc17a37664445c72d784ec6c23f36348c9778e"
+        },
+        {
+          "sourcePath": "localized/raycast/DESIGN.zh.md",
+          "path": "content/design-systems/raycast/localized/DESIGN.zh.md",
+          "blobSha": "3b8243a9c5e9695336546d98f3475259c467f838"
+        },
+        {
+          "sourcePath": "localized/raycast/directory-hero.webp",
+          "path": "content/design-systems/raycast/localized/directory-hero.webp",
+          "blobSha": "a4603b3896849cafe74d5e2463894c43d626f432"
+        },
+        {
+          "sourcePath": "localized/raycast/preview-dark.html",
+          "path": "content/design-systems/raycast/localized/preview-dark.html",
+          "blobSha": "dbc60562cd1707ff2d4da6322e3338ac85af9e8c"
+        },
+        {
+          "sourcePath": "localized/raycast/preview.html",
+          "path": "content/design-systems/raycast/localized/preview.html",
+          "blobSha": "489c2f96eb071469845e0fe7bd818736b210273a"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/raycast/"
+    },
+    {
+      "id": "design-system:renault",
+      "slug": "renault",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/renault/DESIGN.md",
+          "path": "content/design-systems/renault/specification/DESIGN.md",
+          "blobSha": "19f105b1197f739da3c247235572aff7c3cab073"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/renault/DESIGN.zh-en.md",
+          "path": "content/design-systems/renault/localized/DESIGN.zh-en.md",
+          "blobSha": "d4efe48226407344611948e824f468df137a169b"
+        },
+        {
+          "sourcePath": "localized/renault/DESIGN.zh.md",
+          "path": "content/design-systems/renault/localized/DESIGN.zh.md",
+          "blobSha": "c578b8cb1b4a57ea24ca6a63886eb1a1c515cf48"
+        },
+        {
+          "sourcePath": "localized/renault/directory-hero.webp",
+          "path": "content/design-systems/renault/localized/directory-hero.webp",
+          "blobSha": "c571464bbcc15eee329cbd2a49479fd2d00fa38a"
+        },
+        {
+          "sourcePath": "localized/renault/preview-dark.html",
+          "path": "content/design-systems/renault/localized/preview-dark.html",
+          "blobSha": "8f294d494116326e4bf890c79e8c8e0389af26b0"
+        },
+        {
+          "sourcePath": "localized/renault/preview.html",
+          "path": "content/design-systems/renault/localized/preview.html",
+          "blobSha": "8113421e3bc7979acec6c469c8edd30cb14ac8ee"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/renault/"
+    },
+    {
+      "id": "design-system:replicate",
+      "slug": "replicate",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/replicate/DESIGN.md",
+          "path": "content/design-systems/replicate/specification/DESIGN.md",
+          "blobSha": "affcf387b4763916e70b07bcaead8e4ad01719ef"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/replicate/DESIGN.zh-en.md",
+          "path": "content/design-systems/replicate/localized/DESIGN.zh-en.md",
+          "blobSha": "9d3d17154f388c8653c33eec293691f72ed7dd02"
+        },
+        {
+          "sourcePath": "localized/replicate/DESIGN.zh.md",
+          "path": "content/design-systems/replicate/localized/DESIGN.zh.md",
+          "blobSha": "ce1f40105645ab5a791e19cd9391a626a5eb113d"
+        },
+        {
+          "sourcePath": "localized/replicate/directory-hero.webp",
+          "path": "content/design-systems/replicate/localized/directory-hero.webp",
+          "blobSha": "32df20920038f93c70c693708f59fb82b044b1e3"
+        },
+        {
+          "sourcePath": "localized/replicate/preview-dark.html",
+          "path": "content/design-systems/replicate/localized/preview-dark.html",
+          "blobSha": "0f1880705b580af18de029767fcb30c4d88d38c6"
+        },
+        {
+          "sourcePath": "localized/replicate/preview.html",
+          "path": "content/design-systems/replicate/localized/preview.html",
+          "blobSha": "647886d64c8e89c3ca9a9e02238d6334ccf0d257"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/replicate/"
+    },
+    {
+      "id": "design-system:resend",
+      "slug": "resend",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/resend/DESIGN.md",
+          "path": "content/design-systems/resend/specification/DESIGN.md",
+          "blobSha": "de2feada60fb5a6c9c70cd218e9c74e1d5affea5"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/resend/DESIGN.zh-en.md",
+          "path": "content/design-systems/resend/localized/DESIGN.zh-en.md",
+          "blobSha": "01d9eb35cb43e91f1053f77ca713c015c34406f2"
+        },
+        {
+          "sourcePath": "localized/resend/DESIGN.zh.md",
+          "path": "content/design-systems/resend/localized/DESIGN.zh.md",
+          "blobSha": "5893c1d4d785a23363c11166a885aa3c94f80d24"
+        },
+        {
+          "sourcePath": "localized/resend/directory-hero.webp",
+          "path": "content/design-systems/resend/localized/directory-hero.webp",
+          "blobSha": "e142ac9d93c4269619cb6958f12cab6b95c0e7f3"
+        },
+        {
+          "sourcePath": "localized/resend/preview-dark.html",
+          "path": "content/design-systems/resend/localized/preview-dark.html",
+          "blobSha": "940742c1dbe072d1352dd700d93b417b20b6c02d"
+        },
+        {
+          "sourcePath": "localized/resend/preview.html",
+          "path": "content/design-systems/resend/localized/preview.html",
+          "blobSha": "21e9148ace942c77782a6ba59afad8be22a92690"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/resend/"
+    },
+    {
+      "id": "design-system:revolut",
+      "slug": "revolut",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/revolut/DESIGN.md",
+          "path": "content/design-systems/revolut/specification/DESIGN.md",
+          "blobSha": "23b014f45600f1d852dc1c8bbca5c144255ddde4"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/revolut/DESIGN.zh-en.md",
+          "path": "content/design-systems/revolut/localized/DESIGN.zh-en.md",
+          "blobSha": "699e484cfa8fd480b34dfcf7ef5b01958f26acca"
+        },
+        {
+          "sourcePath": "localized/revolut/DESIGN.zh.md",
+          "path": "content/design-systems/revolut/localized/DESIGN.zh.md",
+          "blobSha": "8e364b62b2d7373528bf99706af8d833d3337857"
+        },
+        {
+          "sourcePath": "localized/revolut/directory-hero.webp",
+          "path": "content/design-systems/revolut/localized/directory-hero.webp",
+          "blobSha": "270a9ff886011421cfda42469fff991644c462b0"
+        },
+        {
+          "sourcePath": "localized/revolut/preview-dark.html",
+          "path": "content/design-systems/revolut/localized/preview-dark.html",
+          "blobSha": "fabd87dc72124eaa9331809f36568afcc2d0cf52"
+        },
+        {
+          "sourcePath": "localized/revolut/preview.html",
+          "path": "content/design-systems/revolut/localized/preview.html",
+          "blobSha": "35b5ba941f9614fc3a7ea0eb8284525e59e26481"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/revolut/"
+    },
+    {
+      "id": "design-system:runwayml",
+      "slug": "runwayml",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/runwayml/DESIGN.md",
+          "path": "content/design-systems/runwayml/specification/DESIGN.md",
+          "blobSha": "7802bcb217b369fc5bd12fb1f6be35f24eadc871"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/runwayml/DESIGN.zh-en.md",
+          "path": "content/design-systems/runwayml/localized/DESIGN.zh-en.md",
+          "blobSha": "4a0e1e58b6f6509822ce40bbabe8dce9d0bd5cf8"
+        },
+        {
+          "sourcePath": "localized/runwayml/DESIGN.zh.md",
+          "path": "content/design-systems/runwayml/localized/DESIGN.zh.md",
+          "blobSha": "8c24d9f0bf2f34533125b140657c73e735e156b4"
+        },
+        {
+          "sourcePath": "localized/runwayml/directory-hero.webp",
+          "path": "content/design-systems/runwayml/localized/directory-hero.webp",
+          "blobSha": "3bd21cfbe0112cad74818648fa7e95477e3d1ee4"
+        },
+        {
+          "sourcePath": "localized/runwayml/preview-dark.html",
+          "path": "content/design-systems/runwayml/localized/preview-dark.html",
+          "blobSha": "92fbc2e245596dc9e5ad5b7983bd0d48d3656797"
+        },
+        {
+          "sourcePath": "localized/runwayml/preview.html",
+          "path": "content/design-systems/runwayml/localized/preview.html",
+          "blobSha": "8da4b257cb0f68d07896fb29ddb15dc72afbb8d9"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/runwayml/"
+    },
+    {
+      "id": "design-system:sanity",
+      "slug": "sanity",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/sanity/DESIGN.md",
+          "path": "content/design-systems/sanity/specification/DESIGN.md",
+          "blobSha": "b38ba199d162acfecd2d16178828a21fea3c6583"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/sanity/DESIGN.zh-en.md",
+          "path": "content/design-systems/sanity/localized/DESIGN.zh-en.md",
+          "blobSha": "458181a17dcfc0e81e8646d98268c58a9fd7cf29"
+        },
+        {
+          "sourcePath": "localized/sanity/DESIGN.zh.md",
+          "path": "content/design-systems/sanity/localized/DESIGN.zh.md",
+          "blobSha": "5b3b3d199457c871ce3f10ffe4877282374575d5"
+        },
+        {
+          "sourcePath": "localized/sanity/directory-hero.webp",
+          "path": "content/design-systems/sanity/localized/directory-hero.webp",
+          "blobSha": "fc8117f2bd4b81e34cced254856ef42fc3197c0d"
+        },
+        {
+          "sourcePath": "localized/sanity/preview-dark.html",
+          "path": "content/design-systems/sanity/localized/preview-dark.html",
+          "blobSha": "b8807da53bb0fc3c597d4ccbdc824254c2af657d"
+        },
+        {
+          "sourcePath": "localized/sanity/preview.html",
+          "path": "content/design-systems/sanity/localized/preview.html",
+          "blobSha": "f7f42a5adf75452125da314bada636ed85e23720"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/sanity/"
+    },
+    {
+      "id": "design-system:sap",
+      "slug": "sap",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/sap/DESIGN.md",
+          "path": "content/design-systems/sap/specification/DESIGN.md",
+          "blobSha": "551aaa764072663769b57f027797a318ae0694cb"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/sap/DESIGN.zh-en.md",
+          "path": "content/design-systems/sap/localized/DESIGN.zh-en.md",
+          "blobSha": "c5a41d9d6a74de3233042f0904bfa1e828d6f82b"
+        },
+        {
+          "sourcePath": "localized/sap/DESIGN.zh.md",
+          "path": "content/design-systems/sap/localized/DESIGN.zh.md",
+          "blobSha": "3da4bb1eca26f6fe90f3f006ef9fec3e10b2b984"
+        },
+        {
+          "sourcePath": "localized/sap/directory-hero.webp",
+          "path": "content/design-systems/sap/localized/directory-hero.webp",
+          "blobSha": "47ff7525698f1895c76915ec8ac4e86fb4b219ce"
+        },
+        {
+          "sourcePath": "localized/sap/preview-dark.html",
+          "path": "content/design-systems/sap/localized/preview-dark.html",
+          "blobSha": "bf6a4e0f320fe3c6d04dfc405d2286ec188c0142"
+        },
+        {
+          "sourcePath": "localized/sap/preview.html",
+          "path": "content/design-systems/sap/localized/preview.html",
+          "blobSha": "94cc69f67a21d2d452d96dcfc3dae58ad24c49e2"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/sap/"
+    },
+    {
+      "id": "design-system:sentry",
+      "slug": "sentry",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/sentry/DESIGN.md",
+          "path": "content/design-systems/sentry/specification/DESIGN.md",
+          "blobSha": "8fb6eb8a48882679216860bb8a01879d7036bffe"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/sentry/DESIGN.zh-en.md",
+          "path": "content/design-systems/sentry/localized/DESIGN.zh-en.md",
+          "blobSha": "523aca35a20d5b7d64676e950834e7be023fda23"
+        },
+        {
+          "sourcePath": "localized/sentry/DESIGN.zh.md",
+          "path": "content/design-systems/sentry/localized/DESIGN.zh.md",
+          "blobSha": "3af4e6e22bba19caf7bbe0f67ec3a3ea1e46629a"
+        },
+        {
+          "sourcePath": "localized/sentry/directory-hero.webp",
+          "path": "content/design-systems/sentry/localized/directory-hero.webp",
+          "blobSha": "79020a05dc2b84a2bfe47de992417b0368d8118d"
+        },
+        {
+          "sourcePath": "localized/sentry/preview-dark.html",
+          "path": "content/design-systems/sentry/localized/preview-dark.html",
+          "blobSha": "ecd9d24ec5032961bb08a045b209480a5a291af7"
+        },
+        {
+          "sourcePath": "localized/sentry/preview.html",
+          "path": "content/design-systems/sentry/localized/preview.html",
+          "blobSha": "2247e31b2ae3b8d59d4351d648ca0ea35fb926be"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/sentry/"
+    },
+    {
+      "id": "design-system:shopify",
+      "slug": "shopify",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/shopify/DESIGN.md",
+          "path": "content/design-systems/shopify/specification/DESIGN.md",
+          "blobSha": "17f043981f6577a174237b219b9f6f2688139180"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/shopify/DESIGN.zh-en.md",
+          "path": "content/design-systems/shopify/localized/DESIGN.zh-en.md",
+          "blobSha": "f4a22abb5e98b617d3428814bd1e1eaeef994c96"
+        },
+        {
+          "sourcePath": "localized/shopify/DESIGN.zh.md",
+          "path": "content/design-systems/shopify/localized/DESIGN.zh.md",
+          "blobSha": "63821e22f8706141e7763687727d8f40082dcc83"
+        },
+        {
+          "sourcePath": "localized/shopify/directory-hero.webp",
+          "path": "content/design-systems/shopify/localized/directory-hero.webp",
+          "blobSha": "8d42b3f0520efd345772575ad6b441cdc63fa68a"
+        },
+        {
+          "sourcePath": "localized/shopify/preview-dark.html",
+          "path": "content/design-systems/shopify/localized/preview-dark.html",
+          "blobSha": "896b4fd8ca8b733f699fab0aff24fbb91486956e"
+        },
+        {
+          "sourcePath": "localized/shopify/preview.html",
+          "path": "content/design-systems/shopify/localized/preview.html",
+          "blobSha": "568082f6062bd327306c21cc744731313d7b6ca9"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/shopify/"
+    },
+    {
+      "id": "design-system:slack",
+      "slug": "slack",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/slack/DESIGN.md",
+          "path": "content/design-systems/slack/specification/DESIGN.md",
+          "blobSha": "51f1850cbdd79baf8103cf9714be318becbaf11a"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/slack/DESIGN.zh-en.md",
+          "path": "content/design-systems/slack/localized/DESIGN.zh-en.md",
+          "blobSha": "7fbded9683871549d217d05570088c0f67e7e412"
+        },
+        {
+          "sourcePath": "localized/slack/DESIGN.zh.md",
+          "path": "content/design-systems/slack/localized/DESIGN.zh.md",
+          "blobSha": "356fdcd18ad6292d69b8fd518a9a250fc96e5803"
+        },
+        {
+          "sourcePath": "localized/slack/directory-hero.webp",
+          "path": "content/design-systems/slack/localized/directory-hero.webp",
+          "blobSha": "cd583bc7b532bc28460b867e0654f0ed7261daba"
+        },
+        {
+          "sourcePath": "localized/slack/preview-dark.html",
+          "path": "content/design-systems/slack/localized/preview-dark.html",
+          "blobSha": "f75c49fca1bbfc1e2bcce1edbaee5bbbfa5ee45c"
+        },
+        {
+          "sourcePath": "localized/slack/preview.html",
+          "path": "content/design-systems/slack/localized/preview.html",
+          "blobSha": "2830ebf62ae846d233e8448d802044c716c6bfbb"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/slack/"
+    },
+    {
+      "id": "design-system:spacex",
+      "slug": "spacex",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/spacex/DESIGN.md",
+          "path": "content/design-systems/spacex/specification/DESIGN.md",
+          "blobSha": "afdcba91076dde643b20c596a6fd790a180a3f1d"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/spacex/DESIGN.zh-en.md",
+          "path": "content/design-systems/spacex/localized/DESIGN.zh-en.md",
+          "blobSha": "104fd8393db0e1619a718a2e64dc4b130759eb19"
+        },
+        {
+          "sourcePath": "localized/spacex/DESIGN.zh.md",
+          "path": "content/design-systems/spacex/localized/DESIGN.zh.md",
+          "blobSha": "0341a4b19efe379a14018cfa23b3d20ab3f3b700"
+        },
+        {
+          "sourcePath": "localized/spacex/directory-hero.webp",
+          "path": "content/design-systems/spacex/localized/directory-hero.webp",
+          "blobSha": "97d0be59a769febd74ffe497a6f95875a4ef23db"
+        },
+        {
+          "sourcePath": "localized/spacex/preview-dark.html",
+          "path": "content/design-systems/spacex/localized/preview-dark.html",
+          "blobSha": "d41da878a2f880335447c9bb5704255a1663edf6"
+        },
+        {
+          "sourcePath": "localized/spacex/preview.html",
+          "path": "content/design-systems/spacex/localized/preview.html",
+          "blobSha": "d0571034ce8b6568080b5593d4f5299a4e8d37c9"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/spacex/"
+    },
+    {
+      "id": "design-system:spotify",
+      "slug": "spotify",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/spotify/DESIGN.md",
+          "path": "content/design-systems/spotify/specification/DESIGN.md",
+          "blobSha": "66bb4af6cbde6b631792de8712f2dd92a06e076e"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/spotify/DESIGN.zh-en.md",
+          "path": "content/design-systems/spotify/localized/DESIGN.zh-en.md",
+          "blobSha": "24eb989ccdec9badc1db3047b326187950b30414"
+        },
+        {
+          "sourcePath": "localized/spotify/DESIGN.zh.md",
+          "path": "content/design-systems/spotify/localized/DESIGN.zh.md",
+          "blobSha": "2a6841ee3ea5121865ad4dbd3e15a24dbf9e0ce1"
+        },
+        {
+          "sourcePath": "localized/spotify/directory-hero.webp",
+          "path": "content/design-systems/spotify/localized/directory-hero.webp",
+          "blobSha": "cc2cb1ff37f64cc271931bed06ba9d5f21596f1f"
+        },
+        {
+          "sourcePath": "localized/spotify/preview-dark.html",
+          "path": "content/design-systems/spotify/localized/preview-dark.html",
+          "blobSha": "27a3b96302b4885a50c6fb7aae0589e331ccd7b7"
+        },
+        {
+          "sourcePath": "localized/spotify/preview.html",
+          "path": "content/design-systems/spotify/localized/preview.html",
+          "blobSha": "182e5cf3e71482726587c813023ad3347cc21ad8"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/spotify/"
+    },
+    {
+      "id": "design-system:starbucks",
+      "slug": "starbucks",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/starbucks/DESIGN.md",
+          "path": "content/design-systems/starbucks/specification/DESIGN.md",
+          "blobSha": "dcc5b5b9d57c84369a44dc2b19d3bc98ae329ad5"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/starbucks/DESIGN.zh-en.md",
+          "path": "content/design-systems/starbucks/localized/DESIGN.zh-en.md",
+          "blobSha": "f9d91dd37289814105811d3ed29dbe112f63d0d4"
+        },
+        {
+          "sourcePath": "localized/starbucks/DESIGN.zh.md",
+          "path": "content/design-systems/starbucks/localized/DESIGN.zh.md",
+          "blobSha": "002cb3d3d7793a4b72e00e79e75484c9896dc002"
+        },
+        {
+          "sourcePath": "localized/starbucks/directory-hero.webp",
+          "path": "content/design-systems/starbucks/localized/directory-hero.webp",
+          "blobSha": "c77abfe782a48c992a9e5d43929f5c417f9864a6"
+        },
+        {
+          "sourcePath": "localized/starbucks/preview-dark.html",
+          "path": "content/design-systems/starbucks/localized/preview-dark.html",
+          "blobSha": "763874c73a02bc667f41645b7010e780d8675415"
+        },
+        {
+          "sourcePath": "localized/starbucks/preview.html",
+          "path": "content/design-systems/starbucks/localized/preview.html",
+          "blobSha": "75985994185e9d9a1124078189acfd4e92ac5163"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/starbucks/"
+    },
+    {
+      "id": "design-system:stripe",
+      "slug": "stripe",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/stripe/DESIGN.md",
+          "path": "content/design-systems/stripe/specification/DESIGN.md",
+          "blobSha": "589bd23baeb1344444f087043c060afd6239371f"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/stripe/DESIGN.zh-en.md",
+          "path": "content/design-systems/stripe/localized/DESIGN.zh-en.md",
+          "blobSha": "c3c93ca64683830336404bced8251f66546b78e2"
+        },
+        {
+          "sourcePath": "localized/stripe/DESIGN.zh.md",
+          "path": "content/design-systems/stripe/localized/DESIGN.zh.md",
+          "blobSha": "fd18a91b79fae7638238f248dd0116515277288d"
+        },
+        {
+          "sourcePath": "localized/stripe/directory-hero.webp",
+          "path": "content/design-systems/stripe/localized/directory-hero.webp",
+          "blobSha": "6d0c67e94e112eee95b073907f5ba53bef59e316"
+        },
+        {
+          "sourcePath": "localized/stripe/preview-dark.html",
+          "path": "content/design-systems/stripe/localized/preview-dark.html",
+          "blobSha": "e3eed91b5423b6a794fa7ed7fce36063566535c2"
+        },
+        {
+          "sourcePath": "localized/stripe/preview.html",
+          "path": "content/design-systems/stripe/localized/preview.html",
+          "blobSha": "5ba42ee8453e220c378777ef4859d8499c504869"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/stripe/"
+    },
+    {
+      "id": "design-system:supabase",
+      "slug": "supabase",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/supabase/DESIGN.md",
+          "path": "content/design-systems/supabase/specification/DESIGN.md",
+          "blobSha": "ef9f0a27f61aeff93f3a2fbe5430f3d33e37b4c1"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/supabase/DESIGN.zh-en.md",
+          "path": "content/design-systems/supabase/localized/DESIGN.zh-en.md",
+          "blobSha": "eb70a0d421e0d6c4ec71886960503f462520984f"
+        },
+        {
+          "sourcePath": "localized/supabase/DESIGN.zh.md",
+          "path": "content/design-systems/supabase/localized/DESIGN.zh.md",
+          "blobSha": "8d79d8401a160fb97518d4203c15564f468ddce8"
+        },
+        {
+          "sourcePath": "localized/supabase/directory-hero.webp",
+          "path": "content/design-systems/supabase/localized/directory-hero.webp",
+          "blobSha": "3b92f9976a69ee0d94e6041c4340431abf53c7b5"
+        },
+        {
+          "sourcePath": "localized/supabase/preview-dark.html",
+          "path": "content/design-systems/supabase/localized/preview-dark.html",
+          "blobSha": "3c7e8e27e305a0ba7c75a5806897572fb9cdcc3d"
+        },
+        {
+          "sourcePath": "localized/supabase/preview.html",
+          "path": "content/design-systems/supabase/localized/preview.html",
+          "blobSha": "8cf9c8bdea2a2b5be77aaaadb8050c7d6727c60f"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/supabase/"
+    },
+    {
+      "id": "design-system:superhuman",
+      "slug": "superhuman",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/superhuman/DESIGN.md",
+          "path": "content/design-systems/superhuman/specification/DESIGN.md",
+          "blobSha": "0d4433aaa8d59fbd97d01721d95392fb02d1ca82"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/superhuman/DESIGN.zh-en.md",
+          "path": "content/design-systems/superhuman/localized/DESIGN.zh-en.md",
+          "blobSha": "8a36e445912bb12c5b90ab8d95fabb70e0bfd913"
+        },
+        {
+          "sourcePath": "localized/superhuman/DESIGN.zh.md",
+          "path": "content/design-systems/superhuman/localized/DESIGN.zh.md",
+          "blobSha": "c0899d8ebc2df92dc793f218581e8150369c1ad3"
+        },
+        {
+          "sourcePath": "localized/superhuman/directory-hero.webp",
+          "path": "content/design-systems/superhuman/localized/directory-hero.webp",
+          "blobSha": "b8aa762260be2e84b26ad9f84d0c03c3b827cb55"
+        },
+        {
+          "sourcePath": "localized/superhuman/preview-dark.html",
+          "path": "content/design-systems/superhuman/localized/preview-dark.html",
+          "blobSha": "aa715ec92dc764ff5c18da5188e44dc4ae2ab652"
+        },
+        {
+          "sourcePath": "localized/superhuman/preview.html",
+          "path": "content/design-systems/superhuman/localized/preview.html",
+          "blobSha": "621aa800ae7a98a2ab2441b291d6de8edc630b72"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/superhuman/"
+    },
+    {
+      "id": "design-system:tesla",
+      "slug": "tesla",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/tesla/DESIGN.md",
+          "path": "content/design-systems/tesla/specification/DESIGN.md",
+          "blobSha": "6e8e8b63e49d4a2b2759f504b3f49e2905d3255e"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/tesla/DESIGN.zh-en.md",
+          "path": "content/design-systems/tesla/localized/DESIGN.zh-en.md",
+          "blobSha": "7281e44acd5d733ed116a82dd2b4bebc9ed73d8a"
+        },
+        {
+          "sourcePath": "localized/tesla/DESIGN.zh.md",
+          "path": "content/design-systems/tesla/localized/DESIGN.zh.md",
+          "blobSha": "884bf1c622aaeb7fb9700429d03adeb07281a350"
+        },
+        {
+          "sourcePath": "localized/tesla/directory-hero.webp",
+          "path": "content/design-systems/tesla/localized/directory-hero.webp",
+          "blobSha": "4c27d6259b64b29f84a710461d4a13be85e11997"
+        },
+        {
+          "sourcePath": "localized/tesla/preview-dark.html",
+          "path": "content/design-systems/tesla/localized/preview-dark.html",
+          "blobSha": "33bb6decbe869af457aa7da2c5345d6e9c09e1f4"
+        },
+        {
+          "sourcePath": "localized/tesla/preview.html",
+          "path": "content/design-systems/tesla/localized/preview.html",
+          "blobSha": "1a28b2842f5210f1ad719fc57dcb5545c0b7dcc8"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/tesla/"
+    },
+    {
+      "id": "design-system:theverge",
+      "slug": "theverge",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/theverge/DESIGN.md",
+          "path": "content/design-systems/theverge/specification/DESIGN.md",
+          "blobSha": "545551c00fe92f89507287e3ec89c2b5c49c4015"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/theverge/DESIGN.zh-en.md",
+          "path": "content/design-systems/theverge/localized/DESIGN.zh-en.md",
+          "blobSha": "5870449eead79595ffd1df9698366ae1e5311afd"
+        },
+        {
+          "sourcePath": "localized/theverge/DESIGN.zh.md",
+          "path": "content/design-systems/theverge/localized/DESIGN.zh.md",
+          "blobSha": "414c753723de4f4e6bc61dc8a45f6fe888b53f53"
+        },
+        {
+          "sourcePath": "localized/theverge/directory-hero.webp",
+          "path": "content/design-systems/theverge/localized/directory-hero.webp",
+          "blobSha": "813f3533942ba276613c51a747f52b2bb3c0b7e6"
+        },
+        {
+          "sourcePath": "localized/theverge/preview-dark.html",
+          "path": "content/design-systems/theverge/localized/preview-dark.html",
+          "blobSha": "3afd6e0036d848c9234acbd49b519b22da1a9745"
+        },
+        {
+          "sourcePath": "localized/theverge/preview.html",
+          "path": "content/design-systems/theverge/localized/preview.html",
+          "blobSha": "d4e6b7f6012ebdcb33c0b5b9e7914c9c34550df1"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/theverge/"
+    },
+    {
+      "id": "design-system:together.ai",
+      "slug": "together.ai",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/together.ai/DESIGN.md",
+          "path": "content/design-systems/together.ai/specification/DESIGN.md",
+          "blobSha": "33d8b717bcdad344f7f7a804128c748a1d1374e0"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/together.ai/DESIGN.zh-en.md",
+          "path": "content/design-systems/together.ai/localized/DESIGN.zh-en.md",
+          "blobSha": "01f99806acfa13526009614bd7dd4c6b26fd3ea7"
+        },
+        {
+          "sourcePath": "localized/together.ai/DESIGN.zh.md",
+          "path": "content/design-systems/together.ai/localized/DESIGN.zh.md",
+          "blobSha": "aa8e59fb32274f7914bb8c548e43d1130a24c004"
+        },
+        {
+          "sourcePath": "localized/together.ai/directory-hero.webp",
+          "path": "content/design-systems/together.ai/localized/directory-hero.webp",
+          "blobSha": "da4c191ce42c480c54bf2404bedf2e5e7a6cf9ef"
+        },
+        {
+          "sourcePath": "localized/together.ai/preview-dark.html",
+          "path": "content/design-systems/together.ai/localized/preview-dark.html",
+          "blobSha": "9cc2a4c0e0db3e87f70abc9442829b4c2ae34769"
+        },
+        {
+          "sourcePath": "localized/together.ai/preview.html",
+          "path": "content/design-systems/together.ai/localized/preview.html",
+          "blobSha": "a4c4e8c9668371ab6d77ab5f1b98a8317313f4c6"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/together.ai/"
+    },
+    {
+      "id": "design-system:uber",
+      "slug": "uber",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/uber/DESIGN.md",
+          "path": "content/design-systems/uber/specification/DESIGN.md",
+          "blobSha": "212aa14e4b0fe9612557098d7cee81d2b48bfd67"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/uber/DESIGN.zh-en.md",
+          "path": "content/design-systems/uber/localized/DESIGN.zh-en.md",
+          "blobSha": "4d7b1116c8a570348ff7b19dd902bb2dae0332bb"
+        },
+        {
+          "sourcePath": "localized/uber/DESIGN.zh.md",
+          "path": "content/design-systems/uber/localized/DESIGN.zh.md",
+          "blobSha": "62c87a0103bd74e21b64afdc7d60c17ecda61814"
+        },
+        {
+          "sourcePath": "localized/uber/directory-hero.webp",
+          "path": "content/design-systems/uber/localized/directory-hero.webp",
+          "blobSha": "8ffbd05904242d29706afe0810cadea5b73a5105"
+        },
+        {
+          "sourcePath": "localized/uber/preview-dark.html",
+          "path": "content/design-systems/uber/localized/preview-dark.html",
+          "blobSha": "7c5768905c746107ee2d1ccfb36c590bbdcf19fb"
+        },
+        {
+          "sourcePath": "localized/uber/preview.html",
+          "path": "content/design-systems/uber/localized/preview.html",
+          "blobSha": "47a163f04275abc09da6c7841127a2fb5613f051"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/uber/"
+    },
+    {
+      "id": "design-system:vercel",
+      "slug": "vercel",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/vercel/DESIGN.md",
+          "path": "content/design-systems/vercel/specification/DESIGN.md",
+          "blobSha": "987140b5394c2a4ada4ef324f2d19ef66caf4338"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/vercel/DESIGN.zh-en.md",
+          "path": "content/design-systems/vercel/localized/DESIGN.zh-en.md",
+          "blobSha": "0314aa7a7ef86d581397779e113ccbb19bfda35b"
+        },
+        {
+          "sourcePath": "localized/vercel/DESIGN.zh.md",
+          "path": "content/design-systems/vercel/localized/DESIGN.zh.md",
+          "blobSha": "4bad514e6d6816dbe134b28075520b974e2a30f1"
+        },
+        {
+          "sourcePath": "localized/vercel/directory-hero.webp",
+          "path": "content/design-systems/vercel/localized/directory-hero.webp",
+          "blobSha": "e134785373b24c7e93c610fa5e50ae2480bda290"
+        },
+        {
+          "sourcePath": "localized/vercel/preview-dark.html",
+          "path": "content/design-systems/vercel/localized/preview-dark.html",
+          "blobSha": "7b3ef6d80a2e360c4e252457d245d9a7caf5a14d"
+        },
+        {
+          "sourcePath": "localized/vercel/preview.html",
+          "path": "content/design-systems/vercel/localized/preview.html",
+          "blobSha": "6181e8f1acf519c23b91cb02e6e96089e59af6ae"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/vercel/"
+    },
+    {
+      "id": "design-system:vodafone",
+      "slug": "vodafone",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/vodafone/DESIGN.md",
+          "path": "content/design-systems/vodafone/specification/DESIGN.md",
+          "blobSha": "f64dbd3297a9b6a97e8f8aa5fb69874ff23e9bd0"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/vodafone/DESIGN.zh-en.md",
+          "path": "content/design-systems/vodafone/localized/DESIGN.zh-en.md",
+          "blobSha": "f3d9050b6b0cb95ac110ed4fa9fb78fa0e0c1baf"
+        },
+        {
+          "sourcePath": "localized/vodafone/DESIGN.zh.md",
+          "path": "content/design-systems/vodafone/localized/DESIGN.zh.md",
+          "blobSha": "db8fead0c144bb9220a651f805db85ae448bec67"
+        },
+        {
+          "sourcePath": "localized/vodafone/directory-hero.webp",
+          "path": "content/design-systems/vodafone/localized/directory-hero.webp",
+          "blobSha": "5f4b9d3997327d259ce78c47e7f9285dd09b2fb1"
+        },
+        {
+          "sourcePath": "localized/vodafone/preview-dark.html",
+          "path": "content/design-systems/vodafone/localized/preview-dark.html",
+          "blobSha": "fd4a7af56ae15ef9ee676dbeea749bf0e07efe67"
+        },
+        {
+          "sourcePath": "localized/vodafone/preview.html",
+          "path": "content/design-systems/vodafone/localized/preview.html",
+          "blobSha": "e4e65f7e7fd940e91e0cd6b5acdc965a311bb333"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/vodafone/"
+    },
+    {
+      "id": "design-system:voltagent",
+      "slug": "voltagent",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/voltagent/DESIGN.md",
+          "path": "content/design-systems/voltagent/specification/DESIGN.md",
+          "blobSha": "7d08c78cd976f99697ba30d33eb8fd5aa089fed0"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/voltagent/DESIGN.zh-en.md",
+          "path": "content/design-systems/voltagent/localized/DESIGN.zh-en.md",
+          "blobSha": "3c2e7b1f7a340ee06e8991869afc7e0c330f8dcf"
+        },
+        {
+          "sourcePath": "localized/voltagent/DESIGN.zh.md",
+          "path": "content/design-systems/voltagent/localized/DESIGN.zh.md",
+          "blobSha": "3738d19776dbd94ad0b766f20a7588b1695d2093"
+        },
+        {
+          "sourcePath": "localized/voltagent/directory-hero.webp",
+          "path": "content/design-systems/voltagent/localized/directory-hero.webp",
+          "blobSha": "14e179368a63abe567ce34b379ddb3c362f84b65"
+        },
+        {
+          "sourcePath": "localized/voltagent/preview-dark.html",
+          "path": "content/design-systems/voltagent/localized/preview-dark.html",
+          "blobSha": "c799b32aa480eba734abbc3fa78d7963bdde0b51"
+        },
+        {
+          "sourcePath": "localized/voltagent/preview.html",
+          "path": "content/design-systems/voltagent/localized/preview.html",
+          "blobSha": "5b21a76e9d9b8a402335747c6705664f2941b487"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/voltagent/"
+    },
+    {
+      "id": "design-system:warp",
+      "slug": "warp",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/warp/DESIGN.md",
+          "path": "content/design-systems/warp/specification/DESIGN.md",
+          "blobSha": "e32923ec08b746463d033342a33252b866f35319"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/warp/DESIGN.zh-en.md",
+          "path": "content/design-systems/warp/localized/DESIGN.zh-en.md",
+          "blobSha": "ae080d2d95504bf40735f93d04bb4a85fc5013de"
+        },
+        {
+          "sourcePath": "localized/warp/DESIGN.zh.md",
+          "path": "content/design-systems/warp/localized/DESIGN.zh.md",
+          "blobSha": "eeaeee680274efb9586f279adbeb233f3e880dfa"
+        },
+        {
+          "sourcePath": "localized/warp/directory-hero.webp",
+          "path": "content/design-systems/warp/localized/directory-hero.webp",
+          "blobSha": "7b9ee5f141f02e2c58698b917bd57d5498bf5642"
+        },
+        {
+          "sourcePath": "localized/warp/preview-dark.html",
+          "path": "content/design-systems/warp/localized/preview-dark.html",
+          "blobSha": "19946b815e22bf44d868054a1d7f57a73c75be4e"
+        },
+        {
+          "sourcePath": "localized/warp/preview.html",
+          "path": "content/design-systems/warp/localized/preview.html",
+          "blobSha": "e5ea848e4af476e697d5fc2d96ff53650dd8c551"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/warp/"
+    },
+    {
+      "id": "design-system:webflow",
+      "slug": "webflow",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/webflow/DESIGN.md",
+          "path": "content/design-systems/webflow/specification/DESIGN.md",
+          "blobSha": "d42e91702260443e7771dd3ad86badecc68ba487"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/webflow/DESIGN.zh-en.md",
+          "path": "content/design-systems/webflow/localized/DESIGN.zh-en.md",
+          "blobSha": "19b6cf0dcf7db55815f59e9f858a319da1a44bc0"
+        },
+        {
+          "sourcePath": "localized/webflow/DESIGN.zh.md",
+          "path": "content/design-systems/webflow/localized/DESIGN.zh.md",
+          "blobSha": "eedcebad6a8aaf04725a0e4112f45718782e5a65"
+        },
+        {
+          "sourcePath": "localized/webflow/directory-hero.webp",
+          "path": "content/design-systems/webflow/localized/directory-hero.webp",
+          "blobSha": "064435706ef1ce6f4f66a5fb07d560eaaa074484"
+        },
+        {
+          "sourcePath": "localized/webflow/preview-dark.html",
+          "path": "content/design-systems/webflow/localized/preview-dark.html",
+          "blobSha": "31daf5cbab74cc0654749496399fd78647531699"
+        },
+        {
+          "sourcePath": "localized/webflow/preview.html",
+          "path": "content/design-systems/webflow/localized/preview.html",
+          "blobSha": "46448534a9b7c0870ee384c5ab19ceaaa2877355"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/webflow/"
+    },
+    {
+      "id": "design-system:wired",
+      "slug": "wired",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/wired/DESIGN.md",
+          "path": "content/design-systems/wired/specification/DESIGN.md",
+          "blobSha": "913d4399fafc6c3b9d681fbeeb44dfeee444d405"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/wired/DESIGN.zh-en.md",
+          "path": "content/design-systems/wired/localized/DESIGN.zh-en.md",
+          "blobSha": "08dba67ff47dbe51778eda9c712bdde31020098d"
+        },
+        {
+          "sourcePath": "localized/wired/DESIGN.zh.md",
+          "path": "content/design-systems/wired/localized/DESIGN.zh.md",
+          "blobSha": "be7a742a3162cd87cfd95b83e3eafffd1541a923"
+        },
+        {
+          "sourcePath": "localized/wired/directory-hero.webp",
+          "path": "content/design-systems/wired/localized/directory-hero.webp",
+          "blobSha": "5ea1d871199be12fb9eb05e629d75e8c5b2ce635"
+        },
+        {
+          "sourcePath": "localized/wired/preview-dark.html",
+          "path": "content/design-systems/wired/localized/preview-dark.html",
+          "blobSha": "3b86661a76e23d0c7dcfb439bd50f0404167c3b2"
+        },
+        {
+          "sourcePath": "localized/wired/preview.html",
+          "path": "content/design-systems/wired/localized/preview.html",
+          "blobSha": "4cc3f3ec24ab530cd3db68545c9d0e556f38a83b"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/wired/"
+    },
+    {
+      "id": "design-system:wise",
+      "slug": "wise",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/wise/DESIGN.md",
+          "path": "content/design-systems/wise/specification/DESIGN.md",
+          "blobSha": "79b01b7a6311bb9fdfc0b013b8b3020e72e3eb6f"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/wise/DESIGN.zh-en.md",
+          "path": "content/design-systems/wise/localized/DESIGN.zh-en.md",
+          "blobSha": "0ab7add3dd8f2edb75fca1e21a17d622086f14cb"
+        },
+        {
+          "sourcePath": "localized/wise/DESIGN.zh.md",
+          "path": "content/design-systems/wise/localized/DESIGN.zh.md",
+          "blobSha": "f7c88ed2e56ec394c0cf0538da89f9af651c8144"
+        },
+        {
+          "sourcePath": "localized/wise/directory-hero.webp",
+          "path": "content/design-systems/wise/localized/directory-hero.webp",
+          "blobSha": "de0767f6019845ec0d4cce6f00adab7bd0b1857e"
+        },
+        {
+          "sourcePath": "localized/wise/preview-dark.html",
+          "path": "content/design-systems/wise/localized/preview-dark.html",
+          "blobSha": "3252e9a4ef4126e1f61f387d59fceec9b5d0c0e9"
+        },
+        {
+          "sourcePath": "localized/wise/preview.html",
+          "path": "content/design-systems/wise/localized/preview.html",
+          "blobSha": "c656c503862e62559791df7ff67e0f2af71bb5e4"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/wise/"
+    },
+    {
+      "id": "design-system:x.ai",
+      "slug": "x.ai",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/x.ai/DESIGN.md",
+          "path": "content/design-systems/x.ai/specification/DESIGN.md",
+          "blobSha": "5e0eb5ef304728e3f402e2519c18d5d8fd4c1d8c"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/x.ai/DESIGN.zh-en.md",
+          "path": "content/design-systems/x.ai/localized/DESIGN.zh-en.md",
+          "blobSha": "37aa925da943d22aa9076165cf640fd03c41de76"
+        },
+        {
+          "sourcePath": "localized/x.ai/DESIGN.zh.md",
+          "path": "content/design-systems/x.ai/localized/DESIGN.zh.md",
+          "blobSha": "049d4e693618a06ca04f31f5734752a20117092d"
+        },
+        {
+          "sourcePath": "localized/x.ai/directory-hero.webp",
+          "path": "content/design-systems/x.ai/localized/directory-hero.webp",
+          "blobSha": "82818b0904b0ea800bb0003bcee6147ada6be580"
+        },
+        {
+          "sourcePath": "localized/x.ai/preview-dark.html",
+          "path": "content/design-systems/x.ai/localized/preview-dark.html",
+          "blobSha": "c10377861073c95899c34a29c14fd53e6ec9482f"
+        },
+        {
+          "sourcePath": "localized/x.ai/preview.html",
+          "path": "content/design-systems/x.ai/localized/preview.html",
+          "blobSha": "27db95c12973492d8d63bea335930bfdb2e6860c"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/x.ai/"
+    },
+    {
+      "id": "design-system:zapier",
+      "slug": "zapier",
+      "specificationFiles": [
+        {
+          "sourcePath": "design-md/zapier/DESIGN.md",
+          "path": "content/design-systems/zapier/specification/DESIGN.md",
+          "blobSha": "7a2b82bfec8bad3efa49200762879f497d224054"
+        }
+      ],
+      "localizedFiles": [
+        {
+          "sourcePath": "localized/zapier/DESIGN.zh-en.md",
+          "path": "content/design-systems/zapier/localized/DESIGN.zh-en.md",
+          "blobSha": "aceca67571d72e1d0ae943ebd95041c3c0f49709"
+        },
+        {
+          "sourcePath": "localized/zapier/DESIGN.zh.md",
+          "path": "content/design-systems/zapier/localized/DESIGN.zh.md",
+          "blobSha": "ec00dbb074af06bced3be6aaf9044ad395c66396"
+        },
+        {
+          "sourcePath": "localized/zapier/directory-hero.webp",
+          "path": "content/design-systems/zapier/localized/directory-hero.webp",
+          "blobSha": "8389623c07f020a07526bad22bc901fe2c6e24ef"
+        },
+        {
+          "sourcePath": "localized/zapier/preview-dark.html",
+          "path": "content/design-systems/zapier/localized/preview-dark.html",
+          "blobSha": "5c32e16cf58b056fe74cbde45a23dd44b768b5e5"
+        },
+        {
+          "sourcePath": "localized/zapier/preview.html",
+          "path": "content/design-systems/zapier/localized/preview.html",
+          "blobSha": "37756e65c517603e6ba5a3c4a64778dd4edd7c57"
+        }
+      ],
+      "rawArchivePath": "sources/research/getdesign-home/zapier/"
+    }
+  ]
+}

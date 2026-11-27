@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>重字与通栏运动摄影</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Bebas+Neue&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    /* Dark-adapted */
+    --canvas: #0a0a0a;
+    --surface: #161616;
+    --surface-elevated: #1f1f1f;
+    --on-primary: #ffffff;
+    --ink: #ffffff;
+    --soft-cloud-dark: #1a1a1a;
+    --charcoal: rgba(255,255,255,0.85);
+    --ash: rgba(255,255,255,0.55);
+    --mute: rgba(255,255,255,0.6);
+    --stone: rgba(255,255,255,0.4);
+    --hairline: rgba(255,255,255,0.12);
+    --hairline-soft: rgba(255,255,255,0.06);
+
+    /* Brand accents preserved */
+    --primary-button: #ffffff;
+    --primary-button-text: #111111;
+    --sale: #ff4047;
+    --sale-deep: #d30005;
+    --success: #1eaa52;
+    --success-bright: #1eaa52;
+    --info: #4a7dff;
+    --info-deep: #1151ff;
+    --accent-pink: #ed1aa0;
+    --accent-pink-soft: #ffb0dd;
+    --accent-purple-soft: #beaffd;
+    --accent-purple-pale: #d6d1ff;
+    --accent-teal: #1ba0b4;
+    --accent-pink-deep: #4c012d;
+
+    --font-display: 'Bebas Neue', 'Helvetica Now Display Medium', Helvetica, Arial, sans-serif;
+    --font-ui: 'Inter', 'Helvetica Now Text Medium', Helvetica, Arial, sans-serif;
+    --font-body: 'Inter', 'Helvetica Now Text', Helvetica, Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-body);
+    background: var(--canvas);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+  }
+
+  /* NAV */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--canvas);
+    border-bottom: 1px solid var(--hairline);
+    padding: 0 48px;
+    height: 64px;
+  }
+  .nav-brand { font-family: var(--font-ui); font-weight: 700; font-size: 16px; color: var(--ink); letter-spacing: -0.3px; }
+  .nav-links { list-style: none; display: flex; gap: 28px; padding: 0; margin: 0; }
+  .nav-links a { font-family: var(--font-ui); font-size: 15px; font-weight: 500; color: var(--ink); text-decoration: none; }
+  .nav-cta {
+    background: var(--primary-button);
+    color: var(--primary-button-text);
+    border: none;
+    border-radius: 9999px;
+    padding: 12px 24px;
+    height: 44px;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 96px 48px;
+    background: var(--canvas);
+    display: block;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .hero-content { max-width: 1200px; }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: 96px;
+    font-weight: 500;
+    line-height: 0.92;
+    color: var(--ink);
+    margin: 0 0 32px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    text-align: left;
+  }
+  .hero p {
+    font-size: 18px;
+    color: var(--charcoal);
+    max-width: 900px;
+    margin: 0 0 40px;
+    line-height: 1.5;
+    text-align: left;
+  }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-start; }
+  .btn {
+    font-family: var(--font-ui);
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 9999px;
+    padding: 14px 30px;
+    height: 48px;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-primary { background: var(--primary-button); color: var(--primary-button-text); }
+  .btn-secondary { background: var(--surface-elevated); color: var(--ink); border: 1px solid var(--hairline); }
+  .btn-outline-on-image { background: var(--canvas); color: var(--ink); border: 1px solid var(--hairline); }
+
+  /* SECTIONS */
+  section {
+    padding: 96px 48px;
+    max-width: 1440px;
+    margin: 0 auto;
+    border-top: 1px solid var(--hairline);
+  }
+  .section-eyebrow {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--mute);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin: 0 0 12px;
+  }
+  .section-heading {
+    font-family: var(--font-display);
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 1;
+    color: var(--ink);
+    margin: 0 0 16px;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+  }
+  .section-desc { font-size: 16px; color: var(--charcoal); max-width: 720px; margin: 0 0 48px; }
+
+  /* PALETTE */
+  .palette-block { margin-bottom: 48px; }
+  .palette-block-label {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin: 0 0 16px;
+  }
+  .palette-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .swatch {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    overflow: hidden;
+  }
+  .swatch-color { height: 100px; }
+  .swatch-meta { padding: 14px 16px 16px; }
+  .swatch-name { font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--ink); margin: 0 0 2px; }
+  .swatch-hex { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 12px; color: var(--mute); margin: 0 0 6px; }
+  .swatch-role { font-family: var(--font-ui); font-size: 12px; color: var(--charcoal); margin: 0; line-height: 1.4; }
+
+  /* TYPOGRAPHY */
+  .type-row {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 32px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--hairline);
+    align-items: baseline;
+  }
+  .type-meta { font-family: var(--font-ui); font-size: 12px; color: var(--mute); line-height: 1.6; }
+  .type-meta strong { display: block; color: var(--ink); font-weight: 600; font-size: 13px; margin-bottom: 4px; }
+  .type-sample { color: var(--ink); }
+
+  /* BUTTONS GRID */
+  .button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .button-cell {
+    border: 1px solid var(--hairline);
+    padding: 32px 24px 24px;
+    background: var(--surface);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .button-cell.on-image {
+    background: linear-gradient(135deg, #1c1c1c 0%, #3a3a3a 100%);
+    color: var(--ink);
+    position: relative;
+    overflow: hidden;
+    min-height: 180px;
+    justify-content: flex-end;
+  }
+  .button-cell-label { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--ink); margin: 0; text-transform: uppercase; letter-spacing: 0.3px; }
+  .button-cell-spec { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 11px; color: var(--mute); margin: 0; }
+
+  /* FILTER CHIPS */
+  .filter-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    border: 1px solid var(--hairline);
+    background: var(--surface);
+    color: var(--ink);
+    padding: 8px 16px;
+    border-radius: 9999px;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .chip.active { background: var(--ink); color: var(--canvas); border-color: var(--ink); }
+
+  /* SEARCH PILL */
+  .search-pill {
+    display: inline-flex;
+    align-items: center;
+    background: var(--surface-elevated);
+    border-radius: 24px;
+    padding: 8px 16px;
+    height: 40px;
+    width: 280px;
+    gap: 8px;
+    color: var(--mute);
+    font-family: var(--font-ui);
+    font-size: 14px;
+  }
+  .search-pill.focused {
+    background: var(--surface);
+    border: 2px solid var(--ink);
+    box-shadow: 0 0 0 12px var(--surface-elevated);
+    color: var(--ink);
+  }
+  .search-pill svg { flex-shrink: 0; }
+
+  /* CARDS */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+
+  /* product card */
+  .product-card { background: var(--canvas); }
+  .product-card-image {
+    background: var(--surface);
+    aspect-ratio: 1 / 1;
+    position: relative;
+    overflow: hidden;
+  }
+  .product-card-image::before {
+    content: '';
+    position: absolute;
+    inset: 20% 15% 25% 15%;
+    background: linear-gradient(135deg, #4a4a4a 0%, #2a2a2a 60%, #1a1a1a 100%);
+    border-radius: 14px;
+    transform: rotate(-8deg);
+    box-shadow: 0 20px 30px -10px rgba(0,0,0,0.5);
+  }
+  .product-card-meta { padding: 14px 0 0; }
+  .badge-promo {
+    display: inline-block;
+    border: 1px solid var(--hairline);
+    background: var(--canvas);
+    color: var(--ink);
+    border-radius: 9999px;
+    padding: 4px 12px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .swatch-row { display: flex; gap: 6px; margin-bottom: 8px; align-items: center; }
+  .swatch-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 9999px;
+    background: var(--ink);
+    border: 1px solid var(--hairline);
+  }
+  .swatch-dot.active {
+    box-shadow: 0 0 0 2px var(--canvas), 0 0 0 4px var(--ink);
+  }
+  .swatch-count { font-family: var(--font-ui); font-size: 12px; color: var(--mute); margin-left: 4px; }
+  .product-name { font-family: var(--font-ui); font-weight: 500; font-size: 16px; color: var(--ink); margin: 0 0 2px; }
+  .product-subtitle { font-family: var(--font-ui); font-size: 14px; font-weight: 500; color: var(--mute); margin: 0 0 8px; }
+  .product-price-row { display: flex; align-items: baseline; gap: 8px; }
+  .price-current { font-family: var(--font-ui); font-weight: 500; font-size: 16px; color: var(--ink); }
+  .price-current.sale { color: var(--sale); }
+  .price-strike { font-family: var(--font-ui); font-size: 14px; color: var(--mute); text-decoration: line-through; }
+  .price-percent { font-family: var(--font-ui); font-weight: 500; font-size: 14px; color: var(--sale); }
+
+  /* campaign tile */
+  .campaign-tile {
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(135deg, #1a2a1a 0%, #3a4a2a 50%, #5a6b3e 100%);
+    position: relative;
+    overflow: hidden;
+    grid-column: span 2;
+    color: var(--ink);
+  }
+  .campaign-tile::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 70% 60%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+  }
+  .campaign-tile-content {
+    position: relative;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .campaign-tile-headline {
+    font-family: var(--font-display);
+    font-size: 96px;
+    font-weight: 500;
+    line-height: 0.9;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    color: var(--ink);
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  }
+
+  /* category icon card */
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 8px;
+  }
+  .category-icon-card {
+    background: var(--surface);
+    padding: 24px 12px;
+    text-align: center;
+  }
+  .category-icon-art {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 12px;
+    background: var(--surface-elevated);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink);
+  }
+  .category-label { font-family: var(--font-ui); font-size: 14px; font-weight: 500; color: var(--ink); }
+
+  /* member benefit card */
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 8px;
+  }
+  .benefit-card {
+    aspect-ratio: 4 / 5;
+    background: linear-gradient(155deg, #1a2030 0%, #2a3a4d 60%, #3a4a5d 100%);
+    position: relative;
+    overflow: hidden;
+    color: var(--ink);
+  }
+  .benefit-card::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.6) 100%);
+  }
+  .benefit-card-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .benefit-card-eyebrow {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--ink);
+    opacity: 0.85;
+    margin: 0;
+  }
+  .benefit-card-title {
+    font-family: var(--font-ui);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.2;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  /* PDP disclosure rows */
+  .disclosure-list { max-width: 620px; }
+  .disclosure-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--hairline);
+    cursor: pointer;
+  }
+  .disclosure-label { font-family: var(--font-ui); font-weight: 500; font-size: 16px; color: var(--ink); }
+  .disclosure-chev { color: var(--ink); }
+  .faq-row .disclosure-label { font-weight: 500; font-size: 16px; line-height: 1.75; }
+
+  /* FORMS */
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 800px;
+  }
+  .form-cell { display: flex; flex-direction: column; gap: 8px; }
+  .form-label { font-family: var(--font-ui); font-size: 12px; font-weight: 600; color: var(--ink); text-transform: uppercase; letter-spacing: 0.3px; }
+  .form-spec { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 11px; color: var(--mute); margin-top: 4px; }
+
+  /* SPACING + RADIUS */
+  .spacing-row, .radius-row { display: flex; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+  .spacing-cell { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .spacing-bar { background: var(--ink); height: 32px; }
+  .spacing-label { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 11px; color: var(--mute); }
+  .radius-cell { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .radius-box { width: 100px; height: 100px; background: var(--surface); border: 1px solid var(--hairline); }
+  .radius-label { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 11px; color: var(--mute); }
+  .radius-context { font-family: var(--font-ui); font-size: 12px; color: var(--charcoal); text-align: center; max-width: 110px; }
+
+  /* ELEVATION */
+  .elevation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+    background: var(--surface);
+    padding: 32px;
+  }
+  .elevation-card {
+    background: var(--surface-elevated);
+    height: 140px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .elevation-card.level-0 { border: 1px solid transparent; }
+  .elevation-card.level-1 { border-bottom: 1px solid var(--hairline); }
+  .elevation-card.level-2 { box-shadow: inset 0 -1px 0 var(--hairline-soft); }
+  .elevation-name { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--ink); }
+  .elevation-spec { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 11px; color: var(--mute); }
+
+  /* UTILITY BAR + PRIMARY NAV demo */
+  .demo-utility-bar {
+    background: var(--surface);
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 24px;
+    gap: 20px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    color: var(--ink);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .demo-primary-nav {
+    background: var(--canvas);
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    gap: 32px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .demo-primary-nav .swoosh {
+    width: 48px;
+    height: 18px;
+    background: var(--ink);
+    clip-path: polygon(0 70%, 100% 0, 95% 30%, 12% 100%);
+  }
+  .demo-primary-nav-links {
+    display: flex;
+    gap: 24px;
+    flex: 1;
+    justify-content: center;
+    font-family: var(--font-ui);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .demo-primary-nav-links span.active { border-bottom: 2px solid var(--ink); padding-bottom: 4px; }
+
+  /* RESPONSIVE TABLE */
+  .responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-ui);
+    font-size: 14px;
+  }
+  .responsive-table th, .responsive-table td {
+    text-align: left;
+    padding: 14px 12px;
+    border-bottom: 1px solid var(--hairline);
+    vertical-align: top;
+  }
+  .responsive-table th { font-weight: 600; color: var(--ink); background: var(--surface); font-size: 13px; text-transform: uppercase; letter-spacing: 0.4px; }
+  .responsive-table td { color: var(--charcoal); }
+
+  .device-ladder {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+  .device {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 12px;
+  }
+  .device .label { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 11px; color: var(--mute); margin-top: 8px; }
+  .device .name { font-family: var(--font-ui); font-size: 11px; color: var(--ink); font-weight: 600; }
+  .device.phone { width: 48px; height: 96px; }
+  .device.phone-large { width: 64px; height: 120px; }
+  .device.tablet { width: 100px; height: 150px; }
+  .device.desktop-small { width: 160px; height: 130px; }
+  .device.desktop { width: 220px; height: 150px; }
+
+  .responsive-sub-block { margin-top: 40px; }
+  .responsive-sub-block h3 { font-family: var(--font-display); font-size: 24px; font-weight: 500; text-transform: uppercase; margin: 0 0 12px; letter-spacing: -0.3px; color: var(--ink); }
+  .responsive-sub-block ul { padding-left: 18px; line-height: 1.7; color: var(--charcoal); }
+
+  /* FOOTER (mandatory) */
+  .footer {
+    padding: 48px 48px;
+    text-align: center;
+    background: var(--canvas);
+    border-top: 1px solid var(--hairline);
+    color: var(--mute);
+    font-family: var(--font-ui);
+    font-size: 14px;
+  }
+  .footer a { color: var(--ink); font-weight: 500; }
+
+  /* Overflow guards */
+  .cell, .cell > *, .demo, .button-cell, .component-cell { min-width: 0; }
+  .cell.wide,
+  .button-cell.wide,
+  .component-cell.wide { grid-column: span 2; }
+
+  @media (max-width: 1024px) {
+    section { padding: 64px 32px; }
+    .section-heading { font-size: 40px; }
+    .nav { padding: 0 32px; }
+    .nav > :last-child { display: none; }
+    .type-row { grid-template-columns: 1fr; gap: 8px; }
+    .type-row .type-meta { padding-bottom: 4px; }
+    .form-grid, .pricing-grid { gap: 16px; }
+    .hero { padding: 64px 32px; }
+    .hero h1 { font-size: 64px; }
+    .campaign-tile-headline { font-size: 64px; }
+  }
+
+  @media (max-width: 720px) {
+    .cell.wide, .button-cell.wide, .component-cell.wide { grid-column: span 1; }
+    .nav { padding: 12px 20px; height: auto; min-height: 56px; }
+    .nav-links { display: none; }
+    .hero { padding: 48px 20px; }
+    .hero h1 { font-size: 48px; letter-spacing: -0.5px; }
+    .hero p { font-size: 16px; }
+    section { padding: 48px 20px; }
+    .section-heading { font-size: 32px; }
+    .palette-grid, .button-grid, .card-grid, .form-grid, .demo-grid, .elevation-grid, .category-grid, .benefit-grid { grid-template-columns: 1fr !important; gap: 16px; }
+    .campaign-tile { grid-column: span 1; aspect-ratio: 4 / 5; }
+    .campaign-tile-headline { font-size: 48px; }
+    .spacing-row, .radius-row { gap: 12px; }
+    .responsive-table { font-size: 12px; }
+    .responsive-table th, .responsive-table td { padding: 10px 8px; }
+    .device-ladder { gap: 8px; }
+    .footer { padding: 24px 16px; font-size: 12px; }
+  }
+
+  /* getdesign.md nav additions */
+  .nav-left { display: flex; align-items: center; gap: 20px; }
+  .nav-brand-link,
+  .nav-brand-link:link,
+  .nav-brand-link:visited,
+  .nav-brand-link:hover,
+  .nav-brand-link:active { text-decoration: none; color: inherit; }
+  .nav-github,
+  .nav-github:link,
+  .nav-github:visited,
+  .nav-github:hover,
+  .nav-github:active {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: inherit;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 6px;
+    opacity: 0.75;
+    transition: opacity 200ms ease, border-color 200ms ease;
+    font-family: inherit;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .nav-github:hover { opacity: 1; border-color: rgba(128, 128, 128, 0.55); }
+  .nav-github svg { display: block; flex-shrink: 0; }
+
+  /* getdesign.md nav centering */
+  .nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+  .nav > .nav-left { justify-self: start; }
+  .nav > .nav-links { justify-self: center; }
+  .nav > :last-child { justify-self: end; }
+
+  /* Dark-nav GitHub override */
+  .nav .nav-github { color: #ffffff; border-color: rgba(255, 255, 255, 0.25); }
+  .nav .nav-github:hover { border-color: rgba(255, 255, 255, 0.5); }
+
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+</head>
+<body data-platform-type="零售电商">
+
+<header class="hero">
+<div class="hero-content">
+<h1>重字与通栏运动摄影</h1>
+<p>通栏活动摄影上叠放巨大的大写 Futura。胶囊主按钮、柔和底色的搜索和标签控件、采用 8px 网格的卡片组织零售页面。深色底改为深中性色，主按钮采用白字黑底，促销红、成功绿和编辑区的粉色与蓝绿色继续沿用。</p>
+<div class="hero-actions">
+<button class="btn btn-primary">商店男店员</button>
+<button class="btn btn-secondary">成为成员</button>
+</div>
+</div>
+</header>
+<!-- COLOR PALETTE -->
+<section id="colors">
+<p class="section-eyebrow">01 · 配色</p>
+<h2 class="section-heading">配色</h2>
+<p class="section-desc">纯黑色 页面底色带有3步中性表面层级,半透明白色文本级,品牌强调色颜色从浅色模式中保留不变.</p>
+<div class="palette-block">
+<p class="palette-block-label">页面底色 和 表面层级 组合键</p>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#0a0a0a"></div><div class="swatch-meta"><p class="swatch-name">Canvas</p><p class="swatch-hex">#0a0a0a</p><p class="swatch-role">页面背景,主导航,页脚——从Nike Black加深</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#161616"></div><div class="swatch-meta"><p class="swatch-name">Surface</p><p class="swatch-hex">#161616</p><p class="swatch-role">卡片, 公用栏, 产品 卡片 图像背景</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#1f1f1f"></div><div class="swatch-meta"><p class="swatch-name">Surface Elevated</p><p class="swatch-hex">#1f1f1f</p><p class="swatch-role">重叠表面, 提升卡片体, 搜索胶囊形默认值</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:rgba(255,255,255,0.12)"></div><div class="swatch-meta"><p class="swatch-name">Hairline</p><p class="swatch-hex">rgba(255,255,255,0.12)</p><p class="swatch-role">透明 1px 行分隔符</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:rgba(255,255,255,0.06)"></div><div class="swatch-meta"><p class="swatch-name">Hairline Soft</p><p class="swatch-hex">rgba(255,255,255,0.06)</p><p class="swatch-role">Inset 1px shadow under sticky strips</p></div></div>
+</div>
+</div>
+<div class="palette-block">
+<p class="palette-block-label">倒数行动按钮</p>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#ffffff"></div><div class="swatch-meta"><p class="swatch-name">Primary Button</p><p class="swatch-hex">#ffffff</p><p class="swatch-role">倒转自 Nike 黑色——暗布上的主要CTA</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#111111"></div><div class="swatch-meta"><p class="swatch-name">Primary Button Text</p><p class="swatch-hex">#111111</p><p class="swatch-role">文本/虹彩色,坐落在白色行动按钮上</p></div></div>
+</div>
+</div>
+<div class="palette-block">
+<p class="palette-block-label">文本等级( 透明白)</p>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#ffffff"></div><div class="swatch-meta"><p class="swatch-name">Ink</p><p class="swatch-hex">#ffffff</p><p class="swatch-role">标题、产品名称、价格、主导航</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:rgba(255,255,255,0.85)"></div><div class="swatch-meta"><p class="swatch-name">Charcoal</p><p class="swatch-hex">rgba(255,255,255,0.85)</p><p class="swatch-role">黑色页面底色上复制的文本</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:rgba(255,255,255,0.6)"></div><div class="swatch-meta"><p class="swatch-name">Mute</p><p class="swatch-hex">rgba(255,255,255,0.6)</p><p class="swatch-role">产品字幕、页脚链接文本、二级元数据</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:rgba(255,255,255,0.4)"></div><div class="swatch-meta"><p class="swatch-name">Stone</p><p class="swatch-hex">rgba(255,255,255,0.4)</p><p class="swatch-role">最低的强调工具文字</p></div></div>
+</div>
+</div>
+<div class="palette-block">
+<p class="palette-block-label">语义(保留后+在需要时为AA亮亮)</p>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#ff4047"></div><div class="swatch-meta"><p class="swatch-name">Sale</p><p class="swatch-hex">#ff4047</p><p class="swatch-role">Brightened from #d30005 for AA contrast on dark canvas</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#d30005"></div><div class="swatch-meta"><p class="swatch-name">Sale Deep</p><p class="swatch-hex">#d30005</p><p class="swatch-role">按下状态 销售价格</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#1eaa52"></div><div class="swatch-meta"><p class="swatch-name">Success</p><p class="swatch-hex">#1eaa52</p><p class="swatch-role">确认信息,库存指标</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#4a7dff"></div><div class="swatch-meta"><p class="swatch-name">Info</p><p class="swatch-hex">#4a7dff</p><p class="swatch-role">信息链接/障碍——为深色页面底色亮度</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#1151ff"></div><div class="swatch-meta"><p class="swatch-name">Info Deep</p><p class="swatch-hex">#1151ff</p><p class="swatch-role">按下状态 信息强调色</p></div></div>
+</div>
+</div>
+<div class="palette-block">
+<p class="palette-block-label">类别 百分率(从浅色模式保留)</p>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#ed1aa0"></div><div class="swatch-meta"><p class="swatch-name">Accent Pink</p><p class="swatch-hex">#ed1aa0</p><p class="swatch-role">SKIMS/妇女收藏</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#ffb0dd"></div><div class="swatch-meta"><p class="swatch-name">Accent Pink Soft</p><p class="swatch-hex">#ffb0dd</p><p class="swatch-role">成员经验</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#beaffd"></div><div class="swatch-meta"><p class="swatch-name">Accent Purple Soft</p><p class="swatch-hex">#beaffd</p><p class="swatch-role">编辑监视点</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#d6d1ff"></div><div class="swatch-meta"><p class="swatch-name">Accent Purple Pale</p><p class="swatch-hex">#d6d1ff</p><p class="swatch-role">最轻的软瓦填充</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#1ba0b4"></div><div class="swatch-meta"><p class="swatch-name">Accent Teal</p><p class="swatch-hex">#1ba0b4</p><p class="swatch-role">ACG/室外——为暗页面底色亮度</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#4c012d"></div><div class="swatch-meta"><p class="swatch-name">Accent Pink Deep</p><p class="swatch-hex">#4c012d</p><p class="swatch-role">遗产/约旦编辑洗涤</p></div></div>
+</div>
+</div>
+</section>
+<!-- TYPOGRAPHY -->
+<section id="typography">
+<p class="section-eyebrow">02 · 字体排版</p>
+<h2 class="section-heading">字号层级</h2>
+<p class="section-desc">与浅色模式的等级相同. 类型符号在模式之间不会改变——只有颜色值变化.</p>
+<div class="type-row">
+<div class="type-meta"><strong>display-campaign</strong>Nike Futura ND<br/>96px / 500 / lh 0.9 / uppercase</div>
+<div class="type-sample" style="font-family:var(--font-display);font-size:96px;font-weight:500;line-height:0.9;letter-spacing:-1px;text-transform:uppercase">做点什么吧</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>heading-xl</strong>Helvetica Now Display Medium<br/>32px / 500 / lh 1.2</div>
+<div class="type-sample" style="font-family:var(--font-ui);font-size:32px;font-weight:500;line-height:1.2">特长的脚套</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>heading-lg</strong>Helvetica Now Display Medium<br/>24px / 500 / lh 1.2</div>
+<div class="type-sample" style="font-family:var(--font-ui);font-size:24px;font-weight:500;line-height:1.2">成员福利隔离</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>heading-md</strong>Helvetica Now Display Medium<br/>16px / 500 / lh 1.75</div>
+<div class="type-sample" style="font-family:var(--font-ui);font-size:16px;font-weight:500;line-height:1.75">卡片 标题或过滤组头</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>body-md</strong>Helvetica Now Text<br/>16px / 400 / lh 1.5</div>
+<div class="type-sample" style="font-family:var(--font-body);font-size:16px;font-weight:400;line-height:1.5">机体复制品中包含产品说明,搜索占位符,以及任何长式的在16px正常重量的传言.（原文参数：16px）</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>body-strong</strong>Helvetica Now Text Medium<br/>16px / 500 / lh 1.5</div>
+<div class="type-sample" style="font-family:var(--font-ui);font-size:16px;font-weight:500;line-height:1.5">产品 卡片 名称和主导航链接</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>button-md</strong>Helvetica Now Text Medium<br/>16px / 500 / lh 1.5</div>
+<div class="type-sample" style="font-family:var(--font-ui);font-size:16px;font-weight:500;line-height:1.5">通知我</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>button-sm</strong>Helvetica Now Text Medium<br/>14px / 500 / lh 1.5</div>
+<div class="type-sample" style="font-family:var(--font-ui);font-size:14px;font-weight:500;line-height:1.5">缩合胶囊形 行动按钮,徽章标签</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>link-md</strong>Helvetica Now Text<br/>16px / 500 / lh 1.75 / underline</div>
+<div class="type-sample" style="font-family:var(--font-body);font-size:16px;font-weight:500;line-height:1.75;text-decoration:underline">查看产品细节</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>caption-md</strong>Helvetica Now Text Medium<br/>14px / 500 / lh 1.5</div>
+<div class="type-sample" style="font-family:var(--font-ui);font-size:14px;font-weight:500;line-height:1.5">男子拖鞋 男子拖鞋</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>caption-sm</strong>Helvetica Now Text Medium<br/>12px / 500 / lh 1.5</div>
+<div class="type-sample" style="font-family:var(--font-ui);font-size:12px;font-weight:500;line-height:1.5">过滤芯片标签 ^ 颜色计数 ^ 徽章文本</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><strong>utility-xs</strong>Helvetica Neue<br/>9px / 500 / lh 1.75</div>
+<div class="type-sample" style="font-family:var(--font-ui);font-size:9px;font-weight:500;line-height:1.75">页面底部的合法版权 fine-print 行</div>
+</div>
+</section>
+<!-- BUTTONS -->
+<section id="components">
+<p class="section-eyebrow">03 · 组件</p>
+<h2 class="section-heading">按钮样式</h2>
+<p class="section-desc">胶囊形或图标-圆形——即整个按钮形状词汇. 初级行动按钮在黑色页面底色上反白;二级接一个1px半透明细边框.（原文参数：1px）</p>
+<div class="button-grid">
+<div class="button-cell">
+<button class="btn btn-primary">通知我</button>
+<p class="button-cell-label">button-primary</p>
+<p class="button-cell-spec">bg #ffffff 文本 #111111 整数 48px 高度</p>
+</div>
+<div class="button-cell">
+<button class="btn btn-secondary">发现更多</button>
+<p class="button-cell-label">button-secondary</p>
+<p class="button-cell-spec">数据 surface-elevated · 文字文字色; 1px 细边线 整齐</p>
+</div>
+<div class="button-cell on-image wide">
+<button class="btn btn-outline-on-image">现在就去商店</button>
+<p class="button-cell-label">button-outline-on-image</p>
+<p class="button-cell-spec">页面底色 bg 文字色 文本 1px 细边框 活动牌底部左侧固定</p>
+</div>
+<div class="button-cell">
+<div style="display:flex;gap:8px">
+<button style="width:40px;height:40px;border-radius:9999px;background:var(--surface-elevated);border:none;display:flex;align-items:center;justify-content:center;color:var(--ink)"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M15 18l-6-6 6-6"></path></svg></button>
+<button style="width:40px;height:40px;border-radius:9999px;background:var(--surface-elevated);border:none;display:flex;align-items:center;justify-content:center;color:var(--ink)"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M9 6l6 6-6 6"></path></svg></button>
+<button style="width:40px;height:40px;border-radius:9999px;background:var(--surface-elevated);border:none;display:flex;align-items:center;justify-content:center;color:var(--ink)"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path></svg></button>
+</div>
+<p class="button-cell-label">button-icon-circular</p>
+<p class="button-cell-spec">40px 整数 surface-elevated bg</p>
+</div>
+<div class="button-cell wide">
+<div class="filter-chips">
+<button class="chip active">今天来接</button>
+<button class="chip">道路运行</button>
+<button class="chip">轨迹运行</button>
+<button class="chip">音轨</button>
+<button class="chip">Nike 由你负责</button>
+</div>
+<p class="button-cell-label">filter-chip + filter-chip-active</p>
+<p class="button-cell-spec">默认:表面 + 1px 细边框 → 活动: 文字色填充(白色)+ 页面底色文本</p>
+</div>
+<div class="button-cell wide">
+<div style="display:flex;gap:24px;flex-wrap:wrap">
+<span class="search-pill"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg><span>搜索产品</span></span>
+<span class="search-pill focused"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg><span>空气最大值( A)</span></span>
+</div>
+<p class="button-cell-label">search-pill + search-pill-focused</p>
+<p class="button-cell-spec">四舍五入的毫升(24px) · 40px 高度 ・ surface-elevated 默认 ^ 表面 + 2px 文字色边框+ 12px 焦时光环</p>
+</div>
+</div>
+</section>
+<!-- CARDS -->
+<section>
+<p class="section-eyebrow">04 · 卡片</p>
+<h2 class="section-heading">卡片示例</h2>
+<p class="section-desc">卡片在页面底色上保持平坦——没有阴影,半径,容器本身没有边界. 表面摄影阶段(#161616)而不是软云.</p>
+<div class="card-grid">
+<div class="product-card">
+<div class="product-card-image"></div>
+<div class="product-card-meta">
+<div class="swatch-row">
+<span class="swatch-dot active"></span>
+<span class="swatch-dot" style="background:#d8b894"></span>
+<span class="swatch-dot" style="background:#5a6b3e"></span>
+<span class="swatch-count">3 颜色</span>
+</div>
+<p class="product-name">ACG 拖车运行器</p>
+<p class="product-subtitle">男子拖鞋 男子拖鞋</p>
+<div class="product-price-row">
+<span class="price-current">$180</span>
+</div>
+</div>
+</div>
+<div class="product-card">
+<div class="product-card-image"></div>
+<div class="product-card-meta">
+<span class="badge-promo">回收材料</span>
+<div class="swatch-row">
+<span class="swatch-dot" style="background:#beaffd"></span>
+<span class="swatch-dot active" style="background:#4a7dff"></span>
+<span class="swatch-dot"></span>
+<span class="swatch-count">3 颜色</span>
+</div>
+<p class="product-name">飞马车道GORE-TEX</p>
+<p class="product-subtitle">男子防水拖车运行</p>
+<div class="product-price-row">
+<span class="price-current sale">$141.97</span>
+<span class="price-strike">$180</span>
+<span class="price-percent">21% off</span>
+</div>
+</div>
+</div>
+<div class="product-card">
+<div class="product-card-image"></div>
+<div class="product-card-meta">
+<span class="badge-promo">刚进去</span>
+<div class="swatch-row">
+<span class="swatch-dot" style="background:#ffffff;border:1px solid var(--hairline)"></span>
+<span class="swatch-dot active"></span>
+<span class="swatch-count">2 颜色</span>
+</div>
+<p class="product-name">Air Zoom Pegasus 41</p>
+<p class="product-subtitle">男子跑道鞋</p>
+<div class="product-price-row">
+<span class="price-current">$170</span>
+</div>
+</div>
+</div>
+<div class="campaign-tile">
+<div class="campaign-tile-content">
+<button class="btn btn-outline-on-image">商店铺道</button>
+<h3 class="campaign-tile-headline">ACG 亚加澳新集团<br/>飞马<br/>轨迹</h3>
+</div>
+</div>
+</div>
+<div style="margin-top:48px">
+<p class="palette-block-label">成员养恤金卡片</p>
+<div class="benefit-grid">
+<div class="benefit-card">
+<div class="benefit-card-content">
+<p class="benefit-card-eyebrow">国家</p>
+<h4 class="benefit-card-title">终极滑雪者社区</h4>
+<button class="btn btn-outline-on-image">探索</button>
+</div>
+</div>
+<div class="benefit-card" style="background:linear-gradient(155deg,#2a201a 0%,#4a3a2a 100%)">
+<div class="benefit-card-content">
+<p class="benefit-card-eyebrow">Nike 由你负责</p>
+<h4 class="benefit-card-title">您的自定义服务</h4>
+<button class="btn btn-outline-on-image">自定义</button>
+</div>
+</div>
+<div class="benefit-card" style="background:linear-gradient(155deg,#1a2a1a 0%,#2a3a2a 100%)">
+<div class="benefit-card-content">
+<p class="benefit-card-eyebrow">运行俱乐部</p>
+<h4 class="benefit-card-title">一起跑,一起跑,一起跑,一起跑,一起跑,一起跑,一起跑,一起跑,一起跑,一起跑,一起跑,一起跑,一起跑,一起跑,一起跑</h4>
+<button class="btn btn-outline-on-image">探索</button>
+</div>
+</div>
+</div>
+</div>
+<div style="margin-top:48px">
+<p class="palette-block-label">类别图标卡片</p>
+<div class="category-grid">
+<div class="category-icon-card">
+<div class="category-icon-art"><svg fill="none" height="36" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="36"><path d="M4 8h16l-1 12H5L4 8z"></path><path d="M8 8V5a4 4 0 018 0v3"></path></svg></div>
+<p class="category-label">顶端</p>
+</div>
+<div class="category-icon-card">
+<div class="category-icon-art"><svg fill="none" height="36" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="36"><path d="M8 4h8v6l2 10H6l2-10V4z"></path></svg></div>
+<p class="category-label">泰斯衬衫( Shirts)</p>
+</div>
+<div class="category-icon-card">
+<div class="category-icon-art"><svg fill="none" height="36" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="36"><path d="M9 4l-2 16h4l1-7h0l1 7h4l-2-16z"></path></svg></div>
+<p class="category-label">短裤</p>
+</div>
+<div class="category-icon-card">
+<div class="category-icon-art"><svg fill="none" height="36" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="36"><path d="M8 3v18h8V3z"></path></svg></div>
+<p class="category-label">裤子</p>
+</div>
+<div class="category-icon-card">
+<div class="category-icon-art"><svg fill="none" height="36" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="36"><path d="M4 12h16v6H4z"></path><path d="M6 12V8h12v4"></path></svg></div>
+<p class="category-label">杂货店</p>
+</div>
+<div class="category-icon-card">
+<div class="category-icon-art"><svg fill="none" height="36" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="36"><circle cx="12" cy="6" r="3"></circle><path d="M5 21v-4a4 4 0 014-4h6a4 4 0 014 4v4"></path></svg></div>
+<p class="category-label">履带服</p>
+</div>
+</div>
+</div>
+<div style="margin-top:48px">
+<p class="palette-block-label">徽标</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+<span class="badge-promo">刚进去</span>
+<span class="badge-promo">马上就来了</span>
+<span class="badge-promo">回收材料</span>
+<span class="badge-promo">成员</span>
+<span class="badge-promo">畅销书</span>
+<span style="font-family:var(--font-ui);font-weight:500;font-size:14px;color:var(--sale)">销售价格(badge-sale-text)</span>
+</div>
+</div>
+</section>
+<!-- DISCLOSURE / FAQ -->
+<section>
+<p class="section-eyebrow">05 - 披露</p>
+<h2 class="section-heading">PDP 和 FAQ 列</h2>
+<p class="section-desc">堆叠的行带有24px垂直的垫板,每条下方有一个半透明1px 细分隔线.（原文参数：24px、1px）</p>
+<div class="disclosure-list">
+<div class="disclosure-row"><span class="disclosure-label">查看产品细节</span><span class="disclosure-chev"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M6 9l6 6 6-6"></path></svg></span></div>
+<div class="disclosure-row"><span class="disclosure-label">航运和回归</span><span class="disclosure-chev"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M6 9l6 6 6-6"></path></svg></span></div>
+<div class="disclosure-row"><span class="disclosure-label">审查(0)</span><span class="disclosure-chev"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M6 9l6 6 6-6"></path></svg></span></div>
+<div class="disclosure-row faq-row"><span class="disclosure-label">Nike成员是什么?</span><span class="disclosure-chev"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M12 5v14M5 12h14"></path></svg></span></div>
+<div class="disclosure-row faq-row"><span class="disclosure-label">我是Nike成员吗?</span><span class="disclosure-chev"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M12 5v14M5 12h14"></path></svg></span></div>
+<div class="disclosure-row faq-row"><span class="disclosure-label">Nike成员自由吗?</span><span class="disclosure-chev"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M12 5v14M5 12h14"></path></svg></span></div>
+</div>
+</section>
+<!-- NAV BARS -->
+<section>
+<p class="section-eyebrow">06 · 导航</p>
+<h2 class="section-heading">工具栏和主导航</h2>
+<p class="section-desc">总是在Surface上的36px通用栏目,然后在页面底色上使用带有swoush标志的64px主导航,以导航链接为中心,右侧搜索胶囊形.（原文参数：36px、64px）</p>
+<div style="border:1px solid var(--hairline)">
+<div class="demo-utility-bar">
+<span>查找存储</span>
+<span>帮助</span>
+<span>加入我们</span>
+<span>登录</span>
+</div>
+<div class="demo-primary-nav">
+<span class="swoosh"></span>
+<div class="demo-primary-nav-links">
+<span>新建特性( F)</span>
+<span class="active">男 员</span>
+<span>妇女</span>
+<span>孩子们</span>
+<span>约旦</span>
+<span>Nike 斯金马</span>
+<span>体育</span>
+</div>
+<span class="search-pill"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg><span>搜索</span></span>
+</div>
+</div>
+</section>
+<!-- FORMS -->
+<section>
+<p class="section-eyebrow">07 · 表单</p>
+<h2 class="section-heading">表单控件</h2>
+<p class="section-desc">在 Surface Elevated 上搜索 胶囊形 默认; 以 2px 文字色 大纲和 12px Surface elevated 光环聚焦背景翻转到 Surface 上.</p>
+<div class="form-grid">
+<div class="form-cell">
+<label class="form-label">搜索( 默认)</label>
+<span class="search-pill"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg><span>搜索产品</span></span>
+<span class="form-spec">surface-elevated bg · rounded 24px · 40px height</span>
+</div>
+<div class="form-cell">
+<label class="form-label">搜索( 已安装)</label>
+<span class="search-pill focused"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg><span>Air Max 1</span></span>
+<span class="form-spec">2px 文字色 边界 12px光环（原文参数：12px）</span>
+</div>
+<div class="form-cell">
+<label class="form-label">内置电子邮件字段</label>
+<input placeholder="输入您的电子邮件" style="height:48px;border-radius:30px;border:1px solid var(--hairline);background:var(--surface);padding:0 20px;font-family:var(--font-ui);font-size:16px;color:var(--ink)" type="text"/>
+<span class="form-spec">+ 1px 细边框 + 圆形 30px + 48px 高度</span>
+</div>
+<div class="form-cell">
+<label class="form-label">提交( 以电子邮件发包)</label>
+<button class="btn btn-primary" style="width:100%">注册</button>
+<span class="form-spec">button-primary 总是在堆叠的电子邮件字段下方全宽</span>
+</div>
+</div>
+</section>
+<!-- SPACING -->
+<section>
+<p class="section-eyebrow">08 · 布局</p>
+<h2 class="section-heading">间距层级</h2>
+<p class="section-desc">8px 基础单位 中超联赛冠军. 48px的节奏在模式上保存.（原文参数：48px）</p>
+<div class="spacing-row">
+<div class="spacing-cell"><div class="spacing-bar" style="width:2px"></div><span class="spacing-label">xxx 2 数据</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:4px"></div><span class="spacing-label">xs 4 数据</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:8px"></div><span class="spacing-label">sm 8 数据</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:12px"></div><span class="spacing-label">md 12 数据</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:18px"></div><span class="spacing-label">18 高压压压轴</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:24px"></div><span class="spacing-label">□ 24</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:30px"></div><span class="spacing-label">xxl 30 数据</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:48px"></div><span class="spacing-label">48 · 章节</span></div>
+</div>
+</section>
+<!-- RADIUS -->
+<section>
+<p class="section-eyebrow">09 · 形状</p>
+<h2 class="section-heading">圆角层级</h2>
+<p class="section-desc">与浅色模式相同. 集装箱保持整齐;集装箱直径保持整齐。</p>
+<div class="radius-row">
+<div class="radius-cell"><div class="radius-box" style="border-radius:0"></div><span class="radius-label">无 0</span><p class="radius-context">卡片, 瓦片, 摄影, 导航, 页脚</p></div>
+<div class="radius-cell"><div class="radius-box" style="border-radius:18px"></div><span class="radius-label">sm 18 数据</span><p class="radius-context">成员锁内的Avatar / 图标容器</p></div>
+<div class="radius-cell"><div class="radius-box" style="border-radius:24px"></div><span class="radius-label">md 24 数据</span><p class="radius-context">搜索 胶囊形 , 搜索提交、过滤输入</p></div>
+<div class="radius-cell"><div class="radius-box" style="border-radius:30px"></div><span class="radius-label">30 高压压压轴</span><p class="radius-context">每个行动按钮 胶囊形——初级,二级,上映,芯片</p></div>
+<div class="radius-cell"><div class="radius-box" style="border-radius:9999px"></div><span class="radius-label">9999 数据</span><p class="radius-context">Swatch dots and circular icon buttons</p></div>
+</div>
+</section>
+<!-- ELEVATION -->
+<section>
+<p class="section-eyebrow">10 · 视觉深度</p>
+<h2 class="section-heading">层次与深度</h2>
+<p class="section-desc">No drop shadows. The only depth cues are translucent 1px Hairline dividers and the 1px Hairline Soft inset on sticky strips.</p>
+<div class="elevation-grid">
+<div class="elevation-card level-0">
+<div class="elevation-name">Level 0 — Flat</div>
+<div class="elevation-spec">无阴影/ 无边框</div>
+</div>
+<div class="elevation-card level-1">
+<div class="elevation-name">Level 1 — Hairline</div>
+<div class="elevation-spec">1px 固体 rgba(255,255,255,0.12)</div>
+</div>
+<div class="elevation-card level-2">
+<div class="elevation-name">Level 2 — Inset Hairline-Soft</div>
+<div class="elevation-spec">设置 0 -1px 0 rgba(255,255,255,0.06)</div>
+</div>
+</div>
+</section>
+<!-- RESPONSIVE -->
+<section id="layout">
+<p class="section-eyebrow">11 · 响应式</p>
+<h2 class="section-heading">响应式布局</h2>
+<p class="section-desc">响应式断点堆栈同为浅色模式. 节奏收缩从 48px → 32px → 24px 下楼的路上。</p>
+<table class="responsive-table">
+<thead><tr><th>名称</th><th>宽度</th><th>布局变化</th></tr></thead>
+<tbody>
+<tr><td>超广</td><td>1920px+</td><td>Content max-width holds at 1440px; gutters grow to ~80px</td></tr>
+<tr><td>宽屏桌面</td><td>1440px</td><td>默认桌面 — 3- 上产品网格, 完整的主导航</td></tr>
+<tr><td>桌面端</td><td>1200px</td><td>同样的布局,外沟略窄</td></tr>
+<tr><td>桌面小块</td><td>1024px</td><td>Filter sidebar compresses; sport rail shows ~3 tiles</td></tr>
+<tr><td>平板电脑</td><td>1023–961px</td><td>3-up PLP 崩溃到 2-up; “ 隐藏过滤器” 默认切换</td></tr>
+<tr><td>平板内窄</td><td>960–640px</td><td>初端导航崩溃到汉堡; 搜索 胶囊形 成为图标</td></tr>
+<tr><td>移动景观</td><td>639–600px</td><td>2-up PLP 崩溃到1-up;卡片成为全宽</td></tr>
+<tr><td>手机端</td><td>599–320px</td><td>Single-column; campaign tiles full-screen with ~64px Futura</td></tr>
+</tbody>
+</table>
+<div class="device-ladder">
+<div class="device phone"><span class="name">320</span><span class="label">手机端</span></div>
+<div class="device phone-large"><span class="name">600</span><span class="label">m- 景观</span></div>
+<div class="device tablet"><span class="name">960</span><span class="label">平板内窄</span></div>
+<div class="device desktop-small"><span class="name">1024</span><span class="label">桌面小块</span></div>
+<div class="device desktop"><span class="name">1440</span><span class="label">宽屏桌面</span></div>
+</div>
+<div class="responsive-sub-block">
+<h3>触控区域</h3>
+<ul>
+<li><strong>触控区域 ≥ 44×44px（原文标注 WCAG AAA）</strong> button-primary和button-secondary在48px高度上带有32px水平垫.（原文参数：48px、32px）</li>
+<li><strong>过滤芯片 :</strong> 40px高与16px垫板——坐落于AAA下方但AA以上.（原文参数：40px、16px）</li>
+<li><strong>图标循环按钮 :</strong> 40×40 (后,下, 愿望列表), 并扩展命中目标补丁到 48×48 父母的内心</li>
+<li><strong>披露行数 :</strong> 24px vertical padding — full row is the tap target (~70px tall total).</li>
+</ul>
+</div>
+<div class="responsive-sub-block">
+<h3>窄屏布局调整</h3>
+<ul>
+<li><strong>初等导航 :</strong> 桌面中心集群 → 移动抽屉 由swoush左侧的汉堡触发.</li>
+<li><strong>PLP 网格 :</strong> 3-up → 2-up → 1-up at 1023, 599, and below; gutters drop from 8px to 4px on mobile.</li>
+<li><strong>过滤侧边栏 :</strong> 220px fixed → "Hide Filters" toggle → off-canvas full-screen drawer at mobile.</li>
+<li><strong>体育栏杆:</strong> desktop horizontal scroll with ~5 visible → mobile peek-next-card with ~1.5 visible.</li>
+<li><strong>区域间距 :</strong> 48px 桌面 – 数据 32px 平板电脑 24px 移动。</li>
+<li><strong>竞选标题:</strong> desktop 96px → tablet 64px → mobile 48px, line-height holds at 0.9.</li>
+<li><strong>图像艺术方向 :</strong> 16:9 桌面交换的宽首屏 4:5 肖像移动保持图中枢.</li>
+</ul>
+</div>
+</section>
+<footer class="footer" data-platform-example="footer">
+<div class="footer-shell">
+<p class="design-demo-note">栏目演示 · 零售电商</p><div class="footer-grid">
+<div class="footer-col">
+<h6>商城</h6>
+<span>商品分类</span>
+<span>新品</span>
+<span>活动</span>
+</div>
+<div class="footer-col">
+<h6>交易</h6>
+<span>购物车</span>
+<span>订单</span>
+<span>配送</span>
+</div>
+<div class="footer-col">
+<h6>服务</h6>
+<span>库存查询</span>
+<span>退换货</span>
+<span>售后帮助</span>
+</div>
+<div class="footer-col">
+<h6>支持</h6>
+<span>品牌信息</span>
+<span>常见问题</span>
+<span>问题反馈</span>
+</div>
+</div>
+
+</div>
+</footer>
+</body>
+</html>

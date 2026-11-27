@@ -1,0 +1,557 @@
+# Vodafone · 设计规范
+
+**说明**　正文含机器初译。检测到译文异常的条目保留英文，文末保留原始设计词元。
+
+
+
+
+## 概览
+
+Vodafone is a global telecom super-brand and its web surface delivers exactly that posture: heroic editorial photography, occasionally cropping a portrait so tight only an eye line and a phone hand are visible, with a single colossal uppercase headline floating on top in the brand's proprietary heavy display weight. The page reads like a campaign poster more than a corporate site, then breaks into a calmer content rhythm of light-canvas story cards and a single red marker (the iconic speechmark logo) drawing the eye to the brand's centre of gravity. There is no second accent colour competing — the entire decorative palette is `{colors.primary}` Vodafone red, near-black `{colors.ink}`, and the surrounding white and grayscale neutrals.
+
+Type is the second decisive voice. Vodafone's custom display sans (extracted as `Vodafone`) carries every headline at impossibly heavy weight 800 in upper case for hero scale (`{typography.display-hero}` 144 px, `{typography.display-xxl}` 126 px) and at lighter weight 300 for the sub-displays that follow. Body text stays in the same family at weight 400 with neutral tracking. The contrast between display weight 800 and display weight 300 IS the brand's typographic story: a shout, then a calm sentence.
+
+每一张交互式的CTA作为慷慨圆形胶囊形制作(`{rounded.pill-lg}` 60 px) — Vodafone 多年来从未在营销表面使用过方块按钮,品牌的胶囊形级梯子从 32 px (大胶囊形)通过 60 px (CTA药)最多 9999 px (漫画) circular 纸牌在 `{rounded.card}` 6 px.
+
+**关键特征 :**
+- 单一的初级 CTA 颜色 `{colors.primary}` (`#e60000`) — Vodafone 红色,初等时装药 pill-outline 二级。没有第三个按钮变体。
+- 大型大写显示字重 800 (`{typography.display-hero}` 品牌的标志。 300- 字重头条兄弟姐妹(`{typography.display-lg}` / `{typography.display-md}`处理比较平静的第二时刻。
+- 电话 `speechmark-logo-orb` ——红方托管. Vodafone'引号-标记图标——是装饰性界面框架唯一一块不是CTA的,它支撑着每个页面的品牌中心.
+- Pill geometry on every interactive shape — `{rounded.pill-lg}` 60 px for buttons, `{rounded.pill-md}` 32 px for inline badges. Card chrome stays at `{rounded.card}` 6 px.
+- 双波段的页面节奏—— `{colors.ink}` 黑暗首屏/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ 黑战士/ `{colors.canvas}` 轻度含量。没有中带灰色;该品牌使用表面对比,而不是软中性,用于高架。
+- 编辑摄影(真肖像,真城市,真电缆)是唯一一致的装饰系统——没有插图,没有大气梯度.
+
+
+## 配色
+
+### 品牌色与强调色
+- **Vodafone Red** (`{colors.primary}` — `#e60000`): The single brand accent. Every primary CTA pill, every speechmark logo, every conversion target. The most iconic red in telecom — never desaturated, never used at scale for body fills (reserved for high-attention surfaces).
+
+### 界面表面
+- **页面底色** (`{colors.canvas}` — `#ffffff`: 默认的光线内容背景.
+- **软画帘** (`{colors.canvas-soft}` — `#f2f2f2`: 一种近白锡作为 badge-chip 。 。 。
+- **墨水( 墨水 )** (`{colors.ink}` — `#25282b`:品牌近黑表面——用作暗黑首屏乐队,导航背景,脚步填充,双倍作为光表面的主要文字颜色.
+
+### 文字颜色
+- **墨水( 墨水 )** (`{colors.ink}` — `#25282b`:光表面的每一个标题和身体段落.
+- **体质** (`{colors.body}` — `#7e7e7e`: 轻表面的次要正文——标题,元数据,辅助副本.
+- **静音** (`{colors.mute}` — `#bebebe`:最下优先的文本颜色——占位符文本,低键页脚链接.
+- **On Dark** (`{colors.on-dark}` — `#ffffff`): All text on `{colors.ink}` surfaces (hero, footer, nav).
+
+### 语义色
+The brand does not maintain a separate semantic palette. The primary red doubles as validation / destructive signal when needed; success / warning use are reserved for in-product contexts and are not part of the documented marketing system.
+
+
+## 字体排版
+
+### 字体族
+单一的自定义面孔携带整个系统: **Vodafone**,品牌的专有展示圣人。 300 (轻), 400 (经常), 600, 700,以及 800 ——系统中的每一个角色都来自这个家族。没有单一的伴侣;技术标签(在营销表面)借的是相同的面孔,尺寸较小。
+
+icomoon图标-font 被装入专有格莱弗,但不会作为打印角色渲染.
+
+### 字号层级
+
+| 调试 | 大小 | 字重 | 线条高度 | 字母间距 | 使用 |
+|---|---|---|---|---|---|
+| `{typography.display-hero}` | 144px | 800 | 114px | -1px | 首屏的风度`"STAY CONNECTED"`)——大写,超紧跟踪,品牌的签名大小. |
+| `{typography.display-xxl}` | 126px | 800 | 113px | -1px | 略小的首屏变体. |
+| `{typography.display-xl}` | 90px | 800 | 84px | 0 | 中海罗规模. |
+| `{typography.display-lg}` | 48px | 300 | 52px | 0 | 节首线子段在轻量级中显示. |
+| `{typography.display-md}` | 40px | 300 | 44px | 0 | Sub-section displays. |
+| `{typography.display-sm}` | 32px | 700 | 40px | 0 | 纸牌标题, story-card 标题。 |
+| `{typography.display-xs}` | 24px | 700 | 24px | 0 | 内置显示微头. |
+| `{typography.eyebrow-uppercase}` | 16px | 800 | 24px | 0 | Uppercase eyebrow tags above section headlines. |
+| `{typography.body-lg}` | 22px | 400 | 24px | 0 | 领导机构段落。 |
+| `{typography.body-md}` | 18px | 400 | 28px | 0 | 默认段落正文. |
+| `{typography.body-md-strong}` | 18px | 600 | 28px | 0 | 粗体内内脏. |
+| `{typography.body-sm}` | 16px | 400 | 20px | 0 | 身次第身. 师曰. |
+| `{typography.body-sm-strong}` | 16px | 700 | 22px | 0 | 粗体短身. |
+| `{typography.caption}` | 14px | 400 | 16px | 0 | 说明,精细的打印。 |
+| `{typography.caption-strong}` | 14px | 700 | 21px | 0 | 粗体的字幕,徽章标签。 |
+| `{typography.caption-uppercase}` | 12px | 600 | 16px | 0.57px | Uppercase metadata, footer eyebrows. |
+| `{typography.button-md}` | 18px | 400 | 28px | 0 | 默认按钮标签 。 |
+
+### 原则
+- **Weight 800 + uppercase = hero voice.** This is the entire reason the brand reads as a billboard rather than a tech site.
+- **字重 300 ~ 更冷静的副声.** 使用时间 40 – 48 px 子播放; 永远不低于 24 px 保持清晰可见。
+- **整个家庭都是单身** 品牌从来不混 serif 或单体进入打印系统。一致性就是平静。
+- **追踪在显示大小上保持紧凑.** `-1px` 时 间 144 px 是一个品牌的校准; 恢复到中性跟踪, 软化了表层的外观。
+
+### 替代字体
+The Vodafone display sans is proprietary. Open-source substitutes:
+- **显示色素** — *Inter* 字重 800 以首屏比例 `letter-spacing: -1px` 是最接近的自由匹配。 *Geist* 字重 700–800 也是第二好成绩。
+- **较轻显示字重(300)** — *Inter* 字重 300 拥有 line-height 不错 48 px 显示大小。
+
+
+## 布局
+
+### 间距系统
+- **基地单位**: 4 px (多数为 4; 少数 5/7 px 以图标刻画补偿形式出现。
+- **脚本**: `{spacing.xxs}` 2 px · `{spacing.xs}` 4 px · `{spacing.sm}` 8 px · `{spacing.md}` 12 px · `{spacing.lg}` 16 px · `{spacing.xl}` 20 px · `{spacing.2xl}` 24 px · `{spacing.3xl}` 32 px.
+- **分区编栏**: 首屏乐队和内容乐队使用 `{spacing.3xl}` 32 px 沟槽;首屏内部的垂直间隔是流体(填充-带).
+- **纸牌内部贴纸**: 使用故事卡 `{spacing.lg}` 16 px 环绕图像 + 头条。
+- **内含空档**: 按钮行和芯片行 `{spacing.md}` 12 px 兄弟姐妹之间。
+
+### 网格与容器
+- 销售内容使用宽容器(实际上与 `{spacing.3xl}` 桌面上的沟槽,移动式的缩水).
+- Story-card grids: 2-up at desktop, 1-up at mobile.
+- 首屏摄影填满了观景台;头条在左上方覆盖.
+
+### 留白规则
+首屏的大规模显示头条拥有整个页面的顶部;下面的白空间宽大,让第二乐团呼吸. 内含卡片,头条和复制拥抱关闭(Control).`{spacing.sm}` 8 px 差距,然后是更大的差距(第1段)`{spacing.3xl}`)在下一张牌之前,脚步乐队是暗而稠密的.
+
+### 响应式布局
+
+#### 断点
+
+| 名称 | 宽度 | 密钥更改 |
+|---|---|---|
+| 手机 | < 600px | 首屏显示缩放到 ~64 px; story-card 网格投放到 1- 上; 导航崩溃到汉堡。 |
+| 平板 | 600–1023px | Story-card 网格 2-上; 显示标题 90 – 110 px. |
+| 桌面 | 1024–1399px | 完整显示头条 。 126 – 144 px; 2- 新闻网 |
+| 超全天范围 | ≥ 1400px | 集装箱盖,在 ~1400 px; 乐队在颜色上保持边缘对边缘。 |
+
+#### 触控区域
+The `button-primary` pill renders at ~52 px tall (12 px vertical padding + 28 px line-height). All buttons comfortably meet WCAG AAA at every breakpoint.
+
+#### 窄屏布局调整
+- **导航**: 桌面上的完整链接行。 移动时折叠到汉堡菜单; 菜单打开时为暗面, 链接列表堆叠相同 。
+- **首屏们**: 巨大的显示头条的缩放流畅。在移动时,摄影作物只收紧到数字的脸上。
+- **Story-card grid**: 2-up → 1-up at the breakpoint above.
+- **语音标记标志**: 保持一致的大小 relative 切换到周围内容; 绝不缩小到下面 ~48 px.
+
+#### 图片适配
+- **首屏摄影**: 满血 16:9 或 4:3 桌面上的肖像; 移动时收紧裁剪。
+- **Story-card 缩略图**: 16:9 内侧景观 `{rounded.card}` 6 px 界面框架。
+- **语音标记或**: 总是作为红色 SVG 引号图标渲染, 从未替换 。
+- **标记栏(如果在伙伴网页上出现)**: 一致高度的单色SVG.
+
+
+## 层次与深度
+
+| 职等 | 治疗 | 使用 |
+|---|---|---|
+| Level 0 — Flat | No shadow, no border. | Default for most cards and panels — surface contrast does the elevation work. |
+| 职等 1 —— 细边线 | 1 px 固态 `{colors.ink}` 边框。 | 表格输入, `divider-on-dark` 中间的页脚列。 |
+| 职等 2 黑暗的边界 | 1 px 固态 `{colors.on-dark}` 边框 `{colors.ink}` 表面, 显示 | 坐在黑暗首屏乐队上的按钮 |
+
+品牌不使用软滴影;深度来自极度-浮点之间 `{colors.ink}` 和 `{colors.canvas}` 乐队。
+
+### 装饰性深度
+- **编辑摄影**:首屏照片(真人肖像或环境镜头)是品牌唯一真正的大气效应.
+- **语音标记标志或可视主播**: 红色的ORB托管引号-标记图标,在否则夸大的内容节奏的中心作用下,充当一个单一的焦点,深度为焦点.
+
+
+## 形状
+
+### 圆角层级
+
+| 调试 | 数值 | 使用 |
+|---|---|---|
+| `{rounded.none}` | 0px | 满血首屏乐队,足坛,横幅条. |
+| `{rounded.xs}` | 1px | 内含度最高的指标(很少使用)。 |
+| `{rounded.sm}` | 6px | The brand's canonical content radius — applied to images and inputs. |
+| `{rounded.card}` | 6px | 硬币和图像框(别名 `sm`). |
+| `{rounded.pill-md}` | 32px | 徽/芯片药. |
+| `{rounded.pill-lg}` | 60px | The brand's signature CTA pill — every primary and secondary button. |
+| `{rounded.full}` | 9999px | Circular 图标容器(例如视频播放/暂停)。 |
+
+### 图片形状
+- 首屏肖像:边缘对边缘 16:9 或 4:3 并且没有内部框架。
+- Story-card 缩略图 : 16:9 内侧景观 `{rounded.card}` 界面框架。
+- 语音标记标识符 : `{rounded.sm}` 角(可视化为斜方形标记;SVG标记本身填充圆形).
+
+
+## 组件
+
+### 按钮
+
+**`button-primary`** ——红丸CTA,品牌主转制目标.
+- Background `{colors.primary}`, text `{colors.on-primary}`, 1 px solid `{colors.primary}` border, label set in `{typography.button-md}`, padding `{spacing.md} {spacing.2xl}`, shape `{rounded.pill-lg}` 60 px.
+
+**`button-outline-red`** ——次品丸,红文字上白,有红边.
+- Background `{colors.canvas}`, text `{colors.primary}`, 1 px solid `{colors.primary}` border, same label / padding / shape as `button-primary`.
+
+**`button-outline-dark`** ——第三药,墨文字白与墨边界.
+- Background `{colors.canvas}`, text `{colors.ink}`, 1 px solid `{colors.ink}` border, same label / padding / shape.
+
+**`button-icon-circular`** ——圆白图标按钮(视频播放/暂停/chevron).
+- Background `{colors.canvas}`, ink icon, 1 px solid `{colors.canvas}` outline (effectively borderless), shape `{rounded.full}`.
+
+### 卡片与容器
+
+**`card-content`** ——默认 story-card 界面框架。
+- Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.lg}`, shape `{rounded.card}` 6 px. Hosts a 16:9 thumbnail at the top + headline + caption.
+
+**`card-hero`** ——作为主演故事使用的略大一些的牌变体.
+- 与 `card-content` 标题缩放到 `{typography.display-sm}`.
+
+### 输入框与表单
+
+**`text-input`** ——文体文字输入.
+- Background `{colors.canvas}`, text `{colors.ink}`, 1 px solid `{colors.ink}` border, body in `{typography.body-sm}`, padding `{spacing.md} {spacing.lg}`, shape `{rounded.sm}` 6 px.
+
+### 导航
+
+**`nav-bar`** 黑暗的顶部导航, fixed 转到页顶。
+- Background `{colors.ink}`, text `{colors.on-dark}`, padding `{spacing.lg} {spacing.3xl}`. Layout: logo left, link row right with login / search affordances.
+
+**`nav-link`** ——内设的链接项目. `nav-bar`.
+- 文字颜色 `{colors.on-dark}`,设置在 `{typography.body-sm}`.
+
+**`footer`** 黑暗脚步乐队。
+- Background `{colors.ink}`, text `{colors.on-dark}`, padding `{spacing.3xl} {spacing.3xl}`. Body in `{typography.body-sm}`; column eyebrows in `{typography.caption-uppercase}`.
+
+### 标志性组件
+
+**`hero-band-dark`** ——暗海军/沉克首屏乐队主持大型展品头条.
+- Background `{colors.ink}` with full-bleed editorial photography overlay at reduced opacity; text `{colors.on-dark}`; padding `{spacing.3xl} {spacing.3xl}`. Headline in `{typography.display-hero}` (uppercase, weight 800).
+
+**`hero-band-red`** ——签字运动中所使用的罕见的全血红首屏.
+- Background `{colors.primary}`, text `{colors.on-primary}`, padding `{spacing.3xl} {spacing.3xl}`. Headline in `{typography.display-xl}`.
+
+**`content-band-light`** ——跟随每个首屏的白色内容乐队.
+- Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.3xl} {spacing.3xl}`. Section headline in `{typography.display-md}` or `{typography.display-lg}` (weight 300).
+
+**`speechmark-logo-orb`** — the red square hosting Vodafone's quotation-mark icon. The brand's visual anchor.
+- Background `{colors.primary}`, white icon glyph, shape `{rounded.sm}`. Acts as a focal element between content bands, often near the centre of long pages.
+
+**`badge-chip`** ——故事卡内用于分类标记的内置元数据胶囊形.
+- Background `{colors.canvas-soft}`, text `{colors.ink}`, label in `{typography.caption-strong}`, padding `{spacing.xs} {spacing.md}`, shape `{rounded.pill-md}` 32 px.
+
+**`divider-on-dark`** - 电话 1 px 暗面上各节/列之间使用的细边线.
+- 1 px 固态 `{colors.on-dark}` (经常在 25 % 构成部分一级的不透明问题)。
+
+### 组合示例
+
+> 以下组合场景由 `scripts/derive-examples-block.mjs` 生成。各 `ex-*` 条目复用品牌基础样式，供 `/preview-design` 和 `/generate-kit` 以统一风格呈现同一套 10 个示例。`TO_FILL` 提示有待核对的基础样式。
+
+**`ex-pricing-tier`**：默认套餐卡，沿用功能卡结构和品牌 canvas-soft 底色。
+- 属性 : `backgroundColor`, `textColor`, `borderColor`, `rounded`, `padding`
+
+**`ex-pricing-tier-featured`**：推荐套餐卡。浅色模式中用深底浅字，深色模式中用浅底深字。
+- 属性 : `backgroundColor`, `textColor`, `rounded`, `padding`
+
+**`ex-product-selector`**：面向 SaaS / B2B 场景的套餐权益摘要卡。
+- 属性 : `backgroundColor`, `rounded`, `padding`
+
+**`ex-cart-drawer`**：SaaS / B2B 订阅摘要，每个附加项单独列出。
+- 属性 : `backgroundColor`, `rounded`, `padding`, `item-divider`
+
+**`ex-app-shell-row`**：应用框架示例里的侧栏导航行，以品牌主色标识选中状态。
+- 属性 : `backgroundColor`, `activeIndicator`, `rounded`, `padding`
+
+**`ex-data-table-cell`**：数据表格中 th 与 td 的默认样式。表头采用大写等宽字，正文采用 body-sm。
+- 属性 : `headerBackground`, `headerTypography`, `bodyTypography`, `cellPadding`, `rowBorder`
+
+**`ex-auth-form-card`**：登录与注册卡，复用功能卡和 text-input。
+- 属性 : `backgroundColor`, `rounded`, `padding`
+
+**`ex-modal-card`**：对话框表面，沿用功能卡样式并加浮层投影。
+- 属性 : `backgroundColor`, `rounded`, `padding`
+
+**`ex-empty-state-card`**：空状态插图容器。
+- 属性 : `backgroundColor`, `rounded`, `padding`, `captionTypography`
+
+**`ex-toast`**：轻提示，沿用功能卡圆角并使用中等投影。
+- 属性 : `backgroundColor`, `rounded`, `padding`, `typography`
+
+
+
+## 设计建议与禁忌
+
+### 建议做法
+- 准备金 `{colors.primary}` Vodafone 红色用于初级CTA和 `speechmark-logo-orb`。每个转换目标都使用红胶囊形。
+- 设置首屏头条 `{typography.display-hero}` 字重 800 紧紧的上层楼 `-1px` 追踪,那副天线的表情是品牌声音
+- 使用 `{rounded.pill-lg}` 60 px 品牌从来不会在CTAs上使用方形角.
+- Cycle page surfaces in `{colors.ink}` dark hero → `{colors.canvas}` light content → `{colors.ink}` footer. Surface contrast is the depth cue.
+- 与大型显示头条覆盖的对等编辑肖像摄影——该组合是品牌的标志.
+- 以一致大小渲染语音标记标志 relative 以至周围内容——这是品牌在每个页面上的重力中心.
+
+### 应避免的做法
+- Don't introduce a second accent colour. The brand operates with red + ink + grayscale only.
+- Don't render headlines in sentence case at hero scale. Hero display IS uppercase weight 800.
+- 千万别把主CTA变成方形矩形 60 px 药是不可谈判的。
+- Don't drop a soft drop-shadow on cards. The brand relies on surface-colour contrast, not shadow.
+- Don't substitute the speechmark logo orb with a wordmark or a different shape. The orb is the iconic mark.
+- Don't pair the weight 800 display face with letter-spacing 0 at 144 px — the `-1px` tracking is part of the brand's calibration.
+
+## 设计词元原值
+
+An inspired interpretation of Vodafone's design language — a telecom super-brand whose web surface alternates between editorial photography hero bands with massive uppercase display headlines and clean white content bands, anchored by the company's signature scarlet red CTA and the proprietary Vodafone display sans set at impossibly heavy 800 weight.
+
+```yaml
+---
+version: alpha
+name: Vodafone-design-analysis
+description: An inspired interpretation of Vodafone's design language — a telecom super-brand whose web surface alternates between editorial photography hero bands with massive uppercase display headlines and clean white content bands, anchored by the company's signature scarlet red CTA and the proprietary Vodafone display sans set at impossibly heavy 800 weight.
+
+colors:
+  primary: "#e60000"
+  on-primary: "#ffffff"
+  ink: "#25282b"
+  body: "#7e7e7e"
+  mute: "#bebebe"
+  canvas: "#ffffff"
+  canvas-soft: "#f2f2f2"
+  on-dark: "#ffffff"
+
+typography:
+  display-hero:
+    fontFamily: Vodafone, Vodafone Rg, Helvetica Neue, Arial, sans-serif
+    fontSize: 144px
+    fontWeight: 800
+    lineHeight: 114px
+    letterSpacing: -1px
+  display-xxl:
+    fontFamily: Vodafone, Vodafone Rg, Helvetica Neue, Arial, sans-serif
+    fontSize: 126px
+    fontWeight: 800
+    lineHeight: 113px
+    letterSpacing: -1px
+  display-xl:
+    fontFamily: Vodafone, Vodafone Rg, Helvetica Neue, Arial, sans-serif
+    fontSize: 90px
+    fontWeight: 800
+    lineHeight: 84px
+  display-lg:
+    fontFamily: Vodafone, Vodafone Rg, Helvetica Neue, Arial, sans-serif
+    fontSize: 48px
+    fontWeight: 300
+    lineHeight: 52px
+  display-md:
+    fontFamily: Vodafone, Vodafone Rg, Helvetica Neue, Arial, sans-serif
+    fontSize: 40px
+    fontWeight: 300
+    lineHeight: 44px
+  display-sm:
+    fontFamily: Vodafone, Vodafone Rg, Helvetica Neue, Arial, sans-serif
+    fontSize: 32px
+    fontWeight: 700
+    lineHeight: 40px
+  display-xs:
+    fontFamily: Vodafone, Vodafone Rg, Helvetica Neue, Arial, sans-serif
+    fontSize: 24px
+    fontWeight: 700
+    lineHeight: 24px
+  eyebrow-uppercase:
+    fontFamily: Vodafone, Vodafone Rg, Helvetica Neue, Arial, sans-serif
+    fontSize: 16px
+    fontWeight: 800
+    lineHeight: 24px
+  body-lg:
+    fontFamily: Vodafone, Vodafone Rg, Helvetica Neue, Arial, sans-serif
+    fontSize: 22px
+    fontWeight: 400
+    lineHeight: 24px
+  body-md:
+    fontFamily: Vodafone, Vodafone Rg, Helvetica Neue, Arial, sans-serif
+    fontSize: 18px
+    fontWeight: 400
+    lineHeight: 28px
+  body-md-strong:
+    fontFamily: Vodafone, Vodafone Rg, Helvetica Neue, Arial, sans-serif
+    fontSize: 18px
+    fontWeight: 600
+    lineHeight: 28px
+  body-sm:
+    fontFamily: Vodafone, Vodafone Rg, Helvetica Neue, Arial, sans-serif
+    fontSize: 16px
+    fontWeight: 400
+    lineHeight: 20px
+  body-sm-strong:
+    fontFamily: Vodafone, Vodafone Rg, Helvetica Neue, Arial, sans-serif
+    fontSize: 16px
+    fontWeight: 700
+    lineHeight: 22px
+  caption:
+    fontFamily: Vodafone, Vodafone Rg, Helvetica Neue, Arial, sans-serif
+    fontSize: 14px
+    fontWeight: 400
+    lineHeight: 16px
+  caption-strong:
+    fontFamily: Vodafone, Vodafone Rg, Helvetica Neue, Arial, sans-serif
+    fontSize: 14px
+    fontWeight: 700
+    lineHeight: 21px
+  caption-uppercase:
+    fontFamily: Vodafone, Vodafone Rg, Helvetica Neue, Arial, sans-serif
+    fontSize: 12px
+    fontWeight: 600
+    lineHeight: 16px
+    letterSpacing: 0.5691px
+  button-md:
+    fontFamily: Vodafone, Vodafone Rg, Helvetica Neue, Arial, sans-serif
+    fontSize: 18px
+    fontWeight: 400
+    lineHeight: 28px
+
+rounded:
+  none: 0px
+  xs: 1px
+  sm: 6px
+  card: 6px
+  pill-md: 32px
+  pill-lg: 60px
+  full: 9999px
+
+spacing:
+  xxs: 2px
+  xs: 4px
+  sm: 8px
+  md: 12px
+  lg: 16px
+  xl: 20px
+  2xl: 24px
+  3xl: 32px
+
+components:
+  nav-bar:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.body-sm}"
+    padding: "{spacing.lg} {spacing.3xl}"
+  nav-link:
+    textColor: "{colors.on-dark}"
+    typography: "{typography.body-sm}"
+  button-primary:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.on-primary}"
+    borderColor: "{colors.primary}"
+    typography: "{typography.button-md}"
+    rounded: "{rounded.pill-lg}"
+    padding: "{spacing.md} {spacing.2xl}"
+  button-outline-red:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.primary}"
+    borderColor: "{colors.primary}"
+    typography: "{typography.button-md}"
+    rounded: "{rounded.pill-lg}"
+    padding: "{spacing.md} {spacing.2xl}"
+  button-outline-dark:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    borderColor: "{colors.ink}"
+    typography: "{typography.button-md}"
+    rounded: "{rounded.pill-lg}"
+    padding: "{spacing.md} {spacing.2xl}"
+  button-icon-circular:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    borderColor: "{colors.canvas}"
+    rounded: "{rounded.full}"
+  text-input:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    borderColor: "{colors.ink}"
+    typography: "{typography.body-sm}"
+    rounded: "{rounded.sm}"
+    padding: "{spacing.md} {spacing.lg}"
+  badge-chip:
+    backgroundColor: "{colors.canvas-soft}"
+    textColor: "{colors.ink}"
+    typography: "{typography.caption-strong}"
+    rounded: "{rounded.pill-md}"
+    padding: "{spacing.xs} {spacing.md}"
+  card-content:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.card}"
+    padding: "{spacing.lg}"
+  card-hero:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    typography: "{typography.display-sm}"
+    rounded: "{rounded.card}"
+    padding: "{spacing.lg}"
+  hero-band-dark:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.display-hero}"
+    padding: "{spacing.3xl} {spacing.3xl}"
+  hero-band-red:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.on-primary}"
+    typography: "{typography.display-xl}"
+    padding: "{spacing.3xl} {spacing.3xl}"
+  content-band-light:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    typography: "{typography.display-md}"
+    padding: "{spacing.3xl} {spacing.3xl}"
+  speechmark-logo-orb:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.on-primary}"
+    rounded: "{rounded.sm}"
+  divider-on-dark:
+    borderColor: "{colors.on-dark}"
+  footer:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.body-sm}"
+    padding: "{spacing.3xl} {spacing.3xl}"
+
+  # ─── Examples (illustrative) — auto-derived; resolve any TO_FILL markers below ───
+  ex-pricing-tier:
+    description: "Default tier card. Mirrors card-content chrome with canvas-soft surface and a hairline border."
+    backgroundColor: "{colors.canvas-soft}"
+    textColor: "{colors.ink}"
+    borderColor: "{colors.mute}"
+    rounded: "{rounded.card}"
+    padding: "{spacing.lg}"
+  ex-pricing-tier-featured:
+    description: "Featured tier — polarity-flipped to ink with white text and white pill CTA inside."
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.on-primary}"
+    rounded: "{rounded.card}"
+    padding: "{spacing.lg}"
+  ex-product-selector:
+    description: "Tariff-tier picker — repurposed as the brand's plan selector with badge-chip chips inside the frame."
+    backgroundColor: "{colors.canvas-soft}"
+    rounded: "{rounded.card}"
+    padding: "{spacing.lg}"
+  ex-cart-drawer:
+    description: "Subscription summary — line items per tariff add-on, light hairline dividers."
+    backgroundColor: "{colors.canvas}"
+    rounded: "{rounded.card}"
+    padding: "{spacing.lg}"
+    item-divider: "{colors.mute}"
+  ex-app-shell-row:
+    description: "Sidebar nav row. Active state uses brand primary as a left-edge indicator bar."
+    backgroundColor: "{colors.canvas}"
+    activeIndicator: "{colors.primary}"
+    rounded: "{rounded.sm}"
+    padding: "{spacing.md} {spacing.lg}"
+  ex-data-table-cell:
+    description: "Default data-table cell chrome. Header uses caption-uppercase mono-style eyebrow; body uses body-sm."
+    headerBackground: "{colors.canvas-soft}"
+    headerTypography: "{typography.caption-uppercase}"
+    bodyTypography: "{typography.body-sm}"
+    cellPadding: "{spacing.md} {spacing.lg}"
+    rowBorder: "{colors.mute}"
+  ex-auth-form-card:
+    description: "Sign-in / sign-up card. Mirrors card-content chrome with text-input primitives inside."
+    backgroundColor: "{colors.canvas-soft}"
+    rounded: "{rounded.card}"
+    padding: "{spacing.lg}"
+  ex-modal-card:
+    description: "Modal dialog surface — same chrome as card-content; brand uses scrim, not card shadow."
+    backgroundColor: "{colors.canvas}"
+    rounded: "{rounded.card}"
+    padding: "{spacing.lg}"
+  ex-empty-state-card:
+    description: "Empty-state illustration frame on canvas-soft with generous interior padding."
+    backgroundColor: "{colors.canvas-soft}"
+    rounded: "{rounded.card}"
+    padding: "{spacing.3xl}"
+    captionTypography: "{typography.body-md}"
+  ex-toast:
+    description: "Toast notification surface — card-content shape with caption-strong body."
+    backgroundColor: "{colors.canvas}"
+    rounded: "{rounded.sm}"
+    padding: "{spacing.md} {spacing.lg}"
+    typography: "{typography.body-sm}"
+
+---
+```

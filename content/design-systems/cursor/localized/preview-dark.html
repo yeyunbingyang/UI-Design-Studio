@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>暖白橙色开发者风</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--primary:#f54e00;--primary-active:#d04200;--ink:#ffffff;--body:rgba(255,255,255,0.85);--body-strong:#ffffff;--muted:rgba(255,255,255,0.6);--muted-soft:rgba(255,255,255,0.4);--hairline:rgba(255,255,255,0.12);--hairline-soft:rgba(255,255,255,0.06);--hairline-strong:rgba(255,255,255,0.22);--canvas:#0c0c0e;--canvas-soft:#161618;--surface-card:#161618;--surface-strong:#1d1d20;--on-primary:#fff;--timeline-thinking:#dfa88f;--timeline-grep:#9fc9a2;--timeline-read:#9fbbe0;--timeline-edit:#c0a8dd;--timeline-done:#c08532;--semantic-error:#cf2d56;--semantic-success:#1f8a65;--display:'Inter','CursorGothic',system-ui,sans-serif;--text:'Inter','CursorGothic',sans-serif;--mono:'JetBrains Mono',monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--canvas);color:var(--ink);font-family:var(--text);font-size:16px;line-height:1.5}
+.nav{position:sticky;top:0;z-index:100;background:var(--canvas);border-bottom:1px solid var(--hairline);padding: 0 48px;height:64px}
+.nav-links{list-style:none;display:flex;gap:24px;align-items:center}
+.nav-links a{color:var(--ink);text-decoration:none;font-size:14px;font-weight:500}
+.nav-cta{background:var(--ink);color:var(--canvas);border:none;padding:12px 20px;font-weight:500;font-size:14px;cursor:pointer;font-family:inherit;border-radius:8px;height:44px}
+.hero{padding:80px 48px;background:var(--canvas);display:block;align-items:center;max-width:1440px;margin:0 auto}
+.hero-content{max-width:1200px;position:relative;z-index:1}
+.hero h1{font-family:var(--display);font-size:64px;font-weight:400;line-height:1.2;color:var(--ink);margin:0 0 40px;letter-spacing:-2.16px;text-align:left}
+.hero p{font-size:18px;color:var(--body);max-width:900px;margin:0 0 40px;text-align:left}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-start}
+.btn-hero-primary{background:var(--ink);color:var(--canvas);border:none;padding:12px 24px;height:48px;font-weight:500;font-size:14px;cursor:pointer;font-family:inherit;border-radius:8px}
+.btn-hero-secondary{background:var(--surface-card);color:var(--ink);border:1px solid var(--hairline-strong);padding:11px 23px;height:48px;font-weight:500;font-size:14px;cursor:pointer;font-family:inherit;border-radius:8px}
+.hero-art{aspect-ratio:1;background:var(--surface-card);border-radius:12px;border:1px solid var(--hairline);padding:0;overflow:hidden;display:grid;grid-template-rows:auto 1fr}
+.ide-titlebar{padding:8px 12px;border-bottom:1px solid var(--hairline);display:flex;gap:6px;align-items:center;background:var(--canvas-soft)}
+.ide-titlebar .dot{width:10px;height:10px;border-radius:9999px;background:var(--hairline-strong)}
+.ide-titlebar .label{margin-left:12px;font-family:var(--mono);font-size:11px;color:var(--muted)}
+.ide-body{display:grid;grid-template-columns:120px 1fr;gap:0;height:100%}
+.ide-sidebar{background:var(--canvas-soft);border-right:1px solid var(--hairline);padding:12px;font-family:var(--mono);font-size:11px;color:var(--body)}
+.ide-sidebar .file{display:block;line-height:1.8;color:var(--body)}
+.ide-sidebar .file.active{color:var(--ink);font-weight:500}
+.ide-main{padding:14px;font-family:var(--mono);font-size:11px;color:var(--body);background:var(--surface-card)}
+.ide-main .ln{display:block;line-height:1.8}
+.ide-main .k{color:var(--primary)}
+.ide-main .s{color:var(--semantic-success)}
+.ide-main .c{color:var(--muted)}
+.ide-main .h{background:rgba(245,78,0,0.08);margin:0 -14px;padding:0 14px}
+section{max-width:1440px;margin:0 auto;padding:80px 48px;border-top:1px solid var(--hairline)}
+.section-label{font-size:11px;text-transform:uppercase;letter-spacing:0.88px;color:var(--muted);font-weight:600;margin-bottom:12px}
+.section-heading{font-family:var(--display);font-size:36px;font-weight:400;color:var(--ink);margin-bottom:16px;line-height:1.2;letter-spacing:-0.72px}
+.section-intro{font-size:16px;color:var(--body);max-width:720px;margin-bottom:48px;line-height:1.5}
+.palette-group{margin-bottom:48px}
+.palette-group h3{font-size:11px;font-weight:600;color:var(--ink);margin-bottom:16px;text-transform:uppercase;letter-spacing:0.88px}
+.palette-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.swatch{border:1px solid var(--hairline);background:var(--surface-card);border-radius:12px;overflow:hidden}
+.swatch-color{height:90px}
+.swatch-meta{padding:12px 14px}
+.swatch-name{font-weight:600;font-size:13px;color:var(--ink);margin-bottom:4px}
+.swatch-hex{font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:6px}
+.swatch-role{font-size:13px;color:var(--body);line-height:1.5}
+.type-row{display:grid;grid-template-columns:320px 1fr;gap:32px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--hairline-soft)}
+.type-row:last-child{border-bottom:none}
+.type-meta{font-size:12px;color:var(--muted);line-height:1.5}
+.type-meta strong{display:block;color:var(--ink);font-weight:600;font-size:12px;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.5px}
+.type-sample{color:var(--ink)}
+.button-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.button-cell{border:1px solid var(--hairline);padding:28px;background:var(--surface-card);border-radius:12px;min-width:0}
+.button-label{font-size:11px;color:var(--ink);font-weight:600;margin-bottom:14px;text-transform:uppercase;letter-spacing:0.5px}
+.button-meta{font-size:12px;color:var(--muted);margin-top:14px;line-height:1.5}
+.btn{display:inline-block;padding:10px 18px;height:40px;font-size:14px;font-weight:500;border:none;cursor:pointer;font-family:inherit;line-height:1;border-radius:8px}
+.btn-primary{background:var(--primary);color:var(--on-primary)}
+.btn-primary-active{background:var(--primary-active);color:var(--on-primary)}
+.btn-secondary{background:var(--surface-card);color:var(--ink);border:1px solid var(--hairline-strong);padding:9px 17px}
+.btn-tertiary-text{background:transparent;color:var(--ink);padding:0;height:auto}
+.btn-download{background:var(--ink);color:var(--canvas);padding:12px 20px;height:44px}
+.timeline-pill{display:inline-flex;align-items:center;border-radius:9999px;padding:4px 10px;font-size:11px;font-weight:600;letter-spacing:0.88px;text-transform:uppercase;color:var(--ink)}
+.timeline-pill.thinking{background:var(--timeline-thinking)}
+.timeline-pill.grep{background:var(--timeline-grep)}
+.timeline-pill.read{background:var(--timeline-read)}
+.timeline-pill.edit{background:var(--timeline-edit)}
+.timeline-pill.done{background:var(--timeline-done);color:#fff}
+.timeline-row{display:flex;flex-direction:column;gap:8px;padding:24px;background:var(--surface-card);border:1px solid var(--hairline);border-radius:12px;font-family:var(--mono);font-size:13px;color:var(--body)}
+.timeline-row .step{display:flex;gap:12px;align-items:center}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.card-grid>*{min-width:0}
+.feature-card{background:var(--surface-card);border:1px solid var(--hairline);border-radius:12px;padding:24px}
+.feature-card h4{font-size:18px;font-weight:600;color:var(--ink);margin-bottom:8px}
+.feature-card p{font-size:14px;color:var(--body);line-height:1.5;margin-bottom:16px}
+.code-block{background:var(--surface-card);border:1px solid var(--hairline);border-radius:12px;padding:20px;font-family:var(--mono);font-size:13px;color:var(--ink);line-height:1.5}
+.code-block .k{color:var(--primary)}
+.code-block .s{color:var(--semantic-success)}
+.code-block .c{color:var(--muted)}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pricing-tier-card{background:var(--surface-card);border:1px solid var(--hairline);border-radius:12px;padding:32px}
+.pricing-tier-card.featured{background:var(--ink);color:var(--canvas);border-color:var(--ink)}
+.pricing-tier-card h4{font-size:18px;font-weight:600;color:var(--ink);margin-bottom:8px}
+.pricing-tier-card.featured h4{color:var(--canvas)}
+.pricing-tier-card .price{font-family:var(--display);font-size:36px;font-weight:400;line-height:1.2;letter-spacing:-0.72px;margin-bottom:16px;color:var(--ink)}
+.pricing-tier-card.featured .price{color:var(--canvas)}
+.pricing-tier-card ul{list-style:none;margin-bottom:24px;padding:0}
+.pricing-tier-card ul li{padding:6px 0;font-size:14px;color:var(--body)}
+.pricing-tier-card.featured ul li{color:var(--muted-soft)}
+.form-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.form-cell{min-width:0}
+.form-label{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;display:block}
+.text-input{width:100%;background:var(--surface-card);color:var(--ink);border:1px solid var(--hairline-strong);padding:12px 16px;height:44px;font-size:16px;font-family:inherit;border-radius:8px;outline:none}
+.text-input.focused{border:2px solid var(--ink);padding:11px 15px}
+.badge-pill{display:inline-block;background:var(--surface-strong);color:var(--ink);border-radius:9999px;padding:4px 10px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.88px}
+.spacing-row{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.spacing-block{display:flex;flex-direction:column;align-items:center;gap:8px}
+.spacing-bar{background:var(--ink);height:28px}
+.spacing-label{font-size:11px;color:var(--muted);font-family:var(--mono)}
+.radius-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.radius-block{width:96px;height:96px;background:var(--surface-card);border:1px solid var(--hairline);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--ink);font-weight:600;font-family:var(--mono)}
+.elevation-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:24px}
+.elevation-card{padding:24px;font-size:13px;color:var(--body);border:1px solid var(--hairline);background:var(--surface-card);border-radius:12px}
+.elevation-card h5{font-weight:600;color:var(--ink);margin-bottom:8px;font-size:13px}
+.responsive-table{width:100%;border-collapse:collapse;margin-bottom:32px;font-size:14px}
+.responsive-table th,.responsive-table td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--hairline)}
+.responsive-table th{font-weight:600;color:var(--ink);font-size:12px;text-transform:uppercase;letter-spacing:0.96px}
+.responsive-table td{color:var(--body)}
+.device-ladder{display:flex;align-items:flex-end;gap:16px;margin-bottom:32px;flex-wrap:wrap}
+.device-bar{background:var(--surface-card);border:1px solid var(--hairline);color:var(--muted);text-align:center;padding:8px;font-size:11px;font-family:var(--mono);border-radius:8px}
+.responsive-sub{margin-top:32px}
+.responsive-sub h4{font-size:18px;font-weight:600;color:var(--ink);margin-bottom:12px}
+.responsive-sub ul{padding-left:20px;color:var(--body);font-size:14px;line-height:1.5}
+.footer{background:var(--canvas);color:var(--body);padding:32px 48px;font-size:13px;text-align:center;border-top:1px solid var(--hairline)}
+.footer a{color:var(--ink)}
+.cell,.cell>*,.demo,.button-cell,.component-cell{min-width:0}
+.cell.wide,.button-cell.wide,.component-cell.wide{grid-column:span 2}
+@media (max-width:1024px){section{padding:64px 32px}.section-heading{font-size:28px}.nav>:last-child{display:none}.hero{grid-template-columns:1fr;gap:32px;padding:64px 32px}.hero h1{font-size:48px;letter-spacing:-1.5px}.hero-art,.hero-art-photo{display:none}.type-row{grid-template-columns:1fr;gap:8px}.pricing-grid{grid-template-columns:1fr}}
+@media (max-width:720px){.cell.wide,.button-cell.wide,.component-cell.wide{grid-column:span 1}.nav{padding: 0 48px;height:auto;min-height:56px}.nav-links{display:none}.hero{padding:48px 20px}.hero h1{font-size:32px;letter-spacing:-1px}.hero p{font-size:16px}section{padding:48px 20px}.section-heading{font-size:24px}.palette-grid,.button-grid,.card-grid,.form-grid,.elevation-grid{grid-template-columns:1fr!important;gap:16px}.spacing-row,.radius-row{gap:12px}.responsive-table{font-size:12px}.responsive-table th,.responsive-table td{padding:10px 8px}.device-ladder{gap:8px}.footer{padding:24px 16px;font-size:12px}}
+.nav-left{display:flex;align-items:center;gap:20px}
+.nav-brand-link,.nav-brand-link:link,.nav-brand-link:visited,.nav-brand-link:hover,.nav-brand-link:active{text-decoration:none;color:inherit}
+.nav-brand{font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)}
+.nav-github,.nav-github:link,.nav-github:visited,.nav-github:hover,.nav-github:active{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:inherit;text-decoration:none;padding:5px 10px;border:1px solid rgba(128,128,128,0.3);border-radius:6px;opacity:0.75;transition:opacity 200ms ease,border-color 200ms ease;font-family:inherit;line-height:1;white-space:nowrap}
+.nav-github:hover{opacity:1;border-color:rgba(128,128,128,0.55)}
+.nav-github svg{display:block;flex-shrink:0}
+.nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+.nav>.nav-left{justify-self:start}
+.nav>.nav-links{justify-self:center}
+.nav>:last-child{justify-self:end}
+
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style></head>
+<body data-platform-type="开发工具">
+
+<div class="hero">
+<div class="hero-content">
+<h1>暖白橙色开发者风</h1>
+<p>这套以 AI 为核心的代码编辑器采用编辑式的开发者工具界面。暖米白是页面底色，Cursor Orange 是唯一强调色，CursorGothic 使用 400 字重，整体接近克制的杂志排版。</p>
+<div class="hero-actions">
+<button class="btn-hero-primary">下载到 macOS</button>
+<button class="btn-hero-secondary">所有下载</button>
+</div>
+</div>
+</div>
+<section id="colors">
+<div class="section-label">01 · 配色</div>
+<h2 class="section-heading">米白色 页面底色 温暖的文字色 Cursor 橙色</h2>
+<p class="section-intro">温暖的奶油页地板 带有温暖的近黑文字色 单品牌辨识度(Cursor Orange)在CTA上. 五个时间段的贴贴标记了AI-动作阶段——只标注到产品内视觉.</p>
+<div class="palette-group"><h3>品牌色</h3><div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#f54e00"></div><div class="swatch-meta"><div class="swatch-name">primary (Cursor Orange)</div><div class="swatch-hex">#f54e00</div><div class="swatch-role">所有初级CTA和品牌的字号.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#d04200"></div><div class="swatch-meta"><div class="swatch-name">primary-active</div><div class="swatch-hex">#d04200</div><div class="swatch-role">新闻报.</div></div></div>
+</div></div>
+<div class="palette-group"><h3>界面表面</h3><div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#f7f7f4"></div><div class="swatch-meta"><div class="swatch-name">canvas</div><div class="swatch-hex">#f7f7f4</div><div class="swatch-role">暖米白的页面层.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#fafaf7"></div><div class="swatch-meta"><div class="swatch-name">canvas-soft</div><div class="swatch-hex">#fafaf7</div><div class="swatch-role">IDE 面板背景。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#fff;border-bottom:1px solid #e6e5e0"></div><div class="swatch-meta"><div class="swatch-name">surface-card</div><div class="swatch-hex">#ffffff</div><div class="swatch-role">纯白色 卡片底色 中超联赛冠军.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#e6e5e0"></div><div class="swatch-meta"><div class="swatch-name">surface-strong</div><div class="swatch-hex">#e6e5e0</div><div class="swatch-role">徽章,标记胶囊控件.</div></div></div>
+</div></div>
+<div class="palette-group"><h3>文本和细边线</h3><div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#26251e"></div><div class="swatch-meta"><div class="swatch-name">ink</div><div class="swatch-hex">#26251e</div><div class="swatch-role">显示,身体强调。 温暖的近黑色.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#5a5852"></div><div class="swatch-meta"><div class="swatch-name">body</div><div class="swatch-hex">#5a5852</div><div class="swatch-role">默认的运行文本。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#807d72"></div><div class="swatch-meta"><div class="swatch-name">muted</div><div class="swatch-hex">#807d72</div><div class="swatch-role">副标题.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#a09c92"></div><div class="swatch-meta"><div class="swatch-name">muted-soft</div><div class="swatch-hex">#a09c92</div><div class="swatch-role">已禁用文本。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#e6e5e0"></div><div class="swatch-meta"><div class="swatch-name">hairline</div><div class="swatch-hex">#e6e5e0</div><div class="swatch-role">1px分机. 星洲网.（原文参数：1px）</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#cfcdc4"></div><div class="swatch-meta"><div class="swatch-name">hairline-strong</div><div class="swatch-hex">#cfcdc4</div><div class="swatch-role">加深面板边框。</div></div></div>
+</div></div>
+<div class="palette-group"><h3>AI 时间线(签名)</h3><div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#dfa88f"></div><div class="swatch-meta"><div class="swatch-name">timeline-thinking</div><div class="swatch-hex">#dfa88f</div><div class="swatch-role">桃子,"思"戏.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#9fc9a2"></div><div class="swatch-meta"><div class="swatch-name">timeline-grep</div><div class="swatch-hex">#9fc9a2</div><div class="swatch-role">薄荷 "Greping"舞台剧.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#9fbbe0"></div><div class="swatch-meta"><div class="swatch-name">timeline-read</div><div class="swatch-hex">#9fbbe0</div><div class="swatch-role">粉丝蓝色,"读书"舞台</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#c0a8dd"></div><div class="swatch-meta"><div class="swatch-name">timeline-edit</div><div class="swatch-hex">#c0a8dd</div><div class="swatch-role">薰衣草紫. "编辑"舞台剧.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#c08532"></div><div class="swatch-meta"><div class="swatch-name">timeline-done</div><div class="swatch-hex">#c08532</div><div class="swatch-role">暖金色,"DOE"舞台剧.</div></div></div>
+</div></div>
+<div class="palette-group"><h3>语义色</h3><div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#1f8a65"></div><div class="swatch-meta"><div class="swatch-name">success</div><div class="swatch-hex">#1f8a65</div><div class="swatch-role">证实</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#cf2d56"></div><div class="swatch-meta"><div class="swatch-name">error</div><div class="swatch-hex">#cf2d56</div><div class="swatch-role">校验错误。</div></div></div>
+</div></div>
+</section>
+<section id="typography">
+<div class="section-label">02 · 字体排版</div>
+<h2 class="section-heading">CursorGothic 400 + JetBrains Mono</h2>
+<p class="section-intro">Display weight stays at 400 — magazine voice, never bold. Mono on every code surface.</p>
+<div class="type-row"><div class="type-meta"><strong>display-mega</strong>72px / 400 / 1.1 / -2.16px</div><div class="type-sample" style="font-family:var(--display);font-size:64px;font-weight:400;letter-spacing:-2.16px">让你变得特别有生产力</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-lg</strong>36px / 400 / 1.2 / -0.72px</div><div class="type-sample" style="font-family:var(--display);font-size:36px;font-weight:400;letter-spacing:-0.72px">节目标题</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-md</strong>26px / 400 / 1.25 / -0.325px</div><div class="type-sample" style="font-family:var(--display);font-size:26px;font-weight:400;letter-spacing:-0.325px">分节标题</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-sm</strong>22px / 400 / 1.3 / -0.11px</div><div class="type-sample" style="font-family:var(--display);font-size:22px;font-weight:400;letter-spacing:-0.11px">卡片 组标题</div></div>
+<div class="type-row"><div class="type-meta"><strong>title-md</strong>18px / 600 / 1.4</div><div class="type-sample" style="font-size:18px;font-weight:600">构成部分标题</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-md</strong>16px / 400 / 1.5</div><div class="type-sample" style="font-size:16px">暖米白页面底色上带有温暖的文字色上的默认机身. 读社论.</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-sm</strong>14px / 400 / 1.5</div><div class="type-sample" style="font-size:14px">脚足体.</div></div>
+<div class="type-row"><div class="type-meta"><strong>caption-uppercase</strong>11px / 600 / 1.4 / 0.88px</div><div class="type-sample" style="font-size:11px;font-weight:600;letter-spacing:0.88px;text-transform:uppercase">区域标签</div></div>
+<div class="type-row"><div class="type-meta"><strong>code</strong>13px / 400 / 1.5 (JetBrains Mono)</div><div class="type-sample" style="font-family:var(--mono);font-size:13px">等待代理. run( {任务: 'analysis' })</div></div>
+<div class="type-row"><div class="type-meta"><strong>button</strong>14px / 500 / 1.0</div><div class="type-sample" style="font-size:14px;font-weight:500">下载到 macOS</div></div>
+<div class="type-row"><div class="type-meta"><strong>nav-link</strong>14px / 500 / 1.4</div><div class="type-sample" style="font-size:14px;font-weight:500">定价 特色 企业 博客</div></div>
+</section>
+<section id="components">
+<div class="section-label">03 · 按钮</div>
+<h2 class="section-heading">8px半径——开发者方言（原文参数：8px）</h2>
+<p class="section-intro">紧凑CTAs. Cursor橙用于主品牌动作;墨卡用于主下载行动按钮;白卡用于副品牌.</p>
+<div class="button-grid">
+<div class="button-cell"><div class="button-label">button-primary</div><button class="btn btn-primary">开始使用</button><div class="button-meta">Cursor 橙色/ 8px/ 40px 紫色</div></div>
+<div class="button-cell"><div class="button-label">button-primary-active</div><button class="btn btn-primary-active">按下</button><div class="button-meta">深报州.</div></div>
+<div class="button-cell"><div class="button-label">button-secondary</div><button class="btn btn-secondary">了解更多</button><div class="button-meta">白牌+ 双倍 1px 细边线.</div></div>
+<div class="button-cell"><div class="button-label">button-tertiary-text</div><button class="btn btn-tertiary-text">文档 →</button><div class="button-meta">内置文字色文本.</div></div>
+<div class="button-cell"><div class="button-label">button-download</div><button class="btn btn-download">下载到 macOS</button><div class="button-meta">文字色填充/米白色文本/44px高度.（原文参数：44px）</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">04 — AI 时间线(签名)</div>
+<h2 class="section-heading">5个贴面胶囊控件标记剂级</h2>
+<p class="section-intro">该品牌的特色产品-UI签名:pastel 胶囊控件标签AI-动作阶段在产品内代理时间段内. 范围只限时间——绝不是系统动作颜色.</p>
+<div class="timeline-row">
+<div class="step"><span class="timeline-pill thinking">思考中 爱思索</span><span style="color:var(--muted);font-family:var(--mono);font-size:12px">分析仓库结构...</span></div>
+<div class="step"><span class="timeline-pill grep">格瑞普语Name</span><span style="color:var(--muted);font-family:var(--mono);font-size:12px">搜索 142 文件以获取处理器签名</span></div>
+<div class="step"><span class="timeline-pill read">读取</span><span style="color:var(--muted);font-family:var(--mono);font-size:12px">opened src/api/router.ts (98 lines)</span></div>
+<div class="step"><span class="timeline-pill edit">编辑</span><span style="color:var(--muted);font-family:var(--mono);font-size:12px">3 更改为 runder.ts</span></div>
+<div class="step"><span class="timeline-pill done">完成( E)</span><span style="color:var(--muted);font-family:var(--mono);font-size:12px">· 准备进行</span></div>
+</div>
+</section>
+<section>
+<div class="section-label">05 · 卡片</div>
+<h2 class="section-heading">仅限细边线深度</h2>
+<div class="card-grid">
+<div class="feature-card"><h4>标签自动完成</h4><p>多曲线建议贯穿整个文件——TAB接受.</p><button class="btn btn-tertiary-text">学习更多→</button></div>
+<div class="feature-card"><h4>密码库意识</h4><p>问关于你整个密码库的问题 得到引用的答案。</p><button class="btn btn-tertiary-text">学习更多→</button></div>
+<div class="feature-card"><h4>带好自己的钥匙</h4><p>使用自己的 API 键来获取 OpenAI, Anthropic, 或 Azure。</p><button class="btn btn-tertiary-text">学习更多→</button></div>
+</div>
+</section>
+<section>
+<div class="section-label">06 代码块</div>
+<h2 class="section-heading">JetBrains Mono 白纸黑纸</h2>
+<div class="code-block"><span class="c">// 快速启动</span><br/><span class="k">导入</span> { Cursor } <span class="k">从</span> <span class="s">'cursor'</span><br/><br/><span class="k">康斯特( Const)</span> 代理 = 代理 <span class="k">新建( N)</span> Cursor()<br/><span class="k">等待着</span> 代理. run( { 任务 : <span class="s">元件路由器 ts</span> })</div>
+</section>
+<section>
+<div class="section-label">07 · 套餐定价</div>
+<h2 class="section-heading">文字色 的特异性级反转</h2>
+<p class="section-intro">视觉反演信号"高亮的选择"没有彩色的丝带.</p>
+<div class="pricing-grid">
+<div class="pricing-tier-card"><h4>霍比,你来干什么?</h4><div class="price">$0</div><ul><li>免费审判</li><li>2,000 完成情况</li><li>50 慢请求</li></ul><button class="btn btn-secondary" style="width:100%">开始使用</button></div>
+<div class="pricing-tier-card featured"><h4>专业版</h4><div class="price">$20<span style="font-size:18px;color:var(--muted-soft)">/模数</span></div><ul><li>无限制的完成</li><li>500 快速请求</li><li>无限制的慢</li></ul><button class="btn btn-primary" style="width:100%">选择计划</button></div>
+<div class="pricing-tier-card"><h4>商业版</h4><div class="price">$40</div><ul><li>普罗的每件事物</li><li>隐私模式</li><li>集中计费</li></ul><button class="btn btn-secondary" style="width:100%">联系销售</button></div>
+</div>
+</section>
+<section>
+<div class="section-label">08 · 表单</div>
+<h2 class="section-heading">投入</h2>
+<div class="form-grid">
+<div class="form-cell"><label class="form-label">电子邮箱</label><input class="text-input" placeholder="you@example.com" type="email"/></div>
+<div class="form-cell"><label class="form-label">工作空间</label><input class="text-input focused" type="text" value="Acme Inc"/></div>
+<div class="form-cell"><label class="form-label">许可证密钥</label><input class="text-input" placeholder="光标QQ" type="text"/></div>
+</div>
+</section>
+<section>
+<div class="section-label">09 · 徽标</div>
+<p class="section-intro">小大写胶囊控件.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap"><span class="badge-pill">新设</span><span class="badge-pill">贝塔</span><span class="badge-pill">专业版</span><span class="badge-pill">企业版</span></div>
+</section>
+<section>
+<div class="section-label">10 · 间距层级</div>
+<p class="section-intro">4px基础,80px节奏.（原文参数：4px、80px）</p>
+<div class="spacing-row">
+<div class="spacing-block"><div class="spacing-bar" style="width:4px"></div><div class="spacing-label">xxx 4 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:8px"></div><div class="spacing-label">xs 8 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:12px"></div><div class="spacing-label">sm 12 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:16px"></div><div class="spacing-label">16 基准</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:20px"></div><div class="spacing-label">md 20 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:24px"></div><div class="spacing-label">24 高压压压轴</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:32px"></div><div class="spacing-label">□ 32</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:48px"></div><div class="spacing-label">xxl 48 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:80px"></div><div class="spacing-label">80 · 章节</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">11 · 圆角</div>
+<p class="section-intro">压缩开发者-人机辐射. 胶囊形只用于时间标注和徽章.</p>
+<div class="radius-row">
+<div class="radius-block" style="border-radius:0">0 − 无</div>
+<div class="radius-block" style="border-radius:4px">4 − xs 组合键</div>
+<div class="radius-block" style="border-radius:6px">6 零点</div>
+<div class="radius-block" style="border-radius:8px">8 数据</div>
+<div class="radius-block" style="border-radius:12px">12 − lg</div>
+<div class="radius-block" style="border-radius:16px">16 − xl 数据</div>
+<div class="radius-block" style="border-radius:9999px">胶囊形</div>
+</div>
+</section>
+<section>
+<div class="section-label">12 · 层次与深度</div>
+<p class="section-intro">唯细边线深. 无落影. 白色的相色相色 带有层层。</p>
+<div class="elevation-grid">
+<div class="elevation-card"><h5>平面 / 页面底色</h5><p>身体带,脚步.</p></div>
+<div class="elevation-card" style="background:#fafaf7"><h5>IDE 窗格</h5><p>内置IDE模拟卡片.</p></div>
+<div class="elevation-card"><h5>卡片</h5><p>米白色上的白色卡片——1px 细边框.</p></div>
+<div class="elevation-card" style="background:#26251e;color:#f7f7f4"><h5 style="color:#f7f7f4">倒数卡片</h5><p style="color:rgba(247,247,244,0.7)">特色套餐层级.</p></div>
+</div>
+</section>
+<section id="responsive">
+<div class="section-label">13 · 响应式布局</div>
+<table class="responsive-table">
+<thead><tr><th>名称</th><th>宽度</th><th>布局变化</th></tr></thead>
+<tbody>
+<tr><td>手机端</td><td>&lt; 640px</td><td>首屏h( 首屏h)1 72→32px; IDE 模拟 → 单面板; 特性网格 1 列; 航海汉堡。</td></tr>
+<tr><td>平板</td><td>640–1024px</td><td>首屏h1 56px; 特征网格 2-up.</td></tr>
+<tr><td>桌面端</td><td>1024–1280px</td><td>全首屏h1 72px;全IDE模拟;特征网格3-up.</td></tr>
+<tr><td>宽</td><td>&gt; 1280px 单倍径</td><td>1200px中的内容上限.（原文参数：1200px）</td></tr>
+</tbody>
+</table>
+<div class="device-ladder">
+<div class="device-bar" style="width:60px;height:120px">375<br/>手机端</div>
+<div class="device-bar" style="width:90px;height:140px">640<br/>小型</div>
+<div class="device-bar" style="width:140px;height:160px">768<br/>平板电脑</div>
+<div class="device-bar" style="width:200px;height:180px">1024<br/>膝上型计算机</div>
+<div class="device-bar" style="width:260px;height:200px">1280<br/>桌面端</div>
+</div>
+<div class="responsive-sub"><h4>触控区域</h4><ul><li>40px高度的初级行动按钮——WCAG AA,为AAA加成.（原文参数：40px）</li><li>下载行动按钮 at 44px – at AA.</li></ul></div>
+<div class="responsive-sub"><h4>窄屏布局调整</h4><ul><li>顶端导航开关到768px以下的汉堡包.（原文参数：768px）</li><li>IDE模拟多面板崩溃为移动上单一主面板预览.</li><li>Feature grid: 3-up → 2-up → 1-up.</li></ul></div>
+</section>
+<footer class="footer" data-platform-example="footer">
+<div class="footer-shell">
+<p class="design-demo-note">栏目演示 · 开发工具</p><div class="footer-grid">
+<div class="footer-col">
+<h6>开发环境</h6>
+<span>项目配置</span>
+<span>运行环境</span>
+<span>团队协作</span>
+</div>
+<div class="footer-col">
+<h6>开发资源</h6>
+<span>快速开始</span>
+<span>技术文档</span>
+<span>示例项目</span>
+</div>
+<div class="footer-col">
+<h6>交付运维</h6>
+<span>部署记录</span>
+<span>运行日志</span>
+<span>状态监控</span>
+</div>
+<div class="footer-col">
+<h6>支持</h6>
+<span>使用指南</span>
+<span>更新记录</span>
+<span>问题反馈</span>
+</div>
+</div>
+
+</div>
+</footer>
+</body></html>

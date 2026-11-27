@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>白底品牌紫交易界面</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root { --white:#101114; --black:#e8e8ec; --purple:#7132f5; --purple-dark:#5741d8; --purple-subtle:rgba(133,91,251,0.16); --gray:#9497a9; --silver:#686b82; --border:#2a2c34; --green:rgba(20,158,97,0.16); --green-text:#026b3f; --font:'IBM Plex Sans',Helvetica,Arial,sans-serif; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--white); color:var(--black); font-family:var(--font); font-size:16px; line-height:1.38; -webkit-font-smoothing:antialiased; }
+
+  .nav { position:sticky; top:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:14px 24px; background:var(--white); border-bottom:1px solid var(--border); }
+  .nav-brand { font-size:16px; font-weight:700; color:var(--black); text-decoration:none; }
+  .nav-links { display:flex; gap:20px; list-style:none; }
+  .nav-links a { font-size:14px; font-weight:500; color:var(--gray); text-decoration:none; }
+  .nav-links a:hover { color:var(--purple); }
+  .nav-cta { display:inline-block; background:var(--purple); color:var(--white); padding:10px 20px; border-radius:12px; font-size:14px; font-weight:600; text-decoration:none; }
+
+  .hero { padding:64px 24px; text-align:center; }
+  .hero h1 { font-size:48px; font-weight:700; line-height:1.17; letter-spacing:-1px; margin-bottom:16px; }
+  .hero h1 span { color:var(--purple); }
+  .hero p { font-size:16px; color:var(--silver); max-width:480px; margin:0 auto 24px; }
+  .hero-buttons { display:flex; gap:12px; justify-content:center; }
+  .btn-purple { display:inline-block; background:var(--purple); color:var(--white); padding:13px 24px; border-radius:12px; font-size:16px; font-weight:600; text-decoration:none; border:none; cursor:pointer; }
+  .btn-outline { display:inline-block; background:var(--white); color:var(--purple-dark); padding:12px 24px; border-radius:12px; border:1px solid var(--purple-dark); font-size:16px; font-weight:600; text-decoration:none; cursor:pointer; }
+  .btn-subtle { display:inline-block; background:var(--purple-subtle); color:var(--purple); padding:8px 16px; border-radius:12px; font-size:14px; font-weight:500; text-decoration:none; }
+  .btn-white { display:inline-block; background:var(--white); color:var(--black); padding:8px 12px; border-radius:10px; font-size:14px; font-weight:500; text-decoration:none; box-shadow:rgba(0,0,0,0.03) 0px 4px 24px; }
+
+  .section { padding:48px 24px; max-width:1100px; margin:0 auto; }
+  .section-label { font-size:12px; font-weight:600; color:var(--silver); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:8px; }
+  .section-title { font-size:36px; font-weight:700; line-height:1.22; letter-spacing:-0.5px; margin-bottom:24px; }
+  .section-divider { border:none; border-top:1px solid var(--border); margin:0; }
+
+  .color-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(140px,1fr)); gap:10px; margin-bottom:20px; }
+  .color-swatch { border-radius:8px; overflow:hidden; border:1px solid var(--border); }
+  .color-swatch-block { height:60px; }
+  .color-swatch-info { padding:8px 10px; }
+  .color-swatch-name { font-size:12px; font-weight:600; margin-bottom:2px; }
+  .color-swatch-hex { font-size:10px; color:var(--silver); font-family:monospace; }
+  .color-swatch-role { font-size:9px; color:var(--silver); margin-top:2px; }
+  .color-group-label { font-size:12px; font-weight:600; color:var(--gray); margin:20px 0 8px; }
+
+  .type-sample { margin-bottom:20px; padding-bottom:16px; border-bottom:1px solid rgba(222,222,229,0.5); }
+  .type-sample:last-child { border-bottom:none; }
+  .type-meta { font-size:10px; color:var(--silver); margin-top:4px; font-family:monospace; }
+
+  .button-row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+  .button-item { text-align:center; }
+  .button-label { font-size:10px; color:var(--silver); margin-top:6px; }
+
+  .card-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:12px; }
+  .card { background:var(--white); border:1px solid var(--border); border-radius:12px; padding:20px; }
+  .card h3 { font-size:18px; font-weight:600; margin-bottom:8px; }
+  .card p { font-size:14px; color:var(--silver); }
+
+  .form-group { margin-bottom:16px; max-width:400px; }
+  .form-label { display:block; font-size:14px; font-weight:600; margin-bottom:4px; }
+  .form-input { width:100%; background:var(--white); color:var(--black); border:1px solid var(--border); padding:12px 16px; border-radius:12px; font-family:var(--font); font-size:16px; outline:none; }
+  .form-input:focus { border-color:var(--purple); box-shadow:0 0 0 1px var(--purple); }
+  .form-input--focus { border-color:var(--purple); box-shadow:0 0 0 1px var(--purple); }
+  .form-input--error { border-color:#dc2626; box-shadow:0 0 0 1px #dc2626; }
+  .form-textarea { width:100%; min-height:80px; background:var(--white); color:var(--black); border:1px solid var(--border); padding:12px 16px; border-radius:12px; font-family:var(--font); font-size:16px; resize:vertical; outline:none; }
+  .form-state-label { font-size:9px; color:var(--silver); margin-top:4px; }
+
+  .spacing-row { display:flex; align-items:flex-end; gap:8px; flex-wrap:wrap; margin-bottom:16px; }
+  .spacing-item { text-align:center; }
+  .spacing-block { background:var(--purple); border-radius:3px; margin-bottom:4px; height:24px; }
+  .spacing-value { font-size:9px; color:var(--silver); font-family:monospace; }
+
+  .radius-row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+  .radius-item { text-align:center; }
+  .radius-box { width:52px; height:52px; background:var(--purple-subtle); margin-bottom:4px; }
+  .radius-label { font-size:9px; color:var(--silver); font-family:monospace; }
+
+  .elevation-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:12px; }
+  .elevation-card { background:var(--white); border:1px solid var(--border); border-radius:12px; padding:16px; text-align:center; }
+  .elevation-label { font-size:13px; font-weight:600; margin-bottom:4px; }
+  .elevation-desc { font-size:9px; color:var(--silver); font-family:monospace; }
+
+  .footer { padding:24px; text-align:center; background:var(--black); color:var(--silver); font-size:12px; }
+  .footer a { color:var(--purple); text-decoration:underline; }
+
+  @media (max-width:768px) { .hero h1 { font-size:32px; } .nav-links { display:none; } .section { padding:32px 16px; } .card-grid { grid-template-columns:1fr; } }
+
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+</head>
+<body data-platform-type="金融交易">
+
+<div style="position:fixed;top:16px;right:16px;z-index:200;background:#7132f5;color:#ffffff;font-size:10px;font-weight:600;padding:4px 12px;border-radius:12px;">暗色模式</div>
+<section class="hero"><h1>白底品牌紫交易界面</h1><p>逐一展示颜色、字体和组件，呈现加密货币交易界面的精细感。</p><div class="hero-buttons"><a class="btn-purple" data-static-example="">创建账户</a><a class="btn-outline" data-static-example="">探索</a></div></section>
+<hr class="section-divider"/>
+<section class="section" id="colors"><div class="section-label">01 · 配色</div><h2 class="section-title">配色</h2>
+<div class="color-group-label">品牌色</div>
+<div class="color-grid">
+<div class="color-swatch"><div class="color-swatch-block" style="background:#7132f5"></div><div class="color-swatch-info"><div class="color-swatch-name">Kraken Purple</div><div class="color-swatch-hex">#7132f5</div><div class="color-swatch-role">主要行动按钮</div></div></div>
+<div class="color-swatch"><div class="color-swatch-block" style="background:#5741d8"></div><div class="color-swatch-info"><div class="color-swatch-name">Purple Dark</div><div class="color-swatch-hex">#5741d8</div><div class="color-swatch-role">概述的边界</div></div></div>
+<div class="color-swatch"><div class="color-swatch-block" style="background:#5b1ecf"></div><div class="color-swatch-info"><div class="color-swatch-name">Purple Deep</div><div class="color-swatch-hex">#5b1ecf</div><div class="color-swatch-role">最深的变体</div></div></div>
+<div class="color-swatch"><div class="color-swatch-block" style="background:rgba(133,91,251,0.16)"></div><div class="color-swatch-info"><div class="color-swatch-name">Purple Subtle</div><div class="color-swatch-hex">rgba(133,91,251,0.16)</div><div class="color-swatch-role">微调按钮 bg</div></div></div>
+</div>
+<div class="color-group-label">中立</div>
+<div class="color-grid">
+<div class="color-swatch"><div class="color-swatch-block" style="background:#101114"></div><div class="color-swatch-info"><div class="color-swatch-name">Near Black</div><div class="color-swatch-hex">#101114</div><div class="color-swatch-role">初级文本</div></div></div>
+<div class="color-swatch"><div class="color-swatch-block" style="background:#686b82"></div><div class="color-swatch-info"><div class="color-swatch-name">Cool Gray</div><div class="color-swatch-hex">#686b82</div><div class="color-swatch-role">边框</div></div></div>
+<div class="color-swatch"><div class="color-swatch-block" style="background:#9497a9"></div><div class="color-swatch-info"><div class="color-swatch-name">Silver Blue</div><div class="color-swatch-hex">#9497a9</div><div class="color-swatch-role">副文本</div></div></div>
+</div></section>
+<hr class="section-divider"/>
+<section class="section" id="typography"><div class="section-label">02 · 字体排版</div><h2 class="section-title">字号层级</h2>
+<div class="type-sample"><div style="font-size:48px; font-weight:700; line-height:1.17; letter-spacing:-1px;">显示首屏</div><div class="type-meta">Kraken-Brand — 48px / 700 / 1.17 / -1px</div></div>
+<div class="type-sample"><div style="font-size:36px; font-weight:700; line-height:1.22; letter-spacing:-0.5px;">科 长</div><div class="type-meta">Kraken-Brand — 36px / 700 / 1.22 / -0.5px</div></div>
+<div class="type-sample"><div style="font-size:22px; font-weight:600; line-height:1.20;">特征标题</div><div class="type-meta">Kraken-Product — 22px / 600 / 1.20</div></div>
+<div class="type-sample"><div style="font-size:16px; font-weight:400; line-height:1.38; color:var(--silver);">体 体——与Kraken进行买卖,并进行密码交易. 全世界数百万人信任他</div><div class="type-meta">Kraken-Product — 16px / 400 / 1.38</div></div>
+<div class="type-sample"><div style="font-size:14px; font-weight:600; line-height:1.71; color:var(--silver);">Caption — Last updated 2 min ago</div><div class="type-meta">Kraken-Product — 14px / 600 / 1.71</div></div>
+</section>
+<hr class="section-divider"/>
+<section class="section" id="buttons"><div class="section-label">03 · 按钮</div><h2 class="section-title">按钮</h2>
+<div class="button-row">
+<div class="button-item"><a class="btn-purple" data-static-example="">创建账户</a><div class="button-label">初级紫色</div></div>
+<div class="button-item"><a class="btn-outline" data-static-example="">探索</a><div class="button-label">紫色图示</div></div>
+<div class="button-item"><a class="btn-subtle" data-static-example="">学习</a><div class="button-label">紫色潜水艇</div></div>
+<div class="button-item"><a class="btn-white" data-static-example="">细节</a><div class="button-label">白影( 白影)</div></div>
+</div></section>
+<hr class="section-divider"/>
+<section class="section" id="cards"><div class="section-label">04 · 卡片</div><h2 class="section-title">卡片</h2>
+<div class="card-grid">
+<div class="card"><h3>比特币( BTC)</h3><p>最信任的密码货币。 以低廉的价格在Kraken上买卖.</p></div>
+<div class="card"><h3>以利他(ETH)</h3><p>智能合同和DeFi. 贸易ETH和数百个词元.</p></div>
+<div class="card"><h3>摄像头</h3><p>偷你的密码就能赚到回报 现有灵活和抵押的选择。</p></div>
+</div></section>
+<hr class="section-divider"/>
+<section class="section" id="forms"><div class="section-label">05 · 表单</div><h2 class="section-title">表单</h2>
+<div class="form-group"><label class="form-label">电子邮箱</label><input class="form-input" placeholder="you@email.com" type="email"/><div class="form-state-label">默认</div></div>
+<div class="form-group"><label class="form-label">数额</label><input class="form-input form-input--focus" type="text" value="0.25 BTC"/><div class="form-state-label">焦点( 纯环)</div></div>
+<div class="form-group"><label class="form-label">地址</label><input class="form-input form-input--error" type="text" value="invalid"/><div class="form-state-label">错误</div></div>
+<div class="form-group"><label class="form-label">说明</label><textarea class="form-textarea" placeholder="添加一个注释..."></textarea></div>
+</section>
+<hr class="section-divider"/>
+<section class="section"><div class="section-label">06 / 间距</div><h2 class="section-title">间距</h2>
+<div class="spacing-row"><div class="spacing-item"><div class="spacing-block" style="width:4px"></div><div class="spacing-value">4</div></div><div class="spacing-item"><div class="spacing-block" style="width:8px"></div><div class="spacing-value">8</div></div><div class="spacing-item"><div class="spacing-block" style="width:12px"></div><div class="spacing-value">12</div></div><div class="spacing-item"><div class="spacing-block" style="width:16px"></div><div class="spacing-value">16</div></div><div class="spacing-item"><div class="spacing-block" style="width:24px"></div><div class="spacing-value">24</div></div></div></section>
+<hr class="section-divider"/>
+<section class="section"><div class="section-label">07 · 圆角</div><h2 class="section-title">圆角</h2>
+<div class="radius-row"><div class="radius-item"><div class="radius-box" style="border-radius:6px"></div><div class="radius-label">6px</div></div><div class="radius-item"><div class="radius-box" style="border-radius:8px"></div><div class="radius-label">8px</div></div><div class="radius-item"><div class="radius-box" style="border-radius:12px"></div><div class="radius-label">12px</div></div><div class="radius-item"><div class="radius-box" style="border-radius:16px"></div><div class="radius-label">16px</div></div><div class="radius-item"><div class="radius-box" style="border-radius:9999px; width:52px; height:52px;"></div><div class="radius-label">胶囊形</div></div></div></section>
+<hr class="section-divider"/>
+<section class="section"><div class="section-label">08 · 视觉层次</div><h2 class="section-title">视觉深度</h2>
+<div class="elevation-grid"><div class="elevation-card"><div class="elevation-label">平面</div><div class="elevation-desc">没有阴影</div></div><div class="elevation-card" style="box-shadow:rgba(0,0,0,0.03) 0px 4px 24px;"><div class="elevation-label">浅</div><div class="elevation-desc">4px 24px 时 间 0.03</div></div><div class="elevation-card" style="box-shadow:0 0 0 1px var(--purple);"><div class="elevation-label">焦点</div><div class="elevation-desc">紫色戒指 紫色戒指 紫色戒指 紫色戒指 紫色戒指 紫色戒指</div></div></div></section>
+<footer class="footer" data-platform-example="footer">
+<div class="footer-shell">
+<p class="design-demo-note">栏目演示 · 金融交易</p><div class="footer-grid">
+<div class="footer-col">
+<h6>产品</h6>
+<span>账户</span>
+<span>转账</span>
+<span>交易工具</span>
+</div>
+<div class="footer-col">
+<h6>记录</h6>
+<span>交易状态</span>
+<span>收支明细</span>
+<span>对账记录</span>
+</div>
+<div class="footer-col">
+<h6>信息</h6>
+<span>费用说明</span>
+<span>风险说明</span>
+<span>帮助文档</span>
+</div>
+<div class="footer-col">
+<h6>支持</h6>
+<span>账户安全</span>
+<span>服务状态</span>
+<span>联系我们</span>
+</div>
+</div>
+
+</div>
+</footer>
+</body>
+</html>

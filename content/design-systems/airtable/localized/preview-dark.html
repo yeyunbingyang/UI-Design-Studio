@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>多彩模块编辑风</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --primary: #181d26;
+    --primary-active: #0d1218;
+    --primary-disabled: #e0e2e6;
+    --link: #1b61c9;
+    --link-active: #1a3866;
+    --ink: #ffffff;
+    --body: rgba(255,255,255,0.85);
+    --muted: rgba(255,255,255,0.6);
+    --hairline: rgba(255,255,255,0.12);
+    --border-strong: rgba(255,255,255,0.22);
+    --canvas: #0c0c0e;
+    --surface-soft: #161618;
+    --surface-strong: #1d1d20;
+    --surface-dark: #181d26;
+    --surface-dark-elevated: #1d1f25;
+    --on-primary: #ffffff;
+    --on-dark: #ffffff;
+    --info: #254fad;
+    --info-border: #458fff;
+    --success: #006400;
+    --success-border: #39bf45;
+    --signature-coral: #aa2d00;
+    --signature-forest: #0a2e0e;
+    --signature-cream: #f5e9d4;
+    --signature-peach: #fcab79;
+    --signature-mint: #a8d8c4;
+    --signature-yellow: #f4d35e;
+    --signature-mustard: #d9a441;
+    --pricing-ink: #1d1f25;
+    --shadow-button: 0 1px 2px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.04);
+    --shadow-focus: 0 0 0 3px rgba(27,97,201,0.3), 0 1px 2px rgba(0,0,0,0.08);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--canvas);
+    color: var(--body);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--canvas);
+    border-bottom: 1px solid var(--hairline);
+    padding: 0 48px;
+    height: 64px;
+  }
+
+  .nav-links { list-style: none; display: flex; gap: 28px; align-items: center; }
+  .nav-links a { color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 500; }
+
+  .nav-cta {
+    background: var(--primary);
+    color: var(--on-primary);
+    border: none;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: var(--shadow-button);
+    font-family: inherit;
+  }
+
+  .hero {
+    padding: 96px 48px;
+    background: var(--canvas);
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 64px;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .hero-content { max-width: 720px; }
+  .hero h1 {
+    font-family: 'Inter Tight', 'Inter', sans-serif;
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 1.05;
+    color: var(--ink);
+    margin: 0 0 24px;
+    letter-spacing: -1.2px;
+    text-align: left;
+  }
+  .hero p {
+    font-size: 18px;
+    color: var(--body);
+    max-width: 540px;
+    margin: 0 0 40px;
+    line-height: 1.5;
+    text-align: left;
+  }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-start; }
+  .hero-art { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .hero-art-tile {
+    aspect-ratio: 1;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .hero-art-tile.coral { background: var(--signature-coral); color: var(--on-primary); }
+  .hero-art-tile.peach { background: var(--signature-peach); color: var(--ink); }
+  .hero-art-tile.cream { background: var(--signature-cream); color: var(--ink); }
+  .hero-art-tile.dark { background: var(--surface-dark); color: var(--on-dark); }
+  .btn-hero-primary {
+    background: var(--primary);
+    color: var(--on-primary);
+    border: none;
+    padding: 16px 24px;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: var(--shadow-button);
+    font-family: inherit;
+  }
+  .btn-hero-secondary {
+    background: var(--canvas);
+    color: var(--ink);
+    border: 1px solid var(--hairline);
+    padding: 16px 24px;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  section {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 96px 48px;
+    border-top: 1px solid var(--hairline);
+  }
+
+  .section-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .section-heading {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 16px;
+    letter-spacing: -0.3px;
+  }
+  .section-intro {
+    font-size: 16px;
+    color: var(--body);
+    max-width: 720px;
+    margin-bottom: 48px;
+  }
+
+  .palette-group { margin-bottom: 56px; }
+  .palette-group h3 { font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 20px; }
+
+  .palette-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  .swatch { border: 1px solid var(--hairline); border-radius: 10px; overflow: hidden; background: var(--canvas); }
+  .swatch-color { height: 80px; }
+  .swatch-meta { padding: 12px 14px; }
+  .swatch-name { font-weight: 600; font-size: 13px; color: var(--ink); margin-bottom: 4px; }
+  .swatch-hex { font-family: ui-monospace, 'SF Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+  .swatch-role { font-size: 12px; color: var(--body); line-height: 1.4; }
+
+  .type-row {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 32px;
+    align-items: baseline;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .type-row:last-child { border-bottom: none; }
+  .type-meta { font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .type-meta strong { display: block; color: var(--ink); font-weight: 600; font-size: 13px; margin-bottom: 4px; }
+  .type-sample { color: var(--ink); }
+
+  .button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .button-cell {
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    padding: 28px;
+    background: var(--canvas);
+    min-width: 0;
+  }
+  .button-cell.on-coral { background: var(--signature-coral); border-color: rgba(255,255,255,0.12); }
+  .button-cell.on-coral .button-label,
+  .button-cell.on-coral .button-meta { color: rgba(255,255,255,0.85); }
+  .button-cell.on-dark { background: var(--surface-dark); border-color: rgba(255,255,255,0.12); }
+  .button-cell.on-dark .button-label,
+  .button-cell.on-dark .button-meta { color: rgba(255,255,255,0.85); }
+  .button-label { font-size: 13px; color: var(--ink); font-weight: 600; margin-bottom: 12px; }
+  .button-meta { font-size: 12px; color: var(--muted); margin-top: 14px; line-height: 1.5; }
+  .btn {
+    display: inline-block;
+    padding: 16px 24px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: inherit;
+    line-height: 1;
+  }
+  .btn-primary { background: var(--primary); color: var(--on-primary); box-shadow: var(--shadow-button); }
+  .btn-primary-active { background: var(--primary-active); color: var(--on-primary); box-shadow: var(--shadow-button); }
+  .btn-primary-focus { background: var(--primary); color: var(--on-primary); box-shadow: var(--shadow-focus); }
+  .btn-primary-disabled { background: var(--primary-disabled); color: var(--muted); box-shadow: inset 0 0 0 1px var(--border-strong); cursor: not-allowed; }
+  .btn-secondary { background: var(--canvas); color: var(--ink); border: 1px solid var(--hairline); }
+  .btn-secondary-on-dark { background: var(--canvas); color: var(--ink); border: 1px solid var(--hairline); }
+  .btn-pricing-pill {
+    background: var(--canvas);
+    color: var(--pricing-ink);
+    border: 1px solid var(--hairline);
+    border-radius: 9999px;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 500;
+    padding: 12px 24px;
+  }
+  .btn-legal {
+    background: var(--link);
+    color: var(--on-primary);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px 10px;
+    border-radius: 2px;
+  }
+  .btn-icon-circular {
+    width: 40px; height: 40px;
+    border-radius: 9999px;
+    background: var(--canvas);
+    border: 1px solid var(--hairline);
+    color: var(--ink);
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 18px;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+    min-width: 0;
+  }
+  .card-grid > * { min-width: 0; }
+  .card-signature-coral {
+    background: var(--signature-coral);
+    color: var(--on-primary);
+    border-radius: 12px;
+    padding: 48px;
+  }
+  .card-signature-coral h4 {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  .card-signature-coral p { color: rgba(255,255,255,0.85); margin-bottom: 24px; }
+  .card-signature-forest {
+    background: var(--signature-forest);
+    color: var(--on-primary);
+    border-radius: 12px;
+    padding: 48px;
+  }
+  .card-signature-forest h4 {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  .card-signature-forest p { color: rgba(255,255,255,0.85); margin-bottom: 24px; }
+  .card-hero-dark {
+    background: var(--surface-dark);
+    color: var(--on-dark);
+    border-radius: 12px;
+    padding: 48px;
+  }
+  .card-hero-dark h4 {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  .card-hero-dark p { color: rgba(255,255,255,0.8); margin-bottom: 24px; }
+  .card-feature-tabbed {
+    background: var(--surface-soft);
+    color: var(--ink);
+    border-radius: 12px;
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 24px;
+  }
+  .feature-tabs { display: flex; flex-direction: column; gap: 10px; font-size: 14px; }
+  .feature-tab { padding: 8px 12px; border-radius: 6px; color: var(--body); }
+  .feature-tab.active { background: var(--canvas); color: var(--ink); font-weight: 600; }
+  .feature-content h4 {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .feature-content p { font-size: 14px; }
+  .card-cream-callout {
+    background: var(--signature-cream);
+    color: var(--ink);
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .card-cream-callout h4 {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+  .card-cream-callout p { font-size: 14px; opacity: 0.85; }
+
+  .demo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  .demo-card {
+    border-radius: 10px;
+    padding: 16px;
+    color: var(--ink);
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .demo-card.peach { background: var(--signature-peach); }
+  .demo-card.mint { background: var(--signature-mint); }
+  .demo-card.cream { background: var(--signature-cream); }
+  .demo-card.canvas { background: var(--canvas); border: 1px solid var(--hairline); }
+  .demo-card.yellow { background: var(--signature-yellow); }
+  .demo-card.mustard { background: var(--signature-mustard); }
+
+  .article-card {
+    background: var(--canvas);
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    padding: 16px;
+    overflow: hidden;
+  }
+  .article-thumb {
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    background: var(--signature-peach);
+  }
+  .article-thumb.coral { background: var(--signature-coral); }
+  .article-thumb.mint { background: var(--signature-mint); }
+  .article-tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .article-title {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+  .article-meta { font-size: 12px; color: var(--muted); }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .form-cell { min-width: 0; }
+  .form-label { font-size: 13px; font-weight: 500; color: var(--ink); margin-bottom: 8px; display: block; }
+  .form-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    font-size: 14px;
+    color: var(--ink);
+    background: var(--canvas);
+    height: 44px;
+    font-family: inherit;
+  }
+  .form-input.focused {
+    border-color: var(--info-border);
+    box-shadow: 0 0 0 2px rgba(7,104,248,0.2);
+    outline: none;
+  }
+  .form-textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    font-size: 14px;
+    min-height: 120px;
+    resize: vertical;
+    font-family: inherit;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .pricing-tier {
+    background: var(--canvas);
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    padding: 32px;
+    font-family: 'Inter Tight', sans-serif;
+  }
+  .pricing-tier.featured { background: var(--surface-soft); }
+  .pricing-tier h4 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--pricing-ink);
+    margin-bottom: 8px;
+  }
+  .pricing-tier .price {
+    font-size: 44.8px;
+    font-weight: 500;
+    color: var(--pricing-ink);
+    margin-bottom: 16px;
+    line-height: 1.1;
+  }
+  .pricing-tier .pricing-tag {
+    font-size: 12.8px;
+    color: var(--body);
+    margin-bottom: 24px;
+    font-family: 'Inter', sans-serif;
+  }
+  .pricing-tier ul { list-style: none; padding: 0; margin: 0 0 24px; font-size: 13.3px; font-family: 'Inter', sans-serif; }
+  .pricing-tier ul li { padding: 6px 0; color: var(--body); }
+
+  .spacing-row { display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
+  .spacing-block { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .spacing-bar { background: var(--primary); height: 28px; border-radius: 4px; }
+  .spacing-label { font-size: 11px; color: var(--muted); font-family: ui-monospace, 'SF Mono', monospace; }
+
+  .radius-row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .radius-block {
+    width: 96px;
+    height: 96px;
+    background: var(--signature-cream);
+    border: 1px solid var(--hairline);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: var(--ink);
+    font-weight: 600;
+    font-family: ui-monospace, 'SF Mono', monospace;
+  }
+
+  .elevation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+  }
+  .elevation-card {
+    background: var(--canvas);
+    border-radius: 10px;
+    padding: 24px;
+    font-size: 13px;
+  }
+  .elevation-card h5 { font-weight: 600; color: var(--ink); margin-bottom: 6px; font-size: 13px; }
+  .elevation-card p { color: var(--muted); font-size: 12px; }
+  .elevation-flat { border: 1px solid var(--hairline); }
+  .elevation-button { box-shadow: var(--shadow-button); border: 1px solid var(--hairline); }
+  .elevation-focus { box-shadow: var(--shadow-focus); border: 1px solid var(--hairline); }
+
+  .responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 32px;
+    font-size: 14px;
+  }
+  .responsive-table th, .responsive-table td {
+    text-align: left;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .responsive-table th {
+    font-weight: 600;
+    color: var(--ink);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .responsive-table td { color: var(--body); }
+
+  .device-ladder {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .device-bar {
+    background: var(--surface-strong);
+    border-radius: 6px;
+    color: var(--muted);
+    text-align: center;
+    padding: 8px;
+    font-size: 11px;
+    font-family: ui-monospace, monospace;
+    flex-shrink: 0;
+  }
+
+  .responsive-sub { margin-top: 32px; }
+  .responsive-sub h4 {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+  .responsive-sub ul { padding-left: 20px; color: var(--body); font-size: 14px; }
+  .responsive-sub ul li { margin-bottom: 8px; }
+
+  .footer {
+    border-top: 1px solid var(--hairline);
+    padding: 32px 48px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .footer a { color: var(--ink); font-weight: 500; }
+
+  .cell, .cell > *, .demo, .button-cell, .component-cell { min-width: 0; }
+  .cell.wide,
+  .button-cell.wide,
+  .component-cell.wide { grid-column: span 2; }
+  @media (max-width: 1024px) {
+    section { padding: 64px 32px; }
+    .section-heading { font-size: 28px; }
+    .nav > :last-child { display: none; }
+    .hero { grid-template-columns: 1fr; gap: 32px; padding: 64px 32px; }
+    .hero h1 { font-size: 44px; }
+    .hero-art, .hero-art-photo { display: none; }
+    .type-row { grid-template-columns: 1fr; gap: 8px; }
+    .type-row .type-meta { padding-bottom: 4px; }
+    .card-feature-tabbed { grid-template-columns: 1fr; }
+    .pricing-grid, .form-grid { gap: 16px; }
+  }
+  @media (max-width: 720px) {
+    .cell.wide, .button-cell.wide, .component-cell.wide { grid-column: span 1; }
+    .nav { padding: 0 48px; height: auto; min-height: 56px; }
+    .nav-links { display: none; }
+    .hero { padding: 48px 20px; }
+    .hero h1 { font-size: 32px; letter-spacing: -0.5px; }
+    .hero p { font-size: 16px; }
+    section { padding: 48px 20px; }
+    .section-heading { font-size: 24px; }
+    .palette-grid, .button-grid, .card-grid, .form-grid, .pricing-grid, .demo-grid, .elevation-grid { grid-template-columns: 1fr !important; gap: 16px; }
+    .spacing-row, .radius-row { gap: 12px; }
+    .responsive-table { font-size: 12px; }
+    .responsive-table th, .responsive-table td { padding: 10px 8px; }
+    .device-ladder { gap: 8px; }
+    .footer { padding: 24px 16px; font-size: 12px; }
+  }
+
+  /* getdesign.md nav additions */
+  .nav-left { display: flex; align-items: center; gap: 20px; }
+  .nav-brand-link,
+  .nav-brand-link:link,
+  .nav-brand-link:visited,
+  .nav-brand-link:hover,
+  .nav-brand-link:active { text-decoration: none; color: inherit; }
+  .nav-brand { font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 16px; color: var(--ink); }
+  .nav-github,
+  .nav-github:link,
+  .nav-github:visited,
+  .nav-github:hover,
+  .nav-github:active {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: inherit;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 6px;
+    opacity: 0.75;
+    transition: opacity 200ms ease, border-color 200ms ease;
+    font-family: inherit;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .nav-github:hover { opacity: 1; border-color: rgba(128, 128, 128, 0.55); }
+  .nav-github svg { display: block; flex-shrink: 0; }
+
+  /* getdesign.md nav centering */
+  .nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+  .nav > .nav-left { justify-self: start; }
+  .nav > .nav-links { justify-self: center; }
+  .nav > :last-child { justify-self: end; }
+
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+</head>
+<body data-platform-type="数据与企业平台">
+
+<div class="hero">
+<div class="hero-content">
+<h1>多彩模块编辑风</h1>
+<p>这套工作流软件以白底和近黑色文字构成沉稳的编辑式界面。珊瑚色、深绿色和深海军蓝的通栏卡片为长篇产品说明页划分段落，并体现品牌特点。</p>
+<div class="hero-actions">
+<button class="btn-hero-primary">免费开始</button>
+<button class="btn-hero-secondary">书本演示</button>
+</div>
+</div>
+<div class="hero-art">
+<div class="hero-art-tile coral">签字 珊瑚色</div>
+<div class="hero-art-tile peach">贴纸桃</div>
+<div class="hero-art-tile cream">米白色 点名</div>
+<div class="hero-art-tile dark">暗行动按钮 颜色</div>
+</div>
+</div>
+<section id="colors">
+<div class="section-label">01 · 配色</div>
+<h2 class="section-heading">品牌色与强调色</h2>
+<p class="section-intro">主要为近黑色 文字色——不为蓝色. CSS变量 `--theme_button-background-primary: #1b61c9` 存在于根上,但映射到链接/信息角色;实际首屏 行动按钮 制作于`#181d26`. 品牌辨识度生活在特征表面卡片,而不是强调色.</p>
+<div class="palette-group">
+<h3>品牌色</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#181d26;"></div><div class="swatch-meta"><div class="swatch-name">primary (ink)</div><div class="swatch-hex">#181d26</div><div class="swatch-role">初等行动按钮, h1/h2类型,暗表面卡片. 同样的六角星可以发挥三个角色.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#0d1218;"></div><div class="swatch-meta"><div class="swatch-name">primary-active</div><div class="swatch-hex">#0d1218</div><div class="swatch-role">按主按钮上的状态。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#1b61c9;"></div><div class="swatch-meta"><div class="swatch-name">link</div><div class="swatch-hex">#1b61c9</div><div class="swatch-role">内在体链接. 不是主按钮的颜色。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#e0e2e6;"></div><div class="swatch-meta"><div class="swatch-name">primary-disabled</div><div class="swatch-hex">#e0e2e6</div><div class="swatch-role">已禁用 行动按钮 背景。</div></div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>标志性卡片底色</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#aa2d00;"></div><div class="swatch-meta"><div class="swatch-name">signature-coral</div><div class="swatch-hex">#aa2d00</div><div class="swatch-role">主页上最大标志性卡片. 通栏 暗的珊瑚色带有白色类型.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#0a2e0e;"></div><div class="swatch-meta"><div class="swatch-name">signature-forest</div><div class="swatch-hex">#0a2e0e</div><div class="swatch-role">Deep-green标志性卡片兄弟会到珊瑚色.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#181d26;"></div><div class="swatch-meta"><div class="swatch-name">surface-dark</div><div class="swatch-hex">#181d26</div><div class="swatch-role">中页 CTA 牌(“路径”) 10~ 每个人都... ).</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#f5e9d4;"></div><div class="swatch-meta"><div class="swatch-name">signature-cream</div><div class="swatch-hex">#f5e9d4</div><div class="swatch-role">米白色呼号乐队携带产品UI碎片.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#fcab79;"></div><div class="swatch-meta"><div class="swatch-name">signature-peach</div><div class="swatch-hex">#fcab79</div><div class="swatch-role">解码卡表面( 温暖)。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#a8d8c4;"></div><div class="swatch-meta"><div class="swatch-name">signature-mint</div><div class="swatch-hex">#a8d8c4</div><div class="swatch-role">解码卡表面(sage / mint).</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#f4d35e;"></div><div class="swatch-meta"><div class="swatch-name">signature-yellow</div><div class="swatch-hex">#f4d35e</div><div class="swatch-role">解码卡表面(暖黄色).</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#d9a441;"></div><div class="swatch-meta"><div class="swatch-name">signature-mustard</div><div class="swatch-hex">#d9a441</div><div class="swatch-role">解码卡表面( 须达 / ochre).</div></div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>界面表面</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#ffffff; border-bottom:1px solid var(--hairline);"></div><div class="swatch-meta"><div class="swatch-name">canvas</div><div class="swatch-hex">#ffffff</div><div class="swatch-role">默认页面表面。 首屏就是这个——没有渐变.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#f8fafc;"></div><div class="swatch-meta"><div class="swatch-name">surface-soft</div><div class="swatch-hex">#f8fafc</div><div class="swatch-role">标签式功能卡片 / 具有显著的套餐层级。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#e0e2e6;"></div><div class="swatch-meta"><div class="swatch-name">surface-strong</div><div class="swatch-hex">#e0e2e6</div><div class="swatch-role">"开始用Airtable"行动按钮旗下在脚步附近建造.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#1d1f25;"></div><div class="swatch-meta"><div class="swatch-name">surface-dark-elevated</div><div class="swatch-hex">#1d1f25</div><div class="swatch-role">文章页彩虹画首屏基地.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#dddddd;"></div><div class="swatch-meta"><div class="swatch-name">hairline</div><div class="swatch-hex">#dddddd</div><div class="swatch-role">1px输入大纲,表分隔符,二级按钮大纲.（原文参数：1px）</div></div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>文字色</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#181d26;"></div><div class="swatch-meta"><div class="swatch-name">ink</div><div class="swatch-hex">#181d26</div><div class="swatch-role">h1/h2显示,主按钮文本在光线上.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#333840;"></div><div class="swatch-meta"><div class="swatch-name">body</div><div class="swatch-hex">#333840</div><div class="swatch-role">默认的运行文本颜色。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#41454d;"></div><div class="swatch-meta"><div class="swatch-name">muted</div><div class="swatch-hex">#41454d</div><div class="swatch-role">脚印、面包屑、字幕</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#9297a0;"></div><div class="swatch-meta"><div class="swatch-name">border-strong</div><div class="swatch-hex">#9297a0</div><div class="swatch-role">已禁用次按钮大纲。</div></div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>语义色</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#254fad;"></div><div class="swatch-meta"><div class="swatch-name">info</div><div class="swatch-hex">#254fad</div><div class="swatch-role">内幕信息徽章.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#458fff;"></div><div class="swatch-meta"><div class="swatch-name">info-border</div><div class="swatch-hex">#458fff</div><div class="swatch-role">重点投入提纲.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#006400;"></div><div class="swatch-meta"><div class="swatch-name">success</div><div class="swatch-hex">#006400</div><div class="swatch-role">文本确认</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#39bf45;"></div><div class="swatch-meta"><div class="swatch-name">success-border</div><div class="swatch-hex">#39bf45</div><div class="swatch-role">验证成功边界。</div></div></div>
+</div>
+</div>
+</section>
+<section id="typography">
+<div class="section-label">02 · 字号层级</div>
+<h2 class="section-heading">Haas 与 Inter Display 字体体系</h2>
+<p class="section-intro">Editorial voice runs Haas / Haas Groot Disp at modest weights (400 / 500). Pricing surface uses Inter Display at unusual mid-weights (475 / 575) as a deliberate sub-system. Inter Tight + Inter substituted here.</p>
+<div class="type-row"><div class="type-meta"><strong>display-xl</strong>48px / 500 / 1.1 / 0<br/>Articles h2</div><div class="type-sample" style="font-family:'Inter Tight'; font-size:48px; font-weight:500; line-height:1.1;">构建工作空间</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-lg</strong>40px / 400 / 1.2 / 0<br/>Homepage h1 hero</div><div class="type-sample" style="font-family:'Inter Tight'; font-size:40px; font-weight:400; line-height:1.2;">所有你的团队,所有的工作流程</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-md</strong>32px / 400 / 1.2 / 0<br/>Platform feature heads</div><div class="type-sample" style="font-family:'Inter Tight'; font-size:32px; font-weight:400; line-height:1.2;">对话式应用程序大楼</div></div>
+<div class="type-row"><div class="type-meta"><strong>title-lg</strong>24px / 400 / 1.35 / 0.12px<br/>Section titles</div><div class="type-sample" style="font-size:24px; font-weight:400; line-height:1.35; letter-spacing:0.12px;">精密的工作流程</div></div>
+<div class="type-row"><div class="type-meta"><strong>title-md</strong>20px / 400 / 1.5 / 0<br/>Sub-section titles</div><div class="type-sample" style="font-family:'Inter Tight'; font-size:20px; font-weight:400; line-height:1.5;">把想法部署成应用</div></div>
+<div class="type-row"><div class="type-meta"><strong>title-sm</strong>18px / 500 / 1.4 / 0<br/>Article-card titles</div><div class="type-sample" style="font-size:18px; font-weight:500; line-height:1.4;">10 2026 最佳AI 应用程序构建器</div></div>
+<div class="type-row"><div class="type-meta"><strong>label-md</strong>16px / 500 / 1.4 / 0<br/>Demo-card titles</div><div class="type-sample" style="font-size:16px; font-weight:500;">以原型开发的速度构建生产应用</div></div>
+<div class="type-row"><div class="type-meta"><strong>button</strong>16px / 500 / 1.4 / 0<br/>CTA button labels</div><div class="type-sample" style="font-size:16px; font-weight:500;">免费开始</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-md</strong>14px / 400 / 1.25 / 0<br/>Body, footer, top-nav</div><div class="type-sample" style="font-size:14px; font-weight:400; line-height:1.25;">从废品创业到企业团队,Airtable适应接下来需要的,而不会强迫重建.</div></div>
+<div class="type-row"><div class="type-meta"><strong>caption</strong>14px / 500 / 1.35 / 0.16px<br/>Captions, meta</div><div class="type-sample" style="font-size:14px; font-weight:500; letter-spacing:0.16px;">AI 计划</div></div>
+<div class="type-row"><div class="type-meta"><strong>legal</strong>13.12px / 600 / 1.2 / 0<br/>Cookie/legal CTA</div><div class="type-sample" style="font-size:13.12px; font-weight:600; line-height:1.2;">饼干首选</div></div>
+<div class="type-row"><div class="type-meta"><strong>pricing-display</strong>44.8px / 475 / 1.1 / 0<br/>Pricing h1</div><div class="type-sample" style="font-family:'Inter Tight'; font-size:44.8px; font-weight:500; line-height:1.1;">满足每个组织需要的计划</div></div>
+<div class="type-row"><div class="type-meta"><strong>pricing-section</strong>28px / 475 / 1.2 / 0<br/>Pricing section heads</div><div class="type-sample" style="font-family:'Inter Tight'; font-size:28px; font-weight:500; line-height:1.2;">比较计划</div></div>
+<div class="type-row"><div class="type-meta"><strong>pricing-card-title</strong>20px / 475 / 1.3 / 0<br/>Tier card plan name</div><div class="type-sample" style="font-family:'Inter Tight'; font-size:20px; font-weight:500; line-height:1.3;">商业版</div></div>
+</section>
+<section id="components">
+<div class="section-label">03 · 按钮样式</div>
+<h2 class="section-heading">黑色实心与白色描边按钮</h2>
+<p class="section-intro">首屏将近黑色实心主按钮与白色描边次按钮并列。定价区另用胶囊形按钮。</p>
+<div class="button-grid">
+<div class="button-cell"><div class="button-label">button-primary</div><button class="btn btn-primary">免费开始</button><div class="button-meta">主(#181d26) / on-primary/ lg半径</div></div>
+<div class="button-cell"><div class="button-label">button-primary-active</div><button class="btn btn-primary-active">按下</button><div class="button-meta">primary-active 背景资料( 下)#0d1218)</div></div>
+<div class="button-cell"><div class="button-label">button-primary-focus</div><button class="btn btn-primary-focus">焦点状态</button><div class="button-meta">3px 蓝色 焦点环</div></div>
+<div class="button-cell"><div class="button-label">button-primary-disabled</div><button class="btn btn-primary-disabled" disabled="">禁用</button><div class="button-meta">primary-disabled / muted text</div></div>
+<div class="button-cell"><div class="button-label">button-secondary</div><button class="btn btn-secondary">书本演示</button><div class="button-meta">页面底色 / 文字色 / 细边框 大纲/ lg 半径</div></div>
+<div class="button-cell on-coral"><div class="button-label">button-secondary-on-dark</div><button class="btn btn-secondary-on-dark">读取故事</button><div class="button-meta">白色与细边框大纲. 保持白色,而不是表面的信号。</div></div>
+<div class="button-cell on-dark"><div class="button-label">button-secondary-on-dark</div><button class="btn btn-secondary-on-dark">获取演示</button><div class="button-meta">深海军蓝 行动按钮 卡片上同样出现.</div></div>
+<div class="button-cell"><div class="button-label">button-pricing-pill</div><button class="btn btn-pricing-pill">尝试免费</button><div class="button-meta">胶囊形半径——仅定价子系统</div></div>
+<div class="button-cell"><div class="button-label">button-legal</div><button class="btn btn-legal">饼干首选</button><div class="button-meta">链接 bg, 2px半径, 600 重量 —— 系统要求（原文参数：2px）</div></div>
+<div class="button-cell"><div class="button-label">button-icon-circular</div><div style="display:flex; gap:12px;"><button aria-label="返回时" class="btn-icon-circular">‹</button><button aria-label="下一个" class="btn-icon-circular">›</button></div><div class="button-meta">40 × 40 / 页面底色 / 细边框 大纲/全半径</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">04 · 卡片与容器</div>
+<h2 class="section-heading">色块划分页面节奏</h2>
+<p class="section-intro">白底、珊瑚色区块、米白提示区、深海军蓝操作区和浅灰横幅依次展开，最后过渡到页脚。相邻区块用不同底色划出边界。</p>
+<div class="card-grid">
+<div class="card-signature-coral">
+<h4>以原型开发的速度构建生产应用</h4>
+<p>日内建造、测试和运送内部工具,而不是宿营。 主页上最大的标志性卡片背负着该品牌最直接的价值索赔.</p>
+<button class="btn btn-secondary-on-dark">读取故事</button>
+</div>
+<div class="card-signature-forest">
+<h4>把想法部署成应用</h4>
+<p>Deep-green标志卡片 结巴结到珊瑚色上——形状相同,电压不同. 用于主页演示网格集群.</p>
+<button class="btn btn-secondary-on-dark">书本演示</button>
+</div>
+<div class="card-hero-dark">
+<h4>让团队成员的工作效率提升 10 倍</h4>
+<p>中页dark-navy 行动按钮 卡片. 与主色调相同的六分法——文字色既是类型颜色,也是标志性暗面.</p>
+<button class="btn btn-secondary-on-dark">开始使用</button>
+</div>
+<div class="card-feature-tabbed">
+<div class="feature-tabs">
+<div class="feature-tab active">亚克米公司.</div>
+<div class="feature-tab">新闻公司.</div>
+<div class="feature-tab">工作室股份有限公司.</div>
+<div class="feature-tab">时间出版社</div>
+</div>
+<div class="feature-content">
+<h4>带标签页的功能卡片</h4>
+<p>轻质surface-soft背景;制表符左栏;右面板承载内容+小质行动按钮.</p>
+</div>
+</div>
+<div class="card-cream-callout">
+<h4>米白色提示区块</h4>
+<p>软米面上挂着点火线和内线产品碎片。 静于珊瑚色/森林/暗的卡片.</p>
+</div>
+</div>
+</section>
+<section>
+<div class="section-label">05 — 德莫- 卡尔网格</div>
+<h2 class="section-heading">高饱和单色展示网格</h2>
+<p class="section-intro">Demo 卡片在标志性面板表面携带产品UI碎片. 卡片高度有意识地变化——统一的网格感觉像一个谱面.</p>
+<div class="demo-grid">
+<div class="demo-card peach">工作流程编辑器<br/><small style="opacity:0.7; font-size:12px;">拖放构建器</small></div>
+<div class="demo-card mint">董事会视图<br/><small style="opacity:0.7; font-size:12px;">空勤班</small></div>
+<div class="demo-card cream">日历<br/><small style="opacity:0.7; font-size:12px;">时间线可视化</small></div>
+<div class="demo-card canvas">自动化 卡片<br/><small style="opacity:0.7; font-size:12px;">触发+条件+动作</small></div>
+<div class="demo-card yellow">链接记录<br/><small style="opacity:0.7; font-size:12px;">交叉表型关系</small></div>
+<div class="demo-card mustard">AI助理<br/><small style="opacity:0.7; font-size:12px;">自然语言到公式</small></div>
+</div>
+</section>
+<section>
+<div class="section-label">06——第卡片条</div>
+<h2 class="section-heading">热门文章网格</h2>
+<p class="section-intro">3-up 卡片带有彩色图案缩略图(16:9). 缩略图再利用信号表面(Peach,珊瑚色,薄荷),而不是渐变洗涤.</p>
+<div class="card-grid">
+<div class="article-card">
+<div class="article-thumb"></div>
+<div class="article-tag">· 第1条</div>
+<div class="article-title">AI准备:如何使你的组织代理人做好准备</div>
+<div class="article-meta">AI 项目规划</div>
+</div>
+<div class="article-card">
+<div class="article-thumb coral"></div>
+<div class="article-tag">战略 · 第 条</div>
+<div class="article-title">记录系统:AI剂成功的关键成分</div>
+<div class="article-meta">AI 项目规划</div>
+</div>
+<div class="article-card">
+<div class="article-thumb mint"></div>
+<div class="article-tag">自动化 · 第 条</div>
+<div class="article-title">如何制造一个不会在发射日坠落的AI应用程序</div>
+<div class="article-meta">自动化</div>
+</div>
+</div>
+</section>
+<section>
+<div class="section-label">07 ——定价子系统</div>
+<h2 class="section-heading">Inter Display 与胶囊按钮</h2>
+<p class="section-intro">Separate dialect for the pricing surface. Mid-weights 475/575, pill-shaped CTAs (`rounded.pill`), surface-soft for the featured tier.</p>
+<div class="pricing-grid">
+<div class="pricing-tier"><h4>免费版</h4><div class="price">$0</div><div class="pricing-tag">用户/月</div><ul><li>无限制的基数</li><li>1 GB 附件</li><li>Up to 1,000 records</li></ul><button class="btn btn-pricing-pill">尝试免费</button></div>
+<div class="pricing-tier"><h4>团队版</h4><div class="price">$24</div><div class="pricing-tag">用户/月,每年开户</div><ul><li>50 GB 附件</li><li>50,000 记录/基数</li><li>标准同步集成</li></ul><button class="btn btn-pricing-pill">尝试免费</button></div>
+<div class="pricing-tier featured"><h4>商业版</h4><div class="price">$45</div><div class="pricing-tag">用户/月,每年开户</div><ul><li>高分同步集成</li><li>萨马勒·索</li><li>高级日历特性</li></ul><button class="btn btn-pricing-pill">尝试免费</button></div>
+<div class="pricing-tier"><h4>企业规模</h4><div class="price">$—</div><div class="pricing-tag">自定义——联系销售</div><ul><li>超数据库</li><li>同步预设</li><li>审计记录+合规</li></ul><button class="btn btn-pricing-pill">联系销售</button></div>
+</div>
+</section>
+<section>
+<div class="section-label">08 · 表单控件</div>
+<h2 class="section-heading">输入框与标签</h2>
+<p class="section-intro">标准输入值为44px高度,且半径为6px. 焦点状态显示柔软的蓝色光芒.（原文参数：44px、6px）</p>
+<div class="form-grid">
+<div class="form-cell">
+<label class="form-label">电子邮箱</label>
+<input class="form-input" placeholder="you@example.com" type="email"/>
+</div>
+<div class="form-cell">
+<label class="form-label">电子邮件地址(重点)</label>
+<input class="form-input focused" type="email" value="alex@studio.com"/>
+</div>
+<div class="form-cell">
+<label class="form-label">工作空间名称</label>
+<input class="form-input" placeholder="营销运动" type="text"/>
+</div>
+<div class="form-cell wide">
+<label class="form-label">页:1</label>
+<textarea class="form-textarea" placeholder="告诉我们你的团队..."></textarea>
+</div>
+</div>
+</section>
+<section>
+<div class="section-label">09 · 间距层级</div>
+<h2 class="section-heading">间距基准 4px</h2>
+<p class="section-intro">所有间隔符都是4-多倍. 96px节奏是跨越每一页的通用垂直常数.（原文参数：96px）</p>
+<div class="spacing-row">
+<div class="spacing-block"><div class="spacing-bar" style="width:4px;"></div><div class="spacing-label">xxx 4px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:8px;"></div><div class="spacing-label">xs 8px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:12px;"></div><div class="spacing-label">sm 12px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:16px;"></div><div class="spacing-label">md 16px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:24px;"></div><div class="spacing-label">24px 高压压压轴</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:32px;"></div><div class="spacing-label">□ 32px</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:48px;"></div><div class="spacing-label">xxl 48px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:96px;"></div><div class="spacing-label">· 96px</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">10 · 圆角层级</div>
+<h2 class="section-heading">用视觉层级区分内容</h2>
+<p class="section-intro">12px 初级CTA和标志性卡片,10px二级卡片,6px输入,9999px图标+定价胶囊控件.（原文参数：10px、6px、9999px）</p>
+<div class="radius-row">
+<div class="radius-block" style="border-radius:2px;">2 − xs 组合键</div>
+<div class="radius-block" style="border-radius:6px;">6 零点</div>
+<div class="radius-block" style="border-radius:10px;">10 数据</div>
+<div class="radius-block" style="border-radius:12px;">12 − lg</div>
+<div class="radius-block" style="border-radius:9999px;">胶囊形</div>
+<div class="radius-block" style="border-radius:50%;">满</div>
+</div>
+</section>
+<section>
+<div class="section-label">11 · 层次与深度</div>
+<h2 class="section-heading">以色块区分层次</h2>
+<p class="section-intro">影影微细. 深度来自白色页面底色与特征表面卡片的对比——不是从重高地.</p>
+<div class="elevation-grid">
+<div class="elevation-card elevation-flat"><h5>平面</h5><p>无影. 身体部分,顶部导航,脚步.</p></div>
+<div class="elevation-card elevation-flat"><h5>软细边框</h5><p>1px 细边框 中超联赛冠军. 输入式,sub-nav列车,二级按钮.</p></div>
+<div class="elevation-card elevation-button"><h5>扣子休息</h5><p>以微弱阴暗微微降伏.</p></div>
+<div class="elevation-card elevation-focus"><h5>按键焦点</h5><p>3px outer ring in link blue at 30% alpha.</p></div>
+<div class="elevation-card elevation-flat"><h5>卡片 平方号</h5><p>无阴影;深度来自颜色对比面带.</p></div>
+<div class="elevation-card elevation-flat"><h5>签名 卡片 平面</h5><p>珊瑚色 / 森林 / 暗表面平坐着与白色的页面底色相对——不需要阴影.</p></div>
+</div>
+</section>
+<section id="responsive">
+<div class="section-label">12 · 响应式布局</div>
+<h2 class="section-heading">跨断点编辑节奏</h2>
+<p class="section-intro">视口变窄时，卡片网格减少列数，标志性卡片在各断点继续通栏展示。</p>
+<table class="responsive-table">
+<thead>
+<tr><th>名称</th><th>宽度</th><th>布局变化</th></tr>
+</thead>
+<tbody>
+<tr><td>手机端</td><td>&lt; 768px</td><td>单柱; 导航崩溃到汉堡; 演示网格1-up; 标志性卡片 stay 通栏; 标志条形包装; 脚步单柱.</td></tr>
+<tr><td>平板</td><td>768–1024px</td><td>2-up demo-grid; nave stay 水平; 奶油调味剂 卡片堆积 2-up; 定价比较变得可以滚动.</td></tr>
+<tr><td>桌面端</td><td>1024–1440px</td><td>3-或4-up演示网格;全top-nav可见;定价级使4-cross.</td></tr>
+<tr><td>宽</td><td>&gt; 1440px 单倍径</td><td>Same as desktop with more outer breathing room; max content width caps at ~1280px.</td></tr>
+</tbody>
+</table>
+<div class="device-ladder">
+<div class="device-bar" style="width:60px; height:120px;">375<br/>手机端</div>
+<div class="device-bar" style="width:90px; height:140px;">600<br/>小型电话</div>
+<div class="device-bar" style="width:140px; height:160px;">768<br/>平板电脑</div>
+<div class="device-bar" style="width:200px; height:180px;">1024<br/>膝上型计算机</div>
+<div class="device-bar" style="width:260px; height:200px;">1280<br/>桌面端</div>
+<div class="device-bar" style="width:320px; height:220px;">1440<br/>宽</div>
+</div>
+<div class="responsive-sub">
+<h4>触控区域</h4>
+<ul>
+<li>Primary CTA buttons render at minimum 48 × 48px (16px vertical padding + 16px line-height) — comfortably above WCAG AAA's 44 × 44 minimum.</li>
+<li>Circular icon buttons are exactly 40 × 40 — slightly under WCAG's preferred 44, but visually centered icons compensate.</li>
+<li>文字输入位于44px高度,与12px垂直的编解.（原文参数：44px、12px）</li>
+</ul>
+</div>
+<div class="responsive-sub">
+<h4>窄屏布局调整</h4>
+<ul>
+<li>顶端导航崩溃为汉堡,位于 &lt; 768px;菜单作为全屏工作表打开。</li>
+<li>卡片网格减少柱而不是缩小卡片.</li>
+<li>标签功能卡片在移动中将内容窗格上方的标签重新固定.</li>
+<li>定价比较表可横向滚动到1024px以下。（原文参数：1024px）</li>
+<li>首屏插图在移动上全线流血.</li>
+</ul>
+</div>
+</section>
+<footer class="footer" data-platform-example="footer">
+<div class="footer-shell">
+<p class="design-demo-note">栏目演示 · 数据与企业平台</p><div class="footer-grid">
+<div class="footer-col">
+<h6>数据管理</h6>
+<span>数据接入</span>
+<span>数据目录</span>
+<span>数据质量</span>
+</div>
+<div class="footer-col">
+<h6>分析与协作</h6>
+<span>报表</span>
+<span>工作流</span>
+<span>团队空间</span>
+</div>
+<div class="footer-col">
+<h6>平台资源</h6>
+<span>接口文档</span>
+<span>部署指南</span>
+<span>合规说明</span>
+</div>
+<div class="footer-col">
+<h6>支持</h6>
+<span>服务状态</span>
+<span>帮助中心</span>
+<span>问题反馈</span>
+</div>
+</div>
+
+</div>
+</footer>
+</body>
+</html>

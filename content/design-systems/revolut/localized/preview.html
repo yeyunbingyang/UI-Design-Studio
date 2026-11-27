@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>黑底钴蓝紫金融风</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --primary: #494fdf;
+    --primary-bright: #4f55f1;
+    --primary-deep: #3a40c4;
+    --on-primary: #ffffff;
+    --ink: #191c1f;
+    --body: #1f2226;
+    --charcoal: #3a3d40;
+    --mute: #505a63;
+    --ash: #5c5e60;
+    --stone: #8d969e;
+    --faint: #c9c9cd;
+    --on-dark: #ffffff;
+    --on-dark-mute: rgba(255,255,255,0.72);
+    --canvas-light: #ffffff;
+    --canvas-dark: #000000;
+    --surface-soft: #f4f4f4;
+    --surface-card: #ffffff;
+    --surface-deep: #0a0a0a;
+    --surface-elevated: #16181a;
+    --hairline-light: #e2e2e7;
+    --hairline-dark: rgba(255,255,255,0.12);
+    --hairline-strong: #191c1f;
+    --divider-soft: rgba(255,255,255,0.06);
+    --teal: #00a87e;
+    --light-blue: #007bc2;
+    --blue-link: #376cd5;
+    --light-green: #428619;
+    --green-text: #006400;
+    --yellow: #b09000;
+    --warning: #ec7e00;
+    --pink: #e61e49;
+    --danger: #e23b4a;
+    --deep-red: #8b0000;
+    --brown: #936d62;
+    --font-display: 'Inter Tight', 'Aeonik Pro', system-ui, sans-serif;
+    --font-ui: 'Inter', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-ui);
+    background: var(--canvas-light);
+    color: var(--body);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    font-size: 16px;
+    letter-spacing: 0.24px;
+  }
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 32px;
+    padding: 0 24px;
+    height: 64px;
+    background: var(--canvas-dark);
+    color: var(--on-dark);
+    border-bottom: 1px solid var(--hairline-dark);
+  }
+  .nav-links { list-style: none; padding: 0; margin: 0; display: flex; gap: 24px; justify-content: center; }
+  .nav-links a { color: var(--on-dark); text-decoration: none; font-size: 16px; font-weight: 600; letter-spacing: 0.24px; }
+  .nav-cta {
+    background: var(--canvas-light); color: var(--canvas-dark);
+    border: none; border-radius: 9999px;
+    padding: 12px 24px; font: inherit; font-weight: 600; font-size: 14px;
+    cursor: pointer; height: 40px;
+  }
+
+  /* getdesign.md nav additions */
+  .nav-left { display: flex; align-items: center; gap: 20px; }
+  .nav-brand-link, .nav-brand-link:link, .nav-brand-link:visited, .nav-brand-link:hover, .nav-brand-link:active { text-decoration: none; color: inherit; }
+  .nav-brand { font-family: var(--font-display); font-weight: 500; font-size: 18px; color: var(--on-dark); letter-spacing: -0.4px; }
+  .nav-github, .nav-github:link, .nav-github:visited, .nav-github:hover, .nav-github:active {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 6px 12px;
+    border: 1px solid var(--hairline-dark);
+    border-radius: 9999px;
+    color: var(--on-dark); text-decoration: none;
+    font-size: 12px; font-weight: 600;
+  }
+  /* end getdesign.md nav additions */
+
+  .hero {
+    padding: 120px 32px;
+    background: var(--canvas-dark);
+    color: var(--on-dark);
+    position: relative; overflow: hidden;
+  }
+  .hero-content { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: 96px; font-weight: 500; line-height: 1.0;
+    color: var(--on-dark);
+    margin: 0 0 32px;
+    letter-spacing: -1.5px;
+    text-align: left;
+  }
+  .hero p {
+    font-size: 18px; color: var(--on-dark-mute); max-width: 760px;
+    margin: 0 0 36px; line-height: 1.56;
+    letter-spacing: -0.09px;
+  }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-start; }
+  .btn {
+    border: none; padding: 14px 28px; border-radius: 9999px;
+    font: inherit; font-weight: 600; font-size: 16px; letter-spacing: 0.24px;
+    cursor: pointer; height: 48px;
+  }
+  .btn-primary { background: var(--canvas-light); color: var(--canvas-dark); }
+  .btn-primary-pressed { background: var(--faint); color: var(--canvas-dark); }
+  .btn-dark { background: var(--canvas-dark); color: var(--on-dark); }
+  .btn-soft { background: var(--surface-soft); color: var(--ink); }
+  .btn-outline-light { background: var(--canvas-light); color: var(--ink); border: 1px solid var(--hairline-strong); padding: 13px 27px; }
+  .btn-outline-dark { background: var(--canvas-dark); color: var(--on-dark); border: 1px solid var(--on-dark); padding: 13px 27px; }
+  .btn-pill-sm { background: var(--surface-soft); color: var(--ink); border-radius: 9999px; padding: 8px 16px; height: 36px; font-size: 14px; font-weight: 600; }
+
+  section { padding: 88px 32px; max-width: 1200px; margin: 0 auto; border-top: 1px solid var(--hairline-light); position: relative; }
+  section.dark { max-width: none; padding: 88px 32px; background: var(--canvas-dark); color: var(--on-dark); border-top: none; }
+  section.dark h2 { color: var(--on-dark); }
+  section.dark .lead { color: var(--on-dark-mute); }
+  section.dark-inner { max-width: 1200px; margin: 0 auto; }
+  h2 { font-family: var(--font-display); font-size: 56px; font-weight: 500; line-height: 1.0; color: var(--ink); margin: 0 0 12px; letter-spacing: -1px; }
+  .lead { font-size: 18px; color: var(--mute); max-width: 720px; margin: 0 0 40px; line-height: 1.5; }
+
+  .palette { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .swatch { border-radius: 20px; overflow: hidden; background: var(--surface-card); border: 1px solid var(--hairline-light); }
+  .swatch-color { height: 110px; }
+  .swatch-meta { padding: 16px; }
+  .swatch-name { font-weight: 600; color: var(--ink); font-size: 14px; margin: 0 0 4px; }
+  .swatch-hex { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: var(--mute); margin: 0 0 8px; letter-spacing: 0; }
+  .swatch-role { font-size: 12px; color: var(--charcoal); line-height: 1.4; margin: 0; }
+  .palette-group-title { font-family: var(--font-display); font-size: 24px; font-weight: 500; margin: 32px 0 16px; color: var(--ink); letter-spacing: -0.3px; }
+  .palette-group-title:first-child { margin-top: 0; }
+
+  .type-row { display: grid; grid-template-columns: 240px 1fr; gap: 32px; padding: 24px 0; border-bottom: 1px solid var(--hairline-light); align-items: baseline; }
+  .type-row:last-child { border-bottom: none; }
+  .type-meta { font-size: 12px; color: var(--mute); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0; }
+  .type-meta strong { color: var(--ink); display: block; font-weight: 600; font-size: 13px; margin-bottom: 4px; font-family: var(--font-ui); letter-spacing: 0.16px; }
+  .type-sample { color: var(--ink); }
+
+  .button-grid { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+
+  .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .feature-card-light {
+    background: var(--canvas-light); border: 1px solid var(--hairline-light);
+    border-radius: 20px; padding: 32px; color: var(--ink);
+  }
+  .feature-card-light h3 { margin: 0 0 12px; font-size: 24px; font-weight: 500; line-height: 1.33; font-family: var(--font-display); letter-spacing: 0; }
+  .feature-card-light p { margin: 0; color: var(--mute); font-size: 16px; line-height: 1.5; }
+  .feature-card-dark {
+    background: var(--surface-elevated); color: var(--on-dark);
+    border-radius: 20px; padding: 32px;
+  }
+  .feature-card-dark h3 { margin: 0 0 12px; font-size: 24px; font-weight: 500; line-height: 1.33; font-family: var(--font-display); letter-spacing: 0; color: var(--on-dark); }
+  .feature-card-dark p { margin: 0; color: var(--on-dark-mute); font-size: 16px; line-height: 1.5; }
+
+  .plan-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .plan-card { background: var(--surface-elevated); color: var(--on-dark); border-radius: 20px; padding: 32px; }
+  .plan-card-featured { background: var(--primary); color: var(--on-primary); }
+  .plan-name { font-family: var(--font-display); font-size: 32px; font-weight: 500; line-height: 1.19; margin: 0 0 12px; letter-spacing: -0.32px; }
+  .plan-price { font-size: 16px; margin: 0 0 24px; opacity: 0.85; }
+  .plan-features { list-style: none; padding: 0; margin: 0 0 24px; }
+  .plan-features li { padding: 8px 0; font-size: 14px; opacity: 0.85; }
+
+  .product-mockup { background: var(--canvas-dark); border-radius: 28px; padding: 64px 48px; text-align: center; color: var(--on-dark); position: relative; overflow: hidden; }
+  .device-frame { display: inline-block; width: 220px; height: 460px; border-radius: 36px; background: linear-gradient(180deg, #1a1a1a 0%, #2b2b2b 100%); border: 8px solid #2b2b2b; position: relative; }
+  .device-screen { position: absolute; inset: 12px 8px 16px 8px; border-radius: 24px; background: linear-gradient(180deg, #4f55f1 0%, #1a1ddb 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: 500; font-family: var(--font-display); }
+
+  .download-row { display: flex; gap: 16px; flex-wrap: wrap; }
+  .download-tile { background: var(--surface-soft); color: var(--ink); border-radius: 12px; padding: 12px 20px; height: 56px; display: inline-flex; align-items: center; font-size: 14px; font-weight: 600; }
+
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 800px; }
+  .field label { display: block; font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 8px; letter-spacing: 0.16px; }
+  .field input, .field textarea {
+    width: 100%; padding: 14px 16px; border: 1px solid var(--hairline-light);
+    font: inherit; font-size: 16px; color: var(--ink); background: var(--canvas-light);
+    border-radius: 12px; height: 56px; letter-spacing: 0.24px;
+  }
+  .field textarea { height: 120px; resize: vertical; padding: 14px 16px; }
+
+  .badge-tag { display: inline-block; background: var(--surface-soft); color: var(--ink); border-radius: 9999px; padding: 4px 12px; font-size: 13px; }
+  .badge-feature { display: inline-block; background: var(--primary); color: var(--on-primary); border-radius: 9999px; padding: 4px 12px; font-size: 13px; font-weight: 600; }
+
+  .spacing-row { display: flex; align-items: flex-end; gap: 12px; flex-wrap: wrap; }
+  .spacing-block { background: var(--ink); height: 32px; }
+  .spacing-label { font-size: 11px; color: var(--mute); margin-top: 8px; text-align: center; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0; }
+
+  .radius-grid { display: flex; gap: 24px; flex-wrap: wrap; }
+  .radius-card { width: 140px; }
+  .radius-box { height: 120px; background: var(--ink); }
+  .radius-meta { font-size: 12px; color: var(--mute); margin-top: 8px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0; }
+
+  .elev-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .elev-card { padding: 32px 24px; text-align: center; font-size: 13px; border-radius: 20px; }
+  .elev-flat { background: var(--canvas-light); border: 1px dashed var(--hairline-light); }
+  .elev-card-light { background: var(--surface-card); border: 1px solid var(--hairline-light); }
+  .elev-elevated-dark { background: var(--surface-elevated); color: var(--on-dark); }
+  .elev-featured { background: var(--primary); color: var(--on-primary); }
+
+  .breakpoint-table { width: 100%; border-collapse: collapse; }
+  .breakpoint-table th, .breakpoint-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--hairline-light); font-size: 14px; }
+  .breakpoint-table th { background: var(--surface-soft); font-weight: 600; color: var(--ink); }
+  .device-ladder { display: flex; align-items: flex-end; gap: 16px; margin-top: 32px; }
+  .device { background: var(--surface-soft); border: 1px solid var(--hairline-strong); display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--mute); border-radius: 12px; }
+
+  footer.site-footer {
+    background: var(--canvas-dark); color: var(--on-dark-mute);
+    padding: 80px 24px 32px;
+    margin-top: 0;
+  }
+  footer.site-footer .footer-inner { max-width: 1200px; margin: 0 auto; }
+  footer.site-footer p { color: var(--on-dark-mute); font-size: 14px; }
+  footer.site-footer a { color: var(--on-dark); text-decoration: none; font-weight: 600; }
+  .footer-meta { border-top: 1px solid var(--divider-soft); padding-top: 24px; margin-top: 32px; font-size: 13px; color: var(--on-dark-mute); }
+
+  @media (max-width: 1024px) {
+    .nav { padding: 0 20px; }
+    section, section.dark { padding: 64px 24px; }
+    .hero { padding: 80px 24px; }
+    .hero h1 { font-size: 64px; letter-spacing: -1px; }
+    h2 { font-size: 44px; }
+    .palette { grid-template-columns: repeat(3, 1fr); }
+    .card-grid { grid-template-columns: repeat(2, 1fr); }
+    .plan-grid { grid-template-columns: repeat(2, 1fr); }
+    .elev-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 720px) {
+    .nav { padding: 0 16px; min-height: 56px; gap: 12px; }
+    .nav-links { display: none; }
+    .hero { padding: 56px 16px; }
+    .hero h1 { font-size: 44px; letter-spacing: -0.4px; }
+    .hero p { font-size: 16px; }
+    section, section.dark { padding: 48px 16px; }
+    h2 { font-size: 32px; letter-spacing: -0.4px; }
+    .palette { grid-template-columns: repeat(2, 1fr); }
+    .card-grid, .plan-grid { grid-template-columns: 1fr; }
+    .form-grid { grid-template-columns: 1fr; }
+    .type-row { grid-template-columns: 1fr; gap: 12px; }
+    .elev-grid { grid-template-columns: 1fr; }
+  }
+  /* FOOTER (canonical centered) */
+  .footer {
+    padding: 48px 32px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .footer a { text-decoration: none; }
+
+
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+<style data-design-nav="true">
+.design-preview-nav { min-height:48px; }
+.design-preview-nav .nav-brand { white-space:normal; overflow-wrap:anywhere; }
+.design-preview-nav .nav-links { display:flex; flex-wrap:wrap; gap:8px clamp(10px,2vw,26px); padding-block:5px; }
+.design-preview-nav a { text-decoration:none; }
+.design-preview-nav .nav-links a { color:inherit; }
+.design-preview-nav .nav-links a:hover { text-decoration:underline; text-underline-offset:3px; }
+.design-preview-nav a:focus-visible { outline:2px solid currentColor; outline-offset:4px; }
+:is([id^=design-section-],[id=design-overview]) { scroll-margin-top:94px; }
+@media (max-width:760px) {
+  .design-preview-nav { position:static; display:flex; flex-wrap:wrap; gap:3px 12px; padding:8px 12px; height:auto; }
+  .design-preview-nav .nav-left { min-width:0; }
+  .design-preview-nav > .nav-links { flex:1 1 100%; display:flex; padding-inline:0; }
+  .design-preview-nav .nav-cta { display:none; }
+  :is([id^=design-section-],[id=design-overview]) { scroll-margin-top:14px; }
+}
+</style></head>
+<body data-platform-type="金融交易"><nav aria-label="样张章节" class="nav design-preview-nav" data-design-nav="true"><div class="nav-left"><span class="nav-brand">Revolut</span></div><ul class="nav-links"><li><a href="#design-section-1">配色</a></li><li><a href="#design-section-2">字体</a></li><li><a href="#design-section-3">按钮</a></li><li><a href="#design-section-4">卡片</a></li><li><a href="#design-section-15">表单</a></li><li><a href="#design-section-16">布局</a></li></ul><a class="nav-cta" href="#design-overview">概览</a></nav>
+<header class="hero">
+<div class="hero-content">
+<h1 id="design-overview">黑底钴蓝紫金融风</h1>
+<p>用黑底讲品牌故事，用白底展示产品目录。标题采用 Aeonik Pro，正文采用 Inter，钴蓝紫品牌色仅用于推荐套餐卡片。</p>
+<div class="hero-actions">
+<button class="btn btn-primary">选择您的订阅</button>
+<button class="btn btn-outline-dark">了解更多</button>
+</div>
+</div>
+</header>
+<section id="palette">
+<h2 id="design-section-1">配色</h2>
+<p class="lead">黑页面底色,白目录,钴紫色品牌邮票,以及宽产品-紫色的蓝绿色调色板,深粉色,浅绿色,警告橙色,黄色,棕色.</p>
+<div class="palette-group-title">品牌色与强调色</div>
+<div class="palette">
+<div class="swatch"><div class="swatch-color" style="background: var(--primary);"></div><div class="swatch-meta"><p class="swatch-name">Cobalt Violet</p><p class="swatch-hex">#494fdf</p><p class="swatch-role">特色计划卡片,品牌字号.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--primary-bright);"></div><div class="swatch-meta"><p class="swatch-name">Cobalt Bright</p><p class="swatch-hex">#4f55f1</p><p class="swatch-role">暗相片头的内含链接.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--primary-deep);"></div><div class="swatch-meta"><p class="swatch-name">Cobalt Deep</p><p class="swatch-hex">#3a40c4</p><p class="swatch-role">按州制置.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--on-primary); border: 1px solid var(--hairline-light);"></div><div class="swatch-meta"><p class="swatch-name">On-Primary</p><p class="swatch-hex">#ffffff</p><p class="swatch-role">钴标签</p></div></div>
+</div>
+<div class="palette-group-title">界面表面</div>
+<div class="palette">
+<div class="swatch"><div class="swatch-color" style="background: var(--canvas-light); border: 1px solid var(--hairline-light);"></div><div class="swatch-meta"><p class="swatch-name">Canvas Light</p><p class="swatch-hex">#ffffff</p><p class="swatch-role">白色目录模式.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--canvas-dark);"></div><div class="swatch-meta"><p class="swatch-name">Canvas Dark</p><p class="swatch-hex">#000000</p><p class="swatch-role">故事解说页面底色.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--surface-soft);"></div><div class="swatch-meta"><p class="swatch-name">Surface Soft</p><p class="swatch-hex">#f4f4f4</p><p class="swatch-role">软按钮,下载瓦片.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--surface-deep);"></div><div class="swatch-meta"><p class="swatch-name">Surface Deep</p><p class="swatch-hex">#0a0a0a</p><p class="swatch-role">暗带中设置卡片.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--surface-elevated);"></div><div class="swatch-meta"><p class="swatch-name">Surface Elevated</p><p class="swatch-hex">#16181a</p><p class="swatch-role">计划卡片在黑暗中。</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--hairline-light);"></div><div class="swatch-meta"><p class="swatch-name">Hairline Light</p><p class="swatch-hex">#e2e2e7</p><p class="swatch-role">白带的分裂者</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--hairline-strong);"></div><div class="swatch-meta"><p class="swatch-name">Hairline Strong</p><p class="swatch-hex">#191c1f</p><p class="swatch-role">卡片 大纲,结构规则.</p></div></div>
+</div>
+<div class="palette-group-title">文字色</div>
+<div class="palette">
+<div class="swatch"><div class="swatch-color" style="background: var(--ink);"></div><div class="swatch-meta"><p class="swatch-name">Ink</p><p class="swatch-hex">#191c1f</p><p class="swatch-role">初标文.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--body);"></div><div class="swatch-meta"><p class="swatch-name">Body</p><p class="swatch-hex">#1f2226</p><p class="swatch-role">长形体.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--charcoal);"></div><div class="swatch-meta"><p class="swatch-name">Charcoal</p><p class="swatch-hex">#3a3d40</p><p class="swatch-role">说明。</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--mute);"></div><div class="swatch-meta"><p class="swatch-name">Mute</p><p class="swatch-hex">#505a63</p><p class="swatch-role">支持文本。</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--ash);"></div><div class="swatch-meta"><p class="swatch-name">Ash</p><p class="swatch-hex">#5c5e60</p><p class="swatch-role">脚印副本.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--stone);"></div><div class="swatch-meta"><p class="swatch-name">Stone</p><p class="swatch-hex">#8d969e</p><p class="swatch-role">元数据。</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--faint);"></div><div class="swatch-meta"><p class="swatch-name">Faint</p><p class="swatch-hex">#c9c9cd</p><p class="swatch-role">已禁用前景图。</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--on-dark); border: 1px solid var(--hairline-light);"></div><div class="swatch-meta"><p class="swatch-name">On-Dark</p><p class="swatch-hex">#ffffff</p><p class="swatch-role">canvas-dark上的内容.</p></div></div>
+</div>
+<div class="palette-group-title">产品 强调色 调色板</div>
+<div class="palette">
+<div class="swatch"><div class="swatch-color" style="background: var(--teal);"></div><div class="swatch-meta"><p class="swatch-name">Teal</p><p class="swatch-hex">#00a87e</p><p class="swatch-role">产品插图.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--light-blue);"></div><div class="swatch-meta"><p class="swatch-name">Light Blue</p><p class="swatch-hex">#007bc2</p><p class="swatch-role">暗相片头的内含链接.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--blue-link);"></div><div class="swatch-meta"><p class="swatch-name">Blue Link</p><p class="swatch-hex">#376cd5</p><p class="swatch-role">白色上的默认内线链接。</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--light-green);"></div><div class="swatch-meta"><p class="swatch-name">Light Green</p><p class="swatch-hex">#428619</p><p class="swatch-role">成功/ 积极点名.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--green-text);"></div><div class="swatch-meta"><p class="swatch-name">Green Text</p><p class="swatch-hex">#006400</p><p class="swatch-role">内含成功文本.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--yellow);"></div><div class="swatch-meta"><p class="swatch-name">Yellow</p><p class="swatch-hex">#b09000</p><p class="swatch-role">注意/待处理状态。</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--warning);"></div><div class="swatch-meta"><p class="swatch-name">Warning</p><p class="swatch-hex">#ec7e00</p><p class="swatch-role">示警图.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--pink);"></div><div class="swatch-meta"><p class="swatch-name">Deep Pink</p><p class="swatch-hex">#e61e49</p><p class="swatch-role">摄影强调色,偶像.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--danger);"></div><div class="swatch-meta"><p class="swatch-name">Danger</p><p class="swatch-hex">#e23b4a</p><p class="swatch-role">破坏/错误。</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--deep-red);"></div><div class="swatch-meta"><p class="swatch-name">Deep Red</p><p class="swatch-hex">#8b0000</p><p class="swatch-role">内置错误文本。</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--brown);"></div><div class="swatch-meta"><p class="swatch-name">Brown</p><p class="swatch-hex">#936d62</p><p class="swatch-role">金属一级 卡片 界面框架。</p></div></div>
+</div>
+</section>
+<section id="typography">
+<h2 id="design-section-2">字体排版</h2>
+<p class="lead">Aeonik Pro 500 for display, Inter for body. Inter Tight substitutes for Aeonik Pro when proprietary licensing is unavailable.</p>
+<div class="type-row"><div class="type-meta"><strong>display-xxl</strong>136 · 500 · 1.0 · -2.72px</div><div class="type-sample" style="font-family:var(--font-display); font-size:96px; font-weight:500; line-height:1.0; letter-spacing:-1.9px;">银行业和银行业</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-xl</strong>80 · 500 · 1.0 · -0.8px</div><div class="type-sample" style="font-family:var(--font-display); font-size:64px; font-weight:500; line-height:1.0; letter-spacing:-0.6px;">选择您的订阅</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-lg</strong>48 · 500 · 1.21 · -0.48px</div><div class="type-sample" style="font-family:var(--font-display); font-size:48px; font-weight:500; line-height:1.21; letter-spacing:-0.48px;">Join the 70+ million using Revolut</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-md</strong>40 · 500 · 1.2 · -0.4px</div><div class="type-sample" style="font-family:var(--font-display); font-size:40px; font-weight:500; line-height:1.2; letter-spacing:-0.4px;">计划补助金</div></div>
+<div class="type-row"><div class="type-meta"><strong>heading-lg</strong>32 · 500 · 1.19 · -0.32px</div><div class="type-sample" style="font-family:var(--font-display); font-size:32px; font-weight:500; line-height:1.19; letter-spacing:-0.32px;">标准</div></div>
+<div class="type-row"><div class="type-meta"><strong>heading-md</strong>24 · 500 · 1.33</div><div class="type-sample" style="font-family:var(--font-display); font-size:24px; font-weight:500; line-height:1.33;">向全世界汇款</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-lg</strong>18 · 400 · 1.56 · -0.09px</div><div class="type-sample" style="font-size:18px; line-height:1.56; letter-spacing:-0.09px;">管理你钱的完整个人银行业务经验</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-md</strong>16 · 400 · 1.5 · 0.24px</div><div class="type-sample" style="font-size:16px; letter-spacing:0.24px;">Marketing prose with the small mechanical tracking that gives Inter its fintech precision.</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-md-bold</strong>16 · 600 · 1.5 · 0.16px</div><div class="type-sample" style="font-size:16px; font-weight:600; letter-spacing:0.16px;">缩影体复制供点名和突出.</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-sm</strong>14 · 400 · 1.43</div><div class="type-sample" style="font-size:14px;">说明和元数据。</div></div>
+<div class="type-row"><div class="type-meta"><strong>button-lg</strong>20 · 500 · 1.4 (Aeonik)</div><div class="type-sample" style="font-family:var(--font-display); font-size:20px; font-weight:500;">开始使用</div></div>
+<div class="type-row"><div class="type-meta"><strong>button-md</strong>16 · 600 · 1.5 · 0.24px</div><div class="type-sample" style="font-size:16px; font-weight:600; letter-spacing:0.24px;">选择您的订阅</div></div>
+<div class="type-row"><div class="type-meta"><strong>caption</strong>13 · 400 · 1.4</div><div class="type-sample" style="font-size:13px; color:var(--mute);">Revolut银行 UAB 2026——设计系统目录.</div></div>
+</section>
+<section id="components">
+<h2 id="design-section-3">按钮</h2>
+<p class="lead">所有按钮都是胶囊形(`rounded.full`). 白在暗是该品牌的主要行动按钮模式.</p>
+<div class="button-grid">
+<button class="btn btn-primary">button-primary</button>
+<button class="btn btn-primary-pressed">button-primary-pressed</button>
+<button class="btn btn-dark">button-dark</button>
+<button class="btn btn-soft">button-soft</button>
+<button class="btn btn-outline-light">button-outline-light</button>
+<button class="btn-pill-sm">button-pill-sm</button>
+</div>
+<div class="button-grid" style="margin-top:24px; padding:32px; background:var(--canvas-dark); border-radius:20px;">
+<button class="btn btn-primary">button-primary</button>
+<button class="btn btn-outline-dark">button-outline-dark</button>
+</div>
+</section>
+<section>
+<h2 id="design-section-4">功能卡片(灯光)</h2>
+<p class="lead">白页面底色使用的特性卡 `rounded.lg` (20px(角和) `hairline-light` 1px 大纲。</p>
+<div class="card-grid">
+<div class="feature-card-light">
+<h3>向全世界汇款</h3>
+<p>Transfer money in 30+ currencies at the interbank exchange rate.</p>
+</div>
+<div class="feature-card-light">
+<h3>毫无保留地保存</h3>
+<p>买东西赚点利息,你还有零钱</p>
+</div>
+<div class="feature-card-light">
+<h3>投资库存</h3>
+<p>Buy fractional shares in over 1,500 stocks with no commission.</p>
+</div>
+</div>
+</section>
+<section class="dark">
+<div class="dark-inner">
+<h2>功能卡片(暗处)</h2>
+<p class="lead">暗段内部,功能卡片互换为`surface-elevated`(`#16181a`)——略微发光,起降canvas-dark.</p>
+<div class="card-grid">
+<div class="feature-card-dark">
+<h3>银行业之外</h3>
+<p>一个远超出传统银行业务的账户.</p>
+</div>
+<div class="feature-card-dark">
+<h3>高精度经验</h3>
+<p>休息室、旅行保险、卡片材料保费。</p>
+</div>
+<div class="feature-card-dark">
+<h3>加密投资( B)</h3>
+<p>购买、持有和交易密码和库存,并用现金。</p>
+</div>
+</div>
+</div>
+</section>
+<section class="dark">
+<div class="dark-inner">
+<h2>计划网格</h2>
+<p class="lead">4-up 计划网格,建议分级翻转为钴紫色(`{component.plan-card-featured}`).</p>
+<div class="plan-grid">
+<div class="plan-card">
+<p class="plan-name">标准</p>
+<p class="plan-price">免费版</p>
+<ul class="plan-features">
+<li>自由的英镑和欧元账户</li>
+<li>Send money to 30+ currencies</li>
+<li>以任何货币在国外的消费</li>
+</ul>
+<button class="btn btn-primary" style="width:100%; height:44px;">获取标准</button>
+</div>
+<div class="plan-card">
+<p class="plan-name">加号</p>
+<p class="plan-price">£3.99/month</p>
+<ul class="plan-features">
+<li>标准中的所有</li>
+<li>保护买方</li>
+<li>加卡片,塑料</li>
+</ul>
+<button class="btn btn-outline-dark" style="width:100%; height:44px;">获取加号</button>
+</div>
+<div class="plan-card plan-card-featured">
+<p class="plan-name"></p>
+<p class="plan-price">£8.99/month</p>
+<ul class="plan-features">
+<li>附加中的所有内容</li>
+<li>金属铝 卡片</li>
+<li>通过 DragonPass 休息室访问</li>
+</ul>
+<button class="btn btn-primary" style="width:100%; height:44px;">获取 Premium 键</button>
+</div>
+<div class="plan-card">
+<p class="plan-name">金属</p>
+<p class="plan-price">£14.99/month</p>
+<ul class="plan-features">
+<li>普利米的一切都会</li>
+<li>1%  欧洲以外的现金回扣</li>
+<li>金属卡片, 完成量的选择</li>
+</ul>
+<button class="btn btn-outline-dark" style="width:100%; height:44px;">获取金属</button>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2>产品混杂带</h2>
+<p class="lead">通栏手机对`canvas-dark`的模拟——资产本身是区域,没有界面框架,没有标题覆盖.</p>
+<div class="product-mockup">
+<div class="device-frame">
+<div class="device-screen">£105.50</div>
+</div>
+</div>
+</section>
+<section>
+<h2>下载图纸</h2>
+<p class="lead">App商店下载按钮使用`rounded.md`(12px)和`surface-soft`背景.</p>
+<div class="download-row">
+<span class="download-tile">QQ 应用存储器</span>
+<span class="download-tile">QQ 谷歌游戏</span>
+</div>
+</section>
+<section>
+<h2 id="design-section-15">表单控件</h2>
+<p class="lead">基因56px输入高度用于fintech访问.（原文参数：56px）</p>
+<div class="form-grid">
+<div class="field">
+<label>电子邮箱</label>
+<input placeholder="you@example.com" type="email"/>
+</div>
+<div class="field">
+<label>电话</label>
+<input placeholder="+44 20 0000 0000" type="tel"/>
+</div>
+<div class="field">
+<label>国家</label>
+<input placeholder="联合王国" type="text"/>
+</div>
+<div class="field">
+<label>计划</label>
+<input placeholder="" type="text"/>
+</div>
+<div class="field" style="grid-column: 1 / -1;">
+<label>页:1</label>
+<textarea placeholder="任择说明"></textarea>
+</div>
+</div>
+<div style="margin-top: 32px; display: flex; gap: 12px; align-items: center;">
+<span class="badge-tag">标准</span>
+<span class="badge-tag">加号</span>
+<span class="badge-feature">最受欢迎的</span>
+</div>
+</section>
+<section id="layout">
+<h2 id="design-section-16">间距层级</h2>
+<p class="lead">一个4px基础,由`section: 88px`和`band: 120px`驱动编辑双曲节奏.（原文参数：4px）</p>
+<div class="spacing-row">
+<div><div class="spacing-block" style="width:4px;"></div><div class="spacing-label">xxx 4 数据</div></div>
+<div><div class="spacing-block" style="width:6px;"></div><div class="spacing-label">xs 6 数据</div></div>
+<div><div class="spacing-block" style="width:8px;"></div><div class="spacing-label">sm 8 数据</div></div>
+<div><div class="spacing-block" style="width:14px;"></div><div class="spacing-label">md 14 数据</div></div>
+<div><div class="spacing-block" style="width:16px;"></div><div class="spacing-label">16 高压压压轴</div></div>
+<div><div class="spacing-block" style="width:24px;"></div><div class="spacing-label">□ 24</div></div>
+<div><div class="spacing-block" style="width:32px;"></div><div class="spacing-label">xxl 32 数据</div></div>
+<div><div class="spacing-block" style="width:48px;"></div><div class="spacing-label">48 化学反应</div></div>
+<div><div class="spacing-block" style="width:80px;"></div><div class="spacing-label">80 区块</div></div>
+<div><div class="spacing-block" style="width:88px;"></div><div class="spacing-label">88 · 章节</div></div>
+<div><div class="spacing-block" style="width:120px;"></div><div class="spacing-label">120 频带</div></div>
+</div>
+</section>
+<section>
+<h2>圆角</h2>
+<p class="lead">胶囊形用于按钮,lg-20px用于卡片,xl-28px用于产品模型.（原文参数：20px、28px）</p>
+<div class="radius-grid">
+<div class="radius-card"><div class="radius-box" style="border-radius:0;"></div><div class="radius-meta">无 0</div></div>
+<div class="radius-card"><div class="radius-box" style="border-radius:8px;"></div><div class="radius-meta">sm 8 数据</div></div>
+<div class="radius-card"><div class="radius-box" style="border-radius:12px;"></div><div class="radius-meta">md 12 数据</div></div>
+<div class="radius-card"><div class="radius-box" style="border-radius:20px;"></div><div class="radius-meta">20 高压压压轴</div></div>
+<div class="radius-card"><div class="radius-box" style="border-radius:28px;"></div><div class="radius-meta">□ 28</div></div>
+<div class="radius-card"><div class="radius-box" style="border-radius:9999px; height:120px; width:120px;"></div><div class="radius-meta">胶囊形 数据</div></div>
+</div>
+</section>
+<section>
+<h2>层次与深度</h2>
+<p class="lead">深度是画布切换+表面光度的变换. 突出的层次是它自己的紫罗兰高地步骤。</p>
+<div class="elev-grid">
+<div class="elev-card elev-flat">Level 0 — Flat</div>
+<div class="elev-card elev-card-light">Level 1 — Card on Light</div>
+<div class="elev-card elev-elevated-dark">2 级 : 高亮的暗色</div>
+<div class="elev-card elev-featured">Level 3 — Featured</div>
+</div>
+</section>
+<section>
+<h2>响应式布局</h2>
+<p class="lead">Six breakpoints from desktop XL (≥1440) to small mobile (≤425). Hero clamps from 136px down to 48px across the ladder.</p>
+<table class="breakpoint-table">
+<thead><tr><th>断点</th><th>宽度</th><th>布局变化</th></tr></thead>
+<tbody>
+<tr><td>桌面 XL 软件</td><td>≥ 1440px</td><td>4-up plan grid, full-bleed product mockups, max content 1200.</td></tr>
+<tr><td>桌面端</td><td>1280–1439px</td><td>集装箱缩水; xl 侧垫。</td></tr>
+<tr><td>块状大</td><td>1024–1279px</td><td>计划网格4-up;特征网格3-up.</td></tr>
+<tr><td>平板</td><td>768–1023px</td><td>计划网格2-up; 特征网格2-up; sub-nav卷轴导航条.</td></tr>
+<tr><td>大型移动</td><td>426–767px</td><td>计划格网1-up; 导航汉堡; 首屏夹子到64px.（原文参数：64px）</td></tr>
+<tr><td>手机端</td><td>≤ 425px</td><td>所有网格 1-up; 首屏 48px; 分区 垫装 64px.</td></tr>
+</tbody>
+</table>
+<div class="device-ladder">
+<div class="device" style="width:60px; height:120px;">390</div>
+<div class="device" style="width:90px; height:140px;">600</div>
+<div class="device" style="width:130px; height:170px;">800</div>
+<div class="device" style="width:200px; height:200px;">1024</div>
+<div class="device" style="width:280px; height:220px;">1280</div>
+<div class="device" style="width:340px; height:240px;">1440</div>
+</div>
+</section>
+<footer class="footer" data-platform-example="footer">
+<div class="footer-shell">
+<p class="design-demo-note">栏目演示 · 金融交易</p><div class="footer-grid">
+<div class="footer-col">
+<h6>产品</h6>
+<span>账户</span>
+<span>转账</span>
+<span>交易工具</span>
+</div>
+<div class="footer-col">
+<h6>记录</h6>
+<span>交易状态</span>
+<span>收支明细</span>
+<span>对账记录</span>
+</div>
+<div class="footer-col">
+<h6>信息</h6>
+<span>费用说明</span>
+<span>风险说明</span>
+<span>帮助文档</span>
+</div>
+<div class="footer-col">
+<h6>支持</h6>
+<span>账户安全</span>
+<span>服务状态</span>
+<span>联系我们</span>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

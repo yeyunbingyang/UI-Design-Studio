@@ -1,0 +1,655 @@
+# Uber · 设计规范
+
+**说明**　正文含机器初译。检测到译文异常的条目保留英文，文末保留原始设计词元。
+
+
+
+
+## 概览
+
+Uber is a transportation-and-delivery super-app — ride, eats, freight, the whole urban logistics layer — and the brand's web surface signals that scale through restraint: no third colour, no accent palette, no illustration that fights the headline. The page is structurally a black-and-white duet, where black `{colors.primary}` is the conversion anchor (every CTA pill, every nav login button, the footer fill) and `{colors.canvas}` white carries everything else. The only consistent decoration is a body of editorial 4:3 illustrations — riders, drivers, parking lots, cars-on-highway — that ground the marketing without leaking accent colour into the system.
+
+Type is the second decisive voice. Two custom faces carry every page: `UberMove` at weight 700 for headlines (32 – 52 px display sizes with tight 1.22 – 1.25 line-height, never letter-spaced), and `UberMoveText` at weights 400 / 500 for body, button, and link. The pairing reads as engineering-grade — no italic, no decorative weight, no tracking flourish. Headlines are sentence-case; eyebrows are uppercase only when used as the section eyebrow ("WHY BECOME"); buttons are sentence-case.
+
+单形状符号是避孕药。每轮交互元素回合到 `{rounded.pill}` 999 px ——初级CTA,二级CTA,微妙灰色胶囊形,白色浮药,类芯片,app-download徽章. Cards and round. `{rounded.xl}` 16 px; 更大的"去买" 2026" 年度秀卡使用相同的 16 px 形状,仅标量。首屏骑行请求表上的标签切换使用非形状 `{rounded.pill-tab}` 36 px 几乎不漏,故意比犬科更紧 999 px 胶囊形.
+
+**关键特征 :**
+- 一种双色的 CTA 等级: 黑色 `{colors.primary}` 初级转化目标避孕药;白色 `{colors.canvas}` 二级避孕药(有时带有软滴影),细微灰色 `{colors.canvas-soft}` 胶囊形用于三级或芯片变种.
+- 胶囊形是单一的标志形状—— `{rounded.pill}` 999 px 上,除标签切换(`{rounded.pill-tab}` 36 px)和较大的产品卡(`{rounded.xl}` 16 px).
+- Every headline is sentence-case in `{typography.display-xl}` / `{typography.display-xxl}` weight 700; no all-caps display.
+- 编辑 4:3 骑手/驾驶员/汽车的插图是唯一一致的装饰系统;没有梯度,没有大气背景,没有不是卡片提示的阴影.
+- A signature alternating-band rhythm: white feature card → black promo card (with white text and white CTA) → white feature card → black footer. The black bands are NOT hero-only; they appear mid-page as promo callouts.
+- 首屏身上的签名骑行请求表卡:皮针输入+目的地输入+日期/时间芯片+黑色"见价"胶囊形,全部堆在a内 `{rounded.xl}` 暗影卡片(原变种).
+
+
+## 配色
+
+### 品牌色与强调色
+- **墨黑笔** (`{colors.primary}` — `#000000`:品牌是唯一的转换颜色,每一颗初级CTA丸,页脚填充,每个暗色宣传带,每个导航登录按钮,系统没有二级强调色.
+- **表面按下** (`{colors.surface-pressed}` — `#e2e2e2`:按态填充白丸——一种软灰色,只在活性/按态中使用.
+- **Black Elevated** (`{colors.black-elevated}` — `#282828`): A near-black used on hover for the translucent white tab-toggle pill. Documented as a system colour because it appears on a recurring brand control.
+
+### 界面表面
+- **页面底色** (`{colors.canvas}` — `#ffffff`: 默认的页面背景.
+- **软画帘** (`{colors.canvas-soft}` — `#efefef`: 类芯片的软灰色填充,骑行-求车卡内方的成形-输入行,以及微妙的胶囊形按钮.
+- **软罐头** (`{colors.canvas-softer}` — `#f3f3f3`:一种稍轻的灰色,用作白色表面的嵌入式填充物.
+
+### 文字颜色
+- **墨水( 墨水 )** (`{colors.ink}` — `#000000`:光表面的每一个标题和身体段落.
+- **Body** (`{colors.body}` — `#5e5e5e`): Secondary text — captions, sub-headings, supporting copy.
+- **细边线中间** (`{colors.hairline-mid}` — `#4b4b4b`:一种中格用于页脚内侧的哑联文本和面包屑风格的导航.
+- **静音** (`{colors.mute}` — `#afafaf`:最轻的文本角色——占位符文本,精细印刷,低优先级元数据.
+- **On Dark** (`{colors.on-dark}` — `#ffffff`): All text on `{colors.ink}` surfaces (footer, dark promo bands).
+
+### 语义色
+The brand does not maintain a separate error / success / warning palette in its public marketing surface. Validation cues come from the primary black or from the brand's editorial illustrations. The `#0000ee` link colour is the system's only chromatic — it's the browser-default link blue, appearing in body-copy inline links inside legal / footer text.
+
+
+## 字体排版
+
+### 字体族
+Two custom faces carry the entire system:
+
+1. **A custom geometric display sans** (extracted as `UberMove`) for every headline. Weight 700 only; no italic; no tracking variation. Sizes range from `display-sm` 20 px up to `display-xxl` 52 px on the hero. Line-heights tighten to 1.22 – 1.25 at display sizes for a poured-on-the-page look.
+2. **A custom text sans** (extracted as `UberMoveText`) for body, button, link, and small headings. Weights 400 and 500 are the working pair. Used at 12 – 18 px; 24 px maximum for ride-request form labels. Tracking is always neutral.
+
+两人面孔共享家族DNA,但绝不重合角色——显示面孔从未带身体段落;文字面孔从未带首屏头条.
+
+### 字号层级
+
+| 调试 | 大小 | 字重 | 线条高度 | 使用 |
+|---|---|---|---|---|
+| `{typography.display-xxl}` | 52px | 700 | 64px | 首屏头条("随身携带" Uber","想什么时候开车". |
+| `{typography.display-xl}` | 36px | 700 | 44px | 页面部分头条("后期计划","安全,简化"). |
+| `{typography.display-lg}` | 32px | 700 | 40px | Promo-card 头条。 |
+| `{typography.display-md}` | 24px | 700 | 32px | 牌名,插图宣传头条. |
+| `{typography.display-sm}` | 20px | 700 | 28px | 副卡标题。 |
+| `{typography.body-lg}` | 18px | 500 | 24px | 领带段落和更大的身体。 |
+| `{typography.body-md}` | 16px | 400 | 24px | 默认段落正文. |
+| `{typography.body-md-strong}` | 16px | 500 | 20px | 粗体内衬体和大多数按钮标签. |
+| `{typography.body-sm}` | 14px | 400 | 20px | 说明,二级元数据。 |
+| `{typography.body-sm-strong}` | 14px | 500 | 16px | 粗体标题/ 芯片标签 。 |
+| `{typography.caption}` | 12px | 400 | 20px | 精细的指纹,页脚的副线。 |
+| `{typography.button-large}` | 18px | 500 | 24px | 骑行请求表内有大圆形按钮. |
+| `{typography.button-md}` | 16px | 500 | 20px | 默认按钮标签 。 |
+
+### 原则
+- **Sentence-case is the voice.** No all-caps headlines. Eyebrow tags ("WHY BECOME") are the rare exception.
+- **Weight 700 is for headlines; weight 500 is for buttons and emphasis.** Don't promote button labels to 700.
+- **追踪没有繁荣。** 显示面部从不显示字母间距,正反两面.
+- **两人面相,两人角色.** UberMove 用于展示; UberMoveText 永远不要穿过溪流
+
+### 替代字体
+两种面孔是专有的,开源替代品:
+- **显示色素** — *Inter* 字重 700 配合 `font-feature-settings: "ss01"` 启用的来得最近 。 *Geist* 字重 700 也是第二好的选择。
+- **Text sans** — *Inter* weights 400 / 500 match the geometric width and x-height. *Plus Jakarta Sans* is a softer alternative if the brand wants a less neutral feel.
+
+
+## 布局
+
+### 间距系统
+- **基地单位**: 4 px。大多数捕获值是 4 和几个 6-px 子倍数( 双倍数)10, 14) 内扣垫.
+- **脚本**: `{spacing.xxs}` 4 px · `{spacing.xs}` 6 px · `{spacing.sm}` 8 px · `{spacing.md}` 12 px · `{spacing.lg}` 16 px · `{spacing.xl}` 20 px · `{spacing.2xl}` 24 px · `{spacing.3xl}` 32 px.
+- **分区编栏**: 营销乐队坐在那里 `{spacing.3xl}` 32 px 上/下加紧的页和 `{spacing.3xl} {spacing.3xl}` 用于首屏乐队; 宣传卡套入 `{spacing.2xl}` 24 px.
+- **纸牌内部贴纸**: 内容卡坐落于 `{spacing.2xl}` 24 px; 骑行请求表使用 `{spacing.lg}` 16 px 保持形式紧凑。
+- **内含空档**:按钮行,类芯片行,应用存储胶囊形行使用 `{spacing.md}` 12 px 兄弟姐妹之间。
+
+### 网格与容器
+- **最大宽度**: ~1200 px 容器; 以水平沟槽为中心 `{spacing.3xl}` 32 px 桌面上, `{spacing.lg}` 16 px 手机上,我刚从电话里找到的
+- **列图案**:
+  - Promo-card rows: 2-up at desktop (image left + content right, alternating sides), 1-up at mobile.
+  - 分类芯片:水平弹性带包.
+  - FAQ列:全宽单列.
+  - App-download pills: 2-up at desktop (Rider + Driver), 1-up at mobile.
+
+### 留白规则
+Card-to-card spacing carries the rhythm — between two stacked promo cards there's roughly a full `{spacing.3xl}` 32 px gutter; inside a card the headline / paragraph / CTA stack is tight (`{spacing.sm}` 8 px between siblings). The black promo bands and the footer have no internal hairlines — content sits on flat ink with white text.
+
+### 响应式布局
+
+#### 断点
+
+| 名称 | 宽度 | 密钥更改 |
+|---|---|---|
+| 手机 | < 600px | 导航崩溃到汉堡包; 促销卡堆; 骑行请求表成为全宽的 。 |
+| 移动全长 | 600–767px | 与 Mobile 相同;芯片行启用水平滚动 。 |
+| 平板 | 768–1119px | 2- 上方宽度的上方促销网格;导航一直水平保持到 ≥ 1120 px. |
+| Desktop | 1120–1135px | Full nav row visible; promo cards 2-up. |
+| 桌面全长 | ≥ 1136px | 集装箱盖,在 ~1200 px; 乐队在内容中心时保持边缘对边缘。 |
+
+#### 触控区域
+The pill `button-primary` renders at ~44 px tall (10 px vertical padding + 24 px label line-height); the larger `button-large-rounded` at ~56 px. Both meet WCAG AAA at all breakpoints. Category chips inflate to ≥ 44 px tall through extra padding on touch viewports.
+
+#### 窄屏布局调整
+- **Nav**: full link row + Help / Log in / Sign up pills at desktop. Collapses to logo + hamburger at mobile; menu overlays full-screen with the same link list stacked.
+- **Ride-request form card**: at desktop, the form sits inside a max-490-px `{rounded.xl}` card with shadow. At mobile, full-width with edge-to-edge.
+- **Promo cards**: at desktop, image-left + content-right (or alternating). At mobile, image always above content.
+- **年度展示卡**: 平面从 a 。 2:3 桌面框架为 a 4:3 移动帧; 日期文本大小按比例调整.
+
+#### 图片适配
+- **编辑插图**: 4:3 或 16:9 硬尖矩形; 从未裁剪成圆形, 从未倾斜过。 外观保存 。
+- **摄影**: 相同——平方形或景观;内框 `{rounded.xl}` 硬币卡。
+- **地图在骑行请求流中**:在卡片内满血;圆角跟随母卡.
+- **标记栏**: SVG 矢量,单色,一致高度.
+
+
+## 层次与深度
+
+| 职等 | 治疗 | 使用 |
+|---|---|---|
+| Level 0 — Flat | No shadow, no border. | Default — most cards and surfaces lean on hairline-of-canvas contrast. |
+| 职等 1 - 低音滴水( 低音滴水) | `rgba(0, 0, 0, 0.12) 0px 4px 16px 0px` | Card-elevated 光带上的宣传卡周围的帧。 |
+| 职等 2 - 牌投弃 | `rgba(0, 0, 0, 0.16) 0px 4px 16px 0px` | 首屏身上的骑行-要求表卡;带有嵌入式的大内容卡. |
+| 职等 3 - 枕头浮点 | `rgba(0, 0, 0, 0.16) 0px 2px 8px 0px` | 浮白丸扣(即浮过首屏摄影的扣). |
+
+### 装饰性深度
+- **极性- 飞跃深度的黑色带**:该品牌使用纯黑色 `{colors.primary}` 中页带以打破白话对白的节奏。极性移就是深度提示。
+- **Editorial illustrations as in-card depth**: every promo card has a single 4:3 illustration as its left or right column. The illustration's visual weight is part of the card's elevation read.
+- **胶囊形几何为微深**: `{rounded.pill}` 999 px 在不同按钮高度应用时,会形成一叠成堆的嵌套胶囊形,它们读作视觉结构。
+
+
+## 形状
+
+### 圆角层级
+
+| 调试 | 数值 | 使用 |
+|---|---|---|
+| `{rounded.none}` | 0px | 满血首屏乐队,足足填满,原始图像边缘. |
+| `{rounded.md}` | 8px | 乘车申请卡内输入窗体字段. |
+| `{rounded.lg}` | 12px | 较小的二级卡界面框架。 |
+| `{rounded.xl}` | 16px | 冠卡半径——宣传卡,内容卡,骑行-求票表卡,年度亮相卡,大圆形按钮. |
+| `{rounded.pill}` | 999px | 品牌的签名交互形状——每个胶囊形按钮,类芯片,app-download pill,图标按钮. |
+| `{rounded.pill-tab}` | 36px | 首屏身上的半透明-白色标签切换胶囊形(Ride / Drive). |
+| `{rounded.full}` | 9999px | 与《公约》第22条 `{rounded.pill}` 资源 circular 图标容器。 |
+
+### 图片形状
+- **编辑插图**: 4:3 宣传卡内景; 16:9 用于全宽显示框。
+- **司机/骑手肖像**: 4:5 肖像裁剪; 由 `{rounded.xl}` 16 px 硬币卡。
+- **年度展示图像**: 2:3 桌面上的肖像画,缩放到 4:3 移动时。图像填充卡片;头条覆盖底片。
+- **标记栏**: 一致的单色 SVG 向量 ~24 px 身高,高点
+- **Avatars** (where used): square or `{rounded.full}` circle, never `{rounded.lg}` rounded-square.
+
+
+## 组件
+
+### 按钮
+
+**`button-primary`** ——"犬黑丸",品牌转换目标.
+- Background `{colors.primary}`, text `{colors.on-primary}`, label set in `{typography.button-md}`, padding `{spacing.md} {spacing.md}`, shape `{rounded.pill}` 999 px.
+
+**`button-secondary`** ——白丸与黑丸为配方.
+- Background `{colors.canvas}`, text `{colors.ink}`, same label and padding as `button-primary`, shape `{rounded.pill}`.
+
+**`button-subtle`** ——用于第三代动作的灰色二级胶囊形内卡(如"更多学习"/"使用储备").
+- Background `{colors.canvas-soft}` (`#efefef`), text `{colors.ink}`, label in `{typography.button-md}`, padding `{spacing.md} {spacing.lg}`, shape `{rounded.pill}`.
+
+**`button-floating`** ——白色胶囊形,带有细微的滴影,浮在黑暗或照片表面.
+- Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.md}`, shape `{rounded.pill}`. Carries a Level 3 pill-float shadow.
+
+**`button-large-rounded`** ——骑行请求流内使用的更大的黑色呼叫动作("是的,帮帮我").
+- Background `{colors.primary}`, text `{colors.on-primary}`, label in `{typography.button-large}`, padding `{spacing.lg} {spacing.xl}`, shape `{rounded.xl}` 16 px (not pill — the only black CTA that breaks the pill rule, used in the larger form context).
+
+**`button-tab-translucent`** ——首屏骑行请求表(Ride/Drive)上的标签切换.
+- Background `{colors.canvas}`, text `{colors.ink}`, label in `{typography.body-md-strong}`, shape `{rounded.pill-tab}` 36 px (off-shape, deliberately tighter than the canonical 999 px pill).
+
+### 卡片与容器
+
+**`card-content`** ——舟山内容卡.
+- Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.2xl}`, shape `{rounded.xl}` 16 px. No shadow on the default state.
+
+**`card-elevated`** ——带有关卡的内容卡 1 微妙的滴水。
+- Background `{colors.canvas}`, text `{colors.ink}`, same padding + shape as `card-content`. Shadow at Level 1.
+
+**`card-soft-tinted`** ——页面内用作分区的灰色丁卡(如"日后计划"呼号).
+- Background `{colors.canvas-soft}`, text `{colors.ink}`, padding `{spacing.2xl}`, shape `{rounded.xl}`.
+
+**`promo-card-illustrated`** - 电话 2- 柱子宣传卡 一边有插画 另一边有复制品
+- Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.2xl}`, shape `{rounded.xl}`. Headline in `{typography.display-md}` or larger.
+
+**`promo-card-on-dark`** ——极性飞扬的黑色宣传卡.
+- Background `{colors.ink}`, text `{colors.on-dark}`, padding `{spacing.2xl}`, shape `{rounded.xl}`. Used for the "Drive with Uber" mid-page band.
+
+**`request-form-card`** 首屏骑马的要求 形成界面框架。
+- Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.lg}`, shape `{rounded.xl}`. Carries Level 2 card drop shadow.
+
+**`request-form-input-row`** ——请求格式卡内每栏.
+- Background `{colors.canvas-soft}`, text `{colors.ink}`, padding `{spacing.lg}`, shape `{rounded.md}` 8 px. Hosts an icon + label + value.
+
+**`showcase-image-card`** — the giant "GO•GET 2026" annual showcase card.
+- Background `{colors.ink}`, text `{colors.on-dark}` overlay, padding `{spacing.3xl}`, shape `{rounded.xl}`. Display-xxl headline overlays the bottom of the image.
+
+### 输入框与表单
+
+**`text-input`** ——文体文字输入.
+- Background `{colors.canvas-soft}`, text `{colors.ink}`, body in `{typography.body-md}`, padding `{spacing.lg}`, shape `{rounded.md}` 8 px.
+
+**`text-input-on-soft`** ——在白卡上嵌入的输入(略轻的填充).
+- Background `{colors.canvas-softer}`, otherwise identical to `text-input`.
+
+### 导航
+
+**`nav-bar`** - 电话 sticky 顶级导航
+- Background `{colors.canvas}` on light pages, switches to `{colors.ink}` on the rare dark page (e.g., Uber Eats hero). Padding `{spacing.lg} {spacing.3xl}`.
+
+**`nav-link`** —— 内侧的链接行 `nav-bar`.
+- 文字颜色 `{colors.ink}`,设置在 `{typography.body-md-strong}` 500 字重。
+
+**`footer`** ——深黑脚步乐队.
+- Background `{colors.primary}` (the brand's only true black surface), text `{colors.on-dark}`, padding `{spacing.3xl} {spacing.3xl}`. Body in `{typography.body-sm}`; column eyebrows in `{typography.body-md-strong}`.
+
+### 标志性组件
+
+**`hero-band-light`** ——白首屏带骑行求证.
+- Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.3xl} {spacing.3xl}`. Headline in `{typography.display-xxl}` (52 px / 700) on the left; `request-form-card` on the right.
+
+**`hero-band-dark`** ——罕见的黑人首屏(曾被使用于 Uber 吃吃吃Drive登陆).
+- Background `{colors.ink}`, text `{colors.on-dark}`, padding `{spacing.3xl} {spacing.3xl}`. Same display-xxl headline scale; CTA inverts to `button-secondary` white pill.
+
+**`category-button`** ——水平-滚动类行("Reserve / lefts / Teens / group rids").
+- Background `{colors.canvas-soft}`, text `{colors.ink}`, label in `{typography.body-sm-strong}`, padding `{spacing.sm} {spacing.lg}`, shape `{rounded.pill}`. An icon precedes the label.
+
+**`faq-row`** - 法克手风琴项目
+- Background `{colors.canvas}`, text `{colors.ink}`, question in `{typography.body-md-strong}`, padding `{spacing.lg}` 0. No card chrome — hairline dividers between rows.
+
+**`app-download-pill`** ——"下载骑手应用"/"下载驾驶员应用"胶囊形.
+- Background `{colors.ink}`, text `{colors.on-dark}`, label in `{typography.body-md-strong}`, padding `{spacing.md} {spacing.xl}`, shape `{rounded.pill}`.
+
+**`icon-button-circular`** ——导航及乘务请求卡内使用的圆形图标容器.
+- Background `{colors.canvas-soft}`, dark icon, shape `{rounded.full}`. No label.
+
+### 链接
+
+**`link-blue`** —— 法律/页脚精细印刷内部的系统默认浏览器-蓝链接.
+- 文字颜色 `{colors.link}` (`#0000ee`),体内 `{typography.body-md}`.
+
+**`link-on-dark`** ——暗带内部的白色链接.
+- 文字颜色 `{colors.on-dark}`,身体在 `{typography.body-md}`.
+
+**`link-mute`** ——音响的灰色链接在页脚柱内.
+- 文字颜色 `{colors.hairline-mid}`,身体在 `{typography.body-md}`.
+
+**`link-mute-soft`** ——最轻的灰色链接,用于暗面低优先级的二级文本.
+- 文字颜色 `{colors.mute}`,身体在 `{typography.body-md}`.
+
+### 组合示例
+
+> 以下组合场景由 `scripts/derive-examples-block.mjs` 生成。各 `ex-*` 条目复用品牌基础样式，供 `/preview-design` 和 `/generate-kit` 以统一风格呈现同一套 10 个示例。`TO_FILL` 提示有待核对的基础样式。
+
+**`ex-pricing-tier`**：默认套餐卡，沿用功能卡结构和品牌 canvas-soft 底色。
+- 属性 : `backgroundColor`, `textColor`, `borderColor`, `rounded`, `padding`
+
+**`ex-pricing-tier-featured`**：推荐套餐卡。浅色模式中用深底浅字，深色模式中用浅底深字。
+- 属性 : `backgroundColor`, `textColor`, `rounded`, `padding`
+
+**`ex-product-selector`**：面向 SaaS / B2B 场景的套餐权益摘要卡。
+- 属性 : `backgroundColor`, `rounded`, `padding`
+
+**`ex-cart-drawer`**：SaaS / B2B 订阅摘要，每个附加项单独列出。
+- 属性 : `backgroundColor`, `rounded`, `padding`, `item-divider`
+
+**`ex-app-shell-row`**：应用框架示例里的侧栏导航行，以品牌主色标识选中状态。
+- 属性 : `backgroundColor`, `activeIndicator`, `rounded`, `padding`
+
+**`ex-data-table-cell`**：数据表格中 th 与 td 的默认样式。表头采用大写等宽字，正文采用 body-sm。
+- 属性 : `headerBackground`, `headerTypography`, `bodyTypography`, `cellPadding`, `rowBorder`
+
+**`ex-auth-form-card`**：登录与注册卡，复用功能卡和 text-input。
+- 属性 : `backgroundColor`, `rounded`, `padding`
+
+**`ex-modal-card`**：对话框表面，沿用功能卡样式并加浮层投影。
+- 属性 : `backgroundColor`, `rounded`, `padding`
+
+**`ex-empty-state-card`**：空状态插图容器。
+- 属性 : `backgroundColor`, `rounded`, `padding`, `captionTypography`
+
+**`ex-toast`**：轻提示，沿用功能卡圆角并使用中等投影。
+- 属性 : `backgroundColor`, `rounded`, `padding`, `typography`
+
+
+
+## 设计建议与禁忌
+
+### 建议做法
+- 准备金 `{colors.primary}` (`#000000`),每粒初级CTA胶囊形,每个可见的景点各一个黑胶囊形是品牌的整个转换故事.
+- 使用 `{rounded.pill}` 999 px 。每张牌子上都有按键、芯片、应用胶囊形。胶囊形是品牌的几何符号。
+- 显示牌 `{rounded.xl}` 16 px ——宣传卡,内容卡,乘务要求表卡,年度秀卡均共享此半径.
+- 设置每个标题 `{typography.display-*}` 字重 700 显示面部的图像不会复制尸体。
+- 使用极性飞腾的黑色促导带中段来断开白白调节奏。极性移就是深度提示 。
+- 锁定每张带有 4:3 编辑插图;从不使用通用股票图像.
+
+### 应避免的做法
+- Don't introduce a second brand accent colour (orange, blue, green). The brand's entire UI is black-and-white plus grayscale; new accents flatten the system.
+- Don't render the primary CTA as a `{rounded.xl}` rectangle except inside the larger ride-request flow (where `button-large-rounded` is the documented exception).
+- Don't use all-caps display headlines. Sentence-case is the voice; uppercase is restricted to rare eyebrow tags.
+- Don't drop a soft drop-shadow on every card. The brand uses Level 0 flat as the default; shadow is reserved for the floating pill and the ride-request form.
+- Don't reduce the brand to its illustration system alone. The pill geometry + black/white duet carries the brand even without illustrations.
+- Don't tighten or loosen letter-spacing on the display face. The brand never letter-spaces; default tracking is part of the voice.
+- Don't use `{rounded.full}` 9999 px for square cards — the pill 999 px and full 9999 px effects are identical for interactive elements, but cards stay at `{rounded.xl}` 16 px.
+
+## 设计词元原值
+
+启发人们理解 Uber设计语言——一种运输与交付的超级应用品牌,其网络表面为黑白二重唱,由定制几何显示色素所框,以单一的签名丸形状(radius)为重音. 999px),仅通过编辑来装饰 4:3 显示骑手、驾驶员和城市对象的插图。
+
+```yaml
+---
+version: alpha
+name: Uber-design-analysis
+description: An inspired interpretation of Uber's design language — a transportation-and-delivery super-app brand whose web surface is a black-and-white duet, framed by a custom geometric display sans, accented by a single signature pill shape (radius 999px) on every interactive element, and decorated only by editorial 4:3 illustrations of riders, drivers, and city objects.
+
+colors:
+  primary: "#000000"
+  on-primary: "#ffffff"
+  ink: "#000000"
+  body: "#5e5e5e"
+  mute: "#afafaf"
+  hairline-mid: "#4b4b4b"
+  canvas: "#ffffff"
+  canvas-soft: "#efefef"
+  canvas-softer: "#f3f3f3"
+  surface-pressed: "#e2e2e2"
+  link: "#0000ee"
+  on-dark: "#ffffff"
+  black-elevated: "#282828"
+
+typography:
+  display-xxl:
+    fontFamily: UberMove, UberMoveText, system-ui, Helvetica Neue, Arial, sans-serif
+    fontSize: 52px
+    fontWeight: 700
+    lineHeight: 64px
+  display-xl:
+    fontFamily: UberMove, UberMoveText, system-ui, Helvetica Neue, Arial, sans-serif
+    fontSize: 36px
+    fontWeight: 700
+    lineHeight: 44px
+  display-lg:
+    fontFamily: UberMove, UberMoveText, system-ui, Helvetica Neue, Arial, sans-serif
+    fontSize: 32px
+    fontWeight: 700
+    lineHeight: 40px
+  display-md:
+    fontFamily: UberMove, UberMoveText, system-ui, Helvetica Neue, Arial, sans-serif
+    fontSize: 24px
+    fontWeight: 700
+    lineHeight: 32px
+  display-sm:
+    fontFamily: UberMove, UberMoveText, system-ui, Helvetica Neue, Arial, sans-serif
+    fontSize: 20px
+    fontWeight: 700
+    lineHeight: 28px
+  body-lg:
+    fontFamily: UberMoveText, system-ui, Helvetica Neue, Arial, sans-serif
+    fontSize: 18px
+    fontWeight: 500
+    lineHeight: 24px
+  body-md:
+    fontFamily: UberMoveText, system-ui, Helvetica Neue, Arial, sans-serif
+    fontSize: 16px
+    fontWeight: 400
+    lineHeight: 24px
+  body-md-strong:
+    fontFamily: UberMoveText, system-ui, Helvetica Neue, Arial, sans-serif
+    fontSize: 16px
+    fontWeight: 500
+    lineHeight: 20px
+  body-sm:
+    fontFamily: UberMoveText, system-ui, Helvetica Neue, Arial, sans-serif
+    fontSize: 14px
+    fontWeight: 400
+    lineHeight: 20px
+  body-sm-strong:
+    fontFamily: UberMoveText, system-ui, Helvetica Neue, Arial, sans-serif
+    fontSize: 14px
+    fontWeight: 500
+    lineHeight: 16px
+  caption:
+    fontFamily: UberMoveText, system-ui, Helvetica Neue, Arial, sans-serif
+    fontSize: 12px
+    fontWeight: 400
+    lineHeight: 20px
+  button-large:
+    fontFamily: UberMoveText, system-ui, Helvetica Neue, Arial, sans-serif
+    fontSize: 18px
+    fontWeight: 500
+    lineHeight: 24px
+  button-md:
+    fontFamily: UberMoveText, system-ui, Helvetica Neue, Arial, sans-serif
+    fontSize: 16px
+    fontWeight: 500
+    lineHeight: 20px
+
+rounded:
+  none: 0px
+  md: 8px
+  lg: 12px
+  xl: 16px
+  pill: 999px
+  pill-tab: 36px
+  full: 9999px
+
+spacing:
+  xxs: 4px
+  xs: 6px
+  sm: 8px
+  md: 12px
+  lg: 16px
+  xl: 20px
+  2xl: 24px
+  3xl: 32px
+
+components:
+  nav-bar:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body-md-strong}"
+    padding: "{spacing.lg} {spacing.3xl}"
+  nav-link:
+    textColor: "{colors.ink}"
+    typography: "{typography.body-md-strong}"
+  button-primary:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.on-primary}"
+    typography: "{typography.button-md}"
+    rounded: "{rounded.pill}"
+    padding: "{spacing.md} {spacing.md}"
+  button-secondary:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    typography: "{typography.button-md}"
+    rounded: "{rounded.pill}"
+    padding: "{spacing.md} {spacing.md}"
+  button-subtle:
+    backgroundColor: "{colors.canvas-soft}"
+    textColor: "{colors.ink}"
+    typography: "{typography.button-md}"
+    rounded: "{rounded.pill}"
+    padding: "{spacing.md} {spacing.lg}"
+  button-floating:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    typography: "{typography.button-md}"
+    rounded: "{rounded.pill}"
+    padding: "{spacing.md}"
+  button-large-rounded:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.on-primary}"
+    typography: "{typography.button-large}"
+    rounded: "{rounded.xl}"
+    padding: "{spacing.lg} {spacing.xl}"
+  button-tab-translucent:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body-md-strong}"
+    rounded: "{rounded.pill-tab}"
+  text-input:
+    backgroundColor: "{colors.canvas-soft}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.none}"
+    padding: "{spacing.lg}"
+  text-input-on-soft:
+    backgroundColor: "{colors.canvas-softer}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.none}"
+    padding: "{spacing.lg}"
+  card-content:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.xl}"
+    padding: "{spacing.2xl}"
+  card-elevated:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.xl}"
+    padding: "{spacing.2xl}"
+  card-soft-tinted:
+    backgroundColor: "{colors.canvas-soft}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.xl}"
+    padding: "{spacing.2xl}"
+  promo-card-illustrated:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    typography: "{typography.display-md}"
+    rounded: "{rounded.xl}"
+    padding: "{spacing.2xl}"
+  promo-card-on-dark:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.display-md}"
+    rounded: "{rounded.xl}"
+    padding: "{spacing.2xl}"
+  request-form-card:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.xl}"
+    padding: "{spacing.lg}"
+  request-form-input-row:
+    backgroundColor: "{colors.canvas-soft}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.none}"
+    padding: "{spacing.lg}"
+  category-button:
+    backgroundColor: "{colors.canvas-soft}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body-sm-strong}"
+    rounded: "{rounded.pill}"
+    padding: "{spacing.sm} {spacing.lg}"
+  faq-row:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body-md-strong}"
+    padding: "{spacing.lg} 0"
+  app-download-pill:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.body-md-strong}"
+    rounded: "{rounded.pill}"
+    padding: "{spacing.md} {spacing.xl}"
+  hero-band-light:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    typography: "{typography.display-xxl}"
+    padding: "{spacing.3xl} {spacing.3xl}"
+  hero-band-dark:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.display-xxl}"
+    padding: "{spacing.3xl} {spacing.3xl}"
+  showcase-image-card:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.display-xxl}"
+    rounded: "{rounded.xl}"
+    padding: "{spacing.3xl}"
+  link-blue:
+    textColor: "{colors.link}"
+    typography: "{typography.body-md}"
+  link-on-dark:
+    textColor: "{colors.on-dark}"
+    typography: "{typography.body-md}"
+  link-mute:
+    textColor: "{colors.hairline-mid}"
+    typography: "{typography.body-md}"
+  link-mute-soft:
+    textColor: "{colors.mute}"
+    typography: "{typography.body-md}"
+  icon-button-circular:
+    backgroundColor: "{colors.canvas-soft}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.full}"
+  footer:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.body-sm}"
+    padding: "{spacing.3xl} {spacing.3xl}"
+
+  # ─── Examples (illustrative) — auto-derived; resolve any TO_FILL markers below ───
+  ex-pricing-tier:
+    description: "Default tier card. Mirrors card-content chrome with canvas-soft surface and a faint border."
+    backgroundColor: "{colors.canvas-soft}"
+    textColor: "{colors.ink}"
+    borderColor: "{colors.surface-pressed}"
+    rounded: "{rounded.xl}"
+    padding: "{spacing.2xl}"
+  ex-pricing-tier-featured:
+    description: "Featured tier — polarity-flipped to ink with white text."
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.on-primary}"
+    rounded: "{rounded.xl}"
+    padding: "{spacing.2xl}"
+  ex-product-selector:
+    description: "Plan picker — re-purposed for the brand's Ride / Eats / Reserve tier picker. Uses category-button pills inside the frame."
+    backgroundColor: "{colors.canvas-soft}"
+    rounded: "{rounded.none}"
+    padding: "{spacing.2xl}"
+  ex-cart-drawer:
+    description: "Subscription summary — line items per add-on (NOT a literal e-commerce cart)."
+    backgroundColor: "{colors.canvas}"
+    rounded: "{rounded.xl}"
+    padding: "{spacing.2xl}"
+    item-divider: "{colors.surface-pressed}"
+  ex-app-shell-row:
+    description: "Sidebar nav row. Active state uses brand primary as a left-edge indicator bar."
+    backgroundColor: "{colors.canvas}"
+    activeIndicator: "{colors.primary}"
+    rounded: "{rounded.md}"
+    padding: "{spacing.md} {spacing.lg}"
+  ex-data-table-cell:
+    description: "Default data-table th + td chrome. Header uses body-sm-strong 500 weight; body uses body-sm."
+    headerBackground: "{colors.canvas-soft}"
+    headerTypography: "{typography.body-sm-strong}"
+    bodyTypography: "{typography.body-sm}"
+    cellPadding: "{spacing.md} {spacing.lg}"
+    rowBorder: "{colors.surface-pressed}"
+  ex-auth-form-card:
+    description: "Sign-in / sign-up card. Mirrors card-content chrome with text-input primitives inside."
+    backgroundColor: "{colors.canvas-soft}"
+    rounded: "{rounded.xl}"
+    padding: "{spacing.2xl}"
+  ex-modal-card:
+    description: "Modal dialog surface — same chrome as card-content with Level 2 drop shadow."
+    backgroundColor: "{colors.canvas}"
+    rounded: "{rounded.xl}"
+    padding: "{spacing.2xl}"
+  ex-empty-state-card:
+    description: "Empty-state illustration frame. Generous padding on canvas-soft surface."
+    backgroundColor: "{colors.canvas-soft}"
+    rounded: "{rounded.xl}"
+    padding: "{spacing.3xl}"
+    captionTypography: "{typography.body-md}"
+  ex-toast:
+    description: "Toast notification surface — flat-cornered card-content chrome with Level 2 drop shadow."
+    backgroundColor: "{colors.canvas}"
+    rounded: "{rounded.xl}"
+    padding: "{spacing.md} {spacing.lg}"
+    typography: "{typography.body-sm}"
+
+---
+```

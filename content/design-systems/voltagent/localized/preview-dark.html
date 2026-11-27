@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>纯黑底与翠绿终端风</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --primary: #00d992;
+  --primary-soft: #2fd6a1;
+  --primary-deep: #10b981;
+  --on-primary: #101010;
+  --ink: #f2f2f2;
+  --ink-strong: #ffffff;
+  --body: #bdbdbd;
+  --mute: #8b949e;
+  --hairline: #3d3a39;
+  --hairline-soft: #b8b3b0;
+  --canvas: #0a0a0a;
+  --canvas-soft: #141414;
+  --canvas-text-soft: #f5f6f7;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; min-width: 0; }
+body {
+  font-family: var(--font-sans);
+  background: var(--canvas);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: var(--ink); }
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--canvas);
+  color: var(--ink);
+  height: 64px;
+  padding: 0 48px;
+  font-size: 14px;
+  border-bottom: 1px solid var(--hairline);
+}
+.nav-brand { font-weight: 700; font-size: 16px; letter-spacing: -0.3px; color: var(--ink); }
+.nav-links { list-style: none; padding: 0; margin: 0; display: flex; gap: 4px; }
+.nav-links a {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: var(--body);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+.nav-cta {
+  background: var(--primary);
+  color: var(--on-primary);
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+  padding: 0 16px;
+  height: 36px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.hero {
+  padding: 96px 48px 120px;
+  background: var(--canvas);
+  display: block;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.hero-content { max-width: 980px; }
+.hero .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 2.52px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.hero .eyebrow .dot { width: 8px; height: 8px; border-radius: 9999px; background: var(--primary); }
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 6vw, 60px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.65px;
+  color: var(--ink-strong);
+  margin: 0 0 24px;
+  text-align: left;
+}
+.hero p {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--body);
+  max-width: 720px;
+  margin: 0 0 40px;
+  line-height: 1.55;
+  text-align: left;
+}
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.btn-primary {
+  background: var(--primary);
+  color: var(--on-primary);
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+  padding: 0 16px;
+  height: 44px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-outline-on-dark {
+  background: var(--canvas);
+  color: var(--ink);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  padding: 0 16px;
+  height: 44px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-ghost-green {
+  background: var(--canvas);
+  color: var(--primary-soft);
+  border: none;
+  border-radius: 6px;
+  padding: 0 16px;
+  height: 44px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-pill-tag {
+  background: var(--canvas);
+  color: var(--ink);
+  border: 1px solid var(--hairline);
+  border-radius: 9999px;
+  padding: 4px 12px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-pill-tag .dot { width: 6px; height: 6px; border-radius: 9999px; background: var(--primary); }
+
+section {
+  padding: 96px 48px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.section-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0 0 12px;
+  letter-spacing: 2.52px;
+  text-transform: uppercase;
+}
+.section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.9px;
+  color: var(--ink);
+  margin: 0 0 16px;
+}
+.section-lead {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--body);
+  max-width: 760px;
+  margin: 0 0 56px;
+  line-height: 1.55;
+}
+
+.palette-group { margin-bottom: 48px; }
+.palette-group h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  color: var(--ink);
+  margin: 0 0 20px;
+}
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+.swatch {
+  background: var(--canvas);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.swatch-chip {
+  display: block;
+  height: 100px;
+  width: 100%;
+}
+.swatch-body { padding: 16px 20px 20px; }
+.swatch-name { font-size: 16px; font-weight: 600; margin: 0 0 4px; color: var(--ink); }
+.swatch-hex { font-family: var(--font-mono); font-size: 13px; color: var(--mute); margin: 0 0 8px; }
+.swatch-role { font-size: 14px; color: var(--body); margin: 0; line-height: 1.45; }
+
+.type-row {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 32px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--hairline);
+  align-items: baseline;
+}
+.type-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.type-token {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink);
+  font-weight: 500;
+}
+.type-spec { font-size: 12px; color: var(--mute); font-family: var(--font-mono); }
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+.button-cell {
+  background: var(--canvas);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  padding: 32px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+.button-cell .label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--mute);
+  margin: 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.card-feature {
+  background: var(--canvas);
+  color: var(--ink);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  padding: 24px;
+}
+.card-feature h4 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  margin: 0 0 12px;
+  color: var(--ink-strong);
+}
+.card-feature p {
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--body);
+  margin: 0;
+}
+.card-feature-emphasized {
+  background: var(--canvas);
+  border: 3px solid var(--hairline);
+  border-radius: 8px;
+  padding: 20px;
+}
+.card-feature-emphasized h4 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  color: var(--ink-strong);
+}
+.card-feature-emphasized p {
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--body);
+  margin: 0;
+}
+
+.code-mockup {
+  background: var(--canvas);
+  color: var(--ink);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  padding: 20px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 18px;
+  position: relative;
+  overflow: hidden;
+}
+.code-mockup .code-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--hairline);
+}
+.code-mockup .code-dots { display: inline-flex; gap: 6px; }
+.code-mockup .code-dots span {
+  display: inline-block; width: 10px; height: 10px; border-radius: 9999px; background: var(--hairline);
+}
+.code-mockup .copy-btn {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--mute);
+  background: transparent;
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+.code-mockup pre {
+  margin: 0;
+  font-family: var(--font-mono);
+  color: var(--canvas-text-soft);
+  white-space: pre;
+  overflow-x: auto;
+}
+.code-mockup .tok-comment { color: var(--mute); }
+.code-mockup .tok-keyword { color: var(--primary-soft); }
+.code-mockup .tok-fn { color: var(--canvas-text-soft); }
+
+.code-inline-chip {
+  display: inline-block;
+  background: var(--canvas-soft);
+  color: var(--canvas-text-soft);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.form-cell {
+  background: var(--canvas);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form-cell label {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2.52px;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+.text-input {
+  background: var(--canvas-soft);
+  color: var(--ink);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 20px;
+  height: 44px;
+  outline: none;
+}
+
+.scale-table {
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--canvas);
+}
+.scale-row {
+  display: grid;
+  grid-template-columns: 120px 100px 1fr 1.5fr;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--hairline);
+  gap: 16px;
+}
+.scale-row:last-child { border-bottom: none; }
+.scale-row .token { font-family: var(--font-mono); font-size: 13px; color: var(--ink); }
+.scale-row .value { font-family: var(--font-mono); font-size: 13px; color: var(--mute); }
+.scale-row .viz {
+  height: 16px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+.scale-row .desc { font-size: 14px; color: var(--body); }
+
+.radius-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+.radius-cell {
+  background: var(--canvas);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.radius-tile {
+  width: 96px;
+  height: 96px;
+  background: var(--canvas-soft);
+  border: 1px solid var(--hairline);
+}
+.radius-meta { font-family: var(--font-mono); font-size: 12px; color: var(--mute); }
+.radius-name { font-family: var(--font-sans); font-size: 14px; color: var(--ink); font-weight: 600; }
+
+.elev-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+.elev-cell {
+  background: var(--canvas);
+  border-radius: 8px;
+  padding: 24px;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.elev-cell.lvl0 { background: var(--canvas); border: 1px solid var(--hairline); }
+.elev-cell.lvl1 { background: var(--canvas); border: 1px solid var(--hairline); }
+.elev-cell.lvl2 { background: var(--canvas); border: 1px solid var(--hairline); box-shadow: 0 0 15px rgba(92, 88, 85, 0.2); }
+.elev-cell.lvl3 {
+  background: var(--canvas);
+  border: 1px solid var(--hairline);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.7), 0 0 0 1px rgba(148,163,184,0.1) inset;
+}
+.elev-cell .elev-label { font-family: var(--font-mono); font-size: 12px; color: var(--mute); }
+.elev-cell .elev-name { font-family: var(--font-sans); font-size: 16px; color: var(--ink); font-weight: 600; }
+
+/* Signature components */
+.hero-band-demo {
+  background: var(--canvas);
+  color: var(--ink);
+  padding: 48px 32px;
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+}
+.hero-band-demo .eyebrow {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2.52px;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin: 0 0 16px;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.hero-band-demo h3 {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.65px;
+  color: var(--ink-strong);
+  margin: 0;
+}
+.content-band-demo {
+  background: var(--canvas);
+  color: var(--ink);
+  padding: 48px 32px;
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+}
+.content-band-demo h3 {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: -0.9px;
+  color: var(--ink);
+  margin: 0 0 16px;
+}
+.content-band-demo p { font-size: 16px; color: var(--body); margin: 0; max-width: 640px; line-height: 26px; }
+
+.green-divider-demo {
+  background: var(--canvas);
+  padding: 24px 32px;
+  border-top: 2px solid var(--primary);
+  border-bottom: 2px solid var(--primary);
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--primary);
+  letter-spacing: 0.5px;
+}
+
+.nav-demo {
+  background: var(--canvas);
+  color: var(--ink);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  height: 64px;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-demo .brand { font-weight: 700; display: inline-flex; align-items: center; gap: 8px; }
+.nav-demo .brand .bolt { color: var(--primary); }
+.nav-demo .links { display: flex; gap: 20px; font-size: 14px; color: var(--body); }
+.nav-demo .cta {
+  background: var(--primary);
+  color: var(--on-primary);
+  padding: 0 14px;
+  height: 32px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-demo {
+  background: var(--canvas);
+  color: var(--body);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  padding: 40px 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+}
+.footer-demo h5 {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2.52px;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0 0 12px;
+}
+.footer-demo ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.footer-demo ul a { color: var(--body); text-decoration: none; font-size: 14px; }
+
+.signature-stack { display: flex; flex-direction: column; gap: 24px; }
+
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--canvas);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.responsive-table th, .responsive-table td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid var(--hairline);
+  font-size: 14px;
+  color: var(--ink);
+}
+.responsive-table th {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2.52px;
+  text-transform: uppercase;
+  color: var(--mute);
+  background: var(--canvas-soft);
+}
+.responsive-table tr:last-child td { border-bottom: none; }
+.responsive-table td.muted { color: var(--body); }
+
+.footer {
+  background: var(--canvas);
+  color: var(--body);
+  text-align: center;
+  padding: 32px 16px;
+  border-top: 1px solid var(--hairline);
+  font-size: 14px;
+}
+.footer a { color: var(--ink); }
+
+/* getdesign.md nav additions */
+.nav-left { display: flex; align-items: center; gap: 20px; }
+.nav-brand-link,
+.nav-brand-link:link,
+.nav-brand-link:visited,
+.nav-brand-link:hover,
+.nav-brand-link:active { text-decoration: none; color: inherit; }
+.nav-github,
+.nav-github:link,
+.nav-github:visited,
+.nav-github:hover,
+.nav-github:active {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: inherit;
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  opacity: 0.85;
+  transition: opacity 200ms ease, border-color 200ms ease;
+  font-family: inherit;
+  line-height: 1;
+  white-space: nowrap;
+}
+.nav-github:hover { opacity: 1; border-color: rgba(255, 255, 255, 0.6); }
+.nav-github svg { display: block; flex-shrink: 0; }
+
+/* getdesign.md nav centering */
+.nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+.nav > .nav-left { justify-self: start; }
+.nav > .nav-links { justify-self: center; }
+.nav > :last-child { justify-self: end; }
+
+/* Responsive: always-on guards */
+img, video, svg { max-width: 100%; height: auto; }
+* { min-width: 0; }
+.palette-grid, .card-grid, .button-grid, .radius-grid, .elev-grid, .form-grid { min-width: 0; }
+
+/* Responsive: 1024px tablet reflow */
+@media (max-width: 1024px) {
+  section { padding: 72px 32px; }
+  .hero { padding: 72px 32px 96px; }
+  .nav { padding: 0 32px; grid-template-columns: auto auto; }
+  .nav > .nav-links { display: none; }
+  .type-row { grid-template-columns: 1fr; gap: 12px; }
+  .section-heading { font-size: 30px; }
+  .scale-row { grid-template-columns: 100px 80px 1fr; }
+  .scale-row .desc { grid-column: 1 / -1; }
+}
+
+/* Responsive: 720px mobile reflow */
+@media (max-width: 720px) {
+  section { padding: 48px 20px; }
+  .hero { padding: 48px 20px 64px; }
+  .hero h1 { font-size: 36px; letter-spacing: -0.4px; }
+  .hero p { font-size: 16px; }
+  .nav { padding: 0 20px; height: 56px; }
+  .section-heading { font-size: 26px; }
+  .palette-grid, .card-grid, .button-grid, .radius-grid, .elev-grid, .form-grid { grid-template-columns: 1fr; }
+  .footer { padding: 24px 16px; font-size: 12px; }
+  .hero-band-demo h3 { font-size: 32px; }
+  .content-band-demo h3 { font-size: 28px; }
+}
+
+/* Kit-mirror token alias bridge */
+:root {
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--on-primary);
+  --color-foreground: var(--ink);
+  --color-foreground-muted: var(--body);
+  --color-foreground-tertiary: var(--mute);
+  --color-foreground-disabled: var(--hairline);
+  --color-foreground-on-primary: var(--canvas);
+  --color-canvas: var(--canvas);
+  --color-canvas-soft: var(--canvas-soft);
+  --color-surface-elevated: var(--canvas-soft);
+  --color-border: var(--hairline);
+  --color-border-soft: var(--hairline);
+  --color-accent: var(--primary);
+  --color-accent-soft: rgba(0, 217, 146, 0.10);
+  --color-success: var(--primary);
+  --color-warning: #f5a623;
+  --color-danger: #fb565b;
+  --color-silver: var(--mute);
+  --color-avatar-fill: rgba(255, 255, 255, 0.05);
+  --color-chip-bg: var(--canvas-soft);
+  --font-display: "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --shadow-md: 0 0 0 1px var(--hairline);
+  --shadow-lg: 0 0 15px rgba(92, 88, 85, 0.2);
+}
+
+/* ============================== EXAMPLES (kit-mirror) ============================== */
+.ex-section { padding: clamp(48px, 8vw, 96px) 0; border-top: 1px solid var(--color-border); background: var(--color-canvas); }
+.ex-section .container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+.ex-h2 { font-family: var(--font-display); font-size: clamp(32px, 5vw, 50px); font-weight: 700; line-height: 1.0; letter-spacing: -0.5px; color: var(--color-foreground); margin: 0 0 12px; }
+.ex-intro { font-size: 16px; color: var(--color-foreground-muted); max-width: 720px; margin: 0 0 48px; line-height: 1.43; }
+.ex-mono { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.5px; text-transform: uppercase; color: var(--color-foreground-muted); }
+.ex-primary { background: var(--color-primary); color: var(--color-primary-foreground); border: 1px solid var(--color-primary); border-radius: 4px; padding: 0 22px; height: 48px; font-family: var(--font-sans); font-size: 16px; font-weight: 600; letter-spacing: 0.162px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
+.ex-outlined { background: var(--color-canvas); color: var(--color-foreground); border: 1px solid var(--color-border-soft); border-radius: 4px; padding: 0 20px; height: 44px; font-family: var(--font-sans); font-size: 14px; font-weight: 500; line-height: 1; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
+.ex-textlink { background: transparent; color: var(--color-foreground); border: none; padding: 6px; font-family: var(--font-sans); font-size: 14px; font-weight: 500; cursor: pointer; text-decoration: underline; }
+.ex-input { background: var(--color-canvas); border: 1px solid var(--color-border-soft); border-radius: 4px; padding: 0 16px; height: 48px; font-family: var(--font-sans); font-size: 16px; color: var(--color-foreground); width: 100%; box-sizing: border-box; }
+.ex-field { display: flex; flex-direction: column; gap: 8px; }
+.ex-field-label { font-size: 12px; font-weight: 400; letter-spacing: 0.5px; text-transform: uppercase; color: var(--color-foreground); font-family: var(--font-mono); }
+.ex-td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--color-border); font-size: 14px; color: var(--color-foreground); line-height: 1.5; vertical-align: middle; }
+.ex-th { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--color-border); font-size: 11px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; color: var(--color-foreground-muted); background: var(--color-canvas-soft); font-family: var(--font-mono); }
+.ex-pager { height: 32px; min-width: 32px; padding: 0 10px; font-family: var(--font-mono); font-size: 12px; background: var(--color-canvas); border: 1px solid var(--color-border-soft); color: var(--color-foreground); border-radius: 4px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
+.ex-pager.active { background: var(--color-foreground); color: var(--color-foreground-on-primary); border-color: var(--color-foreground); }
+.ex-grid-pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.ex-grid-product { display: grid; grid-template-columns: 1fr; gap: 32px; }
+@media (min-width: 1024px) { .ex-grid-product { grid-template-columns: 1.1fr 1fr; } }
+.ex-grid-gallery { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 8px; }
+.ex-tile { background: var(--color-canvas-soft); border: 1px solid var(--color-border); border-radius: 4px; aspect-ratio: 1; padding: 12px; display: flex; align-items: flex-end; background-image: linear-gradient(135deg, var(--color-canvas-soft) 0%, var(--color-canvas) 50%, var(--color-canvas-soft) 100%); }
+.ex-tile.tall { grid-row: span 2; aspect-ratio: 1 / 2; }
+.ex-grid-sizes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.ex-size-btn { height: 44px; border-radius: 4px; font-family: var(--font-sans); font-size: 13px; font-weight: 500; line-height: 1; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; border: 1px solid var(--color-border-soft); background: var(--color-canvas); color: var(--color-foreground); }
+.ex-size-btn.selected { border-color: var(--color-foreground); background: var(--color-foreground); color: var(--color-foreground-on-primary); }
+.ex-size-btn:disabled { color: var(--color-foreground-disabled); text-decoration: line-through; cursor: not-allowed; }
+.ex-grid-appshell { display: grid; grid-template-columns: 1fr; border: 1px solid var(--color-border); border-radius: 6px; overflow: hidden; background: var(--color-canvas); }
+@media (min-width: 768px) { .ex-grid-appshell { grid-template-columns: 200px 1fr; } }
+.ex-grid-kpi { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+.ex-grid-auth { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+.ex-grid-toasts { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.ex-table-wrap { overflow-x: auto; }
+.ex-table-wrap table { width: 100%; min-width: 720px; border-collapse: collapse; font-size: 14px; }
+.ex-features { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--color-border); }
+.ex-features li { padding: 12px 0; font-size: 14px; border-bottom: 1px solid var(--color-border); display: flex; align-items: flex-start; gap: 10px; }
+.ex-features.dark { border-top-color: rgba(255,255,255,0.18); }
+.ex-features.dark li { border-bottom-color: rgba(255,255,255,0.10); }
+.ex-bullet { margin-top: 7px; width: 6px; height: 6px; background: var(--color-accent); border-radius: 9999px; flex-shrink: 0; }
+.ex-tier-card { border: 1px solid var(--color-border); border-radius: 6px; padding: 28px; background: var(--color-canvas); color: var(--color-foreground); display: flex; flex-direction: column; gap: 20px; }
+.ex-tier-card.dark { background: var(--color-foreground); color: var(--color-foreground-on-primary); border-color: var(--color-foreground); }
+.ex-tier-price { font-family: var(--font-display); font-size: clamp(40px, 5vw, 50px); font-weight: 700; line-height: 1; letter-spacing: -1.5px; }
+.ex-tier-cta { margin-top: auto; height: 44px; border-radius: 4px; font-family: var(--font-sans); font-size: 14px; font-weight: 600; letter-spacing: 0.162px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
+.ex-tier-cta.ink { border: 1px solid var(--color-foreground); background: var(--color-foreground); color: var(--color-foreground-on-primary); }
+.ex-tier-cta.invert { border: 1px solid var(--color-canvas); background: var(--color-canvas); color: var(--color-foreground); }
+.ex-status { display: inline-block; padding: 4px 10px; border-radius: 4px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.5px; text-transform: uppercase; }
+.ex-status.ok { color: var(--color-success); background: var(--color-accent-soft); }
+.ex-status.pending { color: var(--color-foreground-muted); background: var(--color-chip-bg); }
+.ex-status.fail { color: var(--color-danger); background: var(--color-accent-soft); }
+.ex-frame { position: relative; border-radius: 6px; border: 1px solid var(--color-border); overflow: hidden; background: var(--color-canvas-soft); }
+.ex-frame.short { height: 420px; }
+.ex-frame.tall { height: clamp(480px, 70vh, 560px); }
+.ex-scrim { position: absolute; inset: 0; background: rgba(26, 24, 22, 0.5); }
+.ex-cart-drawer { position: absolute; top: 0; right: 0; bottom: 0; width: min(420px, 100%); background: var(--color-surface-elevated); border-left: 1px solid var(--color-border); box-shadow: var(--shadow-lg); display: flex; flex-direction: column; }
+.ex-modal-card { width: 100%; max-width: 480px; background: var(--color-surface-elevated); border-radius: 6px; box-shadow: var(--shadow-lg); border: 1px solid var(--color-border); }
+.ex-emptystate { border: 1px solid var(--color-border); border-radius: 6px; padding: 72px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; background: var(--color-canvas); }
+.ex-toast { display: grid; grid-template-columns: 3px 1fr auto; background: var(--color-surface-elevated); border: 1px solid var(--color-border); border-radius: 4px; box-shadow: var(--shadow-md); overflow: hidden; }
+
+/* Brand-shape overrides — align kit-mirror block with Voltagent DESIGN.md spec */
+.ex-primary, .ex-outlined, .ex-tier-cta {
+  border-radius: 6px;
+  height: 44px;
+  padding: 0 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.ex-outlined { border-color: var(--hairline); }
+.ex-pager, .ex-pager.active, .ex-size-btn, .ex-size-btn.selected { border-radius: 6px; font-family: "Inter", sans-serif; }
+.ex-tier-card, .ex-frame, .ex-emptystate, .ex-toast, .ex-tile, .ex-modal-card { border-radius: 8px; border: 1px solid #3d3a39; }
+.ex-input {
+  border-radius: 6px;
+  height: 44px;
+  padding: 0 16px;
+  font-family: "Inter", sans-serif;
+  background: #1a1a1a;
+  border: 1px solid #3d3a39;
+  color: #f2f2f2;
+}
+.ex-mono, .ex-th, .ex-field-label {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 2.52px;
+  text-transform: uppercase;
+}
+.ex-h2, .ex-tier-price {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.6px;
+}
+
+/* Dark-variant polarity overrides — preserve the white "Pro" tier card legibility on the deeper canvas */
+.ex-tier-card.dark { background: #ffffff !important; border-color: #ffffff !important; }
+.ex-tier-card.dark, .ex-tier-card.dark * { color: #101010 !important; }
+.ex-tier-card.dark .ex-mono { color: rgba(16, 16, 16, 0.55) !important; }
+.ex-tier-card.dark .ex-features li { border-bottom-color: rgba(16, 16, 16, 0.12) !important; }
+.ex-tier-card.dark .ex-tier-cta.invert { background: #101010 !important; color: #00d992 !important; border-color: #101010 !important; }
+</style>
+</head>
+<body data-platform-type="开发工具">
+
+<section class="hero" id="top">
+<div class="hero-content">
+<span class="eyebrow"><span class="dot"></span>阿尔·阿肯特·普莱特尔</span>
+<h1>纯黑底与翠绿终端风</h1>
+<p>该品牌的线上营销页面原生使用近黑底。深色样张进一步加深到 #0a0a0a，延续细边框与深色底的组合，Pro 套餐卡片保留反色白底以便阅读。</p>
+<div class="hero-actions">
+<a class="btn-primary" href="#colors">探索系统</a>
+<a class="btn-outline-on-dark" href="#signature">见标志性组件</a>
+</div>
+</div>
+</section>
+<section id="colors">
+<p class="section-eyebrow">01 · 设计基础</p>
+<h2 class="section-heading">配色</h2>
+<p class="section-lead">近兆色暗系统围绕单电绿强调色而建. Voltagent Green是唯一的色调颜色——其他的表面都是近黑色,细边框灰色,或者米白色 文字色. 没有第二次强调色出现.</p>
+<div class="palette-group">
+<h3>品牌色与强调色</h3>
+<div class="palette-grid">
+<div class="swatch"><span class="swatch-chip" style="background:#00d992"></span><div class="swatch-body"><p class="swatch-name">Voltagent Green</p><p class="swatch-hex">#00D992</p><p class="swatch-role">单曲品牌强调色. 每个主行动按钮,每个活指标,闪电格莱弗本身.</p></div></div>
+<div class="swatch"><span class="swatch-chip" style="background:#2fd6a1"></span><div class="swatch-body"><p class="swatch-name">Primary Soft</p><p class="swatch-hex">#2FD6A1</p><p class="swatch-role">稍微微微微微微微微微微小的幽灵内部变体,工具提示和焦点指标.</p></div></div>
+<div class="swatch"><span class="swatch-chip" style="background:#10b981"></span><div class="swatch-body"><p class="swatch-name">Primary Deep</p><p class="swatch-hex">#10B981</p><p class="swatch-role">深绿色预留内含链接颜色 身体内含复制品.</p></div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>界面表面</h3>
+<div class="palette-grid">
+<div class="swatch"><span class="swatch-chip" style="background:#101010"></span><div class="swatch-body"><p class="swatch-name">Canvas</p><p class="swatch-hex">#101010</p><p class="swatch-role">近黑色页面表面. 品牌营销系统中唯一的表面模式.</p></div></div>
+<div class="swatch"><span class="swatch-chip" style="background:#1a1a1a"></span><div class="swatch-body"><p class="swatch-name">Canvas Soft</p><p class="swatch-hex">#1A1A1A</p><p class="swatch-role">更轻的暗黑填充在代码块内,形成输入.</p></div></div>
+<div class="swatch"><span class="swatch-chip" style="background:#3d3a39"></span><div class="swatch-body"><p class="swatch-name">Hairline</p><p class="swatch-hex">#3D3A39</p><p class="swatch-role">1px固态边框——功能卡片,按钮,分割器. 该品牌的通用边缘颜色.（原文参数：1px）</p></div></div>
+<div class="swatch"><span class="swatch-chip" style="background:#b8b3b0"></span><div class="swatch-body"><p class="swatch-name">Hairline Soft</p><p class="swatch-hex">#B8B3B0</p><p class="swatch-role">一个较轻的分解器浅色调保留给罕见的on-light二次上下文.</p></div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>文字色</h3>
+<div class="palette-grid">
+<div class="swatch"><span class="swatch-chip" style="background:#f2f2f2;border-bottom:1px solid #3d3a39;"></span><div class="swatch-body"><p class="swatch-name">Ink</p><p class="swatch-hex">#F2F2F2</p><p class="swatch-role">暗的页面底色上的默认文本——略微为米白色以减少对比强度.</p></div></div>
+<div class="swatch"><span class="swatch-chip" style="background:#ffffff;border-bottom:1px solid #3d3a39;"></span><div class="swatch-body"><p class="swatch-name">Ink Strong</p><p class="swatch-hex">#FFFFFF</p><p class="swatch-role">纯白文本保留给首屏标题和高亮度副本.</p></div></div>
+<div class="swatch"><span class="swatch-chip" style="background:#bdbdbd"></span><div class="swatch-body"><p class="swatch-name">Body</p><p class="swatch-hex">#BDBDBD</p><p class="swatch-role">副文本——支持副本和长式正文段落。</p></div></div>
+<div class="swatch"><span class="swatch-chip" style="background:#8b949e"></span><div class="swatch-body"><p class="swatch-name">Mute</p><p class="swatch-hex">#8B949E</p><p class="swatch-role">最低优先的on-dark文本——标题,精细的打印,页脚的副行.</p></div></div>
+<div class="swatch"><span class="swatch-chip" style="background:#f5f6f7;border-bottom:1px solid #3d3a39;"></span><div class="swatch-body"><p class="swatch-name">Canvas Text Soft</p><p class="swatch-hex">#F5F6F7</p><p class="swatch-role">使用内部代码模型——比周围的体文字略凉.</p></div></div>
+</div>
+</div>
+</section>
+<section id="typography">
+<p class="section-eyebrow">02 · 设计基础</p>
+<h2 class="section-heading">字体排版</h2>
+<p class="section-lead">Inter at calm weights for every narrative role; SF Mono (with JetBrains Mono as the free substitute) for anything that could be typed at a terminal. The hero sits at 60px Inter weight 400 with -0.65px tracking — documentation H1, not billboard headline.</p>
+<div class="type-row">
+<div class="type-meta"><span class="type-token">display-xl</span><span class="type-spec">60 / 400 / -0.65px</span></div>
+<div class="type-sample" style="font-family:var(--font-display);font-size:60px;font-weight:400;line-height:1;letter-spacing:-0.65px;color:var(--ink-strong);">AI 代理工程平台</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><span class="type-token">display-lg</span><span class="type-spec">36 / 400 / -0.9px</span></div>
+<div class="type-sample" style="font-family:var(--font-display);font-size:36px;font-weight:400;line-height:40px;letter-spacing:-0.9px;">建立可观测、生产级的制剂</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><span class="type-token">display-md</span><span class="type-spec">24 / 700 / -0.6px</span></div>
+<div class="type-sample" style="font-family:var(--font-display);font-size:24px;font-weight:700;line-height:32px;letter-spacing:-0.6px;">子小节标题或卡片标题</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><span class="type-token">display-sm</span><span class="type-spec">20 / 600 / 0</span></div>
+<div class="type-sample" style="font-family:var(--font-display);font-size:20px;font-weight:600;line-height:28px;">密集网格中的卡片 标题</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><span class="type-token">eyebrow-mono</span><span class="type-spec">14 / 600 / 2.52px</span></div>
+<div class="type-sample" style="font-family:var(--font-sans);font-size:14px;font-weight:600;line-height:20px;letter-spacing:2.52px;text-transform:uppercase;color:var(--primary);">你需要的一切 都给我</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><span class="type-token">eyebrow-uppercase</span><span class="type-spec">18 / 600 / 0.45px</span></div>
+<div class="type-sample" style="font-family:var(--font-sans);font-size:18px;font-weight:600;line-height:28px;letter-spacing:0.45px;text-transform:uppercase;">升降机 栏眉</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><span class="type-token">body-lg</span><span class="type-spec">18 / 400 / 28px</span></div>
+<div class="type-sample" style="font-family:var(--font-sans);font-size:18px;font-weight:400;line-height:28px;color:var(--body);">引段——直接在首屏标题和主要节段开口器下使用的平稳,体型略大.</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><span class="type-token">body-md</span><span class="type-spec">16 / 400 / 26px</span></div>
+<div class="type-sample" style="font-family:var(--font-sans);font-size:16px;font-weight:400;line-height:26px;color:var(--body);">默认段落使用常规字重的 Inter，字号为 16px，适合阅读长文。</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><span class="type-token">body-md-strong</span><span class="type-spec">16 / 600 / 24px</span></div>
+<div class="type-sample" style="font-family:var(--font-sans);font-size:16px;font-weight:600;line-height:24px;">字号为 16px 的行内正文强调。</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><span class="type-token">body-sm</span><span class="type-spec">14 / 400 / 20px</span></div>
+<div class="type-sample" style="font-family:var(--font-sans);font-size:14px;font-weight:400;line-height:20px;color:var(--body);">副体文字——丸形体,表形细胞,以及三级描述.</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><span class="type-token">body-sm-strong</span><span class="type-spec">14 / 600 / 23px</span></div>
+<div class="type-sample" style="font-family:var(--font-sans);font-size:14px;font-weight:600;line-height:23px;">粗体标题 / 胶囊形- 标签 , 以 14 像素。</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><span class="type-token">caption</span><span class="type-spec">12 / 400 / 16px</span></div>
+<div class="type-sample" style="font-family:var(--font-sans);font-size:12px;font-weight:400;line-height:16px;color:var(--mute);">12px 小字，用于脚注及页脚次要内容。</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><span class="type-token">caption-strong</span><span class="type-spec">12 / 500 / 16px</span></div>
+<div class="type-sample" style="font-family:var(--font-sans);font-size:12px;font-weight:500;line-height:16px;">粗体字幕——中量级的十二像素强调.</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><span class="type-token">code</span><span class="type-spec">13 / 400 / 18px · SF Mono</span></div>
+<div class="type-sample" style="font-family:var(--font-mono);font-size:13px;font-weight:400;line-height:18px;color:var(--canvas-text-soft);">npx voltagent init --template typescript</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><span class="type-token">code-strong</span><span class="type-spec">13 / 550 / 16px · SF Mono</span></div>
+<div class="type-sample" style="font-family:var(--font-mono);font-size:13px;font-weight:600;line-height:16px;color:var(--canvas-text-soft);">函数示例 () {返回无效}</div>
+</div>
+<div class="type-row">
+<div class="type-meta"><span class="type-token">button-md</span><span class="type-spec">16 / 600 / 24px</span></div>
+<div class="type-sample" style="font-family:var(--font-sans);font-size:16px;font-weight:600;line-height:24px;">Inter 半粗体设置按钮标签</div>
+</div>
+</section>
+<section id="buttons">
+<p class="section-eyebrow">03 · 组件</p>
+<h2 class="section-heading">按钮样式</h2>
+<p class="section-lead">紧紧的6 px圆形矩形——永远不设胶囊控件. 只有内置状态标记使用9999px全数胶囊形. 主绿行动按钮是品牌的引力中心;周围的所有其他变体轨道.（原文参数：6 px、9999px）</p>
+<div class="button-grid">
+<div class="button-cell">
+<p class="label">button-primary</p>
+<a class="btn-primary" data-static-example="">开始使用</a>
+<p class="label" style="margin-top:8px;">背景情况 <code class="code-inline-chip">#00d992</code> · 绿色文字色</p>
+</div>
+<div class="button-cell">
+<p class="label">button-outline-on-dark</p>
+<a class="btn-outline-on-dark" data-static-example="">读文件</a>
+<p class="label" style="margin-top:8px;">细边线 1px <code class="code-inline-chip">#3d3a39</code></p>
+</div>
+<div class="button-cell">
+<p class="label">button-ghost-green</p>
+<a class="btn-ghost-green" data-static-example="">查看示例→</a>
+<p class="label" style="margin-top:8px;">三级行动——无边界</p>
+</div>
+<div class="button-cell">
+<p class="label">button-pill-tag</p>
+<span class="btn-pill-tag"><span class="dot"></span>现场直播</span>
+<p class="label" style="margin-top:8px;">9999 px 胶囊形 — 仅状态指标</p>
+</div>
+</div>
+</section>
+<section id="cards">
+<p class="section-eyebrow">04 · 组件</p>
+<h2 class="section-heading">卡片与容器</h2>
+<p class="section-lead">细边线-在暗页面底色上接壤功能卡片——品牌主染色体. 无影. 空无补足. 仅仅是精确的细边框矩形,偶尔的3 px强调边框或暗码编辑器的模拟.（原文参数：3 px）</p>
+<div class="card-grid">
+<div class="card-feature">
+<h4>card-feature</h4>
+<p>默认功能卡片 界面框架. 页面底色背景 1 px 细边框 8 px半径 24 px 垫装. 该品牌最重现的卡片形状.（原文参数：8 px）</p>
+</div>
+<div class="card-feature-emphasized">
+<h4>card-feature-emphasized</h4>
+<p>与3 px 细边框的默认配位相同,用于强调. 曾在卡片网格中标注一个特色的行.（原文参数：3 px）</p>
+</div>
+<div class="code-mockup">
+<div class="code-bar">
+<span class="code-dots"><span></span><span></span><span></span></span>
+<button class="copy-btn">复制</button>
+</div>
+<pre><span class="tok-comment">// placeholder code</span>
+<span class="tok-keyword">function</span> <span class="tok-fn">example</span>() {
+  <span class="tok-keyword">return</span> null
+}</pre>
+</div>
+<div class="card-feature" style="display:flex;flex-direction:column;gap:12px;">
+<h4>code-inline-chip</h4>
+<p>内置命令片段在体型副本中读作 <code class="code-inline-chip">npx voltagent init</code> 或 <code class="code-inline-chip">voltagent.dev</code> ——静静的印刷胶囊形.</p>
+</div>
+</div>
+</section>
+<section id="forms">
+<p class="section-eyebrow">05 · 组件</p>
+<h2 class="section-heading">表单控件</h2>
+<p class="section-lead">输入值坐落在较轻的canvas-soft填充上,因此读作对近黑色页面的休眠. 1 px 细边框, 6 px半径, 44 px 高.（原文参数：6 px）</p>
+<div class="form-grid">
+<div class="form-cell">
+<label>工作邮箱</label>
+<input class="text-input" placeholder="you@company.com" type="email" value=""/>
+</div>
+<div class="form-cell">
+<label>API 密钥</label>
+<input class="text-input" placeholder="嘘..." type="text" value=""/>
+</div>
+<div class="form-cell">
+<label>项目名称</label>
+<input class="text-input" placeholder="我的代理人" type="text" value="northwind-triage"/>
+</div>
+</div>
+</section>
+<section id="spacing">
+<p class="section-eyebrow">06 · 设计基础</p>
+<h2 class="section-heading">间距层级</h2>
+<p class="section-lead">A 4 px基单元. 部分频段使用5xl(48 px)上下部;卡片内饰坐落于2xl(24 px). 整个布局甚至以倍数呼吸.（原文参数：4 px）</p>
+<div class="scale-table">
+<div class="scale-row"><span class="token">间距. xxx</span><span class="value">2px</span><span class="viz" style="width:2px;"></span><span class="desc">细线级的行内间隙。</span></div>
+<div class="scale-row"><span class="token">间距.xs</span><span class="value">4px</span><span class="viz" style="width:4px;"></span><span class="desc">间距基准，适用于紧凑列表。</span></div>
+<div class="scale-row"><span class="token">间距.sm</span><span class="value">8px</span><span class="viz" style="width:8px;"></span><span class="desc">紧紧的内置间隙——图标对标签.</span></div>
+<div class="scale-row"><span class="token">间距.md</span><span class="value">12px</span><span class="viz" style="width:12px;"></span><span class="desc">按钮上下内边距，适用于紧凑堆叠。</span></div>
+<div class="scale-row"><span class="token">间距. lg</span><span class="value">16px</span><span class="viz" style="width:16px;"></span><span class="desc">按钮左右内边距及中等间距。</span></div>
+<div class="scale-row"><span class="token">间距.xl</span><span class="value">20px</span><span class="viz" style="width:20px;"></span><span class="desc">卡片 内部垫板(强调).</span></div>
+<div class="scale-row"><span class="token">间距。 2xl</span><span class="value">24px</span><span class="viz" style="width:24px;"></span><span class="desc">卡片默认内边距。</span></div>
+<div class="scale-row"><span class="token">间距。 3xl</span><span class="value">32px</span><span class="viz" style="width:32px;"></span><span class="desc">容器左右留白。</span></div>
+<div class="scale-row"><span class="token">间距。 4xl</span><span class="value">40px</span><span class="viz" style="width:40px;"></span><span class="desc">页脚区块上下内边距。</span></div>
+<div class="scale-row"><span class="token">间距。 5xl</span><span class="value">48px</span><span class="viz" style="width:48px;"></span><span class="desc">首屏与内容区块的上下留白。</span></div>
+<div class="scale-row"><span class="token">间距。 6xl</span><span class="value">64px</span><span class="viz" style="width:64px;"></span><span class="desc">最大区域间断间隔。</span></div>
+</div>
+</section>
+<section id="radius">
+<p class="section-eyebrow">07 · 设计基础</p>
+<h2 class="section-heading">圆角层级</h2>
+<p class="section-lead">横跨全局的紧角. 6 px按钮 8 px 卡片 9999 px 仅保留内置状态 胶囊控件.（原文参数：6 px）</p>
+<div class="radius-grid">
+<div class="radius-cell"><div class="radius-tile" style="border-radius:0;"></div><span class="radius-name">none</span><span class="radius-meta">0px</span></div>
+<div class="radius-cell"><div class="radius-tile" style="border-radius:4px;"></div><span class="radius-name">xs</span><span class="radius-meta">4px</span></div>
+<div class="radius-cell"><div class="radius-tile" style="border-radius:6px;"></div><span class="radius-name">静态</span><span class="radius-meta">6px 按钮、输入</span></div>
+<div class="radius-cell"><div class="radius-tile" style="border-radius:8px;"></div><span class="radius-name">微额</span><span class="radius-meta">8px · 贺卡</span></div>
+<div class="radius-cell"><div class="radius-tile" style="border-radius:9999px;"></div><span class="radius-name">胶囊形</span><span class="radius-meta">9999px · 状态标签</span></div>
+<div class="radius-cell"><div class="radius-tile" style="border-radius:9999px;width:64px;height:64px;"></div><span class="radius-name">满</span><span class="radius-meta">9999px 卡塔尔语</span></div>
+</div>
+</section>
+<section id="elevation">
+<p class="section-eyebrow">08 · 设计基础</p>
+<h2 class="section-heading">层次与深度</h2>
+<p class="section-lead">细边线代替阴. 该品牌使用1 px固态边框作为其默认的升降提示. 外表微光照射在突出的卡片上;一个更重的模型堆栈只在产品表面内下降。（原文参数：1 px）</p>
+<div class="elev-grid">
+<div class="elev-cell lvl0" style="background:transparent;border:none;">
+<span class="elev-label">级别 0</span>
+<span class="elev-name">平面带</span>
+</div>
+<div class="elev-cell lvl1">
+<span class="elev-label">级别 1</span>
+<span class="elev-name">细边线( 4)1px)</span>
+</div>
+<div class="elev-cell lvl2">
+<span class="elev-label">级别 2</span>
+<span class="elev-name">内置光线</span>
+</div>
+<div class="elev-cell lvl3">
+<span class="elev-label">级别 3</span>
+<span class="elev-name">模块堆栈</span>
+</div>
+</div>
+</section>
+<section id="signature">
+<p class="section-eyebrow">09 · 组合场景</p>
+<h2 class="section-heading">标志性组件</h2>
+<p class="section-lead">The brand-native composite surfaces — the dark hero band, the standard content band, the 2 px green divider band, the sticky dark nav, and the dark footer. Together these define every page on the marketing site.</p>
+<div class="signature-stack">
+<div>
+<p class="section-eyebrow" style="margin-bottom:12px;">hero-band</p>
+<div class="hero-band-demo">
+<span class="eyebrow"><span style="display:inline-block;width:8px;height:8px;background:var(--primary);border-radius:9999px;"></span>你需要的一切 都给我</span>
+<h3>AI 代理工程平台</h3>
+</div>
+</div>
+<div>
+<p class="section-eyebrow" style="margin-bottom:12px;">content-band</p>
+<div class="content-band-demo">
+<h3>建立可观测、生产级的制剂</h3>
+<p>The standard content band hosts feature grids on a near-black canvas. Section headlines sit at 36 px Inter regular with -0.9 px tracking.</p>
+</div>
+</div>
+<div>
+<p class="section-eyebrow" style="margin-bottom:12px;">green-divider-band</p>
+<div class="green-divider-demo">/ 部门呼吸 2PX 电光绿 /</div>
+</div>
+<div>
+<p class="section-eyebrow" style="margin-bottom:12px;">nav-bar</p>
+<div class="nav-demo">
+<span class="brand"><span class="bolt">⚡</span>voltagent</span>
+<span class="links"><span>文档</span><span>定价</span><span>实例</span><span>博客</span></span>
+<span class="cta">开始使用</span>
+</div>
+</div>
+<div>
+<p class="section-eyebrow" style="margin-bottom:12px;">页脚</p>
+<div class="footer-demo">
+<div>
+<h5>产品</h5>
+<ul><li><a data-static-example="">文档</a></li><li><a data-static-example="">实例</a></li><li><a data-static-example="">定价</a></li></ul>
+</div>
+<div>
+<h5>资源</h5>
+<ul><li><a data-static-example="">博客</a></li><li><a data-static-example="">更改日志</a></li><li><a data-static-example="">社区</a></li></ul>
+</div>
+<div>
+<h5>连队</h5>
+<ul><li><a data-static-example="">关于</a></li><li><a data-static-example="">职业</a></li><li><a data-static-example="">联系人</a></li></ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="responsive">
+<p class="section-eyebrow">10 · 系统规则</p>
+<h2 class="section-heading">响应式布局</h2>
+<p class="section-lead">三张响应式断点. 卡片网格从 3- 最多为 2- 最多为 1 列; 首屏类型平面流畅 60 px 改为 36 px;导航在移动时会崩溃成汉堡,但绿色的CTA仍被固定在覆面的底部.</p>
+<table class="responsive-table">
+<thead>
+<tr><th>断点</th><th>宽度</th><th>布局变化</th></tr>
+</thead>
+<tbody>
+<tr><td>手机端</td><td class="muted">&lt; 768px</td><td class="muted">首屏们 60→36 px; 卡片 1 列; 航海汉堡。</td></tr>
+<tr><td>平板</td><td class="muted">768–1023px</td><td class="muted">卡片 2-up; 导航保持水平.</td></tr>
+<tr><td>桌面端</td><td class="muted">≥ 1024px</td><td class="muted">完整的3-up 卡片网格.</td></tr>
+</tbody>
+</table>
+</section>
+<!-- ============================== EXAMPLES (kit-mirror) ============================== -->
+<section class="ex-section" data-platform-example="Pricing Tiers">
+<div class="container">
+<h2 class="ex-h2">开发环境套餐</h2><p class="design-demo-note">静态试样。所示资料为演示数据。</p>
+<p class="ex-intro">比较不同套餐的适用对象和能力，所示月费为模拟数据。</p>
+<div class="ex-grid-pricing">
+<div class="ex-tier-card">
+<div style="display:flex; justify-content:space-between;"><span class="ex-mono">个人开发</span></div>
+<div style="display:flex; align-items:baseline; gap:6px;"><span class="ex-tier-price">$9</span><span class="ex-mono" style="font-size:12px;">/ 月 · 示例</span></div>
+<p style="font-size:14px; line-height:1.5; color:var(--color-foreground-muted); margin:0;">适合需要沙盒运行与本地项目的场景。</p>
+<ul class="ex-features">
+<li><span class="ex-bullet"></span>沙盒运行</li>
+<li><span class="ex-bullet"></span>本地项目</li>
+<li><span class="ex-bullet"></span>社区帮助</li>
+</ul>
+<span class="ex-tier-cta ink">静态试样</span>
+</div>
+<div class="ex-tier-card dark">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<span class="ex-mono" style="color:rgba(255,255,255,0.55);">团队开发</span>
+<span style="font-family:var(--font-mono); font-size:10px; letter-spacing:0.5px; text-transform:uppercase; color:var(--color-accent); display:inline-flex; align-items:center; gap:6px;">推荐示例</span>
+</div>
+<div style="display:flex; align-items:baseline; gap:6px;"><span class="ex-tier-price">$29</span><span style="font-family:var(--font-mono); font-size:12px; color:rgba(255,255,255,0.55);">/ 月 · 示例</span></div>
+<p style="font-size:14px; line-height:1.5; color:rgba(255,255,255,0.72); margin:0;">适合需要共享环境与构建日志的场景。</p>
+<ul class="ex-features dark">
+<li><span class="ex-bullet"></span>共享环境</li>
+<li><span class="ex-bullet"></span>构建日志</li>
+<li><span class="ex-bullet"></span>团队权限</li>
+<li><span class="ex-bullet"></span>协作配置</li>
+</ul>
+<span class="ex-tier-cta invert">静态试样</span>
+</div>
+<div class="ex-tier-card">
+<div style="display:flex; justify-content:space-between;"><span class="ex-mono">企业交付</span></div>
+<div style="display:flex; align-items:baseline; gap:6px;"><span class="ex-tier-price">$99</span><span class="ex-mono" style="font-size:12px;">/ 月 · 示例</span></div>
+<p style="font-size:14px; line-height:1.5; color:var(--color-foreground-muted); margin:0;">适合需要专属环境与审计记录的场景。</p>
+<ul class="ex-features">
+<li><span class="ex-bullet"></span>专属环境</li>
+<li><span class="ex-bullet"></span>审计记录</li>
+<li><span class="ex-bullet"></span>访问控制</li>
+<li><span class="ex-bullet"></span>交付支持</li>
+</ul>
+<span class="ex-tier-cta ink">静态试样</span>
+</div>
+</div>
+</div>
+</section>
+<!-- BEGIN HIDDEN — uncomment to re-enable Product Selector
+<section class="ex-section">
+  <div class="container">
+    <h2 class="ex-h2">Product Selector</h2>
+    <p class="ex-intro">Image gallery + variant picker + add-to-bag CTA. Color swatches use a 1px ink ring for selection; size pills polarity-flip to ink fill.</p>
+    <div class="ex-grid-product">
+      <div class="ex-grid-gallery">
+        <div class="ex-tile tall"><span class="ex-mono" style="font-size:10px;">/IMG · 01</span></div>
+        <div class="ex-tile"><span class="ex-mono" style="font-size:10px;">/IMG · 02</span></div>
+        <div class="ex-tile"><span class="ex-mono" style="font-size:10px;">/IMG · 03</span></div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <div class="ex-mono" style="display:flex; align-items:center; gap:8px;"><span style="width:8px; height:8px; background:var(--color-accent); border-radius:9999px;"></span>/0.1 · Goods</div>
+        <h3 style="font-family:var(--font-display); font-size:clamp(24px, 4.5vw, 34px); font-weight:700; line-height:1.06; letter-spacing:-1px; color:var(--color-foreground); margin:0;">Field Tee, 6-Pack</h3>
+        <div style="display:flex; align-items:baseline; gap:12px;">
+          <span style="font-family:var(--font-display); font-size:clamp(32px, 5vw, 40px); font-weight:700; line-height:1; letter-spacing:-1.5px; color:var(--color-foreground);">$192</span>
+          <span class="ex-mono">★★★★☆ &nbsp;·&nbsp; 117 reviews</span>
+        </div>
+        <p style="font-size:15px; color:var(--color-foreground-muted); line-height:1.5; margin:0;">Six tees in our default rotation: two bone, two stone, two ink. Ultra-soft 100% cotton, dyed with our proprietary palette, pre-washed so the first wear feels like the fiftieth.</p>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li style="display:flex; align-items:flex-start; gap:10px; font-size:13px; color:var(--color-foreground); padding:4px 0;"><span style="margin-top:6px; width:6px; height:6px; background:var(--color-accent); border-radius:9999px; flex-shrink:0;"></span>Hand cut and sewn locally</li>
+          <li style="display:flex; align-items:flex-start; gap:10px; font-size:13px; color:var(--color-foreground); padding:4px 0;"><span style="margin-top:6px; width:6px; height:6px; background:var(--color-accent); border-radius:9999px; flex-shrink:0;"></span>Pre-washed, pre-shrunk cotton</li>
+          <li style="display:flex; align-items:flex-start; gap:10px; font-size:13px; color:var(--color-foreground); padding:4px 0;"><span style="margin-top:6px; width:6px; height:6px; background:var(--color-accent); border-radius:9999px; flex-shrink:0;"></span>Reinforced collar and cuffs</li>
+          <li style="display:flex; align-items:flex-start; gap:10px; font-size:13px; color:var(--color-foreground); padding:4px 0;"><span style="margin-top:6px; width:6px; height:6px; background:var(--color-accent); border-radius:9999px; flex-shrink:0;"></span>Carbon-neutral shipping</li>
+        </ul>
+        <div>
+          <div class="ex-mono" style="margin-bottom:10px;">Color · Bone</div>
+          <div style="display:flex; gap:10px;">
+            <button aria-label="Bone" style="width:32px; height:32px; border-radius:9999px; background:#ececec; border:1px solid var(--color-border-soft); box-shadow:0 0 0 2px var(--color-canvas), 0 0 0 3px var(--color-foreground); cursor:pointer; padding:0;"></button>
+            <button aria-label="Stone" style="width:32px; height:32px; border-radius:9999px; background:#aaaaaa; border:1px solid var(--color-border-soft); cursor:pointer; padding:0;"></button>
+            <button aria-label="Ink" style="width:32px; height:32px; border-radius:9999px; background:#1e2124; border:1px solid var(--color-border-soft); cursor:pointer; padding:0;"></button>
+          </div>
+        </div>
+        <div>
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
+            <span class="ex-mono">Size</span>
+            <a href="#" style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.5px; text-transform:uppercase; color:var(--color-foreground); text-decoration:underline;">Size guide</a>
+          </div>
+          <div class="ex-grid-sizes">
+            <button class="ex-size-btn" disabled>XXS</button>
+            <button class="ex-size-btn">XS</button>
+            <button class="ex-size-btn selected">S</button>
+            <button class="ex-size-btn">M</button>
+            <button class="ex-size-btn">L</button>
+            <button class="ex-size-btn">XL</button>
+            <button class="ex-size-btn">2XL</button>
+            <button class="ex-size-btn">3XL</button>
+          </div>
+        </div>
+        <button class="ex-primary" style="width:100%; margin-top:4px;">Add to bag</button>
+      </div>
+    </div>
+  </div>
+</section>
+END HIDDEN -->
+<!-- BEGIN HIDDEN — uncomment to re-enable Shopping Cart
+<section class="ex-section">
+  <div class="container">
+    <h2 class="ex-h2">Shopping Cart</h2>
+    <p class="ex-intro">Right-anchored drawer over a 50% ink scrim. Each line is a thumb + name/variant/qty stack + price + Remove text-link. Subtotal sits above a full-width primary Checkout, with a Continue link below.</p>
+    <div class="ex-frame tall">
+      <div style="padding:32px; opacity:0.5; display:flex; flex-direction:column; gap:20px;">
+        <div style="height:14px; width:40%; background:var(--color-border); border-radius:2px;"></div>
+        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:12px;">
+          <div style="height:120px; background:var(--color-border); border-radius:4px;"></div>
+          <div style="height:120px; background:var(--color-border); border-radius:4px;"></div>
+          <div style="height:120px; background:var(--color-border); border-radius:4px;"></div>
+        </div>
+      </div>
+      <div class="ex-scrim"></div>
+      <aside class="ex-cart-drawer">
+        <div style="display:flex; align-items:center; justify-content:space-between; padding:20px 24px; border-bottom:1px solid var(--color-border);">
+          <div>
+            <div class="ex-mono" style="margin-bottom:4px;">/0.1 · Cart</div>
+            <h4 style="font-family:var(--font-display); font-size:22px; font-weight:700; line-height:1.0; letter-spacing:-0.5px; color:var(--color-foreground); margin:0;">Shopping Cart</h4>
+          </div>
+          <button aria-label="Close" style="background:transparent; border:none; color:var(--color-foreground); font-size:18px; cursor:pointer; padding:4px 8px;">×</button>
+        </div>
+        <ul style="list-style:none; padding:0; margin:0; flex:1; overflow-y:auto;">
+          <li style="display:grid; grid-template-columns:56px 1fr auto; gap:14px; padding:16px 24px; border-bottom:1px solid var(--color-border);">
+            <div style="width:56px; height:56px; background:var(--color-canvas-soft); border:1px solid var(--color-border); border-radius:4px; display:flex; align-items:flex-end; padding:4px;"><span class="ex-mono" style="font-size:9px;">/01</span></div>
+            <div style="display:flex; flex-direction:column; gap:2px; min-width:0;">
+              <span style="font-size:14px; font-weight:600; color:var(--color-foreground);">Field Tee, 6-Pack</span>
+              <span style="font-size:12px; color:var(--color-foreground-muted);">Bone · S</span>
+              <div style="display:flex; align-items:center; gap:12px; margin-top:6px;">
+                <span style="font-family:var(--font-mono); font-size:11px; color:var(--color-foreground-muted);">Qty 1</span>
+                <button style="background:transparent; border:none; color:var(--color-foreground); font-size:12px; cursor:pointer; text-decoration:underline; padding:0;">Remove</button>
+              </div>
+            </div>
+            <span style="font-family:var(--font-mono); font-size:14px; color:var(--color-foreground); white-space:nowrap;">$192.00</span>
+          </li>
+          <li style="display:grid; grid-template-columns:56px 1fr auto; gap:14px; padding:16px 24px; border-bottom:1px solid var(--color-border);">
+            <div style="width:56px; height:56px; background:var(--color-canvas-soft); border:1px solid var(--color-border); border-radius:4px; display:flex; align-items:flex-end; padding:4px;"><span class="ex-mono" style="font-size:9px;">/02</span></div>
+            <div style="display:flex; flex-direction:column; gap:2px; min-width:0;">
+              <span style="font-size:14px; font-weight:600; color:var(--color-foreground);">Compass Hip Bag</span>
+              <span style="font-size:12px; color:var(--color-foreground-muted);">Salmon</span>
+              <div style="display:flex; align-items:center; gap:12px; margin-top:6px;">
+                <span style="font-family:var(--font-mono); font-size:11px; color:var(--color-foreground-muted);">Qty 1</span>
+                <button style="background:transparent; border:none; color:var(--color-foreground); font-size:12px; cursor:pointer; text-decoration:underline; padding:0;">Remove</button>
+              </div>
+            </div>
+            <span style="font-family:var(--font-mono); font-size:14px; color:var(--color-foreground); white-space:nowrap;">$90.00</span>
+          </li>
+          <li style="display:grid; grid-template-columns:56px 1fr auto; gap:14px; padding:16px 24px;">
+            <div style="width:56px; height:56px; background:var(--color-canvas-soft); border:1px solid var(--color-border); border-radius:4px; display:flex; align-items:flex-end; padding:4px;"><span class="ex-mono" style="font-size:9px;">/03</span></div>
+            <div style="display:flex; flex-direction:column; gap:2px; min-width:0;">
+              <span style="font-size:14px; font-weight:600; color:var(--color-foreground);">Range Tote</span>
+              <span style="font-size:12px; color:var(--color-foreground-muted);">Bone / Ink</span>
+              <div style="display:flex; align-items:center; gap:12px; margin-top:6px;">
+                <span style="font-family:var(--font-mono); font-size:11px; color:var(--color-foreground-muted);">Qty 1</span>
+                <button style="background:transparent; border:none; color:var(--color-foreground); font-size:12px; cursor:pointer; text-decoration:underline; padding:0;">Remove</button>
+              </div>
+            </div>
+            <span style="font-family:var(--font-mono); font-size:14px; color:var(--color-foreground); white-space:nowrap;">$140.00</span>
+          </li>
+        </ul>
+        <div style="border-top:1px solid var(--color-border); padding:20px 24px;">
+          <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:4px;">
+            <span style="font-size:14px; font-weight:600; color:var(--color-foreground);">Subtotal</span>
+            <span style="font-family:var(--font-display); font-size:22px; font-weight:700; letter-spacing:-0.5px; color:var(--color-foreground);">$422.00</span>
+          </div>
+          <p style="font-size:12px; color:var(--color-foreground-muted); margin:0 0 16px;">Shipping and taxes calculated at checkout.</p>
+          <button class="ex-primary" style="width:100%;">Checkout</button>
+          <div style="margin-top:12px; text-align:center; font-size:13px; color:var(--color-foreground-muted);">or <a href="#" style="color:var(--color-foreground); text-decoration:underline;">Continue Shopping →</a></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+END HIDDEN -->
+<!-- BEGIN HIDDEN — uncomment to re-enable App Shell
+<section class="ex-section">
+  <div class="container">
+    <h2 class="ex-h2">App Shell</h2>
+    <p class="ex-intro">Sidebar navigation + breadcrumb topbar + page heading + KPI strip + activity feed. The everyday product surface.</p>
+    <div class="ex-grid-appshell">
+      <aside style="background:var(--color-canvas-soft); border-right:1px solid var(--color-border); padding:20px 12px; display:flex; flex-direction:column; gap:4px;">
+        <div class="ex-mono" style="padding:8px 12px 16px;">/Workspace</div>
+        <a href="#" style="display:flex; align-items:center; gap:10px; padding:10px 12px; font-size:14px; border-radius:4px; color:var(--color-foreground); text-decoration:none;"><span style="width:14px; text-align:center; opacity:0.75;">◇</span>Overview</a>
+        <a href="#" style="display:flex; align-items:center; gap:10px; padding:10px 12px; font-size:14px; border-radius:4px; background:var(--color-foreground); color:var(--color-foreground-on-primary); font-weight:600; text-decoration:none;"><span style="width:14px; text-align:center; opacity:0.75;">▤</span>Operations</a>
+        <a href="#" style="display:flex; align-items:center; gap:10px; padding:10px 12px; font-size:14px; border-radius:4px; color:var(--color-foreground); text-decoration:none;"><span style="width:14px; text-align:center; opacity:0.75;">◫</span>Datasets</a>
+        <a href="#" style="display:flex; align-items:center; gap:10px; padding:10px 12px; font-size:14px; border-radius:4px; color:var(--color-foreground); text-decoration:none;"><span style="width:14px; text-align:center; opacity:0.75;">◐</span>Models</a>
+        <a href="#" style="display:flex; align-items:center; gap:10px; padding:10px 12px; font-size:14px; border-radius:4px; color:var(--color-foreground); text-decoration:none;"><span style="width:14px; text-align:center; opacity:0.75;">◧</span>Settings</a>
+      </aside>
+      <div style="display:flex; flex-direction:column;">
+        <div style="display:flex; align-items:center; justify-content:space-between; padding:14px 24px; border-bottom:1px solid var(--color-border);">
+          <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:var(--color-foreground-muted); font-family:var(--font-mono);">
+            <span>/Operations</span><span style="color:var(--color-foreground-tertiary);">›</span><span style="color:var(--color-foreground);">Decision Logs</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px;">
+            <span style="font-size:13px; color:var(--color-foreground-muted);">M. Reyes</span>
+            <div style="width:32px; height:32px; border-radius:9999px; background:var(--color-avatar-fill); display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:600; color:var(--color-foreground);">MR</div>
+          </div>
+        </div>
+        <div style="padding:32px 24px; display:flex; flex-direction:column; gap:32px;">
+          <div>
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+              <span style="width:8px; height:8px; background:var(--color-accent); border-radius:9999px;"></span>
+              <span class="ex-mono">Operations · Live</span>
+            </div>
+            <h3 style="font-family:var(--font-display); font-size:clamp(24px, 4.5vw, 34px); font-weight:700; line-height:1.06; letter-spacing:-1px; color:var(--color-foreground); margin:0;">Decision Logs</h3>
+          </div>
+          <div class="ex-grid-kpi">
+            <div style="border:1px solid var(--color-border); border-radius:4px; padding:20px; background:var(--color-canvas);">
+              <div class="ex-mono" style="margin-bottom:12px;">Active operators</div>
+              <div style="font-family:var(--font-display); font-size:32px; font-weight:700; line-height:1; color:var(--color-foreground); letter-spacing:-1px;">2,481</div>
+              <div style="margin-top:8px; font-size:12px; color:var(--color-success); font-family:var(--font-mono);">+4.1%</div>
+            </div>
+            <div style="border:1px solid var(--color-border); border-radius:4px; padding:20px; background:var(--color-canvas);">
+              <div class="ex-mono" style="margin-bottom:12px;">Decisions / hr</div>
+              <div style="font-family:var(--font-display); font-size:32px; font-weight:700; line-height:1; color:var(--color-foreground); letter-spacing:-1px;">17,209</div>
+              <div style="margin-top:8px; font-size:12px; color:var(--color-success); font-family:var(--font-mono);">+12.4%</div>
+            </div>
+            <div style="border:1px solid var(--color-border); border-radius:4px; padding:20px; background:var(--color-canvas);">
+              <div class="ex-mono" style="margin-bottom:12px;">Pending reviews</div>
+              <div style="font-family:var(--font-display); font-size:32px; font-weight:700; line-height:1; color:var(--color-foreground); letter-spacing:-1px;">38</div>
+              <div style="margin-top:8px; font-size:12px; color:var(--color-danger); font-family:var(--font-mono);">−9 vs. yesterday</div>
+            </div>
+          </div>
+          <div>
+            <div class="ex-mono" style="margin-bottom:12px;">Recent Activity</div>
+            <ul style="list-style:none; padding:0; margin:0; border:1px solid var(--color-border); border-radius:4px; overflow:hidden;">
+              <li style="display:grid; grid-template-columns:60px 80px 1fr; gap:16px; padding:14px 16px; border-bottom:1px solid var(--color-border); align-items:center;">
+                <span style="font-family:var(--font-mono); font-size:12px; color:var(--color-foreground-tertiary);">/0.1</span>
+                <span style="font-family:var(--font-mono); font-size:12px; color:var(--color-foreground-muted);">08:42</span>
+                <span style="font-size:14px; color:var(--color-foreground);"><strong style="font-weight:600;">M. Reyes</strong> · Promoted dataset v2024.11.21 to production</span>
+              </li>
+              <li style="display:grid; grid-template-columns:60px 80px 1fr; gap:16px; padding:14px 16px; border-bottom:1px solid var(--color-border); align-items:center;">
+                <span style="font-family:var(--font-mono); font-size:12px; color:var(--color-foreground-tertiary);">/0.2</span>
+                <span style="font-family:var(--font-mono); font-size:12px; color:var(--color-foreground-muted);">08:36</span>
+                <span style="font-size:14px; color:var(--color-foreground);"><strong style="font-weight:600;">A. Park</strong> · Approved decision-rule "Northwind Triage"</span>
+              </li>
+              <li style="display:grid; grid-template-columns:60px 80px 1fr; gap:16px; padding:14px 16px; align-items:center;">
+                <span style="font-family:var(--font-mono); font-size:12px; color:var(--color-foreground-tertiary);">/0.3</span>
+                <span style="font-family:var(--font-mono); font-size:12px; color:var(--color-foreground-muted);">08:29</span>
+                <span style="font-size:14px; color:var(--color-foreground);"><strong style="font-weight:600;">System</strong> · Backfilled 412 records into operations log</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+END HIDDEN -->
+<!-- BEGIN HIDDEN — uncomment to re-enable Data Table
+<section class="ex-section">
+  <div class="container">
+    <h2 class="ex-h2">Data Table</h2>
+    <p class="ex-intro">Mono uppercase column headers, alternating canvas rows, status pills wired to semantic color tokens, hairline row dividers, and a footer pager.</p>
+    <div style="border:1px solid var(--color-border); border-radius:4px; overflow:hidden;">
+      <div class="ex-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th class="ex-th" style="width:40px;"><input type="checkbox" aria-label="Select all"></th>
+              <th class="ex-th" style="width:120px;">ID</th>
+              <th class="ex-th" style="width:160px;">Actor</th>
+              <th class="ex-th">Target</th>
+              <th class="ex-th" style="width:140px;">Status</th>
+              <th class="ex-th" style="width:140px;">When ↓</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:var(--color-canvas);">
+              <td class="ex-td"><input type="checkbox"></td>
+              <td class="ex-td" style="font-family:var(--font-mono);">OP-2401</td>
+              <td class="ex-td">M. Reyes</td>
+              <td class="ex-td">Northwind Triage</td>
+              <td class="ex-td"><span class="ex-status ok">Approved</span></td>
+              <td class="ex-td" style="font-family:var(--font-mono); color:var(--color-foreground-muted);">08:42 UTC</td>
+            </tr>
+            <tr>
+              <td class="ex-td"><input type="checkbox"></td>
+              <td class="ex-td" style="font-family:var(--font-mono);">OP-2400</td>
+              <td class="ex-td">A. Park</td>
+              <td class="ex-td">Atlas Migration v3</td>
+              <td class="ex-td"><span class="ex-status pending">Pending</span></td>
+              <td class="ex-td" style="font-family:var(--font-mono); color:var(--color-foreground-muted);">08:36 UTC</td>
+            </tr>
+            <tr style="background:var(--color-canvas);">
+              <td class="ex-td"><input type="checkbox"></td>
+              <td class="ex-td" style="font-family:var(--font-mono);">OP-2399</td>
+              <td class="ex-td">L. Okafor</td>
+              <td class="ex-td">Watchlist Sync</td>
+              <td class="ex-td"><span class="ex-status fail">Failed</span></td>
+              <td class="ex-td" style="font-family:var(--font-mono); color:var(--color-foreground-muted);">08:21 UTC</td>
+            </tr>
+            <tr>
+              <td class="ex-td"><input type="checkbox"></td>
+              <td class="ex-td" style="font-family:var(--font-mono);">OP-2398</td>
+              <td class="ex-td">S. Chen</td>
+              <td class="ex-td">Supply Chain Index</td>
+              <td class="ex-td"><span class="ex-status ok">Approved</span></td>
+              <td class="ex-td" style="font-family:var(--font-mono); color:var(--color-foreground-muted);">08:14 UTC</td>
+            </tr>
+            <tr style="background:var(--color-canvas);">
+              <td class="ex-td"><input type="checkbox"></td>
+              <td class="ex-td" style="font-family:var(--font-mono);">OP-2397</td>
+              <td class="ex-td">System</td>
+              <td class="ex-td">Nightly Backfill</td>
+              <td class="ex-td"><span class="ex-status ok">Approved</span></td>
+              <td class="ex-td" style="font-family:var(--font-mono); color:var(--color-foreground-muted);">07:55 UTC</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 16px; border-top:1px solid var(--color-border); background:var(--color-canvas-soft);">
+        <span style="font-size:12px; color:var(--color-foreground-muted); font-family:var(--font-mono);">1–5 of 412</span>
+        <div style="display:flex; gap:4px;">
+          <button class="ex-pager" aria-label="Previous">‹</button>
+          <button class="ex-pager active" aria-current="page">1</button>
+          <button class="ex-pager">2</button>
+          <button class="ex-pager">3</button>
+          <button class="ex-pager" aria-label="Next">›</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+END HIDDEN -->
+<!-- BEGIN HIDDEN — uncomment to re-enable Auth Forms
+<section class="ex-section">
+  <div class="container">
+    <h2 class="ex-h2">Auth Forms</h2>
+    <p class="ex-intro">Centered cards on canvas, full-width primary CTA, mono uppercase field labels, hairline-divided SSO fallback.</p>
+    <div class="ex-grid-auth">
+      <div style="background:var(--color-canvas); border:1px solid var(--color-border); border-radius:6px; padding:32px;">
+        <div class="ex-mono" style="margin-bottom:12px;">/0.1 · Sign in</div>
+        <h3 style="font-family:var(--font-display); font-size:clamp(22px, 3.5vw, 28px); font-weight:700; line-height:1.05; letter-spacing:-0.6px; color:var(--color-foreground); margin:0 0 24px;">Welcome back.</h3>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div class="ex-field">
+            <label class="ex-field-label">Work Email</label>
+            <input type="email" placeholder="you@company.com" class="ex-input">
+          </div>
+          <div class="ex-field">
+            <label class="ex-field-label">Password</label>
+            <input type="password" placeholder="••••••••" class="ex-input">
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-top:4px;">
+            <label style="display:flex; align-items:center; gap:8px; font-size:13px; color:var(--color-foreground);"><input type="checkbox"> Remember me</label>
+            <a href="#" style="font-size:13px; color:var(--color-foreground); text-decoration:underline;">Forgot password?</a>
+          </div>
+          <button class="ex-primary" style="width:100%; margin-top:8px;">Sign in</button>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; margin:24px 0;">
+          <span style="flex:1; height:1px; background:var(--color-border);"></span>
+          <span class="ex-mono" style="font-size:10px;">or</span>
+          <span style="flex:1; height:1px; background:var(--color-border);"></span>
+        </div>
+        <button class="ex-outlined" style="width:100%;">Continue with SSO</button>
+        <div style="margin-top:20px; font-size:13px; color:var(--color-foreground-muted); text-align:center;">New here? <a href="#" style="color:var(--color-foreground); text-decoration:underline;">Create an account</a></div>
+      </div>
+      <div style="background:var(--color-canvas); border:1px solid var(--color-border); border-radius:6px; padding:32px;">
+        <div class="ex-mono" style="margin-bottom:12px;">/0.2 · Create account</div>
+        <h3 style="font-family:var(--font-display); font-size:clamp(22px, 3.5vw, 28px); font-weight:700; line-height:1.05; letter-spacing:-0.6px; color:var(--color-foreground); margin:0 0 24px;">Start building.</h3>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div class="ex-field">
+            <label class="ex-field-label">Full Name</label>
+            <input type="text" placeholder="Mira Reyes" class="ex-input">
+          </div>
+          <div class="ex-field">
+            <label class="ex-field-label">Work Email</label>
+            <input type="email" placeholder="you@company.com" class="ex-input">
+          </div>
+          <div class="ex-field">
+            <label class="ex-field-label">Password</label>
+            <input type="password" placeholder="••••••••" class="ex-input">
+          </div>
+          <label style="display:flex; align-items:flex-start; gap:8px; font-size:13px; color:var(--color-foreground-muted); margin-top:4px; line-height:1.5;">
+            <input type="checkbox" style="margin-top:3px;">
+            <span>I agree to the <a href="#" style="color:var(--color-foreground); text-decoration:underline;">Terms</a> and <a href="#" style="color:var(--color-foreground); text-decoration:underline;">Privacy Policy</a>.</span>
+          </label>
+          <button class="ex-primary" style="width:100%; margin-top:8px;">Create account</button>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; margin:24px 0;">
+          <span style="flex:1; height:1px; background:var(--color-border);"></span>
+          <span class="ex-mono" style="font-size:10px;">or</span>
+          <span style="flex:1; height:1px; background:var(--color-border);"></span>
+        </div>
+        <button class="ex-outlined" style="width:100%;">Continue with SSO</button>
+        <div style="margin-top:20px; font-size:13px; color:var(--color-foreground-muted); text-align:center;">Already have an account? <a href="#" style="color:var(--color-foreground); text-decoration:underline;">Sign in</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+END HIDDEN -->
+<!-- BEGIN HIDDEN — uncomment to re-enable Modal Dialog
+<section class="ex-section">
+  <div class="container">
+    <h2 class="ex-h2">Modal Dialog</h2>
+    <p class="ex-intro">Centered card over a 50% ink scrim. Hairline divider above the action row, secondary text-button on the left, primary on the right.</p>
+    <div class="ex-frame short">
+      <div style="padding:24px; opacity:0.7;">
+        <div style="height:14px; width:40%; background:var(--color-border); border-radius:2px; margin-bottom:12px;"></div>
+        <div style="height:12px; width:70%; background:var(--color-border); border-radius:2px; margin-bottom:8px;"></div>
+        <div style="height:12px; width:60%; background:var(--color-border); border-radius:2px;"></div>
+      </div>
+      <div class="ex-scrim"></div>
+      <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; padding:24px;">
+        <div class="ex-modal-card">
+          <div style="padding:24px 28px 16px;">
+            <div class="ex-mono" style="margin-bottom:8px;">/0.1 · Confirm</div>
+            <h4 style="font-family:var(--font-display); font-size:22px; font-weight:700; line-height:1.1; letter-spacing:-0.5px; color:var(--color-foreground); margin:0;">Promote dataset to production?</h4>
+          </div>
+          <div style="padding:0 28px 20px; font-size:14px; color:var(--color-foreground-muted); line-height:1.5;">
+            This replaces <strong style="color:var(--color-foreground); font-weight:600;">v2024.11.20</strong> with <strong style="color:var(--color-foreground); font-weight:600;">v2024.11.21</strong> across all downstream consumers. The action is reversible within 24 hours.
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; padding:16px 24px; border-top:1px solid var(--color-border);">
+            <button class="ex-textlink">Cancel</button>
+            <button class="ex-primary" style="height:40px; padding:10px 18px; font-size:14px;">Promote</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+END HIDDEN -->
+<!-- BEGIN HIDDEN — uncomment to re-enable Empty State
+<section class="ex-section">
+  <div class="container">
+    <h2 class="ex-h2">Empty State</h2>
+    <p class="ex-intro">Outlined icon tile, decimal index, declarative heading, one-sentence body, and a single primary CTA.</p>
+    <div class="ex-emptystate">
+      <div style="width:56px; height:56px; border:1px solid var(--color-border-soft); border-radius:6px; display:flex; align-items:center; justify-content:center; margin-bottom:20px; color:var(--color-foreground-muted);">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="5.5" width="17" height="13" rx="1"/><path d="M3.5 9.5h17M8 5.5v13"/></svg>
+      </div>
+      <div class="ex-mono" style="margin-bottom:12px;">/0.1 · No datasets</div>
+      <h4 style="font-family:var(--font-display); font-size:clamp(22px, 3.5vw, 28px); font-weight:700; line-height:1.05; letter-spacing:-0.6px; color:var(--color-foreground); margin:0 0 8px;">Nothing here yet.</h4>
+      <p style="font-size:15px; color:var(--color-foreground-muted); max-width:380px; margin:0 0 24px; line-height:1.5;">Connect a source or upload a CSV to start ingesting records into this workspace.</p>
+      <button class="ex-primary">Connect a source</button>
+    </div>
+  </div>
+</section>
+END HIDDEN -->
+<!-- BEGIN HIDDEN — uncomment to re-enable Toast Stack
+<section class="ex-section">
+  <div class="container">
+    <h2 class="ex-h2">Toast Stack</h2>
+    <p class="ex-intro">Four semantic variants — info, success, warning, error. Each is a 4px card with a 3px accent rule on the leading edge, a mono uppercase tag, and a single dismiss affordance.</p>
+    <div class="ex-grid-toasts">
+      <div class="ex-toast" role="status">
+        <div style="background:var(--color-foreground);"></div>
+        <div style="padding:14px 16px;">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;"><span style="width:6px; height:6px; background:var(--color-foreground); border-radius:9999px;"></span><span class="ex-mono" style="font-size:10px;">info</span></div>
+          <div style="font-size:14px; font-weight:600; color:var(--color-foreground); margin-bottom:2px;">Sync in progress</div>
+          <div style="font-size:13px; color:var(--color-foreground-muted); line-height:1.43;">Backfilling 412 records into the operations log.</div>
+        </div>
+        <button style="background:transparent; border:none; color:var(--color-foreground-muted); padding:12px 14px; font-size:14px; cursor:pointer;" aria-label="Dismiss">×</button>
+      </div>
+      <div class="ex-toast" role="status">
+        <div style="background:var(--color-success);"></div>
+        <div style="padding:14px 16px;">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;"><span style="width:6px; height:6px; background:var(--color-success); border-radius:9999px;"></span><span class="ex-mono" style="font-size:10px;">success</span></div>
+          <div style="font-size:14px; font-weight:600; color:var(--color-foreground); margin-bottom:2px;">Dataset promoted</div>
+          <div style="font-size:13px; color:var(--color-foreground-muted); line-height:1.43;">v2024.11.21 is live across all downstream consumers.</div>
+        </div>
+        <button style="background:transparent; border:none; color:var(--color-foreground-muted); padding:12px 14px; font-size:14px; cursor:pointer;" aria-label="Dismiss">×</button>
+      </div>
+      <div class="ex-toast" role="status">
+        <div style="background:var(--color-warning);"></div>
+        <div style="padding:14px 16px;">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;"><span style="width:6px; height:6px; background:var(--color-warning); border-radius:9999px;"></span><span class="ex-mono" style="font-size:10px;">warning</span></div>
+          <div style="font-size:14px; font-weight:600; color:var(--color-foreground); margin-bottom:2px;">Approaching quota</div>
+          <div style="font-size:13px; color:var(--color-foreground-muted); line-height:1.43;">88% of your monthly compute has been used.</div>
+        </div>
+        <button style="background:transparent; border:none; color:var(--color-foreground-muted); padding:12px 14px; font-size:14px; cursor:pointer;" aria-label="Dismiss">×</button>
+      </div>
+      <div class="ex-toast" role="status">
+        <div style="background:var(--color-danger);"></div>
+        <div style="padding:14px 16px;">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;"><span style="width:6px; height:6px; background:var(--color-danger); border-radius:9999px;"></span><span class="ex-mono" style="font-size:10px;">error</span></div>
+          <div style="font-size:14px; font-weight:600; color:var(--color-foreground); margin-bottom:2px;">Sync failed</div>
+          <div style="font-size:13px; color:var(--color-foreground-muted); line-height:1.43;">Watchlist source returned 502. Retry queued.</div>
+        </div>
+        <button style="background:transparent; border:none; color:var(--color-foreground-muted); padding:12px 14px; font-size:14px; cursor:pointer;" aria-label="Dismiss">×</button>
+      </div>
+    </div>
+  </div>
+</section>
+END HIDDEN -->
+
+</body>
+</html>

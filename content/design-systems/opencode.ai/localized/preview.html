@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>暖米白等宽版式</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --primary: #201d1d;
+    --on-primary: #fdfcfc;
+    --ink: #201d1d;
+    --ink-deep: #0f0000;
+    --charcoal: #302c2c;
+    --body: #424245;
+    --mute: #646262;
+    --stone: #6e6e73;
+    --ash: #9a9898;
+    --canvas: #fdfcfc;
+    --surface-soft: #f8f7f7;
+    --surface-card: #f1eeee;
+    --surface-dark: #201d1d;
+    --surface-dark-elevated: #302c2c;
+    --hairline: rgba(15,0,0,0.12);
+    --hairline-strong: #646262;
+    --on-dark: #fdfcfc;
+    --on-dark-mute: #9a9898;
+    --accent: #007aff;
+    --warning: #ff9f0a;
+    --danger: #ff3b30;
+    --success: #30d158;
+
+    --font-mono: 'JetBrains Mono', 'Berkeley Mono', 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-mono);
+    background: var(--canvas);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+
+  /* NAV */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--canvas);
+    color: var(--ink);
+    padding: 0 48px;
+    height: 64px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .nav-brand { font-family: var(--font-mono); font-weight: 700; font-size: 16px; color: var(--ink); }
+  .nav-links { list-style: none; display: flex; gap: 24px; padding: 0; margin: 0; }
+  .nav-links a { font-family: var(--font-mono); font-size: 15px; font-weight: 500; color: var(--ink); text-decoration: none; }
+  .nav-cta {
+    background: var(--primary);
+    color: var(--on-primary);
+    border: none;
+    border-radius: 4px;
+    padding: 0 20px;
+    height: 36px;
+    font-family: var(--font-mono);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 96px 48px;
+    background: var(--canvas);
+    display: block;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .hero-content { max-width: 1200px; }
+  .hero h1 {
+    font-family: var(--font-mono);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0 0 32px;
+    letter-spacing: 0;
+    text-align: left;
+  }
+  .hero p {
+    font-size: 16px;
+    color: var(--body);
+    max-width: 900px;
+    margin: 0 0 40px;
+    line-height: 1.5;
+    text-align: left;
+  }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-start; }
+  .btn {
+    font-family: var(--font-mono);
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    padding: 4px 20px;
+    height: 36px;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 2;
+  }
+  .btn-primary { background: var(--primary); color: var(--on-primary); }
+  .btn-secondary { background: var(--canvas); color: var(--ink); border: 1px solid var(--hairline-strong); }
+  .btn-disabled { background: var(--surface-card); color: var(--ash); cursor: not-allowed; }
+
+  /* SECTIONS */
+  section {
+    padding: 96px 48px;
+    max-width: 1440px;
+    margin: 0 auto;
+    border-top: 1px solid var(--hairline);
+  }
+  .section-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--mute);
+    margin: 0 0 12px;
+  }
+  .section-heading {
+    font-family: var(--font-mono);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0 0 16px;
+  }
+  .section-desc { font-size: 16px; color: var(--body); max-width: 820px; margin: 0 0 48px; }
+
+  /* PALETTE */
+  .palette-block { margin-bottom: 48px; }
+  .palette-block-label {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0 0 16px;
+  }
+  .palette-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .swatch {
+    background: var(--canvas);
+    border: 1px solid var(--hairline);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .swatch-color { height: 100px; }
+  .swatch-meta { padding: 14px 16px 16px; }
+  .swatch-name { font-family: var(--font-mono); font-size: 14px; font-weight: 700; color: var(--ink); margin: 0 0 2px; }
+  .swatch-hex { font-family: var(--font-mono); font-size: 12px; color: var(--mute); margin: 0 0 6px; }
+  .swatch-role { font-family: var(--font-mono); font-size: 13px; color: var(--body); margin: 0; line-height: 1.5; }
+
+  /* TYPOGRAPHY */
+  .type-row {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 32px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--hairline);
+    align-items: baseline;
+  }
+  .type-meta { font-family: var(--font-mono); font-size: 12px; color: var(--mute); line-height: 1.6; }
+  .type-meta strong { display: block; color: var(--ink); font-weight: 700; font-size: 13px; margin-bottom: 4px; }
+  .type-sample { color: var(--ink); font-family: var(--font-mono); }
+
+  /* BUTTONS GRID */
+  .button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .button-cell {
+    border: 1px solid var(--hairline);
+    border-radius: 4px;
+    padding: 24px 20px 20px;
+    background: var(--canvas);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .button-cell-label { font-family: var(--font-mono); font-size: 13px; font-weight: 700; color: var(--ink); margin: 0; }
+  .button-cell-spec { font-family: var(--font-mono); font-size: 11px; color: var(--mute); margin: 0; line-height: 1.5; }
+
+  /* TABS */
+  .tab-strip {
+    display: flex;
+    border-bottom: 2px solid var(--ash);
+  }
+  .tab {
+    padding: 8px 16px;
+    background: transparent;
+    color: var(--mute);
+    border: none;
+    font-family: var(--font-mono);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: -2px;
+  }
+  .tab.active { color: var(--ink); border-bottom: 2px solid var(--ink); }
+
+  /* BADGES */
+  .badge-news {
+    display: inline-block;
+    background: var(--surface-dark);
+    color: var(--on-dark);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  /* INSTALL SNIPPET */
+  .install-snippet {
+    background: var(--surface-card);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 16px;
+    padding: 12px 16px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+  .install-snippet .copy { margin-left: auto; color: var(--mute); }
+
+  /* HERO TUI MOCKUP */
+  .hero-tui-mockup {
+    background: var(--surface-dark);
+    color: var(--on-dark);
+    padding: 64px 32px;
+    border-radius: 0;
+    text-align: center;
+  }
+  .ascii-wordmark {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1;
+    color: var(--ash);
+    letter-spacing: 4px;
+    text-shadow: 0 0 1px var(--ash);
+    margin: 0 0 32px;
+  }
+  .tui-prompt-row {
+    background: var(--surface-dark-elevated);
+    color: var(--on-dark);
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto 16px;
+  }
+  .tui-prompt-row .pipe { color: var(--ash); }
+  .tui-prompt-row .accent { color: var(--accent); }
+  .tui-keybindings {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--ash);
+    text-align: center;
+    margin: 16px 0 0;
+  }
+
+  /* LIST ROWS */
+  .list-rows { max-width: 720px; }
+  .list-row {
+    padding: 8px 0;
+    font-family: var(--font-mono);
+    font-size: 16px;
+    color: var(--body);
+    line-height: 1.5;
+  }
+  .list-row .marker { color: var(--ink); margin-right: 8px; }
+  .list-row .label { color: var(--ink); font-weight: 700; margin-right: 8px; }
+
+  /* FAQ */
+  .faq-list { max-width: 720px; }
+  .faq-row {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--hairline);
+    font-family: var(--font-mono);
+    font-size: 16px;
+    color: var(--ink);
+  }
+  .faq-row .marker { color: var(--mute); margin-right: 12px; }
+
+  /* TESTIMONIAL */
+  .testimonial-row {
+    background: var(--surface-soft);
+    color: var(--body);
+    padding: 16px 20px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .testimonial-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 9999px;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+  .testimonial-name { font-weight: 700; color: var(--ink); }
+  .testimonial-meta { color: var(--mute); }
+
+  /* CHART TILES */
+  .chart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 32px;
+  }
+  .chart-tile {
+    background: var(--canvas);
+    color: var(--body);
+    padding: 16px;
+    border-radius: 0;
+  }
+  .chart-svg { width: 100%; height: 80px; }
+  .chart-caption {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--mute);
+    margin-top: 8px;
+  }
+
+  /* FORMS */
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 800px;
+  }
+  .form-cell { display: flex; flex-direction: column; gap: 6px; }
+  .form-label { font-family: var(--font-mono); font-size: 14px; font-weight: 700; color: var(--ink); }
+  .form-spec { font-family: var(--font-mono); font-size: 11px; color: var(--mute); margin-top: 4px; }
+  input.text-input, textarea.text-input {
+    height: 40px;
+    border: 1px solid var(--hairline);
+    background: var(--surface-soft);
+    color: var(--ink);
+    border-radius: 4px;
+    padding: 0 12px;
+    font-family: var(--font-mono);
+    font-size: 16px;
+  }
+  textarea.text-input { height: auto; min-height: 96px; padding: 12px; resize: vertical; line-height: 1.5; }
+  input.text-input.focused { background: var(--canvas); border-color: var(--ink); outline: none; }
+
+  /* SPACING + RADIUS */
+  .spacing-row, .radius-row { display: flex; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+  .spacing-cell { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .spacing-bar { background: var(--ink); height: 32px; }
+  .spacing-label { font-family: var(--font-mono); font-size: 11px; color: var(--mute); }
+  .radius-cell { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .radius-box { width: 100px; height: 100px; background: var(--surface-card); border: 1px solid var(--hairline); }
+  .radius-label { font-family: var(--font-mono); font-size: 11px; color: var(--mute); }
+  .radius-context { font-family: var(--font-mono); font-size: 12px; color: var(--body); text-align: center; max-width: 110px; }
+
+  /* ELEVATION */
+  .elevation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+    background: var(--surface-soft);
+    padding: 32px;
+    border-radius: 4px;
+  }
+  .elevation-card {
+    background: var(--canvas);
+    height: 140px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0;
+  }
+  .elevation-card.level-1 { border: 1px solid var(--hairline); }
+  .elevation-card.level-2 { border: 1px solid var(--hairline-strong); }
+  .elevation-card.level-3 { background: var(--surface-dark); color: var(--on-dark); }
+  .elevation-name { font-family: var(--font-mono); font-size: 14px; font-weight: 700; color: inherit; }
+  .elevation-spec { font-family: var(--font-mono); font-size: 11px; color: var(--mute); }
+  .elevation-card.level-3 .elevation-spec { color: var(--on-dark-mute); }
+
+  /* RESPONSIVE TABLE */
+  .responsive-table { width: 100%; border-collapse: collapse; font-family: var(--font-mono); font-size: 14px; }
+  .responsive-table th, .responsive-table td {
+    text-align: left;
+    padding: 14px 12px;
+    border-bottom: 1px solid var(--hairline);
+    vertical-align: top;
+  }
+  .responsive-table th { font-weight: 700; color: var(--ink); background: var(--surface-soft); font-size: 13px; }
+  .responsive-table td { color: var(--body); }
+
+  .device-ladder { display: flex; align-items: flex-end; gap: 16px; margin-top: 32px; flex-wrap: wrap; }
+  .device { background: var(--surface-soft); border: 1px solid var(--hairline); display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding: 12px; border-radius: 4px; }
+  .device .label { font-family: var(--font-mono); font-size: 11px; color: var(--mute); margin-top: 8px; }
+  .device .name { font-family: var(--font-mono); font-size: 11px; color: var(--ink); font-weight: 700; }
+  .device.phone { width: 48px; height: 96px; }
+  .device.phone-large { width: 64px; height: 120px; }
+  .device.tablet { width: 100px; height: 150px; }
+  .device.desktop-small { width: 160px; height: 130px; }
+  .device.desktop { width: 220px; height: 150px; }
+
+  .responsive-sub-block { margin-top: 40px; }
+  .responsive-sub-block h3 { font-family: var(--font-mono); font-size: 18px; font-weight: 700; margin: 0 0 12px; color: var(--ink); }
+  .responsive-sub-block ul { padding-left: 18px; line-height: 1.7; color: var(--body); font-family: var(--font-mono); font-size: 14px; }
+
+  /* FOOTER */
+  .footer {
+    padding: 32px 48px;
+    text-align: center;
+    background: var(--canvas);
+    border-top: 1px solid var(--hairline);
+    color: var(--body);
+    font-family: var(--font-mono);
+    font-size: 14px;
+  }
+  .footer a { color: var(--ink); font-weight: 700; }
+
+  /* Overflow guards */
+  .cell, .cell > *, .demo, .button-cell, .component-cell { min-width: 0; }
+  .cell.wide,
+  .button-cell.wide,
+  .component-cell.wide { grid-column: span 2; }
+
+  @media (max-width: 1024px) {
+    section { padding: 64px 32px; }
+    .section-heading { font-size: 22px; }
+    .nav { padding: 0 32px; }
+    .nav > :last-child { display: none; }
+    .type-row { grid-template-columns: 1fr; gap: 8px; }
+    .type-row .type-meta { padding-bottom: 4px; }
+    .form-grid { gap: 16px; }
+    .hero { padding: 64px 32px; }
+    .hero h1 { font-size: 38px; }
+    .ascii-wordmark { font-size: 40px; }
+  }
+
+  @media (max-width: 720px) {
+    .cell.wide, .button-cell.wide, .component-cell.wide { grid-column: span 1; }
+    .nav { padding: 12px 20px; height: auto; min-height: 56px; }
+    .nav-links { display: none; }
+    .hero { padding: 48px 20px; }
+    .hero h1 { font-size: 28px; }
+    .hero p { font-size: 15px; }
+    section { padding: 48px 20px; }
+    .section-heading { font-size: 20px; }
+    .palette-grid, .button-grid, .card-grid, .form-grid, .demo-grid, .elevation-grid, .chart-grid { grid-template-columns: 1fr !important; gap: 16px; }
+    .ascii-wordmark { font-size: 28px; letter-spacing: 2px; }
+    .hero-tui-mockup { padding: 32px 16px; }
+    .spacing-row, .radius-row { gap: 12px; }
+    .responsive-table { font-size: 12px; }
+    .responsive-table th, .responsive-table td { padding: 10px 8px; }
+    .device-ladder { gap: 8px; }
+    .footer { padding: 24px 16px; font-size: 12px; }
+  }
+
+  /* getdesign.md nav additions */
+  .nav-left { display: flex; align-items: center; gap: 20px; }
+  .nav-brand-link,
+  .nav-brand-link:link,
+  .nav-brand-link:visited,
+  .nav-brand-link:hover,
+  .nav-brand-link:active { text-decoration: none; color: inherit; }
+  .nav-github,
+  .nav-github:link,
+  .nav-github:visited,
+  .nav-github:hover,
+  .nav-github:active {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: inherit;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 6px;
+    opacity: 0.75;
+    transition: opacity 200ms ease, border-color 200ms ease;
+    font-family: inherit;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .nav-github:hover { opacity: 1; border-color: rgba(128, 128, 128, 0.55); }
+  .nav-github svg { display: block; flex-shrink: 0; }
+
+  /* getdesign.md nav centering */
+  .nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+  .nav > .nav-left { justify-self: start; }
+  .nav > .nav-links { justify-self: center; }
+  .nav > :last-child { justify-self: end; }
+
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+<style data-design-nav="true">
+.design-preview-nav { min-height:48px; }
+.design-preview-nav .nav-brand { white-space:normal; overflow-wrap:anywhere; }
+.design-preview-nav .nav-links { display:flex; flex-wrap:wrap; gap:8px clamp(10px,2vw,26px); padding-block:5px; }
+.design-preview-nav a { text-decoration:none; }
+.design-preview-nav .nav-links a { color:inherit; }
+.design-preview-nav .nav-links a:hover { text-decoration:underline; text-underline-offset:3px; }
+.design-preview-nav a:focus-visible { outline:2px solid currentColor; outline-offset:4px; }
+:is([id^=design-section-],[id=design-overview]) { scroll-margin-top:94px; }
+@media (max-width:760px) {
+  .design-preview-nav { position:static; display:flex; flex-wrap:wrap; gap:3px 12px; padding:8px 12px; height:auto; }
+  .design-preview-nav .nav-left { min-width:0; }
+  .design-preview-nav > .nav-links { flex:1 1 100%; display:flex; padding-inline:0; }
+  .design-preview-nav .nav-cta { display:none; }
+  :is([id^=design-section-],[id=design-overview]) { scroll-margin-top:14px; }
+}
+</style></head>
+<body data-platform-type="开发工具"><nav aria-label="样张章节" class="nav design-preview-nav" data-design-nav="true"><div class="nav-left"><span class="nav-brand">OpenCode</span></div><ul class="nav-links"><li><a href="#design-section-1">配色</a></li><li><a href="#design-section-2">字体</a></li><li><a href="#design-section-3">按钮</a></li><li><a href="#design-section-7">表单</a></li><li><a href="#design-section-8">布局</a></li></ul><a class="nav-cta" href="#design-overview">概览</a></nav>
+<header class="hero">
+<div class="hero-content">
+<h1 id="design-overview">暖米白等宽版式</h1>
+<p>这套终端风格的营销页全程使用等宽字体（monospace）。暖米白底（#fdfcfc）配近黑文字（#201d1d），少量控件为 4px 圆角矩形，列表用 [+] / [-] / [x] 作为 ASCII 标记。首屏中唯一深色大卡片用于展示 OpenCode 的终端界面。</p>
+<div class="hero-actions">
+<button class="btn btn-primary">↓ 下载</button>
+<button class="btn btn-secondary">读取文件→</button>
+</div>
+</div>
+</header>
+<!-- COLOR PALETTE -->
+<section id="colors">
+<p class="section-eyebrow">[01] 颜色</p>
+<h2 class="section-heading" id="design-section-1">配色</h2>
+<p class="section-desc">暖米白 页面底色带有近黑色 文字色,5级中性灰色梯子,以及完整的Apple HIG语义坡道——为产品TUI保留,但很少在营销页面使用.</p>
+<div class="palette-block">
+<p class="palette-block-label">[+] 品牌</p>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#201d1d"></div><div class="swatch-meta"><p class="swatch-name">Ink (primary)</p><p class="swatch-hex">#201d1d</p><p class="swatch-role">标题、正文、主 行动按钮 填充、导航链接</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#0f0000"></div><div class="swatch-meta"><p class="swatch-name">Ink Deep</p><p class="swatch-hex">#0f0000</p><p class="swatch-role">主要按压状态行动按钮</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#fdfcfc;box-shadow:inset 0 0 0 1px var(--hairline)"></div><div class="swatch-meta"><p class="swatch-name">Cream (canvas)</p><p class="swatch-hex">#fdfcfc</p><p class="swatch-role">页面正文, 卡片底色, on-primary 文本</p></div></div>
+</div>
+</div>
+<div class="palette-block">
+<p class="palette-block-label">[+] 表面</p>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#f8f7f7"></div><div class="swatch-meta"><p class="swatch-name">Soft Surface</p><p class="swatch-hex">#f8f7f7</p><p class="swatch-role">Text-input 背景, 证词填充</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#f1eeee"></div><div class="swatch-meta"><p class="swatch-name">Surface Card</p><p class="swatch-hex">#f1eeee</p><p class="swatch-role">安装片段, 禁用按钮填充</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#201d1d"></div><div class="swatch-meta"><p class="swatch-name">Surface Dark</p><p class="swatch-hex">#201d1d</p><p class="swatch-role">首屏TUI模拟,暗的行动按钮 胶囊形</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#302c2c"></div><div class="swatch-meta"><p class="swatch-name">Surface Dark Elevated</p><p class="swatch-hex">#302c2c</p><p class="swatch-role">设置快速排入首屏 TUI 内</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:rgba(15,0,0,0.12)"></div><div class="swatch-meta"><p class="swatch-name">Hairline</p><p class="swatch-hex">rgba(15,0,0,0.12)</p><p class="swatch-role">1px 分区分隔器——半透明温暖的浅色调</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#646262"></div><div class="swatch-meta"><p class="swatch-name">Hairline Strong</p><p class="swatch-hex">#646262</p><p class="swatch-role">标签条底部规则, 更强的内线分隔符</p></div></div>
+</div>
+</div>
+<div class="palette-block">
+<p class="palette-block-label">[+] 文本</p>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#201d1d"></div><div class="swatch-meta"><p class="swatch-name">Ink</p><p class="swatch-hex">#201d1d</p><p class="swatch-role">头条、正文、主导航链接</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#302c2c"></div><div class="swatch-meta"><p class="swatch-name">Charcoal</p><p class="swatch-hex">#302c2c</p><p class="swatch-role">纯文字色太重的下体柔软</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#424245"></div><div class="swatch-meta"><p class="swatch-name">Body</p><p class="swatch-hex">#424245</p><p class="swatch-role">默认段落, FAQ 答案</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#646262"></div><div class="swatch-meta"><p class="swatch-name">Mute</p><p class="swatch-hex">#646262</p><p class="swatch-role">标签标签( 默认) , 元数据, 页脚</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#6e6e73"></div><div class="swatch-meta"><p class="swatch-name">Stone</p><p class="swatch-hex">#6e6e73</p><p class="swatch-role">最小强调的效用文本</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#9a9898"></div><div class="swatch-meta"><p class="swatch-name">Ash</p><p class="swatch-hex">#9a9898</p><p class="swatch-role">禁用文本, TUI 模拟二级</p></div></div>
+</div>
+</div>
+<div class="palette-block">
+<p class="palette-block-label">[+] 语义学(Apple HIG斜拉桥——主要用于产品TUI)</p>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#007aff"></div><div class="swatch-meta"><p class="swatch-name">Accent</p><p class="swatch-hex">#007aff</p><p class="swatch-role">Apple 蓝色 — TUI 命令突出显示, 产品内链接</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#0056b3"></div><div class="swatch-meta"><p class="swatch-name">Accent Hover</p><p class="swatch-hex">#0056b3</p><p class="swatch-role">新闻网</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#004085"></div><div class="swatch-meta"><p class="swatch-name">Accent Active</p><p class="swatch-hex">#004085</p><p class="swatch-role">深度新闻</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#ff3b30"></div><div class="swatch-meta"><p class="swatch-name">Danger</p><p class="swatch-hex">#ff3b30</p><p class="swatch-role">破坏确认, 错误状态</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#d70015"></div><div class="swatch-meta"><p class="swatch-name">Danger Hover</p><p class="swatch-hex">#d70015</p><p class="swatch-role">被压的破坏力</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#a50011"></div><div class="swatch-meta"><p class="swatch-name">Danger Active</p><p class="swatch-hex">#a50011</p><p class="swatch-role">深层的破坏性</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#ff9f0a"></div><div class="swatch-meta"><p class="swatch-name">Warning</p><p class="swatch-hex">#ff9f0a</p><p class="swatch-role">注意点名</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#cc7f08"></div><div class="swatch-meta"><p class="swatch-name">Warning Hover</p><p class="swatch-hex">#cc7f08</p><p class="swatch-role">谨慎行事</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#995f06"></div><div class="swatch-meta"><p class="swatch-name">Warning Active</p><p class="swatch-hex">#995f06</p><p class="swatch-role">深为谨慎</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#30d158"></div><div class="swatch-meta"><p class="swatch-name">Success</p><p class="swatch-hex">#30d158</p><p class="swatch-role">肯定,TUI成功指标</p></div></div>
+</div>
+</div>
+</section>
+<!-- TYPOGRAPHY -->
+<section id="typography">
+<p class="section-eyebrow">[02] 字法</p>
+<h2 class="section-heading" id="design-section-2">字号层级</h2>
+<p class="section-desc">100% Berkeley Mono. No sans-serif, no italic, no display variant — the marketing page is a man page rendered at modern resolutions.</p>
+<div class="type-row"><div class="type-meta"><strong>display-xl</strong>Berkeley Mono<br/>38px / 700 / lh 1.5</div><div class="type-sample" style="font-size:38px;font-weight:700;line-height:1.5">开源 AI 编码代理</div></div>
+<div class="type-row"><div class="type-meta"><strong>heading-md</strong>Berkeley Mono<br/>16px / 700 / lh 1.5</div><div class="type-sample" style="font-size:16px;font-weight:700;line-height:1.5">何谓 OpenCode?</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-md</strong>Berkeley Mono<br/>16px / 400 / lh 1.5</div><div class="type-sample" style="font-size:16px;font-weight:400;line-height:1.5">默认段落复制品携带每个身体部分,list-row文本,以及install-snippet代码,以16px的正常重量.（原文参数：16px）</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-strong</strong>Berkeley Mono<br/>16px / 500 / lh 1.5</div><div class="type-sample" style="font-size:16px;font-weight:500;line-height:1.5">内含式强调或主导航链接</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-tight</strong>Berkeley Mono<br/>16px / 500 / lh 1</div><div class="type-sample" style="font-size:16px;font-weight:500;line-height:1">压缩标签,无呼吸室</div></div>
+<div class="type-row"><div class="type-meta"><strong>link-md</strong>Berkeley Mono<br/>16px / 400 / lh 1.5</div><div class="type-sample" style="font-size:16px;font-weight:400;line-height:1.5;text-decoration:underline">内置主机链接</div></div>
+<div class="type-row"><div class="type-meta"><strong>button-md</strong>Berkeley Mono<br/>16px / 500 / lh 2</div><div class="type-sample" style="font-size:16px;font-weight:500;line-height:2">下载</div></div>
+<div class="type-row"><div class="type-meta"><strong>caption-md</strong>Berkeley Mono<br/>14px / 400 / lh 2</div><div class="type-sample" style="font-size:14px;font-weight:400;line-height:2">页脚链接、 徽章标签、 版权行、 图表标题</div></div>
+</section>
+<!-- BUTTONS -->
+<section id="components">
+<p class="section-eyebrow">[03] 组件</p>
+<h2 class="section-heading" id="design-section-3">按钮样式</h2>
+<p class="section-desc">一个近黑色填充矩形,一个被概括的矩形,一个制表条,和一个禁用状态——即整个按钮词汇,全部位于4px半径.（原文参数：4px）</p>
+<div class="button-grid">
+<div class="button-cell">
+<button class="btn btn-primary">下载</button>
+<p class="button-cell-label">button-primary</p>
+<p class="button-cell-spec">bg ink · text on-primary · rounded 4px · 36px height</p>
+</div>
+<div class="button-cell">
+<button class="btn btn-primary" style="background:var(--ink-deep)">按下</button>
+<p class="button-cell-label">button-primary-active</p>
+<p class="button-cell-spec">bg ink-deep 文本 on-primary</p>
+</div>
+<div class="button-cell">
+<button class="btn btn-secondary">读取文件→</button>
+<p class="button-cell-label">button-secondary</p>
+<p class="button-cell-spec">bg 画布 \ text 文字色 \ 1px hairline-strong · 四舍五入 4px</p>
+</div>
+<div class="button-cell">
+<button class="btn btn-disabled">禁用</button>
+<p class="button-cell-label">button-disabled</p>
+<p class="button-cell-spec">bg surface-card 文本灰</p>
+</div>
+<div class="button-cell wide">
+<div class="tab-strip">
+<button class="tab active">卷曲( T)</button>
+<button class="tab">时间</button>
+<button class="tab">包子( 包子)</button>
+<button class="tab">酿酒</button>
+<button class="tab">呀,你还行吧?</button>
+</div>
+<p class="button-cell-label">button-tab + button-tab-active</p>
+<p class="button-cell-spec">默认: 文本变音 ^ 活动: 文本 文字色 + 2px 文字色 下划线</p>
+</div>
+<div class="button-cell">
+<span class="badge-news">新闻</span>
+<p class="button-cell-label">badge-news</p>
+<p class="button-cell-spec">数据 surface-dark · 文本 on-dark · 贴纸 2/8 · 四舍五入 4px</p>
+</div>
+<div class="button-cell wide">
+<div class="install-snippet">
+<span style="color:var(--mute)">$</span>
+<span>卷曲 - fSSL https://opencode.ai/install | 击打</span>
+<span class="copy">⧉</span>
+</div>
+<p class="button-cell-label">install-snippet</p>
+<p class="button-cell-spec">bg surface-card · body-md (mono) · padding 12/16 · rounded 4px</p>
+</div>
+</div>
+</section>
+<!-- HERO TUI MOCKUP -->
+<section>
+<p class="section-eyebrow">[04] 签字</p>
+<h2 class="section-heading">泰利首屏雾泡</h2>
+<p class="section-desc">系统唯一的视觉瞬间——一个通栏暗色表面,用ASCII块-像素文字标记来嘲弄OpenCode终端接口,一个插座的即时行,以及密钥绑定提示.</p>
+<div class="hero-tui-mockup">
+<div class="ascii-wordmark">opencode</div>
+<div class="tui-prompt-row">
+<span class="pipe">│ </span><span style="color:var(--accent)">构建</span> <span style="color:var(--ash)">Claude 倾斜 4.5  OpenCode 禅宗</span>
+</div>
+<div class="tui-keybindings">选项卡切换代理 CCrl-p 命令</div>
+</div>
+</section>
+<!-- LIST ROWS + FAQ + TESTIMONIAL -->
+<section>
+<p class="section-eyebrow">[05] 内容行</p>
+<h2 class="section-heading">列表 · FAQ · 证明行</h2>
+<p class="section-desc">碎裂的ASCII标记带有弹子词汇. List 列宣布特性,FAQ 列扩展/缩写, 试镜列对一个有引号的avatar dot.</p>
+<p class="palette-block-label">[+] 列表行</p>
+<div class="list-rows" style="margin-bottom:48px">
+<div class="list-row"><span class="marker">[+]</span> <span class="label">LSP 启用</span> 自动装入 IDE 的 LSP 右侧</div>
+<div class="list-row"><span class="marker">[+]</span> <span class="label">复会</span> 在同一项目上同时启动多个代理</div>
+<div class="list-row"><span class="marker">[+]</span> <span class="label">共享链接</span> 共享链接到任何会话, 供其它会议调试</div>
+<div class="list-row"><span class="marker">[+]</span> <span class="label">GitHub 副驾驶</span> 登录 GitHub , 使用您的副驾驶账户</div>
+<div class="list-row"><span class="marker">[+]</span> <span class="label">任何型号</span> 75+ LLM 通过Models.dev提供商,包括本地模式</div>
+<div class="list-row"><span class="marker">[+]</span> <span class="label">任何编辑器</span> 可作为终端接口、桌面应用程序和IDE扩展名</div>
+</div>
+<p class="palette-block-label">[+] 财务问题行</p>
+<div class="faq-list" style="margin-bottom:48px">
+<div class="faq-row"><span class="marker">+</span>何谓 OpenCode?</div>
+<div class="faq-row"><span class="marker">+</span>我该怎么用OpenCode?</div>
+<div class="faq-row"><span class="marker">+</span>我需要额外的订阅才能使用OpenCode吗?</div>
+<div class="faq-row"><span class="marker">+</span>我能用一下我和OpenCode的现有订阅吗?</div>
+<div class="faq-row"><span class="marker">+</span>我能在终端里用OpenCode吗?</div>
+<div class="faq-row"><span class="marker">+</span>OpenCode 多少钱?</div>
+<div class="faq-row"><span class="marker">+</span>数据与隐私呢?</div>
+<div class="faq-row"><span class="marker">+</span>OpenCode 是否开源?</div>
+</div>
+<p class="palette-block-label">[+] 证行</p>
+<div>
+<div class="testimonial-row">
+<div class="testimonial-avatar"></div>
+<div>
+<div><span class="testimonial-name">行标签</span> <span class="testimonial-meta">公司</span></div>
+<div>body-md在4px半径处软地行中制成的普通检验正文。（原文参数：4px）</div>
+</div>
+</div>
+<div class="testimonial-row">
+<div class="testimonial-avatar" style="background:var(--warning)"></div>
+<div>
+<div><span class="testimonial-name">行标签</span> <span class="testimonial-meta">公司</span></div>
+<div>第二例行显示不同证相的异形-点的颜色变异.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CHART TILES -->
+<section>
+<p class="section-eyebrow">[06] Stat区块</p>
+<h2 class="section-heading">图表图示</h2>
+<p class="section-desc">三个细小的抽象的零星线图 在一个统计区块内,每个区块下方有一个图 N. 标题,在caption-md哑音中。</p>
+<div class="chart-grid">
+<div class="chart-tile">
+<svg class="chart-svg" preserveaspectratio="none" viewbox="0 0 200 80"><polyline fill="none" points="0,70 30,55 60,40 100,30 140,18 180,8 200,4" stroke="#424245" stroke-width="1.5"></polyline></svg>
+<p class="chart-caption">Fig 1. Generic ascending line</p>
+</div>
+<div class="chart-tile">
+<svg class="chart-svg" preserveaspectratio="none" viewbox="0 0 200 80">
+<g fill="#646262">
+<circle cx="20" cy="50" r="1"></circle><circle cx="40" cy="40" r="1"></circle><circle cx="60" cy="60" r="1"></circle><circle cx="80" cy="35" r="1"></circle><circle cx="100" cy="55" r="1"></circle><circle cx="120" cy="30" r="1"></circle><circle cx="140" cy="45" r="1"></circle><circle cx="160" cy="25" r="1"></circle><circle cx="180" cy="50" r="1"></circle>
+<circle cx="30" cy="60" r="1"></circle><circle cx="70" cy="20" r="1"></circle><circle cx="110" cy="65" r="1"></circle><circle cx="150" cy="40" r="1"></circle>
+</g>
+</svg>
+<p class="chart-caption">Fig 2. Generic dotted scatter</p>
+</div>
+<div class="chart-tile">
+<svg class="chart-svg" preserveaspectratio="none" viewbox="0 0 200 80">
+<g stroke="#424245" stroke-width="1">
+<line x1="10" x2="10" y1="70" y2="40"></line><line x1="20" x2="20" y1="70" y2="35"></line><line x1="30" x2="30" y1="70" y2="55"></line><line x1="40" x2="40" y1="70" y2="20"></line><line x1="50" x2="50" y1="70" y2="50"></line><line x1="60" x2="60" y1="70" y2="30"></line><line x1="70" x2="70" y1="70" y2="45"></line><line x1="80" x2="80" y1="70" y2="15"></line><line x1="90" x2="90" y1="70" y2="40"></line><line x1="100" x2="100" y1="70" y2="25"></line><line x1="110" x2="110" y1="70" y2="50"></line><line x1="120" x2="120" y1="70" y2="20"></line><line x1="130" x2="130" y1="70" y2="35"></line><line x1="140" x2="140" y1="70" y2="10"></line><line x1="150" x2="150" y1="70" y2="40"></line><line x1="160" x2="160" y1="70" y2="20"></line><line x1="170" x2="170" y1="70" y2="30"></line><line x1="180" x2="180" y1="70" y2="15"></line>
+</g>
+</svg>
+<p class="chart-caption">Fig 3. Generic monthly bars</p>
+</div>
+</div>
+</section>
+<!-- FORMS -->
+<section>
+<p class="section-eyebrow">[07]表</p>
+<h2 class="section-heading" id="design-section-7">表单控件</h2>
+<p class="section-desc">输入默认坐落在软表面填充上;在焦点上背景翻转到页面底色上,并带有墨色边框.</p>
+<div class="form-grid">
+<div class="form-cell">
+<label class="form-label">默认输入</label>
+<input class="text-input" placeholder="亚克米公司"/>
+<span class="form-spec">surface-soft bg · 1px hairline · rounded 4px · 40px height</span>
+</div>
+<div class="form-cell">
+<label class="form-label">重点输入</label>
+<input class="text-input focused" value="Acme Inc"/>
+<span class="form-spec">画布 bg − 1px 文字色边界 \ 圆形 4px</span>
+</div>
+<div class="form-cell wide">
+<label class="form-label">文本区</label>
+<textarea class="text-input" placeholder="我们需要帮助..."></textarea>
+<span class="form-spec">surface-soft bg · 1px hairline · rounded 4px · min-height 96px</span>
+</div>
+<div class="form-cell">
+<label class="form-label">提交</label>
+<button class="btn btn-primary" style="width:100%">发送</button>
+<span class="form-spec">button-primary 总是在堆叠的字段下方全宽</span>
+</div>
+</div>
+</section>
+<!-- SPACING -->
+<section>
+<p class="section-eyebrow">[08]版式</p>
+<h2 class="section-heading" id="design-section-8">间距层级</h2>
+<p class="section-desc">8px base unit with finer 1/2/4px steps. Section rhythm sits at 96px — the universal vertical gap.</p>
+<div class="spacing-row">
+<div class="spacing-cell"><div class="spacing-bar" style="width:1px"></div><span class="spacing-label">xxx 1 数据</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:4px"></div><span class="spacing-label">xs 4 数据</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:8px"></div><span class="spacing-label">sm 8 数据</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:12px"></div><span class="spacing-label">md 12 数据</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:16px"></div><span class="spacing-label">16 高压压压轴</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:24px"></div><span class="spacing-label">□ 24</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:32px"></div><span class="spacing-label">xxl 32 数据</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:96px"></div><span class="spacing-label">96 · 章节</span></div>
+</div>
+</section>
+<!-- RADIUS -->
+<section>
+<p class="section-eyebrow">[09]形状</p>
+<h2 class="section-heading">圆角层级</h2>
+<p class="section-desc">全部工作都由两个值来完成:4px用于交互元素,0px用于其他所有. 神通圈是唯一全圆的元素.（原文参数：4px、0px）</p>
+<div class="radius-row">
+<div class="radius-cell"><div class="radius-box" style="border-radius:0"></div><span class="radius-label">无 0</span><p class="radius-context">区域,首屏TUI,导航,脚步</p></div>
+<div class="radius-cell"><div class="radius-box" style="border-radius:4px"></div><span class="radius-label">sm 4 数据</span><p class="radius-context">每个互动要素</p></div>
+<div class="radius-cell"><div class="radius-box" style="border-radius:9999px"></div><span class="radius-label">9999 数据</span><p class="radius-context">试镜中的神通圆圈</p></div>
+</div>
+</section>
+<!-- ELEVATION -->
+<section>
+<p class="section-eyebrow">[10]深度</p>
+<h2 class="section-heading">层次与深度</h2>
+<p class="section-desc">无落影. 深度由细边框和首屏TUI模拟中所使用的单暗表面构建.</p>
+<div class="elevation-grid">
+<div class="elevation-card level-0"><div class="elevation-name">Level 0 — Flat</div><div class="elevation-spec">无边框/ 无阴影</div></div>
+<div class="elevation-card level-1"><div class="elevation-name">Level 1 — Hairline</div><div class="elevation-spec">1px 固体 rgba(15,0,0,0.12)</div></div>
+<div class="elevation-card level-2"><div class="elevation-name">Level 2 — Hairline Strong</div><div class="elevation-spec">1px 固体 #646262</div></div>
+<div class="elevation-card level-3"><div class="elevation-name">3 级——倒数暗</div><div class="elevation-spec">bg #201d1d → 系统唯一的“外延”表面</div></div>
+</div>
+</section>
+<!-- RESPONSIVE -->
+<section id="layout">
+<p class="section-eyebrow">[11] 反应</p>
+<h2 class="section-heading">响应式布局</h2>
+<p class="section-desc">5 响应式断点区划采用印刷式倒塌策略. 节奏收缩 96px → 64px → 48px 下楼的路上。</p>
+<table class="responsive-table">
+<thead><tr><th>名称</th><th>宽度</th><th>布局变化</th></tr></thead>
+<tbody>
+<tr><td>宽屏桌面</td><td>1280px+</td><td>默认 — 960px 内容列, 5- up footer</td></tr>
+<tr><td>桌面端</td><td>1024px</td><td>相同的布局; 导航仍然水平</td></tr>
+<tr><td>平板电脑</td><td>850px</td><td>页脚 5 列 → 2 列;/企业两栏的叠叠</td></tr>
+<tr><td>平板内窄</td><td>768px</td><td>初等导航成为汉堡; 下载行动按钮 保留</td></tr>
+<tr><td>手机端</td><td>640px</td><td>单栏;首屏 38px → ~28px</td></tr>
+</tbody>
+</table>
+<div class="device-ladder">
+<div class="device phone"><span class="name">375</span><span class="label">手机端</span></div>
+<div class="device phone-large"><span class="name">640</span><span class="label">手机端</span></div>
+<div class="device tablet"><span class="name">768</span><span class="label">平板内窄</span></div>
+<div class="device desktop-small"><span class="name">1024</span><span class="label">桌面端</span></div>
+<div class="device desktop"><span class="name">1280</span><span class="label">宽屏桌面</span></div>
+</div>
+<div class="responsive-sub-block">
+<h3>触控区域</h3>
+<ul>
+<li><strong>华达州议会:</strong> button-primary在36px高度上配有20px的贴板.（原文参数：36px、20px）</li>
+<li><strong>文本输入+文本区域 :</strong> 40px高处与12px贴板.（原文参数：40px、12px）</li>
+<li><strong>标签条 :</strong> ~32–36px 高度; 延伸至 44px 内嵌式可切除细胞</li>
+<li><strong>页脚链接 :</strong> 14px caption-md with line-height 2.0 + vertical padding (~44px tap row).</li>
+</ul>
+</div>
+<div class="responsive-sub-block">
+<h3>窄屏布局调整</h3>
+<ul>
+<li><strong>初等导航 :</strong> 桌面水平 → 平板- 窄汉堡抽屉。 下载行动按钮时保持可见.</li>
+<li><strong>首屏TUI模拟:</strong> 通栏 以每响应式断点; ASCII 字标记比例缩放。</li>
+<li><strong>标签条 :</strong> 如果标签溢出,则桌面固定宽的→移动水平滚动。</li>
+<li><strong>页脚 :</strong> 5-up → 2-up 位于平板电脑 → 1-up 移动式.</li>
+<li><strong>/企业双栏:</strong> 50/50 desktop → vertical stack on tablet.</li>
+<li><strong>区域编目 :</strong> 96px → 64px → 48px.</li>
+<li><strong>首屏标题: 高尔夫球队:</strong> 38px → ~28px at mobile.</li>
+</ul>
+</div>
+</section>
+<footer class="footer" data-platform-example="footer">
+<div class="footer-shell">
+<p class="design-demo-note">栏目演示 · 开发工具</p><div class="footer-grid">
+<div class="footer-col">
+<h6>开发环境</h6>
+<span>项目配置</span>
+<span>运行环境</span>
+<span>团队协作</span>
+</div>
+<div class="footer-col">
+<h6>开发资源</h6>
+<span>快速开始</span>
+<span>技术文档</span>
+<span>示例项目</span>
+</div>
+<div class="footer-col">
+<h6>交付运维</h6>
+<span>部署记录</span>
+<span>运行日志</span>
+<span>状态监控</span>
+</div>
+<div class="footer-col">
+<h6>支持</h6>
+<span>使用指南</span>
+<span>更新记录</span>
+<span>问题反馈</span>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>绿色强调的阅读版式</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #ffffff;
+      --on-primary: #0a0a0a;
+      --brand-green: #00d4a4;
+      --brand-green-deep: #00b48a;
+      --brand-green-soft: #7cebcb;
+      --brand-tag: #5a8fdb;
+      --brand-warn: #d99a3a;
+      --brand-annotate: #4dd699;
+      --brand-error: #e57878;
+      --hero-sky-from: #1a2a3a;
+      --hero-sky-to: #2a2520;
+      --hero-dark-from: #0d2128;
+      --hero-dark-to: #1a3d35;
+      --testimonial-orange: #f55a3c;
+      --canvas: #0a0a0a;
+      --canvas-dark: #000000;
+      --surface: #161616;
+      --surface-soft: #1c1c1e;
+      --surface-code: #161616;
+      --hairline: rgba(255,255,255,0.16);
+      --hairline-soft: rgba(255,255,255,0.08);
+      --hairline-dark: rgba(255,255,255,0.08);
+      --ink: #ffffff;
+      --charcoal: #e6e6e8;
+      --slate: #b1b9c4;
+      --steel: #8e8e93;
+      --stone: #6e7681;
+      --muted: #555555;
+      --on-dark: #ffffff;
+      --on-dark-muted: #b3b3b3;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--ink);
+      background: var(--canvas);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    .min-width-0, .min-width-0 * { min-width: 0; }
+    .cell.wide, .button-cell.wide { grid-column: span 2; }
+    code, .code-font { font-family: 'Geist Mono', 'SF Mono', Menlo, Consolas, monospace; }
+    .promo-banner {
+      background: var(--canvas-dark); color: var(--on-dark);
+      text-align: center; padding: 12px 16px;
+      font-size: 14px; font-weight: 500;
+    }
+    .promo-banner a { color: var(--on-dark); text-decoration: underline; margin-left: 8px; }
+    .nav {
+      display: grid; grid-template-columns: 1fr auto 1fr;
+      align-items: center; padding: 0 32px; height: 64px;
+      background: var(--canvas); border-bottom: 1px solid var(--hairline-soft);
+      position: sticky; top: 0; z-index: 100;
+    }
+    .nav-left { display: flex; align-items: center; gap: 20px; justify-self: start; }
+    .nav-brand-link, .nav-brand-link:link, .nav-brand-link:visited, .nav-brand-link:hover, .nav-brand-link:active {
+      text-decoration: none; color: inherit; font-weight: 600; font-size: 15px;
+    }
+    .nav-github, .nav-github:link, .nav-github:visited, .nav-github:hover, .nav-github:active {
+      display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600;
+      color: inherit; text-decoration: none; padding: 5px 10px;
+      border: 1px solid rgba(128,128,128,0.3); border-radius: 6px; opacity: 0.75;
+      transition: opacity 200ms ease, border-color 200ms ease;
+      font-family: inherit; line-height: 1; white-space: nowrap; background: transparent;
+    }
+    .nav-github:hover { opacity: 1; border-color: rgba(128,128,128,0.55); }
+    .nav-github svg { display: block; flex-shrink: 0; }
+    .nav-links { justify-self: center; list-style: none; display: flex; gap: 24px; align-items: center; }
+    .nav-links a { color: var(--charcoal); text-decoration: none; font-size: 14px; font-weight: 500; }
+    .nav-cta {
+      justify-self: end; padding: 10px 20px;
+      background: var(--primary); color: var(--on-primary);
+      border: none; border-radius: 9999px; font-weight: 500;
+      font-size: 14px; cursor: pointer; font-family: inherit;
+    }
+    .hero {
+      padding: 120px 32px; max-width: 1280px; margin: 0 auto;
+      background: linear-gradient(180deg, var(--hero-sky-from) 0%, var(--hero-sky-to) 100%);
+      text-align: left; border-radius: 0;
+    }
+    .hero h1 {
+      font-size: 72px; font-weight: 600; line-height: 1.05;
+      color: var(--ink); margin-bottom: 24px;
+      letter-spacing: -2px; max-width: 1100px;
+    }
+    .hero p {
+      font-size: 18px; color: var(--charcoal); max-width: 680px;
+      margin: 0 0 40px; line-height: 1.5; font-weight: 400;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-start; }
+    button { font-family: inherit; cursor: pointer; }
+    .btn-primary {
+      padding: 10px 20px; background: var(--primary); color: var(--on-primary);
+      border: none; border-radius: 9999px; font-weight: 500; font-size: 14px;
+    }
+    .btn-accent-green {
+      padding: 10px 20px; background: var(--brand-green); color: var(--primary);
+      border: none; border-radius: 9999px; font-weight: 500; font-size: 14px;
+    }
+    .btn-on-dark {
+      padding: 10px 20px; background: var(--on-dark); color: var(--primary);
+      border: none; border-radius: 9999px; font-weight: 500; font-size: 14px;
+    }
+    .btn-secondary {
+      padding: 10px 20px; background: transparent; color: var(--ink);
+      border: 1px solid var(--hairline); border-radius: 9999px;
+      font-weight: 500; font-size: 14px;
+    }
+    .btn-ghost {
+      padding: 8px 12px; background: transparent; color: var(--ink);
+      border: none; border-radius: 8px;
+      font-weight: 500; font-size: 14px;
+    }
+    .btn-link {
+      padding: 0; background: transparent; color: var(--ink);
+      border: none; font-weight: 500; font-size: 14px; text-decoration: none;
+    }
+    .btn-icon-circular {
+      width: 32px; height: 32px; background: var(--canvas); color: var(--ink);
+      border: 1px solid var(--hairline); border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+    .btn-disabled {
+      padding: 10px 20px; background: var(--hairline); color: var(--muted);
+      border: none; border-radius: 9999px; font-weight: 500; font-size: 14px;
+      cursor: not-allowed;
+    }
+    section {
+      padding: 96px 32px; max-width: 1280px; margin: 0 auto;
+    }
+    .section-heading {
+      font-size: 48px; font-weight: 600; margin-bottom: 12px; color: var(--ink);
+      line-height: 1.1; letter-spacing: -1px;
+    }
+    .section-sub { font-size: 16px; color: var(--steel); margin-bottom: 40px; max-width: 720px; line-height: 1.5; }
+    .palette-group { margin-bottom: 48px; }
+    .palette-group h3 { font-size: 18px; font-weight: 600; margin-bottom: 20px; color: var(--ink); }
+    .palette-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+    .swatch { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+    .swatch-color { width: 100%; height: 96px; border-radius: 12px; border: 1px solid var(--hairline-soft); }
+    .swatch-name { font-weight: 600; font-size: 14px; color: var(--ink); }
+    .swatch-hex { font-family: 'Geist Mono', monospace; font-size: 12px; color: var(--steel); }
+    .swatch-role { font-size: 12px; color: var(--steel); line-height: 1.4; }
+    .type-row {
+      display: grid; grid-template-columns: 280px 1fr;
+      gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--hairline-soft);
+      align-items: baseline;
+    }
+    .type-meta { display: flex; flex-direction: column; gap: 4px; }
+    .type-meta .role { font-size: 14px; font-weight: 600; color: var(--ink); }
+    .type-meta .specs { font-family: 'Geist Mono', monospace; font-size: 12px; color: var(--steel); }
+    .type-sample { color: var(--ink); }
+    .button-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .button-cell {
+      display: flex; flex-direction: column; gap: 12px;
+      padding: 24px; background: var(--canvas);
+      border: 1px solid var(--hairline); border-radius: 12px;
+      align-items: flex-start; min-width: 0;
+    }
+    .button-cell-spec { font-size: 12px; color: var(--steel); font-family: 'Geist Mono', monospace; }
+    .button-cell-name { font-size: 14px; font-weight: 600; color: var(--ink); }
+    .badge-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .badge {
+      display: inline-block; padding: 2px 8px;
+      border-radius: 9999px; font-size: 13px; font-weight: 600; line-height: 1.4;
+    }
+    .badge-discount { background: var(--brand-green); color: var(--primary); }
+    .badge-required { background: var(--brand-error); color: var(--on-dark); border-radius: 4px; padding: 2px 6px; font-size: 11px; letter-spacing: 0.5px; }
+    .badge-type { background: var(--surface); color: var(--steel); border-radius: 4px; padding: 2px 6px; font-family: 'Geist Mono', monospace; font-size: 13px; font-weight: 400; }
+    .badge-tag { background: rgba(55, 114, 207, 0.15); color: var(--brand-tag); border-radius: 4px; padding: 2px 8px; }
+    /* Hero variants */
+    .hero-band-dark {
+      padding: 96px 32px; max-width: 1440px; margin: 0 auto;
+      background: linear-gradient(135deg, var(--hero-dark-from) 0%, var(--hero-dark-to) 100%);
+      color: var(--on-dark); border-radius: 16px;
+      display: flex; flex-direction: column; gap: 24px;
+    }
+    .hero-band-dark h2 { font-size: 56px; font-weight: 600; line-height: 1.10; letter-spacing: -1.5px; max-width: 720px; }
+    .hero-band-dark p { font-size: 18px; opacity: 0.9; max-width: 560px; }
+    .hero-product-mockup {
+      background: var(--canvas); border-radius: 12px;
+      border: 1px solid var(--hairline-soft);
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 24px 48px -8px;
+      padding: 0; min-height: 240px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--steel); font-size: 13px;
+    }
+    /* Cards */
+    .card-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .card-base {
+      background: var(--canvas); border-radius: 12px; padding: 24px;
+      border: 1px solid var(--hairline);
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .card-feature {
+      background: var(--surface); border-radius: 12px; padding: 32px;
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .card-help {
+      background: var(--canvas); border-radius: 12px; padding: 24px;
+      border: 1px solid var(--hairline);
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .card-help h5 { font-size: 18px; font-weight: 600; color: var(--ink); }
+    .card-help p { font-size: 14px; color: var(--steel); line-height: 1.5; }
+    .card-startup-perk {
+      background: var(--canvas); border-radius: 12px; padding: 24px;
+      border: 1px solid var(--hairline);
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .card-startup-perk .icon-zone {
+      width: 32px; height: 32px;
+      background: var(--surface); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+    }
+    .card-startup-perk h5 { font-size: 18px; font-weight: 600; color: var(--ink); }
+    .card-startup-perk p { font-size: 14px; color: var(--steel); line-height: 1.5; }
+    /* Pricing */
+    .pricing-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .pricing-card {
+      background: var(--canvas); border-radius: 12px; padding: 32px;
+      border: 1px solid var(--hairline);
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .pricing-card.featured {
+      border: 2px solid var(--brand-green);
+      box-shadow: rgba(0, 212, 164, 0.08) 0px 8px 24px;
+      padding: 31px;
+    }
+    .pricing-card .tier-name { font-size: 18px; font-weight: 600; color: var(--ink); }
+    .pricing-card .tier-price { font-size: 56px; font-weight: 600; color: var(--ink); letter-spacing: -1.5px; line-height: 1.1; }
+    .pricing-card .tier-price small { font-size: 16px; font-weight: 400; color: var(--steel); margin-left: 4px; }
+    .pricing-card .tier-feature-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .pricing-card .tier-feature-list li { font-size: 14px; color: var(--charcoal); display: flex; gap: 8px; align-items: flex-start; }
+    .pricing-card .tier-feature-list li::before { content: '✓'; color: var(--brand-green); font-weight: 700; flex-shrink: 0; }
+    .testimonial-card-feature {
+      background: var(--testimonial-orange); color: var(--on-dark);
+      border-radius: 12px; padding: 64px 48px;
+      display: grid; grid-template-columns: 1fr 200px; gap: 32px; align-items: center;
+      grid-column: 1 / -1;
+    }
+    .testimonial-card-feature .quote { font-size: 28px; font-weight: 600; line-height: 1.25; letter-spacing: -0.5px; }
+    .testimonial-card-feature .attribution { font-size: 14px; font-weight: 500; opacity: 0.9; margin-top: 16px; }
+    .testimonial-card-feature .photo { width: 200px; height: 200px; background: linear-gradient(135deg, #ff8a6b 0%, #cc3a1f 100%); border-radius: 12px; }
+    .testimonial-card-quote {
+      background: var(--canvas); color: var(--ink);
+      border-radius: 12px; padding: 32px;
+      border: 1px solid var(--hairline);
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .testimonial-card-quote .quote { font-size: 16px; line-height: 1.6; color: var(--charcoal); }
+    .testimonial-card-quote .attribution { font-size: 13px; color: var(--steel); }
+    .startup-program-card {
+      background: var(--canvas); border-radius: 12px; padding: 32px;
+      border: 1px solid var(--hairline);
+      display: flex; flex-direction: column; gap: 24px;
+    }
+    .founder-quote-card {
+      background: var(--testimonial-orange); color: var(--on-dark);
+      border-radius: 12px; padding: 32px;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .founder-quote-card .quote { font-size: 18px; font-weight: 500; line-height: 1.5; }
+    /* Forms */
+    .form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .form-field { display: flex; flex-direction: column; gap: 6px; }
+    .form-label { font-size: 14px; font-weight: 500; color: var(--ink); }
+    .text-input {
+      padding: 8px 16px; background: var(--canvas); color: var(--ink);
+      border: 1px solid var(--hairline); border-radius: 8px;
+      font-size: 16px; height: 40px; font-family: inherit;
+    }
+    .text-input:focus { outline: none; border: 2px solid var(--brand-green); padding: 7px 15px; }
+    .search-pill {
+      background: var(--surface); color: var(--steel);
+      padding: 8px 16px; border-radius: 8px; height: 36px;
+      border: 1px solid var(--hairline); font-size: 14px; font-family: inherit;
+      display: inline-flex; align-items: center; gap: 8px; min-width: 280px;
+    }
+    /* Tabs */
+    .seg-tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--hairline); margin-bottom: 24px; }
+    .seg-tab {
+      padding: 12px 16px; background: transparent; color: var(--steel);
+      border: none; border-bottom: 2px solid transparent;
+      font-size: 14px; font-weight: 500; cursor: pointer; font-family: inherit;
+    }
+    .seg-tab.active { color: var(--ink); border-bottom: 2px solid var(--ink); }
+    .pill-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+    .pill-tab {
+      padding: 8px 16px; background: var(--canvas); color: var(--steel);
+      border: 1px solid var(--hairline); border-radius: 9999px;
+      font-size: 14px; font-weight: 500; cursor: pointer; font-family: inherit;
+    }
+    .pill-tab.active { background: var(--primary); color: var(--on-primary); border-color: var(--primary); }
+    .toggle-pill {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 4px; background: var(--surface); border-radius: 9999px;
+    }
+    .toggle-pill button {
+      padding: 6px 16px; background: transparent; border: none;
+      border-radius: 9999px; font-size: 14px; font-weight: 500; cursor: pointer; font-family: inherit;
+      color: var(--steel);
+    }
+    .toggle-pill button.active { background: var(--canvas); color: var(--ink); box-shadow: rgba(0,0,0,0.04) 0 1px 2px; }
+    /* Code */
+    .code-block {
+      background: var(--surface-code); color: var(--on-dark);
+      border-radius: 8px; overflow: hidden;
+      font-family: 'Geist Mono', monospace;
+    }
+    .code-block-header {
+      background: var(--surface-code); color: var(--on-dark-muted);
+      padding: 8px 16px; font-size: 13px;
+      border-bottom: 1px solid var(--hairline-dark);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .copy-code-btn {
+      background: transparent; color: var(--on-dark-muted);
+      border: 1px solid var(--hairline-dark); border-radius: 4px;
+      padding: 4px 8px; font-size: 12px; cursor: pointer; font-family: inherit;
+    }
+    .code-block-body {
+      padding: 16px; font-size: 14px; line-height: 1.5;
+    }
+    .code-inline {
+      background: var(--surface); color: var(--charcoal);
+      border-radius: 4px; padding: 2px 6px;
+      font-family: 'Geist Mono', monospace; font-size: 13px; font-weight: 500;
+      border: 1px solid var(--hairline);
+    }
+    /* Property row */
+    .property-row {
+      padding: 16px 0; border-bottom: 1px solid var(--hairline-soft);
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .property-row .prop-header { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+    .property-row .prop-name { font-family: 'Geist Mono', monospace; font-size: 13px; font-weight: 500; color: var(--ink); }
+    .property-row .prop-desc { font-size: 14px; color: var(--steel); line-height: 1.5; }
+    /* Comparison table */
+    .comparison-table {
+      width: 100%; border-collapse: collapse;
+      background: var(--canvas); border: 1px solid var(--hairline);
+      border-radius: 8px; overflow: hidden;
+    }
+    .comparison-table th {
+      background: var(--canvas); color: var(--ink);
+      padding: 16px 20px; text-align: left; font-size: 14px; font-weight: 600;
+      border-bottom: 1px solid var(--hairline);
+    }
+    .comparison-table td {
+      padding: 16px 20px; font-size: 14px; color: var(--ink);
+      border-bottom: 1px solid var(--hairline-soft);
+    }
+    .comparison-table tr:last-child td { border-bottom: none; }
+    .comparison-table .section-divider td {
+      font-size: 11px; font-weight: 600; color: var(--steel);
+      letter-spacing: 0.5px; text-transform: uppercase;
+      background: var(--surface); padding: 12px 20px;
+    }
+    .check-mark { color: var(--brand-green); font-weight: 700; }
+    /* Sidebar nav */
+    .sidebar-grid { display: grid; grid-template-columns: 240px 1fr 200px; gap: 32px; }
+    .sidebar-nav { display: flex; flex-direction: column; gap: 2px; }
+    .sidebar-nav-item {
+      padding: 8px 16px; border-radius: 6px;
+      font-size: 14px; color: var(--steel); text-decoration: none;
+    }
+    .sidebar-nav-item.active { background: var(--surface); color: var(--ink); font-weight: 500; }
+    .sidebar-section { font-size: 11px; font-weight: 600; color: var(--steel); padding: 16px 16px 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .doc-prose h3 { font-size: 28px; font-weight: 600; margin-bottom: 16px; color: var(--ink); }
+    .doc-prose p { font-size: 16px; color: var(--charcoal); line-height: 1.6; margin-bottom: 16px; }
+    .toc-rail { display: flex; flex-direction: column; gap: 4px; position: sticky; top: 80px; align-self: flex-start; }
+    .toc-rail .toc-title { font-size: 11px; font-weight: 600; color: var(--steel); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .toc-rail a { font-size: 14px; color: var(--steel); text-decoration: none; padding: 4px 0; }
+    .toc-rail a.active { color: var(--ink); font-weight: 500; }
+    /* Logo wall */
+    .logo-wall {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 16px; padding: 32px; background: var(--canvas); border-radius: 12px;
+      border: 1px solid var(--hairline-soft);
+    }
+    .logo-item {
+      padding: 20px; text-align: center; color: var(--steel);
+      font-size: 16px; font-weight: 600;
+    }
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      background: var(--canvas); border-radius: 8px; padding: 24px;
+      border: 1px solid var(--hairline-soft);
+    }
+    .faq-q { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .faq-q-text { font-size: 18px; font-weight: 600; color: var(--ink); line-height: 1.4; }
+    .chev { width: 16px; height: 16px; color: var(--steel); flex-shrink: 0; }
+    .faq-a { font-size: 16px; color: var(--steel); margin-top: 12px; line-height: 1.5; }
+    .faq-item.collapsed .faq-a { display: none; }
+    /* Spacing & radius */
+    .spacing-grid { display: flex; gap: 24px; align-items: flex-end; flex-wrap: wrap; }
+    .spacing-box { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .spacing-visual { background: var(--ink); border-radius: 4px; }
+    .spacing-label { font-size: 12px; font-weight: 600; color: var(--ink); text-align: center; }
+    .spacing-label small { display: block; font-weight: 400; color: var(--steel); font-size: 10px; margin-top: 2px; }
+    .radius-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 24px; }
+    .radius-demo {
+      aspect-ratio: 1; background: var(--surface);
+      border: 2px solid var(--ink);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
+      padding: 12px; font-size: 12px; font-weight: 600; color: var(--ink);
+    }
+    .radius-demo small { font-size: 10px; font-weight: 400; color: var(--steel); margin-top: 2px; }
+    .elevation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+    .elev-cell {
+      background: var(--canvas); border-radius: 12px; padding: 32px;
+      display: flex; flex-direction: column; gap: 8px; min-height: 140px;
+    }
+    .elev-0 { border: 1px solid var(--hairline); }
+    .elev-1 { box-shadow: rgba(0,0,0,0.04) 0px 1px 2px 0px; border: 1px solid var(--hairline); }
+    .elev-2 { box-shadow: rgba(0,0,0,0.08) 0px 4px 12px 0px; }
+    .elev-3 { box-shadow: rgba(0,0,0,0.12) 0px 24px 48px -8px; }
+    .elev-4 { box-shadow: rgba(0,212,164,0.08) 0px 8px 24px; border: 2px solid var(--brand-green); }
+    .elev-name { font-size: 14px; font-weight: 600; color: var(--ink); }
+    .elev-meta { font-size: 12px; color: var(--steel); font-family: 'Geist Mono', monospace; }
+    .breakpoint-table { width: 100%; border-collapse: collapse; }
+    .breakpoint-table th, .breakpoint-table td {
+      text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--hairline-soft);
+      font-size: 14px;
+    }
+    .breakpoint-table th { font-size: 12px; font-weight: 600; color: var(--steel); background: var(--surface); }
+    .device-ladder {
+      display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap;
+      margin-top: 32px; padding: 32px; background: var(--surface); border-radius: 12px;
+    }
+    .device {
+      background: var(--canvas); border: 1px solid var(--hairline);
+      display: flex; align-items: flex-end; justify-content: center; padding: 8px;
+      font-size: 11px; color: var(--steel); font-weight: 600;
+    }
+    .footer {
+      padding: 64px 32px 32px; background: var(--canvas);
+      border-top: 1px solid var(--hairline);
+      font-size: 14px; color: var(--steel);
+    }
+    .footer-grid {
+      max-width: 1280px; margin: 0 auto;
+      display: grid; grid-template-columns: 240px repeat(auto-fit, minmax(140px, 1fr));
+      gap: 48px; margin-bottom: 48px;
+    }
+    .footer-brand { display: flex; flex-direction: column; gap: 16px; }
+    .footer-brand .wordmark { font-size: 18px; font-weight: 700; color: var(--ink); }
+    .footer-col h6 { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 16px; }
+    .footer-col a { display: block; padding: 4px 0; color: var(--steel); text-decoration: none; }
+    .footer-credit {
+      max-width: 1280px; margin: 0 auto;
+      padding-top: 32px; border-top: 1px solid var(--hairline-soft);
+      text-align: center;
+    }
+    .footer-credit a { color: var(--ink); text-decoration: none; }
+    .footer-credit a:hover { text-decoration: underline; }
+    .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+
+    /* getdesign.md nav additions */
+    .nav-left { display: flex; align-items: center; gap: 20px; }
+    .nav-brand-link, .nav-brand-link:link, .nav-brand-link:visited, .nav-brand-link:hover, .nav-brand-link:active { text-decoration: none; color: inherit; }
+    .nav-github, .nav-github:link, .nav-github:visited, .nav-github:hover, .nav-github:active {
+      display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600;
+      color: inherit; text-decoration: none; padding: 5px 10px;
+      border: 1px solid rgba(128, 128, 128, 0.3); border-radius: 6px; opacity: 0.75;
+      transition: opacity 200ms ease, border-color 200ms ease;
+      font-family: inherit; line-height: 1; white-space: nowrap;
+    }
+    .nav-github:hover { opacity: 1; border-color: rgba(128, 128, 128, 0.55); }
+    .nav-github svg { display: block; flex-shrink: 0; }
+
+    /* getdesign.md nav centering */
+    .nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+    .nav > .nav-left { justify-self: start; }
+    .nav > .nav-links { justify-self: center; }
+    .nav > :last-child { justify-self: end; }
+
+    /* dark-mode overrides */
+    .nav .nav-github { color: #ffffff; border-color: rgba(255, 255, 255, 0.25); }
+    .nav .nav-github:hover { border-color: rgba(255, 255, 255, 0.5); }
+    .swatch-color { border: 1px solid rgba(255,255,255,0.08); }
+    .nav { background: var(--canvas); border-bottom: 1px solid var(--hairline-soft); }
+    .nav-links a { color: var(--charcoal); }
+    .nav-cta { background: var(--primary); color: var(--on-primary); }
+    .btn-primary { background: var(--primary); color: var(--on-primary); }
+    .btn-secondary { color: var(--ink); border-color: var(--hairline); }
+    .btn-ghost { color: var(--ink); }
+    .btn-link { color: var(--ink); }
+    .btn-icon-circular { background: var(--surface); color: var(--ink); border-color: var(--hairline); }
+    .btn-disabled { background: var(--surface); color: var(--stone); }
+    .promo-banner { background: var(--surface); color: var(--ink); border-bottom: 1px solid var(--hairline-soft); }
+    .promo-banner a { color: var(--ink); }
+    .button-cell { background: var(--surface); border-color: var(--hairline-soft); }
+    .card-base { background: var(--surface); border-color: var(--hairline-soft); }
+    .card-feature { background: var(--surface); }
+    .card-help { background: var(--surface); border-color: var(--hairline-soft); }
+    .card-startup-perk { background: var(--surface); border-color: var(--hairline-soft); }
+    .card-startup-perk .icon-zone { background: var(--surface-soft); }
+    .text-input { background: var(--surface-soft); color: var(--ink); border-color: var(--hairline); }
+    .search-pill { background: var(--surface-soft); color: var(--steel); border-color: var(--hairline); }
+    .seg-tab { color: var(--steel); }
+    .seg-tab.active { color: var(--ink); border-bottom-color: var(--ink); }
+    .seg-tabs { border-bottom-color: var(--hairline); }
+    .pill-tab { background: var(--surface); color: var(--steel); border-color: var(--hairline); }
+    .pill-tab.active { background: var(--primary); color: var(--on-primary); border-color: var(--primary); }
+    .toggle-pill { background: var(--surface); }
+    .toggle-pill button { color: var(--steel); }
+    .toggle-pill button.active { background: var(--canvas); color: var(--ink); border: 1px solid var(--hairline-soft); }
+    .pricing-card { background: var(--surface); border-color: var(--hairline-soft); }
+    .pricing-card.featured { background: var(--surface); border-color: var(--brand-green); box-shadow: rgba(0, 212, 164, 0.15) 0px 8px 24px; }
+    .pricing-card .tier-name { color: var(--ink); }
+    .pricing-card .tier-price { color: var(--ink); }
+    .pricing-card .tier-feature-list li { color: var(--charcoal); }
+    .testimonial-card-quote { background: var(--surface); color: var(--ink); border-color: var(--hairline-soft); }
+    .testimonial-card-quote .quote { color: var(--charcoal); }
+    .startup-program-card { background: var(--surface); border-color: var(--hairline-soft); }
+    .comparison-table { background: var(--surface); border-color: var(--hairline-soft); }
+    .comparison-table th { background: var(--surface); color: var(--ink); border-bottom-color: var(--hairline); }
+    .comparison-table td { color: var(--charcoal); border-bottom-color: var(--hairline-soft); }
+    .comparison-table .section-divider td { background: var(--surface-soft); color: var(--steel); }
+    .sidebar-nav-item { color: var(--steel); }
+    .sidebar-nav-item.active { background: var(--surface-soft); color: var(--ink); }
+    .doc-prose h3, .doc-prose p { color: var(--ink); }
+    .doc-prose p { color: var(--charcoal); }
+    .toc-rail .toc-title { color: var(--steel); }
+    .toc-rail a.active { color: var(--ink); }
+    .property-row { border-bottom-color: var(--hairline-soft); }
+    .property-row .prop-name { color: var(--ink); }
+    .property-row .prop-desc { color: var(--steel); }
+    .badge-type { background: var(--surface-soft); color: var(--steel); }
+    .badge-tag { background: rgba(90, 143, 219, 0.2); color: #99c0f5; }
+    .code-inline { background: var(--surface-soft); color: var(--ink); border-color: var(--hairline-soft); }
+    .logo-wall { background: var(--surface); border-color: var(--hairline-soft); }
+    .logo-item { color: var(--steel); }
+    .faq-item { background: var(--surface); border-color: var(--hairline-soft); }
+    .faq-q-text { color: var(--ink); }
+    .faq-a { color: var(--steel); }
+    .spacing-visual { background: var(--ink); }
+    .radius-demo { background: var(--surface); border-color: var(--ink); color: var(--ink); }
+    .elev-cell { background: var(--surface); }
+    .elev-0 { border-color: var(--hairline-soft); }
+    .elev-1 { box-shadow: rgba(0,0,0,0.4) 0px 1px 2px 0px; border-color: var(--hairline-soft); }
+    .elev-2 { box-shadow: rgba(0,0,0,0.4) 0px 4px 12px 0px; }
+    .elev-3 { box-shadow: rgba(0,0,0,0.4) 0px 24px 48px -8px; }
+    .elev-4 { box-shadow: rgba(0,212,164,0.15) 0px 8px 24px; border: 2px solid var(--brand-green); }
+    .breakpoint-table th { background: var(--surface); color: var(--steel); }
+    .breakpoint-table th, .breakpoint-table td { border-bottom-color: var(--hairline-soft); }
+    .device-ladder { background: var(--surface); }
+    .device { background: var(--canvas); border-color: var(--hairline); color: var(--steel); }
+    .footer { background: var(--canvas); border-top-color: var(--hairline-soft); }
+    .footer-credit { border-top-color: var(--hairline-soft); }
+    .footer-brand .wordmark { color: var(--ink); }
+    .footer-col h6 { color: var(--ink); }
+    .hero-product-mockup { background: var(--surface); border-color: var(--hairline-soft); color: var(--steel); }
+
+    @media (max-width: 1024px) {
+      section { padding: 64px 32px; }
+      .section-heading { font-size: 36px; }
+      .nav { padding: 0 32px; }
+      .nav > :last-child { display: none; }
+      .type-row { grid-template-columns: 1fr; gap: 8px; }
+      .sidebar-grid { grid-template-columns: 1fr; }
+      .toc-rail { display: none; }
+      .testimonial-card-feature { grid-template-columns: 1fr; padding: 32px; }
+      .testimonial-card-feature .photo { width: 100%; height: 160px; }
+      .testimonial-card-feature .quote { font-size: 22px; }
+    }
+    @media (max-width: 720px) {
+      .cell.wide, .button-cell.wide { grid-column: span 1; }
+      .nav { padding: 12px 20px; height: auto; min-height: 56px; }
+      .nav-links { display: none; }
+      .hero { padding: 64px 20px; }
+      .hero h1 { font-size: 36px; letter-spacing: -1px; }
+      .hero p { font-size: 16px; }
+      section { padding: 48px 20px; }
+      .section-heading { font-size: 28px; }
+      .palette-grid, .button-grid, .card-grid, .pricing-grid, .form-row, .elevation-grid, .radius-grid, .footer-grid {
+        grid-template-columns: 1fr !important; gap: 16px;
+      }
+      .footer { padding: 48px 20px 24px; }
+    }
+  
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+</head>
+<body data-platform-type="开发工具">
+<div class="promo-banner">Mintlify现在在β中... <a data-static-example="">试试免费的</a></div>
+
+<div class="hero">
+<h1>绿色强调的阅读版式</h1>
+<p>文档基础设施采用两种页面风格。营销首屏是带氛围感的天空渐变，开发文档则采用高密度版面。界面文字用 Inter，代码用 Geist Mono，薄荷绿用于强调按钮。</p>
+<div class="hero-actions">
+<button class="btn-accent-green">开始使用</button>
+<button class="btn-secondary">跟我们谈谈</button>
+</div>
+</div>
+<section id="colors">
+<h2 class="section-heading">配色</h2>
+<p class="section-sub">由黑白两色的 Stark 单色的锚定 外科重音为Mintlify 薄荷 大气渐变标志物承载着首屏区块美学. 证词橙子故意断色节奏,以达到情感影响的目的.</p>
+<div class="palette-group">
+<h3>品牌色与强调色</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background: #00d4a4;"></div><div class="swatch-name">Mintlify Mint</div><div class="swatch-hex">#00d4a4</div><div class="swatch-role">强调色 现金过渡安排,活跃州</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #00b48a;"></div><div class="swatch-name">Deep Mint</div><div class="swatch-hex">#00b48a</div><div class="swatch-role">按行动按钮 状态</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #7cebcb;"></div><div class="swatch-name">Soft Mint</div><div class="swatch-hex">#7cebcb</div><div class="swatch-role">成功 浅色调 成绩</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #3772cf;"></div><div class="swatch-name">Brand Tag</div><div class="swatch-hex">#3772cf</div><div class="swatch-role">文档标签引用</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #1ba673;"></div><div class="swatch-name">Brand Annotate</div><div class="swatch-hex">#1ba673</div><div class="swatch-role">代码注释绿色</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #c37d0d;"></div><div class="swatch-name">Brand Warn</div><div class="swatch-hex">#c37d0d</div><div class="swatch-role">代码警告突出</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #d45656;"></div><div class="swatch-name">Brand Error</div><div class="swatch-hex">#d45656</div><div class="swatch-role">需要的标签, 错误</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #f55a3c;"></div><div class="swatch-name">Testimonial Orange</div><div class="swatch-hex">#f55a3c</div><div class="swatch-role">Cursor 检验 卡片</div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>首屏大气梯度</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background: #87a8c8;"></div><div class="swatch-name">Hero Sky From</div><div class="swatch-hex">#87a8c8</div><div class="swatch-role">主页首屏顶级</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #f5e9d8;"></div><div class="swatch-name">Hero Sky To</div><div class="swatch-hex">#f5e9d8</div><div class="swatch-role">主页首屏底部</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #1a3d4a;"></div><div class="swatch-name">Hero Dark From</div><div class="swatch-hex">#1a3d4a</div><div class="swatch-role">启动首屏左</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #2d5a4f;"></div><div class="swatch-name">Hero Dark To</div><div class="swatch-hex">#2d5a4f</div><div class="swatch-role">创业首屏右</div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>界面表面</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background: #ffffff;"></div><div class="swatch-name">Canvas White</div><div class="swatch-hex">#ffffff</div><div class="swatch-role">页+卡片 背景</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #0a0a0a;"></div><div class="swatch-name">Canvas Dark</div><div class="swatch-hex">#0a0a0a</div><div class="swatch-role">宣传旗,暗反转</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #f7f7f7;"></div><div class="swatch-name">Surface</div><div class="swatch-hex">#f7f7f7</div><div class="swatch-role">bg节,search-pill</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #fafafa;"></div><div class="swatch-name">Surface Soft</div><div class="swatch-hex">#fafafa</div><div class="swatch-role">更安静的区段, FAQ</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #1c1c1e;"></div><div class="swatch-name">Surface Code</div><div class="swatch-hex">#1c1c1e</div><div class="swatch-role">代码块背景</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #e5e5e5;"></div><div class="swatch-name">Hairline</div><div class="swatch-hex">#e5e5e5</div><div class="swatch-role">边界、分隔器</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #ededed;"></div><div class="swatch-name">Hairline Soft</div><div class="swatch-hex">#ededed</div><div class="swatch-role">静表分隔符</div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>文字色</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background: #0a0a0a;"></div><div class="swatch-name">Ink</div><div class="swatch-hex">#0a0a0a</div><div class="swatch-role">首席技师官衔标题</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #1c1c1e;"></div><div class="swatch-name">Charcoal</div><div class="swatch-hex">#1c1c1e</div><div class="swatch-role">文字正文, code-inline</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #3a3a3c;"></div><div class="swatch-name">Slate</div><div class="swatch-hex">#3a3a3c</div><div class="swatch-role">副文本</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #5a5a5c;"></div><div class="swatch-name">Steel</div><div class="swatch-hex">#5a5a5c</div><div class="swatch-role">三级, 侧边栏不活动</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #888888;"></div><div class="swatch-name">Stone</div><div class="swatch-hex">#888888</div><div class="swatch-role">说明,双斜cursor</div></div>
+<div class="swatch"><div class="swatch-color" style="background: #a8a8aa;"></div><div class="swatch-name">Muted</div><div class="swatch-hex">#a8a8aa</div><div class="swatch-role">残疾人,不强调</div></div>
+</div>
+</div>
+</section>
+<section id="typography">
+<h2 class="section-heading">字号层级</h2>
+<p class="section-sub">Inter for all UI prose; Geist Mono for code references and type signatures. Negative letter-spacing on display sizes; documentation-grade body leading at 1.50.</p>
+<div class="type-row"><div class="type-meta"><span class="role">hero-display</span><span class="specs">72px / 600 / 1.05 / -2px</span></div><div class="type-sample" style="font-size: 72px; font-weight: 600; line-height: 1.05; letter-spacing: -2px;">知识平台</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">display-lg</span><span class="specs">56px / 600 / 1.10 / -1.5px</span></div><div class="type-sample" style="font-size: 56px; font-weight: 600; line-height: 1.10; letter-spacing: -1.5px;">是为情报时代而建的</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">heading-1</span><span class="specs">48px / 600 / 1.10 / -1px</span></div><div class="type-sample" style="font-size: 48px; font-weight: 600; line-height: 1.10; letter-spacing: -1px;">以你的条件定价</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">heading-2</span><span class="specs">36px / 600 / 1.20 / -0.5px</span></div><div class="type-sample" style="font-size: 36px; font-weight: 600; line-height: 1.20; letter-spacing: -0.5px;">应用到 Mintlify 启动程序</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">heading-3</span><span class="specs">28px / 600 / 1.25</span></div><div class="type-sample" style="font-size: 28px; font-weight: 600; line-height: 1.25;">标签</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">heading-4</span><span class="specs">22px / 600 / 1.30</span></div><div class="type-sample" style="font-size: 22px; font-weight: 600; line-height: 1.30;">卡片 标题</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">heading-5</span><span class="specs">18px / 600 / 1.40</span></div><div class="type-sample" style="font-size: 18px; font-weight: 600; line-height: 1.40;">较小的特性标题</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">subtitle</span><span class="specs">18px / 400 / 1.50</span></div><div class="type-sample" style="font-size: 18px; font-weight: 400; line-height: 1.50;">首屏字幕和主机类型</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">body-md</span><span class="specs">16px / 400 / 1.50</span></div><div class="type-sample" style="font-size: 16px; font-weight: 400; line-height: 1.50;">主体文本在文件的传言、营销副本和特征描述中都使用。</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">body-sm</span><span class="specs">14px / 400 / 1.50</span></div><div class="type-sample" style="font-size: 14px; font-weight: 400; line-height: 1.50;">次要体、表单元格、导航和内容表项目</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">body-sm-medium</span><span class="specs">14px / 500 / 1.50</span></div><div class="type-sample" style="font-size: 14px; font-weight: 500; line-height: 1.50;">活动侧边栏导航、按钮标签、标签标签</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">caption</span><span class="specs">13px / 400 / 1.40</span></div><div class="type-sample" style="font-size: 13px; font-weight: 400; line-height: 1.40;">辅助说明, 精细打印, code-block 头</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">micro-uppercase</span><span class="specs">11px / 600 / 1.40 / 0.5px</span></div><div class="type-sample" style="font-size: 11px; font-weight: 600; line-height: 1.40; letter-spacing: 0.5px; text-transform: uppercase;">侧边区长</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">code-md</span><span class="specs">14px / 400 / Geist Mono</span></div><div class="type-sample code-font" style="font-size: 14px; font-weight: 400; line-height: 1.50;">函数标签 () { 返回 &lt;div /&gt;;}</div></div>
+<div class="type-row"><div class="type-meta"><span class="role">code-inline</span><span class="specs">13px / 500 / Geist Mono</span></div><div class="type-sample"><span class="code-inline">&lt;Tabs&gt;</span> 内在的线性参考物</div></div>
+</section>
+<section id="hero-bands">
+<h2 class="section-heading">首屏区块</h2>
+<p class="section-sub">两种大气首屏模式——天梯(主页)和暗地(启动)——具有电影背景.</p>
+<div class="hero-band-dark">
+<h2>为启动和扩展而建</h2>
+<p>Mintlify为早期公司推出的Mintlify创业计划,从你堆堆中建起,交付美元估值.</p>
+<div><button class="btn-on-dark">开始使用</button> <button class="btn-link" style="color: var(--on-dark); margin-left: 8px;">应用到启动程序 →</button></div>
+</div>
+<h3 style="font-size: 18px; font-weight: 600; margin: 32px 0 16px;">首屏产品模拟</h3>
+<div class="hero-product-mockup">
+<span>文档页面预览/ 代码编辑模型</span>
+</div>
+</section>
+<section id="buttons">
+<h2 class="section-heading">按钮样式</h2>
+<p class="section-sub">到处都是胶囊形. 薄荷强调色为首屏品牌强调CTA. 黑泄漏市场营销主导权.</p>
+<div class="button-grid">
+<div class="button-cell"><button class="btn-primary">开始使用</button><span class="button-cell-name">button-primary</span><span class="button-cell-spec">黑色胶囊形——营销 行动按钮</span></div>
+<div class="button-cell"><button class="btn-accent-green">开始使用</button><span class="button-cell-name">button-accent-green</span><span class="button-cell-spec">薄荷 强调色 行动按钮 薄荷</span></div>
+<div class="button-cell" style="background: var(--surface-code);"><button class="btn-on-dark">开始使用</button><span class="button-cell-name" style="color: var(--on-dark);">button-on-dark</span><span class="button-cell-spec" style="color: var(--on-dark-muted);">白胶囊形 黑首屏的战斗</span></div>
+<div class="button-cell"><button class="btn-secondary">跟我们谈谈</button><span class="button-cell-name">button-secondary</span><span class="button-cell-spec">提纲胶囊形</span></div>
+<div class="button-cell"><button class="btn-ghost">视图</button><span class="button-cell-name">button-ghost</span><span class="button-cell-spec">安静的鬼魂</span></div>
+<div class="button-cell"><button class="btn-link">学习更多→</button><span class="button-cell-name">button-link</span><span class="button-cell-spec">内嵌文本链接</span></div>
+<div class="button-cell"><button aria-label="下一个" class="btn-icon-circular">›</button><span class="button-cell-name">button-icon-circular</span><span class="button-cell-spec">32×32 工具</span></div>
+<div class="button-cell"><button class="btn-disabled">无法获取</button><span class="button-cell-name">button-primary-disabled</span><span class="button-cell-spec">已禁用状态</span></div>
+</div>
+</section>
+<section id="badges">
+<h2 class="section-heading">徽章状态( S)</h2>
+<p class="section-sub">胶囊形状态指标与文件类型签名的小直径标记并列.</p>
+<div class="badge-row" style="margin-bottom: 32px;">
+<span class="badge badge-discount">保存 20% 数据</span>
+<span class="badge-required">要求数</span>
+<span class="badge-type">字符串</span>
+<span class="badge-type">编号</span>
+<span class="badge-type">布尔</span>
+<span class="badge badge-tag">&lt;Tabs&gt;</span>
+</div>
+<div class="promo-banner" style="border-radius: 8px;">Mintlify现在在β中... <a data-static-example="">试试免费的</a></div>
+<p style="font-size: 12px; color: var(--steel); margin-top: 8px; font-family: 'Geist Mono', monospace;">promo-banner — sticky black strip above the top nav</p>
+</section>
+<section id="cards">
+<h2 class="section-heading">卡片与容器</h2>
+<p class="section-sub">白文献卡片,表面丁基特征面板,启动perk网格,以及打破品牌单色节奏的亮橙质检验卡片.</p>
+<h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px;">标准卡片</h3>
+<div class="card-grid">
+<div class="card-base">
+<h5 style="font-size: 18px; font-weight: 600;">标准文档卡片</h5>
+<p style="font-size: 14px; color: var(--steel); line-height: 1.5;">白色页面底色配有细边框和12px角. 用于文件卡片和静态产品点名.（原文参数：12px）</p>
+<button class="btn-link" style="padding: 0; align-self: flex-start;">更多信息:→</button>
+</div>
+<div class="card-feature">
+<h5 style="font-size: 18px; font-weight: 600;">特性面板</h5>
+<p style="font-size: 14px; color: var(--steel); line-height: 1.5;">浅灰色表面的较静的段落面板,用于分组内容.</p>
+</div>
+<div class="card-help">
+<h5>快速启动指南</h5>
+<p>学着如何开始我们的文件。</p>
+<button class="btn-link" style="padding: 0; align-self: flex-start;">视图指南 →</button>
+</div>
+</div>
+<h3 style="font-size: 18px; font-weight: 600; margin: 48px 0 20px;">启动 Perk 网格</h3>
+<div class="card-grid">
+<div class="card-startup-perk"><div class="icon-zone">💰</div><h5>贴现和信贷</h5><p>Mintlify Pro和其他选定的伙伴服务特别节省。</p></div>
+<div class="card-startup-perk"><div class="icon-zone">⚡</div><h5>优先支助</h5><p>需要专家帮忙的时候,请尽快帮忙</p></div>
+<div class="card-startup-perk"><div class="icon-zone">🎁</div><h5>启动包</h5><p>获取合作伙伴的独家产品,价值数千美元。</p></div>
+<div class="card-startup-perk"><div class="icon-zone">🤝</div><h5>创始人社区</h5><p>与Mintlify连接其他早期创始人大楼.</p></div>
+</div>
+<h3 style="font-size: 18px; font-weight: 600; margin: 48px 0 20px;">特质 卡片</h3>
+<div class="testimonial-card-feature">
+<div>
+<div class="quote">"我们一贯看到每个YC批次 顶级的首创企业都使用Mintlify来构建他们的文档".</div>
+<div class="attribution">——Cursor创始人.</div>
+</div>
+<div class="photo"></div>
+</div>
+<h3 style="font-size: 18px; font-weight: 600; margin: 48px 0 20px;">证词引文卡片</h3>
+<div class="card-grid">
+<div class="testimonial-card-quote">
+<div class="quote">从一创始人到另一创始人. 支持创业和增强建设者的能力 是我们DNA。 自联合体成立初期,我们一直倡导Mintlify,我们为自己建设的公司感到自豪.</div>
+<div class="attribution">赛和汉比 · 联合创始人</div>
+</div>
+<div class="founder-quote-card">
+<div class="quote">"Mintlify拯救了我们的医生们 避免溺水. 我们六周前推出的产品。 每一个团队现在都可以在没有工程参与的情况下运送文件".</div>
+<div class="attribution" style="font-size: 13px; opacity: 0.85;">Cursor小组</div>
+</div>
+</div>
+</section>
+<section id="pricing">
+<h2 class="section-heading">定价卡片</h2><p class="design-demo-note">组件演示。套餐层级、价格字重和操作按钮。数据仅用于样式展示。</p>
+<p class="section-sub">3级定价与薄荷边框+品牌特制阴影突出的突出等级比较.</p>
+<div style="display: flex; justify-content: center; margin-bottom: 32px;">
+<div class="toggle-pill">
+<button class="active">每月</button>
+<button>每年 <span class="badge badge-discount" style="margin-left: 4px;">保存 20% 数据</span></button>
+</div>
+</div>
+<div class="pricing-grid">
+<div class="pricing-card">
+<span class="tier-name">免费版</span>
+<div class="tier-price">$0<small>/模数</small></div>
+<p style="font-size: 14px; color: var(--steel);">开始Mintlify并探索.</p>
+<ul class="tier-feature-list">
+<li>1 用户</li>
+<li>基本特点</li>
+<li>社区支助</li>
+<li>有限融合</li>
+</ul>
+<button class="btn-secondary" style="margin-top: 8px;">开始使用</button>
+</div>
+<div class="pricing-card featured">
+<span class="tier-name">升空 升空 升空 升空 升空 升空 升空</span>
+<div class="tier-price">$150<small>/模数</small></div>
+<p style="font-size: 14px; color: var(--steel);">给成长的团队,他们需要更多的特色和支持.</p>
+<ul class="tier-feature-list">
+<li>Up to 10 users</li>
+<li>高级特性</li>
+<li>优先电子邮件支持</li>
+<li>全面整合</li>
+<li>高级分析</li>
+<li>自定义品牌</li>
+</ul>
+<button class="btn-accent-green" style="margin-top: 8px;">开始自由审判</button>
+</div>
+<div class="pricing-card">
+<span class="tier-name">自定义</span>
+<div class="tier-price" style="font-size: 32px;">联系我们</div>
+<p style="font-size: 14px; color: var(--steel);">企业计划适合你们团队的需要</p>
+<ul class="tier-feature-list">
+<li>无限制用户</li>
+<li>自定义集成</li>
+<li>专门支助</li>
+<li>定制合同</li>
+<li>国有公司2 遵守情况</li>
+</ul>
+<button class="btn-secondary" style="margin-top: 8px;">和销售商交谈</button>
+</div>
+</div>
+<h3 style="font-size: 18px; font-weight: 600; margin: 48px 0 20px;">特征比较表</h3><p class="design-demo-note">组件演示。表头、行距、分隔线和状态标签。数据仅用于样式展示。</p>
+<table class="comparison-table">
+<thead>
+<tr><th>特性</th><th style="text-align: center;">免费版</th><th style="text-align: center;">升空 升空 升空 升空 升空 升空 升空</th><th style="text-align: center;">自定义</th></tr>
+</thead>
+<tbody>
+<tr class="section-divider"><td colspan="4">CORE 核心</td></tr>
+<tr><td>托管部署( D)</td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td></tr>
+<tr><td>自定义域</td><td style="text-align: center;">—</td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td></tr>
+<tr><td>组件库</td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td></tr>
+<tr class="section-divider"><td colspan="4">API 互联网档案馆的存档,存档日期2013-09-02.</td></tr>
+<tr><td>API 终点</td><td style="text-align: center;">10</td><td style="text-align: center;">100</td><td style="text-align: center;">无限制</td></tr>
+<tr><td>API 游乐场</td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td></tr>
+<tr class="section-divider"><td colspan="4">支助</td></tr>
+<tr><td>社区支助</td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td></tr>
+<tr><td>优先电子邮件</td><td style="text-align: center;">—</td><td style="text-align: center;"><span class="check-mark">✓</span></td><td style="text-align: center;"><span class="check-mark">✓</span></td></tr>
+<tr><td>专职的首席安全官</td><td style="text-align: center;">—</td><td style="text-align: center;">—</td><td style="text-align: center;"><span class="check-mark">✓</span></td></tr>
+</tbody>
+</table>
+</section>
+<section id="forms">
+<h2 class="section-heading">窗体输入( I)</h2>
+<p class="section-sub">40px-Tall输入与8px圆角. 焦点转向2px Mintlify 薄荷边境——品牌的薄荷作为激活信号.（原文参数：8px、2px）</p>
+<div class="form-row">
+<div class="form-field">
+<label class="form-label">电子邮箱</label>
+<input class="text-input" placeholder="you@email.com" type="text" value="default state"/>
+</div>
+<div class="form-field">
+<label class="form-label">工作空间名称</label>
+<input autofocus="" class="text-input" style="border: 2px solid var(--brand-green); padding: 7px 15px;" type="text" value="focused state"/>
+</div>
+<div class="form-field">
+<label class="form-label">API 密钥</label>
+<input class="text-input" placeholder="键入(_L)***" type="text">
+</input></div>
+</div>
+<div style="margin-top: 32px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+<input class="search-pill" placeholder="搜索文档"/>
+<span style="font-size: 12px; color: var(--steel); font-family: 'Geist Mono', monospace;">search-pill——36px高度,表面bg（原文参数：36px）</span>
+</div>
+</section>
+<section id="tabs">
+<h2 class="section-heading">标签导航( N)</h2>
+<p class="section-sub">下行风格的分页标签(在 Docs Tabs 组件中直播)和胶囊形 标签用于顶级切换.</p>
+<h3 style="font-size: 18px; font-weight: 600; margin-bottom: 16px;">分页标签( 文档标签页面)</h3>
+<div class="seg-tabs">
+<button class="seg-tab active">第一个标签</button>
+<button class="seg-tab">第二页</button>
+<button class="seg-tab">第三页</button>
+</div>
+<h3 style="font-size: 18px; font-weight: 600; margin: 32px 0 16px;">胶囊形 标签( 定价页)</h3>
+<div class="pill-tabs">
+<button class="pill-tab active">定价</button>
+<button class="pill-tab">路线图</button>
+</div>
+</section>
+<section id="code">
+<h2 class="section-heading">代码组件</h2>
+<p class="section-sub">带有语法突出的暗暗码块,带有副本按钮的页眉栏. 内置代码芯片在身体的传言中.</p>
+<div class="code-block" style="margin-bottom: 24px;">
+<div class="code-block-header">
+<span>例. tsx 数据</span>
+<button class="copy-code-btn">复制代码</button>
+</div>
+<div class="code-block-body code-font">
+&lt;Tabs&gt;<br/>
+  &lt;Tab title="First tab"&gt;<br/>
+    欢迎收看只看得到的内容<br/>
+    输入第一个标签。<br/>
+  &lt;/Tab&gt;<br/>
+  &lt;Tab title="Second tab"&gt;<br/>
+    这里的内容只在第二个标签内.<br/>
+  &lt;/Tab&gt;<br/>
+&lt;/Tabs&gt;
+      </div>
+</div>
+<p style="font-size: 16px; color: var(--charcoal); line-height: 1.6;">使用 <span class="code-inline">&lt;Tabs&gt;</span> 组件,将内容组织成多个面板。 使用 <span class="code-inline">默认Index</span> 设置渲染时的默认标签。 组件通过 URL 同步活动标签 <span class="code-inline">同步键</span> 属性。</p>
+</section>
+<section id="docs-components">
+<h2 class="section-heading">文件组件</h2>
+<p class="section-sub">属性行,比较表,以及3-列文档布局(侧栏/旁词/TOC).</p>
+<h3 style="font-size: 18px; font-weight: 600; margin-bottom: 16px;">属性行</h3>
+<div style="background: var(--canvas); border: 1px solid var(--hairline); border-radius: 8px; padding: 0 24px;">
+<div class="property-row">
+<div class="prop-header">
+<span class="prop-name">默认Index</span>
+<span class="badge-type">编号</span>
+<span class="badge-required">要求数</span>
+</div>
+<div class="prop-desc">默认显示的标签索引( 零 )。 例如,设定为 <span class="code-inline">0</span> 以显示页面负荷中的第二个标签。</div>
+</div>
+<div class="property-row">
+<div class="prop-header">
+<span class="prop-name">同步</span>
+<span class="badge-type">布尔</span>
+<span class="badge-type">默认: 真</span>
+</div>
+<div class="prop-desc">何时 <span class="code-inline">真实</span>,此标签组将同步到页面上其他有匹配标题的标签和代码组。</div>
+</div>
+<div class="property-row" style="border-bottom: none;">
+<div class="prop-header">
+<span class="prop-name">边框</span>
+<span class="badge-type">布尔</span>
+</div>
+<div class="prop-desc">添加底边框并粘贴到标签容器中。 可用于视觉上与页面其余部分分开的标签内容,特别是在标签有匹配标题时.</div>
+</div>
+</div>
+<h3 style="font-size: 18px; font-weight: 600; margin: 48px 0 16px;">文件布局(3-栏)</h3>
+<div style="background: var(--surface); padding: 24px; border-radius: 12px;">
+<div class="sidebar-grid">
+<div class="sidebar-nav">
+<div class="sidebar-section">组件</div>
+<a class="sidebar-nav-item" data-static-example="">亲子关系</a>
+<a class="sidebar-nav-item" data-static-example="">卡片</a>
+<a class="sidebar-nav-item" data-static-example="">步骤</a>
+<a class="sidebar-nav-item active" data-static-example="">标签</a>
+<a class="sidebar-nav-item" data-static-example="">工具提示</a>
+<div class="sidebar-section">原则</div>
+<a class="sidebar-nav-item" data-static-example="">框架</a>
+<a class="sidebar-nav-item" data-static-example="">图像和嵌入</a>
+<a class="sidebar-nav-item" data-static-example="">列表和表格</a>
+</div>
+<div class="doc-prose">
+<h3>标签</h3>
+<p>使用 Tab 组件将内容组织到用户可以互换的可切换面板中. 可以在每一个标签中添加任何标签的数量并包含其他组件。</p>
+<p>使用标签来组织内容,使用户可以互相切换的多个面板. 可以在每一个标签中添加任何标签的数量并包含其他组件。</p>
+</div>
+<div class="toc-rail">
+<div class="toc-title">硂 </div>
+<a class="active" data-static-example="">标签属性</a>
+<a data-static-example="">标签属性</a>
+</div>
+</div>
+</div>
+</section>
+<section id="logo-wall">
+<h2 class="section-heading">logo 墙</h2>
+<p class="section-sub">客户标识网格——6-up字签在信托-row各段的演示.</p>
+<div class="logo-wall">
+<div class="logo-item">广东省</div>
+<div class="logo-item">认知</div>
+<div class="logo-item">▲ Vercel</div>
+<div class="logo-item">反应</div>
+<div class="logo-item">Lovable</div>
+<div class="logo-item">Stripe</div>
+</div>
+</section>
+<section id="faq">
+<h2 class="section-heading">风琴</h2>
+<p class="section-sub">经常问问题 默认折叠; chevron toggle type.</p>
+<div class="faq-list">
+<div class="faq-item">
+<div class="faq-q">
+<span class="faq-q-text">Mintlify定价如何运作?.</span>
+<span class="chev">⌃</span>
+</div>
+<div class="faq-a">Mintlify offers a Free tier for individuals, a Lift Off tier for growing teams at $150/month, and Custom enterprise plans. Annual billing saves 20%.</div>
+</div>
+<div class="faq-item collapsed">
+<div class="faq-q">
+<span class="faq-q-text">我可以把我的现有文件转移到Mintlify吗?</span>
+<span class="chev">⌄</span>
+</div>
+<div class="faq-a">是——Mintlify为包括Markdown,MDX,OpenAPI规格在内的通用文档格式提供导入工具.</div>
+</div>
+<div class="faq-item collapsed">
+<div class="faq-q">
+<span class="faq-q-text">Mintlify SOC 2 是否符合规定?</span>
+<span class="chev">⌄</span>
+</div>
+<div class="faq-a">是——Mintlify是SOC 2 II型认证. 定制企业计划包括额外的安全和合规功能.</div>
+</div>
+</div>
+</section>
+<section id="spacing">
+<h2 class="section-heading">间距层级</h2>
+<p class="section-sub">4px 基础单位,8px初等增量. 节奏从48px到120px.（原文参数：8px、48px、120px）</p>
+<div class="spacing-grid">
+<div class="spacing-box"><div class="spacing-visual" style="width: 4px; height: 16px;"></div><div class="spacing-label">4<small>xxs</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 8px; height: 16px;"></div><div class="spacing-label">8<small>xs</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 12px; height: 16px;"></div><div class="spacing-label">12<small>静态</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 16px; height: 16px;"></div><div class="spacing-label">16<small>微额</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 20px; height: 16px;"></div><div class="spacing-label">20<small>升( 升)</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 24px; height: 16px;"></div><div class="spacing-label">24<small>xl</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 32px; height: 16px;"></div><div class="spacing-label">32<small>xxl</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 40px; height: 16px;"></div><div class="spacing-label">40<small>xxxl</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 48px; height: 16px;"></div><div class="spacing-label">48<small>section-sm</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 64px; height: 16px;"></div><div class="spacing-label">64<small>章节</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 96px; height: 16px;"></div><div class="spacing-label">96<small>section-lg</small></div></div>
+<div class="spacing-box"><div class="spacing-visual" style="width: 120px; height: 16px;"></div><div class="spacing-label">120<small>首屏</small></div></div>
+</div>
+</section>
+<section id="radius">
+<h2 class="section-heading">圆角层级</h2>
+<p class="section-sub">胶囊按钮(9999px),12px标准卡片,8px输入和代码块. 严格纪律——没有价值观之间的界限。（原文参数：12px、8px）</p>
+<div class="radius-grid">
+<div class="radius-demo" style="border-radius: 4px;">4px<small>xs</small></div>
+<div class="radius-demo" style="border-radius: 6px;">6px<small>静态</small></div>
+<div class="radius-demo" style="border-radius: 8px;">8px<small>微额</small></div>
+<div class="radius-demo" style="border-radius: 12px;">12px<small>升( 升)</small></div>
+<div class="radius-demo" style="border-radius: 16px;">16px<small>xl</small></div>
+<div class="radius-demo" style="border-radius: 24px;">24px<small>xxl</small></div>
+<div class="radius-demo" style="border-radius: 9999px;">胶囊形<small>满</small></div>
+</div>
+</section>
+<section id="elevation">
+<h2 class="section-heading">层次与深度</h2>
+<p class="section-sub">以主平为主. 首屏模拟的战略性大气深度;品牌特制的光芒在特色定价级别上。</p>
+<div class="elevation-grid">
+<div class="elev-cell elev-0"><span class="elev-name">Level 0 — Flat</span><span class="elev-meta">边框+细边框</span></div>
+<div class="elev-cell elev-1"><span class="elev-name">Level 1 — Subtle</span><span class="elev-meta">rgba(0,0,0,0.04) 0 1px 2px</span></div>
+<div class="elev-cell elev-2"><span class="elev-name">Level 2 — Card</span><span class="elev-meta">rgba(0,0,0,0.08) 0 4px 12px</span></div>
+<div class="elev-cell elev-3"><span class="elev-name">Level 3 — Mockup</span><span class="elev-meta">rgba(0,0,0,0.12) 0 24px 48px -8px</span></div>
+<div class="elev-cell elev-4"><span class="elev-name">Level 4 — Brand-tinted</span><span class="elev-meta">rgba(0,212,164,0.08) 0 8px 24px</span></div>
+</div>
+</section>
+<section id="responsive">
+<h2 class="section-heading">响应式布局</h2>
+<p class="section-sub">首屏的天平从 72px → 36px 手机上,我刚从电话里找到的 套餐层级堆积1-up. 文档网格崩溃到抽屉 + 单列。</p>
+<table class="breakpoint-table">
+<thead><tr><th>断点</th><th>宽度</th><th>布局变化</th></tr></thead>
+<tbody>
+<tr><td><strong>移动( 小)</strong></td><td>&lt; 480px</td><td>单列. 首屏们 36px. 套餐层级堆积1-up. 脚手风琴1柱.</td></tr>
+<tr><td><strong>移动( 大)</strong></td><td>480 – 767px</td><td>特色瓷砖2-up. 首屏们 44px.</td></tr>
+<tr><td><strong>平板</strong></td><td>768 – 1023px</td><td>Pill-tab导航返回. 侧边栏倒塌到抽屉里了 首屏们 56px.</td></tr>
+<tr><td><strong>桌面端</strong></td><td>1024 – 1279px</td><td>3-列的docs网格. 3级定价行. 首屏们 72px.</td></tr>
+<tr><td><strong>宽桌面</strong></td><td>≥ 1280px</td><td>Wider hero gutters. Fixed 240px sidebar.</td></tr>
+</tbody>
+</table>
+<h3 style="font-size: 18px; font-weight: 600; margin-top: 32px;">设备梯</h3>
+<div class="device-ladder">
+<div class="device" style="width: 60px; height: 110px;">375px</div>
+<div class="device" style="width: 90px; height: 130px;">480px</div>
+<div class="device" style="width: 130px; height: 150px;">768px</div>
+<div class="device" style="width: 200px; height: 170px;">1024px</div>
+<div class="device" style="width: 280px; height: 200px;">1280+</div>
+</div>
+<h3 style="font-size: 18px; font-weight: 600; margin-top: 32px;">触控区域</h3>
+<ul style="font-size: 14px; color: var(--charcoal); line-height: 1.7; padding-left: 20px;">
+<li>Pill buttons render at 36–40px height — bumps to 44px on mobile.</li>
+<li>Circular icon buttons: 32×32px desktop → 44×44px mobile.</li>
+<li>表格输入值在40px高度; 凸起值为44px移动。（原文参数：40px、44px）</li>
+<li>Sidebar nav items: ~32px → 44px on mobile drawers.</li>
+</ul>
+<h3 style="font-size: 18px; font-weight: 600; margin-top: 32px;">窄屏布局调整</h3>
+<ul style="font-size: 14px; color: var(--charcoal); line-height: 1.7; padding-left: 20px;">
+<li><strong>宣传旗</strong> 保持全宽; 短线位于 &lt; 480px。</li>
+<li><strong>顶端导航</strong> 1024px下方的崩塌为汉堡.（原文参数：1024px）</li>
+<li><strong>首屏区块</strong>:2-柱式首屏堆栈在 &lt; 1024px; 模拟在移动文本下方.</li>
+<li><strong>文件网格</strong>: 3-column → sidebar-drawer at &lt; 1024px → single-column at &lt; 768px.</li>
+<li><strong>定价</strong>:3-层桌面 → 1-柱堆叠在 &lt; 768px;比较表水平-卷.</li>
+<li><strong>首屏打字技术</strong>: 72px → 56px 平板电脑 44px 移动大号 ∗_ 36px 移动小。</li>
+<li><strong>logo 墙</strong>:6-up → 3-up 平板电脑 → 2-up 移动.</li>
+</ul>
+</section>
+<footer class="footer" data-platform-example="footer">
+<div class="footer-shell">
+<p class="design-demo-note">栏目演示 · 开发工具</p><div class="footer-grid">
+<div class="footer-col">
+<h6>开发环境</h6>
+<span>项目配置</span>
+<span>运行环境</span>
+<span>团队协作</span>
+</div>
+<div class="footer-col">
+<h6>开发资源</h6>
+<span>快速开始</span>
+<span>技术文档</span>
+<span>示例项目</span>
+</div>
+<div class="footer-col">
+<h6>交付运维</h6>
+<span>部署记录</span>
+<span>运行日志</span>
+<span>状态监控</span>
+</div>
+<div class="footer-col">
+<h6>支持</h6>
+<span>使用指南</span>
+<span>更新记录</span>
+<span>问题反馈</span>
+</div>
+</div>
+
+</div>
+</footer>
+</body>
+</html>

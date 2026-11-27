@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>暖底亮橙开发者风</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --primary: #ea2804;
+    --primary-deep: #c01f00;
+    --on-primary: #ffffff;
+    --hero-glow: #ff6a3d;
+    --hero-pink: #f4a8a0;
+    --ink: #fcfcfc;
+    --body: rgba(252,252,252,0.88);
+    --charcoal: rgba(252,252,252,0.72);
+    --mute: rgba(252,252,252,0.55);
+    --ash: rgba(252,252,252,0.4);
+    --stone: rgba(252,252,252,0.28);
+    --on-dark: #fcfcfc;
+    --on-dark-mute: rgba(252,252,252,0.72);
+    --canvas: #1a1614;
+    --surface-bone: #221d1a;
+    --surface-card: #2b2622;
+    --surface-dark: #0d0a08;
+    --surface-deep: #000000;
+    --hairline: rgba(255,255,255,0.1);
+    --hairline-strong: rgba(255,255,255,0.4);
+    --divider-dark: rgba(255,255,255,0.2);
+    --badge-success: #2b9a66;
+    --ring: rgba(59,130,246,0.5);
+    --font-display: 'Bricolage Grotesque', 'rb-freigeist-neue', system-ui, sans-serif;
+    --font-ui: 'Inter', 'basier-square', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-ui);
+    background: var(--canvas);
+    color: var(--body);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 32px;
+    padding: 0 32px;
+    height: 60px;
+    background: var(--canvas);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .nav-links { list-style: none; padding: 0; margin: 0; display: flex; gap: 24px; justify-content: center; }
+  .nav-links a { color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 600; }
+  .nav-cta {
+    background: var(--primary); color: var(--on-primary);
+    border: none; border-radius: 9999px;
+    padding: 10px 20px; font: inherit; font-weight: 600; font-size: 14px;
+    cursor: pointer; height: 40px;
+  }
+
+  /* getdesign.md nav additions */
+  .nav-left { display: flex; align-items: center; gap: 20px; }
+  .nav-brand-link, .nav-brand-link:link, .nav-brand-link:visited, .nav-brand-link:hover, .nav-brand-link:active { text-decoration: none; color: inherit; }
+  .nav-brand { font-weight: 700; font-size: 16px; letter-spacing: -0.4px; color: var(--ink); font-family: var(--font-display); }
+  .nav-github, .nav-github:link, .nav-github:visited, .nav-github:hover, .nav-github:active {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 6px 12px;
+    border: 1px solid var(--hairline-strong);
+    border-radius: 9999px;
+    color: var(--ink); text-decoration: none;
+    font-size: 12px; font-weight: 600;
+  }
+  /* end getdesign.md nav additions */
+
+  .hero {
+    padding: 96px 32px;
+    background:
+      radial-gradient(ellipse 60% 70% at 50% 30%, var(--hero-glow) 0%, var(--primary) 50%, transparent 90%),
+      linear-gradient(180deg, var(--primary) 0%, var(--hero-pink) 100%);
+    color: var(--on-primary);
+    display: block;
+    margin: 0;
+  }
+  .hero-content { max-width: 1200px; margin: 0 auto; }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: 96px; font-weight: 700; line-height: 1.0;
+    color: var(--on-primary);
+    margin: 0 0 24px;
+    letter-spacing: -2.5px;
+    text-align: left;
+  }
+  .hero p {
+    font-size: 19px; color: rgba(255,255,255,0.92); max-width: 720px;
+    margin: 0 0 36px; line-height: 1.5; font-weight: 500;
+    font-family: var(--font-ui);
+  }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-start; }
+  .btn {
+    border: none; padding: 12px 24px; border-radius: 9999px;
+    font: inherit; font-weight: 600; font-size: 16px;
+    cursor: pointer; height: 44px;
+  }
+  .btn-primary { background: var(--primary); color: var(--on-primary); }
+  .btn-primary-pressed { background: var(--primary-deep); color: var(--on-primary); }
+  .btn-dark { background: var(--surface-dark); color: var(--on-dark); }
+  .btn-outline { background: var(--surface-card); color: var(--ink); border: 1px solid var(--hairline-strong); }
+  .btn-ghost { background: var(--canvas); color: var(--ink); padding: 8px 16px; height: 36px; font-size: 14px; }
+  .btn-icon { width: 36px; height: 36px; border-radius: 9999px; background: var(--surface-card); border: 1px solid var(--hairline); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; color: var(--ink); }
+
+  section { padding: 96px 32px; max-width: 1280px; margin: 0 auto; border-top: 1px solid var(--hairline); }
+  h2 { font-family: var(--font-display); font-size: 56px; font-weight: 700; line-height: 1.0; color: var(--ink); margin: 0 0 12px; letter-spacing: -1.5px; }
+  .lead { font-size: 18px; color: var(--charcoal); max-width: 720px; margin: 0 0 40px; line-height: 1.5; }
+
+  .palette { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .swatch { border-radius: 10px; overflow: hidden; background: var(--surface-card); border: 1px solid var(--hairline); }
+  .swatch-color { height: 110px; }
+  .swatch-meta { padding: 14px; }
+  .swatch-name { font-weight: 600; color: var(--ink); font-size: 14px; margin: 0 0 4px; }
+  .swatch-hex { font-family: var(--font-mono); font-size: 12px; color: var(--mute); margin: 0 0 8px; }
+  .swatch-role { font-size: 12px; color: var(--charcoal); line-height: 1.4; margin: 0; }
+  .palette-group-title { font-family: var(--font-display); font-size: 22px; font-weight: 600; margin: 32px 0 16px; color: var(--ink); }
+  .palette-group-title:first-child { margin-top: 0; }
+
+  .type-row { display: grid; grid-template-columns: 240px 1fr; gap: 32px; padding: 24px 0; border-bottom: 1px solid var(--hairline); align-items: baseline; }
+  .type-row:last-child { border-bottom: none; }
+  .type-meta { font-size: 12px; color: var(--mute); font-family: var(--font-mono); }
+  .type-meta strong { color: var(--ink); display: block; font-weight: 600; font-size: 13px; margin-bottom: 4px; font-family: var(--font-ui); }
+  .type-sample { color: var(--ink); }
+
+  .button-grid { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+
+  .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .model-card { background: var(--surface-card); border: 1px solid var(--hairline); border-radius: 10px; overflow: hidden; }
+  .model-thumb {
+    aspect-ratio: 1; background: linear-gradient(135deg, #fff 0%, #f5f1e8 50%, #e6dfd0 100%);
+    position: relative;
+  }
+  .model-thumb::after {
+    content: ''; position: absolute; inset: 12px;
+    background: radial-gradient(ellipse at 30% 40%, rgba(234,40,4,0.15), transparent 70%);
+  }
+  .model-meta { padding: 16px; }
+  .model-owner { font-size: 12px; color: var(--mute); font-family: var(--font-mono); margin: 0 0 4px; }
+  .model-name { font-size: 16px; font-weight: 600; color: var(--ink); margin: 0 0 4px; }
+  .model-desc { font-size: 13px; color: var(--charcoal); margin: 0 0 12px; line-height: 1.4; }
+  .badge-status { background: var(--badge-success); color: var(--on-dark); font-size: 12px; padding: 4px 10px; border-radius: 9999px; display: inline-block; }
+  .badge-tag { background: var(--canvas); color: var(--ink); font-size: 12px; padding: 4px 10px; border-radius: 9999px; border: 1px solid var(--hairline); display: inline-block; margin-right: 4px; }
+
+  .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .pricing-tier { background: var(--surface-card); border: 1px solid var(--hairline); border-radius: 16px; padding: 32px; }
+  .pricing-tier-featured { background: var(--surface-dark); color: var(--on-dark); }
+  .pricing-tier-featured .pricing-name, .pricing-tier-featured .pricing-price { color: var(--on-dark); }
+  .pricing-tier-featured .pricing-features li { color: var(--on-dark-mute); }
+  .pricing-name { font-family: var(--font-display); font-size: 32px; font-weight: 700; line-height: 1.0; color: var(--ink); margin: 0 0 8px; }
+  .pricing-price { font-family: var(--font-display); font-size: 28px; font-weight: 600; color: var(--ink); margin: 0 0 24px; }
+  .pricing-price small { font-size: 14px; color: var(--mute); font-weight: 400; font-family: var(--font-ui); }
+  .pricing-features { list-style: none; padding: 0; margin: 0 0 24px; }
+  .pricing-features li { padding: 8px 0; border-bottom: 1px solid var(--hairline); font-size: 14px; }
+  .pricing-tier-featured .pricing-features li { border-bottom: 1px solid var(--divider-dark); }
+
+  .code-block {
+    background: var(--surface-dark);
+    color: var(--on-dark);
+    border-radius: 10px;
+    padding: 0;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    overflow: hidden;
+  }
+  .code-tabs {
+    display: flex; gap: 4px;
+    background: var(--surface-deep);
+    padding: 8px 12px;
+  }
+  .code-tab {
+    padding: 6px 12px; border-radius: 4px;
+    background: transparent; color: var(--on-dark-mute);
+    font-size: 11px; font-family: var(--font-mono);
+    cursor: pointer; border: none;
+  }
+  .code-tab.active { background: var(--surface-dark); color: var(--on-dark); }
+  .code-body { padding: 24px; line-height: 1.6; }
+  .code-body .k { color: #ff8e7a; }
+  .code-body .s { color: #a8d8a0; }
+  .code-body .c { color: var(--ash); }
+
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 800px; }
+  .field label { display: block; font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+  .field input, .field textarea {
+    width: 100%; padding: 12px 20px; border: 1px solid var(--hairline);
+    font: inherit; font-size: 16px; color: var(--ink); background: var(--surface-card);
+    border-radius: 9999px; height: 44px;
+  }
+  .field textarea { height: 120px; resize: vertical; border-radius: 16px; padding: 12px 20px; }
+
+  .spacing-row { display: flex; align-items: flex-end; gap: 12px; flex-wrap: wrap; }
+  .spacing-block { background: var(--ink); height: 32px; }
+  .spacing-label { font-size: 11px; color: var(--mute); margin-top: 8px; text-align: center; font-family: var(--font-mono); }
+
+  .radius-grid { display: flex; gap: 24px; flex-wrap: wrap; }
+  .radius-card { width: 140px; }
+  .radius-box { height: 120px; background: var(--ink); }
+  .radius-meta { font-size: 12px; color: var(--mute); margin-top: 8px; font-family: var(--font-mono); }
+
+  .elev-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .elev-card { padding: 32px 24px; text-align: center; font-size: 13px; border-radius: 10px; }
+  .elev-flat { background: var(--canvas); }
+  .elev-outline { background: var(--surface-card); border: 1px solid var(--hairline); }
+  .elev-bone { background: var(--surface-bone); }
+  .elev-dark { background: var(--surface-dark); color: var(--on-dark); }
+
+  .breakpoint-table { width: 100%; border-collapse: collapse; }
+  .breakpoint-table th, .breakpoint-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--hairline); font-size: 13px; }
+  .breakpoint-table th { background: var(--surface-bone); font-weight: 600; color: var(--ink); }
+  .device-ladder { display: flex; align-items: flex-end; gap: 16px; margin-top: 32px; }
+  .device { background: var(--surface-bone); border: 1px solid var(--hairline-strong); display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--mute); border-radius: 8px; }
+
+  footer.site-footer {
+    background: var(--surface-deep);
+    color: var(--on-dark);
+    padding: 64px 32px 32px;
+    margin-top: 96px;
+  }
+  footer.site-footer .footer-inner { max-width: 1280px; margin: 0 auto; }
+  footer.site-footer p { color: var(--on-dark-mute); font-size: 14px; }
+  footer.site-footer a { color: var(--on-dark); text-decoration: none; font-weight: 600; }
+  .footer-meta { border-top: 1px solid var(--divider-dark); padding-top: 24px; margin-top: 32px; font-size: 12px; color: var(--on-dark-mute); }
+
+  @media (max-width: 1024px) {
+    .nav { padding: 0 24px; }
+    section { padding: 64px 24px; }
+    .hero { padding: 64px 24px; }
+    .hero h1 { font-size: 64px; letter-spacing: -1.5px; }
+    h2 { font-size: 40px; }
+    .palette { grid-template-columns: repeat(3, 1fr); }
+    .card-grid, .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+    .elev-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 720px) {
+    .nav { padding: 0 16px; min-height: 56px; gap: 12px; }
+    .nav-links { display: none; }
+    .hero { padding: 48px 16px; }
+    .hero h1 { font-size: 44px; letter-spacing: -1px; }
+    .hero p { font-size: 16px; }
+    section { padding: 48px 16px; }
+    h2 { font-size: 32px; letter-spacing: -1px; }
+    .palette { grid-template-columns: repeat(2, 1fr); }
+    .card-grid, .pricing-grid { grid-template-columns: 1fr; }
+    .form-grid { grid-template-columns: 1fr; }
+    .type-row { grid-template-columns: 1fr; gap: 12px; }
+    .elev-grid { grid-template-columns: 1fr; }
+  }
+  /* FOOTER (canonical centered) */
+  .footer {
+    padding: 48px 32px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .footer a { text-decoration: none; }
+
+
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+</head>
+<body data-platform-type="开发工具">
+
+<header class="hero">
+<div class="hero-content">
+<h1>暖底亮橙开发者风</h1>
+<p>暖米白底配鲜亮的品牌橙色标记和大字号 rb-freigeist-neue 标题。代码区使用 JetBrains Mono，界面控件采用胶囊形圆角。</p>
+<div class="hero-actions">
+<button class="btn btn-dark">开始使用</button>
+<button class="btn btn-outline">读文件</button>
+</div>
+</div>
+</header>
+<section id="palette">
+<h2>配色</h2>
+<p class="lead">暖米白 页面底色 白色内置卡片,并有单张热橙品牌邮票. 暗码井是唯一的色调断裂.</p>
+<div class="palette-group-title">品牌色与强调色</div>
+<div class="palette">
+<div class="swatch"><div class="swatch-color" style="background: var(--primary);"></div><div class="swatch-meta"><p class="swatch-name">Replicate Orange</p><p class="swatch-hex">#ea2804</p><p class="swatch-role">初等行动按钮,首屏区块,内含链接.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--primary-deep);"></div><div class="swatch-meta"><p class="swatch-name">Orange Pressed</p><p class="swatch-hex">#c01f00</p><p class="swatch-role">活动/压强行动按钮状态.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--hero-glow);"></div><div class="swatch-meta"><p class="swatch-name">Hero Glow</p><p class="swatch-hex">#ff6a3d</p><p class="swatch-role">大气网点中停.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--hero-pink);"></div><div class="swatch-meta"><p class="swatch-name">Hero Pink</p><p class="swatch-hex">#f4a8a0</p><p class="swatch-role">大气网外洗净.</p></div></div>
+</div>
+<div class="palette-group-title">界面表面</div>
+<div class="palette">
+<div class="swatch"><div class="swatch-color" style="background: var(--canvas);"></div><div class="swatch-meta"><p class="swatch-name">Canvas</p><p class="swatch-hex">#f9f7f3</p><p class="swatch-role">默认页面背景。</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--surface-bone);"></div><div class="swatch-meta"><p class="swatch-name">Surface Bone</p><p class="swatch-hex">#f3f0e8</p><p class="swatch-role">套用卡片群集.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--surface-card); border: 1px solid var(--hairline);"></div><div class="swatch-meta"><p class="swatch-name">Surface Card</p><p class="swatch-hex">#ffffff</p><p class="swatch-role">型号卡片,投入,套餐层级.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--surface-dark);"></div><div class="swatch-meta"><p class="swatch-name">Surface Dark</p><p class="swatch-hex">#202020</p><p class="swatch-role">密码井, 突出的层次。</p></div></div>
+</div>
+<div class="palette-group-title">文字色</div>
+<div class="palette">
+<div class="swatch"><div class="swatch-color" style="background: var(--ink);"></div><div class="swatch-meta"><p class="swatch-name">Ink</p><p class="swatch-hex">#202020</p><p class="swatch-role">米白色上的主要文本.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--body);"></div><div class="swatch-meta"><p class="swatch-name">Body</p><p class="swatch-hex">#3a3a3a</p><p class="swatch-role">长形体抄本.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--charcoal);"></div><div class="swatch-meta"><p class="swatch-name">Charcoal</p><p class="swatch-hex">#575757</p><p class="swatch-role">说明,元数据。</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--mute);"></div><div class="swatch-meta"><p class="swatch-name">Mute</p><p class="swatch-hex">#646464</p><p class="swatch-role">非活动标签.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--ash);"></div><div class="swatch-meta"><p class="swatch-name">Ash</p><p class="swatch-hex">#8d8d8d</p><p class="swatch-role">三级文字.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--stone);"></div><div class="swatch-meta"><p class="swatch-name">Stone</p><p class="swatch-hex">#bbbbbb</p><p class="swatch-role">已禁用前景图。</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--on-dark); border: 1px solid var(--hairline);"></div><div class="swatch-meta"><p class="swatch-name">On-Dark</p><p class="swatch-hex">#fcfcfc</p><p class="swatch-role">暗处的文字。</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: #b8b6b1;"></div><div class="swatch-meta"><p class="swatch-name">On-Dark Mute</p><p class="swatch-hex">rgba(252,252,252,0.72)</p><p class="swatch-role">暗处的副文字.</p></div></div>
+</div>
+<div class="palette-group-title">语义色</div>
+<div class="palette">
+<div class="swatch"><div class="swatch-color" style="background: var(--badge-success);"></div><div class="swatch-meta"><p class="swatch-name">Success</p><p class="swatch-hex">#2b9a66</p><p class="swatch-role">状态胶囊控件,"跑"徽章.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: var(--ring);"></div><div class="swatch-meta"><p class="swatch-name">Focus Ring</p><p class="swatch-hex">rgba(59,130,246,0.5)</p><p class="swatch-role">默认焦点环.</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background: #24292e;"></div><div class="swatch-meta"><p class="swatch-name">GitHub Dark</p><p class="swatch-hex">#24292e</p><p class="swatch-role">GitHub品牌按钮.</p></div></div>
+</div>
+</section>
+<section id="typography">
+<h2>字体排版</h2>
+<p class="lead">A three-family stack: rb-freigeist-neue for display, basier-square for UI/body, JetBrains Mono for code. Bricolage Grotesque + Inter substitute when the proprietary families aren't available.</p>
+<div class="type-row"><div class="type-meta"><strong>display-xxl</strong>128 · 700 · 1.0 · -3px</div><div class="type-sample" style="font-family:var(--font-display); font-size:96px; font-weight:700; line-height:1.0; letter-spacing:-2.5px;">运行 AI</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-xl</strong>72 · 700 · 1.0 · -1.8px</div><div class="type-sample" style="font-family:var(--font-display); font-size:64px; font-weight:700; line-height:1.0; letter-spacing:-1.6px;">如何运作</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-lg</strong>48 · 700 · 1.0 · -1px</div><div class="type-sample" style="font-family:var(--font-display); font-size:48px; font-weight:700; line-height:1.0; letter-spacing:-1px;">Replicate 缩放</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-md</strong>30 · 600 · 1.2</div><div class="type-sample" style="font-family:var(--font-display); font-size:30px; font-weight:600; line-height:1.2;">推模型现场直播</div></div>
+<div class="type-row"><div class="type-meta"><strong>heading-md</strong>24 · 600 · 1.33 · -0.35px</div><div class="type-sample" style="font-size:24px; font-weight:600; line-height:1.33; letter-spacing:-0.35px;">特色收藏——文字对图像</div></div>
+<div class="type-row"><div class="type-meta"><strong>subtitle</strong>18 · 600 · 1.56</div><div class="type-sample" style="font-size:18px; font-weight:600; line-height:1.56;">以单一API运行开源模型.</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-md</strong>16 · 400 · 1.5</div><div class="type-sample" style="font-size:16px;">营销传言带有奶油页节奏——大到可以在编辑线长时读到,从不装饰.</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-sm</strong>14 · 400 · 1.43</div><div class="type-sample" style="font-size:14px;">说明,元数据,以及模型卡片上的副文本.</div></div>
+<div class="type-row"><div class="type-meta"><strong>button-md</strong>16 · 600 · 1.0</div><div class="type-sample" style="font-size:16px; font-weight:600;">与GitHub 签约</div></div>
+<div class="type-row"><div class="type-meta"><strong>button-sm</strong>14 · 600 · 1.0</div><div class="type-sample" style="font-size:14px; font-weight:600;">试试看</div></div>
+<div class="type-row"><div class="type-meta"><strong>caption</strong>12 · 400 · 1.33</div><div class="type-sample" style="font-size:12px; color:var(--mute);">Replicate 2026 设计系统目录.</div></div>
+<div class="type-row"><div class="type-meta"><strong>code-md</strong>14 · 400 · 1.43 · mono</div><div class="type-sample" style="font-family:var(--font-mono); font-size:14px;">replicate.run (“ popenai/ gpt- image-2”, 输入)</div></div>
+<div class="type-row"><div class="type-meta"><strong>code-sm</strong>11 · 400 · 1.5 · mono</div><div class="type-sample" style="font-family:var(--font-mono); font-size:11px;">· 电磁波 · 电磁波 · 热波 · 热波 · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · .</div></div>
+</section>
+<section id="components">
+<h2>按钮</h2>
+<p class="lead">每个交互元素都完全圆形. 橙色初等,深色的行动按钮, 概括了三级, 和微妙的鬼按钮 满足所有的需求。</p>
+<div class="button-grid">
+<button class="btn btn-primary">button-primary</button>
+<button class="btn btn-primary-pressed">button-primary-pressed</button>
+<button class="btn btn-dark">button-dark</button>
+<button class="btn btn-outline">button-outline</button>
+<button class="btn btn-ghost">button-ghost</button>
+<button class="btn-icon">→</button>
+</div>
+</section>
+<section>
+<h2>型号卡片</h2>
+<p class="lead">方块 1:1 缩略图带有`rounded.md`角,模型所有者+名字下面,状态 胶囊形 下方左侧.</p>
+<div class="card-grid">
+<article class="model-card">
+<div class="model-thumb"></div>
+<div class="model-meta">
+<p class="model-owner">openai / gpt- image-2 图像</p>
+<p class="model-name">GPT 图像 2</p>
+<p class="model-desc">高洁文字对映生成.</p>
+<span class="badge-status">运行</span>
+</div>
+</article>
+<article class="model-card">
+<div class="model-thumb" style="background: linear-gradient(135deg, #fff8e8 0%, #ffd9b8 50%, #ea2804 120%);"></div>
+<div class="model-meta">
+<p class="model-owner">稳定-ai / sdxl</p>
+<p class="model-name">自动自动自动启动器</p>
+<p class="model-desc">稳定传播XL——社区最喜爱.</p>
+<span class="badge-tag">文本到图像</span>
+<span class="badge-tag">视频</span>
+</div>
+</article>
+<article class="model-card">
+<div class="model-thumb" style="background: linear-gradient(135deg, #e8f0ff 0%, #c8d8f0 50%, #1a3a5e 120%);"></div>
+<div class="model-meta">
+<p class="model-owner">meta / lama-3 数据</p>
+<p class="model-name">Llama 3</p>
+<p class="model-desc">开放量级聊天完成.</p>
+<span class="badge-status">运行</span>
+</div>
+</article>
+</div>
+</section>
+<section>
+<h2>套餐定价</h2><p class="design-demo-note">组件演示。套餐层级、价格字重和操作按钮。数据仅用于样式展示。</p>
+<p class="lead">3-up grade;中层翻转至暗反转,以标记"建议".</p>
+<div class="pricing-grid">
+<div class="pricing-tier">
+<p class="pricing-name">免费版</p>
+<p class="pricing-price">$0<small> / 月份( 月份)</small></p>
+<ul class="pricing-features">
+<li>浏览公共模型</li>
+<li>有限推断信贷</li>
+<li>社区支助</li>
+</ul>
+<button class="btn btn-outline" style="width:100%;">免费开始</button>
+</div>
+<div class="pricing-tier pricing-tier-featured">
+<p class="pricing-name">专业版</p>
+<p class="pricing-price">$20<small> / 月份( 月份)</small></p>
+<ul class="pricing-features">
+<li>现收现付推论</li>
+<li>私人模式部署</li>
+<li>优先排队访问</li>
+</ul>
+<button class="btn btn-primary" style="width:100%;">升级</button>
+</div>
+<div class="pricing-tier">
+<p class="pricing-name">企业版</p>
+<p class="pricing-price">自定义</p>
+<ul class="pricing-features">
+<li>专门能力</li>
+<li>2 + SSO 标准</li>
+<li>账户管理器</li>
+</ul>
+<button class="btn btn-outline" style="width:100%;">联系销售</button>
+</div>
+</div>
+</section>
+<section>
+<h2>代码块</h2>
+<p class="lead">A full-bleed dark code well with a JetBrains Mono body and a tab strip pinned to the top.</p>
+<div class="code-block">
+<div class="code-tabs">
+<button class="code-tab active">蟒蛇</button>
+<button class="code-tab">节点.js</button>
+<button class="code-tab">卷曲( T)</button>
+<button class="code-tab">http://www.un.org/s/cn/cn/cn/cn/cn/cn/cn/cn/cn/cn/cn/cn/cn/cn/cn/cn/cn/cn/cn/cn/cn/cn/cn/cn/cn/cn/cn/cn/c/cn/c/cn/cn/c/cn/cl/cn/c/c/cn/c/c/cl/c/c/cl/c/cl/cl/cl/c/c/c/c/c/c/c/c/c/c/c/c/c/c/c/c/c/c/c/c/c/cl/cl/cl/cl/c/c/c/c/c/c/c/c/c/c/c/c/c//////c/c/c/c/c/c/c/c/c//c</button>
+</div>
+<pre class="code-body" style="margin:0;"><span class="c"># Run any open-source model with a single call.</span>
+<span class="k">import</span> replicate
+
+output = replicate.run(
+    <span class="s">"owner/model-name"</span>,
+    input={<span class="s">"prompt"</span>: <span class="s">"placeholder prompt"</span>},
+)
+
+<span class="k">print</span>(output)
+</pre>
+</div>
+</section>
+<section>
+<h2>表单控件</h2>
+<p class="lead">胶囊形 输入与圆形按钮词汇表匹配.</p>
+<div class="form-grid">
+<div class="field">
+<label>电子邮箱</label>
+<input placeholder="you@example.com" type="email"/>
+</div>
+<div class="field">
+<label>搜索模式</label>
+<input placeholder="文本到图像" type="search"/>
+</div>
+<div class="field" style="grid-column: 1 / -1;">
+<label>页:1</label>
+<textarea placeholder="任择说明"></textarea>
+</div>
+</div>
+</section>
+<section id="layout">
+<h2>间距层级</h2>
+<p class="lead">一个4px基础,由`section: 96px`和`band: 160px`驱动编辑米白色节奏.（原文参数：4px）</p>
+<div class="spacing-row">
+<div><div class="spacing-block" style="width:2px;"></div><div class="spacing-label">xxx 2 数据</div></div>
+<div><div class="spacing-block" style="width:4px;"></div><div class="spacing-label">xs 4 数据</div></div>
+<div><div class="spacing-block" style="width:8px;"></div><div class="spacing-label">sm 8 数据</div></div>
+<div><div class="spacing-block" style="width:12px;"></div><div class="spacing-label">md 12 数据</div></div>
+<div><div class="spacing-block" style="width:16px;"></div><div class="spacing-label">16 高压压压轴</div></div>
+<div><div class="spacing-block" style="width:24px;"></div><div class="spacing-label">□ 24</div></div>
+<div><div class="spacing-block" style="width:32px;"></div><div class="spacing-label">xxl 32 数据</div></div>
+<div><div class="spacing-block" style="width:48px;"></div><div class="spacing-label">48 化学反应</div></div>
+<div><div class="spacing-block" style="width:96px;"></div><div class="spacing-label">96 · 章节</div></div>
+<div><div class="spacing-block" style="width:160px;"></div><div class="spacing-label">160 频带</div></div>
+</div>
+</section>
+<section>
+<h2>圆角</h2>
+<p class="lead">胶囊形用于交互,中射线用于内容卡片,锐度仅用于通栏频段.</p>
+<div class="radius-grid">
+<div class="radius-card"><div class="radius-box" style="border-radius:0;"></div><div class="radius-meta">无 0</div></div>
+<div class="radius-card"><div class="radius-box" style="border-radius:4px;"></div><div class="radius-meta">xs 4 数据</div></div>
+<div class="radius-card"><div class="radius-box" style="border-radius:6px;"></div><div class="radius-meta">sm 6 数据</div></div>
+<div class="radius-card"><div class="radius-box" style="border-radius:10px;"></div><div class="radius-meta">md 10 数据</div></div>
+<div class="radius-card"><div class="radius-box" style="border-radius:16px;"></div><div class="radius-meta">16 高压压压轴</div></div>
+<div class="radius-card"><div class="radius-box" style="border-radius:9999px; height:120px; width:120px;"></div><div class="radius-meta">胶囊形 数据</div></div>
+</div>
+</section>
+<section>
+<h2>层次与深度</h2>
+<p class="lead">米白色 → 骨骼 → 暗反演. 投影保留给浮动缩略图.</p>
+<div class="elev-grid">
+<div class="elev-card elev-flat">Level 0 — Cream</div>
+<div class="elev-card elev-outline">Level 1 — Outline</div>
+<div class="elev-card elev-bone">Level 2 — Bone Inset</div>
+<div class="elev-card elev-dark">3 级别 - 深</div>
+</div>
+</section>
+<section>
+<h2>响应式布局</h2>
+<p class="lead">Six breakpoints from desktop XL (≥1440) to small mobile (≤425). Hero clamps from 128px down to 48px across the ladder.</p>
+<table class="breakpoint-table">
+<thead><tr><th>断点</th><th>宽度</th><th>布局变化</th></tr></thead>
+<tbody>
+<tr><td>桌面 XL 软件</td><td>≥ 1440px</td><td>4-up model grid, full-bleed hero, max content 1280.</td></tr>
+<tr><td>桌面端</td><td>1280–1439px</td><td>集装箱缩水; xl 侧垫。</td></tr>
+<tr><td>块状大</td><td>1024–1279px</td><td>型号网格3-up;代码-style 2-up保留.</td></tr>
+<tr><td>平板</td><td>768–1023px</td><td>模型网格2-up;代码层堆栈;定价堆栈.</td></tr>
+<tr><td>大型移动</td><td>426–767px</td><td>纳夫汉堡;首屏夹子给64px.（原文参数：64px）</td></tr>
+<tr><td>手机端</td><td>≤ 425px</td><td>所有网格 1-up; 首屏 48px; 分区 垫装 64px.</td></tr>
+</tbody>
+</table>
+<div class="device-ladder">
+<div class="device" style="width:60px; height:120px;">390</div>
+<div class="device" style="width:90px; height:140px;">600</div>
+<div class="device" style="width:130px; height:170px;">800</div>
+<div class="device" style="width:200px; height:200px;">1024</div>
+<div class="device" style="width:280px; height:220px;">1280</div>
+<div class="device" style="width:340px; height:240px;">1440</div>
+</div>
+</section>
+<footer class="footer" data-platform-example="footer">
+<div class="footer-shell">
+<p class="design-demo-note">栏目演示 · 开发工具</p><div class="footer-grid">
+<div class="footer-col">
+<h6>开发环境</h6>
+<span>项目配置</span>
+<span>运行环境</span>
+<span>团队协作</span>
+</div>
+<div class="footer-col">
+<h6>开发资源</h6>
+<span>快速开始</span>
+<span>技术文档</span>
+<span>示例项目</span>
+</div>
+<div class="footer-col">
+<h6>交付运维</h6>
+<span>部署记录</span>
+<span>运行日志</span>
+<span>状态监控</span>
+</div>
+<div class="footer-col">
+<h6>支持</h6>
+<span>使用指南</span>
+<span>更新记录</span>
+<span>问题反馈</span>
+</div>
+</div>
+
+</div>
+</footer>
+</body>
+</html>

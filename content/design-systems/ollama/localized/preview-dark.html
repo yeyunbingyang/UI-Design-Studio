@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>单色等宽终端</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --primary: #ffffff;
+    --on-primary: #000000;
+    --canvas: #0a0a0a;
+    --surface: #141414;
+    --surface-elevated: #1f1f1f;
+    --hairline: rgba(255,255,255,0.12);
+    --hairline-strong: rgba(255,255,255,0.24);
+    --ink: #ffffff;
+    --ink-deep: #f5f5f5;
+    --body: rgba(255,255,255,0.7);
+    --charcoal: rgba(255,255,255,0.85);
+    --mute: rgba(255,255,255,0.45);
+    --on-dark: #ffffff;
+    --on-dark-mute: rgba(255,255,255,0.7);
+    --surface-dark-card: #050505;
+    --terminal-red: #ff5f56;
+    --terminal-yellow: #ffbd2e;
+    --terminal-green: #27c93f;
+
+    --font-display: 'Nunito', system-ui, -apple-system, sans-serif;
+    --font-ui: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-ui);
+    background: var(--canvas);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+
+  /* NAV */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--canvas);
+    color: var(--ink);
+    padding: 0 48px;
+    height: 64px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .nav-brand { font-family: var(--font-ui); font-weight: 600; font-size: 16px; color: var(--ink); }
+  .nav-links { list-style: none; display: flex; gap: 28px; padding: 0; margin: 0; }
+  .nav-links a { font-family: var(--font-ui); font-size: 14px; font-weight: 500; color: var(--ink); text-decoration: none; }
+  .nav-cta {
+    background: var(--primary);
+    color: var(--on-primary);
+    border: none;
+    border-radius: 9999px;
+    padding: 0 20px;
+    height: 36px;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 96px 48px;
+    background: var(--canvas);
+    display: block;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .hero-content { max-width: 1200px; }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 1.11;
+    color: var(--ink);
+    margin: 0 0 32px;
+    letter-spacing: -1px;
+    text-align: left;
+  }
+  .hero p {
+    font-size: 18px;
+    color: var(--body);
+    max-width: 900px;
+    margin: 0 0 40px;
+    line-height: 1.5;
+    text-align: left;
+  }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-start; }
+  .btn {
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 9999px;
+    padding: 0 20px;
+    height: 36px;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-primary { background: var(--primary); color: var(--on-primary); }
+  .btn-secondary { background: var(--canvas); color: var(--ink); border: 1px solid var(--hairline-strong); }
+  .btn-pill-on-dark { background: var(--canvas); color: var(--ink); border: 1px solid var(--hairline-strong); }
+  .btn-disabled { background: var(--surface); color: var(--mute); cursor: not-allowed; }
+
+  /* SECTIONS */
+  section {
+    padding: 88px 48px;
+    max-width: 1440px;
+    margin: 0 auto;
+    border-top: 1px solid var(--hairline);
+  }
+  .section-eyebrow {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--body);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 12px;
+  }
+  .section-heading {
+    font-family: var(--font-display);
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--ink);
+    margin: 0 0 16px;
+  }
+  .section-desc { font-size: 16px; color: var(--body); max-width: 720px; margin: 0 0 48px; }
+
+  /* PALETTE */
+  .palette-block { margin-bottom: 48px; }
+  .palette-block-label {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin: 0 0 16px;
+  }
+  .palette-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .swatch {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .swatch-color { height: 100px; }
+  .swatch-meta { padding: 14px 16px 16px; }
+  .swatch-name { font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--ink); margin: 0 0 2px; }
+  .swatch-hex { font-family: var(--font-mono); font-size: 12px; color: var(--body); margin: 0 0 6px; }
+  .swatch-role { font-family: var(--font-ui); font-size: 13px; color: var(--charcoal); margin: 0; line-height: 1.45; }
+
+  /* TYPOGRAPHY */
+  .type-row {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 32px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--hairline);
+    align-items: baseline;
+  }
+  .type-meta { font-family: var(--font-ui); font-size: 12px; color: var(--body); line-height: 1.6; }
+  .type-meta strong { display: block; color: var(--ink); font-weight: 600; font-size: 13px; margin-bottom: 4px; }
+  .type-sample { color: var(--ink); }
+
+  /* BUTTONS GRID */
+  .button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .button-cell {
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
+    padding: 28px 24px 22px;
+    background: var(--surface);
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .button-cell-label { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--ink); margin: 0; text-transform: uppercase; letter-spacing: 0.3px; }
+  .button-cell-spec { font-family: var(--font-mono); font-size: 11px; color: var(--body); margin: 0; line-height: 1.5; }
+
+  /* INSTALL SNIPPET */
+  .install-snippet {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--surface-elevated);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 16px;
+    height: 48px;
+    padding: 0 20px;
+    border-radius: 9999px;
+    width: 100%;
+    max-width: 560px;
+  }
+  .install-snippet .copy { margin-left: auto; color: var(--body); }
+
+  /* COMMAND TAG */
+  .command-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--surface-elevated);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 9999px;
+  }
+
+  /* TERMINAL CARD */
+  .terminal-card {
+    background: var(--surface-dark-card);
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .terminal-header {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--hairline);
+    display: flex;
+    gap: 8px;
+  }
+  .traffic-light { width: 12px; height: 12px; border-radius: 9999px; }
+  .traffic-light.red { background: var(--terminal-red); }
+  .traffic-light.yellow { background: var(--terminal-yellow); }
+  .traffic-light.green { background: var(--terminal-green); }
+  .terminal-body { padding: 16px; font-family: var(--font-mono); font-size: 14px; color: var(--ink); line-height: 1.6; }
+  .terminal-body .comment { color: var(--mute); }
+  .terminal-body .cmd { color: var(--ink); }
+
+  /* PRICING CARDS */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .pricing-card {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .pricing-card-dark {
+    background: var(--surface-dark-card);
+    color: var(--on-dark);
+    border: 1px solid var(--hairline-strong);
+    border-radius: 12px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .pricing-card-dark .pricing-name,
+  .pricing-card-dark .pricing-price,
+  .pricing-card-dark .pricing-eyebrow { color: var(--on-dark); }
+  .pricing-card-dark .feature-bullet { color: var(--on-dark-mute); }
+  .pricing-llama {
+    width: 32px;
+    height: 32px;
+    border-radius: 9999px;
+    background: var(--surface-elevated);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink);
+  }
+  .pricing-card-dark .pricing-llama { background: rgba(255,255,255,0.1); color: var(--on-dark); }
+  .pricing-name { font-family: var(--font-ui); font-size: 20px; font-weight: 500; margin: 0; color: var(--ink); }
+  .pricing-eyebrow { font-family: var(--font-ui); font-size: 14px; color: var(--body); margin: 0; }
+  .pricing-price { font-family: var(--font-display); font-size: 30px; font-weight: 500; margin: 0; color: var(--ink); }
+  .pricing-price-meta { font-family: var(--font-ui); font-size: 14px; color: var(--body); margin-left: 6px; }
+  .pricing-divider { height: 1px; background: var(--hairline); margin: 4px 0; }
+  .feature-list { display: flex; flex-direction: column; gap: 10px; padding: 0; margin: 0; list-style: none; }
+  .feature-bullet { font-family: var(--font-ui); font-size: 14px; color: var(--charcoal); display: flex; gap: 8px; align-items: flex-start; }
+  .feature-bullet::before { content: '✓'; color: var(--ink); font-weight: 600; }
+
+  /* FAQ ROWS */
+  .faq-list { max-width: 720px; }
+  .faq-row { padding: 16px 0; border-bottom: 1px solid var(--hairline); }
+  .faq-q { font-family: var(--font-ui); font-size: 18px; font-weight: 500; color: var(--ink); margin: 0 0 6px; }
+  .faq-a { font-family: var(--font-ui); font-size: 16px; color: var(--body); margin: 0; line-height: 1.5; }
+
+  /* CTA STRIP DARK */
+  .cta-strip-dark {
+    background: var(--surface-dark-card);
+    color: var(--on-dark);
+    padding: 24px 32px;
+    border-radius: 12px;
+    border: 1px solid var(--hairline);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .cta-strip-title { font-family: var(--font-display); font-size: 24px; font-weight: 600; margin: 0; color: var(--on-dark); }
+
+  /* FORMS */
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 800px;
+  }
+  .form-cell { display: flex; flex-direction: column; gap: 8px; }
+  .form-label { font-family: var(--font-ui); font-size: 12px; font-weight: 600; color: var(--ink); text-transform: uppercase; letter-spacing: 0.3px; }
+  .form-spec { font-family: var(--font-mono); font-size: 11px; color: var(--body); margin-top: 4px; }
+  input.text-input {
+    height: 40px;
+    border: 1px solid var(--hairline);
+    background: var(--surface);
+    border-radius: 9999px;
+    padding: 0 16px;
+    font-family: var(--font-ui);
+    font-size: 16px;
+    color: var(--ink);
+  }
+  input.text-input.focused { outline: 3px solid rgba(59,130,246,0.5); border-color: var(--ink); }
+  .search-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--surface-elevated);
+    color: var(--body);
+    height: 36px;
+    padding: 0 16px;
+    border-radius: 9999px;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    width: 280px;
+  }
+
+  /* SPACING + RADIUS */
+  .spacing-row, .radius-row { display: flex; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+  .spacing-cell { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .spacing-bar { background: var(--ink); height: 32px; }
+  .spacing-label { font-family: var(--font-mono); font-size: 11px; color: var(--body); }
+  .radius-cell { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .radius-box { width: 100px; height: 100px; background: var(--surface-elevated); border: 1px solid var(--hairline); }
+  .radius-label { font-family: var(--font-mono); font-size: 11px; color: var(--body); }
+  .radius-context { font-family: var(--font-ui); font-size: 12px; color: var(--charcoal); text-align: center; max-width: 110px; }
+
+  /* ELEVATION */
+  .elevation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+    background: var(--surface);
+    padding: 32px;
+    border-radius: 12px;
+  }
+  .elevation-card {
+    background: var(--surface-elevated);
+    height: 140px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 12px;
+  }
+  .elevation-card.level-1 { border: 1px solid var(--hairline); }
+  .elevation-card.level-2 { background: var(--surface-dark-card); }
+  .elevation-name { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--ink); }
+  .elevation-spec { font-family: var(--font-mono); font-size: 11px; color: var(--body); }
+
+  /* RESPONSIVE TABLE */
+  .responsive-table { width: 100%; border-collapse: collapse; font-family: var(--font-ui); font-size: 14px; }
+  .responsive-table th, .responsive-table td {
+    text-align: left;
+    padding: 14px 12px;
+    border-bottom: 1px solid var(--hairline);
+    vertical-align: top;
+  }
+  .responsive-table th { font-weight: 600; color: var(--ink); background: var(--surface); font-size: 13px; text-transform: uppercase; letter-spacing: 0.4px; }
+  .responsive-table td { color: var(--charcoal); }
+
+  .device-ladder { display: flex; align-items: flex-end; gap: 16px; margin-top: 32px; flex-wrap: wrap; }
+  .device { background: var(--surface); border: 1px solid var(--hairline); display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding: 12px; border-radius: 12px; }
+  .device .label { font-family: var(--font-mono); font-size: 11px; color: var(--body); margin-top: 8px; }
+  .device .name { font-family: var(--font-ui); font-size: 11px; color: var(--ink); font-weight: 600; }
+  .device.phone { width: 48px; height: 96px; }
+  .device.phone-large { width: 64px; height: 120px; }
+  .device.tablet { width: 100px; height: 150px; }
+  .device.desktop-small { width: 160px; height: 130px; }
+  .device.desktop { width: 220px; height: 150px; }
+
+  .responsive-sub-block { margin-top: 40px; }
+  .responsive-sub-block h3 { font-family: var(--font-display); font-size: 22px; font-weight: 500; margin: 0 0 12px; color: var(--ink); }
+  .responsive-sub-block ul { padding-left: 18px; line-height: 1.7; color: var(--charcoal); }
+
+  /* FOOTER */
+  .footer {
+    padding: 32px 24px;
+    text-align: center;
+    background: var(--canvas);
+    border-top: 1px solid var(--hairline);
+    color: var(--body);
+    font-family: var(--font-ui);
+    font-size: 12px;
+  }
+  .footer a { color: var(--ink); font-weight: 500; }
+
+  /* Overflow guards */
+  .cell, .cell > *, .demo, .button-cell, .component-cell { min-width: 0; }
+  .cell.wide,
+  .button-cell.wide,
+  .component-cell.wide { grid-column: span 2; }
+
+  @media (max-width: 1024px) {
+    section { padding: 64px 32px; }
+    .section-heading { font-size: 28px; }
+    .nav { padding: 0 32px; }
+    .nav > :last-child { display: none; }
+    .type-row { grid-template-columns: 1fr; gap: 8px; }
+    .type-row .type-meta { padding-bottom: 4px; }
+    .form-grid { gap: 16px; }
+    .hero { padding: 64px 32px; }
+    .hero h1 { font-size: 44px; }
+  }
+
+  @media (max-width: 720px) {
+    .cell.wide, .button-cell.wide, .component-cell.wide { grid-column: span 1; }
+    .nav { padding: 12px 20px; height: auto; min-height: 56px; }
+    .nav-links { display: none; }
+    .hero { padding: 48px 20px; }
+    .hero h1 { font-size: 32px; letter-spacing: -0.5px; }
+    .hero p { font-size: 16px; }
+    section { padding: 48px 20px; }
+    .section-heading { font-size: 24px; }
+    .palette-grid, .button-grid, .card-grid, .form-grid, .demo-grid, .elevation-grid { grid-template-columns: 1fr !important; gap: 16px; }
+    .install-snippet { font-size: 13px; padding: 0 14px; }
+    .spacing-row, .radius-row { gap: 12px; }
+    .responsive-table { font-size: 12px; }
+    .responsive-table th, .responsive-table td { padding: 10px 8px; }
+    .device-ladder { gap: 8px; }
+    .footer { padding: 24px 16px; font-size: 12px; }
+  }
+
+  /* getdesign.md nav additions */
+  .nav-left { display: flex; align-items: center; gap: 20px; }
+  .nav-brand-link,
+  .nav-brand-link:link,
+  .nav-brand-link:visited,
+  .nav-brand-link:hover,
+  .nav-brand-link:active { text-decoration: none; color: inherit; }
+  .nav-github,
+  .nav-github:link,
+  .nav-github:visited,
+  .nav-github:hover,
+  .nav-github:active {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: inherit;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 6px;
+    opacity: 0.75;
+    transition: opacity 200ms ease, border-color 200ms ease;
+    font-family: inherit;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .nav-github:hover { opacity: 1; border-color: rgba(128, 128, 128, 0.55); }
+  .nav-github svg { display: block; flex-shrink: 0; }
+
+  /* getdesign.md nav centering */
+  .nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+  .nav > .nav-left { justify-self: start; }
+  .nav > .nav-links { justify-self: center; }
+  .nav > :last-child { justify-self: end; }
+
+  /* Dark-nav GitHub override */
+  .nav .nav-github { color: #ffffff; border-color: rgba(255, 255, 255, 0.25); }
+  .nav .nav-github:hover { border-color: rgba(255, 255, 255, 0.5); }
+
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+</head>
+<body data-platform-type="开发工具">
+
+<header class="hero">
+<div class="hero-content">
+<h1>单色等宽终端</h1>
+<p>深色版本保留 Markdown README 般的文档式结构。背景反转为中性近黑，主按钮用白底胶囊，细分隔线用半透明白色，安装命令胶囊位于略抬升的深色表面。</p>
+<div class="hero-actions">
+<button class="btn btn-primary">下载</button>
+<button class="btn btn-secondary">登录</button>
+</div>
+</div>
+</header>
+<!-- COLOR PALETTE -->
+<section id="colors">
+<p class="section-eyebrow">01 · 配色</p>
+<h2 class="section-heading">配色</h2>
+<p class="section-desc">近黑色 页面底色带有3步中性表面层级,半透明-白色文本和边框层,原品牌黑白对对反转为深色模式.</p>
+<div class="palette-block">
+<p class="palette-block-label">品牌( 倒转)</p>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#ffffff"></div><div class="swatch-meta"><p class="swatch-name">Primary (inverted)</p><p class="swatch-hex">#ffffff</p><p class="swatch-role">暗布上的初等CTA胶囊形——来自光模黑色的翻转</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#000000;box-shadow:inset 0 0 0 1px var(--hairline)"></div><div class="swatch-meta"><p class="swatch-name">On Primary</p><p class="swatch-hex">#000000</p><p class="swatch-role">白色行动按钮 胶囊控件上的案文</p></div></div>
+</div>
+</div>
+<div class="palette-block">
+<p class="palette-block-label">页面底色 和 表面层级 组合键</p>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#0a0a0a"></div><div class="swatch-meta"><p class="swatch-name">Canvas</p><p class="swatch-hex">#0a0a0a</p><p class="swatch-role">页面背景, 主导航, 页脚</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#141414"></div><div class="swatch-meta"><p class="swatch-name">Surface</p><p class="swatch-hex">#141414</p><p class="swatch-role">卡片,定价级集装箱</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#1f1f1f"></div><div class="swatch-meta"><p class="swatch-name">Surface Elevated</p><p class="swatch-hex">#1f1f1f</p><p class="swatch-role">Install-snippet 胶囊形 搜索 胶囊形 命令标记</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#050505"></div><div class="swatch-meta"><p class="swatch-name">Surface Dark Card</p><p class="swatch-hex">#050505</p><p class="swatch-role">反转"Max"定价卡片和暗的行动按钮条——甚至比页面底色更暗</p></div></div>
+</div>
+</div>
+<div class="palette-block">
+<p class="palette-block-label">文本等级( 透明白)</p>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#ffffff"></div><div class="swatch-meta"><p class="swatch-name">Ink</p><p class="swatch-hex">#ffffff</p><p class="swatch-role">标题, 主文本</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:rgba(255,255,255,0.85)"></div><div class="swatch-meta"><p class="swatch-name">Charcoal</p><p class="swatch-hex">rgba(255,255,255,0.85)</p><p class="swatch-role">List-item 和 feature-bullet 文本</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:rgba(255,255,255,0.7)"></div><div class="swatch-meta"><p class="swatch-name">Body</p><p class="swatch-hex">rgba(255,255,255,0.7)</p><p class="swatch-role">默认体色、 FAQ 答案、 页脚链接文本</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:rgba(255,255,255,0.45)"></div><div class="swatch-meta"><p class="swatch-name">Mute</p><p class="swatch-hex">rgba(255,255,255,0.45)</p><p class="swatch-role">说明文本, 终端“ 评论” 灰色</p></div></div>
+</div>
+</div>
+<div class="palette-block">
+<p class="palette-block-label">半透明边框</p>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:rgba(255,255,255,0.12)"></div><div class="swatch-meta"><p class="swatch-name">Hairline</p><p class="swatch-hex">rgba(255,255,255,0.12)</p><p class="swatch-role">1px 卡片 边界, FAQ 行分隔符, 页脚上线</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:rgba(255,255,255,0.24)"></div><div class="swatch-meta"><p class="swatch-name">Hairline Strong</p><p class="swatch-hex">rgba(255,255,255,0.24)</p><p class="swatch-role">需要额外分离的更强大的分隔器</p></div></div>
+</div>
+</div>
+<div class="palette-block">
+<p class="palette-block-label">终端交通灯(保存准确)</p>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#ff5f56"></div><div class="swatch-meta"><p class="swatch-name">Terminal Red</p><p class="swatch-hex">#ff5f56</p><p class="swatch-role">关闭窗口点</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#ffbd2e"></div><div class="swatch-meta"><p class="swatch-name">Terminal Yellow</p><p class="swatch-hex">#ffbd2e</p><p class="swatch-role">最小化点</p></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#27c93f"></div><div class="swatch-meta"><p class="swatch-name">Terminal Green</p><p class="swatch-hex">#27c93f</p><p class="swatch-role">缩放点</p></div></div>
+</div>
+</div>
+</section>
+<!-- TYPOGRAPHY -->
+<section id="typography">
+<p class="section-eyebrow">02 · 字体排版</p>
+<h2 class="section-heading">字号层级</h2>
+<p class="section-desc">与浅色模式的等级相同. 类型符号在模式之间不会改变——只有颜色值变化.</p>
+<div class="type-row"><div class="type-meta"><strong>display-xl</strong>SF Pro Rounded<br/>36px / 500 / lh 1.11</div><div class="type-sample" style="font-family:var(--font-display);font-size:36px;font-weight:500;line-height:1.11">使用开放模型的最简单构建方式</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-lg</strong>SF Pro Rounded<br/>30px / 500 / lh 1.2</div><div class="type-sample" style="font-family:var(--font-display);font-size:30px;font-weight:500;line-height:1.2">定价</div></div>
+<div class="type-row"><div class="type-meta"><strong>heading-lg</strong>SF Pro Rounded<br/>24px / 600 / lh 1.33</div><div class="type-sample" style="font-family:var(--font-display);font-size:24px;font-weight:600;line-height:1.33">自动操作</div></div>
+<div class="type-row"><div class="type-meta"><strong>heading-md</strong>ui-sans-serif<br/>20px / 500 / lh 1.4</div><div class="type-sample" style="font-family:var(--font-ui);font-size:20px;font-weight:500;line-height:1.4">推荐等级名称或卡片标题</div></div>
+<div class="type-row"><div class="type-meta"><strong>heading-sm</strong>ui-sans-serif<br/>18px / 500 / lh 1.56</div><div class="type-sample" style="font-family:var(--font-ui);font-size:18px;font-weight:500;line-height:1.56">FAQ 问题标签</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-md</strong>ui-sans-serif<br/>16px / 400 / lh 1.5</div><div class="type-sample" style="font-family:var(--font-ui);font-size:16px;font-weight:400;line-height:1.5">默认的复制体在16px正常重量时携带每个段落.（原文参数：16px）</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-strong</strong>ui-sans-serif<br/>16px / 500 / lh 1.5</div><div class="type-sample" style="font-family:var(--font-ui);font-size:16px;font-weight:500;line-height:1.5">内含式强调或主导航链接</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-sm</strong>ui-sans-serif<br/>14px / 400 / lh 1.43</div><div class="type-sample" style="font-family:var(--font-ui);font-size:14px;font-weight:400;line-height:1.43">特性弹出或页脚链接</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-sm-strong</strong>ui-sans-serif<br/>14px / 500 / lh 1.43</div><div class="type-sample" style="font-family:var(--font-ui);font-size:14px;font-weight:500;line-height:1.43">按钮标签,定价栏眉</div></div>
+<div class="type-row"><div class="type-meta"><strong>caption-sm</strong>ui-sans-serif<br/>12px / 400 / lh 1.33</div><div class="type-sample" style="font-family:var(--font-ui);font-size:12px;font-weight:400;line-height:1.33">页脚版权行</div></div>
+<div class="type-row"><div class="type-meta"><strong>code-md</strong>ui-monospace<br/>16px / 400 / lh 1.5</div><div class="type-sample" style="font-family:var(--font-mono);font-size:16px;font-weight:400;line-height:1.5">卷曲 - fSSL https://example.com/install.sh | sh 曲轴</div></div>
+<div class="type-row"><div class="type-meta"><strong>code-sm</strong>ui-monospace<br/>14px / 400 / lh 1.43</div><div class="type-sample" style="font-family:var(--font-mono);font-size:14px;font-weight:400;line-height:1.43">$ ollama --version</div></div>
+<div class="type-row"><div class="type-meta"><strong>button-md</strong>ui-sans-serif<br/>14px / 500 / lh 1</div><div class="type-sample" style="font-family:var(--font-ui);font-size:14px;font-weight:500;line-height:1">下载</div></div>
+</section>
+<!-- BUTTONS -->
+<section id="components">
+<p class="section-eyebrow">03 · 组件</p>
+<h2 class="section-heading">按钮样式</h2>
+<p class="section-desc">白色胶囊形,简称胶囊形,白色胶囊形,边界为半透明,以及禁用状态. 按钮词汇没有变化——只有颜色倒转.</p>
+<div class="button-grid">
+<div class="button-cell">
+<button class="btn btn-primary">下载</button>
+<p class="button-cell-label">button-primary</p>
+<p class="button-cell-spec">bg ffff $文本 000000 $ 整数 36px 高度</p>
+</div>
+<div class="button-cell">
+<button class="btn btn-primary" style="background:var(--ink-deep)">按下</button>
+<p class="button-cell-label">button-primary-active</p>
+<p class="button-cell-spec">主要(学士)5f5f5 · 文本 on-primary</p>
+</div>
+<div class="button-cell">
+<button class="btn btn-secondary">登录</button>
+<p class="button-cell-label">button-secondary</p>
+<p class="button-cell-spec">bg 画布 \ text 文字色 \ 1px hairline-strong</p>
+</div>
+<div class="button-cell">
+<button class="btn btn-pill-on-dark">接麦斯</button>
+<p class="button-cell-label">button-pill-on-dark</p>
+<p class="button-cell-spec">bg 页面底色 1px hairline-strong 边界</p>
+</div>
+<div class="button-cell">
+<button class="btn btn-disabled">禁用</button>
+<p class="button-cell-label">button-disabled</p>
+<p class="button-cell-spec">bg 表面 \ 文本哑音</p>
+</div>
+<div class="button-cell wide">
+<span class="search-pill">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
+        搜索模式
+      </span>
+<p class="button-cell-label">search-pill</p>
+<p class="button-cell-spec">bg surface-elevated − 四舍五入全高 36px 高度</p>
+</div>
+<div class="button-cell wide">
+<span class="install-snippet">
+<span style="color:var(--mute)">$</span>
+<span>卷曲 - fSSL https://ollama.com/install.sh | sh 曲轴</span>
+<span class="copy">⧉</span>
+</span>
+<p class="button-cell-label">install-snippet</p>
+<p class="button-cell-spec">数据 surface-elevated · code-md · 48px 高度 · 圆形</p>
+</div>
+<div class="button-cell">
+<span class="command-tag">ollama 发射开关</span>
+<p class="button-cell-label">command-tag</p>
+<p class="button-cell-spec">bg surface-elevated code-sm 整数</p>
+</div>
+</div>
+</section>
+<!-- TERMINAL & PRICING -->
+<section>
+<p class="section-eyebrow">04 · 卡片</p>
+<h2 class="section-heading">卡片示例</h2>
+<p class="section-desc">与浅色模式相同的两个卡片家庭. "Max"级仍然是倒转的时刻——比周围的页面底色更深一步.</p>
+<div style="margin-bottom:48px">
+<p class="palette-block-label">终端卡片</p>
+<div class="terminal-card" style="max-width:560px">
+<div class="terminal-header">
+<span class="traffic-light red"></span>
+<span class="traffic-light yellow"></span>
+<span class="traffic-light green"></span>
+</div>
+<div class="terminal-body">
+<div><span class="comment">$</span> <span class="cmd">ollama 发射开关</span></div>
+<div class="comment">正在下载模型...</div>
+<div class="comment">正在配置重量...</div>
+<div class="comment">设置用户限制...</div>
+<div><span class="cmd">→ 开关正在运行</span></div>
+</div>
+</div>
+</div>
+<p class="palette-block-label">定价卡片</p>
+<div class="card-grid">
+<div class="pricing-card">
+<div class="pricing-llama">🦙</div>
+<p class="pricing-name">免费版</p>
+<p class="pricing-eyebrow">开始Ollama</p>
+<p class="pricing-price">$0</p>
+<button class="btn btn-secondary" style="width:100%">下载</button>
+<div class="pricing-divider"></div>
+<ul class="feature-list">
+<li class="feature-bullet">自动编码、文档分析和其他带有开放模型的任务</li>
+<li class="feature-bullet">保持数据保密</li>
+<li class="feature-bullet">在硬件上运行模型</li>
+</ul>
+</div>
+<div class="pricing-card">
+<div class="pricing-llama">🦙</div>
+<p class="pricing-name">专业版</p>
+<p class="pricing-eyebrow">解决更难的任务,更快</p>
+<p class="pricing-price">$20<span class="pricing-price-meta">/模数</span></p>
+<button class="btn btn-primary" style="width:100%">获得 Pro</button>
+<div class="pricing-divider"></div>
+<ul class="feature-list">
+<li class="feature-bullet">免费的,还有:</li>
+<li class="feature-bullet">访问更大、更强大的云模型</li>
+<li class="feature-bullet">一次运行一个使用 60s 云的模型</li>
+<li class="feature-bullet">上传和共享私有模式</li>
+</ul>
+</div>
+<div class="pricing-card-dark">
+<div class="pricing-llama">🦙</div>
+<p class="pricing-name">最大</p>
+<p class="pricing-eyebrow">为了你最艰巨的工作</p>
+<p class="pricing-price">$100<span class="pricing-price-meta" style="color:var(--on-dark-mute)">/模数</span></p>
+<button class="btn btn-pill-on-dark" style="width:100%">接麦斯</button>
+<div class="pricing-divider"></div>
+<ul class="feature-list">
+<li class="feature-bullet">所有在Pro,加: +:</li>
+<li class="feature-bullet">一次运行 10 云模型</li>
+<li class="feature-bullet">10x 使用量比Pro 更多</li>
+</ul>
+</div>
+</div>
+<div style="margin-top:48px">
+<p class="palette-block-label">暗行动按钮 带</p>
+<div class="cta-strip-dark">
+<h3 class="cta-strip-title">开始Ollama</h3>
+<button class="btn btn-pill-on-dark">下载</button>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section>
+<p class="section-eyebrow">05 - 披露</p>
+<h2 class="section-heading">FAQ 行数</h2>
+<p class="section-desc">堆叠的行与16px垂直的垫板和半透明-白色的1px分割器. 总是扩张——没有手风琴.（原文参数：16px、1px）</p>
+<div class="faq-list">
+<div class="faq-row"><p class="faq-q">有哪些模型?</p><p class="faq-a">参见文献中云化模型的完整列表.</p></div>
+<div class="faq-row"><p class="faq-q">模型支持工具呼叫吗 ?</p><p class="faq-a">模型支持工具调用,并在启动前运行代理工作流程.</p></div>
+<div class="faq-row"><p class="faq-q">云模型使用什么量化或数据格式?</p><p class="faq-a">原生重量,由模型提供者发布. 在现代硬件上,模型可能使用加速数据格式.</p></div>
+<div class="faq-row"><p class="faq-q">有多快啊 这么快啊 Ollama?</p><p class="faq-a">速度取决于模型大小,架构,以及硬件优化.</p></div>
+</div>
+</section>
+<!-- FORMS -->
+<section>
+<p class="section-eyebrow">06 · 表单</p>
+<h2 class="section-heading">表单控件</h2>
+<p class="section-desc">所有投入都保留胶囊控件,角圆圆圆。 焦点依赖于相同的浏览器-默认半透明蓝环.</p>
+<div class="form-grid">
+<div class="form-cell">
+<label class="form-label">默认输入</label>
+<input class="text-input" placeholder="电子邮箱"/>
+<span class="form-spec">1px 细边框 整数圆形 40px 高度</span>
+</div>
+<div class="form-cell">
+<label class="form-label">重点输入</label>
+<input class="text-input focused" value="user@example.com"/>
+<span class="form-spec">表面 bg → 文字色 边框 → 浏览器 焦点环</span>
+</div>
+<div class="form-cell">
+<label class="form-label">搜索胶囊形 数据</label>
+<span class="search-pill">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
+        搜索模式
+      </span>
+<span class="form-spec">surface-elevated bg 36px 高度 :</span>
+</div>
+<div class="form-cell">
+<label class="form-label">提交</label>
+<button class="btn btn-primary" style="width:100%">注册</button>
+<span class="form-spec">button-primary 总是全宽</span>
+</div>
+</div>
+</section>
+<!-- SPACING -->
+<section>
+<p class="section-eyebrow">07 · 布局</p>
+<h2 class="section-heading">间距层级</h2>
+<p class="section-desc">8px 基础单位 中超联赛冠军. 88px的节奏在模式上保存.（原文参数：88px）</p>
+<div class="spacing-row">
+<div class="spacing-cell"><div class="spacing-bar" style="width:2px"></div><span class="spacing-label">xxx 2 数据</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:4px"></div><span class="spacing-label">xs 4 数据</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:8px"></div><span class="spacing-label">sm 8 数据</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:12px"></div><span class="spacing-label">md 12 数据</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:16px"></div><span class="spacing-label">16 高压压压轴</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:24px"></div><span class="spacing-label">□ 24</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:32px"></div><span class="spacing-label">xxl 32 数据</span></div>
+<div class="spacing-cell"><div class="spacing-bar" style="width:88px"></div><span class="spacing-label">88 · 章节</span></div>
+</div>
+</section>
+<!-- RADIUS -->
+<section>
+<p class="section-eyebrow">08 · 形状</p>
+<h2 class="section-heading">圆角层级</h2>
+<p class="section-desc">同浅色模式:胶囊形(9999px)用于交互,12px用于卡片.（原文参数：12px）</p>
+<div class="radius-row">
+<div class="radius-cell"><div class="radius-box" style="border-radius:0"></div><span class="radius-label">无 0</span><p class="radius-context">导航、 页脚、 FAQ 行分隔符</p></div>
+<div class="radius-cell"><div class="radius-box" style="border-radius:6px"></div><span class="radius-label">sm 6 数据</span><p class="radius-context">内置代码芯片, 命令标记</p></div>
+<div class="radius-cell"><div class="radius-box" style="border-radius:8px"></div><span class="radius-label">md 8 数据</span><p class="radius-context">稀有中光度表面</p></div>
+<div class="radius-cell"><div class="radius-box" style="border-radius:12px"></div><span class="radius-label">12 高压压压轴</span><p class="radius-context">卡片 定价,终端模型</p></div>
+<div class="radius-cell"><div class="radius-box" style="border-radius:9999px"></div><span class="radius-label">9999 数据</span><p class="radius-context">每个按钮,胶囊形输入,交通灯点</p></div>
+</div>
+</section>
+<!-- ELEVATION -->
+<section>
+<p class="section-eyebrow">09 · 视觉深度</p>
+<h2 class="section-heading">层次与深度</h2>
+<p class="section-desc">无落影. 深度完全来自亮度-步表面层级.</p>
+<div class="elevation-grid">
+<div class="elevation-card level-0"><div class="elevation-name">Level 0 — Surface Elevated</div><div class="elevation-spec">bg #1f1f1f / 无边界</div></div>
+<div class="elevation-card level-1"><div class="elevation-name">Level 1 — Hairline</div><div class="elevation-spec">1px 固体 rgba(255,255,255,0.12)</div></div>
+<div class="elevation-card level-2"><div class="elevation-name">2 级——倒数暗</div><div class="elevation-spec">数据 #050505 最高等级的“最大”卡表面</div></div>
+</div>
+</section>
+<!-- RESPONSIVE -->
+<section id="layout">
+<p class="section-eyebrow">10 · 响应式</p>
+<h2 class="section-heading">响应式布局</h2>
+<p class="section-desc">响应式断点堆栈同为浅色模式.</p>
+<table class="responsive-table">
+<thead><tr><th>名称</th><th>宽度</th><th>布局变化</th></tr></thead>
+<tbody>
+<tr><td>宽屏桌面</td><td>1280px+</td><td>默认 —— 720px 内容列, 3 上标</td></tr>
+<tr><td>桌面端</td><td>1024px</td><td>相同的布局; 导航仍然水平</td></tr>
+<tr><td>平板电脑</td><td>850px</td><td>定价 3 列 → 2+1; 搜索药片压缩</td></tr>
+<tr><td>平板内窄</td><td>768px</td><td>定价卡片重排到 1 堆叠; 导航成为汉堡包</td></tr>
+<tr><td>手机端</td><td>640px</td><td>Hero drops 36px → ~28px; install-snippet wraps</td></tr>
+</tbody>
+</table>
+<div class="device-ladder">
+<div class="device phone"><span class="name">375</span><span class="label">手机端</span></div>
+<div class="device phone-large"><span class="name">640</span><span class="label">手机端</span></div>
+<div class="device tablet"><span class="name">768</span><span class="label">平板内窄</span></div>
+<div class="device desktop-small"><span class="name">1024</span><span class="label">桌面端</span></div>
+<div class="device desktop"><span class="name">1280</span><span class="label">宽屏桌面</span></div>
+</div>
+<div class="responsive-sub-block">
+<h3>触控区域</h3>
+<ul>
+<li><strong>华达州议会:</strong> button-primary和button-secondary在36px高度上配有20px的垫板.（原文参数：36px、20px）</li>
+<li><strong>文本输入 :</strong> 40px高处与16px贴板.（原文参数：40px、16px）</li>
+<li><strong>搜索 胶囊形 :</strong> 36px高处与16px贴板.（原文参数：36px、16px）</li>
+<li><strong>页脚链接 :</strong> 12px caption with line-height + vertical padding (~32–36px tap row).</li>
+</ul>
+</div>
+<div class="responsive-sub-block">
+<h3>窄屏布局调整</h3>
+<ul>
+<li><strong>初等导航 :</strong> 桌面水平 → 平板- 窄汉堡抽屉 768px。</li>
+<li><strong>定价网格 :</strong> 3 列 → 2+1 → 1 列</li>
+<li><strong>首屏标题: 高尔夫球队:</strong> 36px → ~28px at mobile.</li>
+<li><strong>区域间距 :</strong> 88px → 64px → 48px.</li>
+<li><strong>安装片段 :</strong> wraps to 2 lines on narrow screens.</li>
+</ul>
+</div>
+</section>
+<footer class="footer" data-platform-example="footer">
+<div class="footer-shell">
+<p class="design-demo-note">栏目演示 · 开发工具</p><div class="footer-grid">
+<div class="footer-col">
+<h6>开发环境</h6>
+<span>项目配置</span>
+<span>运行环境</span>
+<span>团队协作</span>
+</div>
+<div class="footer-col">
+<h6>开发资源</h6>
+<span>快速开始</span>
+<span>技术文档</span>
+<span>示例项目</span>
+</div>
+<div class="footer-col">
+<h6>交付运维</h6>
+<span>部署记录</span>
+<span>运行日志</span>
+<span>状态监控</span>
+</div>
+<div class="footer-col">
+<h6>支持</h6>
+<span>使用指南</span>
+<span>更新记录</span>
+<span>问题反馈</span>
+</div>
+</div>
+
+</div>
+</footer>
+</body>
+</html>

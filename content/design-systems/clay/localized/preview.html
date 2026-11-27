@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>彩色黏土插画</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --primary: #0a0a0a;
+    --primary-active: #1f1f1f;
+    --primary-disabled: #e5e5e5;
+    --ink: #0a0a0a;
+    --body: #3a3a3a;
+    --body-strong: #1a1a1a;
+    --muted: #6a6a6a;
+    --muted-soft: #9a9a9a;
+    --hairline: #e5e5e5;
+    --canvas: #fffaf0;
+    --surface-soft: #faf5e8;
+    --surface-card: #f5f0e0;
+    --surface-strong: #ebe6d6;
+    --surface-dark: #0a1a1a;
+    --on-primary: #ffffff;
+    --on-dark: #ffffff;
+    --brand-pink: #ff4d8b;
+    --brand-teal: #1a3a3a;
+    --brand-lavender: #b8a4ed;
+    --brand-peach: #ffb084;
+    --brand-ochre: #e8b94a;
+    --brand-mint: #a4d4c5;
+    --brand-coral: #ff6b5a;
+    --display: 'Inter', -apple-system, sans-serif;
+    --text: 'Inter', -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--canvas); color: var(--body); font-family: var(--text); font-size: 14px; line-height: 1.55; }
+
+  .nav { position: sticky; top: 0; z-index: 100; background: var(--canvas); border-bottom: 1px solid var(--hairline); padding: 0 48px; height: 64px; }
+  .nav-links { list-style: none; display: flex; gap: 28px; align-items: center; }
+  .nav-links a { color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 500; }
+  .nav-cta { background: var(--primary); color: var(--on-primary); border: none; padding: 10px 18px; border-radius: 12px; font-weight: 600; font-size: 14px; cursor: pointer; font-family: inherit; }
+
+  .hero { padding: 96px 48px; background: var(--canvas); display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; max-width: 1280px; margin: 0 auto; }
+  .hero-content { max-width: 720px; }
+  .hero h1 { font-family: var(--display); font-size: 72px; font-weight: 500; line-height: 1; color: var(--ink); margin: 0 0 24px; letter-spacing: -2.5px; text-align: left; }
+  .hero p { font-size: 18px; color: var(--body); max-width: 540px; margin: 0 0 32px; line-height: 1.55; text-align: left; }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-start; }
+  .btn-hero-primary { background: var(--primary); color: var(--on-primary); border: none; padding: 12px 24px; height: 44px; border-radius: 12px; font-weight: 600; font-size: 14px; cursor: pointer; font-family: inherit; }
+  .btn-hero-secondary { background: var(--canvas); color: var(--ink); border: 1px solid var(--hairline); padding: 12px 24px; height: 44px; border-radius: 12px; font-weight: 600; font-size: 14px; cursor: pointer; font-family: inherit; }
+  .hero-art { background: linear-gradient(180deg, #ffd49a 0%, #b8d4c5 50%, #f5b5d4 100%); border-radius: 24px; padding: 32px; aspect-ratio: 1; display: flex; flex-direction: column; justify-content: flex-end; position: relative; overflow: hidden; }
+  .hero-art::before { content: '⛰️'; position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%); font-size: 120px; }
+  .hero-art .label { font-family: var(--display); font-weight: 600; font-size: 18px; color: var(--ink); position: relative; z-index: 1; }
+
+  section { max-width: 1280px; margin: 0 auto; padding: 96px 32px; border-top: 1px solid var(--hairline); }
+  .section-label { font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); font-weight: 600; margin-bottom: 12px; }
+  .section-heading { font-family: var(--display); font-size: 56px; font-weight: 500; color: var(--ink); margin-bottom: 16px; letter-spacing: -2px; line-height: 1.05; }
+  .section-intro { font-size: 16px; color: var(--body); max-width: 720px; margin-bottom: 48px; }
+
+  .palette-group { margin-bottom: 56px; }
+  .palette-group h3 { font-family: var(--display); font-size: 24px; font-weight: 500; color: var(--ink); margin-bottom: 20px; letter-spacing: -0.3px; }
+  .palette-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+  .swatch { border: 1px solid var(--hairline); border-radius: 16px; overflow: hidden; background: var(--canvas); }
+  .swatch-color { height: 80px; }
+  .swatch-meta { padding: 12px 14px; }
+  .swatch-name { font-weight: 600; font-size: 13px; color: var(--ink); margin-bottom: 4px; }
+  .swatch-hex { font-family: ui-monospace, monospace; font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+  .swatch-role { font-size: 12px; color: var(--body); line-height: 1.5; }
+
+  .type-row { display: grid; grid-template-columns: 320px 1fr; gap: 32px; align-items: baseline; padding: 20px 0; border-bottom: 1px solid var(--hairline); }
+  .type-row:last-child { border-bottom: none; }
+  .type-meta { font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .type-meta strong { display: block; color: var(--ink); font-weight: 600; font-size: 13px; margin-bottom: 4px; }
+  .type-sample { color: var(--ink); }
+
+  .button-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+  .button-cell { border: 1px solid var(--hairline); border-radius: 16px; padding: 28px; background: var(--canvas); min-width: 0; }
+  .button-cell.on-pink { background: var(--brand-pink); border-color: rgba(255,255,255,0.2); }
+  .button-cell.on-pink .button-label, .button-cell.on-pink .button-meta { color: var(--on-primary); }
+  .button-cell.on-teal { background: var(--brand-teal); border-color: rgba(255,255,255,0.1); }
+  .button-cell.on-teal .button-label, .button-cell.on-teal .button-meta { color: var(--on-dark); }
+  .button-label { font-size: 13px; color: var(--ink); font-weight: 600; margin-bottom: 12px; }
+  .button-meta { font-size: 12px; color: var(--muted); margin-top: 14px; line-height: 1.5; }
+  .btn { display: inline-block; padding: 12px 20px; height: 44px; border-radius: 12px; font-size: 14px; font-weight: 600; border: none; cursor: pointer; font-family: inherit; line-height: 1; }
+  .btn-primary { background: var(--primary); color: var(--on-primary); }
+  .btn-primary-active { background: var(--primary-active); color: var(--on-primary); }
+  .btn-primary-disabled { background: var(--primary-disabled); color: var(--muted); cursor: not-allowed; }
+  .btn-secondary { background: var(--canvas); color: var(--ink); border: 1px solid var(--hairline); }
+  .btn-on-color { background: var(--canvas); color: var(--ink); border: none; }
+  .btn-text-link { background: transparent; color: var(--ink); border: none; padding: 0; height: auto; text-decoration: underline; }
+
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; min-width: 0; }
+  .card-grid > * { min-width: 0; }
+
+  .feature-card { border-radius: 24px; padding: 32px; }
+  .feature-card.pink { background: var(--brand-pink); color: var(--on-primary); }
+  .feature-card.teal { background: var(--brand-teal); color: var(--on-dark); }
+  .feature-card.lavender { background: var(--brand-lavender); color: var(--ink); }
+  .feature-card.peach { background: var(--brand-peach); color: var(--ink); }
+  .feature-card.ochre { background: var(--brand-ochre); color: var(--ink); }
+  .feature-card.cream { background: var(--surface-card); color: var(--ink); }
+  .feature-card h4 { font-family: var(--display); font-size: 28px; font-weight: 500; margin-bottom: 12px; line-height: 1.15; letter-spacing: -0.5px; }
+  .feature-card p { font-size: 15px; line-height: 1.5; opacity: 0.9; margin-bottom: 16px; }
+  .feature-card .icon { font-size: 32px; margin-bottom: 16px; }
+
+  .product-mockup-card { background: var(--canvas); border: 1px solid var(--hairline); border-radius: 16px; padding: 24px; }
+  .product-mockup-card .ui-header { display: flex; align-items: center; gap: 8px; padding-bottom: 12px; border-bottom: 1px solid var(--hairline); margin-bottom: 12px; }
+  .product-mockup-card .ui-row { display: flex; align-items: center; gap: 12px; padding: 8px 0; font-size: 13px; }
+  .product-mockup-card .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .product-mockup-card .dot.green { background: #22c55e; }
+  .product-mockup-card .dot.blue { background: #3b82f6; }
+
+  .testimonial-card { background: var(--surface-card); border-radius: 16px; padding: 24px; }
+  .testimonial-card .head { display: flex; gap: 12px; align-items: center; margin-bottom: 16px; }
+  .testimonial-card .avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--brand-peach); display: inline-flex; align-items: center; justify-content: center; color: var(--ink); font-weight: 600; font-size: 13px; }
+  .testimonial-card .who .name { font-weight: 600; color: var(--ink); font-size: 13px; }
+  .testimonial-card .who .role { color: var(--muted); font-size: 12px; }
+
+  .pricing-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+  .pricing-tier { background: var(--canvas); border: 1px solid var(--hairline); border-radius: 16px; padding: 32px; }
+  .pricing-tier.featured { background: var(--brand-teal); color: var(--on-dark); border-color: rgba(255,255,255,0.1); }
+  .pricing-tier h4 { font-family: var(--display); font-size: 24px; font-weight: 500; color: var(--ink); margin-bottom: 12px; letter-spacing: -0.3px; }
+  .pricing-tier.featured h4 { color: var(--on-dark); }
+  .pricing-tier .price { font-family: var(--display); font-size: 40px; font-weight: 500; color: var(--ink); margin-bottom: 16px; letter-spacing: -1px; }
+  .pricing-tier.featured .price { color: var(--on-dark); }
+  .pricing-tier ul { list-style: none; padding: 0; margin: 0 0 24px; font-size: 14px; }
+  .pricing-tier ul li { padding: 6px 0; color: var(--body); display: flex; align-items: flex-start; gap: 8px; }
+  .pricing-tier.featured ul li { color: rgba(255,255,255,0.85); }
+  .pricing-tier ul li::before { content: '✓'; color: #22c55e; font-weight: 600; }
+
+  .form-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+  .form-cell { min-width: 0; }
+  .form-label { font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 8px; display: block; }
+  .form-input { width: 100%; background: var(--canvas); color: var(--ink); border: 1px solid var(--hairline); padding: 12px 16px; height: 44px; border-radius: 12px; font-size: 14px; font-family: inherit; }
+  .form-input::placeholder { color: var(--muted-soft); }
+  .form-input.focused { border-color: var(--ink); box-shadow: 0 0 0 3px rgba(0,0,0,0.08); outline: none; }
+
+  .badge-pill { display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 9999px; background: var(--surface-card); color: var(--ink); font-size: 13px; font-weight: 500; }
+
+  .spacing-row { display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
+  .spacing-block { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .spacing-bar { background: var(--primary); height: 28px; border-radius: 4px; }
+  .spacing-label { font-size: 11px; color: var(--muted); font-family: ui-monospace, monospace; }
+
+  .radius-row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .radius-block { width: 96px; height: 96px; background: var(--brand-peach); display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--ink); font-weight: 600; font-family: ui-monospace, monospace; }
+
+  .elevation-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; }
+  .elevation-card { background: var(--canvas); border-radius: 16px; padding: 24px; font-size: 13px; color: var(--ink); }
+  .elevation-card h5 { font-weight: 600; color: var(--ink); margin-bottom: 6px; font-size: 13px; }
+  .elevation-card p { color: var(--muted); font-size: 12px; }
+  .elevation-flat { border: 1px solid var(--hairline); }
+  .elevation-cream { background: var(--surface-card); }
+  .elevation-pink { background: var(--brand-pink); color: var(--on-primary); }
+  .elevation-pink h5 { color: var(--on-primary); }
+  .elevation-pink p { color: rgba(255,255,255,0.85); }
+  .elevation-teal { background: var(--brand-teal); color: var(--on-dark); }
+  .elevation-teal h5 { color: var(--on-dark); }
+  .elevation-teal p { color: rgba(255,255,255,0.7); }
+
+  .responsive-table { width: 100%; border-collapse: collapse; margin-bottom: 32px; font-size: 14px; }
+  .responsive-table th, .responsive-table td { text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--hairline); }
+  .responsive-table th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 1px; }
+  .responsive-table td { color: var(--body); }
+  .device-ladder { display: flex; align-items: flex-end; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+  .device-bar { background: var(--surface-card); border-radius: 6px; color: var(--muted); text-align: center; padding: 8px; font-size: 11px; font-family: ui-monospace, monospace; flex-shrink: 0; }
+
+  .responsive-sub { margin-top: 32px; }
+  .responsive-sub h4 { font-family: var(--display); font-size: 24px; font-weight: 500; color: var(--ink); margin-bottom: 12px; letter-spacing: -0.3px; }
+  .responsive-sub ul { padding-left: 20px; color: var(--body); font-size: 14px; }
+  .responsive-sub ul li { margin-bottom: 8px; }
+
+  .footer { background: var(--surface-soft); color: var(--body); padding: 80px 48px; font-size: 13px; position: relative; overflow: hidden; }
+  .footer .footer-inner { max-width: 1280px; margin: 0 auto; position: relative; z-index: 1; }
+  .footer .brand { font-family: var(--display); color: var(--ink); font-size: 32px; font-weight: 500; margin-bottom: 24px; letter-spacing: -0.5px; }
+  .footer a { color: var(--ink); font-weight: 500; }
+  .footer .legal { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--hairline); font-size: 12px; color: var(--muted); text-align: center; }
+  .footer-mountain { position: absolute; bottom: 0; left: 0; right: 0; height: 80px; background: linear-gradient(180deg, transparent 0%, var(--brand-peach) 100%); opacity: 0.3; }
+
+  .cell, .cell > *, .demo, .button-cell, .component-cell { min-width: 0; }
+  .cell.wide, .button-cell.wide, .component-cell.wide { grid-column: span 2; }
+  @media (max-width: 1024px) {
+    section { padding: 64px 32px; }
+    .section-heading { font-size: 36px; letter-spacing: -1px; }
+    .nav > :last-child { display: none; }
+    .hero { grid-template-columns: 1fr; gap: 32px; padding: 64px 32px; }
+    .hero h1 { font-size: 48px; letter-spacing: -1.5px; }
+    .hero-art, .hero-art-photo { display: none; }
+    .type-row { grid-template-columns: 1fr; gap: 8px; }
+    .type-row .type-meta { padding-bottom: 4px; }
+    .pricing-grid, .form-grid { gap: 16px; }
+  }
+  @media (max-width: 720px) {
+    .cell.wide, .button-cell.wide, .component-cell.wide { grid-column: span 1; }
+    .nav { padding: 0 48px; height: auto; min-height: 56px; }
+    .nav-links { display: none; }
+    .hero { padding: 48px 20px; }
+    .hero h1 { font-size: 36px; letter-spacing: -1px; }
+    .hero p { font-size: 16px; }
+    section { padding: 48px 20px; }
+    .section-heading { font-size: 28px; }
+    .palette-grid, .button-grid, .card-grid, .form-grid, .pricing-grid, .elevation-grid { grid-template-columns: 1fr !important; gap: 16px; }
+    .spacing-row, .radius-row { gap: 12px; }
+    .responsive-table { font-size: 12px; }
+    .responsive-table th, .responsive-table td { padding: 10px 8px; }
+    .device-ladder { gap: 8px; }
+    .footer { padding: 32px 16px; font-size: 12px; }
+  }
+
+  /* getdesign.md nav additions */
+  .nav-left { display: flex; align-items: center; gap: 20px; }
+  .nav-brand-link, .nav-brand-link:link, .nav-brand-link:visited, .nav-brand-link:hover, .nav-brand-link:active { text-decoration: none; color: inherit; }
+  .nav-brand { font-family: var(--display); font-weight: 500; font-size: 20px; color: var(--ink); letter-spacing: -0.5px; }
+  .nav-github, .nav-github:link, .nav-github:visited, .nav-github:hover, .nav-github:active {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600;
+    color: inherit; text-decoration: none; padding: 5px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.3); border-radius: 6px;
+    opacity: 0.75; transition: opacity 200ms ease, border-color 200ms ease;
+    font-family: inherit; line-height: 1; white-space: nowrap;
+  }
+  .nav-github:hover { opacity: 1; border-color: rgba(128, 128, 128, 0.55); }
+  .nav-github svg { display: block; flex-shrink: 0; }
+
+  /* getdesign.md nav centering */
+  .nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+  .nav > .nav-left { justify-self: start; }
+  .nav > .nav-links { justify-self: center; }
+  .nav > :last-child { justify-self: end; }
+
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+<style data-design-nav="true">
+.design-preview-nav { min-height:48px; }
+.design-preview-nav .nav-brand { white-space:normal; overflow-wrap:anywhere; }
+.design-preview-nav .nav-links { display:flex; flex-wrap:wrap; gap:8px clamp(10px,2vw,26px); padding-block:5px; }
+.design-preview-nav a { text-decoration:none; }
+.design-preview-nav .nav-links a { color:inherit; }
+.design-preview-nav .nav-links a:hover { text-decoration:underline; text-underline-offset:3px; }
+.design-preview-nav a:focus-visible { outline:2px solid currentColor; outline-offset:4px; }
+:is([id^=design-section-],[id=design-overview]) { scroll-margin-top:94px; }
+@media (max-width:760px) {
+  .design-preview-nav { position:static; display:flex; flex-wrap:wrap; gap:3px 12px; padding:8px 12px; height:auto; }
+  .design-preview-nav .nav-left { min-width:0; }
+  .design-preview-nav > .nav-links { flex:1 1 100%; display:flex; padding-inline:0; }
+  .design-preview-nav .nav-cta { display:none; }
+  :is([id^=design-section-],[id=design-overview]) { scroll-margin-top:14px; }
+}
+</style></head>
+<body data-platform-type="数据与企业平台"><nav aria-label="样张章节" class="nav design-preview-nav" data-design-nav="true"><div class="nav-left"><span class="nav-brand">Clay</span></div><ul class="nav-links"><li><a href="#design-section-1">配色</a></li><li><a href="#design-section-5">字体</a></li><li><a href="#design-section-6">卡片</a></li></ul><a class="nav-cta" href="#design-overview">概览</a></nav>
+<div class="hero">
+<div class="hero-content">
+<h1 id="design-overview">彩色黏土插画</h1>
+<p>这套数据界面引入黏土动画的视觉风格。米白底配深海军蓝主按钮和定制圆润展示字体。粉色、蓝绿色、薰衣草紫、桃色和赭色的高饱和单色功能卡为长篇产品说明划分段落。</p>
+<div class="hero-actions">
+<button class="btn-hero-primary">尝试自由Clay</button>
+<button class="btn-hero-secondary">预约演示</button>
+</div>
+</div>
+<div class="hero-art">
+<div class="label">3D 粘土首屏<br/>山 吉祥物 景观</div>
+</div>
+</div>
+<section id="colors">
+<div class="section-label">01 · 配色</div>
+<h2 class="section-heading" id="design-section-1">Cream + 6 brand colors</h2>
+<p class="section-intro">米白色 页面底色与dark-navy 文字色,配对为6-彩色饱和feature-card调色板. 花牌循环粉红色 茶叶 紫色 桃色 黄油 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花粉 花 花粉 花粉 花粉 花 花 花粉 花粉 花 花 花 花粉 花粉 花 花 花 花 花 花 花 花 花 花粉 花 花 花 花 花 花 花 花 花 花 花 花 花 花 花 花 花 花 花 花 花 花 花 花 花 花 花 花 花 花 花 花 花 花 花</p>
+<div class="palette-group">
+<h3>品牌 卡片 颜色</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#ff4d8b;"></div><div class="swatch-meta"><div class="swatch-name">brand-pink</div><div class="swatch-hex">#ff4d8b</div><div class="swatch-role">热粉红色卡片. 输出/ 序列器特性。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#1a3a3a;"></div><div class="swatch-meta"><div class="swatch-name">brand-teal</div><div class="swatch-hex">#1a3a3a</div><div class="swatch-role">深广蓝绿色 卡片. 特色套餐层级.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#b8a4ed;"></div><div class="swatch-meta"><div class="swatch-name">brand-lavender</div><div class="swatch-hex">#b8a4ed</div><div class="swatch-role">软质薰衣草紫 卡片. AI代理产品.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#ffb084;"></div><div class="swatch-meta"><div class="swatch-name">brand-peach</div><div class="swatch-hex">#ffb084</div><div class="swatch-role">暖桃卡片. 红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红桃红 萨阿斯将军温.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#e8b94a;"></div><div class="swatch-meta"><div class="swatch-name">brand-ochre</div><div class="swatch-hex">#e8b94a</div><div class="swatch-role">芥末/奥克丽卡. 社区/专家。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#a4d4c5;"></div><div class="swatch-meta"><div class="swatch-name">brand-mint</div><div class="swatch-hex">#a4d4c5</div><div class="swatch-role">薄荷强调色在插图上.</div></div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>界面表面</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#fffaf0;"></div><div class="swatch-meta"><div class="swatch-name">canvas (cream)</div><div class="swatch-hex">#fffaf0</div><div class="swatch-role">默认页面层。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#faf5e8;"></div><div class="swatch-meta"><div class="swatch-name">surface-soft</div><div class="swatch-hex">#faf5e8</div><div class="swatch-role">脚印+CTA-band背景.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#f5f0e0;"></div><div class="swatch-meta"><div class="swatch-name">surface-card</div><div class="swatch-hex">#f5f0e0</div><div class="swatch-role">米白色 功能卡片 证监会.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#0a1a1a;"></div><div class="swatch-meta"><div class="swatch-name">surface-dark</div><div class="swatch-hex">#0a1a1a</div><div class="swatch-role">稀有的暗色表面.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#e5e5e5;"></div><div class="swatch-meta"><div class="swatch-name">hairline</div><div class="swatch-hex">#e5e5e5</div><div class="swatch-role">1px边界.（原文参数：1px）</div></div></div>
+</div>
+</div>
+<div class="palette-group">
+<h3>文字色</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#0a0a0a;"></div><div class="swatch-meta"><div class="swatch-name">primary / ink</div><div class="swatch-hex">#0a0a0a</div><div class="swatch-role">初级CTAs,头条.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#3a3a3a;"></div><div class="swatch-meta"><div class="swatch-name">body</div><div class="swatch-hex">#3a3a3a</div><div class="swatch-role">默认的运行文本。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#6a6a6a;"></div><div class="swatch-meta"><div class="swatch-name">muted</div><div class="swatch-hex">#6a6a6a</div><div class="swatch-role">子头,面包屑,脚踏车.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#9a9a9a;"></div><div class="swatch-meta"><div class="swatch-name">muted-soft</div><div class="swatch-hex">#9a9a9a</div><div class="swatch-role">说明,fine-print.</div></div></div>
+</div>
+</div>
+</section>
+<section id="typography">
+<div class="section-label">02 · 字体排版</div>
+<h2 class="section-heading" id="design-section-5">Plain Black display + Inter body</h2>
+<p class="section-intro">Custom rounded display face at weight 500 with -1 to -2.5px letter-spacing. Inter handles body, buttons, navigation.</p>
+<div class="type-row"><div class="type-meta"><strong>display-xl</strong>72px / 500 / 1.0 / -2.5px<br/>Plain Black</div><div class="type-sample" style="font-size:72px; font-weight:500; line-height:1; letter-spacing:-2.5px;">以独有的数据上市</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-lg</strong>56px / 500 / 1.05 / -2px</div><div class="type-sample" style="font-size:56px; font-weight:500; letter-spacing:-2px;">将数据转化为行动</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-md</strong>40px / 500 / 1.1 / -1px</div><div class="type-sample" style="font-size:40px; font-weight:500; letter-spacing:-1px;">灵活的客户关系管理数据点</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-sm</strong>32px / 500 / 1.15 / -0.5px</div><div class="type-sample" style="font-size:32px; font-weight:500; letter-spacing:-0.5px;">削减费用,更快地访问数据</div></div>
+<div class="type-row"><div class="type-meta"><strong>title-lg</strong>24px / 600 / 1.3</div><div class="type-sample" style="font-size:24px; font-weight:600;">· $349/月</div></div>
+<div class="type-row"><div class="type-meta"><strong>title-md</strong>18px / 600 / 1.4</div><div class="type-sample" style="font-size:18px; font-weight:600;">管弦乐工作流程</div></div>
+<div class="type-row"><div class="type-meta"><strong>title-sm</strong>16px / 600 / 1.4</div><div class="type-sample" style="font-size:16px; font-weight:600;">客户关系管理浓缩</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-md</strong>16px / 400 / 1.55</div><div class="type-sample" style="font-size:16px; line-height:1.55;">Clay将分散的数据源变成一个单一的真理源——丰富,刷新,可操作的跨你的堆栈.</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-sm</strong>14px / 400 / 1.55</div><div class="type-sample" style="font-size:14px; color:var(--body);">脚体 fine-print法律文本.</div></div>
+<div class="type-row"><div class="type-meta"><strong>caption</strong>13px / 500 / 1.4</div><div class="type-sample" style="font-size:13px; font-weight:500; color:var(--muted);">Trusted by 100,000+ growth teams</div></div>
+<div class="type-row"><div class="type-meta"><strong>caption-uppercase</strong>12px / 600 / 1.5px</div><div class="type-sample" style="font-size:12px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase;">· 新建</div></div>
+<div class="type-row"><div class="type-meta"><strong>button</strong>14px / 600 / 1.0</div><div class="type-sample" style="font-size:14px; font-weight:600;">尝试自由Clay</div></div>
+<div class="type-row"><div class="type-meta"><strong>nav-link</strong>14px / 500 / 1.4</div><div class="type-sample" style="font-size:14px; font-weight:500;">产品 解决方案 资源 定价 客户</div></div>
+</section>
+<section id="components">
+<div class="section-label">03 · 按钮样式</div>
+<div class="button-grid">
+<div class="button-cell"><div class="button-label">button-primary</div><button class="btn btn-primary">尝试自由Clay</button><div class="button-meta">主近黑色 / 白文本/ md 半径</div></div>
+<div class="button-cell"><div class="button-label">button-primary-active</div><button class="btn btn-primary-active">按下</button><div class="button-meta">primary-active 背景</div></div>
+<div class="button-cell"><div class="button-label">button-primary-disabled</div><button class="btn btn-primary-disabled" disabled="">禁用</button></div>
+<div class="button-cell"><div class="button-label">button-secondary</div><button class="btn btn-secondary">预约演示</button><div class="button-meta">米白色 / 文字色 / 细边框 大纲</div></div>
+<div class="button-cell on-pink"><div class="button-label">button-on-color</div><button class="btn btn-on-color">开始使用</button><div class="button-meta">饱和粉红色卡片上的白色按钮</div></div>
+<div class="button-cell on-teal"><div class="button-label">button-on-color</div><button class="btn btn-on-color">开始使用</button><div class="button-meta">深层卡片 上的白色按钮</div></div>
+<div class="button-cell"><div class="button-label">button-text-link</div><button class="btn-text-link">阅读更多</button></div>
+</div>
+</section>
+<section>
+<div class="section-label">04 - 品牌色彩 功能卡片</div>
+<h2 class="section-heading" id="design-section-6">Cycle through 6 saturated cards</h2>
+<p class="section-intro">粉红色 茶色 紫色 桃色 黄油 奶油 顺序每页不同,但连续没有两个卡片重复相同的颜色.</p>
+<div class="card-grid">
+<div class="feature-card pink">
+<div class="icon">📤</div>
+<h4>序列器</h4>
+<p>发送个人化的冷酷邮件规模。 多通道序列与原生倒置.</p>
+</div>
+<div class="feature-card teal">
+<div class="icon">🤖</div>
+<h4>克莱根</h4>
+<p>AI代理,自主地进行研究,丰富,和拓展.</p>
+</div>
+<div class="feature-card lavender">
+<div class="icon">🔌</div>
+<h4>一体化</h4>
+<p>200+ data providers, native CRM sync, Salesforce + HubSpot two-way.</p>
+</div>
+<div class="feature-card peach">
+<div class="icon">📊</div>
+<h4>CRM 浓缩</h4>
+<p>查找缺失的字段, 解析记录, 刷新过期账户。</p>
+</div>
+<div class="feature-card ochre">
+<div class="icon">👥</div>
+<h4>专家</h4>
+<p>订一个Clay认证专家,设计你的GTM工作流程在数日内,而不是数月内.</p>
+</div>
+<div class="feature-card cream">
+<div class="icon">⚡</div>
+<h4>工作流量</h4>
+<p>视觉流体建设者为外出,铅分,账户扩张.</p>
+</div>
+</div>
+</section>
+<section>
+<div class="section-label">05 — 产品模拟+ 检验 卡片</div>
+<div class="card-grid">
+<div class="product-mockup-card">
+<div class="ui-header" style="font-weight:600; color:var(--ink);">Live data · 12,408 leads</div>
+<div class="ui-row"><div class="dot green"></div><div style="flex:1;"><div style="font-weight:600;">公司</div><div style="color:var(--muted); font-size:12px;">富集 · 得分 92</div></div><span style="color:var(--muted); font-size:12px;">2刚才</span></div>
+<div class="ui-row"><div class="dot blue"></div><div style="flex:1;"><div style="font-weight:600;">环球工业</div><div style="color:var(--muted); font-size:12px;">In-progress · Score 78</div></div><span style="color:var(--muted); font-size:12px;">5刚才</span></div>
+<div class="ui-row"><div class="dot green"></div><div style="flex:1;"><div style="font-weight:600;">信息技术</div><div style="color:var(--muted); font-size:12px;">富集 · 得分 85</div></div><span style="color:var(--muted); font-size:12px;">12刚才</span></div>
+</div>
+<div class="testimonial-card">
+<div class="head">
+<div class="avatar">常规方案</div>
+<div class="who"><div class="name">瑞秋·朴(英语:Rachel Park)</div><div class="role">GTM主管 Notion</div></div>
+</div>
+<p style="color:var(--body); font-size:14px; line-height:1.55;">"Clay replaced 7 GTM tools overnight. The flexibility of the workflow builder + Claygent's research depth has us shipping 3× more outbound campaigns per week."</p>
+</div>
+<div class="testimonial-card">
+<div class="head">
+<div class="avatar" style="background:var(--brand-lavender);">联合</div>
+<div class="who"><div class="name">杰米·莫里森(英语:Jamie Morrison).</div><div class="role">VP 销售 Linear</div></div>
+</div>
+<p style="color:var(--body); font-size:14px; line-height:1.55;">"改变个人化的外出规模的游戏" 克莱根特代理公司做一个初级特别提款权曾经做的——但用秒,并跨过数千个账户".</p>
+</div>
+</div>
+</section>
+<section>
+<div class="section-label">06 · 套餐定价</div>
+<div class="pricing-grid">
+<div class="pricing-tier"><h4>免费版</h4><div class="price">$0</div><ul><li>100 入计量/月</li><li>Up to 1 user</li><li>社区支助</li></ul><button class="btn btn-secondary" style="width:100%;">开始使用</button></div>
+<div class="pricing-tier"><h4>入门版</h4><div class="price">$149</div><ul><li>2,000 入计量/月</li><li>Up to 3 users</li><li>工作流程模板</li></ul><button class="btn btn-primary" style="width:100%;">尝试启动器</button></div>
+<div class="pricing-tier featured"><h4>专业版</h4><div class="price">$349</div><ul><li>10,000 入计量/月</li><li>无限制用户</li><li>克莱根已启用</li></ul><button class="btn btn-primary" style="width:100%; background:#fff; color:#0a1a1a;">尝试Pro</button></div>
+<div class="pricing-tier"><h4>企业版</h4><div class="price">自定义</div><ul><li>无限信贷</li><li>专门的成功</li><li>SOC 2 + 自定义集成</li></ul><button class="btn btn-secondary" style="width:100%;">联系销售</button></div>
+</div>
+</section>
+<section>
+<div class="section-label">07 · 表单控件</div>
+<div class="form-grid">
+<div class="form-cell"><label class="form-label">电子邮箱</label><input class="form-input" placeholder="you@company.com" type="email"/></div>
+<div class="form-cell"><label class="form-label">电子邮件(重点)</label><input class="form-input focused" type="email" value="alex@studio.com"/></div>
+<div class="form-cell"><label class="form-label">公司名称</label><input class="form-input" placeholder="工作室股份有限公司" type="text"/></div>
+<div class="form-cell wide"><label class="form-label">告诉我们你的GTM运动</label><input class="form-input" placeholder="你的团队需要什么规模?" type="text"/></div>
+</div>
+</section>
+<section>
+<div class="section-label">08 · 间距层级</div>
+<div class="spacing-row">
+<div class="spacing-block"><div class="spacing-bar" style="width:4px;"></div><div class="spacing-label">xxx 4px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:8px;"></div><div class="spacing-label">xs 8px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:12px;"></div><div class="spacing-label">sm 12px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:16px;"></div><div class="spacing-label">md 16px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:24px;"></div><div class="spacing-label">24px 高压压压轴</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:32px;"></div><div class="spacing-label">□ 32px</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:48px;"></div><div class="spacing-label">xxl 48px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:96px;"></div><div class="spacing-label">· 96px</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">09 · 圆角层级</div>
+<div class="radius-row">
+<div class="radius-block" style="border-radius:6px;">6 − xs 组合键</div>
+<div class="radius-block" style="border-radius:8px;">8 零点</div>
+<div class="radius-block" style="border-radius:12px;">12 数据</div>
+<div class="radius-block" style="border-radius:16px;">16 − lg</div>
+<div class="radius-block" style="border-radius:24px;">24 − xl 数据</div>
+<div class="radius-block" style="border-radius:9999px;">胶囊形</div>
+</div>
+</section>
+<section>
+<div class="section-label">10 · 层次与深度</div>
+<p class="section-intro">无重阴. 深度来自饱和卡-vs-canvas对比.</p>
+<div class="elevation-grid">
+<div class="elevation-card elevation-flat"><h5>平面 / 页面底色</h5><p>身体部分,顶部导航.</p></div>
+<div class="elevation-card elevation-cream"><h5>奶油卡片</h5><p>证,次内容卡片.</p></div>
+<div class="elevation-card elevation-pink"><h5>粉红色卡片</h5><p>输出/ 序列器特性。</p></div>
+<div class="elevation-card elevation-teal"><h5>Teal 卡片 :</h5><p>特色套餐层级,企业.</p></div>
+<div class="elevation-card elevation-flat"><h5>细边框</h5><p>奶油卡带 1px 细边线.</p></div>
+<div class="elevation-card elevation-flat"><h5>3D 插图</h5><p>克莱姆特艺术是深度元素.</p></div>
+</div>
+</section>
+<section id="responsive">
+<div class="section-label">11 · 响应式布局</div>
+<table class="responsive-table">
+<thead><tr><th>名称</th><th>宽度</th><th>布局变化</th></tr></thead>
+<tbody>
+<tr><td>手机端</td><td>&lt; 768px</td><td>折叠菜单;首屏h1 72→36px; 下面的首屏艺术堆栈; 特性网格 1 列;定价 1 列</td></tr>
+<tr><td>平板</td><td>768–1024px</td><td>顶部导航收紧;功能卡片 2-up;定价2-up.</td></tr>
+<tr><td>桌面端</td><td>1024–1440px</td><td>全top-nav; 3-up 功能卡片; 3-up套餐层级.</td></tr>
+<tr><td>宽</td><td>&gt; 1440px 单倍径</td><td>与呼吸室较多的桌面相同;最大内容1280px.（原文参数：1280px）</td></tr>
+</tbody>
+</table>
+<div class="device-ladder">
+<div class="device-bar" style="width:60px; height:120px;">375<br/>手机端</div>
+<div class="device-bar" style="width:90px; height:140px;">600<br/>小型电话</div>
+<div class="device-bar" style="width:140px; height:160px;">768<br/>平板电脑</div>
+<div class="device-bar" style="width:200px; height:180px;">1024<br/>膝上型计算机</div>
+<div class="device-bar" style="width:260px; height:200px;">1280<br/>桌面端</div>
+<div class="device-bar" style="width:320px; height:220px;">1440<br/>宽</div>
+</div>
+<div class="responsive-sub"><h4>触控区域</h4><ul><li>mine 44 × 44px 的初级行动按钮 ——与 WCAG AA 相遇.</li><li>文本输入高度 44px.</li></ul></div>
+<div class="responsive-sub"><h4>窄屏布局调整</h4><ul><li>顶端导航在 &lt; 768px 上坍塌为汉堡。</li><li>首屏们 7-5 网格 → 移动上的单列.</li><li>饱和功能卡片在每个响应式断点上保留着彩色填充.</li><li>套餐层级卡崩溃 4 → 2 → 1; 特色保持鲜明。</li></ul></div>
+</section>
+<footer class="footer" data-platform-example="footer">
+<div class="footer-shell">
+<p class="design-demo-note">栏目演示 · 数据与企业平台</p><div class="footer-grid">
+<div class="footer-col">
+<h6>数据管理</h6>
+<span>数据接入</span>
+<span>数据目录</span>
+<span>数据质量</span>
+</div>
+<div class="footer-col">
+<h6>分析与协作</h6>
+<span>报表</span>
+<span>工作流</span>
+<span>团队空间</span>
+</div>
+<div class="footer-col">
+<h6>平台资源</h6>
+<span>接口文档</span>
+<span>部署指南</span>
+<span>合规说明</span>
+</div>
+<div class="footer-col">
+<h6>支持</h6>
+<span>服务状态</span>
+<span>帮助中心</span>
+<span>问题反馈</span>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>清晰蓝白金融界面</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --primary: #0052ff;
+    --primary-active: #003ecc;
+    --primary-disabled: #a8b8cc;
+    --ink: #ffffff;
+    --body: rgba(255,255,255,0.85);
+    --muted: rgba(255,255,255,0.6);
+    --muted-soft: rgba(255,255,255,0.4);
+    --hairline: rgba(255,255,255,0.12);
+    --hairline-soft: rgba(255,255,255,0.06);
+    --canvas: #0c0c0e;
+    --surface-soft: #161618;
+    --surface-strong: #1d1d20;
+    --surface-dark: #0a0b0d;
+    --surface-dark-elevated: #16181c;
+    --on-primary: #ffffff;
+    --on-dark: #ffffff;
+    --on-dark-soft: #a8acb3;
+    --semantic-up: #05b169;
+    --semantic-down: #cf202f;
+    --accent-yellow: #f4b000;
+    --display: 'Inter', 'Coinbase Display', -apple-system, system-ui, sans-serif;
+    --text: 'Inter', 'Coinbase Sans', sans-serif;
+    --mono: 'JetBrains Mono', 'Coinbase Mono', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--canvas); color: var(--body); font-family: var(--text); font-size: 16px; line-height: 1.5; }
+  .nav { position: sticky; top: 0; z-index: 100; background: var(--canvas); border-bottom: 1px solid var(--hairline); padding: 0 48px; height: 64px; }
+  .nav-links { list-style: none; display: flex; gap: 24px; align-items: center; }
+  .nav-links a { color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 500; }
+  .nav-cta { background: var(--primary); color: var(--on-primary); border: none; padding: 12px 20px; font-weight: 600; font-size: 16px; cursor: pointer; font-family: inherit; border-radius: 100px; height: 44px; }
+  .hero{ padding: 96px 48px; background: var(--canvas); display:block; align-items: center; max-width: 1440px; margin: 0 auto; }
+  .hero-content{max-width:1200px;position:relative;z-index:1}
+  .hero h1 { font-family: var(--display); font-size: 72px; font-weight: 400; line-height: 1.2; color: var(--ink); margin: 0 0 40px; letter-spacing: -2px; text-align: left; }
+  .hero p { font-size: 18px; color: var(--body); max-width: 900px; margin: 0 0 40px; line-height: 1.5; text-align: left; }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-start; }
+  .btn-hero-primary { background: var(--primary); color: var(--on-primary); border: none; padding: 16px 32px; height: 56px; font-weight: 600; font-size: 16px; cursor: pointer; font-family: inherit; border-radius: 100px; }
+  .btn-hero-secondary { background: var(--surface-strong); color: var(--ink); border: none; padding: 16px 32px; height: 56px; font-weight: 600; font-size: 16px; cursor: pointer; font-family: inherit; border-radius: 100px; }
+  .hero-art { aspect-ratio: 1; background: var(--surface-dark); border-radius: 24px; position: relative; overflow: hidden; padding: 32px; display: flex; align-items: center; justify-content: center; }
+  .hero-art .ui-card { background: var(--surface-dark-elevated); border-radius: 20px; padding: 24px; width: 80%; box-shadow: 0 16px 40px rgba(0,0,0,0.5); }
+  .hero-art .ui-card .head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; color: var(--on-dark-soft); font-size: 13px; }
+  .hero-art .ui-card .price { font-family: var(--mono); font-size: 36px; font-weight: 500; color: var(--on-dark); }
+  .hero-art .ui-card .change { font-family: var(--mono); font-size: 14px; color: var(--semantic-up); margin-bottom: 16px; }
+  .hero-art .ui-card .row { display: flex; justify-content: space-between; padding: 8px 0; border-top: 1px solid rgba(255,255,255,0.08); font-size: 13px; color: var(--on-dark-soft); }
+  .hero-art .ui-card .row .v { font-family: var(--mono); color: var(--on-dark); }
+  section { max-width: 1440px; margin: 0 auto; padding: 80px 48px; border-top: 1px solid var(--hairline); }
+  .section-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.96px; color: var(--muted); font-weight: 600; margin-bottom: 12px; }
+  .section-heading { font-family: var(--display); font-size: 44px; font-weight: 400; color: var(--ink); margin-bottom: 16px; line-height: 1.05; letter-spacing: -1px; }
+  .section-intro { font-size: 16px; color: var(--body); max-width: 720px; margin-bottom: 48px; line-height: 1.5; }
+  .palette-group { margin-bottom: 48px; }
+  .palette-group h3 { font-size: 12px; font-weight: 600; color: var(--ink); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.96px; }
+  .palette-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+  .swatch { border: 1px solid var(--hairline); background: var(--canvas); border-radius: 16px; overflow: hidden; }
+  .swatch-color { height: 90px; }
+  .swatch-meta { padding: 12px 14px; }
+  .swatch-name { font-weight: 600; font-size: 13px; color: var(--ink); margin-bottom: 4px; }
+  .swatch-hex { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+  .swatch-role { font-size: 13px; color: var(--body); line-height: 1.5; }
+  .type-row { display: grid; grid-template-columns: 320px 1fr; gap: 32px; align-items: baseline; padding: 20px 0; border-bottom: 1px solid var(--hairline-soft); }
+  .type-row:last-child { border-bottom: none; }
+  .type-meta { font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .type-meta strong { display: block; color: var(--ink); font-weight: 600; font-size: 12px; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .type-sample { color: var(--ink); }
+  .button-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+  .button-cell { border: 1px solid var(--hairline); padding: 28px; background: var(--canvas); border-radius: 16px; min-width: 0; }
+  .button-cell.on-dark { background: var(--surface-dark); border-color: rgba(255,255,255,0.1); }
+  .button-cell.on-dark .button-label, .button-cell.on-dark .button-meta { color: var(--on-dark); }
+  .button-label { font-size: 11px; color: var(--ink); font-weight: 600; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .button-meta { font-size: 12px; color: var(--muted); margin-top: 14px; line-height: 1.5; }
+  .btn { display: inline-block; padding: 12px 20px; height: 44px; font-size: 16px; font-weight: 600; border: none; cursor: pointer; font-family: inherit; line-height: 1.15; border-radius: 100px; }
+  .btn-primary { background: var(--primary); color: var(--on-primary); }
+  .btn-primary-active { background: var(--primary-active); color: var(--on-primary); }
+  .btn-primary-disabled { background: var(--primary-disabled); color: var(--on-primary); cursor: not-allowed; }
+  .btn-secondary-light { background: var(--surface-strong); color: var(--ink); }
+  .btn-secondary-dark { background: var(--surface-dark-elevated); color: var(--on-dark); }
+  .btn-outline-on-dark { background: transparent; color: var(--on-dark); border: 1px solid var(--on-dark); padding: 11px 19px; }
+  .btn-tertiary-text { background: transparent; color: var(--primary); padding: 0; height: auto; }
+  .btn-pill-cta { background: var(--primary); color: var(--on-primary); padding: 16px 32px; height: 56px; }
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+  .card-grid > * { min-width: 0; }
+  .feature-card { background: var(--canvas); border: 1px solid var(--hairline); border-radius: 24px; padding: 28px; }
+  .feature-card .glyph { width: 44px; height: 44px; border-radius: 9999px; background: var(--surface-strong); margin-bottom: 16px; display: flex; align-items: center; justify-content: center; color: var(--primary); font-weight: 700; font-size: 18px; }
+  .feature-card h4 { font-size: 18px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+  .feature-card p { font-size: 14px; color: var(--body); line-height: 1.5; margin-bottom: 16px; }
+  .hero-band-dark { background: var(--surface-dark); color: var(--on-dark); padding: 64px 48px; border-radius: 24px; position: relative; overflow: hidden; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; }
+  .hero-band-dark h2 { font-family: var(--display); font-size: 52px; font-weight: 400; line-height: 1.0; letter-spacing: -1.3px; margin-bottom: 16px; }
+  .hero-band-dark p { font-size: 16px; color: var(--on-dark-soft); margin-bottom: 24px; max-width: 480px; }
+  .ui-stack { position: relative; height: 280px; }
+  .ui-card-large { position: absolute; top: 0; right: 0; width: 100%; background: var(--surface-dark-elevated); border-radius: 20px; padding: 24px; transform: rotate(-2deg); box-shadow: 0 16px 40px rgba(0,0,0,0.4); }
+  .ui-card-small { position: absolute; bottom: 0; left: 0; width: 60%; background: var(--surface-dark-elevated); border-radius: 14px; padding: 16px; transform: rotate(4deg); box-shadow: 0 16px 40px rgba(0,0,0,0.4); }
+  .ui-card-large .price { font-family: var(--mono); font-size: 28px; color: var(--on-dark); margin-bottom: 4px; }
+  .ui-card-large .change { font-family: var(--mono); font-size: 13px; color: var(--semantic-up); margin-bottom: 14px; }
+  .ui-card-large .row { display: flex; justify-content: space-between; padding: 6px 0; border-top: 1px solid rgba(255,255,255,0.08); font-size: 12px; color: var(--on-dark-soft); }
+  .ui-card-large .row .v { font-family: var(--mono); color: var(--on-dark); }
+  .ui-card-small .price { font-family: var(--mono); font-size: 18px; color: var(--on-dark); }
+  .ui-card-small .change { font-family: var(--mono); font-size: 12px; color: var(--semantic-down); }
+  .asset-list { background: var(--canvas); border: 1px solid var(--hairline); border-radius: 24px; padding: 8px 24px; }
+  .asset-row { display: grid; grid-template-columns: 32px 1fr 120px 80px; gap: 16px; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--hairline-soft); }
+  .asset-row:last-child { border-bottom: none; }
+  .asset-icon-circular { width: 32px; height: 32px; border-radius: 9999px; background: var(--surface-strong); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--primary); font-size: 11px; }
+  .asset-row .name { font-weight: 600; color: var(--ink); font-size: 14px; }
+  .asset-row .ticker { color: var(--muted); font-size: 13px; }
+  .asset-row .price { font-family: var(--mono); font-size: 16px; font-weight: 500; color: var(--ink); text-align: right; }
+  .asset-row .change-up { font-family: var(--mono); font-size: 14px; color: var(--semantic-up); text-align: right; }
+  .asset-row .change-down { font-family: var(--mono); font-size: 14px; color: var(--semantic-down); text-align: right; }
+  .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .pricing-tier-card { background: var(--canvas); border: 1px solid var(--hairline); border-radius: 24px; padding: 32px; }
+  .pricing-tier-card.featured { background: var(--surface-dark); color: var(--on-dark); border-color: var(--surface-dark); }
+  .pricing-tier-card h4 { font-size: 18px; font-weight: 600; margin-bottom: 8px; color: var(--ink); }
+  .pricing-tier-card.featured h4 { color: var(--on-dark); }
+  .pricing-tier-card .price-display { font-family: var(--display); font-size: 40px; font-weight: 400; line-height: 1.09; letter-spacing: -1px; color: var(--ink); margin-bottom: 16px; }
+  .pricing-tier-card.featured .price-display { color: var(--on-dark); }
+  .pricing-tier-card ul { list-style: none; margin-bottom: 24px; padding: 0; }
+  .pricing-tier-card ul li { padding: 6px 0; font-size: 14px; color: var(--body); }
+  .pricing-tier-card.featured ul li { color: var(--on-dark-soft); }
+  .form-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+  .form-cell { min-width: 0; }
+  .form-label { font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 8px; display: block; }
+  .text-input { width: 100%; background: var(--canvas); color: var(--ink); border: 1px solid var(--hairline); padding: 14px 16px; height: 48px; font-size: 16px; font-family: inherit; border-radius: 12px; outline: none; }
+  .text-input.focused { border: 2px solid var(--primary); padding: 13px 15px; }
+  .search-pill { background: var(--surface-strong); border: none; padding: 12px 20px; height: 44px; font-size: 16px; font-family: inherit; border-radius: 100px; outline: none; width: 100%; }
+  .badge-pill { display: inline-block; background: var(--surface-strong); color: var(--ink); border-radius: 100px; padding: 4px 12px; font-size: 12px; font-weight: 600; }
+  .spacing-row { display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
+  .spacing-block { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .spacing-bar { background: var(--ink); height: 28px; }
+  .spacing-label { font-size: 11px; color: var(--muted); font-family: var(--mono); }
+  .radius-row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .radius-block { width: 96px; height: 96px; background: var(--surface-strong); border: 1px solid var(--hairline); display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--ink); font-weight: 600; font-family: var(--mono); }
+  .elevation-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; }
+  .elevation-card { padding: 24px; font-size: 13px; color: var(--body); border: 1px solid var(--hairline); background: var(--canvas); border-radius: 16px; }
+  .elevation-card.elevated { box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
+  .elevation-card h5 { font-weight: 600; color: var(--ink); margin-bottom: 8px; font-size: 13px; }
+  .responsive-table { width: 100%; border-collapse: collapse; margin-bottom: 32px; font-size: 14px; }
+  .responsive-table th, .responsive-table td { text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--hairline); }
+  .responsive-table th { font-weight: 600; color: var(--ink); font-size: 12px; text-transform: uppercase; letter-spacing: 0.96px; }
+  .responsive-table td { color: var(--body); }
+  .device-ladder { display: flex; align-items: flex-end; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+  .device-bar { background: var(--surface-strong); border: 1px solid var(--hairline); color: var(--muted); text-align: center; padding: 8px; font-size: 11px; font-family: var(--mono); border-radius: 8px; }
+  .responsive-sub { margin-top: 32px; }
+  .responsive-sub h4 { font-size: 18px; font-weight: 600; color: var(--ink); margin-bottom: 12px; }
+  .responsive-sub ul { padding-left: 20px; color: var(--body); font-size: 14px; line-height: 1.5; }
+  .footer { background: var(--canvas); color: var(--body); padding: 32px 48px; font-size: 13px; text-align: center; border-top: 1px solid var(--hairline); }
+  .footer a { color: var(--ink); }
+  .cell, .cell > *, .demo, .button-cell, .component-cell { min-width: 0; }
+  .cell.wide, .button-cell.wide, .component-cell.wide { grid-column: span 2; }
+  @media (max-width: 1024px) {
+    section { padding: 64px 32px; }
+    .section-heading { font-size: 32px; }
+    .nav > :last-child { display: none; }
+    .hero { grid-template-columns: 1fr; gap: 32px; padding: 64px 32px; }
+    .hero h1 { font-size: 48px; letter-spacing: -1.3px; }
+    .hero-art, .hero-art-photo { display: none; }
+    .type-row { grid-template-columns: 1fr; gap: 8px; }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .hero-band-dark { grid-template-columns: 1fr; padding: 48px 32px; }
+    .ui-stack { display: none; }
+  }
+  @media (max-width: 720px) {
+    .cell.wide, .button-cell.wide, .component-cell.wide { grid-column: span 1; }
+    .nav { padding: 0 48px; height: auto; min-height: 56px; }
+    .nav-links { display: none; }
+    .hero { padding: 48px 20px; }
+    .hero h1 { font-size: 36px; letter-spacing: -1px; }
+    .hero p { font-size: 16px; }
+    section { padding: 48px 20px; }
+    .section-heading { font-size: 26px; }
+    .palette-grid, .button-grid, .card-grid, .form-grid, .elevation-grid { grid-template-columns: 1fr !important; gap: 16px; }
+    .spacing-row, .radius-row { gap: 12px; }
+    .responsive-table { font-size: 12px; }
+    .responsive-table th, .responsive-table td { padding: 10px 8px; }
+    .device-ladder { gap: 8px; }
+    .footer { padding: 24px 16px; font-size: 12px; }
+    .asset-row { grid-template-columns: 32px 1fr 1fr; }
+    .asset-row .change-up, .asset-row .change-down { display: none; }
+    .hero-band-dark h2 { font-size: 32px; }
+  }
+  /* getdesign.md nav additions */
+  .nav-left { display: flex; align-items: center; gap: 20px; }
+  .nav-brand-link, .nav-brand-link:link, .nav-brand-link:visited, .nav-brand-link:hover, .nav-brand-link:active { text-decoration: none; color: inherit; }
+  .nav-brand { font-family: var(--display); font-weight: 600; font-size: 16px; color: var(--ink); }
+  .nav-github, .nav-github:link, .nav-github:visited, .nav-github:hover, .nav-github:active { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: inherit; text-decoration: none; padding: 5px 10px; border: 1px solid rgba(128, 128, 128, 0.3); border-radius: 6px; opacity: 0.75; transition: opacity 200ms ease, border-color 200ms ease; font-family: inherit; line-height: 1; white-space: nowrap; }
+  .nav-github:hover { opacity: 1; border-color: rgba(128, 128, 128, 0.55); }
+  .nav-github svg { display: block; flex-shrink: 0; }
+  /* getdesign.md nav centering */
+  .nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+  .nav > .nav-left { justify-self: start; }
+  .nav > .nav-links { justify-self: center; }
+  .nav > :last-child { justify-self: end; }
+
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+</head>
+<body data-platform-type="金融交易">
+
+<div class="hero">
+<div class="hero-content">
+<h1>清晰蓝白金融界面</h1>
+<p>这是一套面向机构级加密货币交易的界面。所有主按钮采用 Coinbase Blue 和 100px 圆角，CoinbaseDisplay 使用 400 字重，视觉表达保持沉稳。</p>
+<div class="hero-actions">
+<button class="btn-hero-primary">开始使用</button>
+<button class="btn-hero-secondary">探索市场</button>
+</div>
+</div>
+</div>
+<section id="colors">
+<div class="section-label">01 · 配色</div>
+<h2 class="section-heading">Coinbase 蓝色 + 单色</h2>
+<p class="section-intro">白色页面底色上单品牌辨识度加近黑色编辑页面底色为通栏首屏. 绿色/红色贸易是语义上的唯一。</p>
+<div class="palette-group"><h3>品牌色与强调色</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#0052ff;"></div><div class="swatch-meta"><div class="swatch-name">primary (Coinbase Blue)</div><div class="swatch-hex">#0052ff</div><div class="swatch-role">所有初级CTA,品牌字号,内含品牌链接.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#003ecc;"></div><div class="swatch-meta"><div class="swatch-name">primary-active</div><div class="swatch-hex">#003ecc</div><div class="swatch-role">新闻报.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#a8b8cc;"></div><div class="swatch-meta"><div class="swatch-name">primary-disabled</div><div class="swatch-hex">#a8b8cc</div><div class="swatch-role">已禁用 行动按钮 浅色调.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#f4b000;"></div><div class="swatch-meta"><div class="swatch-name">accent-yellow</div><div class="swatch-hex">#f4b000</div><div class="swatch-role">比特币格莱弗填充——仅以说明形式表示.</div></div></div>
+</div>
+</div>
+<div class="palette-group"><h3>界面表面</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#ffffff; border-bottom:1px solid var(--hairline);"></div><div class="swatch-meta"><div class="swatch-name">canvas</div><div class="swatch-hex">#ffffff</div><div class="swatch-role">默认页面层。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#f7f7f7;"></div><div class="swatch-meta"><div class="swatch-name">surface-soft</div><div class="swatch-hex">#f7f7f7</div><div class="swatch-role">转弯的带子</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#eef0f3;"></div><div class="swatch-meta"><div class="swatch-name">surface-strong</div><div class="swatch-hex">#eef0f3</div><div class="swatch-role">二级按钮,搜索胶囊控件.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#0a0b0d;"></div><div class="swatch-meta"><div class="swatch-name">surface-dark</div><div class="swatch-hex">#0a0b0d</div><div class="swatch-role">通栏深色首屏,操作区.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#16181c;"></div><div class="swatch-meta"><div class="swatch-name">surface-dark-elevated</div><div class="swatch-hex">#16181c</div><div class="swatch-role">浮装产品-UI模拟卡片.</div></div></div>
+</div>
+</div>
+<div class="palette-group"><h3>细边线和文本</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#dee1e6;"></div><div class="swatch-meta"><div class="swatch-name">hairline</div><div class="swatch-hex">#dee1e6</div><div class="swatch-role">1px分机. 星洲网.（原文参数：1px）</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#0a0b0d;"></div><div class="swatch-meta"><div class="swatch-name">ink</div><div class="swatch-hex">#0a0b0d</div><div class="swatch-role">显示,主导航,身体强调.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#5b616e;"></div><div class="swatch-meta"><div class="swatch-name">body</div><div class="swatch-hex">#5b616e</div><div class="swatch-role">默认的运行文本。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#7c828a;"></div><div class="swatch-meta"><div class="swatch-name">muted</div><div class="swatch-hex">#7c828a</div><div class="swatch-role">副标题,面包屑。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#a8acb3;"></div><div class="swatch-meta"><div class="swatch-name">muted-soft</div><div class="swatch-hex">#a8acb3</div><div class="swatch-role">禁用链接文本。</div></div></div>
+</div>
+</div>
+<div class="palette-group"><h3>贸易语义</h3>
+<div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#05b169;"></div><div class="swatch-meta"><div class="swatch-name">semantic-up</div><div class="swatch-hex">#05b169</div><div class="swatch-role">价格上涨绿色——只限文字色.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#cf202f;"></div><div class="swatch-meta"><div class="swatch-name">semantic-down</div><div class="swatch-hex">#cf202f</div><div class="swatch-role">价格下调红色——只限文字色.</div></div></div>
+</div>
+</div>
+</section>
+<section id="typography">
+<div class="section-label">02 · 字体排版</div>
+<h2 class="section-heading">在 Coinbase Sans 显示 400 天体</h2>
+<p class="section-intro">Display sits at weight 400 — never bold. CoinbaseMono on every numerical value.</p>
+<div class="type-row"><div class="type-meta"><strong>display-mega</strong>80px / 400 / 1.0 / -2px</div><div class="type-sample" style="font-family:var(--display); font-size:64px; font-weight:400; letter-spacing:-2px;">The future of finance.</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-xl</strong>64px / 400 / 1.0 / -1.6px</div><div class="type-sample" style="font-family:var(--display); font-size:52px; font-weight:400; letter-spacing:-1.6px;">Coinbase 财富</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-lg</strong>52px / 400 / 1.0 / -1.3px</div><div class="type-sample" style="font-family:var(--display); font-size:44px; font-weight:400; letter-spacing:-1.3px;">控制好你的钱</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-md</strong>44px / 400 / 1.09 / -1px</div><div class="type-sample" style="font-family:var(--display); font-size:40px; font-weight:400; letter-spacing:-1px;">节目标题</div></div>
+<div class="type-row"><div class="type-meta"><strong>title-md</strong>18px / 600 / 1.33</div><div class="type-sample" style="font-size:18px; font-weight:600;">构成部分标题</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-md</strong>16px / 400 / 1.5</div><div class="type-sample" style="font-size:16px;">白色页面底色上的默认文字。</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-sm</strong>14px / 400 / 1.5</div><div class="type-sample" style="font-size:14px;">脚足体,精细印.</div></div>
+<div class="type-row"><div class="type-meta"><strong>caption-strong</strong>12px / 600 / 1.5</div><div class="type-sample" style="font-size:12px; font-weight:600;">标签</div></div>
+<div class="type-row"><div class="type-meta"><strong>number-display</strong>18px / 500 (CoinbaseMono)</div><div class="type-sample" style="font-family:var(--mono); font-size:18px; font-weight:500;">$67,432.18 +2.4%</div></div>
+<div class="type-row"><div class="type-meta"><strong>button</strong>16px / 600 / 1.15</div><div class="type-sample" style="font-size:16px; font-weight:600;">开始使用</div></div>
+<div class="type-row"><div class="type-meta"><strong>nav-link</strong>14px / 500 / 1.4</div><div class="type-sample" style="font-size:14px; font-weight:500;">密码 个人 企业</div></div>
+</section>
+<section id="components">
+<div class="section-label">03 · 按钮</div>
+<h2 class="section-heading">胶囊形 跨度几何</h2>
+<p class="section-intro">每个按钮的100px半径. 初蓝为预留.（原文参数：100px）</p>
+<div class="button-grid">
+<div class="button-cell"><div class="button-label">button-primary</div><button class="btn btn-primary">开始使用</button><div class="button-meta">Coinbase 蓝色/ 100px 胶囊形 / 44px 高度</div></div>
+<div class="button-cell"><div class="button-label">button-primary-active</div><button class="btn btn-primary-active">按下</button><div class="button-meta">深蓝报业州.</div></div>
+<div class="button-cell"><div class="button-label">button-primary-disabled</div><button class="btn btn-primary-disabled" disabled="">禁用</button></div>
+<div class="button-cell"><div class="button-label">button-pill-cta</div><button class="btn btn-pill-cta">开始使用</button><div class="button-meta">较大56px首屏变种.（原文参数：56px）</div></div>
+<div class="button-cell"><div class="button-label">button-secondary-light</div><button class="btn btn-secondary-light">取消</button><div class="button-meta">软灰色白色。</div></div>
+<div class="button-cell on-dark"><div class="button-label">button-secondary-dark</div><button class="btn btn-secondary-dark">了解更多</button><div class="button-meta">Surface-elevated在黑暗中。</div></div>
+<div class="button-cell on-dark"><div class="button-label">button-outline-on-dark</div><button class="btn btn-outline-on-dark">拿到应用程序</button><div class="button-meta">Transparent + 1px white border.</div></div>
+<div class="button-cell"><div class="button-label">button-tertiary-text</div><button class="btn btn-tertiary-text">学习更多→</button><div class="button-meta">内含蓝文本链接.</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">04 — 首屏区块( 暗色)</div>
+<h2 class="section-heading">层化产品-UI模型</h2>
+<p class="section-intro">通栏 暗首屏与浮游的UI 卡片模仿了一层的仪表板.</p>
+<div class="hero-band-dark">
+<div>
+<h2>探索百万宝物.</h2>
+<p>实时价格,流动性深,以及全球资产宇宙.</p>
+<button class="btn btn-primary">探索市场</button>
+<button class="btn btn-outline-on-dark" style="margin-left: 8px;">拿到应用程序</button>
+</div>
+<div class="ui-stack">
+<div class="ui-card-large">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+<span style="font-size:12px; color:var(--on-dark-soft);">商贸中心/美元</span>
+<span style="font-family:var(--mono); font-size:13px; color:var(--semantic-up);">+2.4%</span>
+</div>
+<div class="price">$67,432</div>
+<div class="change">+$1,621 today</div>
+<div class="row"><span>量 24H 语句</span><span class="v">$28.4B</span></div>
+<div class="row"><span>市场上限</span><span class="v">$1.32T</span></div>
+</div>
+<div class="ui-card-small">
+<div style="font-size:11px; color:var(--on-dark-soft);">ETH/美元 (美元)</div>
+<div class="price">$3,512</div>
+<div class="change">−1.1%</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="section-label">05 ——特色卡</div>
+<h2 class="section-heading">3 上层福利网格</h2>
+<div class="card-grid">
+<div class="feature-card"><div class="glyph">化学化学</div><h4>强大的工具</h4><p>建设高级商号——实时图,深度,高级订单类型.</p><button class="btn btn-tertiary-text">学习更多→</button></div>
+<div class="feature-card"><div class="glyph">$</div><h4>零交易费</h4><p>给"一个"订阅时的活跃会员更多的奖励.</p><button class="btn btn-tertiary-text">学习更多→</button></div>
+<div class="feature-card"><div class="glyph">⊕</div><h4>无数的赚钱方法</h4><p>借钱 赚到收益</p><button class="btn btn-tertiary-text">学习更多→</button></div>
+</div>
+</section>
+<section>
+<div class="section-label">06 — 资产行</div>
+<h2 class="section-heading">市场表</h2><p class="design-demo-note">组件演示。表头、行距、分隔线和状态标签。数据仅用于样式展示。</p>
+<p class="section-intro">Hairline-divided rows with circular icon plate, mono prices, and semantic green/red change cells.</p>
+<div class="asset-list">
+<div class="asset-row"><div class="asset-icon-circular">银行</div><div><div class="name">比特币</div><div class="ticker">商贸中心</div></div><div class="price">$67,432.18</div><div class="change-up">+2.4%</div></div>
+<div class="asset-row"><div class="asset-icon-circular">ET 调制</div><div><div class="name">以图</div><div class="ticker">ETH 电子数据交换系统</div></div><div class="price">$3,512.04</div><div class="change-down">−1.1%</div></div>
+<div class="asset-row"><div class="asset-icon-circular">这么说吧</div><div><div class="name">索拉纳</div><div class="ticker">苏尔</div></div><div class="price">$148.60</div><div class="change-up">+0.8%</div></div>
+<div class="asset-row"><div class="asset-icon-circular">左轮</div><div><div class="name">XRP 软件</div><div class="ticker">XRP 软件</div></div><div class="price">$0.5832</div><div class="change-down">−0.3%</div></div>
+<div class="asset-row"><div class="asset-icon-circular">比利时</div><div><div class="name">英国银行</div><div class="ticker">英国银行</div></div><div class="price">$612.40</div><div class="change-up">+1.6%</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">07 · 套餐定价</div>
+<h2 class="section-heading">开发者平台定价</h2><p class="design-demo-note">组件演示。套餐层级、价格字重和操作按钮。数据仅用于样式展示。</p>
+<p class="section-intro">特征的层次反转至暗——视觉反转信号"高亮的选择",没有彩色的丝带.</p>
+<div class="pricing-grid">
+<div class="pricing-tier-card"><h4>入门版</h4><div class="price-display">$0</div><ul><li>1,000 请求/ %</li><li>标准支持</li><li>基本API访问</li></ul><button class="btn btn-secondary-light" style="width:100%;">开始使用</button></div>
+<div class="pricing-tier-card featured"><h4>缩放</h4><div class="price-display">$199<span style="font-size:18px; color:var(--on-dark-soft);">/模数</span></div><ul><li>100,000 请求/ %</li><li>优先支助</li><li>高级 API 访问</li><li>较高费率限额</li></ul><button class="btn btn-primary" style="width:100%;">选择计划</button></div>
+<div class="pricing-tier-card"><h4>企业版</h4><div class="price-display">自定义</div><ul><li>无限制的请求</li><li>专门支助</li><li>自定义集成</li></ul><button class="btn btn-secondary-light" style="width:100%;">联系销售</button></div>
+</div>
+</section>
+<section>
+<div class="section-label">08 · 表单</div>
+<h2 class="section-heading">输入搜索( S)</h2>
+<div class="form-grid">
+<div class="form-cell"><label class="form-label">电子邮箱</label><input class="text-input" placeholder="you@example.com" type="email"/></div>
+<div class="form-cell"><label class="form-label">电话</label><input class="text-input focused" type="tel" value="+1 555 123 4567"/></div>
+<div class="form-cell"><label class="form-label">搜索</label><input class="search-pill" placeholder="搜索资产,货币..." type="text"/></div>
+</div>
+</section>
+<section>
+<div class="section-label">09 · 徽标</div>
+<p class="section-intro">小大写胶囊控件作为部分标签使用.</p>
+<div style="display:flex; gap:12px; flex-wrap:wrap;">
+<span class="badge-pill">体制</span>
+<span class="badge-pill">管制</span>
+<span class="badge-pill">审计</span>
+<span class="badge-pill">SOC 2</span>
+</div>
+</section>
+<section>
+<div class="section-label">10 · 间距层级</div>
+<p class="section-intro">4px基础,96px节奏.（原文参数：4px、96px）</p>
+<div class="spacing-row">
+<div class="spacing-block"><div class="spacing-bar" style="width:4px;"></div><div class="spacing-label">xxx 4 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:8px;"></div><div class="spacing-label">xs 8 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:12px;"></div><div class="spacing-label">sm 12 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:16px;"></div><div class="spacing-label">16 基准</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:20px;"></div><div class="spacing-label">md 20 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:24px;"></div><div class="spacing-label">24 高压压压轴</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:32px;"></div><div class="spacing-label">□ 32</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:48px;"></div><div class="spacing-label">xxl 48 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:96px;"></div><div class="spacing-label">96 · 章节</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">11 · 圆角</div>
+<p class="section-intro">胶囊形(100px)用于交互式,卡-辐射(24px)用于容器.</p>
+<div class="radius-row">
+<div class="radius-block" style="border-radius:0;">0 − 无</div>
+<div class="radius-block" style="border-radius:4px;">4 − xs 组合键</div>
+<div class="radius-block" style="border-radius:8px;">8 零点</div>
+<div class="radius-block" style="border-radius:12px;">12 数据</div>
+<div class="radius-block" style="border-radius:16px;">16 − lg</div>
+<div class="radius-block" style="border-radius:24px;">24 − xl 数据</div>
+<div class="radius-block" style="border-radius:100px;">100 胶囊形</div>
+<div class="radius-block" style="border-radius:9999px;">满</div>
+</div>
+</section>
+<section>
+<div class="section-label">12 · 层次与深度</div>
+<p class="section-intro">一层阴影;深度来自波段旋转和分层的卡片.</p>
+<div class="elevation-grid">
+<div class="elevation-card"><h5>平面 / 页面底色</h5><p>80% of surfaces.</p></div>
+<div class="elevation-card"><h5>细边框</h5><p>1px 细边框 中超联赛冠军. 功能卡片 缩写为白色.</p></div>
+<div class="elevation-card elevated"><h5>软滴</h5><p>0 4px 12px rgba(0,0,0,0.04). 单影层.</p></div>
+<div class="elevation-card"><h5>分层卡片</h5><p>浮出水面的产品 -UI模拟 深色首屏。</p></div>
+</div>
+</section>
+<section id="responsive">
+<div class="section-label">13 · 响应式布局</div>
+<table class="responsive-table">
+<thead><tr><th>名称</th><th>宽度</th><th>布局变化</th></tr></thead>
+<tbody>
+<tr><td>手机端</td><td>&lt; 640px</td><td>首屏h( 首屏h)1 80→40px; 特性卡 1 列; 资产行堆栈; 导航汉堡。</td></tr>
+<tr><td>平板</td><td>640–1024px</td><td>首屏h1 64px; 功能卡片 2-up. 星洲网.</td></tr>
+<tr><td>桌面端</td><td>1024–1280px</td><td>完全首屏h1 80px; 3-up 功能卡片. 腾讯网.</td></tr>
+<tr><td>宽</td><td>&gt; 1280px 单倍径</td><td>1200px中的内容上限.（原文参数：1200px）</td></tr>
+</tbody>
+</table>
+<div class="device-ladder">
+<div class="device-bar" style="width:60px; height:120px;">375<br/>手机端</div>
+<div class="device-bar" style="width:90px; height:140px;">640<br/>小型</div>
+<div class="device-bar" style="width:140px; height:160px;">768<br/>平板电脑</div>
+<div class="device-bar" style="width:200px; height:180px;">1024<br/>膝上型计算机</div>
+<div class="device-bar" style="width:260px; height:200px;">1280<br/>桌面端</div>
+</div>
+<div class="responsive-sub"><h4>触控区域</h4><ul><li>44px高度的初级胶囊形——WCAG AA.（原文参数：44px）</li><li>56px的首屏胶囊形——远高于AAA.（原文参数：56px）</li><li>资产图标圈32px——加字行创建有效的48px水龙头区.（原文参数：32px、48px）</li></ul></div>
+<div class="responsive-sub"><h4>窄屏布局调整</h4><ul><li>顶端导航开关到768px以下的汉堡包.（原文参数：768px）</li><li>分层产品- UI 模拟卡从崩溃 2-3 堆叠到单张牌上。</li><li>套餐层级行:3-up → 2-up → 1-up.</li><li>移动上的资产行放下更改栏.</li></ul></div>
+</section>
+<footer class="footer" data-platform-example="footer">
+<div class="footer-shell">
+<p class="design-demo-note">栏目演示 · 金融交易</p><div class="footer-grid">
+<div class="footer-col">
+<h6>产品</h6>
+<span>账户</span>
+<span>转账</span>
+<span>交易工具</span>
+</div>
+<div class="footer-col">
+<h6>记录</h6>
+<span>交易状态</span>
+<span>收支明细</span>
+<span>对账记录</span>
+</div>
+<div class="footer-col">
+<h6>信息</h6>
+<span>费用说明</span>
+<span>风险说明</span>
+<span>帮助文档</span>
+</div>
+<div class="footer-col">
+<h6>支持</h6>
+<span>账户安全</span>
+<span>服务状态</span>
+<span>联系我们</span>
+</div>
+</div>
+
+</div>
+</footer>
+</body>
+</html>

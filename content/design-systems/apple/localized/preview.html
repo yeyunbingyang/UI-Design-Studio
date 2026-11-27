@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>留白与产品摄影</title>
+<meta content="Use this search API to find relevant content across this site with keywords or natural-language queries, instead of crawling individual pages. Results are returned in Markdown." name="agent:instructions"/><meta content="https://getdesign.md/.well-known/search?q={query}" name="agent:endpoint"/><meta content="GET" name="agent:method"/><meta content="https://developers.cloudflare.com/ai-search/how-to/search-for-agents/" name="agent:documentation"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --primary: #0066cc;
+    --primary-focus: #0071e3;
+    --primary-on-dark: #2997ff;
+    --ink: #1d1d1f;
+    --body: #1d1d1f;
+    --body-on-dark: #ffffff;
+    --body-muted: #cccccc;
+    --ink-muted-80: #333333;
+    --ink-muted-48: #7a7a7a;
+    --divider-soft: #f0f0f0;
+    --hairline: #e0e0e0;
+    --canvas: #ffffff;
+    --canvas-parchment: #f5f5f7;
+    --surface-pearl: #fafafc;
+    --surface-tile-1: #272729;
+    --surface-tile-2: #2a2a2c;
+    --surface-tile-3: #252527;
+    --surface-black: #000000;
+    --surface-chip-translucent: rgba(210, 210, 215, 0.64);
+    --on-primary: #ffffff;
+    --on-dark: #ffffff;
+    --display: 'Inter', system-ui, -apple-system, sans-serif;
+    --text: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--canvas); color: var(--body); font-family: var(--text); font-size: 17px; line-height: 1.47; letter-spacing: -0.374px; }
+
+  .nav { position: sticky; top: 0; z-index: 100; background: var(--canvas); border-bottom: 1px solid var(--hairline); padding: 0 48px; height: 64px; }
+  .nav-links { list-style: none; display: flex; gap: 28px; align-items: center; }
+  .nav-links a { color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 400; letter-spacing: -0.224px; }
+  .nav-cta { background: var(--primary); color: var(--on-primary); border: none; padding: 11px 22px; border-radius: 9999px; font-weight: 400; font-size: 14px; cursor: pointer; font-family: inherit; letter-spacing: -0.224px; }
+
+  .hero { padding: 80px 48px; background: var(--canvas); display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; max-width: 1440px; margin: 0 auto; }
+  .hero-content { max-width: 720px; }
+  .hero h1 { font-family: var(--display); font-size: 56px; font-weight: 600; line-height: 1.07; color: var(--ink); margin: 0 0 24px; letter-spacing: -0.28px; text-align: left; }
+  .hero p { font-size: 21px; color: var(--ink-muted-80); max-width: 540px; margin: 0 0 32px; line-height: 1.19; letter-spacing: 0.231px; text-align: left; }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-start; }
+  .btn-hero-primary { background: var(--primary); color: var(--on-primary); border: none; padding: 11px 22px; border-radius: 9999px; font-weight: 400; font-size: 17px; cursor: pointer; font-family: inherit; letter-spacing: -0.374px; }
+  .btn-hero-secondary { background: transparent; color: var(--primary); border: 1px solid var(--primary); padding: 10px 21px; border-radius: 9999px; font-weight: 400; font-size: 17px; cursor: pointer; font-family: inherit; letter-spacing: -0.374px; }
+  .hero-art { background: var(--canvas-parchment); border-radius: 18px; padding: 48px; aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; }
+  .hero-art .device-mock { width: 140px; height: 240px; background: linear-gradient(135deg, #1d1d1f 0%, #2a2a2c 50%, #1d1d1f 100%); border-radius: 28px; box-shadow: 0 5px 30px rgba(0, 0, 0, 0.22); display: flex; align-items: center; justify-content: center; }
+  .hero-art .device-mock::before { content: ''; width: 90px; height: 90px; background: radial-gradient(circle at 30% 30%, #444 0%, #1a1a1a 70%); border-radius: 24px; }
+  .hero-art .device-label { font-size: 14px; color: var(--ink-muted-48); letter-spacing: -0.224px; }
+
+  section { max-width: 1280px; margin: 0 auto; padding: 80px 48px; border-top: 1px solid var(--hairline); }
+  .section-label { font-size: 12px; text-transform: uppercase; letter-spacing: -0.12px; color: var(--ink-muted-48); font-weight: 400; margin-bottom: 12px; }
+  .section-heading { font-family: var(--display); font-size: 40px; font-weight: 600; color: var(--ink); margin-bottom: 16px; letter-spacing: 0; line-height: 1.1; }
+  .section-intro { font-size: 21px; color: var(--ink-muted-80); max-width: 720px; margin-bottom: 48px; line-height: 1.19; letter-spacing: 0.231px; }
+
+  .palette-group { margin-bottom: 56px; }
+  .palette-group h3 { font-family: var(--display); font-size: 24px; font-weight: 600; color: var(--ink); margin-bottom: 20px; letter-spacing: 0; }
+  .palette-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+  .swatch { border: 1px solid var(--hairline); border-radius: 18px; overflow: hidden; background: var(--canvas); }
+  .swatch-color { height: 80px; }
+  .swatch-meta { padding: 16px 18px; }
+  .swatch-name { font-weight: 600; font-size: 14px; color: var(--ink); margin-bottom: 4px; letter-spacing: -0.224px; }
+  .swatch-hex { font-family: ui-monospace, monospace; font-size: 12px; color: var(--ink-muted-48); margin-bottom: 6px; }
+  .swatch-role { font-size: 14px; color: var(--ink-muted-80); line-height: 1.43; letter-spacing: -0.224px; }
+
+  .type-row { display: grid; grid-template-columns: 320px 1fr; gap: 32px; align-items: baseline; padding: 24px 0; border-bottom: 1px solid var(--hairline); }
+  .type-row:last-child { border-bottom: none; }
+  .type-meta { font-size: 12px; color: var(--ink-muted-48); line-height: 1.5; letter-spacing: -0.12px; }
+  .type-meta strong { display: block; color: var(--ink); font-weight: 600; font-size: 13px; margin-bottom: 4px; letter-spacing: -0.224px; }
+  .type-sample { color: var(--ink); }
+
+  .button-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+  .button-cell { border: 1px solid var(--hairline); border-radius: 18px; padding: 28px; background: var(--canvas); min-width: 0; }
+  .button-cell.on-tile { background: var(--surface-tile-1); border-color: rgba(255,255,255,0.1); }
+  .button-cell.on-tile .button-label, .button-cell.on-tile .button-meta { color: var(--on-dark); }
+  .button-cell.on-photo { background: linear-gradient(135deg, #2a2a2c 0%, #1d1d1f 100%); border-color: rgba(255,255,255,0.1); }
+  .button-cell.on-photo .button-label, .button-cell.on-photo .button-meta { color: var(--on-dark); }
+  .button-label { font-size: 13px; color: var(--ink); font-weight: 600; margin-bottom: 12px; letter-spacing: -0.224px; }
+  .button-meta { font-size: 12px; color: var(--ink-muted-48); margin-top: 14px; line-height: 1.43; letter-spacing: -0.12px; }
+  .btn { display: inline-block; padding: 11px 22px; border-radius: 9999px; font-size: 17px; font-weight: 400; border: none; cursor: pointer; font-family: inherit; line-height: 1; letter-spacing: -0.374px; }
+  .btn-primary { background: var(--primary); color: var(--on-primary); }
+  .btn-primary-focus { background: var(--primary); color: var(--on-primary); outline: 2px solid var(--primary-focus); outline-offset: 2px; }
+  .btn-primary-active { background: var(--primary); color: var(--on-primary); transform: scale(0.95); }
+  .btn-secondary-pill { background: transparent; color: var(--primary); border: 1px solid var(--primary); padding: 10px 21px; }
+  .btn-dark-utility { background: var(--ink); color: var(--on-dark); border-radius: 8px; font-size: 14px; padding: 8px 15px; letter-spacing: -0.224px; }
+  .btn-pearl-capsule { background: var(--surface-pearl); color: var(--ink-muted-80); border: 3px solid var(--divider-soft); border-radius: 11px; font-size: 14px; padding: 5px 14px; letter-spacing: -0.224px; }
+  .btn-store-hero { background: var(--primary); color: var(--on-primary); padding: 14px 28px; font-size: 18px; font-weight: 300; }
+  .btn-icon-circular { width: 44px; height: 44px; border-radius: 50%; background: var(--surface-chip-translucent); color: var(--ink); border: none; display: inline-flex; align-items: center; justify-content: center; padding: 0; font-size: 18px; }
+  .text-link { background: transparent; color: var(--primary); border: none; padding: 0; font-size: 17px; cursor: pointer; font-family: inherit; letter-spacing: -0.374px; }
+  .text-link-on-dark { background: transparent; color: var(--primary-on-dark); border: none; padding: 0; font-size: 17px; cursor: pointer; font-family: inherit; letter-spacing: -0.374px; }
+
+  .tiles-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; min-width: 0; }
+  .tiles-row > * { min-width: 0; }
+  .product-tile { padding: 80px 48px; text-align: center; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; }
+  .product-tile.light { background: var(--canvas); color: var(--ink); }
+  .product-tile.parchment { background: var(--canvas-parchment); color: var(--ink); }
+  .product-tile.dark { background: var(--surface-tile-1); color: var(--on-dark); }
+  .product-tile.dark-2 { background: var(--surface-tile-2); color: var(--on-dark); }
+  .product-tile h3 { font-family: var(--display); font-size: 40px; font-weight: 600; line-height: 1.1; }
+  .product-tile p { font-size: 28px; font-weight: 400; line-height: 1.14; letter-spacing: 0.196px; max-width: 480px; }
+  .product-tile .ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 8px; }
+  .product-tile .render { width: 120px; height: 80px; background: linear-gradient(180deg, #444 0%, #1a1a1a 100%); border-radius: 12px; box-shadow: 0 5px 30px rgba(0, 0, 0, 0.22); margin-top: 16px; }
+
+  .store-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; min-width: 0; }
+  .store-grid > * { min-width: 0; }
+  .store-utility-card { background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; }
+  .store-utility-card .img-block { width: 100%; aspect-ratio: 1; background: var(--canvas-parchment); border-radius: 8px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; }
+  .store-utility-card .img-block .render { width: 60%; height: 60%; background: linear-gradient(135deg, #444 0%, #1a1a1a 100%); border-radius: 8px; box-shadow: 0 5px 30px rgba(0, 0, 0, 0.22); }
+  .store-utility-card .name { font-size: 17px; font-weight: 600; color: var(--ink); margin-bottom: 4px; letter-spacing: -0.374px; }
+  .store-utility-card .price { font-size: 17px; color: var(--ink); margin-bottom: 12px; letter-spacing: -0.374px; }
+
+  .config-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  .configurator-option-chip { background: var(--canvas); color: var(--ink); border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 9999px; padding: 8px 16px; font-size: 14px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; letter-spacing: -0.224px; }
+  .configurator-option-chip.selected { border: 2px solid var(--primary-focus); padding: 7px 15px; }
+  .configurator-option-chip .swatch-dot { width: 16px; height: 16px; border-radius: 50%; }
+
+  .search-input { width: 100%; max-width: 480px; background: var(--canvas); border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 9999px; padding: 12px 20px; font-size: 17px; color: var(--ink); font-family: inherit; letter-spacing: -0.374px; }
+  .search-input::placeholder { color: var(--ink-muted-48); }
+
+  .sticky-bar { background: rgba(245, 245, 247, 0.85); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border: 1px solid rgba(0, 0, 0, 0.06); border-radius: 12px; padding: 12px 32px; display: flex; justify-content: space-between; align-items: center; max-width: 720px; }
+  .sticky-bar .price { font-size: 17px; color: var(--ink); letter-spacing: -0.374px; }
+  .sticky-bar .price strong { font-weight: 600; }
+
+  .form-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+  .form-cell { min-width: 0; }
+  .form-label { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 8px; display: block; letter-spacing: -0.224px; }
+
+  .spacing-row { display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
+  .spacing-block { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .spacing-bar { background: var(--ink); height: 28px; border-radius: 4px; }
+  .spacing-label { font-size: 11px; color: var(--ink-muted-48); font-family: ui-monospace, monospace; letter-spacing: -0.12px; }
+
+  .radius-row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .radius-block { width: 96px; height: 96px; background: var(--canvas-parchment); border: 1px solid var(--hairline); display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--ink); font-weight: 600; font-family: ui-monospace, monospace; letter-spacing: -0.12px; }
+
+  .elevation-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; }
+  .elevation-card { background: var(--canvas); border-radius: 18px; padding: 24px; font-size: 14px; }
+  .elevation-card h5 { font-weight: 600; color: var(--ink); margin-bottom: 6px; font-size: 14px; letter-spacing: -0.224px; }
+  .elevation-card p { color: var(--ink-muted-48); font-size: 12px; line-height: 1.43; letter-spacing: -0.12px; }
+  .elevation-flat { border: 1px solid var(--hairline); }
+  .elevation-hairline { border: 1px solid rgba(0, 0, 0, 0.08); background: var(--canvas-parchment); }
+  .elevation-blur { background: rgba(245, 245, 247, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(0, 0, 0, 0.06); }
+  .elevation-product-shadow { background: var(--canvas-parchment); display: flex; align-items: center; justify-content: center; min-height: 100px; }
+  .elevation-product-shadow .render { width: 60%; height: 50px; background: linear-gradient(135deg, #444 0%, #1a1a1a 100%); border-radius: 8px; box-shadow: 0 5px 30px rgba(0, 0, 0, 0.22); }
+
+  .responsive-table { width: 100%; border-collapse: collapse; margin-bottom: 32px; font-size: 14px; letter-spacing: -0.224px; }
+  .responsive-table th, .responsive-table td { text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--hairline); }
+  .responsive-table th { font-weight: 600; color: var(--ink); font-size: 12px; text-transform: uppercase; letter-spacing: -0.12px; }
+  .responsive-table td { color: var(--ink-muted-80); }
+  .device-ladder { display: flex; align-items: flex-end; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+  .device-bar { background: var(--canvas-parchment); border: 1px solid var(--hairline); border-radius: 6px; color: var(--ink-muted-48); text-align: center; padding: 8px; font-size: 11px; font-family: ui-monospace, monospace; flex-shrink: 0; }
+
+  .responsive-sub { margin-top: 32px; }
+  .responsive-sub h4 { font-family: var(--display); font-size: 21px; font-weight: 600; color: var(--ink); margin-bottom: 12px; letter-spacing: 0.231px; }
+  .responsive-sub ul { padding-left: 20px; color: var(--ink-muted-80); font-size: 14px; line-height: 2.0; letter-spacing: -0.224px; }
+
+  .global-nav-demo { background: var(--surface-black); color: var(--on-dark); padding: 12px 32px; height: 44px; display: flex; align-items: center; justify-content: space-between; font-size: 12px; letter-spacing: -0.12px; border-radius: 8px; margin-bottom: 24px; }
+  .global-nav-demo .links { display: flex; gap: 24px; }
+  .sub-nav-demo { background: rgba(245, 245, 247, 0.85); backdrop-filter: blur(20px) saturate(180%); border: 1px solid rgba(0, 0, 0, 0.06); padding: 14px 24px; height: 52px; display: flex; align-items: center; justify-content: space-between; border-radius: 12px; }
+  .sub-nav-demo .category { font-family: var(--display); font-size: 21px; font-weight: 600; color: var(--ink); letter-spacing: 0.231px; }
+  .sub-nav-demo .links { display: flex; gap: 20px; align-items: center; }
+  .sub-nav-demo .links a { font-size: 14px; color: var(--ink); text-decoration: none; letter-spacing: -0.224px; }
+
+  .footer { background: var(--canvas-parchment); padding: 64px 48px; font-size: 12px; color: var(--ink-muted-80); border-top: 1px solid var(--hairline); letter-spacing: -0.12px; }
+  .footer .footer-inner { max-width: 1280px; margin: 0 auto; }
+  .footer .columns { display: grid; grid-template-columns: repeat(5, 1fr); gap: 32px; margin-bottom: 48px; }
+  .footer .col-head { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 8px; letter-spacing: -0.224px; }
+  .footer .col-link { font-size: 12px; line-height: 2.41; color: var(--ink-muted-80); display: block; text-decoration: none; }
+  .footer .legal { padding-top: 24px; border-top: 1px solid var(--hairline); font-size: 12px; color: var(--ink-muted-48); }
+
+  .cell, .cell > *, .demo, .button-cell, .component-cell { min-width: 0; }
+  .cell.wide, .button-cell.wide, .component-cell.wide { grid-column: span 2; }
+  @media (max-width: 1024px) {
+    section { padding: 64px 32px; }
+    .section-heading { font-size: 34px; }
+    .nav > :last-child { display: none; }
+    .hero { grid-template-columns: 1fr; gap: 32px; padding: 64px 32px; }
+    .hero h1 { font-size: 44px; }
+    .hero-art, .hero-art-photo { display: none; }
+    .type-row { grid-template-columns: 1fr; gap: 8px; }
+    .type-row .type-meta { padding-bottom: 4px; }
+    .tiles-row { grid-template-columns: 1fr; }
+    .footer .columns { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 720px) {
+    .cell.wide, .button-cell.wide, .component-cell.wide { grid-column: span 1; }
+    .nav { padding: 0 48px; height: auto; min-height: 56px; }
+    .nav-links { display: none; }
+    .hero { padding: 48px 20px; }
+    .hero h1 { font-size: 32px; letter-spacing: -0.5px; }
+    .hero p { font-size: 17px; }
+    section { padding: 48px 20px; }
+    .section-heading { font-size: 28px; }
+    .palette-grid, .button-grid, .store-grid, .form-grid, .elevation-grid { grid-template-columns: 1fr !important; gap: 16px; }
+    .product-tile { padding: 48px 20px; }
+    .product-tile h3 { font-size: 28px; }
+    .product-tile p { font-size: 19px; }
+    .spacing-row, .radius-row { gap: 12px; }
+    .responsive-table { font-size: 12px; }
+    .responsive-table th, .responsive-table td { padding: 10px 8px; }
+    .device-ladder { gap: 8px; }
+    .footer { padding: 32px 16px; }
+    .footer .columns { grid-template-columns: 1fr; gap: 16px; }
+  }
+
+  /* getdesign.md nav additions */
+  .nav-left { display: flex; align-items: center; gap: 20px; }
+  .nav-brand-link, .nav-brand-link:link, .nav-brand-link:visited, .nav-brand-link:hover, .nav-brand-link:active { text-decoration: none; color: inherit; }
+  .nav-brand { font-family: var(--display); font-weight: 600; font-size: 17px; color: var(--ink); letter-spacing: -0.374px; }
+  .nav-github, .nav-github:link, .nav-github:visited, .nav-github:hover, .nav-github:active {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600;
+    color: inherit; text-decoration: none; padding: 5px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.3); border-radius: 6px;
+    opacity: 0.75; transition: opacity 200ms ease, border-color 200ms ease;
+    font-family: inherit; line-height: 1; white-space: nowrap;
+  }
+  .nav-github:hover { opacity: 1; border-color: rgba(128, 128, 128, 0.55); }
+  .nav-github svg { display: block; flex-shrink: 0; }
+
+  /* getdesign.md nav centering */
+  .nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+  .nav > .nav-left { justify-self: start; }
+  .nav > .nav-links { justify-self: center; }
+  .nav > :last-child { justify-self: end; }
+
+
+  /* Shared VoltAgent footer content */
+  .footer { text-align: left; }
+  .footer-shell { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .footer-col h6 { margin: 0 0 14px; color: inherit; font: inherit; font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .footer-col span { display: block; margin: 0 0 10px; color: inherit; opacity: 0.72; font-size: 14px; line-height: 1.35; }
+  .footer-credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid currentColor; color: inherit; opacity: 0.78; font-size: 13px; line-height: 1.4; }
+  .footer-credit a { color: inherit; text-decoration: none; font-weight: 600; }
+  .footer-credit img { border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>
+<style data-design-nav="true">
+.design-preview-nav { min-height:48px; }
+.design-preview-nav .nav-brand { white-space:normal; overflow-wrap:anywhere; }
+.design-preview-nav .nav-links { display:flex; flex-wrap:wrap; gap:8px clamp(10px,2vw,26px); padding-block:5px; }
+.design-preview-nav a { text-decoration:none; }
+.design-preview-nav .nav-links a { color:inherit; }
+.design-preview-nav .nav-links a:hover { text-decoration:underline; text-underline-offset:3px; }
+.design-preview-nav a:focus-visible { outline:2px solid currentColor; outline-offset:4px; }
+:is([id^=design-section-],[id=design-overview]) { scroll-margin-top:94px; }
+@media (max-width:760px) {
+  .design-preview-nav { position:static; display:flex; flex-wrap:wrap; gap:3px 12px; padding:8px 12px; height:auto; }
+  .design-preview-nav .nav-left { min-width:0; }
+  .design-preview-nav > .nav-links { flex:1 1 100%; display:flex; padding-inline:0; }
+  .design-preview-nav .nav-cta { display:none; }
+  :is([id^=design-section-],[id=design-overview]) { scroll-margin-top:14px; }
+}
+</style></head>
+<body data-platform-type="消费硬件与通信"><nav aria-label="样张章节" class="nav design-preview-nav" data-design-nav="true"><div class="nav-left"><span class="nav-brand">Apple</span></div><ul class="nav-links"><li><a href="#design-section-1">配色</a></li><li><a href="#design-section-5">字体</a></li><li><a href="#design-section-6">按钮</a></li><li><a href="#design-section-12">卡片</a></li></ul><a class="nav-cta" href="#design-overview">概览</a></nav>
+<div class="hero">
+<div class="hero-content">
+<h1 id="design-overview">留白与产品摄影</h1>
+<p>以摄影为视觉重点，把营销页面组织成展览空间。通栏图块在明暗之间交替，所有交互统一使用 Action Blue。</p>
+<div class="hero-actions">
+<button class="btn-hero-primary">了解更多</button>
+<button class="btn-hero-secondary">买</button>
+</div>
+</div>
+<div class="hero-art">
+<div class="device-mock"></div>
+<div class="device-label">产品制成系统阴影</div>
+</div>
+</div>
+<section id="colors">
+<div class="section-label">01 · 配色</div>
+<h2 class="section-heading" id="design-section-1">一种蓝色、三种近黑色与两种白色</h2>
+<p class="section-intro">单一品牌级互动色为Action Blue. 表面交替白色 / 纸质 / 近黑色 瓦片. 无渐渐.</p>
+<div class="palette-group"><h3>品牌色与强调色</h3><div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#0066cc;"></div><div class="swatch-meta"><div class="swatch-name">primary (Action Blue)</div><div class="swatch-hex">#0066cc</div><div class="swatch-role">每个互动元素。 链接,胶囊形 CTAs.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#0071e3;"></div><div class="swatch-meta"><div class="swatch-name">primary-focus</div><div class="swatch-hex">#0071e3</div><div class="swatch-role">键盘焦点环按键.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#2997ff;"></div><div class="swatch-meta"><div class="swatch-name">primary-on-dark</div><div class="swatch-hex">#2997ff</div><div class="swatch-role">暗牌上的内含链接。</div></div></div>
+</div></div>
+<div class="palette-group"><h3>界面表面</h3><div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#ffffff; border-bottom:1px solid var(--hairline);"></div><div class="swatch-meta"><div class="swatch-name">canvas</div><div class="swatch-hex">#ffffff</div><div class="swatch-role">默认页面表面。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#f5f5f7;"></div><div class="swatch-meta"><div class="swatch-name">canvas-parchment</div><div class="swatch-hex">#f5f5f7</div><div class="swatch-role">签署 米白色. 脚,瓷砖。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#fafafc;"></div><div class="swatch-meta"><div class="swatch-name">surface-pearl</div><div class="swatch-hex">#fafafc</div><div class="swatch-role">珍珠扣子胶囊装满了</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#272729;"></div><div class="swatch-meta"><div class="swatch-name">surface-tile-1</div><div class="swatch-hex">#272729</div><div class="swatch-role">初等深色瓦片(变种).</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#2a2a2c;"></div><div class="swatch-meta"><div class="swatch-name">surface-tile-2</div><div class="swatch-hex">#2a2a2c</div><div class="swatch-role">微步轻车.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#252527;"></div><div class="swatch-meta"><div class="swatch-name">surface-tile-3</div><div class="swatch-hex">#252527</div><div class="swatch-role">微步暗色更细.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#000000;"></div><div class="swatch-meta"><div class="swatch-name">surface-black</div><div class="swatch-hex">#000000</div><div class="swatch-role">真实虚空. 全球导航,视频.</div></div></div>
+</div></div>
+<div class="palette-group"><h3>文本和细边线</h3><div class="palette-grid">
+<div class="swatch"><div class="swatch-color" style="background:#1d1d1f;"></div><div class="swatch-meta"><div class="swatch-name">ink</div><div class="swatch-hex">#1d1d1f</div><div class="swatch-role">所有头条,身体,黑暗的功能填充。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#333333;"></div><div class="swatch-meta"><div class="swatch-name">ink-muted-80</div><div class="swatch-hex">#333333</div><div class="swatch-role">珠白按钮上的文字。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#7a7a7a;"></div><div class="swatch-meta"><div class="swatch-name">ink-muted-48</div><div class="swatch-hex">#7a7a7a</div><div class="swatch-role">残疾人,fine-print。</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#cccccc;"></div><div class="swatch-meta"><div class="swatch-name">body-muted</div><div class="swatch-hex">#cccccc</div><div class="swatch-role">暗瓷砖上的副版.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#e0e0e0;"></div><div class="swatch-meta"><div class="swatch-name">hairline</div><div class="swatch-hex">#e0e0e0</div><div class="swatch-role">1px 商店的边界 卡片.</div></div></div>
+<div class="swatch"><div class="swatch-color" style="background:#f0f0f0;"></div><div class="swatch-meta"><div class="swatch-name">divider-soft</div><div class="swatch-hex">#f0f0f0</div><div class="swatch-role">珍珠扣软环.</div></div></div>
+</div></div>
+</section>
+<section id="typography">
+<div class="section-label">02 · 字号层级</div>
+<h2 class="section-heading" id="design-section-5">SF Pro Display + SF Pro Text</h2>
+<p class="section-intro">Inter substituted here. Negative letter-spacing at display sizes is the signature; weight 500 is deliberately absent.</p>
+<div class="type-row"><div class="type-meta"><strong>hero-display</strong>56px / 600 / 1.07 / -0.28px</div><div class="type-sample" style="font-size:56px; font-weight:600; line-height:1.07; letter-spacing:-0.28px;">脉搏一直很好</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-lg</strong>40px / 600 / 1.10 / 0</div><div class="type-sample" style="font-size:40px; font-weight:600; line-height:1.1;">脉冲 17 Pro</div></div>
+<div class="type-row"><div class="type-meta"><strong>display-md</strong>34px / 600 / 1.47 / -0.374px</div><div class="type-sample" style="font-size:34px; font-weight:600; line-height:1.47; letter-spacing:-0.374px;">全天电池 全屏显示.</div></div>
+<div class="type-row"><div class="type-meta"><strong>lead</strong>28px / 400 / 1.14 / 0.196px</div><div class="type-sample" style="font-size:28px; font-weight:400; line-height:1.14; letter-spacing:0.196px;">建为Lumora情报机构.</div></div>
+<div class="type-row"><div class="type-meta"><strong>lead-airy</strong>24px / 300 / 1.5 / 0</div><div class="type-sample" style="font-size:24px; font-weight:300; line-height:1.5;">碳中性。。。 从我们所用的材料到制作它们的方式。</div></div>
+<div class="type-row"><div class="type-meta"><strong>tagline</strong>21px / 600 / 1.19 / 0.231px</div><div class="type-sample" style="font-size:21px; font-weight:600; line-height:1.19; letter-spacing:0.231px;">从$999</div></div>
+<div class="type-row"><div class="type-meta"><strong>body-strong</strong>17px / 600 / 1.24 / -0.374px</div><div class="type-sample" style="font-size:17px; font-weight:600; line-height:1.24; letter-spacing:-0.374px;">专业 超越。</div></div>
+<div class="type-row"><div class="type-meta"><strong>body</strong>17px / 400 / 1.47 / -0.374px</div><div class="type-sample" style="font-size:17px; font-weight:400; line-height:1.47; letter-spacing:-0.374px;">Lumora运行于17px的车体复制,而非16px. 额外的像素给页面一个不可模糊的"读取,而不是扫描"的速度.（原文参数：17px、16px）</div></div>
+<div class="type-row"><div class="type-meta"><strong>button-large</strong>18px / 300 / 1.0 / 0</div><div class="type-sample" style="font-size:18px; font-weight:300;">现在先点菜</div></div>
+<div class="type-row"><div class="type-meta"><strong>button-utility</strong>14px / 400 / 1.29 / -0.224px</div><div class="type-sample" style="font-size:14px; font-weight:400; line-height:1.29; letter-spacing:-0.224px;">登录</div></div>
+<div class="type-row"><div class="type-meta"><strong>nav-link</strong>12px / 400 / 1.0 / -0.12px</div><div class="type-sample" style="font-size:12px; font-weight:400; letter-spacing:-0.12px;">存储 工作室 平面 脉冲 轨道</div></div>
+</section>
+<section id="components">
+<div class="section-label">03 · 按钮样式</div>
+<h2 class="section-heading" id="design-section-6">两种语法:胶囊控件和矩形</h2>
+<p class="section-intro">胶囊控件 用于动作; 矩形用于工具. 胶囊形是品牌动作信号.</p>
+<div class="button-grid">
+<div class="button-cell"><div class="button-label">button-primary</div><button class="btn btn-primary">买</button><div class="button-meta">蓝色/胶囊形/17px/400</div></div>
+<div class="button-cell"><div class="button-label">button-primary-focus</div><button class="btn btn-primary-focus">了解更多</button><div class="button-meta">2px 聚焦蓝线轮廓环</div></div>
+<div class="button-cell"><div class="button-label">button-primary-active</div><button class="btn btn-primary-active">按下</button><div class="button-meta">scale(0.95) — system-wide press</div></div>
+<div class="button-cell"><div class="button-label">button-secondary-pill</div><button class="btn btn-secondary-pill">了解更多</button><div class="button-meta">Transparent + 1px Action Blue border</div></div>
+<div class="button-cell on-tile"><div class="button-label">button-dark-utility</div><button class="btn btn-dark-utility">登录</button><div class="button-meta">文字色 填充/8px半径/14px（原文参数：8px）</div></div>
+<div class="button-cell"><div class="button-label">button-pearl-capsule</div><button class="btn btn-pearl-capsule">比较</button><div class="button-meta">珍珠填充 /11px半径 / 软3px 环（原文参数：11px、3px）</div></div>
+<div class="button-cell"><div class="button-label">button-store-hero</div><button class="btn btn-store-hero">现在先点菜</button><div class="button-meta">18px / weight 300 — the rare airy weight</div></div>
+<div class="button-cell on-photo"><div class="button-label">button-icon-circular</div><div style="display:flex; gap:12px;"><button class="btn-icon-circular">‹</button><button class="btn-icon-circular">×</button></div><div class="button-meta">44 × 44 / 芯片透明/ 全半径</div></div>
+<div class="button-cell"><div class="button-label">text-link</div><button class="text-link">阅读环境报告 {}</button><div class="button-meta">行动 蓝色内线体链接</div></div>
+<div class="button-cell on-tile"><div class="button-label">text-link-on-dark</div><button class="text-link-on-dark">阅读环境报告 {}</button><div class="button-meta">深色牌上的天空链接蓝色</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">04 产品图案</div>
+<h2 class="section-heading">边缘对边缘交替</h2>
+<p class="section-intro">平面触碰边缘没有缺口. 色变是分法者.</p>
+<div class="tiles-row" style="margin: 32px -48px 0;">
+<div class="product-tile light"><h3>脉冲 17 Pro</h3><p>专业 超越。</p><div class="ctas"><button class="btn btn-primary">了解更多</button><button class="btn btn-secondary-pill">买</button></div><div class="render"></div></div>
+<div class="product-tile dark"><h3>轨道超轨道</h3><p>冒险在等着呢</p><div class="ctas"><button class="btn btn-primary">了解更多</button><button class="text-link-on-dark">买吧</button></div><div class="render"></div></div>
+</div>
+<div class="tiles-row" style="margin: 0 -48px;">
+<div class="product-tile parchment"><h3>工作室 Pro</h3><p>心动. 头转身.</p><div class="ctas"><button class="btn btn-primary">了解更多</button><button class="btn btn-secondary-pill">买</button></div><div class="render"></div></div>
+<div class="product-tile dark-2"><h3>Echo Buds Pro 3 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团 乐团</h3><p>个性化空间音频.</p><div class="ctas"><button class="btn btn-primary">了解更多</button><button class="text-link-on-dark">买吧</button></div><div class="render"></div></div>
+</div>
+</section>
+<section>
+<div class="section-label">05 — 存储网格 卡片</div>
+<h2 class="section-heading" id="design-section-12">18px半径为白色卡片（原文参数：18px）</h2>
+<div class="store-grid">
+<div class="store-utility-card"><div class="img-block"><div class="render"></div></div><div class="name">MagSafe 充电器</div><div class="price">$39</div><button class="text-link">买吧</button></div>
+<div class="store-utility-card"><div class="img-block"><div class="render"></div></div><div class="name">空盘(4-包装)</div><div class="price">$99</div><button class="text-link">买吧</button></div>
+<div class="store-utility-card"><div class="img-block"><div class="render"></div></div><div class="name">斯戴尔·普罗</div><div class="price">$129</div><button class="text-link">买吧</button></div>
+<div class="store-utility-card"><div class="img-block"><div class="render"></div></div><div class="name">USB-C 电缆</div><div class="price">$29</div><button class="text-link">买吧</button></div>
+</div>
+</section>
+<section>
+<div class="section-label">06 — Configurator + Search + Sticky Bar</div>
+<div style="margin-bottom: 32px;">
+<h4 style="font-size:17px; font-weight:600; color:var(--ink); margin-bottom:16px; letter-spacing:-0.374px;">选择结束</h4>
+<div class="config-row">
+<button class="configurator-option-chip selected"><span class="swatch-dot" style="background:#5a5a5a;"></span>天然钛</button>
+<button class="configurator-option-chip"><span class="swatch-dot" style="background:#1a1a1a;"></span>黑色钛</button>
+<button class="configurator-option-chip"><span class="swatch-dot" style="background:#bdc3cc;"></span>白色钛</button>
+<button class="configurator-option-chip"><span class="swatch-dot" style="background:#3d4754;"></span>蓝色钛</button>
+</div>
+</div>
+<div style="margin-bottom: 32px;">
+<h4 style="font-size:17px; font-weight:600; color:var(--ink); margin-bottom:16px; letter-spacing:-0.374px;">搜索</h4>
+<input class="search-input" placeholder="搜索 lumora.com 页面存档备份,存于互联网档案馆 互联网档案馆 搜狐网 搜狐网 搜狐网 搜狐网 搜狐网 搜狐网 搜狐网 搜狐网 搜狐网 搜狐网 搜狐网 搜狐网 搜狐网 搜狐网 搜狐网 搜狐网 搜网 搜网 搜网 搜网 搜网 搜网 搜网 搜网 搜网" type="text"/>
+</div>
+<div>
+<h4 style="font-size:17px; font-weight:600; color:var(--ink); margin-bottom:16px; letter-spacing:-0.374px;">Floating sticky bar</h4>
+<div class="sticky-bar">
+<div class="price">从 <strong>$999</strong> or $41.62/mo. for 24 mo.</div>
+<button class="btn btn-primary">添加到文件夹</button>
+</div>
+</div>
+</section>
+<section>
+<div class="section-label">07 · 导航</div>
+<h2 class="section-heading">双行导航堆栈</h2>
+<div class="global-nav-demo">
+<div class="links"><span></span><span>存储</span><span>工作室</span><span>石板灰</span><span>脉搏</span><span>轨道</span><span>回声巴德</span><span>镜头</span></div>
+<div class="links"><span>🔍</span><span>🛍</span></div>
+</div>
+<div class="sub-nav-demo">
+<div class="category">脉搏</div>
+<div class="links"><a>探索</a><a>比较</a><a>商店</a><a>切换</a><button class="btn btn-primary" style="font-size:14px; padding:8px 16px;">买</button></div>
+</div>
+</section>
+<section>
+<div class="section-label">08 · 表单控件</div>
+<div class="form-grid">
+<div class="form-cell"><label class="form-label">搜索 lumora.com 页面存档备份,存于互联网档案馆 互联网档案馆 搜狐网 搜狐网 搜狐网 搜狐网 搜狐网 搜狐网 搜狐网 搜狐网 搜狐网 搜狐网 搜狐网 搜狐网 搜狐网 搜狐网 搜狐网 搜狐网 搜网 搜网 搜网 搜网 搜网 搜网 搜网 搜网 搜网</label><input class="search-input" placeholder="Try Pulse 17 Pro" type="text"/></div>
+<div class="form-cell"><label class="form-label">电子邮箱</label><input class="search-input" placeholder="you@icloud.com" type="email"/></div>
+</div>
+</section>
+<section>
+<div class="section-label">09 · 间距层级</div>
+<p class="section-intro">基础 8px. 通用节奏常数:17px和21px.（原文参数：17px、21px）</p>
+<div class="spacing-row">
+<div class="spacing-block"><div class="spacing-bar" style="width:4px;"></div><div class="spacing-label">xxx 4px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:8px;"></div><div class="spacing-label">xs 8px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:12px;"></div><div class="spacing-label">sm 12px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:17px;"></div><div class="spacing-label">md 17px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:24px;"></div><div class="spacing-label">24px 高压压压轴</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:32px;"></div><div class="spacing-label">□ 32px</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:48px;"></div><div class="spacing-label">xxl 48px 数据</div></div>
+<div class="spacing-block"><div class="spacing-bar" style="width:80px;"></div><div class="spacing-label">· 80px</div></div>
+</div>
+</section>
+<section>
+<div class="section-label">10 · 圆角层级</div>
+<p class="section-intro">圆角从 0（网格块）、8（实用控件）、11（Pearl）、18（卡片）到 9999（胶囊形和圆形）。</p>
+<div class="radius-row">
+<div class="radius-block" style="border-radius:0;">0 − 无</div>
+<div class="radius-block" style="border-radius:5px;">5 − xs 组合键</div>
+<div class="radius-block" style="border-radius:8px;">8 零点</div>
+<div class="radius-block" style="border-radius:11px;">11 数据</div>
+<div class="radius-block" style="border-radius:18px;">18 − lg</div>
+<div class="radius-block" style="border-radius:9999px;">胶囊形</div>
+<div class="radius-block" style="border-radius:50%;">满</div>
+</div>
+</section>
+<section>
+<div class="section-label">11 · 层次与深度</div>
+<p class="section-intro">整个系统中只有一块滴影, 只适用于产品图像。</p>
+<div class="elevation-grid">
+<div class="elevation-card elevation-flat"><h5>平面</h5><p>平面图,全球导航,页脚. 无影.</p></div>
+<div class="elevation-card elevation-hairline"><h5>软细边框</h5><p>1px rgba(0,0,0,0.08)边界. 功用牌(二合).</p></div>
+<div class="elevation-card elevation-blur"><h5>后投时模糊</h5><p>Parchment 80% + blur(20px). Sub-nav, sticky bar.</p></div>
+<div class="elevation-card elevation-product-shadow"><div class="render"></div></div>
+<div class="elevation-card elevation-flat"><h5>表面变化</h5><p>浅砖是深砖 是高地</p></div>
+<div class="elevation-card elevation-flat"><h5>无卡片 阴影</h5><p>卡片从不携带投影.</p></div>
+</div>
+</section>
+<section id="responsive">
+<div class="section-label">12 · 响应式布局</div>
+<table class="responsive-table">
+<thead><tr><th>名称</th><th>宽度</th><th>布局变化</th></tr></thead>
+<tbody>
+<tr><td>电话</td><td>≤ 640px</td><td>卡片改为单列，首屏 h1 缩至 34px。</td></tr>
+<tr><td>平板</td><td>736–833px</td><td>全球导航崩溃成汉堡.</td></tr>
+<tr><td>平板景观</td><td>834–1023px</td><td>全球导航全面扩展; 3- 科尔 - 2- 电网</td></tr>
+<tr><td>桌面端</td><td>1069–1440px</td><td>完全布局; 4–5 电网</td></tr>
+<tr><td>宽</td><td>≥ 1441px</td><td>1440px内涵锁定.（原文参数：1440px）</td></tr>
+</tbody>
+</table>
+<div class="device-ladder">
+<div class="device-bar" style="width:60px; height:120px;">375<br/>手机端</div>
+<div class="device-bar" style="width:90px; height:140px;">640<br/>电话</div>
+<div class="device-bar" style="width:140px; height:160px;">834<br/>平板电脑</div>
+<div class="device-bar" style="width:200px; height:180px;">1068<br/>膝上型计算机</div>
+<div class="device-bar" style="width:260px; height:200px;">1440<br/>桌面端</div>
+<div class="device-bar" style="width:320px; height:220px;">1441<br/>宽</div>
+</div>
+<div class="responsive-sub"><h4>触控区域</h4><ul><li>药片CTAs at ~44 × 100px.</li><li>Circular control chips exactly 44 × 44.</li><li>Global nav utility links at ~32 × 80 (precision desktop only).</li></ul></div>
+<div class="responsive-sub"><h4>窄屏布局调整</h4><ul><li>全球导航:全行→品牌标志+汉堡+袋在834px.（原文参数：834px）</li><li>产品瓷砖:2-col → 1-col at 834px.</li><li>Hero typography: 56px → 40px → 34px → 28px.</li></ul></div>
+</section>
+<footer class="footer" data-platform-example="footer">
+<div class="footer-shell">
+<p class="design-demo-note">栏目演示 · 消费硬件与通信</p><div class="footer-grid">
+<div class="footer-col">
+<h6>产品</h6>
+<span>产品系列</span>
+<span>配件</span>
+<span>规格对比</span>
+</div>
+<div class="footer-col">
+<h6>购买</h6>
+<span>配置选项</span>
+<span>配送</span>
+<span>订单</span>
+</div>
+<div class="footer-col">
+<h6>服务</h6>
+<span>设备设置</span>
+<span>保修</span>
+<span>更新</span>
+</div>
+<div class="footer-col">
+<h6>支持</h6>
+<span>设备文档</span>
+<span>维修</span>
+<span>问题反馈</span>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>
