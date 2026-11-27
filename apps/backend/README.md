@@ -1,6 +1,6 @@
 # DesignForge Backend
 
-统一平台 Python 后端，使用 FastAPI、SQLAlchemy 2.x、Alembic 和 SQLite。
+统一平台 Python 后端，使用 FastAPI、SQLAlchemy 2.x、Alembic、python-dotenv 和 SQLite。
 
 需要 Python 3.11+。请在 apps/backend 目录中执行：
 
@@ -8,6 +8,8 @@
     # Windows PowerShell: .venv\Scripts\Activate.ps1
     # macOS / Linux: source .venv/bin/activate
     pip install -e ".[dev]"
+    # Windows PowerShell: Copy-Item .env.example .env
+    # macOS / Linux: cp .env.example .env
     uvicorn app.main:app --reload --host 127.0.0.1 --port 28717
 
 健康检查：http://127.0.0.1:28717/health

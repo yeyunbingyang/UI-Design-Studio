@@ -1,7 +1,7 @@
 import { NavLink, Outlet, Route, Routes } from "react-router-dom";
 import {
   Activity, Archive, Atom, BookOpen, Boxes, Compass, FileStack,
-  LayoutDashboard, Library, Search, Settings, Sparkles, WandSparkles,
+  LayoutDashboard, Library, Settings, Sparkles, WandSparkles,
 } from "lucide-react";
 
 const navigation = [
@@ -21,7 +21,7 @@ const modules = [
   ["设计规范", "浏览 DESIGN.md、Token 与 HTML 预览", "/design-systems"],
   ["页面设计库", "沉淀页面类型、信息架构与布局模式", "/pages"],
   ["组件资源库", "发现可复用组件、实现代码与交互演示", "/components"],
-  ["动效资源库", "研究微交互、转场、背景与高级动效", "/motions"],
+  ["动效资源库", "研究微交互、转场、背景与动效", "/motions"],
   ["来源中心", "管理网站、GitHub 项目、许可证与采集记录", "/sources"],
   ["研究中心", "跟踪研究任务、证据、分析和结论", "/research"],
   ["AI 工作区", "辅助研究、生成规范和检查设计维度", "/ai"],
@@ -51,7 +51,7 @@ function Shell() {
       <main className="main-area">
         <header className="topbar">
           <div className="breadcrumb">DesignForge <span>/</span> 设计研究平台</div>
-          <div className="top-actions"><span className="version">DEV · 0.1.0</span><button className="icon-button" aria-label="搜索"><Search size={18} /></button></div>
+          <div className="top-actions"><span className="version">DEV · 0.1.0</span></div>
         </header>
         <section className="page-content"><Outlet /></section>
       </main>
