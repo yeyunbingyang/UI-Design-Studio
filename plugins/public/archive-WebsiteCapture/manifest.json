@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 2,
+  "id": "archive-website-capture",
+  "name": "archive-WebsiteCapture",
+  "version": "0.1.0",
+  "icon": "web",
+  "description": "自动采集网页和前端资源，支持离线预览和 ZIP 导出",
+  "actions": {
+    "start": {
+      "kind": "batch",
+      "path": "script/start-webui.bat",
+      "args": ["-HostAddress", "{host}", "-Port", "{port}"],
+      "execution": "managed"
+    },
+    "check": { "kind": "batch", "path": "script/check-env.bat", "execution": "managed" },
+    "prepare": { "kind": "batch", "path": "script/install-env.bat", "execution": "managed" },
+    "menu": { "kind": "batch", "path": "archive-WebsiteCapture.bat", "execution": "terminal" }
+  },
+  "web": { "port": 28717, "openPath": "/", "healthPath": "/api/health" }
+}
