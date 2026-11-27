@@ -13,3 +13,7 @@
 3. 告诉 AI「先读取根目录的 `DESIGN.md`，按其中的设计规则实现这个页面。内容和功能以项目需求为准。」
 
 [需求文档](PRD.md) · [MIT 许可证](LICENSE)
+
+## 分支
+
+`dev` 是主开发分支，日常改动提交到这里。`main` 保留稳定版本，按需要从 `dev` 合并。功能模块和独立特性各开分支，基于 `dev` 建立，完成后合回 `dev`。当前 `websitecapture` 分支在 `modules/archive-WebsiteCapture` 下承载网页采集功能模块。
